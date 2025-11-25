@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { EVIDENCE_REGISTRY } from '@/lib/data';
+import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS } from '@/lib/data';
 import type { AppState, ManualEvidence } from '@/lib/types';
 import { BrainCircuit, Plus, X, File, Users, Gavel } from 'lucide-react';
 import {
@@ -17,6 +17,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 
 interface EvidenceTabProps {
   state: AppState;
@@ -131,17 +132,17 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 </Button>
               </CardHeader>
               <CardContent className="space-y-4 px-4 pb-4">
-                <div className="space-y-2">
-                    <Label>Description (תיאור)</Label>
-                    <Input 
-                        placeholder={item.type === 'Witness' ? "e.g., Ato Kebede, Addis Ababa, Bole Sub-city" : "e.g., Police report about the incident"}
-                        value={item.description}
-                        onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
-                    />
-                </div>
                 
                 {item.type === 'Document' && (
                     <>
+                         <div className="space-y-2">
+                            <Label>Description (תיאור)</Label>
+                            <Input 
+                                placeholder={"e.g., Police report about the incident"}
+                                value={item.description}
+                                onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
+                            />
+                        </div>
                         <div className="space-y-2">
                             <Label>Issuer (አውጪ)</Label>
                             <Input 
@@ -162,6 +163,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                             <div className="space-y-2">
                                 <Label>Page Count (የገጽ ብዛት)</Label>
                                 <Input 
+                                    type="number"
                                     placeholder="e.g., 5"
                                     value={item.pageCount}
                                     onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'pageCount', value: e.target.value } })}
@@ -187,11 +189,19 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                         </div>
                         <div className="space-y-2">
                             <Label>Location of Original (ኦርጅናሉ ያለበት)</Label>
-                            <Input 
-                                placeholder="e.g., With Applicant"
+                            <Select 
                                 value={item.originalLocation}
-                                onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value: e.target.value } })}
-                            />
+                                onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value } })}
+                            >
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Select location" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {EVIDENCE_LOCATIONS.map(loc => (
+                                        <SelectItem key={loc} value={loc}>{loc}</SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
                         </div>
                     </>
                 )}
@@ -213,5 +223,3 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
-
-    

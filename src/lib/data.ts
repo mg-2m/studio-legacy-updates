@@ -20,6 +20,15 @@ export const AA_SUBCITIES = [
   "Yeka (የካ)", "Lemi Kura (ለሚ ኩራ)"
 ];
 
+export const EVIDENCE_LOCATIONS = [
+  "With Applicant (ከአመልካች ጋር)",
+  "With Respondent (ከተከሳሽ ጋር)",
+  "With the Court (ፍርድ ቤት ውስጥ)",
+  "Lost (ጠፍቷል)",
+  "N/A (የማይመለከተው)",
+  "Other (ሌላ)",
+];
+
 export const SMART_FACTS = [
   {
     id: 'conflict',

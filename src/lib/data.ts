@@ -8,17 +8,22 @@ export const COURT_HIERARCHY = {
     "Kirkos Division (ቂርቆስ ምድብ)",
     "Arada Division (አራዳ ምድብ)",
     "Yeka Division (የካ ምድብ)", 
-    "Akaki Kality Division (አቃቂ ቃሊቲ ምድብ)"
+    "Akaki Kality Division (አቃቂ ቃሊቲ ምድብ)",
+    "Lideta Division, 1st Labour Relations Bench (ልደታ ምድብ 1ኛ የሠራተኛ ግንኙነት ችሎት)",
+    "Lideta Division, Tax Bench (ልደታ ምድብ የታክስ ችሎት)",
   ],
   "Federal High Court (የፌዴራል ከፍተኛ ፍርድ ቤት)": [
     "Lideta Division, 1st Civil Bench (ልደታ ምድብ 1ኛ ፍትሐብሔር ችሎት)",
     "Lideta Division, 2nd Civil Bench (ልደታ ምድብ 2ኛ ፍትሐብሔር ችሎት)",
     "Lideta Division, 1st Criminal Bench (ልደታ ምድብ 1ኛ ወንጀል ችሎት)",
-    "Bole Division (ቦሌ ምድብ)"
+    "Bole Division (ቦሌ ምድብ)",
+    "Lideta Division, Commercial Bench (ልደታ ምድብ የንግድ ችሎት)",
+    "Lideta Division, Labour Division (ልደታ ምድብ የሠራተኛ ችሎት)",
   ],
   "Federal Supreme Court (የፌዴራል ጠቅላይ ፍርድ ቤት)": [
     "1st Cassation Bench (1ኛ ሰበር ሰሚ ችሎት)", 
     "2nd Cassation Bench (2ኛ ሰበር ሰሚ ችሎት)",
+    "3rd Cassation Bench (3ኛ ሰበር ሰሚ ችሎት)",
     "1st Appellate Bench (1ኛ ይግባኝ ሰሚ ችሎት)"
   ]
 };
@@ -28,7 +33,7 @@ export const CITIES = ["Addis Ababa (አዲስ አበባ)", "Adama (አዳማ)",
 export const AA_SUBCITIES = [
   "Arada (አራዳ)", "Bole (ቦሌ)", "Addis Ketema (አዲስ ከተማ)", "Nifas Silk-Lafto (ኒፋስ ስልክ)",
   "Kirkos (ቂርቆስ)", "Gullele (ጉለሌ)", "Lideta (ልደታ)", "Akaki Kality (አቃቂ ቃሊቲ)",
-  "Yeka (የካ)", "Lemi Kura (ለሚ ኩራ)"
+  "Yeka (የካ)", "Lemi Kura (ለሚ ኩራ)", "Kolfe Keranio (ኮልፌ ቀራኒዮ)"
 ];
 
 export const HONORIFICS = ["አቶ (Mr.)", "ወ/ሮ (Mrs.)", "ወ/ሪት (Miss)"];
@@ -39,6 +44,20 @@ export const EVIDENCE_LOCATIONS = [
   "With the Court (ፍርድ ቤት ውስጥ)",
   "Lost (ጠፍቷል)",
   "N/A (የማይመለከተው)",
+  "Other (ሌላ)",
+];
+
+export const DOCUMENT_ISSUERS = [
+  "Addis Ababa Police Commission (የአዲስ አበባ ፖሊስ ኮሚሽን)",
+  "Oromia Police Commission (የኦሮሚያ ፖሊስ ኮሚሽን)",
+  "Amhara Police Commission (የአማራ ፖሊስ ኮሚሽን)",
+  "Federal Police Commission (የፌደራል ፖሊስ ኮሚሽን)",
+  "Ministry of Trade and Regional Integration (የንግድ እና ቀጣናዊ ትስስር ሚኒስቴር)",
+  "Ministry of Revenues (የገቢዎች ሚኒስቴር)",
+  "Ethiopian Investment Commission (የኢትዮጵያ ኢንቨስትመንት ኮሚሽን)",
+  "Vital Events Registration Agency (የወሳኝ ኩነት ምዝገባ ኤጀንሲ)",
+  "Documents Authentication and Registration Service (የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት)",
+  "A hospital or clinic (ሆስፒታል ወይም ክሊኒክ)",
   "Other (ሌላ)",
 ];
 

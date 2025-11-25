@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS } from '@/lib/data';
+import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS } from '@/lib/data';
 import type { AppState, ManualEvidence } from '@/lib/types';
 import { BrainCircuit, Plus, X, File, Users, Gavel } from 'lucide-react';
 import {
@@ -146,11 +146,19 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                         </div>
                         <div className="space-y-2">
                             <Label>Issuer (አውጪ)</Label>
-                            <Input 
-                                placeholder="e.g., Addis Ababa Police Commission"
+                            <Select 
                                 value={item.issuer}
-                                onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value: e.target.value } })}
-                            />
+                                onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value } })}
+                            >
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Select issuer" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {DOCUMENT_ISSUERS.map(issuer => (
+                                        <SelectItem key={issuer} value={issuer}>{issuer}</SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">

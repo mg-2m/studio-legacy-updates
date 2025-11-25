@@ -109,5 +109,9 @@ export const INITIAL_STATE: AppState = {
     context: '',
   },
   evidence: [],
-  smartEvidence: {}
+  smartEvidence: {},
+  partyTitles: {
+    applicant: 'አመልካች (Applicant)',
+    respondent: 'ተጠሪ (Respondent)',
+  }
 };

@@ -64,4 +64,8 @@ export interface AppState {
   maintenance: Maintenance;
   evidence: ManualEvidence[];
   smartEvidence: SmartEvidence;
+  partyTitles: {
+    applicant: 'አመልካች (Applicant)' | 'ከሳሽ (Plaintiff)';
+    respondent: 'ተጠሪ (Respondent)' | 'ተከሳሽ (Defendant)';
+  };
 }

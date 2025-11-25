@@ -7,7 +7,7 @@ interface PageOneProps {
 }
 
 export default function PageOne({ state }: PageOneProps) {
-  const { metadata: meta, applicants, respondents, selectedFacts, maintenance } = state;
+  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles } = state;
 
   const summonsMap = {
     self: 'በራሴ አደርሳለው (I will serve summons myself)',
@@ -49,7 +49,7 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mb-5">
-        <div className="purple-box">PLAINTIFF / APPLICANT (አመልካች / ክሳሽ)</div>
+        <div className="purple-box">{partyTitles.applicant.toUpperCase()}</div>
         {applicants.map((p, i) => (
           <div key={i} className="border-l-4 border-black pl-3 mt-1">
             <div className="font-bold text-base">{p.name || '___________'}</div>
@@ -60,7 +60,7 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mb-5">
-        <div className="purple-box">DEFENDANT / RESPONDENT (ተጠሪ / ተከሳሽ)</div>
+        <div className="purple-box">{partyTitles.respondent.toUpperCase()}</div>
         {respondents.length > 0 ? respondents.map((p, i) => (
           <div key={i} className="border-l-4 border-black pl-3 mt-1">
             <div className="font-bold text-base">{p.name || '___________'}</div>

@@ -10,6 +10,7 @@ import MainLayout from '@/components/main-layout';
 
 type Action =
   | { type: 'UPDATE_METADATA'; payload: { key: string; value: any } }
+  | { type: 'UPDATE_PARTY_TITLE'; payload: { role: 'applicant' | 'respondent'; title: string } }
   | { type: 'ADD_PARTY'; payload: { role: 'applicants' | 'respondents' } }
   | { type: 'REMOVE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string } }
   | { type: 'UPDATE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string; field: string; value: any } }
@@ -32,6 +33,11 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'UPDATE_METADATA':
       return { ...state, metadata: { ...state.metadata, [action.payload.key]: action.payload.value } };
     
+    case 'UPDATE_PARTY_TITLE': {
+      const { role, title } = action.payload;
+      return { ...state, partyTitles: { ...state.partyTitles, [role]: title } };
+    }
+
     case 'ADD_PARTY': {
       const newParty = { id: Date.now().toString(), name: '', idNumber: '', phone: '', address: { city: 'Addis Ababa (አዲስ አበባ)', subcity: 'Bole (ቦሌ)' } };
       return { ...state, [action.payload.role]: [...state[action.payload.role], newParty] };

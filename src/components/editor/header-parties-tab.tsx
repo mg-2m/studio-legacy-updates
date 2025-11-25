@@ -38,7 +38,7 @@ interface HeaderPartiesTabProps {
 }
 
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
-  const { metadata, applicants, respondents } = state;
+  const { metadata, applicants, respondents, partyTitles } = state;
   const dateObject = metadata.date.endsWith(' EC') ? new Date() : new Date(metadata.date);
 
 
@@ -129,6 +129,17 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       <AccordionItem value="item-4" className="border rounded-lg bg-background">
         <AccordionTrigger className="px-4 text-primary">አመልካች / ከሳሽ (Applicant / Plaintiff)</AccordionTrigger>
         <AccordionContent className="px-4">
+            <div className="space-y-2 mb-4 p-3 border rounded-md">
+                <Label>የተዋዋይ ወገን መጠሪያ (Party Title)</Label>
+                <RadioGroup 
+                    value={partyTitles.applicant} 
+                    onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY_TITLE', payload: { role: 'applicant', title: value }})}
+                    className="flex space-x-4"
+                >
+                    <div className="flex items-center space-x-2"><RadioGroupItem value="አመልካች (Applicant)" id="title-applicant" /><Label htmlFor="title-applicant">አመልካች (Applicant)</Label></div>
+                    <div className="flex items-center space-x-2"><RadioGroupItem value="ከሳሽ (Plaintiff)" id="title-plaintiff" /><Label htmlFor="title-plaintiff">ከሳሽ (Plaintiff)</Label></div>
+                </RadioGroup>
+            </div>
           {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} />)}
           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
             <Plus className="mr-2 h-4 w-4" /> Add Applicant
@@ -139,6 +150,17 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       <AccordionItem value="item-5" className="border rounded-lg bg-background">
         <AccordionTrigger className="px-4 text-primary">ተጠሪ / ተከሳሽ (Respondent / Defendant)</AccordionTrigger>
         <AccordionContent className="px-4">
+            <div className="space-y-2 mb-4 p-3 border rounded-md">
+                <Label>የተዋዋይ ወገን መጠሪያ (Party Title)</Label>
+                <RadioGroup 
+                    value={partyTitles.respondent} 
+                    onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY_TITLE', payload: { role: 'respondent', title: value }})}
+                    className="flex space-x-4"
+                >
+                    <div className="flex items-center space-x-2"><RadioGroupItem value="ተጠሪ (Respondent)" id="title-respondent" /><Label htmlFor="title-respondent">ተጠሪ (Respondent)</Label></div>
+                    <div className="flex items-center space-x-2"><RadioGroupItem value="ተከሳሽ (Defendant)" id="title-defendant" /><Label htmlFor="title-defendant">ተከሳሽ (Defendant)</Label></div>
+                </RadioGroup>
+            </div>
           {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} />)}
            <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>
             <Plus className="mr-2 h-4 w-4" /> Add Respondent

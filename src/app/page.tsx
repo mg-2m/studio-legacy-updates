@@ -23,7 +23,8 @@ type Action =
   | { type: 'REMOVE_EVIDENCE'; payload: { id: string } }
   | { type: 'UPDATE_EVIDENCE'; payload: { id: string; field: string; value: any } }
   | { type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL'; payload: { registryId: string; credentialValue: string } }
-  | { type: 'SET_SMART_EVIDENCE'; payload: { evidenceIds: string[] } }
+  | { type: 'SET_SUGGESTED_EVIDENCE'; payload: { evidenceIds: string[] } }
+  | { type: 'ADD_SMART_EVIDENCE'; payload: { registryId: string } }
   | { type: 'REMOVE_SMART_EVIDENCE'; payload: { registryId: string } };
 
 function appReducer(state: AppState, action: Action): AppState {
@@ -60,22 +61,25 @@ function appReducer(state: AppState, action: Action): AppState {
       const { factId } = action.payload;
       const factExists = state.selectedFacts.some(f => f.id === factId);
       let newSelectedFacts;
-      let newSmartEvidence = { ...state.smartEvidence };
-
+      
       if (factExists) {
         newSelectedFacts = state.selectedFacts.filter(f => f.id !== factId);
-        const originalFact = SMART_FACTS.find(f => f.id === factId);
-        if (originalFact?.autoEvidence && newSmartEvidence[originalFact.autoEvidence]) {
-          delete newSmartEvidence[originalFact.autoEvidence];
-        }
       } else {
         const factToAdd = SMART_FACTS.find(f => f.id === factId);
-        if (factToAdd) {
-          newSelectedFacts = [...state.selectedFacts, factToAdd];
-        } else {
-          newSelectedFacts = state.selectedFacts;
-        }
+        newSelectedFacts = factToAdd ? [...state.selectedFacts, factToAdd] : state.selectedFacts;
       }
+      
+      const newSmartEvidence: AppState['smartEvidence'] = {};
+      newSelectedFacts.forEach(fact => {
+        fact.autoEvidence?.forEach(evidenceId => {
+          if (state.smartEvidence[evidenceId]) {
+            newSmartEvidence[evidenceId] = state.smartEvidence[evidenceId];
+          } else if (EVIDENCE_REGISTRY[evidenceId]) {
+             newSmartEvidence[evidenceId] = { credentialId: '', active: false };
+          }
+        });
+      });
+
       return { ...state, selectedFacts: newSelectedFacts, smartEvidence: newSmartEvidence };
     }
 
@@ -87,8 +91,16 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'UPDATE_FACT_TEXT':
       return { ...state, selectedFacts: state.selectedFacts.map(f => f.id === action.payload.id ? { ...f, legalText: action.payload.text } : f) };
 
-    case 'TOGGLE_MAINTENANCE':
-      return { ...state, maintenance: { ...state.maintenance, active: action.payload.checked } };
+    case 'TOGGLE_MAINTENANCE': {
+        const newActive = action.payload.checked;
+        const newSmartEvidence = { ...state.smartEvidence };
+        if (newActive && EVIDENCE_REGISTRY['birth_cert']) {
+          newSmartEvidence['birth_cert'] = state.smartEvidence['birth_cert'] || { credentialId: '', active: false };
+        } else if (!newActive) {
+          delete newSmartEvidence['birth_cert'];
+        }
+        return { ...state, maintenance: { ...state.maintenance, active: newActive }, smartEvidence: newSmartEvidence };
+    }
       
     case 'UPDATE_MAINTENANCE': {
       const { key, value } = action.payload;
@@ -100,34 +112,49 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'SET_MAINTENANCE_CONTEXT':
       return { ...state, maintenance: { ...state.maintenance, context: action.payload } };
-
-    case 'SET_SMART_EVIDENCE': {
-      const newSmartEvidence: AppState['smartEvidence'] = {};
-      action.payload.forEach(id => {
-        if (EVIDENCE_REGISTRY[id]) {
-          newSmartEvidence[id] = state.smartEvidence[id] || { credentialId: '', active: true };
+    
+    case 'SET_SUGGESTED_EVIDENCE': {
+      const suggestedIds = action.payload.evidenceIds;
+      const newSmartEvidence = { ...state.smartEvidence };
+      
+      // Add suggested evidence if not already present
+      suggestedIds.forEach(id => {
+        if (EVIDENCE_REGISTRY[id] && !newSmartEvidence[id]) {
+          newSmartEvidence[id] = { credentialId: '', active: false };
         }
       });
-      const currentManualEvidenceIds = Object.keys(state.smartEvidence);
-      const allEvidenceIds = [...new Set([...action.payload, ...currentManualEvidenceIds])];
-      const finalSmartEvidence: AppState['smartEvidence'] = {};
-      allEvidenceIds.forEach(id => {
-         if (EVIDENCE_REGISTRY[id] && (newSmartEvidence[id] || state.smartEvidence[id])) {
-            finalSmartEvidence[id] = newSmartEvidence[id] || state.smartEvidence[id];
-         }
-      })
-      return { ...state, smartEvidence: finalSmartEvidence };
+
+      return { ...state, smartEvidence: newSmartEvidence };
+    }
+    
+    case 'ADD_SMART_EVIDENCE': {
+        const { registryId } = action.payload;
+        if(state.smartEvidence[registryId]) {
+            return { ...state, smartEvidence: { ...state.smartEvidence, [registryId]: { ...state.smartEvidence[registryId], active: true } } };
+        }
+        return state;
     }
 
     case 'UPDATE_SMART_EVIDENCE_CREDENTIAL': {
       const { registryId, credentialValue } = action.payload;
-      return { ...state, smartEvidence: { ...state.smartEvidence, [registryId]: { ...state.smartEvidence[registryId], credentialId: credentialValue } } };
+       if(state.smartEvidence[registryId]) {
+         return { ...state, smartEvidence: { ...state.smartEvidence, [registryId]: { ...state.smartEvidence[registryId], credentialId: credentialValue } } };
+       }
+       return state;
     }
 
     case 'REMOVE_SMART_EVIDENCE': {
-      const newSmartEvidence = { ...state.smartEvidence };
-      delete newSmartEvidence[action.payload.registryId];
-      return { ...state, smartEvidence: newSmartEvidence };
+        const { registryId } = action.payload;
+        const factIsSelected = state.selectedFacts.some(f => f.autoEvidence?.includes(registryId));
+        const maintenanceIsActive = state.maintenance.active && registryId === 'birth_cert';
+
+        if (factIsSelected || maintenanceIsActive) {
+            return { ...state, smartEvidence: { ...state.smartEvidence, [registryId]: { ...state.smartEvidence[registryId], active: false } } };
+        } else {
+             const newSmartEvidence = { ...state.smartEvidence };
+             delete newSmartEvidence[registryId];
+             return { ...state, smartEvidence: newSmartEvidence };
+        }
     }
     
     case 'ADD_EVIDENCE': {
@@ -160,13 +187,11 @@ export default function Home() {
       try {
         const result = await suggestEvidence({ selectedFacts: selectedFactIds });
         if (result && result.suggestedEvidence) {
-          dispatch({ type: 'SET_SMART_EVIDENCE', payload: result.suggestedEvidence });
+          dispatch({ type: 'SET_SUGGESTED_EVIDENCE', payload: { evidenceIds: result.suggestedEvidence } });
         }
       } catch (error) {
         console.error("Error suggesting evidence:", error);
       }
-    } else {
-        dispatch({ type: 'SET_SMART_EVIDENCE', payload: [] });
     }
   }, [selectedFactIds]);
 

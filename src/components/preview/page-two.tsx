@@ -13,6 +13,7 @@ export default function PageTwo({ state }: PageTwoProps) {
   const allEvidence: { label: string; credential?: string; type: string }[] = [];
 
   Object.entries(smartEvidence).forEach(([regId, smartEv]) => {
+    if (!smartEv.active) return;
     const registryItem = EVIDENCE_REGISTRY[regId];
     if (registryItem) {
       allEvidence.push({
@@ -43,7 +44,7 @@ export default function PageTwo({ state }: PageTwoProps) {
       <div style={{ borderTop: '4px double black' }} className="my-5"></div>
 
       <div className="text-center mb-5">
-        <div className="black-box text-lg">ማስረጃ ዝርዝር (EVIDENCE LIST)</div>
+        <div className="black-box text-lg">የማስረጃ ዝርዝር (EVIDENCE LIST)</div>
       </div>
 
       {hasEvidence ? (
@@ -57,7 +58,7 @@ export default function PageTwo({ state }: PageTwoProps) {
           ))}
         </ol>
       ) : (
-        <div className="text-center text-gray-500 p-5">No evidence listed.</div>
+        <div className="text-center text-gray-500 p-5">ምንም ማስረጃ አልተዘረዘረም (No evidence listed)</div>
       )}
 
       <div className="mt-12 pt-5 border-t-2 border-black">
@@ -68,7 +69,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>
-            <strong className="text-sm">Applicant's Signature</strong>
+            <strong className="text-sm">የአመልካች ፊርማ (Applicant's Signature)</strong>
           </div>
         </div>
       </div>

@@ -49,7 +49,7 @@ export interface Fact {
   label: string;
   legalText: string;
   citation: string;
-  autoEvidence: string | null;
+  autoEvidence: string[] | null;
   isCustom?: boolean;
 }
 

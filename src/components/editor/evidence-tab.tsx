@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from 'react';
@@ -13,6 +12,12 @@ import type { AppState, ManualEvidence } from '@/lib/types';
 import { BrainCircuit, Info, Plus, X, File, Users, Gavel } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { cn } from '@/lib/utils';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 interface EvidenceTabProps {
   state: AppState;
@@ -23,8 +28,14 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
   const { smartEvidence, evidence } = state;
   const [evidenceType, setEvidenceType] = useState<'Document' | 'Witness' | 'CourtOrder'>('Document');
 
-  const smartEvidenceList = Object.keys(smartEvidence)
-    .map(id => ({ ...EVIDENCE_REGISTRY[id], regId: id }))
+  const activeSmartEvidence = Object.entries(smartEvidence)
+    .filter(([, ev]) => ev.active)
+    .map(([id]) => ({ ...EVIDENCE_REGISTRY[id], regId: id }))
+    .filter(Boolean);
+    
+  const suggestedSmartEvidence = Object.entries(smartEvidence)
+    .filter(([, ev]) => !ev.active)
+    .map(([id]) => ({ ...EVIDENCE_REGISTRY[id], regId: id }))
     .filter(Boolean);
 
   return (
@@ -38,8 +49,9 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
       </Alert>
 
       <div className="space-y-4">
-        {smartEvidenceList.length > 0 ? (
-          smartEvidenceList.map(item => (
+        <Label className="font-bold">የተጨመሩ ማስረጃዎች (Active Evidence)</Label>
+        {activeSmartEvidence.length > 0 ? (
+          activeSmartEvidence.map(item => (
             <Card key={item.regId} className="bg-green-50/50 border-accent/50 dark:bg-green-950/20">
               <CardHeader className="flex-row items-center justify-between p-4">
                 <CardTitle className="text-base text-accent">{item.label}</CardTitle>
@@ -61,10 +73,24 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
           ))
         ) : (
           <div className="text-center text-sm text-muted-foreground p-4 border border-dashed rounded-lg">
-            የክስ ፍሬነገሮችን ሲመርጡ ማስረጃዎች በራስ-ሰር ይታያሉ።
+            ምንም የተመረጠ ማስረጃ የለም።
           </div>
         )}
       </div>
+
+       {suggestedSmartEvidence.length > 0 && (
+         <div className="space-y-2">
+            <Label>የሚጠቆሙ ማስረጃዎች (Suggested Evidence)</Label>
+            <div className="flex flex-wrap gap-2">
+            {suggestedSmartEvidence.map(item => (
+                <Button key={item.regId} variant="outline" size="sm" onClick={() => dispatch({ type: 'ADD_SMART_EVIDENCE', payload: { registryId: item.regId }})}>
+                    <Plus className="mr-2 h-4 w-4" />
+                    {item.label}
+                </Button>
+            ))}
+            </div>
+         </div>
+       )}
 
       <Separator />
 

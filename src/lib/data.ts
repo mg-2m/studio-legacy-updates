@@ -26,41 +26,53 @@ export const SMART_FACTS = [
     label: 'Conflict / Irreconcilable Differences (ግጭት)',
     legalText: 'በተጋቢዎች መካከል በተፈጠረ አለመግባባት ምክንያት ሰላም የሌለ በመሆኑ እና በትዳር መቀጠል የማይችሉበት ደረጃ ላይ በመድረሳቸው',
     citation: 'Family Code Art. 75',
-    autoEvidence: 'marriage_cert'
+    autoEvidence: ['marriage_cert']
   },
   {
     id: 'separation',
     label: 'Separation for 2 Years (ለ2 ዓመት መለያየት)',
     legalText: 'ተጋቢዎች ለሁለት ዓመት እና ከዚያ በላይ ተለያይተው የኖሩ በመሆኑ',
     citation: 'Family Code Art. 81',
-    autoEvidence: null
+    autoEvidence: ['separation_witness']
   },
   {
     id: 'desertion',
     label: 'Desertion (መጥፋት)',
     legalText: 'ተከሳሽ ትዳሩን እና ቤተሰቡን ጥሎ ከጠፋ ረጅም ጊዜ የሆነው በመሆኑ',
     citation: 'Family Code Art. (Relevant)',
-    autoEvidence: null
+    autoEvidence: ['desertion_witness']
   }
 ];
 
-export const EVIDENCE_REGISTRY: { [key: string]: { id: string; label: string; type: string; credentialLabel: string; credentialPlaceholder: string; linkedFact: string; } } = {
+export const EVIDENCE_REGISTRY: { [key: string]: { id: string; label: string; type: 'Document' | 'Witness'; credentialLabel: string; credentialPlaceholder: string; } } = {
   marriage_cert: {
     id: 'marriage_cert',
-    label: 'Marriage Certificate (ጋብቻ ሰርተፊኬት)',
+    label: 'Marriage Certificate (የጋብቻ የምስክር ወረቀት)',
     type: 'Document',
-    credentialLabel: 'Certificate Number',
+    credentialLabel: 'Certificate Number (የምስክር ወረቀት ቁጥር)',
     credentialPlaceholder: 'e.g., CERT-2020-12345',
-    linkedFact: 'conflict'
   },
   birth_cert: {
     id: 'birth_cert',
-    label: 'Child Birth Certificate (ልጅ ህዋ ሰርተፊኬት)',
+    label: 'Child Birth Certificate (የልጅ የልደት የምስክር ወረቀት)',
     type: 'Document',
-    credentialLabel: 'Birth Cert Number',
+    credentialLabel: 'Certificate Number (የምስክር ወረቀት ቁጥር)',
     credentialPlaceholder: 'e.g., BC-2015-67890',
-    linkedFact: 'custody'
-  }
+  },
+  separation_witness: {
+    id: 'separation_witness',
+    label: 'Witness for Separation (የመለያየት ምስክር)',
+    type: 'Witness',
+    credentialLabel: 'Witness Full Name (የምስክር ሙሉ ስም)',
+    credentialPlaceholder: 'e.g., Ato Kebede Abebe',
+  },
+  desertion_witness: {
+    id: 'desertion_witness',
+    label: 'Witness for Desertion (የመጥፋት ምስክር)',
+    type: 'Witness',
+    credentialLabel: 'Witness Full Name (የምስክር ሙሉ ስም)',
+    credentialPlaceholder: 'e.g., Woizero Almaz Bogale',
+  },
 };
 
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
@@ -73,7 +85,7 @@ export const INITIAL_STATE: AppState = {
     city: CITIES[0],
     fileNumber: '',
     date: new Date().toLocaleDateString('en-GB') + ' EC',
-    jurisdictionLaw: '1234',
+    jurisdictionLaw: '1234/2012',
     representation: 'self',
     summonsDelivery: 'self'
   },

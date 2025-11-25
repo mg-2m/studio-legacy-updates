@@ -1,6 +1,8 @@
 
 "use client";
 
+import { format } from "date-fns";
+import { Calendar as CalendarIcon, Plus } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -8,8 +10,14 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
+import { Calendar } from "@/components/ui/calendar";
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import {
   Select,
@@ -20,8 +28,9 @@ import {
 } from '@/components/ui/select';
 import { COURT_HIERARCHY, CITIES } from '@/lib/data';
 import type { AppState } from '@/lib/types';
-import { Plus } from 'lucide-react';
 import PartyForm from './party-form';
+import { cn } from "@/lib/utils";
+
 
 interface HeaderPartiesTabProps {
   state: AppState;
@@ -30,6 +39,8 @@ interface HeaderPartiesTabProps {
 
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
   const { metadata, applicants, respondents } = state;
+  const dateObject = metadata.date.endsWith(' EC') ? new Date() : new Date(metadata.date);
+
 
   return (
     <Accordion type="multiple" defaultValue={['item-1', 'item-4', 'item-5']} className="w-full space-y-4">
@@ -63,7 +74,28 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
           </div>
           <div className="space-y-2">
             <Label>ቀን (Date)</Label>
-            <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={"outline"}
+                  className={cn(
+                    "w-full justify-start text-left font-normal",
+                    !metadata.date && "text-muted-foreground"
+                  )}
+                >
+                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  {metadata.date ? metadata.date : <span>Pick a date</span>}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0">
+                <Calendar
+                  mode="single"
+                  selected={dateObject}
+                  onSelect={(date) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: date ? format(date, "dd/MM/yyyy") + ' EC' : '' } })}
+                  initialFocus
+                />
+              </PopoverContent>
+            </Popover>
           </div>
         </AccordionContent>
       </AccordionItem>

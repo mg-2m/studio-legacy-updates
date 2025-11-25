@@ -2,13 +2,24 @@ import type { AppState } from "./types";
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
-    "Lideta (ልደታ)", "Bole (ቦሌ)", "Kirkos (ቂርቆስ)", "Arada (አራዳ)", "Menaharia (መናሃሪያ)", "Yeka (የካ)", "Akaki (አቃቂ)"
+    "Lideta Division, 1st Bench (ልደታ ምድብ 1ኛ ችሎት)", 
+    "Lideta Division, 2nd Bench (ልደታ ምድብ 2ኛ ችሎት)",
+    "Bole Division (ቦሌ ምድብ)",
+    "Kirkos Division (ቂርቆስ ምድብ)",
+    "Arada Division (አራዳ ምድብ)",
+    "Yeka Division (የካ ምድብ)", 
+    "Akaki Kality Division (አቃቂ ቃሊቲ ምድብ)"
   ],
   "Federal High Court (የፌዴራል ከፍተኛ ፍርድ ቤት)": [
-    "Lideta Appellate (ልደታ ይግባኝ)", "Criminal Division (ወንጀል ችሎት)", "Civil Division (ፍትሐብሔር ችሎት)", "Bole High Court (ቦሌ ከፍተኛ)"
+    "Lideta Division, 1st Civil Bench (ልደታ ምድብ 1ኛ ፍትሐብሔር ችሎት)",
+    "Lideta Division, 2nd Civil Bench (ልደታ ምድብ 2ኛ ፍትሐብሔር ችሎት)",
+    "Lideta Division, 1st Criminal Bench (ልደታ ምድብ 1ኛ ወንጀል ችሎት)",
+    "Bole Division (ቦሌ ምድብ)"
   ],
   "Federal Supreme Court (የፌዴራል ጠቅላይ ፍርድ ቤት)": [
-    "Cassation Bench (ሰበር ሰሚ ችሎት)", "Regular Bench (መደበኛ ችሎት)"
+    "1st Cassation Bench (1ኛ ሰበር ሰሚ ችሎት)", 
+    "2nd Cassation Bench (2ኛ ሰበር ሰሚ ችሎት)",
+    "1st Appellate Bench (1ኛ ይግባኝ ሰሚ ችሎት)"
   ]
 };
 

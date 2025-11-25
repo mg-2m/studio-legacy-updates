@@ -45,11 +45,18 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
   return (
     <Accordion type="multiple" defaultValue={['item-1', 'item-4', 'item-5']} className="w-full space-y-4">
       <AccordionItem value="item-1" className="border rounded-lg bg-background">
-        <AccordionTrigger className="px-4 text-primary">የፍ/ቤት እና የክስ ራስጌ</AccordionTrigger>
+        <AccordionTrigger className="px-4 text-primary">የፍ/ቤት እና የክስ ራስጌ (Court & Header)</AccordionTrigger>
         <AccordionContent className="px-4 space-y-4">
           <div className="space-y-2">
             <Label>የፍ/ቤት ደረጃ (Court Tier)</Label>
-            <Select value={metadata.courtLevel} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevel', value } })}>
+            <Select 
+              value={metadata.courtLevel} 
+              onValueChange={(value) => {
+                dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevel', value } });
+                const newDefaultBench = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY][0];
+                dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
+              }}
+            >
               <SelectTrigger><SelectValue placeholder="Select court tier" /></SelectTrigger>
               <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
             </Select>
@@ -101,7 +108,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       </AccordionItem>
 
       <AccordionItem value="item-2" className="border rounded-lg bg-background">
-        <AccordionTrigger className="px-4 text-primary">ሥነ-ሥርዓት እና መግቢያ</AccordionTrigger>
+        <AccordionTrigger className="px-4 text-primary">ሥነ-ሥርዓት እና መግቢያ (Procedure & Intro)</AccordionTrigger>
         <AccordionContent className="px-4 space-y-4">
           <div className="space-y-2">
             <Label>Jurisdiction Law (Proc. No.)</Label>

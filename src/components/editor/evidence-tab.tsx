@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -136,7 +137,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 {item.type === 'Document' && (
                     <>
                          <div className="space-y-2">
-                            <Label>Description (תיאור)</Label>
+                            <Label>Description</Label>
                             <Input 
                                 placeholder={"e.g., Police report about the incident"}
                                 value={item.description}

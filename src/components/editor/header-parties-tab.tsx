@@ -127,7 +127,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       </AccordionItem>
       
       <AccordionItem value="item-4" className="border rounded-lg bg-background">
-        <AccordionTrigger className="px-4 text-primary">አመልካች / ከሳሽ (Plaintiff)</AccordionTrigger>
+        <AccordionTrigger className="px-4 text-primary">አመልካች / ከሳሽ (Applicant / Plaintiff)</AccordionTrigger>
         <AccordionContent className="px-4">
           {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} />)}
           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
@@ -137,7 +137,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       </AccordionItem>
       
       <AccordionItem value="item-5" className="border rounded-lg bg-background">
-        <AccordionTrigger className="px-4 text-primary">ተከሳሽ / ተጠሪ (Defendant)</AccordionTrigger>
+        <AccordionTrigger className="px-4 text-primary">ተጠሪ / ተከሳሽ (Respondent / Defendant)</AccordionTrigger>
         <AccordionContent className="px-4">
           {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} />)}
            <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>

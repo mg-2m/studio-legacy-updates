@@ -26,7 +26,7 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
     return (
         <Card className="mb-4 bg-muted/30">
           <CardHeader className="flex flex-row items-center justify-between p-4">
-            <CardTitle className="text-base">{role === 'applicants' ? 'አመልካች (Applicant)' : 'ተከሳሽ (Respondent)'}</CardTitle>
+            <CardTitle className="text-base">{role === 'applicants' ? 'አመልካች (Applicant)' : 'ተጠሪ (Respondent)'}</CardTitle>
             <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_PARTY', payload: { role, id: party.id }})}>
               <X className="h-4 w-4" />
             </Button>
@@ -46,21 +46,24 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
                 <Input placeholder="Phone" value={party.phone} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'phone', value: e.target.value } })} />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label>ከተማ (City)</Label>
-                <Select value={party.address.city} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.city', value } })}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
-                  <SelectContent>{CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label>ክፍለ ከተማ (Subcity)</Label>
-                <Select value={party.address.subcity} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.subcity', value } })}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
-                  <SelectContent>{AA_SUBCITIES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
-                </Select>
-              </div>
+            <div className="space-y-2">
+                <Label>አድራሻ (Address)</Label>
+                <div className="grid grid-cols-2 gap-4 border p-3 rounded-md">
+                    <div className="space-y-2">
+                        <Label className="text-xs">ከተማ (City)</Label>
+                        <Select value={party.address.city} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.city', value } })}>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
+                        <SelectContent>{CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                        </Select>
+                    </div>
+                    <div className="space-y-2">
+                        <Label className="text-xs">ክፍለ ከተማ (Subcity)</Label>
+                        <Select value={party.address.subcity} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.subcity', value } })}>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
+                        <SelectContent>{AA_SUBCITIES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
+                        </Select>
+                    </div>
+                </div>
             </div>
           </CardContent>
         </Card>

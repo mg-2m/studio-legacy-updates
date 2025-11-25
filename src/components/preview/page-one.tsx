@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { AppState } from '@/lib/types';
@@ -28,6 +29,21 @@ export default function PageOne({ state }: PageOneProps) {
     'ወጪ እና ኪሳራ እንዲተካ፡፡'
   ].filter(Boolean);
 
+  const getPluralizedTitle = (title: string, count: number): string => {
+    if (count <= 1) return title.toUpperCase();
+
+    const amharicPart = title.split('(')[0].trim();
+    const englishPart = title.split('(')[1].replace(')', '').trim();
+    
+    const pluralAmharic = amharicPart + 'ዎች';
+    const pluralEnglish = englishPart + 's';
+
+    return `${pluralAmharic} (${pluralEnglish})`.toUpperCase();
+  };
+
+  const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
+  const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
+
   return (
     <div className="a4-page">
       <div className="header-block">
@@ -49,7 +65,7 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mb-5">
-        <div className="purple-box">{partyTitles.applicant.toUpperCase()}</div>
+        <div className="purple-box">{applicantTitle}</div>
         {applicants.map((p, i) => (
           <div key={i} className="border-l-4 border-black pl-3 mt-1">
             <div className="font-bold text-base">{p.name || '___________'}</div>
@@ -60,7 +76,7 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mb-5">
-        <div className="purple-box">{partyTitles.respondent.toUpperCase()}</div>
+        <div className="purple-box">{respondentTitle}</div>
         {respondents.length > 0 ? respondents.map((p, i) => (
           <div key={i} className="border-l-4 border-black pl-3 mt-1">
             <div className="font-bold text-base">{p.name || '___________'}</div>

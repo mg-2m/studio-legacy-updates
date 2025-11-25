@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,9 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { EVIDENCE_REGISTRY } from '@/lib/data';
 import type { AppState, ManualEvidence } from '@/lib/types';
-import { BrainCircuit, Info, Plus, X, File, Users, Gavel } from 'lucide-react';
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { cn } from '@/lib/utils';
+import { BrainCircuit, Plus, X, File, Users, Gavel } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,7 +25,6 @@ interface EvidenceTabProps {
 
 export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
   const { smartEvidence, evidence } = state;
-  const [evidenceType, setEvidenceType] = useState<'Document' | 'Witness' | 'CourtOrder'>('Document');
 
   const activeSmartEvidence = Object.entries(smartEvidence)
     .filter(([, ev]) => ev.active)
@@ -97,22 +94,28 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
 
       <div>
         <Label className="font-bold">ተጨማሪ ማስረጃ ያስገቡ (Manual Evidence)</Label>
-        <div className="mt-2 space-y-4">
-          <ToggleGroup type="single" value={evidenceType} onValueChange={(value: 'Document' | 'Witness' | 'CourtOrder') => value && setEvidenceType(value)} className="w-full">
-            <ToggleGroupItem value="Document" className="flex-1" aria-label="Toggle document">
-                <File className="mr-2 h-4 w-4" /> ሰነድ (Document)
-            </ToggleGroupItem>
-            <ToggleGroupItem value="Witness" className="flex-1" aria-label="Toggle witness">
-                <Users className="mr-2 h-4 w-4" /> የሰው ምስክር (Witness)
-            </ToggleGroupItem>
-            <ToggleGroupItem value="CourtOrder" className="flex-1" aria-label="Toggle court order">
-                <Gavel className="mr-2 h-4 w-4" /> የፍ/ቤት ትዕዛዝ (Order)
-            </ToggleGroupItem>
-          </ToggleGroup>
-
-          <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: evidenceType } })}>
-            <Plus className="mr-2 h-4 w-4" /> Add Selected Type
-          </Button>
+        <div className="mt-2">
+           <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" className="w-full border-dashed">
+                <Plus className="mr-2 h-4 w-4" /> Add Manual Evidence
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56">
+              <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Document' } })}>
+                <File className="mr-2 h-4 w-4" />
+                <span>ሰነድ (Document)</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Witness' } })}>
+                <Users className="mr-2 h-4 w-4" />
+                <span>የሰው ምስክር (Witness)</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'CourtOrder' } })}>
+                <Gavel className="mr-2 h-4 w-4" />
+                <span>የትዕዛዝ (Court Order)</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
       
@@ -122,7 +125,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
         {evidence.map((item: ManualEvidence) => (
           <Card key={item.id}>
              <CardHeader className="flex-row items-center justify-between p-4">
-                <CardTitle className="text-base">{item.type} (Manual)</CardTitle>
+                <CardTitle className="text-base">{item.type === 'CourtOrder' ? 'Court Order' : item.type} (Manual)</CardTitle>
                  <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_EVIDENCE', payload: { id: item.id } })}>
                   <X className="h-4 w-4" />
                 </Button>
@@ -131,7 +134,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 <div className="space-y-2">
                     <Label>Description (תיאור)</Label>
                     <Input 
-                        placeholder="e.g., Police report about the incident"
+                        placeholder={item.type === 'Witness' ? "e.g., Ato Kebede, Addis Ababa, Bole Sub-city" : "e.g., Police report about the incident"}
                         value={item.description}
                         onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
                     />
@@ -192,11 +195,11 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                         </div>
                     </>
                 )}
-                 {item.type === 'Witness' && (
+                 {(item.type === 'Witness' || item.type === 'CourtOrder') && (
                     <div className="space-y-2">
-                        <Label>Witness Full Name & Address</Label>
+                        <Label>{item.type === 'Witness' ? 'Witness Full Name & Address' : 'Details of Court Order'}</Label>
                         <Input 
-                            placeholder="e.g., Ato Kebede, Addis Ababa, Bole Sub-city"
+                            placeholder={item.type === 'Witness' ? "e.g., Ato Kebede, Addis Ababa, Bole Sub-city" : "e.g., Order for temporary injunction"}
                             value={item.description}
                             onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
                         />
@@ -210,3 +213,5 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
+
+    

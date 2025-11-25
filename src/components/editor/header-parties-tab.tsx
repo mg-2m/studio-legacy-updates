@@ -18,10 +18,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { COURT_HIERARCHY, CITIES, AA_SUBCITIES } from '@/lib/data';
-import type { AppState, Party } from '@/lib/types';
-import { Plus, X } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { COURT_HIERARCHY, CITIES } from '@/lib/data';
+import type { AppState } from '@/lib/types';
+import { Plus } from 'lucide-react';
+import PartyForm from './party-form';
 
 interface HeaderPartiesTabProps {
   state: AppState;
@@ -30,49 +30,6 @@ interface HeaderPartiesTabProps {
 
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
   const { metadata, applicants, respondents } = state;
-
-  const PartyForm = ({ role, party }: { role: 'applicants' | 'respondents'; party: Party }) => (
-    <Card className="mb-4 bg-muted/30">
-      <CardHeader className="flex flex-row items-center justify-between p-4">
-        <CardTitle className="text-base">{role === 'applicants' ? 'አመልካች (Applicant)' : 'ተከሳሽ (Respondent)'}</CardTitle>
-        <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_PARTY', payload: { role, id: party.id }})}>
-          <X className="h-4 w-4" />
-        </Button>
-      </CardHeader>
-      <CardContent className="space-y-4 px-4 pb-4">
-        <div className="space-y-2">
-          <Label>ሙሉ ስም (Full Name)</Label>
-          <Input placeholder="Full Name" value={party.name} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'name', value: e.target.value } })} />
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <Label>የመታወቂያ ቁ. (ID No.)</Label>
-            <Input placeholder="ID No." value={party.idNumber} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'idNumber', value: e.target.value } })} />
-          </div>
-          <div className="space-y-2">
-            <Label>ስልክ (Phone)</Label>
-            <Input placeholder="Phone" value={party.phone} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'phone', value: e.target.value } })} />
-          </div>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <Label>ከተማ (City)</Label>
-            <Select value={party.address.city} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.city', value } })}>
-              <SelectTrigger><SelectValue /></SelectTrigger>
-              <SelectContent>{CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
-            </Select>
-          </div>
-          <div className="space-y-2">
-            <Label>ክፍለ ከተማ (Subcity)</Label>
-            <Select value={party.address.subcity} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.subcity', value } })}>
-              <SelectTrigger><SelectValue /></SelectTrigger>
-              <SelectContent>{AA_SUBCITIES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
-            </Select>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  );
 
   return (
     <Accordion type="multiple" defaultValue={['item-1', 'item-4', 'item-5']} className="w-full space-y-4">
@@ -140,7 +97,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       <AccordionItem value="item-4" className="border rounded-lg bg-background">
         <AccordionTrigger className="px-4 text-primary">አመልካች / ከሳሽ (Plaintiff)</AccordionTrigger>
         <AccordionContent className="px-4">
-          {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} />)}
+          {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} />)}
           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
             <Plus className="mr-2 h-4 w-4" /> Add Applicant
           </Button>
@@ -150,7 +107,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       <AccordionItem value="item-5" className="border rounded-lg bg-background">
         <AccordionTrigger className="px-4 text-primary">ተከሳሽ / ተጠሪ (Defendant)</AccordionTrigger>
         <AccordionContent className="px-4">
-          {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} />)}
+          {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} />)}
            <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>
             <Plus className="mr-2 h-4 w-4" /> Add Respondent
           </Button>

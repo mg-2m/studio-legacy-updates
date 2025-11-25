@@ -100,7 +100,7 @@ export const INITIAL_STATE: AppState = {
     representation: 'self',
     summonsDelivery: 'self'
   },
-  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: 'Addis Ababa (አዲስ አበባ)', subcity: AA_SUBCITIES[1] } }],
+  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: CITIES[0], subcity: AA_SUBCITIES[1] } }],
   respondents: [],
   selectedFacts: [],
   maintenance: { 

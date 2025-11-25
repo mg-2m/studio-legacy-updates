@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -30,9 +31,9 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     <div className="space-y-6">
       <Alert className="bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-950 dark:border-blue-800 dark:text-blue-200">
         <BrainCircuit className="h-4 w-4 !text-blue-500" />
-        <AlertTitle>Smart Evidence</AlertTitle>
+        <AlertTitle>ብልጥ ማስረጃ (Smart Evidence)</AlertTitle>
         <AlertDescription>
-          Evidence auto-suggested by AI based on your selected facts appears below.
+          በመረጧቸው የክስ ፍሬነገሮች ላይ ተመስርቶ በሲስተሙ የሚጠቆሙ ማስረጃዎች ከታች ይታያሉ።
         </AlertDescription>
       </Alert>
 
@@ -60,7 +61,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
           ))
         ) : (
           <div className="text-center text-sm text-muted-foreground p-4 border border-dashed rounded-lg">
-            Select facts to auto-populate evidence.
+            የክስ ፍሬነገሮችን ሲመርጡ ማስረጃዎች በራስ-ሰር ይታያሉ።
           </div>
         )}
       </div>
@@ -68,17 +69,17 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
       <Separator />
 
       <div>
-        <Label className="font-bold">Add Manual Evidence</Label>
+        <Label className="font-bold">ተጨማሪ ማስረጃ ያስገቡ (Manual Evidence)</Label>
         <div className="mt-2 space-y-4">
           <ToggleGroup type="single" value={evidenceType} onValueChange={(value: 'Document' | 'Witness' | 'CourtOrder') => value && setEvidenceType(value)} className="w-full">
             <ToggleGroupItem value="Document" className="flex-1" aria-label="Toggle document">
-                <File className="mr-2 h-4 w-4" /> Document
+                <File className="mr-2 h-4 w-4" /> ሰነድ (Document)
             </ToggleGroupItem>
             <ToggleGroupItem value="Witness" className="flex-1" aria-label="Toggle witness">
-                <Users className="mr-2 h-4 w-4" /> Witness
+                <Users className="mr-2 h-4 w-4" /> የሰው ምስክር (Witness)
             </ToggleGroupItem>
             <ToggleGroupItem value="CourtOrder" className="flex-1" aria-label="Toggle court order">
-                <Gavel className="mr-2 h-4 w-4" /> Order
+                <Gavel className="mr-2 h-4 w-4" /> የፍ/ቤት ትዕዛዝ (Order)
             </ToggleGroupItem>
           </ToggleGroup>
 

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from 'react';
@@ -33,9 +34,9 @@ export default function EditorColumn({ state, dispatch, isCollapsed, onToggle }:
       {!isCollapsed && (
         <Tabs defaultValue="details" className="flex flex-col flex-1 overflow-hidden">
           <TabsList className="m-2">
-            <TabsTrigger value="details" className="flex-1">Header & Parties</TabsTrigger>
-            <TabsTrigger value="pleading" className="flex-1">Facts</TabsTrigger>
-            <TabsTrigger value="evidence" className="flex-1">Evidence</TabsTrigger>
+            <TabsTrigger value="details" className="flex-1">ራስጌ እና ተዋዋይ ወገኖች</TabsTrigger>
+            <TabsTrigger value="pleading" className="flex-1">የክሱ ፍሬነገሮች</TabsTrigger>
+            <TabsTrigger value="evidence" className="flex-1">ማስረጃዎች</TabsTrigger>
           </TabsList>
 
           <div className="flex-1 overflow-y-auto p-4">

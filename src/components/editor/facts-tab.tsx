@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -25,9 +26,9 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
     <div className="space-y-6">
       <Alert className="bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-950 dark:border-blue-800 dark:text-blue-200">
         <Info className="h-4 w-4 !text-blue-500" />
-        <AlertTitle>Fact Selection</AlertTitle>
+        <AlertTitle>የክስ ፍሬነገር ምርጫ (Fact Selection)</AlertTitle>
         <AlertDescription>
-          Select specific grounds below to auto-inject legal arguments and suggest relevant evidence.
+          ህጋዊ አንቀፆችን እና ተያያዥ ማስረጃዎችን በራስ-ሰር ለማስገባት ከዚህ በታች ያሉትን ምክንያቶች ይምረጡ።
         </AlertDescription>
       </Alert>
 
@@ -40,10 +41,10 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
         />
         <div className="grid gap-1.5 leading-none">
           <label htmlFor="chk-custody" className="font-bold text-foreground cursor-pointer">
-            Child Custody &amp; Maintenance (የልጅ አስተዳደግ እና ቀለብ)
+            የልጅ አስተዳደግ እና ቀለብ (Child Custody & Maintenance)
           </label>
           <p className="text-sm text-green-700 dark:text-green-400">
-            Checking this enables the smart legal calculator.
+            ይህንን መምረጥ የቀለብ ማስያ ማሽን እንዲሰራ ያደርጋል።
           </p>
         </div>
       </div>
@@ -55,7 +56,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                 <div>
                     <CardTitle className="text-accent flex items-center gap-2">
                         <BrainCircuit className="w-5 h-5"/>
-                        Maintenance Calculator
+                        የቀለብ ማስያ (Maintenance Calculator)
                     </CardTitle>
                     <CardDescription>Rule: (Income × 33%) ÷ Children</CardDescription>
                 </div>
@@ -64,7 +65,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="calc-income">Respondent Monthly Income (Birr)</Label>
+                <Label htmlFor="calc-income">የተከሳሽ ወርሃዊ ገቢ (ብር)</Label>
                 <Input
                   id="calc-income"
                   type="number"
@@ -74,7 +75,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="calc-children">Number of Children</Label>
+                <Label htmlFor="calc-children">የልጆች ብዛት</Label>
                 <Input
                   id="calc-children"
                   type="number"
@@ -85,7 +86,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
               </div>
             </div>
             <div className="text-center rounded-lg border-2 border-dashed border-accent/50 bg-background p-4">
-              <p className="text-sm text-muted-foreground">Estimated Maintenance Per Child</p>
+              <p className="text-sm text-muted-foreground">ለአንድ ልጅ የሚገመት ቀለብ</p>
               <p className="text-2xl font-bold text-foreground">{maintenance.result.toFixed(2)} ETB</p>
             </div>
             {maintenance.context && (

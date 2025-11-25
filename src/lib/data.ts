@@ -48,16 +48,42 @@ export const EVIDENCE_LOCATIONS = [
 ];
 
 export const DOCUMENT_ISSUERS = [
+  // --- Law Enforcement & Justice ---
+  "Federal Police Commission (የፌደራል ፖሊስ ኮሚሽን)",
   "Addis Ababa Police Commission (የአዲስ አበባ ፖሊስ ኮሚሽን)",
   "Oromia Police Commission (የኦሮሚያ ፖሊስ ኮሚሽን)",
   "Amhara Police Commission (የአማራ ፖሊስ ኮሚሽን)",
-  "Federal Police Commission (የፌደራል ፖሊስ ኮሚሽን)",
+  "Ministry of Justice (የፍትህ ሚኒስቴር)",
+  "Federal Attorney General (የፌዴራል ጠቅላይ ዐቃቤ ሕግ)",
+  
+  // --- Vital Events, Civil Status & Documents ---
+  "Vital Events Registration Agency (የወሳኝ ኩነት ምዝገባ ኤጀንሲ)",
+  "Documents Authentication and Registration Service (DARA) (የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት)",
+  "Immigration and Citizenship Service (የኢሚግሬሽን እና የዜግነት አገልግሎት)",
+  
+  // --- Economy, Trade & Finance ---
   "Ministry of Trade and Regional Integration (የንግድ እና ቀጣናዊ ትስስር ሚኒስቴር)",
   "Ministry of Revenues (የገቢዎች ሚኒስቴር)",
+  "Ministry of Finance (የገንዘብ ሚኒስቴር)",
   "Ethiopian Investment Commission (የኢትዮጵያ ኢንቨስትመንት ኮሚሽን)",
-  "Vital Events Registration Agency (የወሳኝ ኩነት ምዝገባ ኤጀንሲ)",
-  "Documents Authentication and Registration Service (የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት)",
+  "National Bank of Ethiopia (የኢትዮጵያ ብሔራዊ ባንክ)",
+  "Commercial Bank of Ethiopia (የኢትዮጵያ ንግድ ባንክ)",
+
+  // --- Land, Property & Infrastructure ---
+  "Addis Ababa City Land Development and Management Bureau (የአ/አ ከተማ የመሬት ልማት እና ማኔጅመንት ቢሮ)",
+  "Ministry of Urban and Infrastructure (የከተማ እና መሠረተ ልማት ሚኒስቴር)",
+  "Ethiopian Roads Administration (የኢትዮጵያ መንገዶች አስተዳደር)",
+  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክስ ሚኒስቴር)",
+  "Ethiopian Electric Power (የኢትዮጵያ ኤሌክትሪክ ኃይል)",
+
+  // --- Social & Health ---
+  "Ministry of Health (የጤና ጥበቃ ሚኒስቴር)",
   "A hospital or clinic (ሆስፒታል ወይም ክሊኒክ)",
+  "Ministry of Education (የትምህርት ሚኒስቴር)",
+  "A university or educational institution (ዩኒቨርሲቲ ወይም የትምህርት ተቋም)",
+  "Ministry of Labor and Skills (የሥራ እና ክህሎት ሚኒስቴር)",
+  
+  // --- Other ---
   "Other (ሌላ)",
 ];
 

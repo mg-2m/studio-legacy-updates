@@ -20,6 +20,8 @@ export const AA_SUBCITIES = [
   "Yeka (የካ)", "Lemi Kura (ለሚ ኩራ)"
 ];
 
+export const HONORIFICS = ["አቶ (Mr.)", "ወ/ሮ (Mrs.)", "ወ/ሪት (Miss)"];
+
 export const EVIDENCE_LOCATIONS = [
   "With Applicant (ከአመልካች ጋር)",
   "With Respondent (ከተከሳሽ ጋር)",
@@ -98,7 +100,7 @@ export const INITIAL_STATE: AppState = {
     representation: 'self',
     summonsDelivery: 'self'
   },
-  applicants: [{ id: '1', name: '', idNumber: '', phone: '', address: { city: 'Addis Ababa (አዲስ አበባ)', subcity: AA_SUBCITIES[1] } }],
+  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: 'Addis Ababa (አዲስ አበባ)', subcity: AA_SUBCITIES[1] } }],
   respondents: [],
   selectedFacts: [],
   maintenance: { 

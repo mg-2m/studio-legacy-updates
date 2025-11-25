@@ -3,6 +3,7 @@ export interface Party {
   name: string;
   idNumber: string;
   phone: string;
+  honorific: string;
   address: {
     city: string;
     subcity: string;

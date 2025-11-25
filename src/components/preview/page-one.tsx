@@ -1,7 +1,7 @@
 
 "use client";
 
-import type { AppState } from '@/lib/types';
+import type { AppState, Party } from '@/lib/types';
 
 interface PageOneProps {
   state: AppState;
@@ -41,6 +41,14 @@ export default function PageOne({ state }: PageOneProps) {
     return `${pluralAmharic} (${pluralEnglish})`.toUpperCase();
   };
 
+  const formatPartyList = (parties: Party[]): string => {
+    const partyNames = parties.map(p => `${p.honorific.split('(')[0].trim()} ${p.name}`);
+    if (partyNames.length === 0) return '___________';
+    if (partyNames.length === 1) return partyNames[0];
+    if (partyNames.length === 2) return partyNames.join(' እና ');
+    return `${partyNames.slice(0, -1).join('፣ ')} እና ${partyNames.slice(-1)}`;
+  };
+  
   const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
   const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
 
@@ -65,24 +73,21 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mb-5">
-        <div className="purple-box">{applicantTitle}</div>
-        {applicants.map((p, i) => (
-          <div key={i} className="border-l-4 border-black pl-3 mt-1">
-            <div className="font-bold text-base">{p.name || '___________'}</div>
-            <div className="text-sm">ID: {p.idNumber || '___'} | Tel: {p.phone || '___'}</div>
-            <div className="text-sm italic">Address: {p.address.city}, {p.address.subcity}</div>
-          </div>
-        ))}
+        <div className="flex justify-between items-start">
+            <div className="purple-box">{applicantTitle}</div>
+            <div className="text-right font-bold text-base w-3/4">
+                {formatPartyList(applicants)}
+            </div>
+        </div>
       </div>
 
       <div className="mb-5">
-        <div className="purple-box">{respondentTitle}</div>
-        {respondents.length > 0 ? respondents.map((p, i) => (
-          <div key={i} className="border-l-4 border-black pl-3 mt-1">
-            <div className="font-bold text-base">{p.name || '___________'}</div>
-            <div className="text-sm italic">Address: {p.address.city}, {p.address.subcity}</div>
-          </div>
-        )) : <div className="text-gray-500 italic pl-3">[No Respondent]</div>}
+        <div className="flex justify-between items-start">
+            <div className="purple-box">{respondentTitle}</div>
+            <div className="text-right font-bold text-base w-3/4">
+                {respondents.length > 0 ? formatPartyList(respondents) : '________________'}
+            </div>
+        </div>
       </div>
 
       <div className="text-center my-8">

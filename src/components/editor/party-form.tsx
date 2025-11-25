@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { CITIES, AA_SUBCITIES } from '@/lib/data';
+import { CITIES, AA_SUBCITIES, HONORIFICS } from '@/lib/data';
 import type { Party } from '@/lib/types';
 import { X } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
@@ -26,15 +26,24 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
     return (
         <Card className="mb-4 bg-muted/30">
           <CardHeader className="flex flex-row items-center justify-between p-4">
-            <CardTitle className="text-base">{role === 'applicants' ? 'አመልካች (Applicant)' : 'ተጠሪ (Respondent)'}</CardTitle>
+            <CardTitle className="text-base">{role === 'applicants' ? 'Applicant' : 'Respondent'}</CardTitle>
             <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_PARTY', payload: { role, id: party.id }})}>
               <X className="h-4 w-4" />
             </Button>
           </CardHeader>
           <CardContent className="space-y-4 px-4 pb-4">
-            <div className="space-y-2">
-              <Label>ሙሉ ስም (Full Name)</Label>
-              <Input placeholder="Full Name" value={party.name} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'name', value: e.target.value } })} />
+            <div className="grid grid-cols-4 gap-4">
+              <div className="space-y-2 col-span-1">
+                 <Label>Title</Label>
+                 <Select value={party.honorific} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'honorific', value } })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>{HONORIFICS.map(h => <SelectItem key={h} value={h}>{h}</SelectItem>)}</SelectContent>
+                 </Select>
+              </div>
+              <div className="space-y-2 col-span-3">
+                <Label>ሙሉ ስም (Full Name)</Label>
+                <Input placeholder="Full Name" value={party.name} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'name', value: e.target.value } })} />
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">

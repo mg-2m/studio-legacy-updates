@@ -10,29 +10,39 @@ interface PageTwoProps {
 export default function PageTwo({ state }: PageTwoProps) {
   const { metadata: meta, smartEvidence, evidence } = state;
 
-  const allEvidence: { label: string; credential?: string; type: string }[] = [];
+  const allEvidence: { label: string; details: string; type: string }[] = [];
 
+  // Process Smart (Auto-Linked) Evidence
   Object.entries(smartEvidence).forEach(([regId, smartEv]) => {
     if (!smartEv.active) return;
     const registryItem = EVIDENCE_REGISTRY[regId];
     if (registryItem) {
       allEvidence.push({
         label: registryItem.label,
-        credential: smartEv.credentialId,
+        details: smartEv.credentialId ? `${registryItem.credentialLabel}: ${smartEv.credentialId}` : 'No details provided',
         type: 'Auto-Linked'
       });
     }
   });
 
+  // Process Manual Evidence
   evidence.forEach(e => {
+    let details = e.description || e.type;
+    if (e.type === 'Document') {
+        details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issuer: ${e.issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType})`;
+    }
     allEvidence.push({
       label: e.description || e.type,
-      credential: e.refNumber,
-      type: 'Manual'
+      details: details,
+      type: `Manual (${e.type})`
     });
   });
 
   const hasEvidence = allEvidence.length > 0;
+
+  if (!hasEvidence) {
+    return null; // Don't render page two if there's no evidence at all
+  }
 
   return (
     <div className="a4-page">
@@ -47,19 +57,17 @@ export default function PageTwo({ state }: PageTwoProps) {
         <div className="black-box text-lg">የማስረጃ ዝርዝር (EVIDENCE LIST)</div>
       </div>
 
-      {hasEvidence ? (
-        <ol className="ml-5 list-decimal" style={{ lineHeight: 1.8 }}>
-          {allEvidence.map((e, i) => (
-            <li key={i} className="mb-3 text-justify">
-              <strong>{e.label}</strong>
-              {e.credential && ` (${e.credential})`}
-              {e.type === 'Auto-Linked' && <span className="text-xs text-green-700 ml-2 font-sans">[Auto-Linked]</span>}
-            </li>
-          ))}
-        </ol>
-      ) : (
-        <div className="text-center text-gray-500 p-5">ምንም ማስረጃ አልተዘረዘረም (No evidence listed)</div>
-      )}
+      <ol className="ml-5 list-decimal" style={{ lineHeight: 1.8 }}>
+        {allEvidence.map((e, i) => (
+          <li key={i} className="mb-3 text-justify">
+            <strong>{e.label}</strong>
+            <span className="text-xs text-gray-600 ml-2 font-sans">[{e.type}]</span>
+            <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">
+              {e.details}
+            </p>
+          </li>
+        ))}
+      </ol>
 
       <div className="mt-12 pt-5 border-t-2 border-black">
         <div className="black-box mb-4">ማረጋገጫ (VERIFICATION)</div>

@@ -158,7 +158,17 @@ function appReducer(state: AppState, action: Action): AppState {
     }
     
     case 'ADD_EVIDENCE': {
-      const newEvidence = { id: Date.now().toString(), type: action.payload.type, description: '', issuer: '', refNumber: '', isManual: true as const };
+      const newEvidence = { 
+        id: Date.now().toString(), 
+        type: action.payload.type, 
+        description: '', 
+        issuer: '', 
+        refNumber: '',
+        pageCount: '',
+        documentType: 'Copy' as const,
+        originalLocation: '',
+        isManual: true as const 
+      };
       return { ...state, evidence: [...state.evidence, newEvidence] };
     }
     case 'REMOVE_EVIDENCE':

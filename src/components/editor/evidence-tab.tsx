@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { EVIDENCE_REGISTRY } from '@/lib/data';
 import type { AppState, ManualEvidence } from '@/lib/types';
 import { BrainCircuit, Info, Plus, X, File, Users, Gavel } from 'lucide-react';
@@ -128,20 +129,76 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
               </CardHeader>
               <CardContent className="space-y-4 px-4 pb-4">
                 <div className="space-y-2">
-                    <Label>Description</Label>
+                    <Label>Description (תיאור)</Label>
                     <Input 
-                        placeholder="Description"
+                        placeholder="e.g., Police report about the incident"
                         value={item.description}
                         onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
                     />
                 </div>
+                
                 {item.type === 'Document' && (
+                    <>
+                        <div className="space-y-2">
+                            <Label>Issuer (አውጪ)</Label>
+                            <Input 
+                                placeholder="e.g., Addis Ababa Police Commission"
+                                value={item.issuer}
+                                onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value: e.target.value } })}
+                            />
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-2">
+                                <Label>Reference No. (ቁጥር)</Label>
+                                <Input 
+                                    placeholder="e.g., AA/Pol/123/24"
+                                    value={item.refNumber}
+                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'refNumber', value: e.target.value } })}
+                                />
+                            </div>
+                            <div className="space-y-2">
+                                <Label>Page Count (የገጽ ብዛት)</Label>
+                                <Input 
+                                    placeholder="e.g., 5"
+                                    value={item.pageCount}
+                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'pageCount', value: e.target.value } })}
+                                />
+                            </div>
+                        </div>
+                         <div className="space-y-2">
+                            <Label>Document Type (የሰነዱ አይነት)</Label>
+                            <RadioGroup
+                                value={item.documentType}
+                                onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'documentType', value }})}
+                                className="flex space-x-4"
+                            >
+                                <div className="flex items-center space-x-2">
+                                    <RadioGroupItem value="Original" id={`orig-${item.id}`} />
+                                    <Label htmlFor={`orig-${item.id}`}>Original (ኦርጅናል)</Label>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <RadioGroupItem value="Copy" id={`copy-${item.id}`} />
+                                    <Label htmlFor={`copy-${item.id}`}>Copy (ኮፒ)</Label>
+                                </div>
+                            </RadioGroup>
+                        </div>
+                        <div className="space-y-2">
+                            <Label>Location of Original (ኦርጅናሉ ያለበት)</Label>
+                            <Input 
+                                placeholder="e.g., With Applicant"
+                                value={item.originalLocation}
+                                onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value: e.target.value } })}
+                            />
+                        </div>
+                    </>
+                )}
+                 {item.type === 'Witness' && (
                     <div className="space-y-2">
-                        <Label>Reference No.</Label>
+                        <Label>Witness Full Name & Address</Label>
                         <Input 
-                            placeholder="Reference No."
-                            value={item.refNumber}
-                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'refNumber', value: e.target.value } })}
+                            placeholder="e.g., Ato Kebede, Addis Ababa, Bole Sub-city"
+                            value={item.description}
+                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
                         />
                     </div>
                 )}

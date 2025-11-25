@@ -42,6 +42,9 @@ export interface ManualEvidence {
   issuer: string;
   refNumber: string;
   isManual: true;
+  pageCount: string;
+  documentType: 'Original' | 'Copy';
+  originalLocation: string;
 }
 
 export interface Fact {

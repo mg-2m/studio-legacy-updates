@@ -29,7 +29,9 @@ export default function PageTwo({ state }: PageTwoProps) {
   evidence.forEach(e => {
     let details = e.description || e.type;
     if (e.type === 'Document') {
-        details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issuer: ${e.issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${e.originalLocation || 'N/A'})`;
+        const issuer = e.issuer === 'Other (ሌላ)' ? e.issuerOther : e.issuer;
+        const location = e.originalLocation === 'Other (ሌላ)' ? e.originalLocationOther : e.originalLocation;
+        details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issuer: ${issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${location || 'N/A'})`;
     }
     allEvidence.push({
       label: e.description || e.type,

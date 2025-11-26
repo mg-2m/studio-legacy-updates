@@ -191,10 +191,12 @@ function appReducer(state: AppState, action: Action): AppState {
         type: action.payload.type, 
         description: '', 
         issuer: DOCUMENT_ISSUERS[0], 
+        issuerOther: '',
         refNumber: '',
         pageCount: '',
         documentType: 'Copy' as const,
         originalLocation: EVIDENCE_LOCATIONS[0],
+        originalLocationOther: '',
         isManual: true as const 
       };
       return { ...state, evidence: [...state.evidence, newEvidence] };

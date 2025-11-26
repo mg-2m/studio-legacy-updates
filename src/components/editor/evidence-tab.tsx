@@ -164,6 +164,14 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                                     ))}
                                 </SelectContent>
                             </Select>
+                            {item.issuer === 'Other (ሌላ)' && (
+                                <Input
+                                    className="mt-2"
+                                    placeholder="Please specify other issuer"
+                                    value={item.issuerOther || ''}
+                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuerOther', value: e.target.value }})}
+                                />
+                            )}
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">
@@ -216,6 +224,14 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                                     ))}
                                 </SelectContent>
                             </Select>
+                            {item.originalLocation === 'Other (ሌላ)' && (
+                                <Input
+                                    className="mt-2"
+                                    placeholder="Please specify other location"
+                                    value={item.originalLocationOther || ''}
+                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocationOther', value: e.target.value }})}
+                                />
+                            )}
                         </div>
                     </>
                 )}

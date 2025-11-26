@@ -41,11 +41,13 @@ export interface ManualEvidence {
   type: 'Document' | 'Witness' | 'CourtOrder';
   description: string;
   issuer: string;
+  issuerOther?: string;
   refNumber: string;
   isManual: true;
   pageCount: string;
   documentType: 'Original' | 'Copy';
   originalLocation: string;
+  originalLocationOther?: string;
 }
 
 export interface Fact {

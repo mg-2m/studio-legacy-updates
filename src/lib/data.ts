@@ -155,6 +155,20 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     credentialLabel: 'Witness Full Name (የምስክር ሙሉ ስም)',
     credentialPlaceholder: 'e.g., Ato Alemu Tadesse',
   },
+  warning_letter: {
+    id: 'warning_letter',
+    label: 'Warning Letter(s) (የማስጠንቀቂያ ደብዳቤ(ዎች))',
+    type: 'Document',
+    credentialLabel: 'Letter Reference Number(s)',
+    credentialPlaceholder: 'e.g., HR/WARN/2023/089',
+  },
+  performance_review: {
+    id: 'performance_review',
+    label: 'Performance Review(s) (የአፈጻጸም ግምገማ(ዎች))',
+    type: 'Document',
+    credentialLabel: 'Review Period/Date',
+    credentialPlaceholder: 'e.g., Q4 2023 Review',
+  },
 };
 
 export const TEMPLATES: Template[] = [
@@ -260,22 +274,22 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     facts: [
       {
         id: 'conflict',
-        label: 'Conflict / Irreconcilable Differences (ግጭት)',
-        legalText: 'በተጋቢዎች መካከል በተፈጠረ አለመግባባት ምክንያት ሰላም የሌለ በመሆኑ እና በትዳር መቀጠል የማይችሉበት ደረጃ ላይ በመድረሳቸው',
+        label: 'General Grounds for Divorce (አጠቃላይ የፍቺ ምክንያቶች)',
+        legalText: 'Irreconcilable Differences: በተጋቢዎች መካከል በተፈጠረ አለመግባባት ምክንያት ሰላም የሌለ በመሆኑ እና በትዳር መቀጠል የማይችሉበት ደረጃ ላይ በመድረሳቸው',
         citation: 'Family Code Art. 75',
         autoEvidence: ['marriage_cert']
       },
       {
         id: 'separation',
-        label: 'Separation for 2 Years (ለ2 ዓመት መለያየት)',
-        legalText: 'ተጋቢዎች ለሁለት ዓመት እና ከዚያ በላይ ተለያይተው የኖሩ በመሆኑ',
+        label: 'General Grounds for Divorce (አጠቃላይ የፍቺ ምክንያቶች)',
+        legalText: 'Separation for 2 Years: ተጋቢዎች ለሁለት ዓመት እና ከዚያ በላይ ተለያይተው የኖሩ በመሆኑ',
         citation: 'Family Code Art. 81',
         autoEvidence: ['separation_witness']
       },
       {
         id: 'desertion',
-        label: 'Desertion (መጥፋት)',
-        legalText: 'ተከሳሽ ትዳሩን እና ቤተሰቡን ጥሎ ከጠፋ ረጅም ጊዜ የሆነው በመሆኑ',
+        label: 'General Grounds for Divorce (አጠቃላይ የፍቺ ምክንያቶች)',
+        legalText: 'Desertion: ተከሳሽ ትዳሩን እና ቤተሰቡን ጥሎ ከጠፋ ረጅም ጊዜ የሆነው በመሆኑ',
         citation: 'Family Code Art. (Relevant)',
         autoEvidence: ['desertion_witness']
       }
@@ -318,17 +332,38 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     },
     facts: [
       {
-        id: 'unlawful_termination',
+        id: 'term_no_reason',
         label: 'Unlawful Termination (ህገ-ወጥ ስንብት)',
-        legalText: 'ተከሳሹ የቅጥር ውሉን ያቋረጠው የሠራተኛ ሕግን ያልተከተለ እና ያለበቂ ምክንያት በመሆኑ',
-        citation: 'Labour Proclamation No. 1156/2019',
+        legalText: 'Without Valid Reason: ተከሳሹ የቅጥር ውሉን ያቋረጠው የሠራተኛ ሕግ አንቀፅ 27 ላይ የተዘረዘሩትን ምክንያቶች ያልተከተለ እና ያለበቂ ምክንያት በመሆኑ',
+        citation: 'Labour Proc. No. 1156/2019, Art. 27 & 28',
         autoEvidence: ['employment_contract', 'termination_letter']
       },
       {
-        id: 'unpaid_wages',
-        label: 'Unpaid Wages (ያልተከፈለ ደመወዝ)',
-        legalText: 'ተከሳሹ ለአመልካች የተወሰነ ወራት ደመወዝ ያልከፈለ በመሆኑ',
-        citation: 'Labour Proclamation No. 1156/2019, Art. 53',
+        id: 'term_no_notice',
+        label: 'Unlawful Termination (ህገ-ወጥ ስንብት)',
+        legalText: 'Without Prior Notice: ተከሳሹ የቅጥር ውሉን ሲያቋርጥ በሕጉ መሠረት ሊሰጠኝ የሚገባውን የቅድሚያ ማስጠንቀቂያ ሳይሰጠኝ በመሆኑ',
+        citation: 'Labour Proc. No. 1156/2019, Art. 35',
+        autoEvidence: ['employment_contract', 'termination_letter']
+      },
+      {
+        id: 'term_discrimination',
+        label: 'Unlawful Termination (ህገ-ወጥ ስንብት)',
+        legalText: 'On Discriminatory Grounds: ተከሳሹ የቅጥር ውሉን ያቋረጠው በብሔር፣ በጾታ፣ በሃይማኖት፣ በፖለቲካ አመለካከት፣ በጋብቻ ሁኔታ፣ በቤተሰብ ኃላፊነት ወይም በማኅበር አባልነት ላይ የተመሠረተ በመሆኑ',
+        citation: 'Labour Proc. No. 1156/2019, Art. 25(2)',
+        autoEvidence: ['employment_contract', 'termination_letter']
+      },
+      {
+        id: 'unpaid_salary',
+        label: 'Unpaid Wages & Benefits (ያልተከፈሉ ክፍያዎች)',
+        legalText: 'Non-payment of Salary: ተከሳሹ ለአመልካች የተወሰነ ወራት ደመወዝ ያልከፈለ በመሆኑ',
+        citation: 'Labour Proc. No. 1156/2019, Art. 53',
+        autoEvidence: ['employment_contract', 'unpaid_wage_witness']
+      },
+      {
+        id: 'unpaid_overtime',
+        label: 'Unpaid Wages & Benefits (ያልተከፈሉ ክፍያዎች)',
+        legalText: 'Non-payment of Overtime: አመልካች ከሥራ ሰዓት ውጭ የሰራባቸውን የትርፍ ሰዓት ክፍያዎች ተከሳሹ ያልከፈለ በመሆኑ',
+        citation: 'Labour Proc. No. 1156/2019, Art. 66 & 67',
         autoEvidence: ['employment_contract', 'unpaid_wage_witness']
       },
     ],
@@ -478,9 +513,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
-
-
-
-
-
-    

@@ -10,7 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { TEMPLATE_DATA } from '@/lib/data';
-import type { AppState } from '@/lib/types';
+import type { AppState, Fact } from '@/lib/types';
 import { BrainCircuit, Info, Plus, X } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
@@ -22,6 +22,16 @@ interface FactsTabProps {
 export default function FactsTab({ state, dispatch }: FactsTabProps) {
   const { maintenance, selectedFacts, selectedSubTemplate } = state;
   const smartFactsForTemplate = TEMPLATE_DATA[selectedSubTemplate]?.facts || [];
+
+  // Group facts by their label to implement the "Legal Facet Architecture"
+  const groupedFacts = smartFactsForTemplate.reduce((acc, fact) => {
+    const groupLabel = fact.label;
+    if (!acc[groupLabel]) {
+      acc[groupLabel] = [];
+    }
+    acc[groupLabel].push(fact);
+    return acc;
+  }, {} as Record<string, Fact[]>);
 
   return (
     <div className="space-y-6">
@@ -109,18 +119,28 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
       
       <Separator />
 
-      <div className="space-y-3">
-        {smartFactsForTemplate.map(fact => (
-          <div key={fact.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
-            <Checkbox
-              id={`fact-${fact.id}`}
-              checked={selectedFacts.some(sf => sf.id === fact.id)}
-              onCheckedChange={() => dispatch({ type: 'TOGGLE_FACT', payload: { factId: fact.id } })}
-              className="mt-1"
-            />
-            <div className="grid gap-1.5 leading-none">
-              <label htmlFor={`fact-${fact.id}`} className="font-bold cursor-pointer">{fact.label}</label>
-              <p className="text-sm text-muted-foreground">{fact.legalText}</p>
+      <div className="space-y-4">
+        {Object.entries(groupedFacts).map(([groupLabel, facts]) => (
+          <div key={groupLabel}>
+            <h3 className="mb-2 text-base font-semibold text-primary">{groupLabel}</h3>
+            <div className="space-y-3">
+              {facts.map(fact => (
+                <div key={fact.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
+                  <Checkbox
+                    id={`fact-${fact.id}`}
+                    checked={selectedFacts.some(sf => sf.id === fact.id)}
+                    onCheckedChange={() => dispatch({ type: 'TOGGLE_FACT', payload: { factId: fact.id } })}
+                    className="mt-1"
+                  />
+                  <div className="grid gap-1.5 leading-none">
+                    <label htmlFor={`fact-${fact.id}`} className="font-bold cursor-pointer">
+                      {fact.legalText.substring(0, fact.legalText.indexOf(':') + 1)}
+                      <span className="font-normal">{fact.legalText.substring(fact.legalText.indexOf(':') + 1)}</span>
+                    </label>
+                    <p className="text-sm text-muted-foreground">{fact.citation}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         ))}

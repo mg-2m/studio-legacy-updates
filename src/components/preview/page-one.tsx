@@ -1,14 +1,14 @@
 
 "use client";
 
-import type { AppState, Party } from '@/lib/types';
+import type { AppState, Party, Relief } from '@/lib/types';
 
 interface PageOneProps {
   state: AppState;
 }
 
 export default function PageOne({ state }: PageOneProps) {
-  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles } = state;
+  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles, selectedReliefs } = state;
 
   const summonsMap = {
     self: 'በራሴ አደርሳለው (I will serve summons myself)',
@@ -22,12 +22,15 @@ export default function PageOne({ state }: PageOneProps) {
     both: '3. በራሴ እና በጠበቃዬ',
   };
 
-  const reliefItems = [
-    'ከላይ የተዘረዘሩት የክሱ ፍሬ ነገሮች በፍ/ብ/ስ/ስ/ህ/ቁ 92 መሰረት እንዲረጋገጥልኝ፡፡',
-    maintenance.active && maintenance.income > 0 && `ተከሳሽ በወር ${maintenance.income} ብር ገቢ ስላላቸው፣ ለ ${maintenance.children} ልጅ/ልጆች አስተዳደግ እና ቀለብ ለእያንዳንዱ ልጅ በወር ${maintenance.result.toFixed(2)} ብር እንዲከፍሉ ይወሰንልኝ፡፡`,
-    'ተገቢው የፍርድ ውሳኔ እንዲሰጠኝ፡፡',
-    'ወጪ እና ኪሳራ እንዲተካ፡፡'
-  ].filter(Boolean);
+  const formatReliefText = (relief: Relief) => {
+    let text = relief.text;
+    if (relief.id === 'maintenance' && maintenance.active) {
+        text = text.replace('{{{income}}}', maintenance.income.toString());
+        text = text.replace('{{{children}}}', maintenance.children.toString());
+        text = text.replace('{{{result}}}', maintenance.result.toFixed(2));
+    }
+    return text;
+  };
 
   const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
@@ -137,7 +140,9 @@ export default function PageOne({ state }: PageOneProps) {
         <div className="border-l-2 border-black pl-4">
           <p>ስለዚህ የተከበረው ፍርድ ቤት እንዲወስንልኝ የምጠይቀው፡</p>
           <ol className="list-decimal ml-5">
-            {reliefItems.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: item as string }} />)}
+             {selectedReliefs
+                .filter(item => !(item.id === 'maintenance' && !maintenance.active))
+                .map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: formatReliefText(item) }} />)}
           </ol>
         </div>
       </div>

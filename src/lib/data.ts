@@ -1,4 +1,4 @@
-import type { AppState, Template } from "./types";
+import type { AppState, Template, Relief } from "./types";
 import { FileText, Briefcase } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
@@ -127,6 +127,35 @@ export const SMART_FACTS = [
   }
 ];
 
+export const RELIEF_ITEMS: Relief[] = [
+    {
+        id: 'validate_facts',
+        text: 'ከላይ የተዘረዘሩት የክሱ ፍሬ ነገሮች በፍ/ብ/ስ/ስ/ህ/ቁ 92 መሰረት እንዲረጋገጥልኝ፡፡',
+        isDefault: true,
+    },
+    {
+        id: 'grant_divorce',
+        text: 'በተከሳሽና በአመልካች መካከል በህግ አግባብ የተመሰረተው የጋብቻ ውል በፍቺ እንዲፈርስልኝ፡፡',
+        isDefault: true,
+    },
+    {
+        id: 'maintenance',
+        text: 'ተከሳሽ በወር {{{income}}} ብር ገቢ ስላላቸው፣ ለ {{{children}}} ልጅ/ልጆች አስተዳደግ እና ቀለብ ለእያንዳንዱ ልጅ በወር {{{result}}} ብር እንዲከፍሉ ይወሰንልኝ፡፡',
+        isDefault: false,
+        isDynamic: true,
+    },
+    {
+        id: 'appropriate_judgment',
+        text: 'ተገቢው የፍርድ ውሳኔ እንዲሰጠኝ፡፡',
+        isDefault: true,
+    },
+    {
+        id: 'costs_and_fees',
+        text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+        isDefault: true,
+    },
+];
+
 export const EVIDENCE_REGISTRY: { [key: string]: { id: string; label: string; type: 'Document' | 'Witness'; credentialLabel: string; credentialPlaceholder: string; } } = {
   marriage_cert: {
     id: 'marriage_cert',
@@ -180,6 +209,7 @@ export const INITIAL_STATE: AppState = {
   applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1] } }],
   respondents: [],
   selectedFacts: [],
+  selectedReliefs: RELIEF_ITEMS.filter(r => r.isDefault),
   maintenance: { 
     active: false, 
     income: 0, 

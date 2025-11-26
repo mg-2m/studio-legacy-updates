@@ -57,6 +57,13 @@ export interface Fact {
   isCustom?: boolean;
 }
 
+export interface Relief {
+    id: string;
+    text: string;
+    isDefault: boolean;
+    isDynamic?: boolean;
+}
+
 export type Template = {
   id: 'divorce' | 'labour';
   label: string;
@@ -68,6 +75,7 @@ export interface AppState {
   applicants: Party[];
   respondents: Party[];
   selectedFacts: Fact[];
+  selectedReliefs: Relief[];
   maintenance: Maintenance;
   evidence: ManualEvidence[];
   smartEvidence: SmartEvidence;

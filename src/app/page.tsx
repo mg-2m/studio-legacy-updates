@@ -117,13 +117,16 @@ function appReducer(state: AppState, action: Action): AppState {
         const newSelectedReliefs = [...state.selectedReliefs];
         const maintenanceRelief = TEMPLATE_DATA.divorce.reliefs.find(r => r.id === 'maintenance');
 
-        if (newActive && EVIDENCE_REGISTRY['birth_cert']) {
-          newSmartEvidence['birth_cert'] = state.smartEvidence['birth_cert'] || { credentialId: '', active: false };
-           if (maintenanceRelief && !newSelectedReliefs.some(r => r.id === 'maintenance')) {
+        if (newActive) {
+          // Activate maintenance
+          if (EVIDENCE_REGISTRY['birth_cert']) {
+            newSmartEvidence['birth_cert'] = state.smartEvidence['birth_cert'] || { credentialId: '', active: false };
+          }
+          if (maintenanceRelief && !newSelectedReliefs.some(r => r.id === 'maintenance')) {
               newSelectedReliefs.push(maintenanceRelief);
           }
         } else {
-          // Only remove birth_cert if no other fact requires it
+          // Deactivate maintenance
           const isBirthCertRequiredByOtherFact = state.selectedFacts.some(fact => fact.autoEvidence?.includes('birth_cert'));
           if (!isBirthCertRequiredByOtherFact) {
             delete newSmartEvidence['birth_cert'];
@@ -243,6 +246,9 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'TOGGLE_RELIEF': {
       const { reliefId } = action.payload;
+      if (reliefId === 'maintenance') {
+          return appReducer(state, { type: 'TOGGLE_MAINTENANCE', payload: { checked: !state.maintenance.active } });
+      }
       const reliefItem = TEMPLATE_DATA[state.selectedTemplate].reliefs.find(r => r.id === reliefId);
       if (!reliefItem) return state;
 

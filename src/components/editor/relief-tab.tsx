@@ -20,7 +20,7 @@ interface ReliefTabProps {
 export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
   const { maintenance, selectedReliefs, selectedTemplate } = state;
   const customReliefs = selectedReliefs.filter(r => r.isCustom);
-  const standardReliefs = TEMPLATE_DATA[selectedTemplate].reliefs.filter(item => !(item.id === 'maintenance' && !maintenance.active));
+  const standardReliefs = TEMPLATE_DATA[selectedTemplate].reliefs;
 
   return (
     <div className="space-y-6">
@@ -33,23 +33,34 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
       </Alert>
       
       <div className="space-y-3">
-        {standardReliefs.map(item => (
-          <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
-            <Checkbox
-              id={`relief-${item.id}`}
-              checked={selectedReliefs.some(sr => sr.id === item.id && !sr.isCustom)}
-              onCheckedChange={() => dispatch({ type: 'TOGGLE_RELIEF', payload: { reliefId: item.id } })}
-              disabled={item.isDefault && item.id !== 'maintenance'}
-              className="mt-1"
-            />
-            <div className="grid gap-1.5 leading-none">
-              <label htmlFor={`relief-${item.id}`} className="font-bold cursor-pointer">
-                {item.text.split('(')[0]}
-              </label>
-              <p className="text-sm text-muted-foreground">{item.text}</p>
+        {standardReliefs.map(item => {
+          const isMaintenance = item.id === 'maintenance';
+          if (isMaintenance && state.selectedTemplate !== 'divorce') return null;
+
+          return (
+            <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
+              <Checkbox
+                id={`relief-${item.id}`}
+                checked={isMaintenance ? maintenance.active : selectedReliefs.some(sr => sr.id === item.id)}
+                onCheckedChange={(checked) => {
+                  if (isMaintenance) {
+                    dispatch({ type: 'TOGGLE_MAINTENANCE', payload: { checked: !!checked } });
+                  } else {
+                    dispatch({ type: 'TOGGLE_RELIEF', payload: { reliefId: item.id } });
+                  }
+                }}
+                disabled={item.isDefault && !isMaintenance}
+                className="mt-1"
+              />
+              <div className="grid gap-1.5 leading-none">
+                <label htmlFor={`relief-${item.id}`} className="font-bold cursor-pointer">
+                  {item.text.split('(')[0]}
+                </label>
+                <p className="text-sm text-muted-foreground">{item.text}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <Separator />

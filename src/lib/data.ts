@@ -32,7 +32,7 @@ export const COURT_HIERARCHY = {
 
 export const REGIONS_AND_CITIES = [
   "Addis Ababa City Administration (የአዲስ አበባ ከተማ አስተዳደር)",
-  "Afar Regional State (የአፋር ክልል)",
+  "Afar Regional State (የአፋር ክልל)",
   "Amhara Regional State (የአማራ ክልል)",
   "Benishangul-Gumuz Regional State (የቤኒሻንጉል ጉሙዝ ክልል)",
   "Central Ethiopia Regional State (የማዕከላዊ ኢትዮጵያ ክልል)",
@@ -49,8 +49,8 @@ export const REGIONS_AND_CITIES = [
 
 export const AA_SUBCITIES = [
   "Arada (አራዳ)", "Bole (ቦሌ)", "Addis Ketema (አዲስ ከተማ)", "Nifas Silk-Lafto (ኒፋስ ስልክ)",
-  "Kirkos (ቂርቆስ)", "Gullele (ጉለሌ)", "Lideta (ልደታ)", "Akaki Kality (አቃቂ ቃליቲ)",
-  "Yeka (የካ)", "Lemi Kura (ለሚ ኩራ)", "Kolfe Keranio (ኮልፌ ቀራኒዮ)"
+  "Kirkos (ቂርቆስ)", "Gullele (ጉለሌ)", "Lideta (ልደታ)", "Akaki Kality (አቃቂ ቃሊቲ)",
+  "Yeka (የካ)", "Lemi Kura (ለሚ ኩራ)", "Kolfe Keranio (ኮልፌ ቀራኒዮ)", "Other (ሌላ)"
 ];
 
 export const HONORIFICS = ["አቶ (Mr.)", "ወ/ሮ (Mrs.)", "ወ/ሪት (Miss)"];
@@ -69,7 +69,7 @@ export const DOCUMENT_ISSUERS = [
   "Federal Police Commission (የፌደራል ፖሊስ ኮሚሽን)",
   "Addis Ababa Police Commission (የአዲስ አበባ ፖሊስ ኮሚሽን)",
   "Oromia Police Commission (የኦሮሚያ ፖሊስ ኮሚሽን)",
-  "Amhara Police Commission (የአማራ ፖליስ ኮሚሽን)",
+  "Amhara Police Commission (የአማራ ፖሊስ ኮሚሽን)",
   "Ministry of Justice (የፍትህ ሚኒስቴር)",
   "Federal Attorney General (የፌዴራል ጠቅላይ ዐቃቤ ሕግ)",
   
@@ -207,7 +207,7 @@ export const INITIAL_STATE: AppState = {
     representation: 'self',
     summonsDelivery: 'self'
   },
-  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1] } }],
+  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '' } }],
   respondents: [],
   selectedFacts: [],
   selectedReliefs: RELIEF_ITEMS.filter(r => r.isDefault),

@@ -54,14 +54,17 @@ export default function PageOne({ state }: PageOneProps) {
     }
     return (
       <ol className="list-decimal list-inside">
-        {parties.map((party, index) => (
-          <li key={index} className="mb-2">
-            <span className="font-bold text-base">{party.honorific.split('(')[0].trim()} {party.name}</span>
-            <div className="text-sm pl-6">
-              አድራሻ፡ {party.address.city}, {party.address.subcity}
-            </div>
-          </li>
-        ))}
+        {parties.map((party, index) => {
+            const subcity = party.address.subcity === 'Other (ሌላ)' ? party.address.subcityOther : party.address.subcity;
+            return (
+              <li key={index} className="mb-2">
+                <span className="font-bold text-base">{party.honorific.split('(')[0].trim()} {party.name}</span>
+                <div className="text-sm pl-6">
+                  አድራሻ፡ {party.address.city}, {subcity}
+                </div>
+              </li>
+            )
+        })}
       </ol>
     );
   };

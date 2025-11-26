@@ -45,7 +45,7 @@ function appReducer(state: AppState, action: Action): AppState {
     }
 
     case 'ADD_PARTY': {
-      const newParty = { id: Date.now().toString(), name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1] } };
+      const newParty = { id: Date.now().toString(), name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '' } };
       return { ...state, [action.payload.role]: [...state[action.payload.role], newParty] };
     }
 

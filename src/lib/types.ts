@@ -7,6 +7,7 @@ export interface Party {
   address: {
     city: string;
     subcity: string;
+    subcityOther?: string;
   };
 }
 

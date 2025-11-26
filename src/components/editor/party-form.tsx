@@ -57,7 +57,7 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
             </div>
             <div className="space-y-2">
                 <Label>አድራሻ (Address)</Label>
-                <div className="grid grid-cols-2 gap-4 border p-3 rounded-md">
+                <div className="grid grid-cols-1 gap-4 border p-3 rounded-md">
                     <div className="space-y-2">
                         <Label className="text-xs">ከተማ/ክልል (City/Region)</Label>
                         <Select value={party.address.city} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.city', value } })}>
@@ -67,10 +67,21 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
                     </div>
                     <div className="space-y-2">
                         <Label className="text-xs">ክፍለ ከተማ (Subcity)</Label>
-                        <Select value={party.address.subcity} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.subcity', value } })}>
-                        <SelectTrigger><SelectValue /></SelectTrigger>
-                        <SelectContent>{AA_SUBCITIES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
+                        <Select 
+                            value={party.address.subcity} 
+                            onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.subcity', value } })}
+                        >
+                            <SelectTrigger><SelectValue /></SelectTrigger>
+                            <SelectContent>{AA_SUBCITIES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
                         </Select>
+                        {party.address.subcity === 'Other (ሌላ)' && (
+                            <Input
+                                className="mt-2"
+                                placeholder="Please specify other subcity"
+                                value={party.address.subcityOther || ''}
+                                onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.subcityOther', value: e.target.value }})}
+                            />
+                        )}
                     </div>
                 </div>
             </div>

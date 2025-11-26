@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -190,6 +190,63 @@ export const TEMPLATES: Template[] = [
        { id: 'bail_application', label: 'የዋስትና ማመልከቻ (Bail)', icon: FileText },
     ]
   },
+  { 
+    id: 'contract_law', 
+    label: 'የውል ሕግ (Contract Law)', 
+    icon: FileSignature,
+    subTemplates: [
+       { id: 'lease_agreement', label: 'የኪራይ ውል (Lease)', icon: FileText },
+       { id: 'sales_agreement', label: 'የሽያጭ ውል (Sales)', icon: FileText },
+    ]
+  },
+  { 
+    id: 'succession_law', 
+    label: 'የውርስ ሕግ (Succession Law)', 
+    icon: BookUser,
+    subTemplates: [
+       { id: 'probate', label: 'የውርስ ማመልከቻ (Probate)', icon: FileText },
+    ]
+  },
+  { 
+    id: 'property_law', 
+    label: 'የንብረት ሕግ (Property Law)', 
+    icon: Home,
+    subTemplates: [
+       { id: 'property_dispute', label: 'የንብረት ክርክር (Dispute)', icon: FileText },
+    ]
+  },
+  { 
+    id: 'commercial_law', 
+    label: 'የንግድና የኩባንያ ህግ (Commercial)', 
+    icon: Building2,
+    subTemplates: [
+       { id: 'business_formation', label: 'የድርጅት ምስረታ (Formation)', icon: FileText },
+    ]
+  },
+  { 
+    id: 'tort_law', 
+    label: 'ከውል ውጭ ጉዳት (Torts)', 
+    icon: ShieldAlert,
+    subTemplates: [
+       { id: 'civil_damages', label: 'የፍትሐብሔር ካሳ (Damages)', icon: FileText },
+    ]
+  },
+  { 
+    id: 'tax_law', 
+    label: 'የግብርና ቀረጥ ሕግ (Tax & Customs)', 
+    icon: Receipt,
+    subTemplates: [
+       { id: 'tax_appeal', label: 'የታክስ ይግባኝ (Tax Appeal)', icon: FileText },
+    ]
+  },
+  { 
+    id: 'finance_law', 
+    label: 'የገንዘብ ሕግ (Financial Law)', 
+    icon: Banknote,
+    subTemplates: [
+       { id: 'negotiable_instrument', label: 'ተላላፊ ሰነዶች (Negotiable Inst.)', icon: FileText },
+    ]
+  },
 ];
 
 export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
@@ -308,7 +365,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       },
     ]
   },
-  admin_complaint: { // Placeholder data
+  admin_complaint: { 
     documentTitle: 'የአስተዳደር በደል ክስ',
     jurisdictionText: 'Administrative Procedure Proclamation No. 1183/2020',
     partyTitles: {
@@ -318,7 +375,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     facts: [],
     reliefs: []
   },
-  bail_application: { // Placeholder data
+  bail_application: {
     documentTitle: 'የዋስትና መብት ማመልከቻ',
     jurisdictionText: 'Criminal Procedure Code',
     partyTitles: {
@@ -327,7 +384,63 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     },
     facts: [],
     reliefs: []
-  }
+  },
+  lease_agreement: {
+    documentTitle: 'የቤት ኪራይ ውል',
+    jurisdictionText: 'Civil Code',
+    partyTitles: { applicant: 'አከራይ (Lessor)', respondent: 'ተከራይ (Lessee)' },
+    facts: [],
+    reliefs: [],
+  },
+  sales_agreement: {
+    documentTitle: 'የሽያጭ ውል',
+    jurisdictionText: 'Civil Code',
+    partyTitles: { applicant: 'ሻጭ (Seller)', respondent: 'ገዢ (Buyer)' },
+    facts: [],
+    reliefs: [],
+  },
+  probate: {
+    documentTitle: 'የውርስ ማመልከቻ',
+    jurisdictionText: 'Civil Code (Succession)',
+    partyTitles: { applicant: 'ወራሽ (Heir)', respondent: 'ተጠሪ (Respondent)' },
+    facts: [],
+    reliefs: [],
+  },
+  property_dispute: {
+    documentTitle: 'የንብረት ክርክር',
+    jurisdictionText: 'Civil Code (Property)',
+    partyTitles: { applicant: 'ከሳሽ (Plaintiff)', respondent: 'ተከሳሽ (Defendant)' },
+    facts: [],
+    reliefs: [],
+  },
+  business_formation: {
+    documentTitle: 'የንግድ ድርጅት መመስረቻ ጽሑፍ',
+    jurisdictionText: 'Commercial Code',
+    partyTitles: { applicant: 'መሥራች (Founder)', respondent: 'ሚኒስቴር (Ministry)' },
+    facts: [],
+    reliefs: [],
+  },
+  civil_damages: {
+    documentTitle: 'ከውል ውጭ ለደረሰ ጉዳት የካሳ ክስ',
+    jurisdictionText: 'Civil Code (Extra-Contractual Liability)',
+    partyTitles: { applicant: 'ከሳሽ (Plaintiff)', respondent: 'ተከሳሽ (Defendant)' },
+    facts: [],
+    reliefs: [],
+  },
+  tax_appeal: {
+    documentTitle: 'የታክስ ይግባኝ',
+    jurisdictionText: 'Tax Administration Proclamation',
+    partyTitles: { applicant: 'ይግባኝ ባይ (Appellant)', respondent: 'የገቢዎች ሚኒስቴር (MoR)' },
+    facts: [],
+    reliefs: [],
+  },
+  negotiable_instrument: {
+    documentTitle: 'በተላላፊ ሰነድ ላይ የተመሰረተ ክስ',
+    jurisdictionText: 'Commercial Code',
+    partyTitles: { applicant: 'ከሳሽ (Plaintiff)', respondent: 'ተከሳሽ (Defendant)' },
+    facts: [],
+    reliefs: [],
+  },
 };
 
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
@@ -365,5 +478,6 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
 
 

@@ -58,7 +58,7 @@ export default function AppSidebar({ selectedTemplate, selectedSubTemplate, disp
                             isActive={selectedSubTemplate === subTemplate.id}
                             onClick={() => dispatch({ type: 'SET_SELECTED_SUB_TEMPLATE', payload: { templateId: template.id, subTemplateId: subTemplate.id } })}
                         >
-                            <subTemplate.icon />
+                            <subTemplate.icon className="size-4" />
                             <span>{subTemplate.label}</span>
                         </SidebarMenuButton>
                         </SidebarMenuItem>

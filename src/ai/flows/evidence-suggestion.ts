@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -10,7 +11,7 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
-import { Fact, EvidenceRegistry } from '@/lib/types'; // We'll need to define EvidenceRegistry in types.ts
+import { Fact, EvidenceRegistry } from '@/lib/types';
 
 const SuggestEvidenceInputSchema = z.object({
   selectedFacts: z.array(z.object({
@@ -22,7 +23,10 @@ const SuggestEvidenceInputSchema = z.object({
     id: z.string(),
     label: z.string(),
     type: z.string(),
+    credentialLabel: z.string(),
+    credentialPlaceholder: z.string(),
   })).describe('A dictionary of all possible evidence items available in the system.'),
+  autoLinkedEvidenceIds: z.array(z.string()).describe('A list of evidence IDs that are already automatically linked to the selected facts. DO NOT suggest these items.'),
 });
 export type SuggestEvidenceInput = z.infer<typeof SuggestEvidenceInputSchema>;
 
@@ -48,18 +52,25 @@ const prompt = ai.definePrompt({
 Analyze the user's selected facts provided below.
 Based on these facts, determine which pieces of evidence from the provided evidence registry would be most helpful to prove the user's claims.
 
+IMPORTANT: Do NOT suggest any evidence that is already listed in the 'autoLinkedEvidenceIds'. Your suggestions must be additive and provide new, relevant options.
+
 ## User's Selected Facts:
 {{#each selectedFacts}}
 - Fact ID: {{{id}}}, Description: {{{legalText}}}
 {{/each}}
 
-## Available Evidence Registry:
-You can choose one or more of the following items. Return only the 'id' of the evidence you select.
-{{#each evidenceRegistry}}
-- Evidence ID: {{{id}}}, Label: {{{label}}} (Type: {{{type}}})
+## Evidence Already Linked Automatically (DO NOT SUGGEST):
+{{#each autoLinkedEvidenceIds}}
+- {{{this}}}
 {{/each}}
 
-Your response must be a JSON object containing only the 'suggestedEvidence' key, which should be an array of the most relevant evidence IDs. Do not include evidence that is already automatically linked to the facts. Only suggest additional, helpful evidence.
+## Available Evidence Registry (Suggest from this list):
+You can choose one or more of the following items. Return only the 'id' of the evidence you select.
+{{#each evidenceRegistry}}
+- Evidence ID: {{{id}}}, Label: {{{label}}}
+{{/each}}
+
+Your response must be a JSON object containing only the 'suggestedEvidence' key, which should be an array of the most relevant evidence IDs. Only suggest additional, helpful evidence not already auto-linked.
 `,
 });
 

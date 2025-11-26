@@ -31,11 +31,14 @@ export interface Maintenance {
   context?: string;
 }
 
+export interface SmartEvidenceData {
+  credentialId: string;
+  active: boolean;
+  type: 'auto' | 'ai';
+}
+
 export interface SmartEvidence {
-  [key: string]: {
-    credentialId: string;
-    active: boolean;
-  };
+  [key: string]: SmartEvidenceData;
 }
 
 export interface ManualEvidence {

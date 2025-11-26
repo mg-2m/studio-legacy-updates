@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useReducer, useEffect, useCallback } from 'react';
-import type { AppState } from '@/lib/types';
+import type { AppState, Fact } from '@/lib/types';
 import { INITIAL_STATE, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, TEMPLATE_DATA, EVIDENCE_REGISTRY } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
@@ -25,15 +25,28 @@ type Action =
   | { type: 'ADD_EVIDENCE'; payload: { type: 'Document' | 'Witness' | 'CourtOrder' } }
   | { type: 'REMOVE_EVIDENCE'; payload: { id: string } }
   | { type: 'UPDATE_EVIDENCE'; payload: { id: string; field: string; value: any } }
-  | { type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL'; payload: { registryId: string; credentialValue: string } }
-  | { type: 'SET_SUGGESTED_EVIDENCE'; payload: { evidenceIds: string[] } }
+  | { type: 'SET_AI_SUGGESTIONS'; payload: { evidenceIds: string[] } }
   | { type: 'ADD_SMART_EVIDENCE'; payload: { registryId: string } }
-  | { type: 'REMOVE_SMART_EVIDENCE'; payload: { registryId: string } }
+  | { type: 'DEACTIVATE_SMART_EVIDENCE'; payload: { registryId: string } }
+  | { type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL'; payload: { registryId: string; credentialValue: string } }
   | { type: 'SET_SELECTED_SUB_TEMPLATE'; payload: { templateId: string; subTemplateId: string } }
   | { type: 'TOGGLE_RELIEF'; payload: { reliefId: string } }
   | { type: 'ADD_CUSTOM_RELIEF' }
   | { type: 'UPDATE_CUSTOM_RELIEF'; payload: { id: string; text: string } }
   | { type: 'REMOVE_CUSTOM_RELIEF'; payload: { id: string } };
+
+function getAutoLinkedEvidence(selectedFacts: Fact[]): Set<string> {
+    const autoLinked = new Set<string>();
+    selectedFacts.forEach(fact => {
+        fact.autoEvidence?.forEach(evidenceId => {
+            if (EVIDENCE_REGISTRY[evidenceId]) {
+                autoLinked.add(evidenceId);
+            }
+        });
+    });
+    return autoLinked;
+}
+
 
 function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -69,26 +82,31 @@ function appReducer(state: AppState, action: Action): AppState {
       const { factId } = action.payload;
       const smartFactsForTemplate = TEMPLATE_DATA[state.selectedSubTemplate]?.facts || [];
       const factExists = state.selectedFacts.some(f => f.id === factId);
-      let newSelectedFacts;
       
-      if (factExists) {
-        newSelectedFacts = state.selectedFacts.filter(f => f.id !== factId);
-      } else {
-        const factToAdd = smartFactsForTemplate.find(f => f.id === factId);
-        newSelectedFacts = factToAdd ? [...state.selectedFacts, factToAdd] : state.selectedFacts;
-      }
+      const newSelectedFacts = factExists
+        ? state.selectedFacts.filter(f => f.id !== factId)
+        : [...state.selectedFacts, smartFactsForTemplate.find(f => f.id === factId)!];
+
+      const newAutoLinkedIds = getAutoLinkedEvidence(newSelectedFacts);
       
-      const newSmartEvidence: AppState['smartEvidence'] = {};
-      newSelectedFacts.forEach(fact => {
-        fact.autoEvidence?.forEach(evidenceId => {
-          if (state.smartEvidence[evidenceId]) {
-            newSmartEvidence[evidenceId] = state.smartEvidence[evidenceId];
-          } else if (EVIDENCE_REGISTRY[evidenceId]) {
-             newSmartEvidence[evidenceId] = { credentialId: '', active: false };
+      const newSmartEvidence = { ...state.smartEvidence };
+      
+      // Add new auto-linked evidence
+      newAutoLinkedIds.forEach(id => {
+          if (!newSmartEvidence[id]) {
+              newSmartEvidence[id] = { credentialId: '', active: true, type: 'auto' };
+          } else {
+              newSmartEvidence[id] = { ...newSmartEvidence[id], active: true, type: 'auto' };
           }
-        });
       });
 
+      // Deactivate or remove old auto-linked evidence if no longer required
+      for (const id in state.smartEvidence) {
+          if (state.smartEvidence[id].type === 'auto' && !newAutoLinkedIds.has(id)) {
+              delete newSmartEvidence[id];
+          }
+      }
+      
       return { ...state, selectedFacts: newSelectedFacts, smartEvidence: newSmartEvidence };
     }
 
@@ -105,25 +123,27 @@ function appReducer(state: AppState, action: Action): AppState {
     }
 
     case 'TOGGLE_MAINTENANCE': {
-        if (state.selectedSubTemplate !== 'divorce') return state; // Only for divorce template
+        if (state.selectedSubTemplate !== 'divorce') return state;
         const newActive = action.payload.checked;
         const newSmartEvidence = { ...state.smartEvidence };
         const newSelectedReliefs = [...state.selectedReliefs];
         const maintenanceRelief = TEMPLATE_DATA.divorce.reliefs.find(r => r.id === 'maintenance');
 
         if (newActive) {
-          // Activate maintenance
           if (EVIDENCE_REGISTRY['birth_cert']) {
-            newSmartEvidence['birth_cert'] = state.smartEvidence['birth_cert'] || { credentialId: '', active: false };
+              if (!newSmartEvidence['birth_cert']) {
+                  newSmartEvidence['birth_cert'] = { credentialId: '', active: true, type: 'auto' };
+              } else {
+                  newSmartEvidence['birth_cert'].active = true;
+              }
           }
           if (maintenanceRelief && !newSelectedReliefs.some(r => r.id === 'maintenance')) {
               newSelectedReliefs.push(maintenanceRelief);
           }
         } else {
-          // Deactivate maintenance
           const isBirthCertRequiredByOtherFact = state.selectedFacts.some(fact => fact.autoEvidence?.includes('birth_cert'));
           if (!isBirthCertRequiredByOtherFact) {
-            delete newSmartEvidence['birth_cert'];
+              delete newSmartEvidence['birth_cert'];
           }
            if (maintenanceRelief) {
               const index = newSelectedReliefs.findIndex(r => r.id === 'maintenance');
@@ -146,14 +166,21 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'SET_MAINTENANCE_CONTEXT':
       return { ...state, maintenance: { ...state.maintenance, context: action.payload } };
     
-    case 'SET_SUGGESTED_EVIDENCE': {
+    case 'SET_AI_SUGGESTIONS': {
       const suggestedIds = action.payload.evidenceIds;
       const newSmartEvidence = { ...state.smartEvidence };
       
-      // Add suggested evidence if not already present
+      // Clean up old AI suggestions that are not in the new list
+      Object.keys(newSmartEvidence).forEach(id => {
+        if(newSmartEvidence[id].type === 'ai' && !suggestedIds.includes(id)) {
+          delete newSmartEvidence[id];
+        }
+      })
+
+      // Add new AI suggestions
       suggestedIds.forEach(id => {
         if (EVIDENCE_REGISTRY[id] && !newSmartEvidence[id]) {
-          newSmartEvidence[id] = { credentialId: '', active: false };
+          newSmartEvidence[id] = { credentialId: '', active: false, type: 'ai' };
         }
       });
 
@@ -176,18 +203,23 @@ function appReducer(state: AppState, action: Action): AppState {
        return state;
     }
 
-    case 'REMOVE_SMART_EVIDENCE': {
+    case 'DEACTIVATE_SMART_EVIDENCE': {
         const { registryId } = action.payload;
-        const factIsSelected = state.selectedFacts.some(f => f.autoEvidence?.includes(registryId));
-        const maintenanceIsActive = state.maintenance.active && registryId === 'birth_cert';
+        const evidenceItem = state.smartEvidence[registryId];
 
-        if (factIsSelected || maintenanceIsActive) {
-            return { ...state, smartEvidence: { ...state.smartEvidence, [registryId]: { ...state.smartEvidence[registryId], active: false } } };
-        } else {
-             const newSmartEvidence = { ...state.smartEvidence };
-             delete newSmartEvidence[registryId];
-             return { ...state, smartEvidence: newSmartEvidence };
+        if (!evidenceItem) return state;
+
+        // Auto-linked evidence cannot be deactivated this way. It's controlled by fact selection.
+        if (evidenceItem.type === 'auto') {
+            return state;
         }
+
+        // For AI-suggested or other types, just deactivate it.
+        const newSmartEvidence = {
+            ...state.smartEvidence,
+            [registryId]: { ...evidenceItem, active: false }
+        };
+        return { ...state, smartEvidence: newSmartEvidence };
     }
     
     case 'ADD_EVIDENCE': {
@@ -287,32 +319,40 @@ export default function Home() {
   const { selectedFacts } = state;
 
   const handleSuggestEvidence = useCallback(async () => {
-    if (selectedFacts.length > 0) {
-      try {
-        const result = await suggestEvidence({ 
-          selectedFacts: selectedFacts.map(({id, label, legalText}) => ({id, label, legalText})),
-          evidenceRegistry: EVIDENCE_REGISTRY,
-        });
-        if (result && result.suggestedEvidence) {
-          dispatch({ type: 'SET_SUGGESTED_EVIDENCE', payload: { evidenceIds: result.suggestedEvidence } });
-        }
-      } catch (error) {
-        console.error("Error suggesting evidence:", error);
-        toast({
-          variant: "destructive",
-          title: "AI Error",
-          description: "Could not get evidence suggestions from AI.",
-        });
+    // Get auto-linked evidence to pass to the AI, so it doesn't suggest them again.
+    const autoLinkedIds = Array.from(getAutoLinkedEvidence(selectedFacts));
+
+    try {
+      const result = await suggestEvidence({
+        selectedFacts: selectedFacts.map(({ id, label, legalText }) => ({ id, label, legalText })),
+        evidenceRegistry: EVIDENCE_REGISTRY,
+        autoLinkedEvidenceIds: autoLinkedIds,
+      });
+      if (result && result.suggestedEvidence) {
+        dispatch({ type: 'SET_AI_SUGGESTIONS', payload: { evidenceIds: result.suggestedEvidence } });
       }
+    } catch (error) {
+      console.error("Error suggesting evidence:", error);
+      toast({
+        variant: "destructive",
+        title: "AI Error",
+        description: "Could not get evidence suggestions from AI.",
+      });
     }
   }, [selectedFacts, toast]);
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      handleSuggestEvidence();
+        if(selectedFacts.length > 0) {
+            handleSuggestEvidence();
+        } else {
+            // Clear suggestions if no facts are selected
+            dispatch({ type: 'SET_AI_SUGGESTIONS', payload: { evidenceIds: [] } });
+        }
     }, 500); // Debounce AI call
     return () => clearTimeout(timer);
-  }, [handleSuggestEvidence]);
+  }, [selectedFacts, handleSuggestEvidence]);
 
   const { income, children, active } = state.maintenance;
 

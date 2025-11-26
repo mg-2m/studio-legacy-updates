@@ -11,7 +11,7 @@ import { Separator } from '@/components/ui/separator';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS } from '@/lib/data';
 import type { AppState, ManualEvidence } from '@/lib/types';
-import { BrainCircuit, Plus, X, File, Users, Gavel } from 'lucide-react';
+import { BrainCircuit, Plus, X, File, Users, Gavel, Link } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,228 +28,254 @@ interface EvidenceTabProps {
 export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
   const { smartEvidence, evidence } = state;
 
-  const activeSmartEvidence = Object.entries(smartEvidence)
-    .filter(([, ev]) => ev.active)
-    .map(([id]) => ({ ...EVIDENCE_REGISTRY[id], regId: id }))
-    .filter(Boolean);
-    
-  const suggestedSmartEvidence = Object.entries(smartEvidence)
-    .filter(([, ev]) => !ev.active)
-    .map(([id]) => ({ ...EVIDENCE_REGISTRY[id], regId: id }))
-    .filter(Boolean);
+  const allSmartEvidence = Object.entries(smartEvidence)
+    .map(([id, evData]) => ({ ...EVIDENCE_REGISTRY[id], regId: id, ...evData }))
+    .filter(item => item.label); // Ensure registry item exists
+
+  const autoLinkedEvidence = allSmartEvidence.filter(item => item.type === 'auto');
+  const aiSuggestedEvidence = allSmartEvidence.filter(item => item.type === 'ai' && !item.active);
+  const activeUserAddedEvidence = allSmartEvidence.filter(item => item.type === 'ai' && item.active);
+
 
   return (
     <div className="space-y-6">
-      <Alert className="bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-950 dark:border-blue-800 dark:text-blue-200">
-        <BrainCircuit className="h-4 w-4 !text-blue-500" />
-        <AlertTitle>ብልጥ ማስረጃ (Smart Evidence)</AlertTitle>
-        <AlertDescription>
-          በመረጧቸው የክስ ፍሬነገሮች ላይ ተመስርቶ በሲስተሙ የሚጠቆሙ ማስረጃዎች ከታች ይታያሉ።
-        </AlertDescription>
-      </Alert>
-
-      <div className="space-y-4">
-        <Label className="font-bold">የተጨመሩ ማስረጃዎች (Active Evidence)</Label>
-        {activeSmartEvidence.length > 0 ? (
-          activeSmartEvidence.map(item => (
-            <Card key={item.regId} className="bg-green-50/50 border-accent/50 dark:bg-green-950/20">
-              <CardHeader className="flex-row items-center justify-between p-4">
-                <CardTitle className="text-base text-accent">{item.label}</CardTitle>
-                 <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_SMART_EVIDENCE', payload: { registryId: item.regId } })}>
-                  <X className="h-4 w-4" />
-                </Button>
-              </CardHeader>
-              <CardContent className="px-4 pb-4">
-                <div className="space-y-2">
-                  <Label>{item.credentialLabel}</Label>
-                  <Input
-                    placeholder={item.credentialPlaceholder}
-                    value={smartEvidence[item.regId]?.credentialId || ''}
-                    onChange={(e) => dispatch({ type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL', payload: { registryId: item.regId, credentialValue: e.target.value } })}
-                  />
-                </div>
-              </CardContent>
-            </Card>
-          ))
-        ) : (
-          <div className="text-center text-sm text-muted-foreground p-4 border border-dashed rounded-lg">
-            ምንም የተመረጠ ማስረጃ የለም።
-          </div>
-        )}
-      </div>
-
-       {suggestedSmartEvidence.length > 0 && (
-         <div className="space-y-2">
-            <Label className="font-bold">የሚጠቆሙ ማስረጃዎች (Suggested Evidence)</Label>
-            <div className="flex flex-wrap gap-2">
-            {suggestedSmartEvidence.map(item => (
-                <Button key={item.regId} variant="outline" size="sm" onClick={() => dispatch({ type: 'ADD_SMART_EVIDENCE', payload: { registryId: item.regId }})}>
-                    <Plus className="mr-2 h-4 w-4" />
-                    {item.label}
-                </Button>
-            ))}
+       <Card>
+        <CardHeader>
+           <CardTitle className="flex items-center gap-2 text-primary">
+            <Link className="h-5 w-5" />
+            <span>Required Evidence (Auto-Linked)</span>
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          {autoLinkedEvidence.length > 0 ? (
+            autoLinkedEvidence.map(item => (
+              <Card key={item.regId} className="bg-blue-50/50 border-blue-200 dark:bg-blue-950/20">
+                <CardHeader className="flex-row items-center justify-between p-4">
+                  <CardTitle className="text-base text-blue-800 dark:text-blue-300">{item.label}</CardTitle>
+                   <div className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/50 px-2 py-1 rounded-full">AUTOMATIC</div>
+                </CardHeader>
+                <CardContent className="px-4 pb-4">
+                  <div className="space-y-2">
+                    <Label>{item.credentialLabel}</Label>
+                    <Input
+                      placeholder={item.credentialPlaceholder}
+                      value={smartEvidence[item.regId]?.credentialId || ''}
+                      onChange={(e) => dispatch({ type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL', payload: { registryId: item.regId, credentialValue: e.target.value } })}
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            ))
+          ) : (
+            <div className="text-center text-sm text-muted-foreground p-4 border border-dashed rounded-lg">
+              No facts selected that require specific evidence.
             </div>
-         </div>
-       )}
+          )}
+        </CardContent>
+      </Card>
 
-      <Separator />
 
-      <div>
-        <Label className="font-bold">ተጨማሪ ማስረጃ ያስገቡ (Manual Evidence)</Label>
-        <div className="mt-2">
-           <DropdownMenu>
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-accent">
+            <BrainCircuit className="h-5 w-5" />
+            <span>AI Suggested & Manual Evidence</span>
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+            {aiSuggestedEvidence.length > 0 && (
+            <div className="space-y-2">
+                <Label className="font-bold">Suggestions from AI Assistant</Label>
+                <div className="flex flex-wrap gap-2">
+                {aiSuggestedEvidence.map(item => (
+                    <Button key={item.regId} variant="outline" size="sm" onClick={() => dispatch({ type: 'ADD_SMART_EVIDENCE', payload: { registryId: item.regId }})}>
+                        <Plus className="mr-2 h-4 w-4" />
+                        {item.label}
+                    </Button>
+                ))}
+                </div>
+            </div>
+            )}
+
+            {(activeUserAddedEvidence.length > 0 || evidence.length > 0) && <Separator/>}
+
+            <div className="space-y-4">
+                {activeUserAddedEvidence.map(item => (
+                    <Card key={item.regId} className="bg-green-50/50 border-green-200 dark:bg-green-950/20">
+                    <CardHeader className="flex-row items-center justify-between p-4">
+                        <CardTitle className="text-base text-green-800 dark:text-green-300">{item.label}</CardTitle>
+                        <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'DEACTIVATE_SMART_EVIDENCE', payload: { registryId: item.regId } })}>
+                        <X className="h-4 w-4" />
+                        </Button>
+                    </CardHeader>
+                    <CardContent className="px-4 pb-4">
+                        <div className="space-y-2">
+                        <Label>{item.credentialLabel}</Label>
+                        <Input
+                            placeholder={item.credentialPlaceholder}
+                            value={smartEvidence[item.regId]?.credentialId || ''}
+                            onChange={(e) => dispatch({ type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL', payload: { registryId: item.regId, credentialValue: e.target.value } })}
+                        />
+                        </div>
+                    </CardContent>
+                    </Card>
+                ))}
+                
+                {evidence.map((item: ManualEvidence) => (
+                <Card key={item.id} className="bg-muted/30">
+                    <CardHeader className="flex-row items-center justify-between p-4">
+                        <CardTitle className="text-base">
+                        {item.type === 'Document' && 'Document (ሰነድ)'}
+                        {item.type === 'Witness' && 'Witness (የሰው ምስክር)'}
+                        {item.type === 'CourtOrder' && 'Court Order (የትዕዛዝ)'}
+                        <span className="font-normal text-muted-foreground text-sm ml-2">(Manual)</span>
+                        </CardTitle>
+                        <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_EVIDENCE', payload: { id: item.id } })}>
+                        <X className="h-4 w-4" />
+                        </Button>
+                    </CardHeader>
+                    <CardContent className="space-y-4 px-4 pb-4">
+                        
+                        {item.type === 'Document' && (
+                            <>
+                                <div className="space-y-2">
+                                    <Label>Description (תיאור)</Label>
+                                    <Input 
+                                        placeholder={"e.g., Police report about the incident"}
+                                        value={item.description}
+                                        onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label>Issuer (አውጪ)</Label>
+                                    <Select 
+                                        value={item.issuer}
+                                        onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value } })}
+                                    >
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="Select issuer" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            {DOCUMENT_ISSUERS.map(issuer => (
+                                                <SelectItem key={issuer} value={issuer}>{issuer}</SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
+                                    {item.issuer === 'Other (ሌላ)' && (
+                                        <Input
+                                            className="mt-2"
+                                            placeholder="Please specify other issuer"
+                                            value={item.issuerOther || ''}
+                                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuerOther', value: e.target.value }})}
+                                        />
+                                    )}
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="space-y-2">
+                                        <Label>Reference No. (ቁጥር)</Label>
+                                        <Input 
+                                            placeholder="e.g., AA/Pol/123/24"
+                                            value={item.refNumber}
+                                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'refNumber', value: e.target.value } })}
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <Label>Page Count (የገጽ ብዛት)</Label>
+                                        <Input 
+                                            type="number"
+                                            placeholder="e.g., 5"
+                                            value={item.pageCount}
+                                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'pageCount', value: e.target.value } })}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label>Document Type (የሰነዱ አይነት)</Label>
+                                    <RadioGroup
+                                        value={item.documentType}
+                                        onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'documentType', value }})}
+                                        className="flex space-x-4"
+                                    >
+                                        <div className="flex items-center space-x-2">
+                                            <RadioGroupItem value="Original" id={`orig-${item.id}`} />
+                                            <Label htmlFor={`orig-${item.id}`}>Original (ኦርጅናል)</Label>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <RadioGroupItem value="Copy" id={`copy-${item.id}`} />
+                                            <Label htmlFor={`copy-${item.id}`}>Copy (ኮፒ)</Label>
+                                        </div>
+                                    </RadioGroup>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label>Location of Original (ኦርጅናሉ ያለበት)</Label>
+                                    <Select 
+                                        value={item.originalLocation}
+                                        onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value } })}
+                                    >
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="Select location" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            {EVIDENCE_LOCATIONS.map(loc => (
+                                                <SelectItem key={loc} value={loc}>{loc}</SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
+                                    {item.originalLocation === 'Other (ሌላ)' && (
+                                        <Input
+                                            className="mt-2"
+                                            placeholder="Please specify other location"
+                                            value={item.originalLocationOther || ''}
+                                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocationOther', value: e.target.value }})}
+                                        />
+                                    )}
+                                </div>
+                            </>
+                        )}
+                        {(item.type === 'Witness' || item.type === 'CourtOrder') && (
+                            <div className="space-y-2">
+                                <Label>{item.type === 'Witness' ? 'Witness Full Name & Address (የምስክር ሙሉ ስም እና አድራሻ)' : 'Details of Court Order (የትዕዛዙ ዝርዝር)'}</Label>
+                                <Input 
+                                    placeholder={item.type === 'Witness' ? "e.g., Ato Kebede, Addis Ababa, Bole Sub-city" : "e.g., Order for temporary injunction on property"}
+                                    value={item.description}
+                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
+                                />
+                            </div>
+                        )}
+                    </CardContent>
+                </Card>
+                ))}
+            </div>
+
+            <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="w-full border-dashed">
+                <Button variant="outline" className="w-full border-dashed">
                 <Plus className="mr-2 h-4 w-4" /> Add Manual Evidence
-              </Button>
+                </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Document' } })}>
+                <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Document' } })}>
                 <File className="mr-2 h-4 w-4" />
                 <span>ሰነድ (Document)</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Witness' } })}>
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Witness' } })}>
                 <Users className="mr-2 h-4 w-4" />
                 <span>የሰው ምስክር (Witness)</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'CourtOrder' } })}>
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'CourtOrder' } })}>
                 <Gavel className="mr-2 h-4 w-4" />
                 <span>የትዕዛዝ (Court Order)</span>
-              </DropdownMenuItem>
+                </DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </div>
-      
-      {evidence.length > 0 && <Separator />}
+            </DropdownMenu>
 
-      <div className="space-y-4">
-        {evidence.map((item: ManualEvidence) => (
-          <Card key={item.id} className="bg-muted/30">
-             <CardHeader className="flex-row items-center justify-between p-4">
-                <CardTitle className="text-base">
-                  {item.type === 'Document' && 'Document (ሰነድ)'}
-                  {item.type === 'Witness' && 'Witness (የሰው ምስክር)'}
-                  {item.type === 'CourtOrder' && 'Court Order (የትዕዛዝ)'}
-                  <span className="font-normal text-muted-foreground text-sm ml-2">(Manual)</span>
-                </CardTitle>
-                 <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_EVIDENCE', payload: { id: item.id } })}>
-                  <X className="h-4 w-4" />
-                </Button>
-              </CardHeader>
-              <CardContent className="space-y-4 px-4 pb-4">
-                
-                {item.type === 'Document' && (
-                    <>
-                         <div className="space-y-2">
-                            <Label>Description (תיאור)</Label>
-                            <Input 
-                                placeholder={"e.g., Police report about the incident"}
-                                value={item.description}
-                                onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <Label>Issuer (አውጪ)</Label>
-                            <Select 
-                                value={item.issuer}
-                                onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value } })}
-                            >
-                                <SelectTrigger>
-                                    <SelectValue placeholder="Select issuer" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    {DOCUMENT_ISSUERS.map(issuer => (
-                                        <SelectItem key={issuer} value={issuer}>{issuer}</SelectItem>
-                                    ))}
-                                </SelectContent>
-                            </Select>
-                            {item.issuer === 'Other (ሌላ)' && (
-                                <Input
-                                    className="mt-2"
-                                    placeholder="Please specify other issuer"
-                                    value={item.issuerOther || ''}
-                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuerOther', value: e.target.value }})}
-                                />
-                            )}
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="space-y-2">
-                                <Label>Reference No. (ቁጥር)</Label>
-                                <Input 
-                                    placeholder="e.g., AA/Pol/123/24"
-                                    value={item.refNumber}
-                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'refNumber', value: e.target.value } })}
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <Label>Page Count (የገጽ ብዛት)</Label>
-                                <Input 
-                                    type="number"
-                                    placeholder="e.g., 5"
-                                    value={item.pageCount}
-                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'pageCount', value: e.target.value } })}
-                                />
-                            </div>
-                        </div>
-                         <div className="space-y-2">
-                            <Label>Document Type (የሰነዱ አይነት)</Label>
-                            <RadioGroup
-                                value={item.documentType}
-                                onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'documentType', value }})}
-                                className="flex space-x-4"
-                            >
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="Original" id={`orig-${item.id}`} />
-                                    <Label htmlFor={`orig-${item.id}`}>Original (ኦርጅናል)</Label>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="Copy" id={`copy-${item.id}`} />
-                                    <Label htmlFor={`copy-${item.id}`}>Copy (ኮፒ)</Label>
-                                </div>
-                            </RadioGroup>
-                        </div>
-                        <div className="space-y-2">
-                            <Label>Location of Original (ኦርጅናሉ ያለበት)</Label>
-                            <Select 
-                                value={item.originalLocation}
-                                onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value } })}
-                            >
-                                <SelectTrigger>
-                                    <SelectValue placeholder="Select location" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    {EVIDENCE_LOCATIONS.map(loc => (
-                                        <SelectItem key={loc} value={loc}>{loc}</SelectItem>
-                                    ))}
-                                </SelectContent>
-                            </Select>
-                            {item.originalLocation === 'Other (ሌላ)' && (
-                                <Input
-                                    className="mt-2"
-                                    placeholder="Please specify other location"
-                                    value={item.originalLocationOther || ''}
-                                    onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocationOther', value: e.target.value }})}
-                                />
-                            )}
-                        </div>
-                    </>
-                )}
-                 {(item.type === 'Witness' || item.type === 'CourtOrder') && (
-                    <div className="space-y-2">
-                        <Label>{item.type === 'Witness' ? 'Witness Full Name & Address (የምስክር ሙሉ ስም እና አድራሻ)' : 'Details of Court Order (የትዕዛዙ ዝርዝር)'}</Label>
-                        <Input 
-                            placeholder={item.type === 'Witness' ? "e.g., Ato Kebede, Addis Ababa, Bole Sub-city" : "e.g., Order for temporary injunction on property"}
-                            value={item.description}
-                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
-                        />
-                    </div>
-                )}
-              </CardContent>
-          </Card>
-        ))}
-      </div>
-
+            {activeUserAddedEvidence.length === 0 && aiSuggestedEvidence.length === 0 && evidence.length === 0 && (
+                <div className="text-center text-sm text-muted-foreground p-4">
+                    No suggestions or manual evidence added yet.
+                </div>
+            )}
+        </CardContent>
+      </Card>
     </div>
   );
 }

@@ -16,7 +16,7 @@ export default function MainLayout({ state, dispatch }: MainLayoutProps) {
   return (
     <SidebarProvider>
       <div className="flex h-screen w-full bg-background overflow-hidden">
-        <AppSidebar />
+        <AppSidebar selectedTemplate={state.selectedTemplate} dispatch={dispatch} />
         <SidebarInset>
           <main className="flex flex-1 overflow-hidden">
             <EditorColumn

@@ -27,7 +27,8 @@ type Action =
   | { type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL'; payload: { registryId: string; credentialValue: string } }
   | { type: 'SET_SUGGESTED_EVIDENCE'; payload: { evidenceIds: string[] } }
   | { type: 'ADD_SMART_EVIDENCE'; payload: { registryId: string } }
-  | { type: 'REMOVE_SMART_EVIDENCE'; payload: { registryId: string } };
+  | { type: 'REMOVE_SMART_EVIDENCE'; payload: { registryId: string } }
+  | { type: 'SET_SELECTED_TEMPLATE'; payload: 'divorce' | 'labour' };
 
 function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -188,6 +189,8 @@ function appReducer(state: AppState, action: Action): AppState {
       const { id, field, value } = action.payload;
       return { ...state, evidence: state.evidence.map(e => e.id === id ? { ...e, [field]: value } : e) };
     }
+     case 'SET_SELECTED_TEMPLATE':
+      return { ...state, selectedTemplate: action.payload };
     default:
       return state;
   }

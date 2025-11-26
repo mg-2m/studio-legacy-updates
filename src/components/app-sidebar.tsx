@@ -1,7 +1,9 @@
 
 "use client";
-import { Printer, Scale, FileText, Briefcase } from 'lucide-react';
+import React from 'react';
+import { Printer, Scale } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { TEMPLATES } from '@/lib/data';
 import {
   Sidebar,
   SidebarContent,
@@ -12,7 +14,12 @@ import {
   SidebarMenuItem
 } from '@/components/ui/sidebar';
 
-export default function AppSidebar() {
+interface AppSidebarProps {
+  selectedTemplate: 'divorce' | 'labour';
+  dispatch: React.Dispatch<any>;
+}
+
+export default function AppSidebar({ selectedTemplate, dispatch }: AppSidebarProps) {
   const handlePrint = () => {
     window.print();
   };
@@ -27,18 +34,17 @@ export default function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton isActive>
-              <FileText />
-              <span>የፍቺ ማመልከቻ (Divorce)</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton>
-              <Briefcase />
-              <span>የሠራተኛ ክርክር (Labour)</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
+          {TEMPLATES.map(template => (
+            <SidebarMenuItem key={template.id}>
+              <SidebarMenuButton 
+                isActive={selectedTemplate === template.id}
+                onClick={() => dispatch({ type: 'SET_SELECTED_TEMPLATE', payload: template.id })}
+              >
+                <template.icon />
+                <span>{template.label}</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          ))}
         </SidebarMenu>
       </SidebarContent>
       <SidebarFooter>

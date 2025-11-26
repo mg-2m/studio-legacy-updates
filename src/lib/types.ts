@@ -57,6 +57,12 @@ export interface Fact {
   isCustom?: boolean;
 }
 
+export type Template = {
+  id: 'divorce' | 'labour';
+  label: string;
+  icon: React.ElementType;
+};
+
 export interface AppState {
   metadata: Metadata;
   applicants: Party[];
@@ -69,4 +75,5 @@ export interface AppState {
     applicant: 'አመልካች (Applicant)' | 'ከሳሽ (Plaintiff)';
     respondent: 'ተጠሪ (Respondent)' | 'ተከሳሽ (Defendant)';
   };
+  selectedTemplate: 'divorce' | 'labour';
 }

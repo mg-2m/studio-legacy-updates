@@ -1,4 +1,5 @@
-import type { AppState } from "./types";
+import type { AppState, Template } from "./types";
+import { FileText, Briefcase } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -9,16 +10,16 @@ export const COURT_HIERARCHY = {
     "Arada Division (አራዳ ምድብ)",
     "Yeka Division (የካ ምድብ)", 
     "Akaki Kality Division (አቃቂ ቃሊቲ ምድብ)",
-    "Lideta Division, 1st Labour Relations Bench (ልደታ ምድብ 1ኛ የሠራተኛ ግንኙነት ችሎት)",
+    "Lideta Division, 1st Labour Relations Bench (ልደታ ምድб 1ኛ የሠራተኛ ግንኙነት ችሎት)",
     "Lideta Division, Tax Bench (ልደታ ምድብ የታክስ ችሎት)",
   ],
   "Federal High Court (የፌዴራል ከፍተኛ ፍርድ ቤት)": [
     "Lideta Division, 1st Civil Bench (ልደታ ምድብ 1ኛ ፍትሐብሔር ችሎት)",
     "Lideta Division, 2nd Civil Bench (ልደታ ምድብ 2ኛ ፍትሐብሔር ችሎት)",
-    "Lideta Division, 1st Criminal Bench (ልደታ ምድብ 1ኛ ወንጀል ችሎት)",
+    "Lideta Division, 1st Criminal Bench (ልደта ምድб 1ኛ ወንጀል ችሎት)",
     "Bole Division (ቦሌ ምድብ)",
     "Lideta Division, Commercial Bench (ልደታ ምድብ የንግድ ችሎት)",
-    "Lideta Division, Labour Division (ልደታ ምድብ የሠራተኛ ችሎት)",
+    "Lideta Division, Labour Division (ልደታ ምድб የሠራተኛ ችሎት)",
   ],
   "Federal Supreme Court (የፌዴራል ጠቅላይ ፍርድ ቤት)": [
     "1st Cassation Bench (1ኛ ሰበር ሰሚ ችሎት)", 
@@ -47,7 +48,7 @@ export const REGIONS_AND_CITIES = [
 
 export const AA_SUBCITIES = [
   "Arada (አራዳ)", "Bole (ቦሌ)", "Addis Ketema (አዲስ ከተማ)", "Nifas Silk-Lafto (ኒፋስ ስልክ)",
-  "Kirkos (ቂርቆስ)", "Gullele (ጉለሌ)", "Lideta (ልደታ)", "Akaki Kality (አቃቂ ቃሊቲ)",
+  "Kirkos (ቂርቆስ)", "Gullele (ጉለሌ)", "Lideta (ልደታ)", "Akaki Kality (አቃቂ ቃליቲ)",
   "Yeka (የካ)", "Lemi Kura (ለሚ ኩራ)", "Kolfe Keranio (ኮልፌ ቀራኒዮ)"
 ];
 
@@ -67,7 +68,7 @@ export const DOCUMENT_ISSUERS = [
   "Federal Police Commission (የፌደራል ፖሊስ ኮሚሽን)",
   "Addis Ababa Police Commission (የአዲስ አበባ ፖሊስ ኮሚሽን)",
   "Oromia Police Commission (የኦሮሚያ ፖሊስ ኮሚሽን)",
-  "Amhara Police Commission (የአማራ ፖሊስ ኮሚሽን)",
+  "Amhara Police Commission (የአማራ ፖליስ ኮሚሽን)",
   "Ministry of Justice (የፍትህ ሚኒስቴር)",
   "Federal Attorney General (የፌዴራል ጠቅላይ ዐቃቤ ሕግ)",
   
@@ -157,6 +158,11 @@ export const EVIDENCE_REGISTRY: { [key: string]: { id: string; label: string; ty
   },
 };
 
+export const TEMPLATES: Template[] = [
+  { id: 'divorce', label: 'የፍቺ ማመልከቻ (Divorce)', icon: FileText },
+  { id: 'labour', label: 'የሠራተኛ ክርክር (Labour)', icon: Briefcase },
+];
+
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
 const defaultBench = COURT_HIERARCHY[defaultCourtLevel as keyof typeof COURT_HIERARCHY][0];
 
@@ -186,5 +192,6 @@ export const INITIAL_STATE: AppState = {
   partyTitles: {
     applicant: 'አመልካች (Applicant)',
     respondent: 'ተጠሪ (Respondent)',
-  }
+  },
+  selectedTemplate: 'divorce',
 };

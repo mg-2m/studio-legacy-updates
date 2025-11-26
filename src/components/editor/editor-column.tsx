@@ -11,7 +11,7 @@ import type { AppState } from '@/lib/types';
 import { ScrollArea } from '../ui/scroll-area';
 import { SidebarTrigger } from '../ui/sidebar';
 import { TEMPLATES } from '@/lib/data';
-import { Gavel } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 
 interface EditorColumnProps {
@@ -30,10 +30,12 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
     >
       <div className="flex h-14 items-center p-2 border-b">
         <SidebarTrigger />
-        {Icon && (
+        {selectedTemplate && selectedSubTemplate && Icon && (
           <div className="ml-2 flex items-center gap-2 text-primary font-semibold">
             <Icon className="size-5" />
-            <h1 className="text-base">{selectedSubTemplate?.label}</h1>
+            <span className="text-base text-muted-foreground">{selectedTemplate.label}</span>
+            <ChevronRight className="size-4 text-muted-foreground" />
+            <h1 className="text-base">{selectedSubTemplate.label}</h1>
           </div>
         )}
       </div>

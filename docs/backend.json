@@ -1,6 +1,34 @@
 
 {
   "entities": {
+    "WrittenContract": {
+      "title": "Written Contract",
+      "description": "The primary agreement signed by both parties. Essential for contracts involving immovable property or administrative bodies."
+    },
+    "NoticeofDefault": {
+      "title": "Notice of Default (Warning Letter)",
+      "description": "A registered letter or legal notice sent to the defaulting party demanding performance, essential for claiming damages."
+    },
+    "PaymentReceipt": {
+      "title": "Payment Receipt / Bank Advice",
+      "description": "Documentary proof of money transferred (loan disbursement) or payments made (performance)."
+    },
+    "DeliveryNote": {
+      "title": "Delivery Note (Model 19/22)",
+      "description": "Proof that goods were actually delivered to and received by the buyer."
+    },
+    "AdmissionofDebt": {
+      "title": "Admission of Debt",
+      "description": "A specific written document where the debtor acknowledges the sum owed."
+    },
+    "AuditReport": {
+      "title": "Audit Report",
+      "description": "A financial report detailing outstanding balances, often required in complex B2B disputes."
+    },
+    "TitleDeed": {
+      "title": "Title Deed (Librec)",
+      "description": "Required for contracts involving the sale or mortgage of immovable property."
+    },
     "EmploymentContract": {
       "title": "Employment Contract",
       "description": "A contract of employment.",
@@ -165,6 +193,235 @@
     }
   },
   "templates": {
+    "contract_debt_recovery": {
+      "documentTitle": "Statement of Claim for Recovery of Loan/Debt",
+      "jurisdictionText": "Art. 216 et seq. of the Civil Procedure Code & Civil Code Art. 2471.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Creditor)",
+        "respondent": "Defendant (Debtor)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Formation of Contract",
+          "facets": [
+            {
+              "id": "fact_loan_agreement",
+              "legalText": "On [Date], the Plaintiff and Defendant entered into a written loan agreement.",
+              "citation": "Civ. Code Art. 2471",
+              "evidence": [
+                "WrittenContract",
+                "AdmissionofDebt"
+              ]
+            },
+            {
+              "id": "fact_disbursement",
+              "legalText": "The Plaintiff disbursed the sum of [Amount] ETB to the Defendant.",
+              "citation": "",
+              "evidence": [
+                "PaymentReceipt"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Default",
+          "facets": [
+            {
+              "id": "fact_payment_due",
+              "legalText": "The repayment period agreed upon expired on [Date].",
+              "citation": "Civ. Code Art. 1857"
+            },
+            {
+              "id": "fact_failure_to_pay",
+              "legalText": "Despite the maturity of the debt, the Defendant failed to effect payment.",
+              "citation": ""
+            },
+            {
+              "id": "fact_notice_given",
+              "legalText": "The Plaintiff served a formal notice of default on [Date].",
+              "citation": "Civ. Code Art. 1772",
+              "evidence": [
+                "NoticeofDefault"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_principal_amount",
+          "text": "Judgment ordering the Defendant to pay the principal sum of [Amount] ETB."
+        },
+        {
+          "id": "relief_legal_interest",
+          "text": "Order payment of legal interest (9%) calculated from the date of default.",
+          "citation": "Civ. Code Art. 1751"
+        },
+        {
+          "id": "relief_contractual_interest",
+          "text": "Order payment of contractual interest agreed at [Percentage] (max 12%).",
+          "citation": "Civ. Code Art. 2479"
+        }
+      ]
+    },
+    "contract_specific_performance": {
+      "documentTitle": "Statement of Claim for Specific Performance of Contract",
+      "jurisdictionText": "Art. 1776 of the Civil Code & Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff",
+        "respondent": "Defendant"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Contractual Obligation",
+          "facets": [
+            {
+              "id": "fact_valid_contract",
+              "legalText": "A valid contract exists between the parties regarding [Subject Matter].",
+              "citation": "Civ. Code Art. 1678",
+              "evidence": [
+                "WrittenContract"
+              ]
+            },
+            {
+              "id": "fact_plaintiff_performance",
+              "legalText": "The Plaintiff has fully performed their obligations under the contract.",
+              "citation": ""
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Breach",
+          "facets": [
+            {
+              "id": "fact_non_performance",
+              "legalText": "The Defendant has failed to perform [Specific Obligation] without lawful cause.",
+              "citation": "Civ. Code Art. 1771"
+            },
+            {
+              "id": "fact_special_interest",
+              "legalText": "Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant.",
+              "citation": "Civ. Code Art. 1776"
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_enforce_performance",
+          "text": "Order the Defendant to specifically perform the contract by [Action, e.g., transferring title]."
+        },
+        {
+          "id": "relief_alt_damages",
+          "text": "Alternatively, if performance is impossible, order payment of damages."
+        }
+      ]
+    },
+    "contract_termination_claim": {
+      "documentTitle": "Statement of Claim for Judicial Cancellation of Contract",
+      "jurisdictionText": "Art. 1784 & 1785 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff",
+        "respondent": "Defendant"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Breach Analysis",
+          "facets": [
+            {
+              "id": "fact_fundamental_breach",
+              "legalText": "The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract.",
+              "citation": "Civ. Code Art. 1785"
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Restitution",
+          "facets": [
+            {
+              "id": "fact_payments_made",
+              "legalText": "The Plaintiff has already paid [Amount] to the Defendant.",
+              "citation": "",
+              "evidence": [
+                "PaymentReceipt"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_judicial_cancellation",
+          "text": "Judgment declaring the contract cancelled/terminated."
+        },
+        {
+          "id": "relief_reinstatement",
+          "text": "Order the parties to be reinstated to their former position (Restitution).",
+          "citation": "Civ. Code Art. 1815"
+        }
+      ]
+    },
+    "app_attachment_before_judgment": {
+      "documentTitle": "Application for Attachment of Property Before Judgment",
+      "jurisdictionText": "Art. 151 & 152 of the Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff",
+        "respondent": "Defendant"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Obstruction of Justice",
+          "facets": [
+            {
+              "id": "fact_intent_to_obstruct",
+              "legalText": "The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree.",
+              "citation": "CPC Art. 151"
+            },
+            {
+              "id": "fact_prima_facie_case",
+              "legalText": "The Applicant has a strong prima facie case and is likely to succeed in the main suit.",
+              "citation": ""
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_attach_property",
+          "text": "Order the attachment of the Defendant's property [Specify Property] pending final judgment."
+        },
+        {
+          "id": "relief_security_bond",
+          "text": "Alternatively, order the Defendant to furnish security for the amount claimed."
+        }
+      ]
+    },
+    "app_judgment_on_admission": {
+      "documentTitle": "Application for Judgment on Admissions",
+      "jurisdictionText": "Art. 242 of the Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff",
+        "respondent": "Defendant"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Admission",
+          "facets": [
+            {
+              "id": "fact_clear_admission",
+              "legalText": "In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt.",
+              "citation": "CPC Art. 242"
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_immediate_judgment",
+          "text": "Enter immediate judgment for the Plaintiff on the admitted portion of the claim."
+        }
+      ]
+    },
     "labour_unlawful_termination": {
       "documentTitle": "Statement of Claim for Unlawful Termination",
       "partyTitles": {
@@ -1062,3 +1319,5 @@
     }
   }
 }
+
+    

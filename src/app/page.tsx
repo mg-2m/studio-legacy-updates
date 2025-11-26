@@ -2,7 +2,7 @@
 
 import React, { useReducer, useEffect, useMemo, useCallback } from 'react';
 import type { AppState } from '@/lib/types';
-import { INITIAL_STATE, SMART_FACTS, EVIDENCE_REGISTRY, HONORIFICS, CITIES, AA_SUBCITIES } from '@/lib/data';
+import { INITIAL_STATE, SMART_FACTS, EVIDENCE_REGISTRY, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 
@@ -39,7 +39,7 @@ function appReducer(state: AppState, action: Action): AppState {
     }
 
     case 'ADD_PARTY': {
-      const newParty = { id: Date.now().toString(), name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: CITIES[0], subcity: AA_SUBCITIES[1] } };
+      const newParty = { id: Date.now().toString(), name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1] } };
       return { ...state, [action.payload.role]: [...state[action.payload.role], newParty] };
     }
 

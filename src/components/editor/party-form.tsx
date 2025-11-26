@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { CITIES, AA_SUBCITIES, HONORIFICS } from '@/lib/data';
+import { REGIONS_AND_CITIES, AA_SUBCITIES, HONORIFICS } from '@/lib/data';
 import type { Party } from '@/lib/types';
 import { X } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
@@ -59,10 +59,10 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
                 <Label>አድራሻ (Address)</Label>
                 <div className="grid grid-cols-2 gap-4 border p-3 rounded-md">
                     <div className="space-y-2">
-                        <Label className="text-xs">ከተማ (City)</Label>
+                        <Label className="text-xs">ከተማ/ክልል (City/Region)</Label>
                         <Select value={party.address.city} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.city', value } })}>
                         <SelectTrigger><SelectValue /></SelectTrigger>
-                        <SelectContent>{CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                        <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
                         </Select>
                     </div>
                     <div className="space-y-2">

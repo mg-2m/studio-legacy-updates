@@ -26,7 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { COURT_HIERARCHY, CITIES } from '@/lib/data';
+import { COURT_HIERARCHY, REGIONS_AND_CITIES } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import PartyForm from './party-form';
 import { cn } from "@/lib/utils";
@@ -69,10 +69,10 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
             </Select>
           </div>
           <div className="space-y-2">
-            <Label>ከተማ (City)</Label>
+            <Label>ከተማ (City/Region)</Label>
             <Select value={metadata.city} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'city', value } })}>
                 <SelectTrigger><SelectValue placeholder="Select city" /></SelectTrigger>
-                <SelectContent>{CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
             </Select>
           </div>
           <div className="space-y-2">

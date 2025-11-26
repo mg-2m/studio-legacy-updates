@@ -28,7 +28,22 @@ export const COURT_HIERARCHY = {
   ]
 };
 
-export const CITIES = ["Addis Ababa (አዲስ አበባ)", "Adama (አዳማ)", "Dire Dawa (ድሬዳዋ)", "Bahir Dar (ባህር ዳር)", "Hawassa (ሀዋሳ)"];
+export const REGIONS_AND_CITIES = [
+  "Addis Ababa City Administration (የአዲስ አበባ ከተማ አስተዳደር)",
+  "Afar Regional State (የአፋር ክልል)",
+  "Amhara Regional State (የአማራ ክልል)",
+  "Benishangul-Gumuz Regional State (የቤኒሻንጉል ጉሙዝ ክልል)",
+  "Central Ethiopia Regional State (የማዕከላዊ ኢትዮጵያ ክልል)",
+  "Dire Dawa City Administration (የድሬዳዋ ከተማ አስተዳደር)",
+  "Gambela Regional State (የጋምቤላ ክልል)",
+  "Harari Regional State (የሐረሪ ክልል)",
+  "Oromia Regional State (የኦሮሚያ ክልል)",
+  "Sidama Regional State (የሲዳማ ክልል)",
+  "Somali Regional State (የሶማሌ ክልል)",
+  "South Ethiopia Regional State (የደቡብ ኢትዮጵያ ክልል)",
+  "South West Ethiopia Peoples' Regional State (የደቡብ ምዕራብ ኢትዮጵያ ህዝቦች ክልል)",
+  "Tigray Regional State (የትግራይ ክልል)",
+];
 
 export const AA_SUBCITIES = [
   "Arada (አራዳ)", "Bole (ቦሌ)", "Addis Ketema (አዲስ ከተማ)", "Nifas Silk-Lafto (ኒፋስ ስልክ)",
@@ -149,14 +164,14 @@ export const INITIAL_STATE: AppState = {
   metadata: {
     courtLevel: defaultCourtLevel,
     bench: defaultBench,
-    city: CITIES[0],
+    city: REGIONS_AND_CITIES[0],
     fileNumber: '',
     date: new Date().toLocaleDateString('en-GB') + ' EC',
     jurisdictionLaw: '1234/2012',
     representation: 'self',
     summonsDelivery: 'self'
   },
-  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: CITIES[0], subcity: AA_SUBCITIES[1] } }],
+  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1] } }],
   respondents: [],
   selectedFacts: [],
   maintenance: { 

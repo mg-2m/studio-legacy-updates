@@ -32,7 +32,6 @@ export default function PageOne({ state }: PageOneProps) {
   const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
     
-    // Defensive check in case the title format is unexpected
     if (!title.includes('(') || !title.includes(')')) {
         return (title + 'S').toUpperCase();
     }
@@ -46,12 +45,22 @@ export default function PageOne({ state }: PageOneProps) {
     return `${pluralAmharic} (${pluralEnglish})`.toUpperCase();
   };
 
-  const formatPartyList = (parties: Party[]): string => {
-    const partyNames = parties.map(p => `${p.honorific.split('(')[0].trim()} ${p.name}`);
-    if (partyNames.length === 0) return '___________';
-    if (partyNames.length === 1) return partyNames[0];
-    if (partyNames.length === 2) return partyNames.join(' እና ');
-    return `${partyNames.slice(0, -1).join('፣ ')} እና ${partyNames.slice(-1)}`;
+  const formatPartyList = (parties: Party[]) => {
+    if (parties.length === 0) {
+      return <div className="font-bold text-base">________________</div>;
+    }
+    return (
+      <ol className="list-decimal list-inside">
+        {parties.map((party, index) => (
+          <li key={index} className="mb-2">
+            <span className="font-bold text-base">{party.honorific.split('(')[0].trim()} {party.name}</span>
+            <div className="text-sm pl-6">
+              አድራሻ፡ {party.address.city}, {party.address.subcity}
+            </div>
+          </li>
+        ))}
+      </ol>
+    );
   };
   
   const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
@@ -79,8 +88,8 @@ export default function PageOne({ state }: PageOneProps) {
 
       <div className="mb-5">
         <div className="flex justify-between items-start">
-            <div className="purple-box">{applicantTitle}</div>
-            <div className="text-right font-bold text-base w-3/4">
+            <div className="purple-box flex-shrink-0">{applicantTitle}</div>
+            <div className="text-right w-3/4">
                 {formatPartyList(applicants)}
             </div>
         </div>
@@ -88,9 +97,9 @@ export default function PageOne({ state }: PageOneProps) {
 
       <div className="mb-5">
         <div className="flex justify-between items-start">
-            <div className="purple-box">{respondentTitle}</div>
-            <div className="text-right font-bold text-base w-3/4">
-                {respondents.length > 0 ? formatPartyList(respondents) : '________________'}
+            <div className="purple-box flex-shrink-0">{respondentTitle}</div>
+            <div className="text-right w-3/4">
+                {formatPartyList(respondents)}
             </div>
         </div>
       </div>
@@ -146,5 +155,3 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
-
-    

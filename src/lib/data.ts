@@ -349,108 +349,108 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       respondent: 'Employer / Organization (ተጠሪ/ቀጣሪ)',
     },
     facts: [
-      {
-        id: 'indefinite_contract',
-        label: 'The Contractual Relationship (Prerequisites)',
-        legalText: 'Existence of an indefinite period employment contract.',
-        citation: 'Art. 9 of Proc. 1156/2019',
-        autoEvidence: ['employment_contract'],
-      },
-      {
-        id: 'definite_contract_ended',
-        label: 'The Contractual Relationship (Prerequisites)',
-        legalText: 'A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.',
-        citation: 'Art. 10, 11 of Proc. 1156/2019',
-        autoEvidence: ['employment_contract'],
-      },
-      {
-        id: 'no_prior_notice',
-        label: 'The Act of Termination: Procedural Violations',
-        legalText: 'Termination was effected without any prior written notice specifying the reasons and date of termination.',
-        citation: 'Violation of Art. 35(1) of Proc. 1156/2019',
-        autoEvidence: ['termination_letter'],
-      },
-      {
-        id: 'insufficient_notice',
-        label: 'The Act of Termination: Procedural Violations',
-        legalText: 'The notice period provided was insufficient and less than the legal minimum based on years of service.',
-        citation: 'Violation of Art. 35(2) of Proc. 1156/2019',
-        autoEvidence: ['termination_letter'],
-      },
-      {
-        id: 'union_membership_termination',
-        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
-        legalText: "Termination was due to the employee's membership in a trade union or participation in union activities.",
-        citation: 'Art. 26(2)(a) of Proc. 1156/2019',
-        autoEvidence: ['termination_letter'],
-      },
-       {
-        id: "maternity_termination",
-        label: "The Act of Termination: Substantive Violations (Unlawful Grounds)",
-        legalText: "Termination was due to the employee's pregnancy or maternity leave status.",
-        citation: "Art. 26(2)(d) of Proc. 1156/2019",
-        autoEvidence: ["termination_letter"]
-      },
-      {
-        id: 'whistleblower_termination',
-        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
-        legalText: 'Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law.',
-        citation: 'Art. 26(2)(b) of Proc. 1156/2019',
-        autoEvidence: ['termination_letter'],
-      },
-      {
-        id: 'discriminatory_termination',
-        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
-        legalText: 'Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin.',
-        citation: 'Art. 26(2)(c) of Proc. 1156/2019',
-        autoEvidence: ['termination_letter'],
-      },
-      {
-        id: 'no_valid_reason',
-        label: 'The Act of Termination: The "No Reason" Defense',
-        legalText: "The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking.",
-        citation: 'Violation of Art. 27 of Proc. 1156/2019',
-        autoEvidence: ['termination_letter'],
-      },
-      {
-        id: 'constructive_dismissal',
-        label: 'The Act of Termination: Constructive Dismissal',
-        legalText: "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.",
-        citation: 'Art. 32 of Proc. 1156/2019',
-        autoEvidence: [],
-      },
+        {
+            id: 'indefinite_contract',
+            label: 'The Contractual Relationship (Prerequisites)',
+            legalText: 'Existence of an indefinite period employment contract.',
+            citation: 'Art. 9 of Proc. 1156/2019',
+            autoEvidence: ['employment_contract'],
+        },
+        {
+            id: 'definite_contract_ended',
+            label: 'The Contractual Relationship (Prerequisites)',
+            legalText: 'A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.',
+            citation: 'Art. 10, 11 of Proc. 1156/2019',
+            autoEvidence: ['employment_contract'],
+        },
+        {
+            id: 'no_prior_notice',
+            label: 'The Act of Termination: Procedural Violations',
+            legalText: 'Termination was effected without any prior written notice specifying the reasons and date of termination.',
+            citation: 'Violation of Art. 35(1) of Proc. 1156/2019',
+            autoEvidence: ['termination_letter'],
+        },
+        {
+            id: 'insufficient_notice',
+            label: 'The Act of Termination: Procedural Violations',
+            legalText: 'The notice period provided was insufficient and less than the legal minimum based on years of service.',
+            citation: 'Violation of Art. 35(2) of Proc. 1156/2019',
+            autoEvidence: ['termination_letter'],
+        },
+        {
+            id: 'union_membership_termination',
+            label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
+            legalText: "Termination was due to the employee's membership in a trade union or participation in union activities.",
+            citation: 'Art. 26(2)(a) of Proc. 1156/2019',
+            autoEvidence: ['termination_letter'],
+        },
+        {
+            id: "maternity_termination",
+            label: "The Act of Termination: Substantive Violations (Unlawful Grounds)",
+            legalText: "Termination was due to the employee's pregnancy or maternity leave status.",
+            citation: "Art. 26(2)(d) of Proc. 1156/2019",
+            autoEvidence: ["termination_letter"]
+        },
+        {
+            id: 'whistleblower_termination',
+            label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
+            legalText: 'Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law.',
+            citation: 'Art. 26(2)(b) of Proc. 1156/2019',
+            autoEvidence: ['termination_letter'],
+        },
+        {
+            id: 'discriminatory_termination',
+            label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
+            legalText: 'Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin.',
+            citation: 'Art. 26(2)(c) of Proc. 1156/2019',
+            autoEvidence: ['termination_letter'],
+        },
+        {
+            id: 'no_valid_reason',
+            label: 'The Act of Termination: The "No Reason" Defense',
+            legalText: "The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking.",
+            citation: 'Violation of Art. 27 of Proc. 1156/2019',
+            autoEvidence: ['termination_letter'],
+        },
+        {
+            id: 'constructive_dismissal',
+            label: 'The Act of Termination: Constructive Dismissal',
+            legalText: "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.",
+            citation: 'Art. 32 of Proc. 1156/2019',
+            autoEvidence: [],
+        },
     ],
     reliefs: [
-      {
-        id: 'declare_termination_unlawful',
-        text: 'Judgment declaring the termination unlawful pursuant to Art. 43.',
-        isDefault: true,
-      },
-      {
-        id: 'reinstatement',
-        text: 'Order for reinstatement to previous position with full back pay from the date of termination until reinstatement (Art. 43(1)).',
-        isDefault: false,
-      },
-      {
-        id: 'compensation_in_lieu',
-        text: 'Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (not to exceed 12 months total) (Art. 43(2,3)).',
-        isDefault: false,
-      },
-      {
-        id: 'severance_pay',
-        text: 'Payment of Severance Pay as per the calculation in Art. 39 & 40 (Only if not reinstated).',
-        isDefault: false,
-      },
-      {
-        id: 'notice_compensation',
-        text: 'Payment of Compensation for lack of proper notice, equivalent to salary for the notice period (Art. 44).',
-        isDefault: false,
-      },
-      {
-        id: 'costs_and_fees_labour',
-        text: 'Costs and fees to be covered by the respondent.',
-        isDefault: true,
-      },
+        {
+            id: 'declare_termination_unlawful',
+            text: 'Judgment declaring the termination unlawful pursuant to Art. 43.',
+            isDefault: true,
+        },
+        {
+            id: 'reinstatement',
+            text: 'Order for reinstatement to previous position with full back pay from the date of termination until reinstatement (Art. 43(1)).',
+            isDefault: false,
+        },
+        {
+            id: 'compensation_in_lieu',
+            text: 'Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (not to exceed 12 months total) (Art. 43(2,3)).',
+            isDefault: false,
+        },
+        {
+            id: 'severance_pay',
+            text: 'Payment of Severance Pay as per the calculation in Art. 39 & 40 (Only if not reinstated).',
+            isDefault: false,
+        },
+        {
+            id: 'notice_compensation',
+            text: 'Payment of Compensation for lack of proper notice, equivalent to salary for the notice period (Art. 44).',
+            isDefault: false,
+        },
+        {
+            id: 'costs_and_fees_labour',
+            text: 'Costs and fees to be covered by the respondent.',
+            isDefault: true,
+        },
     ],
   },
   labour_unpaid_wages: {
@@ -903,13 +903,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
-
-
-
-
-
-
-    
-
-    
-

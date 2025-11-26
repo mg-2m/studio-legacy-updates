@@ -169,6 +169,20 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     credentialLabel: 'Review Period/Date',
     credentialPlaceholder: 'e.g., Q4 2023 Review',
   },
+  dismissal_letter: {
+    id: 'dismissal_letter',
+    label: 'Dismissal/Penalty Letter (የፍቺ/ቅጣት ደብዳቤ)',
+    type: 'Document',
+    credentialLabel: 'Letter Reference Number',
+    credentialPlaceholder: 'e.g., CS/DIS/2024/034',
+  },
+  grievance_submission: {
+    id: 'grievance_submission',
+    label: 'Grievance Submission Proof (የቅሬታ ማቅረቢያ ማረጋገጫ)',
+    type: 'Document',
+    credentialLabel: 'Submission Date or Ref No.',
+    credentialPlaceholder: 'e.g., 15/05/2024',
+  },
 };
 
 export const TEMPLATES: Template[] = [
@@ -581,9 +595,9 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       respondent: 'Institution / Office (መስሪያ ቤት/መልስ ሰጪ)',
     },
     facts: [
-      { id: 'measure_dismissal', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Dismissal from Service.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: ['termination_letter'] },
-      { id: 'measure_demotion', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Downgrading of job position/grade.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: ['termination_letter'] },
-      { id: 'measure_fine', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Imposition of a fine exceeding one month\'s salary.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'measure_dismissal', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Dismissal from Service.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: ['dismissal_letter'] },
+      { id: 'measure_demotion', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Downgrading of job position/grade.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: ['dismissal_letter'] },
+      { id: 'measure_fine', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Imposition of a fine exceeding one month\'s salary.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: ['dismissal_letter'] },
       { id: 'no_right_to_be_heard', label: 'Procedural Violations (The Defense)', legalText: 'The Institution took the measure without giving the Appellant a chance to present a defense.', citation: 'Violation of Art. 69 of Proc. 1064/2017', autoEvidence: [] },
       { id: 'limitation_period_1yr', label: 'Procedural Violations (The Defense)', legalText: 'The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.', citation: 'Art. 76(2) of Proc. 1064/2017', autoEvidence: [] },
       { id: 'limitation_period_6mo', label: 'Procedural Violations (The Defense)', legalText: 'The simple measure was taken more than 6 months after the offense was known, barring it by limitation.', citation: 'Art. 76(1) of Proc. 1064/2017', autoEvidence: [] },
@@ -625,7 +639,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       respondent: 'Institution / Office (መስሪያ ቤት/መልስ ሰጪ)',
     },
     facts: [
-      { id: 'exhaustion_grievance_submitted', label: 'Exhaustion of Remedies (Mandatory)', legalText: 'A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.', citation: 'Art. 81(1)(e) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'exhaustion_grievance_submitted', label: 'Exhaustion of Remedies (Mandatory)', legalText: 'A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.', citation: 'Art. 81(1)(e) of Proc. 1064/2017', autoEvidence: ['grievance_submission'] },
       { id: 'promotion_denied', label: 'The Grievance', legalText: 'The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.', citation: 'Art. 13 of Proc. 1064/2017', autoEvidence: [] },
       { id: 'salary_increment_denied', label: 'The Grievance', legalText: 'The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.', citation: 'Art. 81(1)(c) of Proc. 1064/2017', autoEvidence: [] },
       { id: 'acting_allowance_denied', label: 'The Grievance', legalText: 'The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.', citation: 'Relevant Regulations', autoEvidence: [] },
@@ -739,6 +753,7 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
 
 
 

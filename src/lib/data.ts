@@ -1,5 +1,5 @@
 
-import type { AppState, Template, Relief, Fact, PartyTitles } from "./types";
+import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry } from "./types";
 import { FileText, Briefcase } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
@@ -105,7 +105,7 @@ export const DOCUMENT_ISSUERS = [
 ];
 
 
-export const EVIDENCE_REGISTRY: { [key: string]: { id: string; label: string; type: 'Document' | 'Witness'; credentialLabel: string; credentialPlaceholder: string; } } = {
+export const EVIDENCE_REGISTRY: EvidenceRegistry = {
   marriage_cert: {
     id: 'marriage_cert',
     label: 'Marriage Certificate (የጋብቻ የምስክር ወረቀት)',

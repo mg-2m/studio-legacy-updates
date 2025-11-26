@@ -82,6 +82,16 @@ export interface PartyTitles {
   respondentOptions: string[];
 }
 
+export interface EvidenceRegistryItem {
+  id: string;
+  label: string;
+  type: 'Document' | 'Witness';
+  credentialLabel: string;
+  credentialPlaceholder: string;
+}
+
+export type EvidenceRegistry = { [key: string]: EvidenceRegistryItem };
+
 
 export interface AppState {
   metadata: Metadata;

@@ -3,7 +3,7 @@
 
 import React, { useReducer, useEffect, useMemo, useCallback } from 'react';
 import type { AppState } from '@/lib/types';
-import { INITIAL_STATE, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, TEMPLATE_DATA } from '@/lib/data';
+import { INITIAL_STATE, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, TEMPLATE_DATA, EVIDENCE_REGISTRY } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
@@ -84,7 +84,6 @@ function appReducer(state: AppState, action: Action): AppState {
       }
       
       const newSmartEvidence: AppState['smartEvidence'] = {};
-      const { EVIDENCE_REGISTRY } = require('@/lib/data'); // Lazy import
       newSelectedFacts.forEach(fact => {
         fact.autoEvidence?.forEach(evidenceId => {
           if (state.smartEvidence[evidenceId]) {
@@ -112,7 +111,6 @@ function appReducer(state: AppState, action: Action): AppState {
         const newSmartEvidence = { ...state.smartEvidence };
         const newSelectedReliefs = [...state.selectedReliefs];
         const maintenanceRelief = TEMPLATE_DATA.divorce.reliefs.find(r => r.id === 'maintenance');
-        const { EVIDENCE_REGISTRY } = require('@/lib/data');
 
         if (newActive && EVIDENCE_REGISTRY['birth_cert']) {
           newSmartEvidence['birth_cert'] = state.smartEvidence['birth_cert'] || { credentialId: '', active: false };
@@ -149,7 +147,6 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'SET_SUGGESTED_EVIDENCE': {
       const suggestedIds = action.payload.evidenceIds;
       const newSmartEvidence = { ...state.smartEvidence };
-      const { EVIDENCE_REGISTRY } = require('@/lib/data');
       
       // Add suggested evidence if not already present
       suggestedIds.forEach(id => {
@@ -280,12 +277,15 @@ export default function Home() {
     setIsClient(true);
   }, []);
 
-  const selectedFactIds = useMemo(() => state.selectedFacts.map(f => f.id), [state.selectedFacts]);
+  const { selectedFacts } = state;
 
   const handleSuggestEvidence = useCallback(async () => {
-    if (selectedFactIds.length > 0) {
+    if (selectedFacts.length > 0) {
       try {
-        const result = await suggestEvidence({ selectedFacts: selectedFactIds });
+        const result = await suggestEvidence({ 
+          selectedFacts: selectedFacts.map(({id, label, legalText}) => ({id, label, legalText})),
+          evidenceRegistry: EVIDENCE_REGISTRY,
+        });
         if (result && result.suggestedEvidence) {
           dispatch({ type: 'SET_SUGGESTED_EVIDENCE', payload: { evidenceIds: result.suggestedEvidence } });
         }
@@ -298,7 +298,7 @@ export default function Home() {
         });
       }
     }
-  }, [selectedFactIds, toast]);
+  }, [selectedFacts, toast]);
 
   useEffect(() => {
     const timer = setTimeout(() => {

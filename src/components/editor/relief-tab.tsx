@@ -83,5 +83,3 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
     </div>
   );
 }
-
-    

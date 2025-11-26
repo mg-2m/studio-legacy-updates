@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -288,6 +288,48 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     credentialLabel: 'Title Deed/Librec Number',
     credentialPlaceholder: 'e.g., LDR/TD/9876',
   },
+  DeathCertificate: {
+    id: 'DeathCertificate',
+    label: 'Death Certificate',
+    type: 'Document',
+    credentialLabel: 'Certificate Number',
+    credentialPlaceholder: 'e.g., DC-2024-54321',
+  },
+  WillTestament: {
+    id: 'WillTestament',
+    label: 'Will (Testament)',
+    type: 'Document',
+    credentialLabel: 'Will Registration Number (if any)',
+    credentialPlaceholder: 'e.g., DARA/WILL/2023/987',
+  },
+  KebeleFamilyID: {
+    id: 'KebeleFamilyID',
+    label: 'Kebele ID / Family Certificate',
+    type: 'Document',
+    credentialLabel: 'ID or Certificate Number',
+    credentialPlaceholder: 'e.g., AA/YKA/98765',
+  },
+  InventoryofEstate: {
+    id: 'InventoryofEstate',
+    label: 'Inventory of Estate',
+    type: 'Document',
+    credentialLabel: 'Inventory Date or Reference',
+    credentialPlaceholder: 'e.g., Estate Inventory 20/07/2024',
+  },
+  WitnessAffidavitsSuccession: {
+    id: 'WitnessAffidavitsSuccession',
+    label: 'Witness Affidavits (Succession)',
+    type: 'Witness',
+    credentialLabel: 'Witness Full Name(s)',
+    credentialPlaceholder: 'e.g., Ato Tadesse, Woizero Birknesh',
+  },
+  CertificateofHeirship: {
+    id: 'CertificateofHeirship',
+    label: 'Certificate of Heirship',
+    type: 'Document',
+    credentialLabel: 'Certificate Number',
+    credentialPlaceholder: 'e.g., COH-2024-112233',
+  }
 };
 
 export const TEMPLATES: Template[] = [
@@ -337,6 +379,18 @@ export const TEMPLATES: Template[] = [
        { id: 'civil_service_benefits_grievance', label: 'Benefits & Rights Grievance', icon: FileText },
     ]
   },
+  {
+    id: 'succession_law',
+    label: 'የውርስ ሕግ (Law of Succession)',
+    icon: Users,
+    subTemplates: [
+      { id: 'succession_heirship_declaration', label: 'የወራሽነት ማረጋገጫ (Heirship Declaration)', icon: FileText },
+      { id: 'succession_probate_will', label: 'የኑዛዜ ማጽደቅ (Probate of Will)', icon: Gavel },
+      { id: 'succession_partition_estate', label: 'የውርስ ንብረት ክፍፍል (Estate Partition)', icon: Building2 },
+      { id: 'app_appoint_liquidator', label: 'ዋና ከፋይ διορισμός (Appoint Liquidator)', icon: BookUser },
+      { id: 'app_seal_estate', label: 'የንብረት ማሸግ (Seal Estate)', icon: Shield }
+    ]
+  }
 ];
 
 export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
@@ -1217,6 +1271,172 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       },
     ],
   },
+  succession_heirship_declaration: {
+    documentTitle: "Application for Declaration of Heirship",
+    jurisdictionText: "Art. 996 of the Civil Code & Civil Procedure Code.",
+    partyTitles: {
+      applicant: "Applicant / Interested Parties",
+      respondent: "Public Notice"
+    },
+    facts: [
+      {
+        id: "fact_deceased_identity",
+        label: "Fact of Death",
+        legalText: "The Deceased, [Name], passed away on [Date] at [Place].",
+        citation: "Civ. Code Art. 826",
+        autoEvidence: ["DeathCertificate"]
+      },
+      {
+        id: "fact_relationship_descendant",
+        label: "Relationship (Intestate Rules)",
+        legalText: "The Applicants are the children/descendants of the deceased.",
+        citation: "Civ. Code Art. 842",
+        autoEvidence: []
+      },
+      {
+        id: "fact_no_will",
+        label: "Relationship (Intestate Rules)",
+        legalText: "The Deceased left no will, necessitating an intestate succession.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_witness_testimony",
+        label: "Witnesses",
+        legalText: "Three witnesses are present to testify that the Applicants are the only known heirs.",
+        citation: "",
+        autoEvidence: ["WitnessAffidavitsSuccession"]
+      }
+    ],
+    reliefs: [
+      { id: "relief_declare_heirs", text: "Judgment declaring the Applicants as the sole legal heirs of the Deceased.", isDefault: true },
+      { id: "relief_certificate_issuance", text: "Order the issuance of a Certificate of Heirship.", isDefault: true }
+    ]
+  },
+  succession_probate_will: {
+    documentTitle: "Application for Probate of Will",
+    jurisdictionText: "Art. 881 (Public), 885 (Holographic) of the Civil Code.",
+    partyTitles: {
+      applicant: "Petitioner (Executor/Beneficiary)",
+      respondent: "N/A"
+    },
+    facts: [
+      {
+        id: "fact_will_existence",
+        label: "Validity of Will",
+        legalText: "The Deceased left a valid will dated [Date].",
+        citation: "",
+        autoEvidence: ["WillTestament"]
+      },
+      {
+        id: "fact_formality_public",
+        label: "Validity of Will",
+        legalText: "The will was read in the presence of four witnesses and the Registrar.",
+        citation: "Civ. Code Art. 881",
+        autoEvidence: []
+      },
+      {
+        id: "fact_formality_holographic",
+        label: "Validity of Will",
+        legalText: "The will is entirely written, dated, and signed by the hand of the deceased.",
+        citation: "Civ. Code Art. 885",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      { id: "relief_validate_will", text: "Judgment declaring the Will to be valid and the true last wish of the Deceased.", isDefault: true },
+      { id: "relief_appoint_executor", text: "Order confirming the Petitioner as the Executor of the will.", isDefault: true }
+    ]
+  },
+  succession_partition_estate: {
+    documentTitle: "Application for Partition of Hereditary Estate",
+    jurisdictionText: "Art. 1060 of the Civil Code.",
+    partyTitles: {
+      applicant: "Plaintiff (Heir)",
+      respondent: "Defendant (Co-Heir)"
+    },
+    facts: [
+      {
+        id: "fact_heirship_established",
+        label: "Co-ownership",
+        legalText: "The parties have been legally declared as co-heirs.",
+        citation: "Civ. Code Art. 1060",
+        autoEvidence: ["CertificateofHeirship"]
+      },
+      {
+        id: "fact_liquidation_complete",
+        label: "Estate Status",
+        legalText: "The debts of the estate have been paid, and the assets are ready for division.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_disagreement",
+        label: "Estate Status",
+        legalText: "The Co-heirs cannot agree on a voluntary division of the assets.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      { id: "relief_partition_kind", text: "Order the physical division of the property in kind among the heirs.", isDefault: true },
+      { id: "relief_partition_sale", text: "Order the sale of the property and division of proceeds (if division in kind is impossible).", isDefault: false }
+    ]
+  },
+  app_appoint_liquidator: {
+    documentTitle: "Application for Appointment of Liquidator",
+    jurisdictionText: "Art. 950 of the Civil Code.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "N/A"
+    },
+    facts: [
+      {
+        id: "fact_estate_complexity",
+        label: "Necessity",
+        legalText: "The estate involves complex debts and multiple assets requiring professional management.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_no_nominee",
+        label: "Necessity",
+        legalText: "The will did not nominate an executor, or the heirs cannot agree on one.",
+        citation: "Civ. Code Art. 950",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      { id: "relief_appoint_official", text: "Order the appointment of a neutral Liquidator to administer the estate.", isDefault: true }
+    ]
+  },
+  app_seal_estate: {
+    documentTitle: "Application for Affixing of Seals",
+    jurisdictionText: "Art. 946 of the Civil Code & Civil Procedure Code.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "N/A"
+    },
+    facts: [
+      {
+        id: "fact_risk_misappropriation",
+        label: "Urgency",
+        legalText: "There is an imminent risk that movables or documents may be removed or hidden.",
+        citation: "Civ. Code Art. 946",
+        autoEvidence: []
+      },
+      {
+        id: "fact_minor_heirs",
+        label: "Urgency",
+        legalText: "There are minor heirs whose interests require protection.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      { id: "relief_affix_seals", text: "Order the court registrar to affix official seals on the deceased's property/safe.", isDefault: true }
+    ]
+  }
 };
 
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];

@@ -29,7 +29,10 @@ type Action =
   | { type: 'ADD_SMART_EVIDENCE'; payload: { registryId: string } }
   | { type: 'REMOVE_SMART_EVIDENCE'; payload: { registryId: string } }
   | { type: 'SET_SELECTED_TEMPLATE'; payload: 'divorce' | 'labour' }
-  | { type: 'TOGGLE_RELIEF'; payload: { reliefId: string } };
+  | { type: 'TOGGLE_RELIEF'; payload: { reliefId: string } }
+  | { type: 'ADD_CUSTOM_RELIEF' }
+  | { type: 'UPDATE_CUSTOM_RELIEF'; payload: { id: string; text: string } }
+  | { type: 'REMOVE_CUSTOM_RELIEF'; payload: { id: string } };
 
 function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -218,6 +221,20 @@ function appReducer(state: AppState, action: Action): AppState {
         return { ...state, selectedReliefs: [...state.selectedReliefs, reliefItem] };
       }
     }
+    
+    case 'ADD_CUSTOM_RELIEF': {
+      const newRelief = { id: 'cr' + Date.now(), text: 'Enter custom relief...', isDefault: false, isCustom: true };
+      return { ...state, selectedReliefs: [...state.selectedReliefs, newRelief] };
+    }
+
+    case 'UPDATE_CUSTOM_RELIEF': {
+      return { ...state, selectedReliefs: state.selectedReliefs.map(r => r.id === action.payload.id ? { ...r, text: action.payload.text } : r) };
+    }
+
+    case 'REMOVE_CUSTOM_RELIEF': {
+      return { ...state, selectedReliefs: state.selectedReliefs.filter(r => r.id !== action.payload.id) };
+    }
+
     default:
       return state;
   }

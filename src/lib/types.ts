@@ -62,6 +62,7 @@ export interface Relief {
     text: string;
     isDefault: boolean;
     isDynamic?: boolean;
+    isCustom?: boolean;
 }
 
 export type Template = {

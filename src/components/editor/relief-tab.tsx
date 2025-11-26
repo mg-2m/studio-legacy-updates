@@ -6,7 +6,11 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { RELIEF_ITEMS } from '@/lib/data';
 import type { AppState } from '@/lib/types';
-import { Gavel, Info } from 'lucide-react';
+import { Gavel, Info, Plus, X } from 'lucide-react';
+import { Separator } from '../ui/separator';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Textarea } from '../ui/textarea';
 
 interface ReliefTabProps {
   state: AppState;
@@ -15,6 +19,8 @@ interface ReliefTabProps {
 
 export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
   const { maintenance, selectedReliefs } = state;
+  const customReliefs = selectedReliefs.filter(r => r.isCustom);
+  const standardReliefs = RELIEF_ITEMS.filter(item => !(item.id === 'maintenance' && !maintenance.active));
 
   return (
     <div className="space-y-6">
@@ -27,11 +33,11 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
       </Alert>
       
       <div className="space-y-3">
-        {RELIEF_ITEMS.filter(item => !(item.id === 'maintenance' && !maintenance.active)).map(item => (
+        {standardReliefs.map(item => (
           <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
             <Checkbox
               id={`relief-${item.id}`}
-              checked={selectedReliefs.some(sr => sr.id === item.id)}
+              checked={selectedReliefs.some(sr => sr.id === item.id && !sr.isCustom)}
               onCheckedChange={() => dispatch({ type: 'TOGGLE_RELIEF', payload: { reliefId: item.id } })}
               disabled={item.isDefault && item.id !== 'maintenance'}
               className="mt-1"
@@ -45,6 +51,35 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
           </div>
         ))}
       </div>
+
+      <Separator />
+
+      <div className="space-y-4">
+        {customReliefs.map(relief => (
+          <Card key={relief.id} className="bg-muted/30">
+              <CardHeader className="flex-row items-center justify-between p-4">
+                  <CardTitle className="text-base">Custom Relief</CardTitle>
+                   <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_CUSTOM_RELIEF', payload: { id: relief.id } })}>
+                    <X className="h-4 w-4" />
+                  </Button>
+              </CardHeader>
+              <CardContent className="px-4 pb-4">
+                  <Textarea 
+                      value={relief.text === 'Enter custom relief...' ? '' : relief.text}
+                      onChange={(e) => dispatch({ type: 'UPDATE_CUSTOM_RELIEF', payload: { id: relief.id, text: e.target.value } })}
+                      placeholder="Enter custom relief details here..."
+                      rows={3}
+                  />
+              </CardContent>
+          </Card>
+        ))}
+      </div>
+
+      <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_CUSTOM_RELIEF' })}>
+        <Plus className="mr-2 h-4 w-4" />
+        Add Custom Relief
+      </Button>
+
     </div>
   );
 }

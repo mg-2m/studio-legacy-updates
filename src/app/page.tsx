@@ -5,6 +5,7 @@ import type { AppState } from '@/lib/types';
 import { INITIAL_STATE, SMART_FACTS, EVIDENCE_REGISTRY, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
+import { useToast } from '@/hooks/use-toast';
 
 import MainLayout from '@/components/main-layout';
 
@@ -195,6 +196,7 @@ function appReducer(state: AppState, action: Action): AppState {
 export default function Home() {
   const [state, dispatch] = useReducer(appReducer, INITIAL_STATE);
   const [isClient, setIsClient] = React.useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     setIsClient(true);
@@ -211,9 +213,14 @@ export default function Home() {
         }
       } catch (error) {
         console.error("Error suggesting evidence:", error);
+        toast({
+          variant: "destructive",
+          title: "AI Error",
+          description: "Could not get evidence suggestions from AI.",
+        });
       }
     }
-  }, [selectedFactIds]);
+  }, [selectedFactIds, toast]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -233,9 +240,14 @@ export default function Home() {
         }
       } catch (error) {
         console.error("Error providing maintenance context:", error);
+        toast({
+          variant: "destructive",
+          title: "AI Error",
+          description: "Could not get maintenance context from AI.",
+        });
       }
     }
-  }, [active, income, children]);
+  }, [active, income, children, toast]);
 
   useEffect(() => {
     const timer = setTimeout(() => {

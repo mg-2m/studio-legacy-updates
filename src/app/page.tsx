@@ -2,7 +2,7 @@
 
 import React, { useReducer, useEffect, useMemo, useCallback } from 'react';
 import type { AppState } from '@/lib/types';
-import { INITIAL_STATE, SMART_FACTS, EVIDENCE_REGISTRY, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS } from '@/lib/data';
+import { INITIAL_STATE, SMART_FACTS, EVIDENCE_REGISTRY, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 
@@ -172,7 +172,7 @@ function appReducer(state: AppState, action: Action): AppState {
         id: Date.now().toString(), 
         type: action.payload.type, 
         description: '', 
-        issuer: '', 
+        issuer: DOCUMENT_ISSUERS[0], 
         refNumber: '',
         pageCount: '',
         documentType: 'Copy' as const,

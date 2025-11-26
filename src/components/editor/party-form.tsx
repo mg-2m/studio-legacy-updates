@@ -26,7 +26,7 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
     return (
         <Card className="mb-4 bg-muted/30">
           <CardHeader className="flex flex-row items-center justify-between p-4">
-            <CardTitle className="text-base">{role === 'applicants' ? 'Applicant' : 'Respondent'}</CardTitle>
+            <CardTitle className="text-base capitalize">{role.slice(0, -1)}</CardTitle>
             <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_PARTY', payload: { role, id: party.id }})}>
               <X className="h-4 w-4" />
             </Button>

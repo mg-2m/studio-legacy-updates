@@ -21,15 +21,16 @@ interface FactsTabProps {
 
 export default function FactsTab({ state, dispatch }: FactsTabProps) {
   const { maintenance, selectedFacts, selectedSubTemplate } = state;
-  const smartFactsForTemplate = TEMPLATE_DATA[selectedSubTemplate]?.facts || [];
+  const templateFacts = TEMPLATE_DATA[selectedSubTemplate]?.facts || [];
 
-  // Group facts by their label to implement the "Legal Facet Architecture"
-  const groupedFacts = smartFactsForTemplate.reduce((acc, fact) => {
-    const groupLabel = fact.label;
-    if (!acc[groupLabel]) {
-      acc[groupLabel] = [];
+  // Group facts by their group title, honouring the structure from backend.json
+  const groupedFacts = templateFacts.reduce((acc, fact) => {
+    // The 'label' property now correctly represents the group title.
+    const groupTitle = fact.label;
+    if (!acc[groupTitle]) {
+      acc[groupTitle] = [];
     }
-    acc[groupLabel].push(fact);
+    acc[groupTitle].push(fact);
     return acc;
   }, {} as Record<string, Fact[]>);
 
@@ -120,9 +121,9 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
       <Separator />
 
       <div className="space-y-4">
-        {Object.entries(groupedFacts).map(([groupLabel, facts]) => (
-          <div key={groupLabel}>
-            <h3 className="mb-2 text-base font-semibold text-primary">{groupLabel}</h3>
+        {Object.entries(groupedFacts).map(([groupTitle, facts]) => (
+          <div key={groupTitle}>
+            <h3 className="mb-2 text-base font-semibold text-primary">{groupTitle}</h3>
             <div className="space-y-3">
               {facts.map(fact => (
                 <div key={fact.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
@@ -133,9 +134,8 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                     className="mt-1"
                   />
                   <div className="grid gap-1.5 leading-none">
-                    <label htmlFor={`fact-${fact.id}`} className="font-bold cursor-pointer">
-                      {fact.legalText.substring(0, fact.legalText.indexOf(':') + 1)}
-                      <span className="font-normal">{fact.legalText.substring(fact.legalText.indexOf(':') + 1)}</span>
+                    <label htmlFor={`fact-${fact.id}`} className="font-medium cursor-pointer">
+                      {fact.legalText}
                     </label>
                     <p className="text-sm text-muted-foreground">{fact.citation}</p>
                   </div>
@@ -172,5 +172,3 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
     </div>
   );
 }
-
-    

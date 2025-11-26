@@ -309,7 +309,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         },
         {
             id: 'maintenance',
-            text: 'ተከሳሽ በወር {{{income}}} ብር ገቢ ስላላቸው፣ ለ {{{children}}} ልጅ/ልጆች አስተዳደግ እና ቀለብ ለእያንዳንዱ ልጅ በወር {{{result}}} ብር እንዲከፍሉ ይወሰንልኝ፡፡',
+            text: 'ተከሳሽ በወር {{{income}}} ብር ገቢ ስላላቸው፣ ለ {{{children}}} ልጅ/ልጆች አስተዳደግ እና ቀለብ ለእያንዳንዱ ልጅ በወር {{{result}}} ብр እንዲከፍሉ ይወሰንልኝ፡፡',
             isDefault: false,
             isDynamic: true,
         },
@@ -329,69 +329,69 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     documentTitle: 'Statement of Claim for Unlawful Termination',
     jurisdictionText: 'Labour Proclamation No. 1156/2019',
     partyTitles: {
-      applicant: 'Employee (ሰራተኛ)',
-      respondent: 'Employer (ቀጣሪ)',
+      applicant: 'Employee / Applicant (አመልካች/ሰራተኛ)',
+      respondent: 'Employer / Organization (ተጠሪ/ቀጣሪ)',
     },
     facts: [
       {
         id: 'indefinite_contract',
-        label: 'The Contractual Relationship',
+        label: 'The Contractual Relationship (Prerequisites)',
         legalText: 'Existence of indefinite period employment contract.',
         citation: 'Art. 4 & 9',
         autoEvidence: ['employment_contract']
       },
       {
         id: 'definite_contract',
-        label: 'The Contractual Relationship',
+        label: 'The Contractual Relationship (Prerequisites)',
         legalText: 'Existence of definite period (probationary) contract, and probation period had ended.',
         citation: 'Art. 11',
         autoEvidence: ['employment_contract']
       },
       {
         id: 'no_prior_notice',
-        label: 'Procedural Violations',
+        label: 'The Act of Termination (The Breach): Procedural Violations',
         legalText: 'Termination was effected without any prior notice.',
         citation: 'Violation of Art. 35',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'insufficient_notice',
-        label: 'Procedural Violations',
+        label: 'The Act of Termination (The Breach): Procedural Violations',
         legalText: 'Termination notice period was insufficient (less than legal minimum based on service years).',
         citation: 'Violation of Art. 35',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'union_termination',
-        label: 'Substantive Violations (Unlawful Grounds)',
+        label: 'The Act of Termination (The Breach): Substantive Violations (Unlawful Grounds - Art. 26)',
         legalText: 'Termination was due to Employee joining a Trade Union.',
         citation: 'Art. 26',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'pregnancy_termination',
-        label: 'Substantive Violations (Unlawful Grounds)',
+        label: 'The Act of Termination (The Breach): Substantive Violations (Unlawful Grounds - Art. 26)',
         legalText: 'Termination was due to pregnancy or maternity leave status.',
         citation: 'Art. 26',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'discrimination_termination',
-        label: 'Substantive Violations (Unlawful Grounds)',
+        label: 'The Act of Termination (The Breach): Substantive Violations (Unlawful Grounds - Art. 26)',
         legalText: 'Termination was due to race, color, sex, religion, or political opinion.',
         citation: 'Art. 26',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'no_valid_reason',
-        label: 'The "No Reason" Defense',
+        label: 'The Act of Termination (The Breach): The "No Reason" Defense',
         legalText: 'The Employer provided no valid reason for termination as required by Art. 27.',
         citation: 'Art. 27',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'constructive_dismissal',
-        label: 'Constructive Dismissal',
+        label: 'The Act of Termination (The Breach): Constructive Dismissal',
         legalText: 'Employee was forced to resign due to Employer\'s unlawful actions (e.g., sexual harassment, danger to safety).',
         citation: 'Treated as termination by Art. 32',
         autoEvidence: []
@@ -434,36 +434,36 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     documentTitle: 'Statement of Claim for Outstanding Payments',
     jurisdictionText: 'Labour Proclamation No. 1156/2019',
     partyTitles: {
-      applicant: 'Employee (ሰራተኛ)',
-      respondent: 'Employer (ቀጣሪ)',
+      applicant: 'Employee / Applicant (አመልካች/ሰራተኛ)',
+      respondent: 'Employer / Organization (ተጠሪ/ቀጣሪ)',
     },
     facts: [
       {
         id: 'unpaid_salary',
         label: 'Salary Arrears',
         legalText: 'Non-payment of regular monthly salary for specific months.',
-        citation: 'Art. 53',
+        citation: 'Art. 53 (Payment obligations)',
         autoEvidence: ['unpaid_wage_witness']
       },
       {
         id: 'unlawful_deduction',
         label: 'Salary Arrears',
         legalText: 'Unlawful deduction from salary (without employee consent or court order).',
-        citation: 'Art. 59',
+        citation: 'Art. 59 (Prohibition of deductions)',
         autoEvidence: ['unpaid_wage_witness']
       },
       {
         id: 'unpaid_overtime',
         label: 'Statutory Benefits',
         legalText: 'Employee worked beyond 8 hours/day or 48 hours/week without overtime compensation.',
-        citation: 'Art. 66 & 68',
+        citation: 'Art. 66 & 68 (Calculation rates: 1.25x, 1.5x, 2.0x, 2.5x depending on time/day)',
         autoEvidence: ['unpaid_wage_witness']
       },
       {
         id: 'unpaid_annual_leave',
         label: 'Statutory Benefits',
         legalText: 'Employee was denied annual leave and not compensated for it upon termination.',
-        citation: 'Art. 77 & 79',
+        citation: 'Art. 77 & 79 (Conversion to cash only upon termination)',
         autoEvidence: ['unpaid_wage_witness']
       },
       {
@@ -482,12 +482,12 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       },
       {
         id: 'payment_interest',
-        text: 'Order payment of statutory interest on the delayed payments.',
+        text: 'Statutory interest on the delayed payments (Civil Code/Procedure linkage).',
         isDefault: false,
       },
       {
         id: 'payment_overtime',
-        text: 'Order payment of specific calculated overtime amount.',
+        text: 'Payment of specific calculated overtime (must allow user to input calculated sum).',
         isDefault: false,
       },
       {
@@ -501,8 +501,8 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     documentTitle: 'Claim for Employment Injury Compensation',
     jurisdictionText: 'Labour Proclamation No. 1156/2019',
     partyTitles: {
-      applicant: 'Employee (ሰራተኛ)',
-      respondent: 'Employer (ቀጣሪ)',
+      applicant: 'Employee / Applicant (አመልካች/ሰራተኛ)',
+      respondent: 'Employer / Organization (ተጠሪ/ቀጣሪ)',
     },
     facts: [
       {
@@ -529,14 +529,14 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: 'partial_disability',
         label: 'The Damage',
-        legalText: 'Permanent Partial Disability was sustained as a result of the incident.',
+        legalText: 'Permanent Partial Disability was sustained (needs medical board % evidence).',
         citation: 'Art. 109',
         autoEvidence: []
       },
       {
         id: 'temporary_disability',
         label: 'The Damage',
-        legalText: 'Temporary Total Disability (unable to work for a specific period) was sustained.',
+        legalText: 'Temporary Total Disability (unable to work for a specific period).',
         citation: 'Art. 106',
         autoEvidence: []
       }
@@ -544,12 +544,12 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     reliefs: [
       {
         id: 'medical_expenses',
-        text: 'Order payment of Medical Expenses incurred (Art. 105).',
+        text: 'Payment of Medical Expenses incurred (Art. 105).',
         isDefault: true,
       },
       {
         id: 'disability_compensation',
-        text: 'Order payment of Disability Compensation (Calculated based on Art. 109 & 110).',
+        text: 'Disability Compensation payment (Calculated based on Art. 109 & 110 - usually 5 years salary X percentage of disability).',
         isDefault: false,
       },
       {
@@ -672,4 +672,5 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
 

@@ -1,3 +1,4 @@
+
 import type { AppState, Template, Relief } from "./types";
 import { FileText, Briefcase } from 'lucide-react';
 
@@ -89,7 +90,7 @@ export const DOCUMENT_ISSUERS = [
   "Addis Ababa City Land Development and Management Bureau (የአ/አ ከተማ የመሬት ልማት እና ማኔጅመንት ቢሮ)",
   "Ministry of Urban and Infrastructure (የከተማ እና መሠረተ ልማት ሚኒስቴር)",
   "Ethiopian Roads Administration (የኢትዮጵያ መንገዶች አስተዳደር)",
-  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክስ ሚኒስቴር)",
+  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክס ሚኒስቴር)",
   "Ethiopian Electric Power (የኢትዮጵያ ኤሌክትሪክ ኃይል)",
 
   // --- Social & Health ---
@@ -161,7 +162,7 @@ export const EVIDENCE_REGISTRY: { [key: string]: { id: string; label: string; ty
     id: 'marriage_cert',
     label: 'Marriage Certificate (የጋብቻ የምስክር ወረቀት)',
     type: 'Document',
-    credentialLabel: 'Certificate Number (የምስክር ወረቀት ቁጥር)',
+    credentialLabel: 'Certificate Number (የምስክር ወareቀት ቁጥር)',
     credentialPlaceholder: 'e.g., CERT-2020-12345',
   },
   birth_cert: {
@@ -225,3 +226,5 @@ export const INITIAL_STATE: AppState = {
   },
   selectedTemplate: 'divorce',
 };
+
+    

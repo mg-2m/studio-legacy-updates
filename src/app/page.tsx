@@ -19,6 +19,7 @@ type Action =
   | { type: 'TOGGLE_FACT'; payload: { factId: string } }
   | { type: 'ADD_CUSTOM_FACT' }
   | { type: 'UPDATE_FACT_TEXT'; payload: { id: string; text: string } }
+  | { type: 'REMOVE_CUSTOM_FACT'; payload: { id: string } }
   | { type: 'TOGGLE_MAINTENANCE'; payload: { checked: boolean } }
   | { type: 'UPDATE_MAINTENANCE'; payload: { key: string; value: any } }
   | { type: 'SET_MAINTENANCE_CONTEXT'; payload: string }
@@ -104,6 +105,10 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'UPDATE_FACT_TEXT':
       return { ...state, selectedFacts: state.selectedFacts.map(f => f.id === action.payload.id ? { ...f, legalText: action.payload.text } : f) };
+    
+    case 'REMOVE_CUSTOM_FACT': {
+      return { ...state, selectedFacts: state.selectedFacts.filter(f => f.id !== action.payload.id) };
+    }
 
     case 'TOGGLE_MAINTENANCE': {
         if (state.selectedTemplate !== 'divorce') return state; // Only for divorce template

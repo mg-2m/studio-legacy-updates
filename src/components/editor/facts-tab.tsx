@@ -130,12 +130,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
         <Card key={fact.id} className="bg-muted/30">
             <CardHeader className="flex-row items-center justify-between p-4">
                 <CardTitle className="text-base">Custom Fact</CardTitle>
-                 <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => {
-                     // This is a bit of a workaround to remove the custom fact.
-                     // The TOGGLE_FACT action with a non-existent ID from SMART_FACTS will filter it out from selectedFacts.
-                     // A dedicated REMOVE_CUSTOM_FACT would be cleaner.
-                     dispatch({ type: 'TOGGLE_FACT', payload: { factId: fact.id }})
-                 }}>
+                 <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_CUSTOM_FACT', payload: { id: fact.id } })}>
                   <X className="h-4 w-4" />
                 </Button>
             </CardHeader>

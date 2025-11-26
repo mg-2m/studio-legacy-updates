@@ -70,7 +70,7 @@ export interface Relief {
 }
 
 export interface SubTemplate {
-  id: 'divorce' | 'labour' | string; // Allow for future string-based IDs
+  id: string;
   label: string;
   icon: React.ElementType;
 }
@@ -86,8 +86,6 @@ export interface Template {
 export interface PartyTitles {
   applicant: string;
   respondent: string;
-  applicantOptions: string[];
-  respondentOptions: string[];
 }
 
 export interface TemplateData {

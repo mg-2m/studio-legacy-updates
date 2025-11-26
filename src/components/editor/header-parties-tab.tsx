@@ -26,7 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { COURT_HIERARCHY, REGIONS_AND_CITIES, TEMPLATE_DATA } from '@/lib/data';
+import { COURT_HIERARCHY, REGIONS_AND_CITIES } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import PartyForm from './party-form';
 import { cn } from "@/lib/utils";
@@ -38,7 +38,7 @@ interface HeaderPartiesTabProps {
 }
 
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
-  const { metadata, applicants, respondents, partyTitles, selectedSubTemplate } = state;
+  const { metadata, applicants, respondents, partyTitles } = state;
   const dateObject = metadata.date.endsWith(' EC') ? new Date() : new Date(metadata.date);
   
   return (

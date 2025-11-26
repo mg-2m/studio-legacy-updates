@@ -199,8 +199,6 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     partyTitles: {
       applicant: 'አመልካች (Applicant)',
       respondent: 'ተጠሪ (Respondent)',
-      applicantOptions: ['አመልካች (Applicant)'],
-      respondentOptions: ['ተጠሪ (Respondent)'],
     },
     facts: [
       {
@@ -260,8 +258,6 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     partyTitles: {
       applicant: 'ከሳሽ (Plaintiff)',
       respondent: 'ተከሳሽ (Defendant)',
-      applicantOptions: ['ከሳሽ (Plaintiff)'],
-      respondentOptions: ['ተከሳሽ (Defendant)'],
     },
     facts: [
       {
@@ -318,8 +314,6 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     partyTitles: {
       applicant: 'አመልካች (Applicant)',
       respondent: 'ተጠሪ (Respondent)',
-      applicantOptions: ['አመልካች (Applicant)'],
-      respondentOptions: ['ተጠሪ (Respondent)'],
     },
     facts: [],
     reliefs: []
@@ -330,8 +324,6 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     partyTitles: {
       applicant: 'አመልካች (Applicant)',
       respondent: 'ዐቃቤ ሕግ (Prosecutor)',
-      applicantOptions: ['አመልካች (Applicant)'],
-      respondentOptions: ['ዐቃቤ ሕግ (Prosecutor)'],
     },
     facts: [],
     reliefs: []
@@ -373,3 +365,4 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+

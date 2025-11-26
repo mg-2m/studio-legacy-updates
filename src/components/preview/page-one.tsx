@@ -75,6 +75,11 @@ export default function PageOne({ state }: PageOneProps) {
   
   const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
   const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
+  
+  const jurisdictionText = selectedTemplate === 'divorce' 
+    ? `{ Revised Family Code Proc. No. 213/2000 }`
+    : `{ Labour Proclamation No. 1156/2019 }`;
+
 
   return (
     <div className="a4-page">
@@ -123,7 +128,7 @@ export default function PageOne({ state }: PageOneProps) {
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ (Introduction)፡</h4>
         <ul className="list-none p-0 leading-relaxed">
-          <li>➤ ይህ <strong>{meta.courtLevel}</strong> በ <strong>{`{ ፌዴራል ፍርድ ቤቶች አዋጅ ቁጥር ${meta.jurisdictionLaw} }`}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
+          <li>➤ ይህ <strong>{meta.courtLevel}</strong> በ <strong>{jurisdictionText}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ አመልካች ጉዳዩን የምከታተለው፡ <strong>[{repMap[meta.representation]}]</strong></li>
           <li>➤ መጥሪያውን፡ <strong>{summonsMap[meta.summonsDelivery]}</strong></li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል::</li>

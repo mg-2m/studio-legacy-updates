@@ -113,10 +113,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       <AccordionItem value="item-2" className="border rounded-lg bg-background">
         <AccordionTrigger className="px-4 text-primary">ሥነ-ሥርዓት እና መግቢያ (Procedure & Intro)</AccordionTrigger>
         <AccordionContent className="px-4 space-y-4">
-          <div className="space-y-2">
-            <Label>Jurisdiction Law (Proc. No.)</Label>
-            <Input value={metadata.jurisdictionLaw} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'jurisdictionLaw', value: e.target.value } })} />
-          </div>
+          
           <div className="space-y-2">
             <Label>ውክልና (Representation)</Label>
             <RadioGroup value={metadata.representation} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'representation', value } })}>

@@ -31,12 +31,17 @@ export default function PageOne({ state }: PageOneProps) {
 
   const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
+    
+    // Defensive check in case the title format is unexpected
+    if (!title.includes('(') || !title.includes(')')) {
+        return (title + 'S').toUpperCase();
+    }
 
     const amharicPart = title.split('(')[0].trim();
     const englishPart = title.split('(')[1].replace(')', '').trim();
     
     const pluralAmharic = amharicPart + 'ዎች';
-    const pluralEnglish = englishPart + 's';
+    const pluralEnglish = englishPart.endsWith('s') ? englishPart : englishPart + 's';
 
     return `${pluralAmharic} (${pluralEnglish})`.toUpperCase();
   };
@@ -141,3 +146,5 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
+
+    

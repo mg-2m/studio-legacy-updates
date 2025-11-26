@@ -43,7 +43,7 @@ export const REGIONS_AND_CITIES = [
   "Sidama Regional State (የሲዳማ ክልል)",
   "Somali Regional State (የሶማሌ ክልል)",
   "South Ethiopia Regional State (የደቡብ ኢትዮጵያ ክልል)",
-  "South West Ethiopia Peoples' Regional State (የደቡብ ምዕራብ ኢትዮጵيا ህዝቦች ክልል)",
+  "South West Ethiopia Peoples' Regional State (የደቡብ ምዕራብ ኢትዮጵIA ህዝቦች ክልል)",
   "Tigray Regional State (የትግራይ ክልል)",
 ];
 
@@ -972,4 +972,5 @@ export const INITIAL_STATE: AppState = {
   selectedSubTemplate: initialSubTemplateId,
 };
 
+    
     

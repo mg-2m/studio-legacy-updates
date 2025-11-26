@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -43,7 +43,7 @@ export const REGIONS_AND_CITIES = [
   "Sidama Regional State (የሲዳማ ክልል)",
   "Somali Regional State (የሶማሌ ክልል)",
   "South Ethiopia Regional State (የደቡብ ኢትዮጵያ ክልል)",
-  "South West Ethiopia Peoples' Regional State (የደቡብ ምዕራብ ኢትዮጵያ ህዝቦች ክልል)",
+  "South West Ethiopia Peoples' Regional State (የደቡብ ምዕራብ ኢትዮጵيا ህዝቦች ክልል)",
   "Tigray Regional State (የትግራይ ክልል)",
 ];
 
@@ -81,7 +81,7 @@ export const DOCUMENT_ISSUERS = [
   // --- Economy, Trade & Finance ---
   "Ministry of Trade and Regional Integration (የንግድ እና ቀጣናዊ ትስስር ሚኒስቴር)",
   "Ministry of Revenues (የገቢዎች ሚኒስቴር)",
-  "Ministry of Finance (የገንዘብ ሚኒስቴር)",
+  "Ministry of Finance (የገንዘብ ሚనిስቴር)",
   "Ethiopian Investment Commission (የኢትዮጵያ ኢንቨስትመንት ኮሚሽን)",
   "National Bank of Ethiopia (የኢትዮጵያ ብሔራዊ ባንክ)",
   "Commercial Bank of Ethiopia (የኢትዮጵያ ንግድ ባንክ)",
@@ -177,7 +177,7 @@ export const TEMPLATES: Template[] = [
     label: 'የቤተሰብ ሕግ (Family Law)', 
     icon: Handshake,
     subTemplates: [
-      { id: 'divorce', label: 'የፍቺ ማመልከቻ (Divorce)', icon: FileText },
+      { id: 'divorce', label: 'የፍቺ ማመልከቻ (Divorce)', icon: Scale },
     ]
   },
   { 
@@ -185,15 +185,17 @@ export const TEMPLATES: Template[] = [
     label: 'የሠራተኛ ሕግ (Labour Law)', 
     icon: Briefcase,
     subTemplates: [
-       { id: 'labour', label: 'የሠራተኛ ክርክር (Labour)', icon: FileText },
+       { id: 'labour_unlawful_termination', label: 'Unlawful Termination Claim', icon: FileText },
+       { id: 'labour_unpaid_wages', label: 'Unpaid Wages Claim', icon: Receipt },
+       { id: 'labour_employment_injury', label: 'Employment Injury Claim', icon: HeartPulse },
     ]
   },
    { 
     id: 'administrative_law', 
-    label: 'የአስተዳደር ሕግ (Administrative Law)', 
+    label: 'የአስተዳደር ሕግ (Admin Law)', 
     icon: Landmark,
     subTemplates: [
-       { id: 'admin_complaint', label: 'የአስተዳደር በደል (Complaint)', icon: FileText },
+       { id: 'admin_complaint', label: 'Administrative Complaint', icon: FileText },
     ]
   },
    { 
@@ -201,7 +203,7 @@ export const TEMPLATES: Template[] = [
     label: 'የወንጀል ሕግ (Criminal Law)', 
     icon: Shield,
     subTemplates: [
-       { id: 'bail_application', label: 'የዋስትና ማመልከቻ (Bail)', icon: FileText },
+       { id: 'bail_application', label: 'Bail Application', icon: FileText },
     ]
   },
   { 
@@ -209,8 +211,8 @@ export const TEMPLATES: Template[] = [
     label: 'የውል ሕግ (Contract Law)', 
     icon: FileSignature,
     subTemplates: [
-       { id: 'lease_agreement', label: 'የኪራይ ውል (Lease)', icon: FileText },
-       { id: 'sales_agreement', label: 'የሽያጭ ውል (Sales)', icon: FileText },
+       { id: 'lease_agreement', label: 'Lease Agreement', icon: FileText },
+       { id: 'sales_agreement', label: 'Sales Agreement', icon: FileText },
     ]
   },
   { 
@@ -218,7 +220,7 @@ export const TEMPLATES: Template[] = [
     label: 'የውርስ ሕግ (Succession Law)', 
     icon: BookUser,
     subTemplates: [
-       { id: 'probate', label: 'የውርስ ማመልከቻ (Probate)', icon: FileText },
+       { id: 'probate', label: 'Probate Application', icon: FileText },
     ]
   },
   { 
@@ -226,15 +228,15 @@ export const TEMPLATES: Template[] = [
     label: 'የንብረት ሕግ (Property Law)', 
     icon: Home,
     subTemplates: [
-       { id: 'property_dispute', label: 'የንብረት ክርክር (Dispute)', icon: FileText },
+       { id: 'property_dispute', label: 'Property Dispute', icon: FileText },
     ]
   },
   { 
     id: 'commercial_law', 
-    label: 'የንግድና የኩባንያ ህግ (Commercial)', 
+    label: 'የንግድ ሕግ (Commercial)', 
     icon: Building2,
     subTemplates: [
-       { id: 'business_formation', label: 'የድርጅት ምስረታ (Formation)', icon: FileText },
+       { id: 'business_formation', label: 'Business Formation', icon: FileText },
     ]
   },
   { 
@@ -242,23 +244,23 @@ export const TEMPLATES: Template[] = [
     label: 'ከውል ውጭ ጉዳት (Torts)', 
     icon: ShieldAlert,
     subTemplates: [
-       { id: 'civil_damages', label: 'የፍትሐብሔር ካሳ (Damages)', icon: FileText },
+       { id: 'civil_damages', label: 'Civil Damages Claim', icon: FileText },
     ]
   },
   { 
     id: 'tax_law', 
-    label: 'የግብርና ቀረጥ ሕግ (Tax & Customs)', 
+    label: 'የግብርና ቀረጥ ሕግ (Tax Law)', 
     icon: Receipt,
     subTemplates: [
-       { id: 'tax_appeal', label: 'የታክስ ይግባኝ (Tax Appeal)', icon: FileText },
+       { id: 'tax_appeal', label: 'Tax Appeal', icon: FileText },
     ]
   },
   { 
-    id: 'finance_law', 
+    id: 'financial_law', 
     label: 'የገንዘብ ሕግ (Financial Law)', 
     icon: Banknote,
     subTemplates: [
-       { id: 'negotiable_instrument', label: 'ተላላፊ ሰነዶች (Negotiable Inst.)', icon: FileText },
+       { id: 'negotiable_instrument', label: 'Negotiable Instrument Claim', icon: FileText },
     ]
   },
 ];
@@ -323,80 +325,237 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         },
     ]
   },
-  labour: {
-    documentTitle: 'የሠራተኛ ክርክር ክስ',
+  labour_unlawful_termination: {
+    documentTitle: 'Statement of Claim for Unlawful Termination',
     jurisdictionText: 'Labour Proclamation No. 1156/2019',
     partyTitles: {
-      applicant: 'ከሳሽ (Plaintiff)',
-      respondent: 'ተከሳሽ (Defendant)',
+      applicant: 'Employee (ሰራተኛ)',
+      respondent: 'Employer (ቀጣሪ)',
     },
     facts: [
       {
-        id: 'term_no_reason',
-        label: 'Unlawful Termination (ህገ-ወጥ ስንብት)',
-        legalText: 'Without Valid Reason: ተከሳሹ የቅጥር ውሉን ያቋረጠው የሠራተኛ ሕግ አንቀፅ 27 ላይ የተዘረዘሩትን ምክንያቶች ያልተከተለ እና ያለበቂ ምክንያት በመሆኑ',
-        citation: 'Labour Proc. No. 1156/2019, Art. 27 & 28',
-        autoEvidence: ['employment_contract', 'termination_letter']
+        id: 'indefinite_contract',
+        label: 'The Contractual Relationship',
+        legalText: 'Existence of indefinite period employment contract.',
+        citation: 'Art. 4 & 9',
+        autoEvidence: ['employment_contract']
       },
       {
-        id: 'term_no_notice',
-        label: 'Unlawful Termination (ህገ-ወጥ ስንብት)',
-        legalText: 'Without Prior Notice: ተከሳሹ የቅጥር ውሉን ሲያቋርጥ በሕጉ መሠረት ሊሰጠኝ የሚገባውን የቅድሚያ ማስጠንቀቂያ ሳይሰጠኝ በመሆኑ',
-        citation: 'Labour Proc. No. 1156/2019, Art. 35',
-        autoEvidence: ['employment_contract', 'termination_letter']
+        id: 'definite_contract',
+        label: 'The Contractual Relationship',
+        legalText: 'Existence of definite period (probationary) contract, and probation period had ended.',
+        citation: 'Art. 11',
+        autoEvidence: ['employment_contract']
       },
       {
-        id: 'term_discrimination',
-        label: 'Unlawful Termination (ህገ-ወጥ ስንብት)',
-        legalText: 'On Discriminatory Grounds: ተከሳሹ የቅጥር ውሉን ያቋረጠው በብሔር፣ በጾታ፣ በሃይማኖት፣ በፖለቲካ አመለካከት፣ በጋብቻ ሁኔታ፣ በቤተሰብ ኃላፊነት ወይም በማኅበር አባልነት ላይ የተመሠረተ በመሆኑ',
-        citation: 'Labour Proc. No. 1156/2019, Art. 25(2)',
-        autoEvidence: ['employment_contract', 'termination_letter']
+        id: 'no_prior_notice',
+        label: 'Procedural Violations',
+        legalText: 'Termination was effected without any prior notice.',
+        citation: 'Violation of Art. 35',
+        autoEvidence: ['termination_letter']
       },
       {
-        id: 'unpaid_salary',
-        label: 'Unpaid Wages & Benefits (ያልተከፈሉ ክፍያዎች)',
-        legalText: 'Non-payment of Salary: ተከሳሹ ለአመልካች የተወሰነ ወራት ደመወዝ ያልከፈለ በመሆኑ',
-        citation: 'Labour Proc. No. 1156/2019, Art. 53',
-        autoEvidence: ['employment_contract', 'unpaid_wage_witness']
+        id: 'insufficient_notice',
+        label: 'Procedural Violations',
+        legalText: 'Termination notice period was insufficient (less than legal minimum based on service years).',
+        citation: 'Violation of Art. 35',
+        autoEvidence: ['termination_letter']
       },
       {
-        id: 'unpaid_overtime',
-        label: 'Unpaid Wages & Benefits (ያልተከፈሉ ክፍያዎች)',
-        legalText: 'Non-payment of Overtime: አመልካች ከሥራ ሰዓት ውጭ የሰራባቸውን የትርፍ ሰዓት ክፍያዎች ተከሳሹ ያልከፈለ በመሆኑ',
-        citation: 'Labour Proc. No. 1156/2019, Art. 66 & 67',
-        autoEvidence: ['employment_contract', 'unpaid_wage_witness']
+        id: 'union_termination',
+        label: 'Substantive Violations (Unlawful Grounds)',
+        legalText: 'Termination was due to Employee joining a Trade Union.',
+        citation: 'Art. 26',
+        autoEvidence: ['termination_letter']
       },
+      {
+        id: 'pregnancy_termination',
+        label: 'Substantive Violations (Unlawful Grounds)',
+        legalText: 'Termination was due to pregnancy or maternity leave status.',
+        citation: 'Art. 26',
+        autoEvidence: ['termination_letter']
+      },
+      {
+        id: 'discrimination_termination',
+        label: 'Substantive Violations (Unlawful Grounds)',
+        legalText: 'Termination was due to race, color, sex, religion, or political opinion.',
+        citation: 'Art. 26',
+        autoEvidence: ['termination_letter']
+      },
+      {
+        id: 'no_valid_reason',
+        label: 'The "No Reason" Defense',
+        legalText: 'The Employer provided no valid reason for termination as required by Art. 27.',
+        citation: 'Art. 27',
+        autoEvidence: ['termination_letter']
+      },
+      {
+        id: 'constructive_dismissal',
+        label: 'Constructive Dismissal',
+        legalText: 'Employee was forced to resign due to Employer\'s unlawful actions (e.g., sexual harassment, danger to safety).',
+        citation: 'Treated as termination by Art. 32',
+        autoEvidence: []
+      }
     ],
     reliefs: [
       {
-          id: 'validate_facts_labour',
-          text: 'ከላይ የተዘረዘሩት የክሱ ፍሬ ነገሮች በፍ/ብ/ስ/ስ/ህ/ቁ 92 መሰረት እንዲረጋገጥልኝ፡፡',
-          isDefault: true,
+        id: 'declare_termination_unlawful',
+        text: 'Judgment declaring the termination unlawful pursuant to Art. 43.',
+        isDefault: true,
       },
       {
-          id: 'declare_termination_unlawful',
-          text: 'የተደረገው የሥራ ስንብት በህገ-ወጥ መንገድ የተፈጸመ መሆኑ እንዲረጋገጥልኝ፡፡',
-          isDefault: false,
+        id: 'reinstatement',
+        text: 'Order for reinstatement to previous position with full back pay (Art. 48).',
+        isDefault: false,
       },
       {
-          id: 'reinstatement',
-          text: 'ወደ ቀድሞ ስራዬ እንድመለስ ይወሰንልኝ፡፡',
-          isDefault: false,
+        id: 'compensation_in_lieu',
+        text: 'Payment of compensation (180 days wages) in lieu of reinstatement (Art. 43(4)).',
+        isDefault: false,
       },
       {
-          id: 'severance_pay',
-          text: 'የስንብት ክፍያ እንዲከፈለኝ፡፡',
-          isDefault: false,
+        id: 'severance_pay',
+        text: 'Payment of Severance Pay (Art. 39 & 40) - only if not reinstated.',
+        isDefault: false,
       },
       {
-          id: 'unpaid_wages_relief',
-          text: 'ያልተከፈለኝ ደመወዝ ከነወለዱ እንዲከፈለኝ፡፡',
-          isDefault: false,
+        id: 'notice_compensation',
+        text: 'Payment of Compensation for lack of Notice (Art. 44).',
+        isDefault: false,
       },
       {
-          id: 'costs_and_fees_labour',
-          text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
-          isDefault: true,
+        id: 'costs_and_fees_labour',
+        text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+        isDefault: true,
+      },
+    ]
+  },
+  labour_unpaid_wages: {
+    documentTitle: 'Statement of Claim for Outstanding Payments',
+    jurisdictionText: 'Labour Proclamation No. 1156/2019',
+    partyTitles: {
+      applicant: 'Employee (ሰራተኛ)',
+      respondent: 'Employer (ቀጣሪ)',
+    },
+    facts: [
+      {
+        id: 'unpaid_salary',
+        label: 'Salary Arrears',
+        legalText: 'Non-payment of regular monthly salary for specific months.',
+        citation: 'Art. 53',
+        autoEvidence: ['unpaid_wage_witness']
+      },
+      {
+        id: 'unlawful_deduction',
+        label: 'Salary Arrears',
+        legalText: 'Unlawful deduction from salary (without employee consent or court order).',
+        citation: 'Art. 59',
+        autoEvidence: ['unpaid_wage_witness']
+      },
+      {
+        id: 'unpaid_overtime',
+        label: 'Statutory Benefits',
+        legalText: 'Employee worked beyond 8 hours/day or 48 hours/week without overtime compensation.',
+        citation: 'Art. 66 & 68',
+        autoEvidence: ['unpaid_wage_witness']
+      },
+      {
+        id: 'unpaid_annual_leave',
+        label: 'Statutory Benefits',
+        legalText: 'Employee was denied annual leave and not compensated for it upon termination.',
+        citation: 'Art. 77 & 79',
+        autoEvidence: ['unpaid_wage_witness']
+      },
+      {
+        id: 'unpaid_holiday_work',
+        label: 'Statutory Benefits',
+        legalText: 'Employee worked on public holidays without legally mandated compensation.',
+        citation: 'Relevant Articles',
+        autoEvidence: ['unpaid_wage_witness']
+      }
+    ],
+    reliefs: [
+      {
+        id: 'payment_principal',
+        text: 'Order Respondent to pay the total principal amount calculated.',
+        isDefault: true,
+      },
+      {
+        id: 'payment_interest',
+        text: 'Order payment of statutory interest on the delayed payments.',
+        isDefault: false,
+      },
+      {
+        id: 'payment_overtime',
+        text: 'Order payment of specific calculated overtime amount.',
+        isDefault: false,
+      },
+      {
+        id: 'costs_and_fees_labour_wages',
+        text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+        isDefault: true,
+      },
+    ]
+  },
+  labour_employment_injury: {
+    documentTitle: 'Claim for Employment Injury Compensation',
+    jurisdictionText: 'Labour Proclamation No. 1156/2019',
+    partyTitles: {
+      applicant: 'Employee (ሰራተኛ)',
+      respondent: 'Employer (ቀጣሪ)',
+    },
+    facts: [
+      {
+        id: 'injury_at_work',
+        label: 'The Incident',
+        legalText: 'Injury occurred during working hours at the workplace.',
+        citation: 'Art. 95',
+        autoEvidence: []
+      },
+      {
+        id: 'injury_outside_work',
+        label: 'The Incident',
+        legalText: 'Injury occurred while carrying out employer\'s orders outside the workplace.',
+        citation: 'Art. 95',
+        autoEvidence: []
+      },
+      {
+        id: 'occupational_disease',
+        label: 'The Incident',
+        legalText: 'Occupational Disease was contracted due to the nature of the work.',
+        citation: 'Art. 98',
+        autoEvidence: []
+      },
+      {
+        id: 'partial_disability',
+        label: 'The Damage',
+        legalText: 'Permanent Partial Disability was sustained as a result of the incident.',
+        citation: 'Art. 109',
+        autoEvidence: []
+      },
+      {
+        id: 'temporary_disability',
+        label: 'The Damage',
+        legalText: 'Temporary Total Disability (unable to work for a specific period) was sustained.',
+        citation: 'Art. 106',
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: 'medical_expenses',
+        text: 'Order payment of Medical Expenses incurred (Art. 105).',
+        isDefault: true,
+      },
+      {
+        id: 'disability_compensation',
+        text: 'Order payment of Disability Compensation (Calculated based on Art. 109 & 110).',
+        isDefault: false,
+      },
+      {
+        id: 'costs_and_fees_injury',
+        text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+        isDefault: true,
       },
     ]
   },
@@ -513,3 +672,4 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+

@@ -31,12 +31,6 @@
       "type": "object",
       "properties": {}
     },
-    "MedicalBoardCertificate": {
-      "title": "Medical Board Certificate",
-      "description": "A certificate from a medical board.",
-      "type": "object",
-      "properties": {}
-    },
     "AccidentReport": {
       "title": "Accident Report",
       "description": "A report of an accident.",
@@ -74,10 +68,100 @@
       "properties": {}
     },
     "UnpaidWageWitness": {
-        "title": "Unpaid Wage Witness",
-        "description": "A witness for unpaid wages.",
-        "type": "object",
-        "properties": {}
+      "title": "Unpaid Wage Witness",
+      "description": "A witness for unpaid wages.",
+      "type": "object",
+      "properties": {}
+    },
+    "CertificateofMarriage": {
+      "title": "Certificate of Marriage",
+      "description": "Official certificate issued by VERA or religious/customary authority proving the existence of the marriage.",
+      "type": "object",
+      "properties": {}
+    },
+    "BirthCertificate": {
+      "title": "Birth Certificate(s)",
+      "description": "Official birth records for all children involved in the dispute, proving age and parentage.",
+      "type": "object",
+      "properties": {}
+    },
+    "ProofofIncome": {
+      "title": "Proof of Income",
+      "description": "Pay slips, bank statements, or tax records used to calculate maintenance (alimony) capabilities.",
+      "type": "object",
+      "properties": {}
+    },
+    "FamilyArbitratorsReport": {
+      "title": "Family Arbitrators' Report",
+      "description": "(If applicable) A record of the attempt at reconciliation by family elders/arbitrators, often required before formal litigation.",
+      "type": "object",
+      "properties": {}
+    },
+    "ListofCommonProperty": {
+      "title": "List of Common Property",
+      "description": "An inventory document detailing assets acquired during the marriage (movable and immovable).",
+      "type": "object",
+      "properties": {}
+    },
+    "PoliceReportDomesticViolence": {
+      "title": "Police Report (Domestic Violence)",
+      "description": "Official record of physical or emotional abuse, used as grounds for immediate dissolution or restraining orders.",
+      "type": "object",
+      "properties": {}
+    },
+    "SchoolFeeReceipts": {
+      "title": "School Fee Receipts",
+      "description": "Documentary proof of educational expenses for children, used to quantify maintenance claims.",
+      "type": "object",
+      "properties": {}
+    },
+    "MedicalBoardCertificate": {
+      "title": "Medical Board Certificate",
+      "description": "Evidence regarding paternity (DNA) or medical incapacity of a spouse.",
+      "type": "object",
+      "properties": {}
+    },
+    "WitnessStatements": {
+      "title": "Witness Statements",
+      "description": "Affidavits from witnesses.",
+      "type": "object",
+      "properties": {}
+    },
+    "CopyofDivorceJudgment": {
+      "title": "Copy of Divorce Judgment",
+      "description": "The prior court ruling confirming the marriage is dissolved.",
+      "type": "object",
+      "properties": {}
+    },
+    "ProofofInheritanceDonation": {
+      "title": "Proof of Inheritance/Donation",
+      "description": "Documents proving property was acquired via inheritance or donation.",
+      "type": "object",
+      "properties": {}
+    },
+    "Pre-maritalOwnershipDocuments": {
+      "title": "Pre-marital Ownership Documents",
+      "description": "Documents proving ownership of property before marriage.",
+      "type": "object",
+      "properties": {}
+    },
+    "JudgmentofDivorce": {
+      "title": "Judgment of Divorce",
+      "description": "The prior court ruling confirming the marriage is dissolved and allowing the property phase to commence.",
+      "type": "object",
+      "properties": {}
+    },
+    "PropertyValuationReport": {
+      "title": "Property Valuation Report",
+      "description": "(Optional/Later Stage) A report by a certified engineer or auditor estimating the value of the assets.",
+      "type": "object",
+      "properties": {}
+    },
+    "TitleDeedsLibrec": {
+      "title": "Title Deeds / Librec",
+      "description": "Official ownership certificates for immovable property (houses, land).",
+      "type": "object",
+      "properties": {}
     }
   },
   "templates": {
@@ -95,60 +179,99 @@
             {
               "id": "indefinite_contract",
               "legalText": "Existence of an indefinite period employment contract.",
-              "citation": "Art. 4 & 9",
-              "evidence": ["EmploymentContract"]
+              "citation": "Art. 9 of Proc. 1156/2019",
+              "evidence": [
+                "EmploymentContract"
+              ]
             },
             {
               "id": "definite_contract_ended",
-              "legalText": "Existence of definite period (probationary) contract (and specific claim that probation ended).",
-              "citation": "Art. 11",
-              "evidence": ["EmploymentContract"]
+              "legalText": "A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.",
+              "citation": "Art. 10, 11 of Proc. 1156/2019",
+              "evidence": [
+                "EmploymentContract"
+              ]
             }
           ]
         },
         "group_2": {
-          "title": "The Act of Termination (The Breach)",
+          "title": "The Act of Termination: Procedural Violations",
           "facets": [
             {
               "id": "no_prior_notice",
-              "legalText": "Termination was effected without any prior notice.",
-              "citation": "Violation of Art. 35",
-              "evidence": ["TerminationLetter"]
+              "legalText": "Termination was effected without any prior written notice specifying the reasons and date of termination.",
+              "citation": "Violation of Art. 35(1) of Proc. 1156/2019",
+              "evidence": [
+                "TerminationLetter"
+              ]
             },
             {
               "id": "insufficient_notice",
-              "legalText": "Termination notice period was insufficient (less than legal minimum based on service years).",
-              "citation": "Violation of Art. 35",
-              "evidence": ["TerminationLetter"]
+              "legalText": "The notice period provided was insufficient and less than the legal minimum based on years of service.",
+              "citation": "Violation of Art. 35(2) of Proc. 1156/2019",
+              "evidence": [
+                "TerminationLetter"
+              ]
+            }
+          ]
+        },
+        "group_3": {
+          "title": "The Act of Termination: Substantive Violations (Unlawful Grounds)",
+          "facets": [
+            {
+              "id": "union_membership_termination",
+              "legalText": "Termination was due to the employee's membership in a trade union or participation in union activities.",
+              "citation": "Art. 26(2)(a) of Proc. 1156/2019",
+              "evidence": [
+                "TerminationLetter"
+              ]
             },
             {
-              "id": "union_membership",
-              "legalText": "Termination due to Employee joining a Trade Union.",
-              "citation": "Art. 26",
-              "evidence": []
+              "id": "maternity_termination",
+              "legalText": "Termination was due to the employee's pregnancy or maternity leave status.",
+              "citation": "Art. 26(2)(d) of Proc. 1156/2019",
+              "evidence": [
+                "TerminationLetter"
+              ]
             },
             {
-              "id": "pregnancy_maternity",
-              "legalText": "Termination due to pregnancy or maternity leave status.",
-              "citation": "Art. 26",
-              "evidence": []
+              "id": "whistleblower_termination",
+              "legalText": "Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law.",
+              "citation": "Art. 26(2)(b) of Proc. 1156/2019",
+              "evidence": [
+                "TerminationLetter"
+              ]
             },
             {
-              "id": "discrimination",
-              "legalText": "Termination due to race, color, sex, religion, or political opinion (Discrimination).",
-              "citation": "Art. 26",
-              "evidence": []
-            },
+              "id": "discriminatory_termination",
+              "legalText": "Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin.",
+              "citation": "Art. 26(2)(c) of Proc. 1156/2019",
+              "evidence": [
+                "TerminationLetter"
+              ]
+            }
+          ]
+        },
+        "group_4": {
+          "title": "The Act of Termination: The \"No Reason\" Defense",
+          "facets": [
             {
               "id": "no_valid_reason",
-              "legalText": "The Employer provided no valid reason for termination as required by Art. 27.",
-              "citation": "Art. 27",
-              "evidence": []
-            },
+              "legalText": "The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking.",
+              "citation": "Violation of Art. 27 of Proc. 1156/2019",
+              "evidence": [
+                "TerminationLetter"
+              ]
+            }
+          ]
+        },
+        "group_5": {
+          "title": "The Act of Termination: Constructive Dismissal",
+          "facets": [
             {
               "id": "constructive_dismissal",
-              "legalText": "Employee was forced to resign due to Employer's unlawful actions (sexual harassment or danger to safety).",
-              "citation": "Art. 32",
+              "legalText": "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.",
+              "citation": "Art. 32 of Proc. 1156/2019",
               "evidence": []
             }
           ]
@@ -156,24 +279,28 @@
       },
       "reliefs": [
         {
-          "id": "declare_unlawful",
+          "id": "declare_termination_unlawful",
           "text": "Judgment declaring the termination unlawful pursuant to Art. 43."
         },
         {
           "id": "reinstatement",
-          "text": "Order for reinstatement to previous position with full back pay (Art. 48)."
+          "text": "Order for reinstatement to previous position with full back pay from the date of termination until reinstatement (Art. 43(1))."
         },
         {
-          "id": "compensation",
-          "text": "Payment of compensation (usually 180 days wages) in lieu of reinstatement (Art. 43(4))."
+          "id": "compensation_in_lieu",
+          "text": "Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (not to exceed 12 months total) (Art. 43(2,3))."
         },
         {
           "id": "severance_pay",
-          "text": "Payment of Severance Pay (Art. 39 & 40) - Logic: Only if not reinstated."
+          "text": "Payment of Severance Pay as per the calculation in Art. 39 & 40 (Only if not reinstated)."
         },
         {
           "id": "notice_compensation",
-          "text": "Payment of Compensation for lack of Notice (Art. 44)."
+          "text": "Payment of Compensation for lack of proper notice, equivalent to salary for the notice period (Art. 44)."
+        },
+        {
+          "id": "costs_and_fees_labour",
+          "text": "Costs and fees to be covered by the respondent."
         }
       ]
     },
@@ -189,16 +316,20 @@
           "title": "Salary Arrears",
           "facets": [
             {
-              "id": "non_payment_salary",
-              "legalText": "Non-payment of regular monthly salary for specific months.",
-              "citation": "Art. 53",
-              "evidence": ["PayrollSlip"]
+              "id": "unpaid_salary",
+              "legalText": "Non-payment of regular monthly salary for the month(s) of [Specify Months].",
+              "citation": "Art. 53 (Payment obligations)",
+              "evidence": [
+                "UnpaidWageWitness"
+              ]
             },
             {
               "id": "unlawful_deduction",
-              "legalText": "Unlawful deduction from salary (without employee consent or court order).",
-              "citation": "Art. 59",
-              "evidence": ["PayrollSlip"]
+              "legalText": "An unlawful deduction was made from the salary without employee consent or a valid court order.",
+              "citation": "Art. 59 (Prohibition of deductions)",
+              "evidence": [
+                "UnpaidWageWitness"
+              ]
             }
           ]
         },
@@ -206,21 +337,23 @@
           "title": "Statutory Benefits",
           "facets": [
             {
-              "id": "overtime_work",
-              "legalText": "Employee worked beyond 8 hours/day or 48 hours/week without overtime compensation.",
-              "citation": "Art. 66 & 68",
-              "evidence": ["AttendanceSheet"]
+              "id": "unpaid_overtime",
+              "legalText": "Employee worked beyond the standard 8 hours/day or 48 hours/week without receiving overtime compensation at the legally mandated rates.",
+              "citation": "Art. 66 & 68 (Calculation rates)",
+              "evidence": [
+                "UnpaidWageWitness"
+              ]
             },
             {
-              "id": "annual_leave",
-              "legalText": "Employee was denied annual leave and not compensated for it upon termination.",
-              "citation": "Art. 77 & 79",
+              "id": "unpaid_annual_leave",
+              "legalText": "Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment.",
+              "citation": "Art. 77 & 79 (Conversion to cash only upon termination)",
               "evidence": []
             },
             {
-              "id": "public_holiday_work",
-              "legalText": "Worked on public holidays without legally mandated compensation.",
-              "citation": "",
+              "id": "unpaid_holiday_work",
+              "legalText": "Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate.",
+              "citation": "Art. 73",
               "evidence": []
             }
           ]
@@ -228,16 +361,20 @@
       },
       "reliefs": [
         {
-          "id": "pay_principal",
-          "text": "Order Respondent to pay the total principal amount calculated."
+          "id": "payment_principal",
+          "text": "An order for the Respondent to pay the total principal amount of all outstanding wages and benefits."
         },
         {
-          "id": "statutory_interest",
-          "text": "Statutory interest on the delayed payments."
+          "id": "payment_interest",
+          "text": "An order for the payment of statutory interest on the delayed payments as per the relevant provisions of the Civil Code."
         },
         {
-          "id": "pay_overtime",
-          "text": "Payment of specific calculated overtime."
+          "id": "payment_overtime_specific",
+          "text": "A specific order for the payment of calculated overtime wages."
+        },
+        {
+          "id": "costs_and_fees_labour_wages",
+          "text": "Costs and fees to be covered by the respondent."
         }
       ]
     },
@@ -253,20 +390,26 @@
           "title": "The Incident",
           "facets": [
             {
-              "id": "injury_at_workplace",
-              "legalText": "Injury occurred during working hours at the workplace.",
-              "citation": "Art. 95",
-              "evidence": ["AccidentReport"]
+              "id": "injury_at_work",
+              "legalText": "The injury occurred during the performance of the employee's duties within the regular working hours and at the designated workplace.",
+              "citation": "Art. 95(1)(a)",
+              "evidence": []
             },
             {
-              "id": "injury_outside_workplace",
-              "legalText": "Injury occurred while carrying out employer's orders outside workplace.",
-              "citation": "",
-              "evidence": ["AccidentReport"]
+              "id": "injury_commuting",
+              "legalText": "The injury occurred while the employee was commuting directly between their residence and the workplace, using transport provided by the employer.",
+              "citation": "Art. 95(1)(c)",
+              "evidence": []
+            },
+            {
+              "id": "injury_on_order",
+              "legalText": "The injury occurred outside the regular workplace while the employee was carrying out a specific order given by the employer.",
+              "citation": "Art. 95(1)(b)",
+              "evidence": []
             },
             {
               "id": "occupational_disease",
-              "legalText": "Occupational Disease contracted due to nature of work.",
+              "legalText": "The employee has contracted an occupational disease as a direct result of exposure to hazards in the work environment.",
               "citation": "Art. 98",
               "evidence": []
             }
@@ -277,27 +420,35 @@
           "facets": [
             {
               "id": "permanent_partial_disability",
-              "legalText": "Permanent Partial Disability sustained (needs medical board % evidence).",
-              "citation": "",
-              "evidence": ["MedicalBoardCertificate"]
+              "legalText": "A permanent partial disability has been sustained as a result of the injury, confirmed by a medical board certificate.",
+              "citation": "Art. 109 & 110",
+              "evidence": []
             },
             {
               "id": "temporary_total_disability",
-              "legalText": "Temporary Total Disability (unable to work for a specific period).",
-              "citation": "",
-              "evidence": ["MedicalBoardCertificate"]
+              "legalText": "A temporary total disability was sustained, rendering the employee unable to work for a specific period.",
+              "citation": "Art. 106",
+              "evidence": []
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "pay_medical_expenses",
-          "text": "Payment of Medical Expenses incurred (Art. 105)."
+          "id": "medical_expenses",
+          "text": "An order for the full payment of all medical, surgical, pharmaceutical, and hospital care expenses incurred due to the injury (Art. 105)."
         },
         {
           "id": "disability_compensation",
-          "text": "Disability Compensation payment (Calculated based on Art. 109 & 110)."
+          "text": "Payment of disability compensation, calculated based on the employee's salary and the percentage of disability as determined by the medical board (Art. 109 & 110)."
+        },
+        {
+          "id": "periodical_payment",
+          "text": "Payment for temporary disability, equivalent to 75% of the employee's daily wage, for the duration of the disability (Art. 106)."
+        },
+        {
+          "id": "costs_and_fees_injury",
+          "text": "Costs and fees to be covered by the respondent."
         }
       ]
     },
@@ -313,22 +464,28 @@
           "title": "The Disciplinary Measure (The Trigger)",
           "facets": [
             {
-              "id": "dismissal_from_service",
+              "id": "measure_dismissal",
               "legalText": "Dismissal from Service.",
-              "citation": "Art. 81(1)(b)",
-              "evidence": ["DismissalLetter"]
+              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
+              "evidence": [
+                "DismissalLetter"
+              ]
             },
             {
-              "id": "demotion",
+              "id": "measure_demotion",
               "legalText": "Downgrading of job position/grade.",
-              "citation": "Art. 81(1)(b)",
-              "evidence": ["DismissalLetter"]
+              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
+              "evidence": [
+                "DismissalLetter"
+              ]
             },
             {
-              "id": "fine_exceeding_salary",
+              "id": "measure_fine",
               "legalText": "Imposition of a fine exceeding one month's salary.",
-              "citation": "Art. 81(1)(b)",
-              "evidence": ["DismissalLetter"]
+              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
+              "evidence": [
+                "DismissalLetter"
+              ]
             }
           ]
         },
@@ -338,19 +495,19 @@
             {
               "id": "no_right_to_be_heard",
               "legalText": "The Institution took the measure without giving the Appellant a chance to present a defense.",
-              "citation": "Violation of Art. 69",
+              "citation": "Violation of Art. 69 of Proc. 1064/2017",
               "evidence": []
             },
             {
               "id": "limitation_period_1yr",
               "legalText": "The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.",
-              "citation": "Art. 76(2)",
+              "citation": "Art. 76(2) of Proc. 1064/2017",
               "evidence": []
             },
             {
               "id": "limitation_period_6mo",
               "legalText": "The simple measure was taken more than 6 months after the offense was known, barring it by limitation.",
-              "citation": "Art. 76(1)",
+              "citation": "Art. 76(1) of Proc. 1064/2017",
               "evidence": []
             },
             {
@@ -362,27 +519,27 @@
           ]
         },
         "group_3": {
-            "title": "Substantive Defenses (The Merits)",
-            "facets": [
-                {
-                    "id": "not_an_offense",
-                    "legalText": "The alleged act does not constitute a disciplinary offense under the law.",
-                    "citation": "",
-                    "evidence": []
-                },
-                {
-                    "id": "disproportionate_penalty",
-                    "legalText": "The penalty is disproportionate to the offense committed.",
-                    "citation": "",
-                    "evidence": []
-                },
-                {
-                    "id": "double_jeopardy",
-                    "legalText": "The appellant was already punished for the same alleged offense.",
-                    "citation": "",
-                    "evidence": []
-                }
-            ]
+          "title": "Substantive Defenses (The Merits)",
+          "facets": [
+            {
+              "id": "not_an_offense",
+              "legalText": "The alleged act does not constitute a disciplinary offense under the law.",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "disproportionate_penalty",
+              "legalText": "The penalty is disproportionate to the offense committed.",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "double_jeopardy",
+              "legalText": "The appellant was already punished for the same alleged offense.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
         }
       },
       "reliefs": [
@@ -401,129 +558,507 @@
       ]
     },
     "civil_service_termination_unlawful": {
-        "documentTitle": "Appeal Against Administrative Termination",
-        "partyTitles": {
-            "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
-            "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
-        },
-        "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
-        "facts": {
-            "group_1": {
-                "title": "Grounds: Inefficiency (Performance)",
-                "facets": [
-                    {
-                        "id": "inefficiency_not_consecutive",
-                        "legalText": "Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations.",
-                        "citation": "Art. 84(1)",
-                        "evidence": ["PerformanceReview"]
-                    },
-                    {
-                        "id": "inefficiency_no_training",
-                        "legalText": "Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve.",
-                        "citation": "Art. 84(1)",
-                        "evidence": ["PerformanceReview"]
-                    }
-                ]
-            },
-            "group_2": {
-                "title": "Grounds: Illness / Medical",
-                "facets": [
-                    {
-                        "id": "illness_before_leave_exhausted",
-                        "legalText": "Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay).",
-                        "citation": "Art. 83(1)",
-                        "evidence": []
-                    },
-                    {
-                        "id": "illness_no_medical_board",
-                        "legalText": "Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability.",
-                        "citation": "Art. 83(2)",
-                        "evidence": []
-                    }
-                ]
-            },
-            "group_3": {
-                "title": "Grounds: Force Majeure / Redundancy",
-                "facets": [
-                    {
-                        "id": "redundancy_no_offer",
-                        "legalText": "Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination.",
-                        "citation": "Art. 85(2)",
-                        "evidence": []
-                    }
-                ]
-            }
-        },
-        "reliefs": [
+      "documentTitle": "Appeal Against Administrative Termination",
+      "partyTitles": {
+        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
+        "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
+      },
+      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "facts": {
+        "group_1": {
+          "title": "Grounds: Inefficiency (Performance)",
+          "facets": [
             {
-                "id": "quash_termination",
-                "text": "To quash/annul the administrative decision of termination."
+              "id": "inefficiency_not_consecutive",
+              "legalText": "Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations.",
+              "citation": "Art. 84(1) of Proc. 1064/2017",
+              "evidence": [
+                "PerformanceReview"
+              ]
             },
             {
-                "id": "reinstate_civil_servant",
-                "text": "To order the reinstatement of the Appellant to their former position with full back pay."
+              "id": "inefficiency_no_training",
+              "legalText": "Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve.",
+              "citation": "Art. 84(1) of Proc. 1064/2017",
+              "evidence": [
+                "PerformanceReview"
+              ]
             }
-        ]
+          ]
+        },
+        "group_2": {
+          "title": "Grounds: Illness / Medical",
+          "facets": [
+            {
+              "id": "illness_before_leave_exhausted",
+              "legalText": "Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay).",
+              "citation": "Art. 83(1) of Proc. 1064/2017",
+              "evidence": []
+            },
+            {
+              "id": "illness_no_medical_board",
+              "legalText": "Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability.",
+              "citation": "Art. 83(2) of Proc. 1064/2017",
+              "evidence": []
+            }
+          ]
+        },
+        "group_3": {
+          "title": "Grounds: Force Majeure / Redundancy",
+          "facets": [
+            {
+              "id": "redundancy_no_offer",
+              "legalText": "Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination.",
+              "citation": "Art. 85(2) of Proc. 1064/2017",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "quash_termination",
+          "text": "To quash/annul the administrative decision of termination."
+        },
+        {
+          "id": "reinstate_civil_servant",
+          "text": "To order the reinstatement of the Appellant to their former position with full back pay."
+        }
+      ]
     },
     "civil_service_benefits_grievance": {
-        "documentTitle": "Appeal on Service Rights & Benefits",
-        "partyTitles": {
-            "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
-            "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
-        },
-        "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
-        "facts": {
-            "group_1": {
-                "title": "Exhaustion of Remedies (Mandatory)",
-                "facets": [
-                    {
-                        "id": "exhaustion_grievance_submitted",
-                        "legalText": "A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.",
-                        "citation": "Art. 81(1)(e)",
-                        "evidence": ["GrievanceSubmission"]
-                    }
-                ]
-            },
-            "group_2": {
-                "title": "The Grievance",
-                "facets": [
-                    {
-                        "id": "promotion_denied",
-                        "legalText": "The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.",
-                        "citation": "Art. 13",
-                        "evidence": []
-                    },
-                    {
-                        "id": "salary_increment_denied",
-                        "legalText": "The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.",
-                        "citation": "Art. 81(1)(c)",
-                        "evidence": []
-                    },
-                    {
-                        "id": "acting_allowance_denied",
-                        "legalText": "The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.",
-                        "citation": "Relevant Regulations",
-                        "evidence": []
-                    }
-                ]
+      "documentTitle": "Appeal on Service Rights & Benefits",
+      "partyTitles": {
+        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
+        "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
+      },
+      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "facts": {
+        "group_1": {
+          "title": "Exhaustion of Remedies (Mandatory)",
+          "facets": [
+            {
+              "id": "exhaustion_grievance_submitted",
+              "legalText": "A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.",
+              "citation": "Art. 81(1)(e) of Proc. 1064/2017",
+              "evidence": [
+                "GrievanceSubmission"
+              ]
             }
+          ]
         },
-        "reliefs": [
+        "group_2": {
+          "title": "The Grievance",
+          "facets": [
             {
-                "id": "grant_promotion",
-                "text": "To order the Respondent Institution to grant the promotion due to the Appellant."
+              "id": "promotion_denied",
+              "legalText": "The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.",
+              "citation": "Art. 13 of Proc. 1064/2017",
+              "evidence": []
             },
             {
-                "id": "grant_salary_increment",
-                "text": "To order the payment of the denied salary increment, with retroactive effect."
+              "id": "salary_increment_denied",
+              "legalText": "The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.",
+              "citation": "Art. 81(1)(c) of Proc. 1064/2017",
+              "evidence": []
             },
             {
-                "id": "refund_deductions",
-                "text": "To order the refund of any unlawfully deducted salary."
+              "id": "acting_allowance_denied",
+              "legalText": "The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.",
+              "citation": "Relevant Regulations",
+              "evidence": []
             }
-        ]
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "grant_promotion",
+          "text": "To order the Respondent Institution to grant the promotion due to the Appellant."
+        },
+        {
+          "id": "grant_salary_increment",
+          "text": "To order the payment of the denied salary increment, with retroactive effect."
+        },
+        {
+          "id": "refund_deductions",
+          "text": "To order the refund of any unlawfully deducted salary."
+        }
+      ]
+    },
+    "family_divorce_dispute": {
+      "documentTitle": "Statement of Claim for Dissolution of Marriage",
+      "jurisdictionText": "Art. 11(2) of Federal Courts Proc. 25/96 and Art. 76 of the Revised Family Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff",
+        "respondent": "Defendant"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Marriage Validity",
+          "facets": [
+            {
+              "id": "fact_marriage_existence",
+              "legalText": "The Plaintiff and Defendant were legally married on [Date].",
+              "citation": "RFC Art. 1",
+              "evidence": [
+                "CertificateofMarriage"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Grounds for Dissolution",
+          "facets": [
+            {
+              "id": "fact_irretrievable_breakdown",
+              "legalText": "There are irreconcilable differences making the continuation of the marriage impossible.",
+              "citation": "RFC Art. 76",
+              "evidence": []
+            },
+            {
+              "id": "fact_period_of_separation",
+              "legalText": "The parties have lived separately for a period exceeding [Number] months.",
+              "citation": "RFC Art. 81",
+              "evidence": []
+            }
+          ]
+        },
+        "group_3": {
+          "title": "Children & Custody",
+          "facets": [
+            {
+              "id": "fact_children_existence",
+              "legalText": "The marriage produced [Number] children.",
+              "citation": "RFC Art. 113",
+              "evidence": [
+                "BirthCertificate"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_dissolution",
+          "text": "Judgment dissolving the marriage between the Plaintiff and Defendant."
+        },
+        {
+          "id": "relief_custody",
+          "text": "Order granting sole/joint custody of the minor children to the Plaintiff."
+        },
+        {
+          "id": "relief_child_support",
+          "text": "Order for the Defendant to pay monthly child maintenance."
+        },
+        {
+          "id": "relief_property_partition",
+          "text": "Order for the liquidation and partition of common marital property."
+        }
+      ]
+    },
+    "family_divorce_agreement": {
+      "documentTitle": "Petition for Approval of Divorce by Mutual Consent",
+      "jurisdictionText": "Art. 77 of the Revised Family Code.",
+      "partyTitles": {
+        "applicant": "First Petitioner",
+        "respondent": "Second Petitioner"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Consent Details",
+          "facets": [
+            {
+              "id": "fact_mutual_agreement",
+              "legalText": "Both parties have voluntarily agreed to dissolve their marriage.",
+              "citation": "RFC Art. 77",
+              "evidence": [
+                "CertificateofMarriage"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Terms of Agreement",
+          "facets": [
+            {
+              "id": "fact_agreement_doc",
+              "legalText": "The parties have prepared a comprehensive agreement regarding the division of property and custody of children.",
+              "citation": "RFC Art. 82",
+              "evidence": [
+                "ListofCommonProperty"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_approve_agreement",
+          "text": "Order approving the divorce agreement and dissolving the marriage."
+        }
+      ]
+    },
+    "family_paternity_claim": {
+      "documentTitle": "Statement of Claim for Judicial Declaration of Paternity",
+      "jurisdictionText": "Art. 143 of the Revised Family Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Child/Guardian)",
+        "respondent": "Defendant (Alleged Father)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Sexual Relations",
+          "facets": [
+            {
+              "id": "fact_sexual_intercourse",
+              "legalText": "The mother and the Defendant had sexual relations during the legal period of conception.",
+              "citation": "RFC Art. 143",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Possession of Status",
+          "facets": [
+            {
+              "id": "fact_possession_status",
+              "legalText": "The Defendant has treated the child as his own in public and private spheres.",
+              "citation": "RFC Art. 136",
+              "evidence": [
+                "WitnessStatements"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_declare_paternity",
+          "text": "Judgment declaring the Defendant is the biological father of the child."
+        },
+        {
+          "id": "relief_reimbursement",
+          "text": "Order for reimbursement of expenses related to birth and maintenance."
+        }
+      ]
+    },
+    "app_temporary_maintenance": {
+      "documentTitle": "Application for Order of Provisional Maintenance",
+      "jurisdictionText": "Art. 83(2) of the Revised Family Code & Art. 154 Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Applicant",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Urgency & Need",
+          "facets": [
+            {
+              "id": "fact_pendency_of_suit",
+              "legalText": "A main suit for divorce is currently pending between the parties.",
+              "citation": "RFC Art. 83",
+              "evidence": []
+            },
+            {
+              "id": "fact_immediate_need",
+              "legalText": "The Applicant has no independent income to support themselves/the children during the litigation.",
+              "citation": "RFC Art. 106",
+              "evidence": [
+                "ProofofIncome"
+              ]
+            },
+            {
+              "id": "fact_ability_to_pay",
+              "legalText": "The Respondent has sufficient income to provide provisional support.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_prov_maintenance",
+          "text": "Order the Respondent to pay [Amount] ETB monthly until final judgment."
+        }
+      ]
+    },
+    "app_property_preservation": {
+      "documentTitle": "Application for Attachment and Preservation of Common Property",
+      "jurisdictionText": "Art. 154 Civil Procedure Code & Art. 83 Revised Family Code.",
+      "partyTitles": {
+        "applicant": "Applicant",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Risk of Dissipation",
+          "facets": [
+            {
+              "id": "fact_intent_to_defraud",
+              "legalText": "There is a reasonable apprehension that the Respondent is attempting to sell, transfer, or hide common marital assets.",
+              "citation": "CPC Art. 154",
+              "evidence": []
+            },
+            {
+              "id": "fact_common_ownership",
+              "legalText": "The property in question is common property acquired during the marriage.",
+              "citation": "RFC Art. 62",
+              "evidence": [
+                "ListofCommonProperty"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_injunction_transfer",
+          "text": "Order restraining the Respondent from transferring or selling specific assets."
+        },
+        {
+          "id": "relief_freeze_accounts",
+          "text": "Order freezing the joint bank accounts pending final partition."
+        }
+      ]
+    },
+    "app_protective_order": {
+      "documentTitle": "Application for Urgent Protective Order",
+      "jurisdictionText": "Art. 154 Civil Procedure Code (Inherent Power) & Criminal Code References.",
+      "partyTitles": {
+        "applicant": "Applicant",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Safety & Harm",
+          "facets": [
+            {
+              "id": "fact_imminent_danger",
+              "legalText": "The Applicant faces immediate physical danger from the Respondent.",
+              "citation": "",
+              "evidence": [
+                "PoliceReportDomesticViolence"
+              ]
+            },
+            {
+              "id": "fact_balance_convenience",
+              "legalText": "The harm to the Applicant if the order is not granted outweighs any inconvenience to the Respondent.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_vacate_home",
+          "text": "Order the Respondent to temporarily vacate the matrimonial home."
+        },
+        {
+          "id": "relief_restrain_contact",
+          "text": "Order restraining the Respondent from coming within [Distance] meters of the Applicant."
+        }
+      ]
+    },
+    "family_post_judgment_partition": {
+      "documentTitle": "Application for Liquidation and Partition of Common Property",
+      "jurisdictionText": "Art. 85 & 90 of the Revised Family Code and Art. 219 of the Civil Procedure Code (Execution Proceedings).",
+      "partyTitles": {
+        "applicant": "Decree Holder (Applicant)",
+        "respondent": "Judgment Debtor (Respondent)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Procedural History",
+          "facets": [
+            {
+              "id": "fact_prior_dissolution",
+              "legalText": "This Honorable Court has already rendered a judgment dissolving the marriage between the parties under this file number.",
+              "citation": "Civil Procedure Code Art. 182",
+              "evidence": [
+                "CopyofDivorceJudgment"
+              ]
+            },
+            {
+              "id": "fact_custody_settled",
+              "legalText": "Issues regarding child custody and maintenance have already been adjudicated.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Identification of Property",
+          "facets": [
+            {
+              "id": "fact_existence_common_property",
+              "legalText": "The parties acquired movable and immovable property during the existence of the marriage which constitutes Common Property.",
+              "citation": "RFC Art. 62",
+              "evidence": [
+                "ListofCommonProperty",
+                "TitleDeedsLibrec"
+              ]
+            },
+            {
+              "id": "fact_property_possession",
+              "legalText": "The property is currently in the sole possession/control of the Respondent/Applicant.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_3": {
+          "title": "Restitution of Personal Property (Pre-Partition)",
+          "facets": [
+            {
+              "id": "fact_personal_property_claim",
+              "legalText": "The Applicant possesses proof of personal property owned prior to the marriage or acquired by succession/donation, which must be withdrawn before partition.",
+              "citation": "RFC Art. 57 & 86",
+              "evidence": [
+                "ProofofInheritanceDonation",
+                "Pre-maritalOwnershipDocuments"
+              ]
+            }
+          ]
+        },
+        "group_4": {
+          "title": "Valuation & Dispute",
+          "facets": [
+            {
+              "id": "fact_dispute_valuation",
+              "legalText": "The parties are unable to agree on the value or mode of partition of the assets.",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_expert_need",
+              "legalText": "The complexity of the assets (e.g., business shares, real estate) requires professional valuation.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_appoint_liquidator",
+          "text": "Order the appointment of a court-verified expert/liquidator to inventory and value the common property."
+        },
+        {
+          "id": "relief_withdraw_personal",
+          "text": "Order the restitution/withdrawal of the Applicant's personal property [List Items] prior to partition."
+        },
+        {
+          "id": "relief_partition_equal",
+          "text": "Order the remaining common property be divided equally (50/50) between the parties."
+        },
+        {
+          "id": "relief_auction_sale",
+          "text": "Order the sale by auction of indivisible property and the division of the proceeds."
+        }
+      ]
     }
   }
 }
-
-    

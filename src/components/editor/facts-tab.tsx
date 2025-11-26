@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -8,7 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { SMART_FACTS } from '@/lib/data';
+import { TEMPLATE_DATA } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import { BrainCircuit, Info, Plus, X } from 'lucide-react';
 import { Badge } from '../ui/badge';
@@ -19,7 +20,8 @@ interface FactsTabProps {
 }
 
 export default function FactsTab({ state, dispatch }: FactsTabProps) {
-  const { maintenance, selectedFacts } = state;
+  const { maintenance, selectedFacts, selectedTemplate } = state;
+  const smartFactsForTemplate = TEMPLATE_DATA[selectedTemplate].facts;
 
   return (
     <div className="space-y-6">
@@ -31,80 +33,84 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
         </AlertDescription>
       </Alert>
 
-      <div className="flex items-start space-x-3 rounded-md border border-accent bg-green-50 p-4 dark:bg-green-950/50">
-        <Checkbox
-          id="chk-custody"
-          checked={maintenance.active}
-          onCheckedChange={(checked) => dispatch({ type: 'TOGGLE_MAINTENANCE', payload: { checked: !!checked } })}
-          className="mt-1"
-        />
-        <div className="grid gap-1.5 leading-none">
-          <label htmlFor="chk-custody" className="font-bold text-foreground cursor-pointer">
-            የልጅ አስተዳደግ እና ቀለብ (Child Custody & Maintenance)
-          </label>
-          <p className="text-sm text-green-700 dark:text-green-400">
-            ይህንን መምረጥ የቀለብ ማስያ ማሽን እንዲሰራ ያደርጋል።
-          </p>
-        </div>
-      </div>
-
-      {maintenance.active && (
-        <Card className="bg-green-50/50 border-accent/50 dark:bg-green-950/20">
-          <CardHeader>
-            <div className="flex justify-between items-center">
-                <div>
-                    <CardTitle className="text-accent flex items-center gap-2">
-                        <BrainCircuit className="w-5 h-5"/>
-                        የቀለብ ማስያ (Maintenance Calculator)
-                    </CardTitle>
-                    <CardDescription>Rule: (Income × 33%) ÷ Children</CardDescription>
+      {selectedTemplate === 'divorce' && (
+        <>
+            <div className="flex items-start space-x-3 rounded-md border border-accent bg-green-50 p-4 dark:bg-green-950/50">
+                <Checkbox
+                id="chk-custody"
+                checked={maintenance.active}
+                onCheckedChange={(checked) => dispatch({ type: 'TOGGLE_MAINTENANCE', payload: { checked: !!checked } })}
+                className="mt-1"
+                />
+                <div className="grid gap-1.5 leading-none">
+                <label htmlFor="chk-custody" className="font-bold text-foreground cursor-pointer">
+                    የልጅ አስተዳደግ እና ቀለብ (Child Custody & Maintenance)
+                </label>
+                <p className="text-sm text-green-700 dark:text-green-400">
+                    ይህንን መምረጥ የቀለብ ማስያ ማሽን እንዲሰራ ያደርጋል።
+                </p>
                 </div>
             </div>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="calc-income">የተከሳሽ ወርሃዊ ገቢ (ብር)</Label>
-                <Input
-                  id="calc-income"
-                  type="number"
-                  placeholder="e.g. 10000"
-                  value={maintenance.income || ''}
-                  onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'income', value: e.target.valueAsNumber } })}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="calc-children">የልጆች ብዛት</Label>
-                <Input
-                  id="calc-children"
-                  type="number"
-                  min="1"
-                  value={maintenance.children || ''}
-                  onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'children', value: e.target.valueAsNumber } })}
-                />
-              </div>
-            </div>
-            <div className="text-center rounded-lg border-2 border-dashed border-accent/50 bg-background p-4">
-              <p className="text-sm text-muted-foreground">ለአንድ ልጅ የሚገመት ቀለብ</p>
-              <p className="text-2xl font-bold text-foreground">{maintenance.result.toFixed(2)} ETB</p>
-            </div>
-            {maintenance.context && (
-               <Alert variant="default" className="bg-background">
-                  <Info className="h-4 w-4" />
-                  <AlertTitle>AI-Generated Context</AlertTitle>
-                  <AlertDescription>
-                    {maintenance.context}
-                  </AlertDescription>
-              </Alert>
+
+            {maintenance.active && (
+                <Card className="bg-green-50/50 border-accent/50 dark:bg-green-950/20">
+                <CardHeader>
+                    <div className="flex justify-between items-center">
+                        <div>
+                            <CardTitle className="text-accent flex items-center gap-2">
+                                <BrainCircuit className="w-5 h-5"/>
+                                የቀለብ ማስያ (Maintenance Calculator)
+                            </CardTitle>
+                            <CardDescription>Rule: (Income × 33%) ÷ Children</CardDescription>
+                        </div>
+                    </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                        <Label htmlFor="calc-income">የተከሳሽ ወርሃዊ ገቢ (ብር)</Label>
+                        <Input
+                        id="calc-income"
+                        type="number"
+                        placeholder="e.g. 10000"
+                        value={maintenance.income || ''}
+                        onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'income', value: e.target.valueAsNumber } })}
+                        />
+                    </div>
+                    <div className="space-y-2">
+                        <Label htmlFor="calc-children">የልጆች ብዛት</Label>
+                        <Input
+                        id="calc-children"
+                        type="number"
+                        min="1"
+                        value={maintenance.children || ''}
+                        onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'children', value: e.target.valueAsNumber } })}
+                        />
+                    </div>
+                    </div>
+                    <div className="text-center rounded-lg border-2 border-dashed border-accent/50 bg-background p-4">
+                    <p className="text-sm text-muted-foreground">ለአንድ ልጅ የሚገመት ቀለብ</p>
+                    <p className="text-2xl font-bold text-foreground">{maintenance.result.toFixed(2)} ETB</p>
+                    </div>
+                    {maintenance.context && (
+                    <Alert variant="default" className="bg-background">
+                        <Info className="h-4 w-4" />
+                        <AlertTitle>AI-Generated Context</AlertTitle>
+                        <AlertDescription>
+                            {maintenance.context}
+                        </AlertDescription>
+                    </Alert>
+                    )}
+                </CardContent>
+                </Card>
             )}
-          </CardContent>
-        </Card>
+        </>
       )}
       
       <Separator />
 
       <div className="space-y-3">
-        {SMART_FACTS.map(fact => (
+        {smartFactsForTemplate.map(fact => (
           <div key={fact.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
             <Checkbox
               id={`fact-${fact.id}`}
@@ -151,3 +157,5 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
     </div>
   );
 }
+
+    

@@ -1,5 +1,5 @@
 
-import type { AppState, Template, Relief } from "./types";
+import type { AppState, Template, Relief, Fact } from "./types";
 import { FileText, Briefcase } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
@@ -104,58 +104,6 @@ export const DOCUMENT_ISSUERS = [
   "Other (ሌላ)",
 ];
 
-export const SMART_FACTS = [
-  {
-    id: 'conflict',
-    label: 'Conflict / Irreconcilable Differences (ግጭት)',
-    legalText: 'በተጋቢዎች መካከል በተፈጠረ አለመግባባት ምክንያት ሰላም የሌለ በመሆኑ እና በትዳር መቀጠል የማይችሉበት ደረጃ ላይ በመድረሳቸው',
-    citation: 'Family Code Art. 75',
-    autoEvidence: ['marriage_cert']
-  },
-  {
-    id: 'separation',
-    label: 'Separation for 2 Years (ለ2 ዓመት መለያየት)',
-    legalText: 'ተጋቢዎች ለሁለት ዓመት እና ከዚያ በላይ ተለያይተው የኖሩ በመሆኑ',
-    citation: 'Family Code Art. 81',
-    autoEvidence: ['separation_witness']
-  },
-  {
-    id: 'desertion',
-    label: 'Desertion (መጥፋት)',
-    legalText: 'ተከሳሽ ትዳሩን እና ቤተሰቡን ጥሎ ከጠፋ ረጅም ጊዜ የሆነው በመሆኑ',
-    citation: 'Family Code Art. (Relevant)',
-    autoEvidence: ['desertion_witness']
-  }
-];
-
-export const RELIEF_ITEMS: Relief[] = [
-    {
-        id: 'validate_facts',
-        text: 'ከላይ የተዘረዘሩት የክሱ ፍሬ ነገሮች በፍ/ብ/ስ/ስ/ህ/ቁ 92 መሰረት እንዲረጋገጥልኝ፡፡',
-        isDefault: true,
-    },
-    {
-        id: 'grant_divorce',
-        text: 'በተከሳሽና በአመልካች መካከል በህግ አግባብ የተመሰረተው የጋብቻ ውል በፍቺ እንዲፈርስልኝ፡፡',
-        isDefault: true,
-    },
-    {
-        id: 'maintenance',
-        text: 'ተከሳሽ በወር {{{income}}} ብር ገቢ ስላላቸው፣ ለ {{{children}}} ልጅ/ልጆች አስተዳደግ እና ቀለብ ለእያንዳንዱ ልጅ በወር {{{result}}} ብር እንዲከፍሉ ይወሰንልኝ፡፡',
-        isDefault: false,
-        isDynamic: true,
-    },
-    {
-        id: 'appropriate_judgment',
-        text: 'ተገቢው የፍርድ ውሳኔ እንዲሰጠኝ፡፡',
-        isDefault: true,
-    },
-    {
-        id: 'costs_and_fees',
-        text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
-        isDefault: true,
-    },
-];
 
 export const EVIDENCE_REGISTRY: { [key: string]: { id: string; label: string; type: 'Document' | 'Witness'; credentialLabel: string; credentialPlaceholder: string; } } = {
   marriage_cert: {
@@ -186,6 +134,27 @@ export const EVIDENCE_REGISTRY: { [key: string]: { id: string; label: string; ty
     credentialLabel: 'Witness Full Name (የምስክር ሙሉ ስም)',
     credentialPlaceholder: 'e.g., Woizero Almaz Bogale',
   },
+  employment_contract: {
+    id: 'employment_contract',
+    label: 'Employment Contract (የቅጥር ውል)',
+    type: 'Document',
+    credentialLabel: 'Contract Reference Number (የውል ቁጥር)',
+    credentialPlaceholder: 'e.g., HR/CON/2022/056',
+  },
+  termination_letter: {
+    id: 'termination_letter',
+    label: 'Termination Letter (የስራ ስንብት ደብዳቤ)',
+    type: 'Document',
+    credentialLabel: 'Letter Reference Number (የደብዳቤ ቁጥር)',
+    credentialPlaceholder: 'e.g., HR/TERM/2024/112',
+  },
+  unpaid_wage_witness: {
+    id: 'unpaid_wage_witness',
+    label: 'Witness for Unpaid Wages (ያልተከፈለ ደመወዝ ምስክር)',
+    type: 'Witness',
+    credentialLabel: 'Witness Full Name (የምስክር ሙሉ ስም)',
+    credentialPlaceholder: 'e.g., Ato Alemu Tadesse',
+  },
 };
 
 export const TEMPLATES: Template[] = [
@@ -193,8 +162,121 @@ export const TEMPLATES: Template[] = [
   { id: 'labour', label: 'የሠራተኛ ክርክር (Labour)', icon: Briefcase },
 ];
 
+interface TemplateData {
+  facts: Fact[];
+  reliefs: Relief[];
+}
+
+export const TEMPLATE_DATA: { [key in Template['id']]: TemplateData } = {
+  divorce: {
+    facts: [
+      {
+        id: 'conflict',
+        label: 'Conflict / Irreconcilable Differences (ግጭት)',
+        legalText: 'በተጋቢዎች መካከል በተፈጠረ አለመግባባት ምክንያት ሰላም የሌለ በመሆኑ እና በትዳር መቀጠል የማይችሉበት ደረጃ ላይ በመድረሳቸው',
+        citation: 'Family Code Art. 75',
+        autoEvidence: ['marriage_cert']
+      },
+      {
+        id: 'separation',
+        label: 'Separation for 2 Years (ለ2 ዓመት መለያየት)',
+        legalText: 'ተጋቢዎች ለሁለት ዓመት እና ከዚያ በላይ ተለያይተው የኖሩ በመሆኑ',
+        citation: 'Family Code Art. 81',
+        autoEvidence: ['separation_witness']
+      },
+      {
+        id: 'desertion',
+        label: 'Desertion (መጥፋት)',
+        legalText: 'ተከሳሽ ትዳሩን እና ቤተሰቡን ጥሎ ከጠፋ ረጅም ጊዜ የሆነው በመሆኑ',
+        citation: 'Family Code Art. (Relevant)',
+        autoEvidence: ['desertion_witness']
+      }
+    ],
+    reliefs: [
+        {
+            id: 'validate_facts',
+            text: 'ከላይ የተዘረዘሩት የክሱ ፍሬ ነገሮች በፍ/ብ/ስ/ስ/ህ/ቁ 92 መሰረት እንዲረጋገጥልኝ፡፡',
+            isDefault: true,
+        },
+        {
+            id: 'grant_divorce',
+            text: 'በተከሳሽና በአመልካች መካከል በህግ አግባብ የተመሰረተው የጋብቻ ውል በፍቺ እንዲፈርስልኝ፡፡',
+            isDefault: true,
+        },
+        {
+            id: 'maintenance',
+            text: 'ተከሳሽ በወር {{{income}}} ብር ገቢ ስላላቸው፣ ለ {{{children}}} ልጅ/ልጆች አስተዳደግ እና ቀለብ ለእያንዳንዱ ልጅ በወር {{{result}}} ብር እንዲከፍሉ ይወሰንልኝ፡፡',
+            isDefault: false,
+            isDynamic: true,
+        },
+        {
+            id: 'appropriate_judgment',
+            text: 'ተገቢው የፍርድ ውሳኔ እንዲሰጠኝ፡፡',
+            isDefault: true,
+        },
+        {
+            id: 'costs_and_fees',
+            text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+            isDefault: true,
+        },
+    ]
+  },
+  labour: {
+    facts: [
+      {
+        id: 'unlawful_termination',
+        label: 'Unlawful Termination (ህገ-ወጥ ስንብት)',
+        legalText: 'ተከሳሹ የቅጥር ውሉን ያቋረጠው የሠራተኛ ሕግን ያልተከተለ እና ያለበቂ ምክንያት በመሆኑ',
+        citation: 'Labour Proclamation No. 1156/2019',
+        autoEvidence: ['employment_contract', 'termination_letter']
+      },
+      {
+        id: 'unpaid_wages',
+        label: 'Unpaid Wages (ያልተከፈለ ደመወዝ)',
+        legalText: 'ተከሳሹ ለአመልካች የተወሰነ ወራት ደመወዝ ያልከፈለ በመሆኑ',
+        citation: 'Labour Proclamation No. 1156/2019, Art. 53',
+        autoEvidence: ['employment_contract', 'unpaid_wage_witness']
+      },
+    ],
+    reliefs: [
+      {
+          id: 'validate_facts_labour',
+          text: 'ከላይ የተዘረዘሩት የክሱ ፍሬ ነገሮች በፍ/ብ/ስ/ስ/ህ/ቁ 92 መሰረት እንዲረጋገጥልኝ፡፡',
+          isDefault: true,
+      },
+      {
+          id: 'declare_termination_unlawful',
+          text: 'የተደረገው የሥራ ስንብት በህገ-ወጥ መንገድ የተፈጸመ መሆኑ እንዲረጋገጥልኝ፡፡',
+          isDefault: false,
+      },
+      {
+          id: 'reinstatement',
+          text: 'ወደ ቀድሞ ስራዬ እንድመለስ ይወሰንልኝ፡፡',
+          isDefault: false,
+      },
+      {
+          id: 'severance_pay',
+          text: 'የስንብት ክፍያ እንዲከፈለኝ፡፡',
+          isDefault: false,
+      },
+      {
+          id: 'unpaid_wages_relief',
+          text: 'ያልተከፈለኝ ደመወዝ ከነወለዱ እንዲከፈለኝ፡፡',
+          isDefault: false,
+      },
+      {
+          id: 'costs_and_fees_labour',
+          text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+          isDefault: true,
+      },
+    ]
+  }
+};
+
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
 const defaultBench = COURT_HIERARCHY[defaultCourtLevel as keyof typeof COURT_HIERARCHY][0];
+const initialTemplateId: Template['id'] = 'divorce';
+
 
 export const INITIAL_STATE: AppState = {
   metadata: {
@@ -210,7 +292,7 @@ export const INITIAL_STATE: AppState = {
   applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '' } }],
   respondents: [],
   selectedFacts: [],
-  selectedReliefs: RELIEF_ITEMS.filter(r => r.isDefault),
+  selectedReliefs: TEMPLATE_DATA[initialTemplateId].reliefs.filter(r => r.isDefault),
   maintenance: { 
     active: false, 
     income: 0, 
@@ -224,5 +306,7 @@ export const INITIAL_STATE: AppState = {
     applicant: 'አመልካች (Applicant)',
     respondent: 'ተጠሪ (Respondent)',
   },
-  selectedTemplate: 'divorce',
+  selectedTemplate: initialTemplateId,
 };
+
+    

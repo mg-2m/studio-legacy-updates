@@ -1,8 +1,9 @@
+
 "use client";
 
 import React, { useReducer, useEffect, useMemo, useCallback } from 'react';
 import type { AppState } from '@/lib/types';
-import { INITIAL_STATE, SMART_FACTS, EVIDENCE_REGISTRY, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, RELIEF_ITEMS } from '@/lib/data';
+import { INITIAL_STATE, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, TEMPLATE_DATA } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
@@ -71,17 +72,19 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'TOGGLE_FACT': {
       const { factId } = action.payload;
+      const smartFactsForTemplate = TEMPLATE_DATA[state.selectedTemplate].facts;
       const factExists = state.selectedFacts.some(f => f.id === factId);
       let newSelectedFacts;
       
       if (factExists) {
         newSelectedFacts = state.selectedFacts.filter(f => f.id !== factId);
       } else {
-        const factToAdd = SMART_FACTS.find(f => f.id === factId);
+        const factToAdd = smartFactsForTemplate.find(f => f.id === factId);
         newSelectedFacts = factToAdd ? [...state.selectedFacts, factToAdd] : state.selectedFacts;
       }
       
       const newSmartEvidence: AppState['smartEvidence'] = {};
+      const { EVIDENCE_REGISTRY } = require('@/lib/data'); // Lazy import
       newSelectedFacts.forEach(fact => {
         fact.autoEvidence?.forEach(evidenceId => {
           if (state.smartEvidence[evidenceId]) {
@@ -107,7 +110,8 @@ function appReducer(state: AppState, action: Action): AppState {
         const newActive = action.payload.checked;
         const newSmartEvidence = { ...state.smartEvidence };
         const newSelectedReliefs = [...state.selectedReliefs];
-        const maintenanceRelief = RELIEF_ITEMS.find(r => r.id === 'maintenance');
+        const maintenanceRelief = TEMPLATE_DATA[state.selectedTemplate].reliefs.find(r => r.id === 'maintenance');
+        const { EVIDENCE_REGISTRY } = require('@/lib/data');
 
         if (newActive && EVIDENCE_REGISTRY['birth_cert']) {
           newSmartEvidence['birth_cert'] = state.smartEvidence['birth_cert'] || { credentialId: '', active: false };
@@ -144,6 +148,7 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'SET_SUGGESTED_EVIDENCE': {
       const suggestedIds = action.payload.evidenceIds;
       const newSmartEvidence = { ...state.smartEvidence };
+      const { EVIDENCE_REGISTRY } = require('@/lib/data');
       
       // Add suggested evidence if not already present
       suggestedIds.forEach(id => {
@@ -207,12 +212,34 @@ function appReducer(state: AppState, action: Action): AppState {
       const { id, field, value } = action.payload;
       return { ...state, evidence: state.evidence.map(e => e.id === id ? { ...e, [field]: value } : e) };
     }
-    case 'SET_SELECTED_TEMPLATE':
-      return { ...state, selectedTemplate: action.payload };
+    case 'SET_SELECTED_TEMPLATE': {
+        const newTemplateId = action.payload;
+        if (state.selectedTemplate === newTemplateId) {
+            return state; // No change
+        }
+
+        const templateData = TEMPLATE_DATA[newTemplateId];
+
+        // Reset state relevant to the template
+        return {
+            ...state,
+            selectedTemplate: newTemplateId,
+            selectedFacts: [],
+            selectedReliefs: templateData.reliefs.filter(r => r.isDefault),
+            smartEvidence: {},
+            maintenance: { // Reset maintenance as it's specific to divorce
+                active: false,
+                income: 0,
+                children: 1,
+                result: 0,
+                context: '',
+            },
+        };
+    }
 
     case 'TOGGLE_RELIEF': {
       const { reliefId } = action.payload;
-      const reliefItem = RELIEF_ITEMS.find(r => r.id === reliefId);
+      const reliefItem = TEMPLATE_DATA[state.selectedTemplate].reliefs.find(r => r.id === reliefId);
       if (!reliefItem) return state;
 
       const isSelected = state.selectedReliefs.some(r => r.id === reliefId);
@@ -314,3 +341,5 @@ export default function Home() {
     <MainLayout state={state} dispatch={dispatch} />
   );
 }
+
+    

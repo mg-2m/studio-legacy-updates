@@ -4,7 +4,7 @@
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { RELIEF_ITEMS } from '@/lib/data';
+import { TEMPLATE_DATA } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import { Gavel, Info, Plus, X } from 'lucide-react';
 import { Separator } from '../ui/separator';
@@ -18,9 +18,9 @@ interface ReliefTabProps {
 }
 
 export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
-  const { maintenance, selectedReliefs } = state;
+  const { maintenance, selectedReliefs, selectedTemplate } = state;
   const customReliefs = selectedReliefs.filter(r => r.isCustom);
-  const standardReliefs = RELIEF_ITEMS.filter(item => !(item.id === 'maintenance' && !maintenance.active));
+  const standardReliefs = TEMPLATE_DATA[selectedTemplate].reliefs.filter(item => !(item.id === 'maintenance' && !maintenance.active));
 
   return (
     <div className="space-y-6">
@@ -83,3 +83,5 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
     </div>
   );
 }
+
+    

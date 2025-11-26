@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -42,7 +42,7 @@ export const REGIONS_AND_CITIES = [
   "Oromia Regional State (የኦሮሚያ ክልል)",
   "Sidama Regional State (የሲዳማ ክልል)",
   "Somali Regional State (የሶማሌ ክልል)",
-  "South Ethiopia Regional State (የደቡብ ኢትዮጵያ ክልል)",
+  "South Ethiopia Regional State (የደቡብ ኢትዮጵያ ክልל)",
   "South West Ethiopia Peoples' Regional State (የደቡብ ምዕራብ ኢትዮጵIA ህዝቦች ክልል)",
   "Tigray Regional State (የትግራይ ክልል)",
 ];
@@ -99,6 +99,9 @@ export const DOCUMENT_ISSUERS = [
   "Ministry of Education (የትምህርት ሚኒስቴር)",
   "A university or educational institution (ዩኒቨርሲቲ ወይም የትምህርት ተቋም)",
   "Ministry of Labor and Skills (የሥራ እና ክህሎት ሚኒስቴር)",
+  
+  // --- IP ---
+  "Ethiopian Intellectual Property Office (EIPO) (የኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት)",
   
   // --- Other ---
   "Other (ሌላ)",
@@ -196,6 +199,48 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     type: 'Document',
     credentialLabel: 'Description of evidence',
     credentialPlaceholder: 'e.g., Video of factory smoke',
+  },
+  CertificateOfRegistrationEIPO: {
+    id: 'CertificateOfRegistrationEIPO',
+    label: 'Certificate of Registration (EIPO)',
+    type: 'Document',
+    credentialLabel: 'Registration Number',
+    credentialPlaceholder: 'e.g., TM/PAT/12345/2024'
+  },
+  ProductSampleSpecimen: {
+    id: 'ProductSampleSpecimen',
+    label: 'Product Sample / Specimen',
+    type: 'Document',
+    credentialLabel: 'Description of the sample',
+    credentialPlaceholder: 'e.g., Photo of the infringing product'
+  },
+  CeaseAndDesistLetter: {
+    id: 'CeaseAndDesistLetter',
+    label: 'Cease and Desist Letter',
+    type: 'Document',
+    credentialLabel: 'Date Sent',
+    credentialPlaceholder: 'e.g., 20/05/2024'
+  },
+  MarketSurveyAffidavit: {
+    id: 'MarketSurveyAffidavit',
+    label: 'Market Survey / Affidavit',
+    type: 'Document',
+    credentialLabel: 'Date of Survey/Affidavit',
+    credentialPlaceholder: 'e.g., June 2024'
+  },
+  CustomsInspectionReport: {
+    id: 'CustomsInspectionReport',
+    label: 'Customs Inspection Report',
+    type: 'Document',
+    credentialLabel: 'Report Number',
+    credentialPlaceholder: 'e.g., CUS/INSP/2024/567'
+  },
+  TechnicalExpertReport: {
+    id: 'TechnicalExpertReport',
+    label: 'Technical Expert Report',
+    type: 'Document',
+    credentialLabel: 'Report Reference',
+    credentialPlaceholder: 'e.g., EXP/TECH/2024/002'
   },
   marriage_cert: {
     id: 'marriage_cert',
@@ -446,6 +491,18 @@ export const TEMPLATES: Template[] = [
         { id: 'app_stay_construction', label: 'Suspend Construction Order', icon: Shield },
         { id: 'app_local_inspection', label: 'Local Inspection Order', icon: Map },
         { id: 'property_possessory_disturbance', label: 'Possessory Action (Disturbance)', icon: FileText },
+    ]
+  },
+  {
+    id: 'ip_law',
+    label: 'የአእምሯዊ ንብረት ህግ (IP Law)',
+    icon: Brain,
+    subTemplates: [
+        { id: 'ip_trademark_infringement', label: 'Trademark Infringement', icon: FileText },
+        { id: 'ip_patent_infringement', label: 'Patent Infringement', icon: FileText },
+        { id: 'ip_copyright_infringement', label: 'Copyright Infringement', icon: FileText },
+        { id: 'app_ip_interlocutory_injunction', label: 'Interlocutory Injunction', icon: Shield },
+        { id: 'app_ip_anton_piller', label: 'Seizure of Evidence Order', icon: ShieldAlert },
     ]
   }
 ];
@@ -1819,6 +1876,220 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: "relief_restore_status",
         text: "Order the restoration of the property to the state it was in before the disturbance.",
+        isDefault: true
+      }
+    ]
+  },
+  ip_trademark_infringement: {
+    documentTitle: "Statement of Claim for Trademark Infringement and Damages",
+    jurisdictionText: "Art. 18 of Trademark Proclamation No. 501/2006.",
+    partyTitles: {
+      applicant: "Plaintiff (Trademark Owner)",
+      respondent: "Defendant (Infringer)"
+    },
+    facts: [
+      {
+        id: "fact_tm_registration",
+        label: "Right of Ownership",
+        legalText: "The Plaintiff is the registered owner of Trademark No. [Number] for goods/services in Class [Class].",
+        citation: "Proclamation 501/2006 Art. 11",
+        autoEvidence: ["CertificateOfRegistrationEIPO"]
+      },
+      {
+        id: "fact_unauthorized_use",
+        label: "Infringement Act",
+        legalText: "The Defendant is using an identical or confusingly similar mark in the course of trade.",
+        citation: "Proclamation 501/2006 Art. 18",
+        autoEvidence: ["ProductSampleSpecimen", "MarketSurveyAffidavit"]
+      },
+      {
+        id: "fact_consumer_confusion",
+        label: "Infringement Act",
+        legalText: "The Defendant's use is likely to cause confusion among the relevant consumers.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_permanent_injunction",
+        text: "Judgment granting a permanent injunction restraining the Defendant from further use of the infringing mark.",
+        isDefault: true
+      },
+      {
+        id: "relief_damages_ip",
+        text: "Order payment of damages suffered by the Plaintiff due to the infringement.",
+        isDefault: true
+      },
+      {
+        id: "relief_destruction_goods",
+        text: "Order the destruction of all infringing materials and goods.",
+        isDefault: false
+      }
+    ]
+  },
+  ip_patent_infringement: {
+    documentTitle: "Statement of Claim for Patent Infringement and Compensation",
+    jurisdictionText: "Art. 21 of Patent Proclamation No. 123/1995.",
+    partyTitles: {
+      applicant: "Plaintiff (Patent Holder)",
+      respondent: "Defendant (Infringer)"
+    },
+    facts: [
+      {
+        id: "fact_patent_validity",
+        label: "Right of Ownership",
+        legalText: "The Plaintiff holds Patent No. [Number], which is valid and in force.",
+        citation: "Proclamation 123/1995 Art. 6",
+        autoEvidence: ["CertificateOfRegistrationEIPO", "TechnicalExpertReport"]
+      },
+      {
+        id: "fact_unauthorized_manufacture",
+        label: "Infringement Act",
+        legalText: "The Defendant is manufacturing/selling a product that falls within the scope of the patent claims.",
+        citation: "Proclamation 123/1995 Art. 21",
+        autoEvidence: []
+      },
+      {
+        id: "fact_commercial_loss",
+        label: "Damage",
+        legalText: "The infringement has resulted in direct commercial loss of [Amount] due to lost sales.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_stop_manufacture",
+        text: "Judgment ordering the Defendant to cease all acts of manufacturing and selling the infringing product.",
+        isDefault: true
+      },
+      {
+        id: "relief_compensation_royalty",
+        text: "Order payment of compensation calculated based on a reasonable royalty fee.",
+        citation: "Proclamation 123/1995 Art. 21",
+        isDefault: true
+      },
+      {
+        id: "relief_seize_equipment",
+        text: "Order the seizure and disposal of the machinery primarily used to produce the infringing articles.",
+        isDefault: false
+      }
+    ]
+  },
+  ip_copyright_infringement: {
+    documentTitle: "Statement of Claim for Copyright Violation and Statutory Damages",
+    jurisdictionText: "Art. 38 of Copyright and Neighboring Rights Proclamation No. 410/2004.",
+    partyTitles: {
+      applicant: "Plaintiff (Author/Creator)",
+      respondent: "Defendant (Pirate/Reproducer)"
+    },
+    facts: [
+      {
+        id: "fact_original_work",
+        label: "Right of Authorship",
+        legalText: "The Plaintiff is the author of the original work [Title] published/fixed on [Date].",
+        citation: "Proclamation 410/2004 Art. 38",
+        autoEvidence: []
+      },
+      {
+        id: "fact_unauthorized_reproduction",
+        label: "Infringement Act",
+        legalText: "The Defendant has reproduced, distributed, or publicly performed the work without authorization.",
+        citation: "Proclamation 410/2004 Art. 9",
+        autoEvidence: ["ProductSampleSpecimen"]
+      },
+      {
+        id: "fact_commercial_scale",
+        label: "Infringement Act",
+        legalText: "The infringement was committed on a commercial scale.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_statutory_damages",
+        text: "Order payment of statutory damages as provided by law, or actual damages suffered.",
+        isDefault: true
+      },
+      {
+        id: "relief_injunction_copyright",
+        text: "Order a final injunction prohibiting further unauthorized use.",
+        isDefault: true
+      },
+      {
+        id: "relief_impoundment",
+        text: "Order the impoundment of all copies of the infringing work.",
+        isDefault: false
+      }
+    ]
+  },
+  app_ip_interlocutory_injunction: {
+    documentTitle: "Application for Interlocutory Injunction to Restrain Infringement",
+    jurisdictionText: "Art. 154 of the Civil Procedure Code (General Injunction) and specific IP enabling clauses.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "Respondent"
+    },
+    facts: [
+      {
+        id: "fact_prima_facie_case",
+        label: "Urgency & Harm",
+        legalText: "The Applicant has established a strong prima facie case of infringement.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_irreparable_harm",
+        label: "Urgency & Harm",
+        legalText: "The continued infringement will cause irreparable harm to the Applicant's market share and reputation.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_balance_convenience",
+        label: "Urgency & Harm",
+        legalText: "The balance of convenience favors granting the injunction (i.e., less harm to stop than to continue).",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_temporary_restraint",
+        text: "Order the Respondent to temporarily cease all manufacture, sale, or distribution of the infringing goods pending final judgment.",
+        isDefault: true
+      }
+    ]
+  },
+  app_ip_anton_piller: {
+    documentTitle: "Application for Preservation and Seizure of Evidence",
+    jurisdictionText: "Art. 154 of the Civil Procedure Code (Inherent Power) & Art. 10 of Proclamation 410/2004.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "Respondent"
+    },
+    facts: [
+      {
+        id: "fact_concealment_risk",
+        label: "Preservation of Evidence",
+        legalText: "There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_specific_evidence",
+        label: "Preservation of Evidence",
+        legalText: "The Applicant has specific knowledge of the location and nature of the evidence.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_seize_evidence",
+        text: "Order a court officer to enter the Respondent's premises to seize and preserve evidence relating to the infringement.",
         isDefault: true
       }
     ]

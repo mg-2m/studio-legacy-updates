@@ -136,21 +136,6 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       <AccordionItem value="item-4" className="border rounded-lg bg-background">
         <AccordionTrigger className="px-4 text-primary">{partyTitles.applicant}</AccordionTrigger>
         <AccordionContent className="px-4">
-            <div className="space-y-2 mb-4 p-3 border rounded-md">
-                <Label>የተዋዋይ ወገን መጠሪያ (Party Title)</Label>
-                <RadioGroup 
-                    value={partyTitles.applicant} 
-                    onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY_TITLE', payload: { role: 'applicant', title: value }})}
-                    className="flex flex-wrap gap-x-4 gap-y-2"
-                >
-                    {applicantTitleOptions.map(title => (
-                      <div key={title} className="flex items-center space-x-2">
-                        <RadioGroupItem value={title} id={`title-applicant-${title.replace(/\s/g, '')}`} />
-                        <Label htmlFor={`title-applicant-${title.replace(/\s/g, '')}`}>{title}</Label>
-                      </div>
-                    ))}
-                </RadioGroup>
-            </div>
           {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} />)}
           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
             <Plus className="mr-2 h-4 w-4" /> Add Applicant
@@ -161,21 +146,6 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       <AccordionItem value="item-5" className="border rounded-lg bg-background">
         <AccordionTrigger className="px-4 text-primary">{partyTitles.respondent}</AccordionTrigger>
         <AccordionContent className="px-4">
-            <div className="space-y-2 mb-4 p-3 border rounded-md">
-                <Label>የተዋዋይ ወገን መጠሪያ (Party Title)</Label>
-                <RadioGroup 
-                    value={partyTitles.respondent} 
-                    onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY_TITLE', payload: { role: 'respondent', title: value }})}
-                    className="flex flex-wrap gap-x-4 gap-y-2"
-                >
-                    {respondentTitleOptions.map(title => (
-                      <div key={title} className="flex items-center space-x-2">
-                        <RadioGroupItem value={title} id={`title-respondent-${title.replace(/\s/g, '')}`} />
-                        <Label htmlFor={`title-respondent-${title.replace(/\s/g, '')}`}>{title}</Label>
-                      </div>
-                    ))}
-                </RadioGroup>
-            </div>
           {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} />)}
            <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>
             <Plus className="mr-2 h-4 w-4" /> Add Respondent

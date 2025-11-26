@@ -1,0 +1,529 @@
+
+{
+  "entities": {
+    "EmploymentContract": {
+      "title": "Employment Contract",
+      "description": "A contract of employment.",
+      "type": "object",
+      "properties": {}
+    },
+    "TerminationLetter": {
+      "title": "Termination Letter",
+      "description": "A letter terminating employment.",
+      "type": "object",
+      "properties": {}
+    },
+    "PayrollSlip": {
+      "title": "Payroll Slip",
+      "description": "A document detailing an employee's salary.",
+      "type": "object",
+      "properties": {}
+    },
+    "DisciplinaryRecord": {
+      "title": "Disciplinary Record",
+      "description": "An employee's disciplinary record.",
+      "type": "object",
+      "properties": {}
+    },
+    "AttendanceSheet": {
+      "title": "Attendance Sheet",
+      "description": "An employee's attendance sheet.",
+      "type": "object",
+      "properties": {}
+    },
+    "MedicalBoardCertificate": {
+      "title": "Medical Board Certificate",
+      "description": "A certificate from a medical board.",
+      "type": "object",
+      "properties": {}
+    },
+    "AccidentReport": {
+      "title": "Accident Report",
+      "description": "A report of an accident.",
+      "type": "object",
+      "properties": {}
+    },
+    "MedicalBill": {
+      "title": "Medical Bill",
+      "description": "A bill for medical expenses.",
+      "type": "object",
+      "properties": {}
+    },
+    "DismissalLetter": {
+      "title": "Dismissal Letter",
+      "description": "A letter of dismissal from service.",
+      "type": "object",
+      "properties": {}
+    },
+    "GrievanceSubmission": {
+      "title": "Grievance Submission",
+      "description": "A document proving a grievance was submitted.",
+      "type": "object",
+      "properties": {}
+    },
+    "PerformanceReview": {
+      "title": "Performance Review",
+      "description": "An employee's performance review.",
+      "type": "object",
+      "properties": {}
+    },
+    "WarningLetter": {
+      "title": "Warning Letter",
+      "description": "A warning letter issued to an employee.",
+      "type": "object",
+      "properties": {}
+    },
+    "UnpaidWageWitness": {
+        "title": "Unpaid Wage Witness",
+        "description": "A witness for unpaid wages.",
+        "type": "object",
+        "properties": {}
+    }
+  },
+  "templates": {
+    "labour_unlawful_termination": {
+      "documentTitle": "Statement of Claim for Unlawful Termination",
+      "partyTitles": {
+        "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
+        "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
+      },
+      "jurisdictionText": "Labour Proclamation No. 1156/2019",
+      "facts": {
+        "group_1": {
+          "title": "The Contractual Relationship (Prerequisites)",
+          "facets": [
+            {
+              "id": "indefinite_contract",
+              "legalText": "Existence of an indefinite period employment contract.",
+              "citation": "Art. 4 & 9",
+              "evidence": ["EmploymentContract"]
+            },
+            {
+              "id": "definite_contract_ended",
+              "legalText": "Existence of definite period (probationary) contract (and specific claim that probation ended).",
+              "citation": "Art. 11",
+              "evidence": ["EmploymentContract"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "The Act of Termination (The Breach)",
+          "facets": [
+            {
+              "id": "no_prior_notice",
+              "legalText": "Termination was effected without any prior notice.",
+              "citation": "Violation of Art. 35",
+              "evidence": ["TerminationLetter"]
+            },
+            {
+              "id": "insufficient_notice",
+              "legalText": "Termination notice period was insufficient (less than legal minimum based on service years).",
+              "citation": "Violation of Art. 35",
+              "evidence": ["TerminationLetter"]
+            },
+            {
+              "id": "union_membership",
+              "legalText": "Termination due to Employee joining a Trade Union.",
+              "citation": "Art. 26",
+              "evidence": []
+            },
+            {
+              "id": "pregnancy_maternity",
+              "legalText": "Termination due to pregnancy or maternity leave status.",
+              "citation": "Art. 26",
+              "evidence": []
+            },
+            {
+              "id": "discrimination",
+              "legalText": "Termination due to race, color, sex, religion, or political opinion (Discrimination).",
+              "citation": "Art. 26",
+              "evidence": []
+            },
+            {
+              "id": "no_valid_reason",
+              "legalText": "The Employer provided no valid reason for termination as required by Art. 27.",
+              "citation": "Art. 27",
+              "evidence": []
+            },
+            {
+              "id": "constructive_dismissal",
+              "legalText": "Employee was forced to resign due to Employer's unlawful actions (sexual harassment or danger to safety).",
+              "citation": "Art. 32",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "declare_unlawful",
+          "text": "Judgment declaring the termination unlawful pursuant to Art. 43."
+        },
+        {
+          "id": "reinstatement",
+          "text": "Order for reinstatement to previous position with full back pay (Art. 48)."
+        },
+        {
+          "id": "compensation",
+          "text": "Payment of compensation (usually 180 days wages) in lieu of reinstatement (Art. 43(4))."
+        },
+        {
+          "id": "severance_pay",
+          "text": "Payment of Severance Pay (Art. 39 & 40) - Logic: Only if not reinstated."
+        },
+        {
+          "id": "notice_compensation",
+          "text": "Payment of Compensation for lack of Notice (Art. 44)."
+        }
+      ]
+    },
+    "labour_unpaid_wages": {
+      "documentTitle": "Statement of Claim for Outstanding Payments",
+      "partyTitles": {
+        "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
+        "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
+      },
+      "jurisdictionText": "Labour Proclamation No. 1156/2019",
+      "facts": {
+        "group_1": {
+          "title": "Salary Arrears",
+          "facets": [
+            {
+              "id": "non_payment_salary",
+              "legalText": "Non-payment of regular monthly salary for specific months.",
+              "citation": "Art. 53",
+              "evidence": ["PayrollSlip"]
+            },
+            {
+              "id": "unlawful_deduction",
+              "legalText": "Unlawful deduction from salary (without employee consent or court order).",
+              "citation": "Art. 59",
+              "evidence": ["PayrollSlip"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Statutory Benefits",
+          "facets": [
+            {
+              "id": "overtime_work",
+              "legalText": "Employee worked beyond 8 hours/day or 48 hours/week without overtime compensation.",
+              "citation": "Art. 66 & 68",
+              "evidence": ["AttendanceSheet"]
+            },
+            {
+              "id": "annual_leave",
+              "legalText": "Employee was denied annual leave and not compensated for it upon termination.",
+              "citation": "Art. 77 & 79",
+              "evidence": []
+            },
+            {
+              "id": "public_holiday_work",
+              "legalText": "Worked on public holidays without legally mandated compensation.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "pay_principal",
+          "text": "Order Respondent to pay the total principal amount calculated."
+        },
+        {
+          "id": "statutory_interest",
+          "text": "Statutory interest on the delayed payments."
+        },
+        {
+          "id": "pay_overtime",
+          "text": "Payment of specific calculated overtime."
+        }
+      ]
+    },
+    "labour_employment_injury": {
+      "documentTitle": "Claim for Employment Injury Compensation",
+      "partyTitles": {
+        "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
+        "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
+      },
+      "jurisdictionText": "Labour Proclamation No. 1156/2019",
+      "facts": {
+        "group_1": {
+          "title": "The Incident",
+          "facets": [
+            {
+              "id": "injury_at_workplace",
+              "legalText": "Injury occurred during working hours at the workplace.",
+              "citation": "Art. 95",
+              "evidence": ["AccidentReport"]
+            },
+            {
+              "id": "injury_outside_workplace",
+              "legalText": "Injury occurred while carrying out employer's orders outside workplace.",
+              "citation": "",
+              "evidence": ["AccidentReport"]
+            },
+            {
+              "id": "occupational_disease",
+              "legalText": "Occupational Disease contracted due to nature of work.",
+              "citation": "Art. 98",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "The Damage",
+          "facets": [
+            {
+              "id": "permanent_partial_disability",
+              "legalText": "Permanent Partial Disability sustained (needs medical board % evidence).",
+              "citation": "",
+              "evidence": ["MedicalBoardCertificate"]
+            },
+            {
+              "id": "temporary_total_disability",
+              "legalText": "Temporary Total Disability (unable to work for a specific period).",
+              "citation": "",
+              "evidence": ["MedicalBoardCertificate"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "pay_medical_expenses",
+          "text": "Payment of Medical Expenses incurred (Art. 105)."
+        },
+        {
+          "id": "disability_compensation",
+          "text": "Disability Compensation payment (Calculated based on Art. 109 & 110)."
+        }
+      ]
+    },
+    "civil_service_disciplinary_appeal": {
+      "documentTitle": "Memorandum of Appeal to the Administrative Tribunal",
+      "partyTitles": {
+        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
+        "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
+      },
+      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "facts": {
+        "group_1": {
+          "title": "The Disciplinary Measure (The Trigger)",
+          "facets": [
+            {
+              "id": "dismissal_from_service",
+              "legalText": "Dismissal from Service.",
+              "citation": "Art. 81(1)(b)",
+              "evidence": ["DismissalLetter"]
+            },
+            {
+              "id": "demotion",
+              "legalText": "Downgrading of job position/grade.",
+              "citation": "Art. 81(1)(b)",
+              "evidence": ["DismissalLetter"]
+            },
+            {
+              "id": "fine_exceeding_salary",
+              "legalText": "Imposition of a fine exceeding one month's salary.",
+              "citation": "Art. 81(1)(b)",
+              "evidence": ["DismissalLetter"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Violations (The Defense)",
+          "facets": [
+            {
+              "id": "no_right_to_be_heard",
+              "legalText": "The Institution took the measure without giving the Appellant a chance to present a defense.",
+              "citation": "Violation of Art. 69",
+              "evidence": []
+            },
+            {
+              "id": "limitation_period_1yr",
+              "legalText": "The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.",
+              "citation": "Art. 76(2)",
+              "evidence": []
+            },
+            {
+              "id": "limitation_period_6mo",
+              "legalText": "The simple measure was taken more than 6 months after the offense was known, barring it by limitation.",
+              "citation": "Art. 76(1)",
+              "evidence": []
+            },
+            {
+              "id": "improper_committee",
+              "legalText": "The Disciplinary Committee was not constituted according to Regulation 77/2002 (e.g., no staff representative).",
+              "citation": "Reg. 77/2002",
+              "evidence": []
+            }
+          ]
+        },
+        "group_3": {
+            "title": "Substantive Defenses (The Merits)",
+            "facets": [
+                {
+                    "id": "not_an_offense",
+                    "legalText": "The alleged act does not constitute a disciplinary offense under the law.",
+                    "citation": "",
+                    "evidence": []
+                },
+                {
+                    "id": "disproportionate_penalty",
+                    "legalText": "The penalty is disproportionate to the offense committed.",
+                    "citation": "",
+                    "evidence": []
+                },
+                {
+                    "id": "double_jeopardy",
+                    "legalText": "The appellant was already punished for the same alleged offense.",
+                    "citation": "",
+                    "evidence": []
+                }
+            ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "quash_decision",
+          "text": "To quash/annul the administrative decision of the Respondent Institution."
+        },
+        {
+          "id": "reinstate_with_pay",
+          "text": "To order the reinstatement of the Appellant to their former position and payment of full salary for the period of suspension (Art. 81(3))."
+        },
+        {
+          "id": "expunge_record",
+          "text": "To order the expunging of the disciplinary measure from the Appellant's personal file."
+        }
+      ]
+    },
+    "civil_service_termination_unlawful": {
+        "documentTitle": "Appeal Against Administrative Termination",
+        "partyTitles": {
+            "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
+            "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
+        },
+        "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+        "facts": {
+            "group_1": {
+                "title": "Grounds: Inefficiency (Performance)",
+                "facets": [
+                    {
+                        "id": "inefficiency_not_consecutive",
+                        "legalText": "Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations.",
+                        "citation": "Art. 84(1)",
+                        "evidence": ["PerformanceReview"]
+                    },
+                    {
+                        "id": "inefficiency_no_training",
+                        "legalText": "Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve.",
+                        "citation": "Art. 84(1)",
+                        "evidence": ["PerformanceReview"]
+                    }
+                ]
+            },
+            "group_2": {
+                "title": "Grounds: Illness / Medical",
+                "facets": [
+                    {
+                        "id": "illness_before_leave_exhausted",
+                        "legalText": "Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay).",
+                        "citation": "Art. 83(1)",
+                        "evidence": []
+                    },
+                    {
+                        "id": "illness_no_medical_board",
+                        "legalText": "Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability.",
+                        "citation": "Art. 83(2)",
+                        "evidence": []
+                    }
+                ]
+            },
+            "group_3": {
+                "title": "Grounds: Force Majeure / Redundancy",
+                "facets": [
+                    {
+                        "id": "redundancy_no_offer",
+                        "legalText": "Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination.",
+                        "citation": "Art. 85(2)",
+                        "evidence": []
+                    }
+                ]
+            }
+        },
+        "reliefs": [
+            {
+                "id": "quash_termination",
+                "text": "To quash/annul the administrative decision of termination."
+            },
+            {
+                "id": "reinstate_civil_servant",
+                "text": "To order the reinstatement of the Appellant to their former position with full back pay."
+            }
+        ]
+    },
+    "civil_service_benefits_grievance": {
+        "documentTitle": "Appeal on Service Rights & Benefits",
+        "partyTitles": {
+            "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
+            "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
+        },
+        "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+        "facts": {
+            "group_1": {
+                "title": "Exhaustion of Remedies (Mandatory)",
+                "facets": [
+                    {
+                        "id": "exhaustion_grievance_submitted",
+                        "legalText": "A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.",
+                        "citation": "Art. 81(1)(e)",
+                        "evidence": ["GrievanceSubmission"]
+                    }
+                ]
+            },
+            "group_2": {
+                "title": "The Grievance",
+                "facets": [
+                    {
+                        "id": "promotion_denied",
+                        "legalText": "The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.",
+                        "citation": "Art. 13",
+                        "evidence": []
+                    },
+                    {
+                        "id": "salary_increment_denied",
+                        "legalText": "The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.",
+                        "citation": "Art. 81(1)(c)",
+                        "evidence": []
+                    },
+                    {
+                        "id": "acting_allowance_denied",
+                        "legalText": "The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.",
+                        "citation": "Relevant Regulations",
+                        "evidence": []
+                    }
+                ]
+            }
+        },
+        "reliefs": [
+            {
+                "id": "grant_promotion",
+                "text": "To order the Respondent Institution to grant the promotion due to the Appellant."
+            },
+            {
+                "id": "grant_salary_increment",
+                "text": "To order the payment of the denied salary increment, with retroactive effect."
+            },
+            {
+                "id": "refund_deductions",
+                "text": "To order the refund of any unlawfully deducted salary."
+            }
+        ]
+    }
+  }
+}
+
+    

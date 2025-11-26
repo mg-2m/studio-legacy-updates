@@ -80,7 +80,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
 
        {suggestedSmartEvidence.length > 0 && (
          <div className="space-y-2">
-            <Label>የሚጠቆሙ ማስረጃዎች (Suggested Evidence)</Label>
+            <Label className="font-bold">የሚጠቆሙ ማስረጃዎች (Suggested Evidence)</Label>
             <div className="flex flex-wrap gap-2">
             {suggestedSmartEvidence.map(item => (
                 <Button key={item.regId} variant="outline" size="sm" onClick={() => dispatch({ type: 'ADD_SMART_EVIDENCE', payload: { registryId: item.regId }})}>
@@ -232,3 +232,5 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
+
+    

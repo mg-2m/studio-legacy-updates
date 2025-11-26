@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -106,6 +106,55 @@ export const DOCUMENT_ISSUERS = [
 
 
 export const EVIDENCE_REGISTRY: EvidenceRegistry = {
+  written_contract: {
+    id: 'written_contract',
+    label: 'Written Contract',
+    type: 'Document',
+    credentialLabel: 'Contract Reference Number',
+    credentialPlaceholder: 'e.g., CON-2023-001',
+  },
+  notice_of_default: {
+    id: 'notice_of_default',
+    label: 'Notice of Default (Warning Letter)',
+    type: 'Document',
+    credentialLabel: 'Letter Reference Number',
+    credentialPlaceholder: 'e.g., NTC-2024-002',
+  },
+  payment_receipt: {
+    id: 'payment_receipt',
+    label: 'Payment Receipt / Bank Advice',
+    type: 'Document',
+    credentialLabel: 'Receipt or Transaction Number',
+    credentialPlaceholder: 'e.g., TRN-123456789',
+  },
+  delivery_note: {
+    id: 'delivery_note',
+    label: 'Delivery Note (Model 19/22)',
+    type: 'Document',
+    credentialLabel: 'Delivery Note Number',
+    credentialPlaceholder: 'e.g., DN-2024-987',
+  },
+  admission_of_debt: {
+    id: 'admission_of_debt',
+    label: 'Admission of Debt',
+    type: 'Document',
+    credentialLabel: 'Document Reference',
+    credentialPlaceholder: 'e.g., ADM-2024-001',
+  },
+  audit_report: {
+    id: 'audit_report',
+    label: 'Audit Report',
+    type: 'Document',
+    credentialLabel: 'Report Reference Number',
+    credentialPlaceholder: 'e.g., AUD-FIN-2024-001',
+  },
+  title_deed: {
+    id: 'title_deed',
+    label: 'Title Deed (Librec)',
+    type: 'Document',
+    credentialLabel: 'Title Deed Number',
+    credentialPlaceholder: 'e.g., TD-12345',
+  },
   marriage_cert: {
     id: 'marriage_cert',
     label: 'Marriage Certificate (የጋብቻ የምስክር ወረቀት)',
@@ -243,6 +292,18 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
 
 export const TEMPLATES: Template[] = [
   { 
+    id: 'contract_law', 
+    label: 'የውል ሕግ (Contract Law)', 
+    icon: FileSignature,
+    subTemplates: [
+      { id: 'contract_debt_recovery', label: 'የብድር/እዳ ክስ (Debt Recovery)', icon: Banknote },
+      { id: 'contract_specific_performance', label: 'ውል ይፈጸምልኝ ክስ (Specific Performance)', icon: Gavel },
+      { id: 'contract_termination_claim', label: 'የውል ማፍረስ ክስ (Contract Cancellation)', icon: FileX2 },
+      { id: 'app_attachment_before_judgment', label: 'ከፍርድ በፊት እግድ (Attachment)', icon: Shield },
+      { id: 'app_judgment_on_admission', label: 'በእምነት ላይ ፍርድ (Judgment on Admission)', icon: BookUser },
+    ]
+  },
+  { 
     id: 'family_law', 
     label: 'የቤተሰብ ሕግ (Family Law)', 
     icon: Handshake,
@@ -279,6 +340,228 @@ export const TEMPLATES: Template[] = [
 ];
 
 export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
+  contract_debt_recovery: {
+    documentTitle: "Statement of Claim for Recovery of Loan/Debt",
+    jurisdictionText: "Art. 216 et seq. of the Civil Procedure Code & Civil Code Art. 2471.",
+    partyTitles: {
+      applicant: "Plaintiff (Creditor)",
+      respondent: "Defendant (Debtor)"
+    },
+    facts: [
+      {
+        id: "fact_loan_agreement",
+        label: "Formation of Contract",
+        legalText: "On [Date], the Plaintiff and Defendant entered into a written loan agreement.",
+        citation: "Civ. Code Art. 2471",
+        autoEvidence: [
+          "written_contract",
+          "admission_of_debt"
+        ]
+      },
+      {
+        id: "fact_disbursement",
+        label: "Formation of Contract",
+        legalText: "The Plaintiff disbursed the sum of [Amount] ETB to the Defendant.",
+        citation: "",
+        autoEvidence: [
+          "payment_receipt"
+        ]
+      },
+      {
+        id: "fact_payment_due",
+        label: "Default",
+        legalText: "The repayment period agreed upon expired on [Date].",
+        citation: "Civ. Code Art. 1857",
+        autoEvidence: []
+      },
+      {
+        id: "fact_failure_to_pay",
+        label: "Default",
+        legalText: "Despite the maturity of the debt, the Defendant failed to effect payment.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_notice_given",
+        label: "Default",
+        legalText: "The Plaintiff served a formal notice of default on [Date].",
+        citation: "Civ. Code Art. 1772",
+        autoEvidence: [
+          "notice_of_default"
+        ]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_principal_amount",
+        text: "Judgment ordering the Defendant to pay the principal sum of [Amount] ETB.",
+        isDefault: true
+      },
+      {
+        id: "relief_legal_interest",
+        text: "Order payment of legal interest (9%) calculated from the date of default.",
+        citation: "Civ. Code Art. 1751",
+        isDefault: true
+      },
+      {
+        id: "relief_contractual_interest",
+        text: "Order payment of contractual interest agreed at [Percentage] (max 12%).",
+        citation: "Civ. Code Art. 2479",
+        isDefault: false
+      }
+    ]
+  },
+  contract_specific_performance: {
+    documentTitle: "Statement of Claim for Specific Performance of Contract",
+    jurisdictionText: "Art. 1776 of the Civil Code & Civil Procedure Code.",
+    partyTitles: {
+      applicant: "Plaintiff",
+      respondent: "Defendant"
+    },
+    facts: [
+      {
+        id: "fact_valid_contract",
+        label: "Contractual Obligation",
+        legalText: "A valid contract exists between the parties regarding [Subject Matter].",
+        citation: "Civ. Code Art. 1678",
+        autoEvidence: [
+          "written_contract"
+        ]
+      },
+      {
+        id: "fact_plaintiff_performance",
+        label: "Contractual Obligation",
+        legalText: "The Plaintiff has fully performed their obligations under the contract.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_non_performance",
+        label: "Breach",
+        legalText: "The Defendant has failed to perform [Specific Obligation] without lawful cause.",
+        citation: "Civ. Code Art. 1771",
+        autoEvidence: []
+      },
+      {
+        id: "fact_special_interest",
+        label: "Breach",
+        legalText: "Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant.",
+        citation: "Civ. Code Art. 1776",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_enforce_performance",
+        text: "Order the Defendant to specifically perform the contract by [Action, e.g., transferring title].",
+        isDefault: true
+      },
+      {
+        id: "relief_alt_damages",
+        text: "Alternatively, if performance is impossible, order payment of damages.",
+        isDefault: false
+      }
+    ]
+  },
+  contract_termination_claim: {
+    documentTitle: "Statement of Claim for Judicial Cancellation of Contract",
+    jurisdictionText: "Art. 1784 & 1785 of the Civil Code.",
+    partyTitles: {
+      applicant: "Plaintiff",
+      respondent: "Defendant"
+    },
+    facts: [
+      {
+        id: "fact_fundamental_breach",
+        label: "Breach Analysis",
+        legalText: "The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract.",
+        citation: "Civ. Code Art. 1785",
+        autoEvidence: []
+      },
+      {
+        id: "fact_payments_made",
+        label: "Restitution",
+        legalText: "The Plaintiff has already paid [Amount] to the Defendant.",
+        citation: "",
+        autoEvidence: [
+          "payment_receipt"
+        ]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_judicial_cancellation",
+        text: "Judgment declaring the contract cancelled/terminated.",
+        isDefault: true
+      },
+      {
+        id: "relief_reinstatement",
+        text: "Order the parties to be reinstated to their former position (Restitution).",
+        citation: "Civ. Code Art. 1815",
+        isDefault: true
+      }
+    ]
+  },
+  app_attachment_before_judgment: {
+    documentTitle: "Application for Attachment of Property Before Judgment",
+    jurisdictionText: "Art. 151 & 152 of the Civil Procedure Code.",
+    partyTitles: {
+      applicant: "Plaintiff",
+      respondent: "Defendant"
+    },
+    facts: [
+      {
+        id: "fact_intent_to_obstruct",
+        label: "Obstruction of Justice",
+        legalText: "The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree.",
+        citation: "CPC Art. 151",
+        autoEvidence: []
+      },
+      {
+        id: "fact_prima_facie_case",
+        label: "Obstruction of Justice",
+        legalText: "The Applicant has a strong prima facie case and is likely to succeed in the main suit.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_attach_property",
+        text: "Order the attachment of the Defendant's property [Specify Property] pending final judgment.",
+        isDefault: true
+      },
+      {
+        id: "relief_security_bond",
+        text: "Alternatively, order the Defendant to furnish security for the amount claimed.",
+        isDefault: false
+      }
+    ]
+  },
+  app_judgment_on_admission: {
+    documentTitle: "Application for Judgment on Admissions",
+    jurisdictionText: "Art. 242 of the Civil Procedure Code.",
+    partyTitles: {
+      applicant: "Plaintiff",
+      respondent: "Defendant"
+    },
+    facts: [
+      {
+        id: "fact_clear_admission",
+        label: "Admission",
+        legalText: "In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt.",
+        citation: "CPC Art. 242",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_immediate_judgment",
+        text: "Enter immediate judgment for the Plaintiff on the admitted portion of the claim.",
+        isDefault: true
+      }
+    ]
+  },
   family_divorce_dispute: {
     documentTitle: 'Statement of Claim for Dissolution of Marriage',
     jurisdictionText: 'Art. 11(2) of Federal Courts Proc. 25/96 and Art. 76 of the Revised Family Code.',
@@ -972,5 +1255,6 @@ export const INITIAL_STATE: AppState = {
   selectedSubTemplate: initialSubTemplateId,
 };
 
+    
     
     

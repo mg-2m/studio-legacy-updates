@@ -17,7 +17,7 @@ export const COURT_HIERARCHY = {
   "Federal High Court (የፌዴራል ከፍተኛ ፍርድ ቤት)": [
     "Lideta Division, 1st Civil Bench (ልደታ ምድብ 1ኛ ፍትሐብሔር ችሎት)",
     "Lideta Division, 2nd Civil Bench (ልደታ ምድብ 2ኛ ፍትሐብሔር ችሎት)",
-    "Lideta Division, 1st Criminal Bench (ልደта ምድб 1ኛ ወንጀል ችሎት)",
+    "Lideta Division, 1st Criminal Bench (ልደታ ምድб 1ኛ ወንጀል ችሎት)",
     "Bole Division (ቦሌ ምድብ)",
     "Lideta Division, Commercial Bench (ልደታ ምድብ የንግድ ችሎት)",
     "Lideta Division, Labour Division (ልደታ ምድб የሠራተኛ ችሎት)",
@@ -191,11 +191,13 @@ export const TEMPLATES: Template[] = [
     ]
   },
    { 
-    id: 'administrative_law', 
-    label: 'የአስተዳደር ሕግ (Admin Law)', 
+    id: 'public_service_law', 
+    label: 'የመንግስት ሰራተኛ ህግ (Public Service Law)', 
     icon: Landmark,
     subTemplates: [
-       { id: 'admin_complaint', label: 'Administrative Complaint', icon: FileText },
+       { id: 'civil_service_disciplinary_appeal', label: 'Disciplinary Appeal', icon: FileText },
+       { id: 'civil_service_termination_unlawful', label: 'Unlawful Termination Appeal', icon: FileText },
+       { id: 'civil_service_benefits_grievance', label: 'Benefits & Rights Grievance', icon: FileText },
     ]
   },
    { 
@@ -211,8 +213,8 @@ export const TEMPLATES: Template[] = [
     label: 'የውል ሕግ (Contract Law)', 
     icon: FileSignature,
     subTemplates: [
-       { id: 'lease_agreement', label: 'Lease Agreement', icon: FileText },
-       { id: 'sales_agreement', label: 'Sales Agreement', icon: FileText },
+       { id: 'lease_agreement', label: 'Lease Agreement', icon: Home },
+       { id: 'sales_agreement', label: 'Sales Agreement', icon: Receipt },
     ]
   },
   { 
@@ -336,66 +338,66 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: 'indefinite_contract',
         label: 'The Contractual Relationship (Prerequisites)',
-        legalText: 'Existence of indefinite period employment contract.',
-        citation: 'Art. 4 & 9',
+        legalText: 'Existence of an indefinite period employment contract.',
+        citation: 'Art. 9 of Proc. 1156/2019',
         autoEvidence: ['employment_contract']
       },
       {
-        id: 'definite_contract',
+        id: 'definite_contract_ended',
         label: 'The Contractual Relationship (Prerequisites)',
-        legalText: 'Existence of definite period (probationary) contract, and probation period had ended.',
-        citation: 'Art. 11',
+        legalText: 'A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.',
+        citation: 'Art. 10, 11 of Proc. 1156/2019',
         autoEvidence: ['employment_contract']
       },
       {
         id: 'no_prior_notice',
-        label: 'The Act of Termination (The Breach): Procedural Violations',
-        legalText: 'Termination was effected without any prior notice.',
-        citation: 'Violation of Art. 35',
+        label: 'The Act of Termination: Procedural Violations',
+        legalText: 'Termination was effected without any prior written notice specifying the reasons and date of termination.',
+        citation: 'Violation of Art. 35(1) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'insufficient_notice',
-        label: 'The Act of Termination (The Breach): Procedural Violations',
-        legalText: 'Termination notice period was insufficient (less than legal minimum based on service years).',
-        citation: 'Violation of Art. 35',
+        label: 'The Act of Termination: Procedural Violations',
+        legalText: 'The notice period provided was insufficient and less than the legal minimum based on years of service.',
+        citation: 'Violation of Art. 35(2) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
-        id: 'union_termination',
-        label: 'The Act of Termination (The Breach): Substantive Violations (Unlawful Grounds - Art. 26)',
-        legalText: 'Termination was due to Employee joining a Trade Union.',
-        citation: 'Art. 26',
+        id: 'union_membership_termination',
+        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
+        legalText: 'Termination was due to the employee\'s membership in a trade union or participation in union activities.',
+        citation: 'Art. 26(2)(a) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
-        id: 'pregnancy_termination',
-        label: 'The Act of Termination (The Breach): Substantive Violations (Unlawful Grounds - Art. 26)',
-        legalText: 'Termination was due to pregnancy or maternity leave status.',
-        citation: 'Art. 26',
+        id: 'whistleblower_termination',
+        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
+        legalText: 'Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law.',
+        citation: 'Art. 26(2)(b) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
-        id: 'discrimination_termination',
-        label: 'The Act of Termination (The Breach): Substantive Violations (Unlawful Grounds - Art. 26)',
-        legalText: 'Termination was due to race, color, sex, religion, or political opinion.',
-        citation: 'Art. 26',
+        id: 'discriminatory_termination',
+        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
+        legalText: 'Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, social origin, HIV/AIDS status, marital status, or family responsibilities.',
+        citation: 'Art. 26(2)(c) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'no_valid_reason',
-        label: 'The Act of Termination (The Breach): The "No Reason" Defense',
-        legalText: 'The Employer provided no valid reason for termination as required by Art. 27.',
-        citation: 'Art. 27',
+        label: 'The Act of Termination: No Valid Reason',
+        legalText: 'The employer failed to provide a valid reason for termination related to the worker\'s capacity or conduct, or the organizational needs of the undertaking.',
+        citation: 'Violation of Art. 27 of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'constructive_dismissal',
-        label: 'The Act of Termination (The Breach): Constructive Dismissal',
-        legalText: 'Employee was forced to resign due to Employer\'s unlawful actions (e.g., sexual harassment, danger to safety).',
-        citation: 'Treated as termination by Art. 32',
+        label: 'The Act of Termination: Constructive Dismissal',
+        legalText: 'Employee was forced to resign due to the employer\'s unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.',
+        citation: 'Art. 32 of Proc. 1156/2019',
         autoEvidence: []
-      }
+      },
     ],
     reliefs: [
       {
@@ -405,27 +407,27 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       },
       {
         id: 'reinstatement',
-        text: 'Order for reinstatement to previous position with full back pay (Art. 48).',
+        text: 'Order for reinstatement to previous position with full back pay from the date of termination until reinstatement (Art. 43(1)).',
         isDefault: false,
       },
       {
         id: 'compensation_in_lieu',
-        text: 'Payment of compensation (180 days wages) in lieu of reinstatement (Art. 43(4)).',
+        text: 'Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (not to exceed 12 months total) (Art. 43(2,3)).',
         isDefault: false,
       },
       {
         id: 'severance_pay',
-        text: 'Payment of Severance Pay (Art. 39 & 40) - only if not reinstated.',
+        text: 'Payment of Severance Pay as per the calculation in Art. 39 & 40 (Only if not reinstated).',
         isDefault: false,
       },
       {
         id: 'notice_compensation',
-        text: 'Payment of Compensation for lack of Notice (Art. 44).',
+        text: 'Payment of Compensation for lack of proper notice, equivalent to salary for the notice period (Art. 44).',
         isDefault: false,
       },
       {
         id: 'costs_and_fees_labour',
-        text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+        text: 'Costs and fees to be covered by the respondent.',
         isDefault: true,
       },
     ]
@@ -441,58 +443,58 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: 'unpaid_salary',
         label: 'Salary Arrears',
-        legalText: 'Non-payment of regular monthly salary for specific months.',
+        legalText: 'Non-payment of regular monthly salary for the month(s) of [Specify Months].',
         citation: 'Art. 53 (Payment obligations)',
         autoEvidence: ['unpaid_wage_witness']
       },
       {
         id: 'unlawful_deduction',
         label: 'Salary Arrears',
-        legalText: 'Unlawful deduction from salary (without employee consent or court order).',
+        legalText: 'An unlawful deduction was made from the salary without employee consent or a valid court order.',
         citation: 'Art. 59 (Prohibition of deductions)',
         autoEvidence: ['unpaid_wage_witness']
       },
       {
         id: 'unpaid_overtime',
         label: 'Statutory Benefits',
-        legalText: 'Employee worked beyond 8 hours/day or 48 hours/week without overtime compensation.',
-        citation: 'Art. 66 & 68 (Calculation rates: 1.25x, 1.5x, 2.0x, 2.5x depending on time/day)',
+        legalText: 'Employee worked beyond the standard 8 hours/day or 48 hours/week without receiving overtime compensation at the legally mandated rates.',
+        citation: 'Art. 66 & 68 (Calculation rates)',
         autoEvidence: ['unpaid_wage_witness']
       },
       {
         id: 'unpaid_annual_leave',
         label: 'Statutory Benefits',
-        legalText: 'Employee was denied annual leave and not compensated for it upon termination.',
+        legalText: 'Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment.',
         citation: 'Art. 77 & 79 (Conversion to cash only upon termination)',
         autoEvidence: ['unpaid_wage_witness']
       },
       {
         id: 'unpaid_holiday_work',
         label: 'Statutory Benefits',
-        legalText: 'Employee worked on public holidays without legally mandated compensation.',
-        citation: 'Relevant Articles',
+        legalText: 'Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate.',
+        citation: 'Art. 73',
         autoEvidence: ['unpaid_wage_witness']
       }
     ],
     reliefs: [
       {
         id: 'payment_principal',
-        text: 'Order Respondent to pay the total principal amount calculated.',
+        text: 'An order for the Respondent to pay the total principal amount of all outstanding wages and benefits.',
         isDefault: true,
       },
       {
         id: 'payment_interest',
-        text: 'Statutory interest on the delayed payments (Civil Code/Procedure linkage).',
+        text: 'An order for the payment of statutory interest on the delayed payments as per the relevant provisions of the Civil Code.',
         isDefault: false,
       },
       {
-        id: 'payment_overtime',
-        text: 'Payment of specific calculated overtime (must allow user to input calculated sum).',
+        id: 'payment_overtime_specific',
+        text: 'A specific order for the payment of calculated overtime wages.',
         isDefault: false,
       },
       {
         id: 'costs_and_fees_labour_wages',
-        text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+        text: 'Costs and fees to be covered by the respondent.',
         isDefault: true,
       },
     ]
@@ -508,35 +510,42 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: 'injury_at_work',
         label: 'The Incident',
-        legalText: 'Injury occurred during working hours at the workplace.',
-        citation: 'Art. 95',
+        legalText: 'The injury occurred during the performance of the employee\'s duties within the regular working hours and at the designated workplace.',
+        citation: 'Art. 95(1)(a)',
         autoEvidence: []
       },
       {
-        id: 'injury_outside_work',
+        id: 'injury_commuting',
         label: 'The Incident',
-        legalText: 'Injury occurred while carrying out employer\'s orders outside the workplace.',
-        citation: 'Art. 95',
+        legalText: 'The injury occurred while the employee was commuting directly between their residence and the workplace, using transport provided by the employer.',
+        citation: 'Art. 95(1)(c)',
+        autoEvidence: []
+      },
+      {
+        id: 'injury_on_order',
+        label: 'The Incident',
+        legalText: 'The injury occurred outside the regular workplace while the employee was carrying out a specific order given by the employer.',
+        citation: 'Art. 95(1)(b)',
         autoEvidence: []
       },
       {
         id: 'occupational_disease',
         label: 'The Incident',
-        legalText: 'Occupational Disease was contracted due to the nature of the work.',
+        legalText: 'The employee has contracted an occupational disease as a direct result of exposure to hazards in the work environment.',
         citation: 'Art. 98',
         autoEvidence: []
       },
       {
-        id: 'partial_disability',
+        id: 'permanent_partial_disability',
         label: 'The Damage',
-        legalText: 'Permanent Partial Disability was sustained (needs medical board % evidence).',
-        citation: 'Art. 109',
+        legalText: 'A permanent partial disability has been sustained as a result of the injury, confirmed by a medical board certificate.',
+        citation: 'Art. 109 & 110',
         autoEvidence: []
       },
       {
-        id: 'temporary_disability',
+        id: 'temporary_total_disability',
         label: 'The Damage',
-        legalText: 'Temporary Total Disability (unable to work for a specific period).',
+        legalText: 'A temporary total disability was sustained, rendering the employee unable to work for a specific period.',
         citation: 'Art. 106',
         autoEvidence: []
       }
@@ -544,30 +553,88 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     reliefs: [
       {
         id: 'medical_expenses',
-        text: 'Payment of Medical Expenses incurred (Art. 105).',
+        text: 'An order for the full payment of all medical, surgical, pharmaceutical, and hospital care expenses incurred due to the injury (Art. 105).',
         isDefault: true,
       },
       {
         id: 'disability_compensation',
-        text: 'Disability Compensation payment (Calculated based on Art. 109 & 110 - usually 5 years salary X percentage of disability).',
+        text: 'Payment of disability compensation, calculated based on the employee\'s salary and the percentage of disability as determined by the medical board (Art. 109 & 110).',
+        isDefault: false,
+      },
+      {
+        id: 'periodical_payment',
+        text: 'Payment for temporary disability, equivalent to 75% of the employee\'s daily wage, for the duration of the disability (Art. 106).',
         isDefault: false,
       },
       {
         id: 'costs_and_fees_injury',
-        text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
+        text: 'Costs and fees to be covered by the respondent.',
         isDefault: true,
       },
     ]
   },
-  admin_complaint: { 
-    documentTitle: 'የአስተዳደር በደል ክስ',
-    jurisdictionText: 'Administrative Procedure Proclamation No. 1183/2020',
+  civil_service_disciplinary_appeal: {
+    documentTitle: 'Memorandum of Appeal to the Administrative Tribunal',
+    jurisdictionText: 'Federal Civil Servants Proclamation No. 1064/2017',
     partyTitles: {
-      applicant: 'አመልካች (Applicant)',
-      respondent: 'ተጠሪ (Respondent)',
+      applicant: 'Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)',
+      respondent: 'Institution / Office (መስሪያ ቤት/መልስ ሰጪ)',
     },
-    facts: [],
-    reliefs: []
+    facts: [
+      { id: 'measure_dismissal', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Dismissal from Service.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: ['termination_letter'] },
+      { id: 'measure_demotion', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Downgrading of job position/grade.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: ['termination_letter'] },
+      { id: 'measure_fine', label: 'The Disciplinary Measure (The Trigger)', legalText: 'Imposition of a fine exceeding one month\'s salary.', citation: 'Art. 81(1)(b) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'no_right_to_be_heard', label: 'Procedural Violations (The Defense)', legalText: 'The Institution took the measure without giving the Appellant a chance to present a defense.', citation: 'Violation of Art. 69 of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'limitation_period_1yr', label: 'Procedural Violations (The Defense)', legalText: 'The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.', citation: 'Art. 76(2) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'limitation_period_6mo', label: 'Procedural Violations (The Defense)', legalText: 'The simple measure was taken more than 6 months after the offense was known, barring it by limitation.', citation: 'Art. 76(1) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'improper_committee', label: 'Procedural Violations (The Defense)', legalText: 'The Disciplinary Committee was not constituted according to Regulation 77/2002 (e.g., no staff representative).', citation: 'Reg. 77/2002', autoEvidence: [] },
+      { id: 'not_an_offense', label: 'Substantive Defenses (The Merits)', legalText: 'The alleged act does not constitute a disciplinary offense under the law.', citation: '', autoEvidence: [] },
+      { id: 'disproportionate_penalty', label: 'Substantive Defenses (The Merits)', legalText: 'The penalty is disproportionate to the offense committed.', citation: '', autoEvidence: [] },
+      { id: 'double_jeopardy', label: 'Substantive Defenses (The Merits)', legalText: 'The appellant was already punished for the same alleged offense.', citation: '', autoEvidence: [] },
+    ],
+    reliefs: [
+      { id: 'quash_decision', text: 'To quash/annul the administrative decision of the Respondent Institution.', isDefault: true },
+      { id: 'reinstate_with_pay', text: 'To order the reinstatement of the Appellant to their former position and payment of full salary for the period of suspension (Art. 81(3)).', isDefault: false },
+      { id: 'expunge_record', text: 'To order the expunging of the disciplinary measure from the Appellant\'s personal file.', isDefault: false },
+    ]
+  },
+  civil_service_termination_unlawful: {
+    documentTitle: 'Appeal Against Administrative Termination',
+    jurisdictionText: 'Federal Civil Servants Proclamation No. 1064/2017',
+    partyTitles: {
+      applicant: 'Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)',
+      respondent: 'Institution / Office (መስሪያ ቤት/መልስ ሰጪ)',
+    },
+    facts: [
+      { id: 'inefficiency_not_consecutive', label: 'Grounds: Inefficiency (Performance)', legalText: 'Termination for performance was unlawful as the Appellant did not receive two consecutive "unsatisfactory" evaluations.', citation: 'Art. 84(1) of Proc. 1064/2017', autoEvidence: ['performance_review'] },
+      { id: 'inefficiency_no_training', label: 'Grounds: Inefficiency (Performance)', legalText: 'Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve.', citation: 'Art. 84(1) of Proc. 1064/2017', autoEvidence: ['performance_review'] },
+      { id: 'illness_before_leave_exhausted', label: 'Grounds: Illness / Medical', legalText: 'Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay).', citation: 'Art. 83(1) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'illness_no_medical_board', label: 'Grounds: Illness / Medical', legalText: 'Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability.', citation: 'Art. 83(2) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'redundancy_no_offer', label: 'Grounds: Force Majeure / Redundancy', legalText: 'Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination.', citation: 'Art. 85(2) of Proc. 1064/2017', autoEvidence: [] },
+    ],
+    reliefs: [
+      { id: 'quash_termination', text: 'To quash/annul the administrative decision of termination.', isDefault: true },
+      { id: 'reinstate_civil_servant', text: 'To order the reinstatement of the Appellant to their former position with full back pay.', isDefault: true },
+    ]
+  },
+  civil_service_benefits_grievance: {
+    documentTitle: 'Appeal on Service Rights & Benefits',
+    jurisdictionText: 'Federal Civil Servants Proclamation No. 1064/2017',
+    partyTitles: {
+      applicant: 'Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)',
+      respondent: 'Institution / Office (መስሪያ ቤት/መልስ ሰጪ)',
+    },
+    facts: [
+      { id: 'exhaustion_grievance_submitted', label: 'Exhaustion of Remedies (Mandatory)', legalText: 'A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.', citation: 'Art. 81(1)(e) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'promotion_denied', label: 'The Grievance', legalText: 'The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.', citation: 'Art. 13 of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'salary_increment_denied', label: 'The Grievance', legalText: 'The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.', citation: 'Art. 81(1)(c) of Proc. 1064/2017', autoEvidence: [] },
+      { id: 'acting_allowance_denied', label: 'The Grievance', legalText: 'The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.', citation: 'Relevant Regulations', autoEvidence: [] },
+    ],
+    reliefs: [
+      { id: 'grant_promotion', text: 'To order the Respondent Institution to grant the promotion due to the Appellant.', isDefault: false },
+      { id: 'grant_salary_increment', text: 'To order the payment of the denied salary increment, with retroactive effect.', isDefault: false },
+      { id: 'refund_deductions', text: 'To order the refund of any unlawfully deducted salary.', isDefault: false },
+    ]
   },
   bail_application: {
     documentTitle: 'የዋስትና መብት ማመልከቻ',
@@ -672,5 +739,6 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
 
 

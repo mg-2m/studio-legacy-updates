@@ -107,10 +107,11 @@ function appReducer(state: AppState, action: Action): AppState {
       return { ...state, selectedFacts: state.selectedFacts.map(f => f.id === action.payload.id ? { ...f, legalText: action.payload.text } : f) };
 
     case 'TOGGLE_MAINTENANCE': {
+        if (state.selectedTemplate !== 'divorce') return state; // Only for divorce template
         const newActive = action.payload.checked;
         const newSmartEvidence = { ...state.smartEvidence };
         const newSelectedReliefs = [...state.selectedReliefs];
-        const maintenanceRelief = TEMPLATE_DATA[state.selectedTemplate].reliefs.find(r => r.id === 'maintenance');
+        const maintenanceRelief = TEMPLATE_DATA.divorce.reliefs.find(r => r.id === 'maintenance');
         const { EVIDENCE_REGISTRY } = require('@/lib/data');
 
         if (newActive && EVIDENCE_REGISTRY['birth_cert']) {
@@ -224,6 +225,7 @@ function appReducer(state: AppState, action: Action): AppState {
         return {
             ...state,
             selectedTemplate: newTemplateId,
+            partyTitles: templateData.partyTitles,
             selectedFacts: [],
             selectedReliefs: templateData.reliefs.filter(r => r.isDefault),
             smartEvidence: {},
@@ -341,5 +343,3 @@ export default function Home() {
     <MainLayout state={state} dispatch={dispatch} />
   );
 }
-
-    

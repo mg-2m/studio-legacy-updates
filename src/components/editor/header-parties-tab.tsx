@@ -26,7 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { COURT_HIERARCHY, REGIONS_AND_CITIES } from '@/lib/data';
+import { COURT_HIERARCHY, REGIONS_AND_CITIES, TEMPLATE_DATA } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import PartyForm from './party-form';
 import { cn } from "@/lib/utils";
@@ -38,9 +38,12 @@ interface HeaderPartiesTabProps {
 }
 
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
-  const { metadata, applicants, respondents, partyTitles } = state;
+  const { metadata, applicants, respondents, partyTitles, selectedTemplate } = state;
   const dateObject = metadata.date.endsWith(' EC') ? new Date() : new Date(metadata.date);
-
+  
+  const currentTemplateData = TEMPLATE_DATA[selectedTemplate];
+  const applicantTitleOptions = currentTemplateData.partyTitles.applicantOptions;
+  const respondentTitleOptions = currentTemplateData.partyTitles.respondentOptions;
 
   return (
     <Accordion type="multiple" defaultValue={['item-1', 'item-4', 'item-5']} className="w-full space-y-4">
@@ -134,17 +137,21 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       </AccordionItem>
       
       <AccordionItem value="item-4" className="border rounded-lg bg-background">
-        <AccordionTrigger className="px-4 text-primary">አመልካች / ከሳሽ (Applicant / Plaintiff)</AccordionTrigger>
+        <AccordionTrigger className="px-4 text-primary">{partyTitles.applicant}</AccordionTrigger>
         <AccordionContent className="px-4">
             <div className="space-y-2 mb-4 p-3 border rounded-md">
                 <Label>የተዋዋይ ወገን መጠሪያ (Party Title)</Label>
                 <RadioGroup 
                     value={partyTitles.applicant} 
                     onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY_TITLE', payload: { role: 'applicant', title: value }})}
-                    className="flex space-x-4"
+                    className="flex flex-wrap gap-x-4 gap-y-2"
                 >
-                    <div className="flex items-center space-x-2"><RadioGroupItem value="አመልካች (Applicant)" id="title-applicant" /><Label htmlFor="title-applicant">አመልካች (Applicant)</Label></div>
-                    <div className="flex items-center space-x-2"><RadioGroupItem value="ከሳሽ (Plaintiff)" id="title-plaintiff" /><Label htmlFor="title-plaintiff">ከሳሽ (Plaintiff)</Label></div>
+                    {applicantTitleOptions.map(title => (
+                      <div key={title} className="flex items-center space-x-2">
+                        <RadioGroupItem value={title} id={`title-applicant-${title.replace(/\s/g, '')}`} />
+                        <Label htmlFor={`title-applicant-${title.replace(/\s/g, '')}`}>{title}</Label>
+                      </div>
+                    ))}
                 </RadioGroup>
             </div>
           {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} />)}
@@ -155,17 +162,21 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       </AccordionItem>
       
       <AccordionItem value="item-5" className="border rounded-lg bg-background">
-        <AccordionTrigger className="px-4 text-primary">ተጠሪ / ተከሳሽ (Respondent / Defendant)</AccordionTrigger>
+        <AccordionTrigger className="px-4 text-primary">{partyTitles.respondent}</AccordionTrigger>
         <AccordionContent className="px-4">
             <div className="space-y-2 mb-4 p-3 border rounded-md">
                 <Label>የተዋዋይ ወገን መጠሪያ (Party Title)</Label>
                 <RadioGroup 
                     value={partyTitles.respondent} 
                     onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY_TITLE', payload: { role: 'respondent', title: value }})}
-                    className="flex space-x-4"
+                    className="flex flex-wrap gap-x-4 gap-y-2"
                 >
-                    <div className="flex items-center space-x-2"><RadioGroupItem value="ተጠሪ (Respondent)" id="title-respondent" /><Label htmlFor="title-respondent">ተጠሪ (Respondent)</Label></div>
-                    <div className="flex items-center space-x-2"><RadioGroupItem value="ተከሳሽ (Defendant)" id="title-defendant" /><Label htmlFor="title-defendant">ተከሳሽ (Defendant)</Label></div>
+                    {respondentTitleOptions.map(title => (
+                      <div key={title} className="flex items-center space-x-2">
+                        <RadioGroupItem value={title} id={`title-respondent-${title.replace(/\s/g, '')}`} />
+                        <Label htmlFor={`title-respondent-${title.replace(/\s/g, '')}`}>{title}</Label>
+                      </div>
+                    ))}
                 </RadioGroup>
             </div>
           {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} />)}
@@ -177,5 +188,3 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
     </Accordion>
   );
 }
-
-    

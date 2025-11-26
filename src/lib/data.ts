@@ -1,5 +1,5 @@
 
-import type { AppState, Template, Relief, Fact } from "./types";
+import type { AppState, Template, Relief, Fact, PartyTitles } from "./types";
 import { FileText, Briefcase } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
@@ -165,10 +165,17 @@ export const TEMPLATES: Template[] = [
 interface TemplateData {
   facts: Fact[];
   reliefs: Relief[];
+  partyTitles: PartyTitles;
 }
 
 export const TEMPLATE_DATA: { [key in Template['id']]: TemplateData } = {
   divorce: {
+    partyTitles: {
+      applicant: 'አመልካች (Applicant)',
+      respondent: 'ተጠሪ (Respondent)',
+      applicantOptions: ['አመልካች (Applicant)'],
+      respondentOptions: ['ተጠሪ (Respondent)'],
+    },
     facts: [
       {
         id: 'conflict',
@@ -222,6 +229,12 @@ export const TEMPLATE_DATA: { [key in Template['id']]: TemplateData } = {
     ]
   },
   labour: {
+     partyTitles: {
+      applicant: 'ከሳሽ (Plaintiff)',
+      respondent: 'ተከሳሽ (Defendant)',
+      applicantOptions: ['ከሳሽ (Plaintiff)'],
+      respondentOptions: ['ተከሳሽ (Defendant)'],
+    },
     facts: [
       {
         id: 'unlawful_termination',
@@ -276,6 +289,7 @@ export const TEMPLATE_DATA: { [key in Template['id']]: TemplateData } = {
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
 const defaultBench = COURT_HIERARCHY[defaultCourtLevel as keyof typeof COURT_HIERARCHY][0];
 const initialTemplateId: Template['id'] = 'divorce';
+const initialTemplateData = TEMPLATE_DATA[initialTemplateId];
 
 
 export const INITIAL_STATE: AppState = {
@@ -292,7 +306,7 @@ export const INITIAL_STATE: AppState = {
   applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '' } }],
   respondents: [],
   selectedFacts: [],
-  selectedReliefs: TEMPLATE_DATA[initialTemplateId].reliefs.filter(r => r.isDefault),
+  selectedReliefs: initialTemplateData.reliefs.filter(r => r.isDefault),
   maintenance: { 
     active: false, 
     income: 0, 
@@ -302,11 +316,6 @@ export const INITIAL_STATE: AppState = {
   },
   evidence: [],
   smartEvidence: {},
-  partyTitles: {
-    applicant: 'አመልካች (Applicant)',
-    respondent: 'ተጠሪ (Respondent)',
-  },
+  partyTitles: initialTemplateData.partyTitles,
   selectedTemplate: initialTemplateId,
 };
-
-    

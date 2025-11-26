@@ -1,3 +1,4 @@
+
 export interface Party {
   id: string;
   name: string;
@@ -74,6 +75,14 @@ export type Template = {
   icon: React.ElementType;
 };
 
+export interface PartyTitles {
+  applicant: string;
+  respondent: string;
+  applicantOptions: string[];
+  respondentOptions: string[];
+}
+
+
 export interface AppState {
   metadata: Metadata;
   applicants: Party[];
@@ -83,9 +92,6 @@ export interface AppState {
   maintenance: Maintenance;
   evidence: ManualEvidence[];
   smartEvidence: SmartEvidence;
-  partyTitles: {
-    applicant: 'አመልካች (Applicant)' | 'ከሳሽ (Plaintiff)';
-    respondent: 'ተጠሪ (Respondent)' | 'ተከሳሽ (Defendant)';
-  };
+  partyTitles: PartyTitles;
   selectedTemplate: 'divorce' | 'labour';
 }

@@ -29,7 +29,7 @@ export default function PageTwo({ state }: PageTwoProps) {
   evidence.forEach(e => {
     let details = e.description || e.type;
     if (e.type === 'Document') {
-        details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issuer: ${e.issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType})`;
+        details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issuer: ${e.issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${e.originalLocation || 'N/A'})`;
     }
     allEvidence.push({
       label: e.description || e.type,
@@ -61,7 +61,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         {allEvidence.map((e, i) => (
           <li key={i} className="mb-3 text-justify">
             <strong>{e.label}</strong>
-            <span className="text-xs text-gray-600 ml-2 font-sans">[{e.type}]</span>
+            <span className="text-xs text-gray-500 ml-2 font-sans italic">[{e.type}]</span>
             <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">
               {e.details}
             </p>

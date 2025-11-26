@@ -134,7 +134,7 @@ export default function PageOne({ state }: PageOneProps) {
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>
-            <strong>Applicant's Signature</strong>
+            <strong>የአመልካች ፊርማ (Applicant's Signature)</strong>
           </div>
         </div>
       </div>

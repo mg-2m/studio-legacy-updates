@@ -103,7 +103,11 @@ function appReducer(state: AppState, action: Action): AppState {
         if (newActive && EVIDENCE_REGISTRY['birth_cert']) {
           newSmartEvidence['birth_cert'] = state.smartEvidence['birth_cert'] || { credentialId: '', active: false };
         } else if (!newActive) {
-          delete newSmartEvidence['birth_cert'];
+          // Only remove birth_cert if no other fact requires it
+          const isBirthCertRequiredByOtherFact = state.selectedFacts.some(fact => fact.autoEvidence?.includes('birth_cert'));
+          if (!isBirthCertRequiredByOtherFact) {
+            delete newSmartEvidence['birth_cert'];
+          }
         }
         return { ...state, maintenance: { ...state.maintenance, active: newActive }, smartEvidence: newSmartEvidence };
     }

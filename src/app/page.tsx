@@ -250,8 +250,6 @@ export default function Home() {
   }
 
   return (
-    <main>
-      <MainLayout state={state} dispatch={dispatch} />
-    </main>
+    <MainLayout state={state} dispatch={dispatch} />
   );
 }

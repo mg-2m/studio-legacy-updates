@@ -90,6 +90,15 @@ export interface PartyTitles {
   respondentOptions: string[];
 }
 
+export interface TemplateData {
+  facts: Fact[];
+  reliefs: Relief[];
+  partyTitles: PartyTitles;
+  documentTitle: string;
+  jurisdictionText: string;
+}
+
+
 export interface EvidenceRegistryItem {
   id: string;
   label: string;

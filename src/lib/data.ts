@@ -1,5 +1,5 @@
 
-import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry } from "./types";
+import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
 import { FileText, Briefcase, Handshake, Shield, Landmark } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
@@ -192,18 +192,10 @@ export const TEMPLATES: Template[] = [
   },
 ];
 
-interface TemplateData {
-  facts: Fact[];
-  reliefs: Relief[];
-  partyTitles: PartyTitles;
-  documentTitle: string;
-  jurisdictionText: string;
-}
-
 export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
   divorce: {
     documentTitle: 'የፍቺ ማመልከቻ',
-    jurisdictionText: '{ Revised Family Code Proc. No. 213/2000 }',
+    jurisdictionText: 'Revised Family Code Proc. No. 213/2000',
     partyTitles: {
       applicant: 'አመልካች (Applicant)',
       respondent: 'ተጠሪ (Respondent)',
@@ -264,7 +256,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
   },
   labour: {
     documentTitle: 'የሠራተኛ ክርክር ክስ',
-    jurisdictionText: '{ Labour Proclamation No. 1156/2019 }',
+    jurisdictionText: 'Labour Proclamation No. 1156/2019',
     partyTitles: {
       applicant: 'ከሳሽ (Plaintiff)',
       respondent: 'ተከሳሽ (Defendant)',
@@ -322,7 +314,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
   },
   admin_complaint: { // Placeholder data
     documentTitle: 'የአስተዳደር በደል ክስ',
-    jurisdictionText: '{ Administrative Procedure Proclamation No. 1183/2020 }',
+    jurisdictionText: 'Administrative Procedure Proclamation No. 1183/2020',
     partyTitles: {
       applicant: 'አመልካች (Applicant)',
       respondent: 'ተጠሪ (Respondent)',
@@ -334,7 +326,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
   },
   bail_application: { // Placeholder data
     documentTitle: 'የዋስትና መብት ማመልከቻ',
-    jurisdictionText: '{ Criminal Procedure Code }',
+    jurisdictionText: 'Criminal Procedure Code',
     partyTitles: {
       applicant: 'አመልካች (Applicant)',
       respondent: 'ዐቃቤ ሕግ (Prosecutor)',

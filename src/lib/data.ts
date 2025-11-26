@@ -351,14 +351,14 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     facts: [
       {
         id: 'indefinite_contract',
-        label: 'The Contractual Relationship (Prerequisites)',
+        label: 'The Contractual Relationship',
         legalText: 'Existence of an indefinite period employment contract.',
         citation: 'Art. 9 of Proc. 1156/2019',
         autoEvidence: ['employment_contract']
       },
       {
         id: 'definite_contract_ended',
-        label: 'The Contractual Relationship (Prerequisites)',
+        label: 'The Contractual Relationship',
         legalText: 'A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.',
         citation: 'Art. 10, 11 of Proc. 1156/2019',
         autoEvidence: ['employment_contract']
@@ -379,21 +379,21 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       },
       {
         id: 'union_membership_termination',
-        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds - Art. 26)',
+        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
         legalText: 'Termination was due to the employee\'s membership in a trade union or participation in union activities.',
         citation: 'Art. 26(2)(a) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'whistleblower_termination',
-        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds - Art. 26)',
+        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
         legalText: 'Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law.',
         citation: 'Art. 26(2)(b) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'discriminatory_termination',
-        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds - Art. 26)',
+        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
         legalText: 'Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, social origin, HIV/AIDS status, marital status, or family responsibilities.',
         citation: 'Art. 26(2)(c) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
@@ -653,12 +653,9 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
   bail_application: {
     documentTitle: 'የዋስትና መብት ማመልከቻ',
     jurisdictionText: 'Criminal Procedure Code',
-    partyTitles: {
-      applicant: 'አመልካች (Applicant)',
-      respondent: 'ዐቃቤ ሕግ (Prosecutor)',
-    },
+    partyTitles: { applicant: 'አመልካች (Applicant)', respondent: 'ዐቃቤ ሕግ (Prosecutor)' },
     facts: [],
-    reliefs: []
+    reliefs: [],
   },
   lease_agreement: {
     documentTitle: 'የቤት ኪራይ ውል',

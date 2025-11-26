@@ -1,47 +1,35 @@
-
 # Addis Crown Blueprint: JSON to UI Implementation Checklist
 
 This document serves as the definitive checklist for transforming the legal knowledge from the `docs/backend.json` blueprint into a fully functional, "spoon-fed" user interface. This process must be followed for every new legal branch and for any QA validation of existing branches.
 
+Each segment must pass both a **Relevancy Check** (ensuring only context-specific information is shown) and an **Exhaustive Rendering Check** (ensuring no relevant information is missing).
+
 ## The 7 Segments of UI Implementation
 
 1.  **Head, Date, Court Name, Location, Bench Name, and Bench Address:**
-    *   Ensure all court-related information (Tier, Bench, City/Region) is presented as pre-populated dropdowns (`Select` components).
-    *   Source this data from the researched lists in `src/lib/data.ts`.
-    *   The date should use a calendar picker for intuitive selection.
-    *   Unique identifiers (like File No.) can remain as text inputs.
+    *   **Relevancy Check:** The "Bench/Division" dropdown MUST be filtered by and only show benches relevant to the selected "Court Tier".
+    *   **Exhaustive Rendering Check:** All court tiers, benches, and cities defined in `src/lib/data.ts` MUST be available in their respective dropdowns.
 
 2.  **Party Head with Titles, Addresses, and Role:**
-    *   Party titles (e.g., "Mr.", "Mrs.") must be a dropdown sourced from a centralized list.
-    *   Address components (City, Subcity) must be dropdowns. Allow a conditional text input for "Other".
-    *   The role of the party (e.g., "Applicant," "Respondent") must be dynamically rendered based on the `partyTitles` defined for the selected template in `backend.json`.
+    *   **Relevancy Check:** The role of each party (e.g., "Applicant," "Plaintiff," "Decree Holder") MUST dynamically update to be relevant to the `partyTitles` defined for the selected template in `backend.json`.
+    *   **Exhaustive Rendering Check:** All `HONORIFICS`, `REGIONS_AND_CITIES`, and `AA_SUBCITIES` from `data.ts` MUST be populated in their dropdowns.
 
 3.  **Introduction for Procedural Matters:**
-    *   Present options for court jurisdiction, legal representation, and summons delivery as radio groups or dropdowns.
-    *   These options should be sourced from a predefined list, reflecting standard procedural choices.
-    *   The jurisdiction text itself must be dynamically pulled from the `jurisdictionText` property of the selected template.
+    *   **Relevancy Check:** The jurisdiction text (e.g., "Labour Proclamation No. 1156/2019") MUST be dynamically rendered in the preview, sourced from the `jurisdictionText` property of the *currently selected template*.
+    *   **Exhaustive Rendering Check:** All procedural options (Representation, Summons Delivery) must be present as radio groups or dropdowns.
 
 4.  **Title of the Suite:**
-    *   The main document title (e.g., "Statement of Claim for Unlawful Termination") must be automatically and dynamically rendered in the preview pane.
-    *   This title must be sourced directly from the `documentTitle` property of the selected template in `backend.json`.
-    *   Provide options for manual input only for case-specific details like monetary values where applicable.
+    *   **Relevancy Check:** The main document title (e.g., "Statement of Claim for Unlawful Termination") MUST be automatically rendered and relevant to the `documentTitle` of the *currently selected template*.
+    *   **Exhaustive Rendering Check:** The title must always appear in the preview pane; it should never be blank.
 
 5.  **Facts Stating and Grounding:**
-    *   Facts must be presented in the UI in the exact logical `groups` as defined in `backend.json`.
-    *   Each fact within a group should be a checkbox item, allowing the user to select their specific legal arguments.
-    *   The `legalText` and `citation` for each fact must be displayed clearly.
-    *   This section must support the addition of "Custom Facts" via a textarea for circumstances not covered by the predefined facets.
+    *   **Relevancy Check:** The UI must ONLY display the fact groups and factual facets that are relevant to the *currently selected template* as defined in `backend.json`.
+    *   **Exhaustive Rendering Check:** The UI must display *all* facts and groups for the selected template, and must support the addition of "Custom Facts" not covered by the predefined facets.
 
 6.  **Request Judgment and Relief:**
-    *   All standard reliefs for a template must be presented as a list of checkbox items.
-    *   The text for each relief must be sourced directly from the `reliefs` array in `backend.json`.
-    *   Reliefs marked as `isDefault` in the data should be checked by default.
-    *   This section must support the addition of "Custom Reliefs" for user-specific requests.
+    *   **Relevancy Check:** The UI must ONLY display the relief options that are relevant to the *currently selected template* as defined in `backend.json`.
+    *   **Exhaustive Rendering Check:** All standard reliefs for the template must be presented as a list of checkbox items. Reliefs marked as `isDefault` MUST be checked by default. A "Custom Relief" option must be available.
 
 7.  **Evidence List Attachment & Auto Oath Statement:**
-    *   The `EvidenceTab` UI must clearly distinguish between:
-        *   **Required (Auto-Linked) Evidence:** Items automatically added when a user selects a corresponding fact.
-        *   **AI-Suggested Evidence:** Optional items recommended by the AI.
-        *   **Manual Evidence:** Items added by the user.
-    *   The final document preview (`page-two.tsx`) must dynamically render a clean, formatted list of all active evidence.
-    *   The verification/oath statements at the end of the document pages should be standardized, static text as they represent a legal formality.
+    *   **Relevancy Check:** Auto-linked evidence MUST be directly relevant to a selected fact. AI-suggested evidence MUST be relevant to the combination of selected facts.
+    *   **Exhaustive Rendering Check:** The UI must clearly distinguish between **Required (Auto-Linked)**, **AI-Suggested**, and **Manual** evidence. The final preview MUST render a clean, formatted list of all *active* evidence. Both document pages must end with the static verification/oath statements.

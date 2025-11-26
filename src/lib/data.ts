@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -148,12 +148,54 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     credentialLabel: 'Report Reference Number',
     credentialPlaceholder: 'e.g., AUD-FIN-2024-001',
   },
-  title_deed: {
-    id: 'title_deed',
-    label: 'Title Deed (Librec)',
+  TitleDeed: {
+    id: 'TitleDeed',
+    label: 'Title Deed (Librec/Carta)',
     type: 'Document',
     credentialLabel: 'Title Deed Number',
-    credentialPlaceholder: 'e.g., TD-12345',
+    credentialPlaceholder: 'e.g., TD-AA-12345',
+  },
+  SitePlan: {
+    id: 'SitePlan',
+    label: 'Site Plan',
+    type: 'Document',
+    credentialLabel: 'Plan Number',
+    credentialPlaceholder: 'e.g., SP-123-2024',
+  },
+  TaxLandRentReceipts: {
+    id: 'TaxLandRentReceipts',
+    label: 'Tax/Land Rent Receipts',
+    type: 'Document',
+    credentialLabel: 'Latest Receipt Number',
+    credentialPlaceholder: 'e.g., TAX-2024-9876',
+  },
+  KebeleConfirmation: {
+    id: 'KebeleConfirmation',
+    label: 'Kebele Confirmation',
+    type: 'Document',
+    credentialLabel: 'Letter Reference',
+    credentialPlaceholder: 'e.g., KC/YKA/2024/45',
+  },
+  SurveyorsReport: {
+    id: 'SurveyorsReport',
+    label: 'Surveyor\'s Report',
+    type: 'Document',
+    credentialLabel: 'Report ID',
+    credentialPlaceholder: 'e.g., SR-ENG-2024-01',
+  },
+  WitnessAffidavitsNuisance: {
+    id: 'WitnessAffidavitsNuisance',
+    label: 'Witness Affidavits (Nuisance)',
+    type: 'Witness',
+    credentialLabel: 'Witness Full Name',
+    credentialPlaceholder: 'e.g., Ato Kebede Abebe',
+  },
+  PhotosVideoEvidence: {
+    id: 'PhotosVideoEvidence',
+    label: 'Photos/Video Evidence',
+    type: 'Document',
+    credentialLabel: 'Description of evidence',
+    credentialPlaceholder: 'e.g., Video of factory smoke',
   },
   marriage_cert: {
     id: 'marriage_cert',
@@ -389,6 +431,21 @@ export const TEMPLATES: Template[] = [
       { id: 'succession_partition_estate', label: 'የውርስ ንብረት ክፍፍል (Estate Partition)', icon: Building2 },
       { id: 'app_appoint_liquidator', label: 'ዋና ከፋይ διορισμός (Appoint Liquidator)', icon: BookUser },
       { id: 'app_seal_estate', label: 'የንብረት ማሸግ (Seal Estate)', icon: Shield }
+    ]
+  },
+  {
+    id: 'property_land_law',
+    label: 'የንብረት እና መሬት ህግ (Property & Land)',
+    icon: Map,
+    subTemplates: [
+        { id: 'property_petitory_vindication', label: 'Petitory Action (Vindication)', icon: FileText },
+        { id: 'property_possessory_restoration', label: 'Possessory Action (Restoration)', icon: FileText },
+        { id: 'property_boundary_encroachment', label: 'Boundary Encroachment', icon: Map },
+        { id: 'property_nuisance_cessation', label: 'Nuisance Cessation', icon: ShieldAlert },
+        { id: 'property_servitude_right_of_way', label: 'Servitude (Right of Way)', icon: Map },
+        { id: 'app_stay_construction', label: 'Suspend Construction Order', icon: Shield },
+        { id: 'app_local_inspection', label: 'Local Inspection Order', icon: Map },
+        { id: 'property_possessory_disturbance', label: 'Possessory Action (Disturbance)', icon: FileText },
     ]
   }
 ];
@@ -1436,6 +1493,335 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     reliefs: [
       { id: "relief_affix_seals", text: "Order the court registrar to affix official seals on the deceased's property/safe.", isDefault: true }
     ]
+  },
+  property_petitory_vindication: {
+    documentTitle: "Statement of Claim for Vindication of Property (Petitory Action)",
+    jurisdictionText: "Art. 1206 of the Civil Code.",
+    partyTitles: {
+      applicant: "Plaintiff (Owner)",
+      respondent: "Defendant (Unlawful Holder)"
+    },
+    facts: [
+      {
+        id: "fact_ownership_proof",
+        label: "Proof of Title",
+        legalText: "The Plaintiff is the legal owner/holder of the immovable property situated at [Location].",
+        citation: "Civ. Code Art. 1204",
+        autoEvidence: ["TitleDeed"]
+      },
+      {
+        id: "fact_chain_of_custody",
+        label: "Proof of Title",
+        legalText: "The Plaintiff acquired the property through [Sale/Succession/Grant] on [Date].",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_defendant_possession",
+        label: "Unlawful Holding",
+        legalText: "The Defendant is currently in possession of the property without any legal title or right.",
+        citation: "Civ. Code Art. 1206",
+        autoEvidence: []
+      },
+      {
+        id: "fact_refusal_vacate",
+        label: "Unlawful Holding",
+        legalText: "Despite demands, the Defendant refuses to vacate the property.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_declare_ownership",
+        text: "Judgment declaring the Plaintiff as the sole legal owner/holder of the property.",
+        isDefault: true,
+      },
+      {
+        id: "relief_eviction_order",
+        text: "Order the Defendant to vacate the property and hand it over to the Plaintiff.",
+        isDefault: true,
+      },
+      {
+        id: "relief_mesne_profits",
+        text: "Order the Defendant to pay compensation (fruits/rent) for the period of unlawful occupation.",
+        isDefault: false,
+      }
+    ]
+  },
+  property_possessory_restoration: {
+    documentTitle: "Statement of Claim for Restoration of Possession",
+    jurisdictionText: "Art. 1149 of the Civil Code.",
+    partyTitles: {
+      applicant: "Plaintiff (Dispossessed)",
+      respondent: "Defendant (Usurper)"
+    },
+    facts: [
+      {
+        id: "fact_actual_possession",
+        label: "Fact of Possession",
+        legalText: "The Plaintiff was in peaceful and continuous possession of the property.",
+        citation: "Civ. Code Art. 1140",
+        autoEvidence: ["TaxLandRentReceipts", "KebeleConfirmation"]
+      },
+      {
+        id: "fact_usurpation_act",
+        label: "Illicit Interference (Usurpation)",
+        legalText: "The Defendant took possession by force/fraud on [Date].",
+        citation: "Civ. Code Art. 1148",
+        autoEvidence: []
+      },
+      {
+        id: "fact_timeliness",
+        label: "Illicit Interference (Usurpation)",
+        legalText: "This claim is filed within two years of the usurpation.",
+        citation: "Civ. Code Art. 1149",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_restore_possession",
+        text: "Order the immediate restoration of possession to the Plaintiff (without prejudice to questions of title).",
+        isDefault: true
+      }
+    ]
+  },
+  property_boundary_encroachment: {
+    documentTitle: "Statement of Claim for Removal of Boundary Encroachment",
+    jurisdictionText: "Art. 1204 & 1211 of the Civil Code.",
+    partyTitles: {
+      applicant: "Plaintiff",
+      respondent: "Defendant (Neighbor)"
+    },
+    facts: [
+      {
+        id: "fact_defined_boundary",
+        label: "Boundary Lines",
+        legalText: "The legal boundary between the Plaintiff's and Defendant's plots is defined by the official Site Plan.",
+        citation: "",
+        autoEvidence: ["SitePlan"]
+      },
+      {
+        id: "fact_encroachment_act",
+        label: "The Encroachment",
+        legalText: "The Defendant has constructed a wall/structure that crosses the boundary line by [Meters].",
+        citation: "",
+        autoEvidence: ["SurveyorsReport"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_demolition",
+        text: "Order the Defendant to demolish the encroaching structure.",
+        isDefault: true
+      },
+      {
+        id: "relief_boundary_restitution",
+        text: "Order the restoration of the boundary markers to their original position.",
+        isDefault: true
+      }
+    ]
+  },
+  app_stay_construction: {
+    documentTitle: "Application for Urgent Order to Suspend Construction",
+    jurisdictionText: "Art. 154 of the Civil Procedure Code.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "Respondent"
+    },
+    facts: [
+      {
+        id: "fact_ongoing_construction",
+        label: "Irreparable Injury",
+        legalText: "The Respondent is currently engaged in active construction on the disputed land.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_irreparable_harm",
+        label: "Irreparable Injury",
+        legalText: "If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_prima_facie",
+        label: "Irreparable Injury",
+        legalText: "The Applicant has demonstrated a strong prima facie case of ownership.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_suspend_works",
+        text: "Order the immediate suspension of all construction activities on the disputed plot pending final judgment.",
+        isDefault: true
+      }
+    ]
+  },
+  app_local_inspection: {
+    documentTitle: "Application for Order of Local Inspection",
+    jurisdictionText: "Art. 136 of the Civil Procedure Code.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "Respondent"
+    },
+    facts: [
+      {
+        id: "fact_physical_dispute",
+        label: "Clarification",
+        legalText: "The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_necessity_to_view",
+        label: "Clarification",
+        legalText: "A just decision cannot be rendered without the Court (or its registrar) physically viewing the site.",
+        citation: "CPC Art. 136",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_order_visit",
+        text: "Order a local inspection of the property to verify boundaries/possession.",
+        isDefault: true
+      }
+    ]
+  },
+  property_nuisance_cessation: {
+    documentTitle: "Statement of Claim for Cessation of Abnormal Inconvenience (Nuisance)",
+    jurisdictionText: "Art. 1225 of the Civil Code.",
+    partyTitles: {
+      applicant: "Plaintiff (Injured Party)",
+      respondent: "Defendant (Source of Nuisance)"
+    },
+    facts: [
+      {
+        id: "fact_nature_inconvenience",
+        label: "The Disturbance",
+        legalText: "The Defendant's actions involve [Noise/Smell/Vibration] originating from [Source].",
+        citation: "Civ. Code Art. 1225",
+        autoEvidence: []
+      },
+      {
+        id: "fact_abnormal_degree",
+        label: "The Disturbance",
+        legalText: "The inconvenience caused by the Defendant is abnormal and exceeds the level normally expected of the neighborhood.",
+        citation: "",
+        autoEvidence: ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
+      },
+      {
+        id: "fact_notice_to_stop",
+        label: "Knowledge and Refusal",
+        legalText: "The Defendant was formally notified of the inconvenience but failed to take corrective measures.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_order_cessation",
+        text: "Judgment ordering the Defendant to immediately cease the source of the abnormal inconvenience.",
+        isDefault: true
+      },
+      {
+        id: "relief_damages_past",
+        text: "Order payment of damages suffered by the Plaintiff prior to the cessation.",
+        citation: "Civ. Code Art. 1226",
+        isDefault: false
+      }
+    ]
+  },
+  property_servitude_right_of_way: {
+    documentTitle: "Statement of Claim for Establishment of Servitude (Right of Way)",
+    jurisdictionText: "Art. 1332 of the Civil Code.",
+    partyTitles: {
+      applicant: "Dominant Tenement (Applicant)",
+      respondent: "Servient Tenement (Respondent)"
+    },
+    facts: [
+      {
+        id: "fact_property_enclaved",
+        label: "Enclave Status (Necessity)",
+        legalText: "The Applicant's property has no adequate access to a public road.",
+        citation: "Civ. Code Art. 1332",
+        autoEvidence: ["SurveyorsReport", "SitePlan"]
+      },
+      {
+        id: "fact_no_other_means",
+        label: "Enclave Status (Necessity)",
+        legalText: "There are no other practical or less onerous routes available for access.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_least_onerous",
+        label: "Requested Route",
+        legalText: "The requested right of way across the Respondent's land is the route least detrimental to the Servient Tenement (Respondent).",
+        citation: "Civ. Code Art. 1334",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_establish_servitude",
+        text: "Judgment establishing a Servitude of Right of Way across the Respondent's property.",
+        isDefault: true
+      },
+      {
+        id: "relief_compensation_fee",
+        text: "Order the Dominant Tenement to pay fair compensation to the Servient Tenement for the damage caused by the passage.",
+        citation: "Civ. Code Art. 1333",
+        isDefault: false
+      }
+    ]
+  },
+  property_possessory_disturbance: {
+    documentTitle: "Statement of Claim for Cessation of Disturbance of Possession",
+    jurisdictionText: "Art. 1148 of the Civil Code.",
+    partyTitles: {
+      applicant: "Plaintiff (Possessor)",
+      respondent: "Defendant (Disturber)"
+    },
+    facts: [
+      {
+        id: "fact_actual_possession",
+        label: "Fact of Possession",
+        legalText: "The Plaintiff was in peaceful and continuous possession of the property/right.",
+        citation: "Civ. Code Art. 1140",
+        autoEvidence: []
+      },
+      {
+        id: "fact_disturbance_act",
+        label: "Disturbance Act",
+        legalText: "The Defendant has performed specific actions that interfere with the Plaintiff's peaceful possession (e.g., removing fences, obstructing access).",
+        citation: "Civ. Code Art. 1148",
+        autoEvidence: ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
+      },
+      {
+        id: "fact_timeliness",
+        label: "Disturbance Act",
+        legalText: "This claim is filed within two years of the disturbance.",
+        citation: "Civ. Code Art. 1149",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_stop_disturbance",
+        text: "Order the Defendant to cease all acts of disturbance.",
+        isDefault: true
+      },
+      {
+        id: "relief_restore_status",
+        text: "Order the restoration of the property to the state it was in before the disturbance.",
+        isDefault: true
+      }
+    ]
   }
 };
 
@@ -1477,4 +1863,6 @@ export const INITIAL_STATE: AppState = {
 
     
     
+    
+
     

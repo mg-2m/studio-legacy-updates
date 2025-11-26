@@ -157,5 +157,3 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
     </div>
   );
 }
-
-    

@@ -2,16 +2,22 @@
 "use client";
 
 import type { AppState, Party, Relief } from '@/lib/types';
-import { TEMPLATES } from '@/lib/data';
+import { TEMPLATE_DATA } from '@/lib/data';
 
 interface PageOneProps {
   state: AppState;
 }
 
 export default function PageOne({ state }: PageOneProps) {
-  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles, selectedReliefs, selectedTemplate } = state;
-  const currentTemplate = TEMPLATES.find(t => t.id === selectedTemplate);
-  const documentTitle = currentTemplate ? currentTemplate.label : 'Pleading';
+  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles, selectedReliefs, selectedSubTemplate } = state;
+  const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
+  
+  // Guard against missing template data during transition
+  if (!currentTemplateData) {
+    return <div className="a4-page">Loading...</div>;
+  }
+  
+  const { documentTitle, jurisdictionText } = currentTemplateData;
 
 
   const summonsMap = {
@@ -76,11 +82,6 @@ export default function PageOne({ state }: PageOneProps) {
   const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
   const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
   
-  const jurisdictionText = selectedTemplate === 'divorce' 
-    ? `{ Revised Family Code Proc. No. 213/2000 }`
-    : `{ Labour Proclamation No. 1156/2019 }`;
-
-
   return (
     <div className="a4-page">
       <div className="header-block">

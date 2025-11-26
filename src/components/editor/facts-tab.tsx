@@ -20,8 +20,8 @@ interface FactsTabProps {
 }
 
 export default function FactsTab({ state, dispatch }: FactsTabProps) {
-  const { maintenance, selectedFacts, selectedTemplate } = state;
-  const smartFactsForTemplate = TEMPLATE_DATA[selectedTemplate].facts;
+  const { maintenance, selectedFacts, selectedSubTemplate } = state;
+  const smartFactsForTemplate = TEMPLATE_DATA[selectedSubTemplate]?.facts || [];
 
   return (
     <div className="space-y-6">
@@ -33,7 +33,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
         </AlertDescription>
       </Alert>
 
-      {selectedTemplate === 'divorce' && (
+      {selectedSubTemplate === 'divorce' && (
         <>
             <div className="flex items-start space-x-3 rounded-md border border-accent bg-green-50 p-4 dark:bg-green-950/50">
                 <Checkbox

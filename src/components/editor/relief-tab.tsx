@@ -18,9 +18,9 @@ interface ReliefTabProps {
 }
 
 export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
-  const { maintenance, selectedReliefs, selectedTemplate } = state;
+  const { maintenance, selectedReliefs, selectedSubTemplate } = state;
   const customReliefs = selectedReliefs.filter(r => r.isCustom);
-  const standardReliefs = TEMPLATE_DATA[selectedTemplate].reliefs;
+  const standardReliefs = TEMPLATE_DATA[selectedSubTemplate]?.reliefs || [];
 
   return (
     <div className="space-y-6">
@@ -35,7 +35,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
       <div className="space-y-3">
         {standardReliefs.map(item => {
           const isMaintenance = item.id === 'maintenance';
-          if (isMaintenance && state.selectedTemplate !== 'divorce') return null;
+          if (isMaintenance && state.selectedSubTemplate !== 'divorce') return null;
 
           return (
             <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">

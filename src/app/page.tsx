@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useReducer, useEffect, useMemo, useCallback } from 'react';
+import React, { useReducer, useEffect, useCallback } from 'react';
 import type { AppState } from '@/lib/types';
 import { INITIAL_STATE, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, TEMPLATE_DATA, EVIDENCE_REGISTRY } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
@@ -30,7 +30,7 @@ type Action =
   | { type: 'SET_SUGGESTED_EVIDENCE'; payload: { evidenceIds: string[] } }
   | { type: 'ADD_SMART_EVIDENCE'; payload: { registryId: string } }
   | { type: 'REMOVE_SMART_EVIDENCE'; payload: { registryId: string } }
-  | { type: 'SET_SELECTED_TEMPLATE'; payload: 'divorce' | 'labour' }
+  | { type: 'SET_SELECTED_SUB_TEMPLATE'; payload: { templateId: string; subTemplateId: string } }
   | { type: 'TOGGLE_RELIEF'; payload: { reliefId: string } }
   | { type: 'ADD_CUSTOM_RELIEF' }
   | { type: 'UPDATE_CUSTOM_RELIEF'; payload: { id: string; text: string } }
@@ -73,7 +73,7 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'TOGGLE_FACT': {
       const { factId } = action.payload;
-      const smartFactsForTemplate = TEMPLATE_DATA[state.selectedTemplate].facts;
+      const smartFactsForTemplate = TEMPLATE_DATA[state.selectedSubTemplate]?.facts || [];
       const factExists = state.selectedFacts.some(f => f.id === factId);
       let newSelectedFacts;
       
@@ -111,7 +111,7 @@ function appReducer(state: AppState, action: Action): AppState {
     }
 
     case 'TOGGLE_MAINTENANCE': {
-        if (state.selectedTemplate !== 'divorce') return state; // Only for divorce template
+        if (state.selectedSubTemplate !== 'divorce') return state; // Only for divorce template
         const newActive = action.payload.checked;
         const newSmartEvidence = { ...state.smartEvidence };
         const newSelectedReliefs = [...state.selectedReliefs];
@@ -218,18 +218,20 @@ function appReducer(state: AppState, action: Action): AppState {
       const { id, field, value } = action.payload;
       return { ...state, evidence: state.evidence.map(e => e.id === id ? { ...e, [field]: value } : e) };
     }
-    case 'SET_SELECTED_TEMPLATE': {
-        const newTemplateId = action.payload;
-        if (state.selectedTemplate === newTemplateId) {
+    case 'SET_SELECTED_SUB_TEMPLATE': {
+        const { templateId, subTemplateId } = action.payload;
+        if (state.selectedSubTemplate === subTemplateId) {
             return state; // No change
         }
 
-        const templateData = TEMPLATE_DATA[newTemplateId];
+        const templateData = TEMPLATE_DATA[subTemplateId];
+        if (!templateData) return state; // Safety check
 
         // Reset state relevant to the template
         return {
             ...state,
-            selectedTemplate: newTemplateId,
+            selectedTemplate: templateId,
+            selectedSubTemplate: subTemplateId,
             partyTitles: templateData.partyTitles,
             selectedFacts: [],
             selectedReliefs: templateData.reliefs.filter(r => r.isDefault),
@@ -246,10 +248,10 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'TOGGLE_RELIEF': {
       const { reliefId } = action.payload;
-      if (reliefId === 'maintenance') {
+      if (reliefId === 'maintenance' && state.selectedSubTemplate === 'divorce') {
           return appReducer(state, { type: 'TOGGLE_MAINTENANCE', payload: { checked: !state.maintenance.active } });
       }
-      const reliefItem = TEMPLATE_DATA[state.selectedTemplate].reliefs.find(r => r.id === reliefId);
+      const reliefItem = TEMPLATE_DATA[state.selectedSubTemplate]?.reliefs.find(r => r.id === reliefId);
       if (!reliefItem) return state;
 
       const isSelected = state.selectedReliefs.some(r => r.id === reliefId);

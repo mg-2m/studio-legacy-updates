@@ -69,11 +69,19 @@ export interface Relief {
     isCustom?: boolean;
 }
 
-export type Template = {
-  id: 'divorce' | 'labour';
+export interface SubTemplate {
+  id: 'divorce' | 'labour' | string; // Allow for future string-based IDs
   label: string;
   icon: React.ElementType;
-};
+}
+
+export interface Template {
+  id: string;
+  label: string;
+  icon: React.ElementType;
+  subTemplates: SubTemplate[];
+}
+
 
 export interface PartyTitles {
   applicant: string;
@@ -103,5 +111,6 @@ export interface AppState {
   evidence: ManualEvidence[];
   smartEvidence: SmartEvidence;
   partyTitles: PartyTitles;
-  selectedTemplate: 'divorce' | 'labour';
+  selectedTemplate: string;
+  selectedSubTemplate: string;
 }

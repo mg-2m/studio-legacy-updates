@@ -38,12 +38,12 @@ interface HeaderPartiesTabProps {
 }
 
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
-  const { metadata, applicants, respondents, partyTitles, selectedTemplate } = state;
+  const { metadata, applicants, respondents, partyTitles, selectedSubTemplate } = state;
   const dateObject = metadata.date.endsWith(' EC') ? new Date() : new Date(metadata.date);
   
-  const currentTemplateData = TEMPLATE_DATA[selectedTemplate];
-  const applicantTitleOptions = currentTemplateData.partyTitles.applicantOptions;
-  const respondentTitleOptions = currentTemplateData.partyTitles.respondentOptions;
+  const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
+  const applicantTitleOptions = currentTemplateData?.partyTitles.applicantOptions || [];
+  const respondentTitleOptions = currentTemplateData?.partyTitles.respondentOptions || [];
 
   return (
     <Accordion type="multiple" defaultValue={['item-1', 'item-4', 'item-5']} className="w-full space-y-4">

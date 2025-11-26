@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry } from "./types";
-import { FileText, Briefcase } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -158,18 +158,52 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
 };
 
 export const TEMPLATES: Template[] = [
-  { id: 'divorce', label: 'የፍቺ ማመልከቻ (Divorce)', icon: FileText },
-  { id: 'labour', label: 'የሠራተኛ ክርክር (Labour)', icon: Briefcase },
+  { 
+    id: 'family_law', 
+    label: 'የቤተሰብ ሕግ (Family Law)', 
+    icon: Handshake,
+    subTemplates: [
+      { id: 'divorce', label: 'የፍቺ ማመልከቻ (Divorce)', icon: FileText },
+    ]
+  },
+  { 
+    id: 'labour_law', 
+    label: 'የሠራተኛ ሕግ (Labour Law)', 
+    icon: Briefcase,
+    subTemplates: [
+       { id: 'labour', label: 'የሠራተኛ ክርክር (Labour)', icon: FileText },
+    ]
+  },
+   { 
+    id: 'administrative_law', 
+    label: 'የአስተዳደር ሕግ (Administrative Law)', 
+    icon: Landmark,
+    subTemplates: [
+       { id: 'admin_complaint', label: 'የአስተዳደር በደል (Complaint)', icon: FileText },
+    ]
+  },
+   { 
+    id: 'criminal_law', 
+    label: 'የወንጀል ሕግ (Criminal Law)', 
+    icon: Shield,
+    subTemplates: [
+       { id: 'bail_application', label: 'የዋስትና ማመልከቻ (Bail)', icon: FileText },
+    ]
+  },
 ];
 
 interface TemplateData {
   facts: Fact[];
   reliefs: Relief[];
   partyTitles: PartyTitles;
+  documentTitle: string;
+  jurisdictionText: string;
 }
 
-export const TEMPLATE_DATA: { [key in Template['id']]: TemplateData } = {
+export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
   divorce: {
+    documentTitle: 'የፍቺ ማመልከቻ',
+    jurisdictionText: '{ Revised Family Code Proc. No. 213/2000 }',
     partyTitles: {
       applicant: 'አመልካች (Applicant)',
       respondent: 'ተጠሪ (Respondent)',
@@ -229,7 +263,9 @@ export const TEMPLATE_DATA: { [key in Template['id']]: TemplateData } = {
     ]
   },
   labour: {
-     partyTitles: {
+    documentTitle: 'የሠራተኛ ክርክር ክስ',
+    jurisdictionText: '{ Labour Proclamation No. 1156/2019 }',
+    partyTitles: {
       applicant: 'ከሳሽ (Plaintiff)',
       respondent: 'ተከሳሽ (Defendant)',
       applicantOptions: ['ከሳሽ (Plaintiff)'],
@@ -283,13 +319,38 @@ export const TEMPLATE_DATA: { [key in Template['id']]: TemplateData } = {
           isDefault: true,
       },
     ]
+  },
+  admin_complaint: { // Placeholder data
+    documentTitle: 'የአስተዳደር በደል ክስ',
+    jurisdictionText: '{ Administrative Procedure Proclamation No. 1183/2020 }',
+    partyTitles: {
+      applicant: 'አመልካች (Applicant)',
+      respondent: 'ተጠሪ (Respondent)',
+      applicantOptions: ['አመልካች (Applicant)'],
+      respondentOptions: ['ተጠሪ (Respondent)'],
+    },
+    facts: [],
+    reliefs: []
+  },
+  bail_application: { // Placeholder data
+    documentTitle: 'የዋስትና መብት ማመልከቻ',
+    jurisdictionText: '{ Criminal Procedure Code }',
+    partyTitles: {
+      applicant: 'አመልካች (Applicant)',
+      respondent: 'ዐቃቤ ሕግ (Prosecutor)',
+      applicantOptions: ['አመልካች (Applicant)'],
+      respondentOptions: ['ዐቃቤ ሕግ (Prosecutor)'],
+    },
+    facts: [],
+    reliefs: []
   }
 };
 
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
 const defaultBench = COURT_HIERARCHY[defaultCourtLevel as keyof typeof COURT_HIERARCHY][0];
-const initialTemplateId: Template['id'] = 'divorce';
-const initialTemplateData = TEMPLATE_DATA[initialTemplateId];
+const initialTemplateId: string = TEMPLATES[0].id;
+const initialSubTemplateId: string = TEMPLATES[0].subTemplates[0].id;
+const initialTemplateData = TEMPLATE_DATA[initialSubTemplateId];
 
 
 export const INITIAL_STATE: AppState = {
@@ -318,4 +379,5 @@ export const INITIAL_STATE: AppState = {
   smartEvidence: {},
   partyTitles: initialTemplateData.partyTitles,
   selectedTemplate: initialTemplateId,
+  selectedSubTemplate: initialSubTemplateId,
 };

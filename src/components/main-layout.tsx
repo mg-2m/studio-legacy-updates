@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -16,7 +17,7 @@ export default function MainLayout({ state, dispatch }: MainLayoutProps) {
   return (
     <SidebarProvider>
       <div className="flex h-screen w-full bg-background overflow-hidden">
-        <AppSidebar selectedTemplate={state.selectedTemplate} dispatch={dispatch} />
+        <AppSidebar selectedTemplate={state.selectedTemplate} selectedSubTemplate={state.selectedSubTemplate} dispatch={dispatch} />
         <SidebarInset>
           <main className="flex flex-1 overflow-hidden">
             <EditorColumn

@@ -20,8 +20,9 @@ interface EditorColumnProps {
 }
 
 export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
-  const selectedTemplate = TEMPLATES.find(t => t.id === state.selectedTemplate);
-  const Icon = selectedTemplate?.icon;
+    const selectedTemplate = TEMPLATES.find(t => t.id === state.selectedTemplate);
+    const selectedSubTemplate = selectedTemplate?.subTemplates.find(st => st.id === state.selectedSubTemplate);
+    const Icon = selectedSubTemplate?.icon;
 
   return (
     <section 
@@ -32,7 +33,7 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
         {Icon && (
           <div className="ml-2 flex items-center gap-2 text-primary font-semibold">
             <Icon className="size-5" />
-            <h1 className="text-base">{selectedTemplate?.label}</h1>
+            <h1 className="text-base">{selectedSubTemplate?.label}</h1>
           </div>
         )}
       </div>

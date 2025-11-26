@@ -5,21 +5,29 @@ import { Printer, Scale } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TEMPLATES } from '@/lib/data';
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
-  SidebarMenuItem
+  SidebarMenuItem,
+  SidebarSeparator
 } from '@/components/ui/sidebar';
 
 interface AppSidebarProps {
-  selectedTemplate: 'divorce' | 'labour';
+  selectedTemplate: string;
+  selectedSubTemplate: string;
   dispatch: React.Dispatch<any>;
 }
 
-export default function AppSidebar({ selectedTemplate, dispatch }: AppSidebarProps) {
+export default function AppSidebar({ selectedTemplate, selectedSubTemplate, dispatch }: AppSidebarProps) {
   const handlePrint = () => {
     window.print();
   };
@@ -33,19 +41,33 @@ export default function AppSidebar({ selectedTemplate, dispatch }: AppSidebarPro
         </div>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarMenu>
-          {TEMPLATES.map(template => (
-            <SidebarMenuItem key={template.id}>
-              <SidebarMenuButton 
-                isActive={selectedTemplate === template.id}
-                onClick={() => dispatch({ type: 'SET_SELECTED_TEMPLATE', payload: template.id })}
-              >
-                <template.icon />
-                <span>{template.label}</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
-        </SidebarMenu>
+        <Accordion type="multiple" defaultValue={[selectedTemplate]} className="w-full">
+            {TEMPLATES.map(template => (
+              <AccordionItem value={template.id} key={template.id} className="border-none">
+                <AccordionTrigger className="px-2 py-1.5 text-base font-semibold hover:bg-sidebar-accent hover:no-underline rounded-md [&[data-state=open]]:bg-sidebar-accent">
+                    <div className="flex items-center gap-2">
+                        <template.icon className="size-5" />
+                        <span>{template.label}</span>
+                    </div>
+                </AccordionTrigger>
+                <AccordionContent className="pt-1">
+                    <SidebarMenu>
+                    {template.subTemplates.map(subTemplate => (
+                        <SidebarMenuItem key={subTemplate.id}>
+                        <SidebarMenuButton 
+                            isActive={selectedSubTemplate === subTemplate.id}
+                            onClick={() => dispatch({ type: 'SET_SELECTED_SUB_TEMPLATE', payload: { templateId: template.id, subTemplateId: subTemplate.id } })}
+                        >
+                            <subTemplate.icon />
+                            <span>{subTemplate.label}</span>
+                        </SidebarMenuButton>
+                        </SidebarMenuItem>
+                    ))}
+                    </SidebarMenu>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+        </Accordion>
       </SidebarContent>
       <SidebarFooter>
         <Button

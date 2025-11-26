@@ -123,11 +123,11 @@ function appReducer(state: AppState, action: Action): AppState {
     }
 
     case 'TOGGLE_MAINTENANCE': {
-        if (state.selectedSubTemplate !== 'divorce') return state;
+        if (state.selectedSubTemplate !== 'family_divorce_dispute') return state;
         const newActive = action.payload.checked;
         const newSmartEvidence = { ...state.smartEvidence };
         const newSelectedReliefs = [...state.selectedReliefs];
-        const maintenanceRelief = TEMPLATE_DATA.divorce.reliefs.find(r => r.id === 'maintenance');
+        const maintenanceRelief = TEMPLATE_DATA.family_divorce_dispute.reliefs.find(r => r.id === 'relief_child_support');
 
         if (newActive) {
           if (EVIDENCE_REGISTRY['birth_cert']) {
@@ -137,7 +137,7 @@ function appReducer(state: AppState, action: Action): AppState {
                   newSmartEvidence['birth_cert'].active = true;
               }
           }
-          if (maintenanceRelief && !newSelectedReliefs.some(r => r.id === 'maintenance')) {
+          if (maintenanceRelief && !newSelectedReliefs.some(r => r.id === 'relief_child_support')) {
               newSelectedReliefs.push(maintenanceRelief);
           }
         } else {
@@ -146,7 +146,7 @@ function appReducer(state: AppState, action: Action): AppState {
               delete newSmartEvidence['birth_cert'];
           }
            if (maintenanceRelief) {
-              const index = newSelectedReliefs.findIndex(r => r.id === 'maintenance');
+              const index = newSelectedReliefs.findIndex(r => r.id === 'relief_child_support');
               if (index > -1) {
                   newSelectedReliefs.splice(index, 1);
               }
@@ -274,7 +274,8 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'TOGGLE_RELIEF': {
       const { reliefId } = action.payload;
-      if (reliefId === 'maintenance' && state.selectedSubTemplate === 'divorce') {
+      const isMaintenanceRelief = TEMPLATE_DATA[state.selectedSubTemplate]?.reliefs.some(r => r.id === 'relief_child_support');
+      if (isMaintenanceRelief && reliefId === 'relief_child_support') {
           return appReducer(state, { type: 'TOGGLE_MAINTENANCE', payload: { checked: !state.maintenance.active } });
       }
       const reliefItem = TEMPLATE_DATA[state.selectedSubTemplate]?.reliefs.find(r => r.id === reliefId);
@@ -390,3 +391,5 @@ export default function Home() {
     <MainLayout state={state} dispatch={dispatch} />
   );
 }
+
+    

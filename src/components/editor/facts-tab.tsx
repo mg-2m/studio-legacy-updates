@@ -43,7 +43,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
         </AlertDescription>
       </Alert>
 
-      {selectedSubTemplate === 'divorce' && (
+      {selectedSubTemplate === 'family_divorce_dispute' && (
         <>
             <div className="flex items-start space-x-3 rounded-md border border-accent bg-green-50 p-4 dark:bg-green-950/50">
                 <Checkbox
@@ -172,3 +172,5 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
     </div>
   );
 }
+
+    

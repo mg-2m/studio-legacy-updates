@@ -183,6 +183,62 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     credentialLabel: 'Submission Date or Ref No.',
     credentialPlaceholder: 'e.g., 15/05/2024',
   },
+  police_report_domestic_violence: {
+    id: 'police_report_domestic_violence',
+    label: 'Police Report (Domestic Violence)',
+    type: 'Document',
+    credentialLabel: 'Report Number',
+    credentialPlaceholder: 'e.g., AA/Pol/2024/789',
+  },
+  witness_statements: {
+    id: 'witness_statements',
+    label: 'Witness Statement(s)',
+    type: 'Witness',
+    credentialLabel: 'Witness Name(s)',
+    credentialPlaceholder: 'e.g., Ato Kebede Abebe',
+  },
+  list_of_common_property: {
+    id: 'list_of_common_property',
+    label: 'List of Common Property',
+    type: 'Document',
+    credentialLabel: 'Inventory Date or Reference',
+    credentialPlaceholder: 'e.g., Inventory as of 20/06/2024',
+  },
+  proof_of_income: {
+    id: 'proof_of_income',
+    label: 'Proof of Income',
+    type: 'Document',
+    credentialLabel: 'Document Type (e.g., Payslip, Bank Statement)',
+    credentialPlaceholder: 'e.g., June 2024 Payslip',
+  },
+  copy_of_divorce_judgment: {
+    id: 'copy_of_divorce_judgment',
+    label: 'Copy of Divorce Judgment',
+    type: 'Document',
+    credentialLabel: 'Case/File Number',
+    credentialPlaceholder: 'e.g., FHC/CV/1234/2023',
+  },
+  proof_of_inheritance_donation: {
+    id: 'proof_of_inheritance_donation',
+    label: 'Proof of Inheritance/Donation',
+    type: 'Document',
+    credentialLabel: 'Document Reference',
+    credentialPlaceholder: 'e.g., Will of Ato Abebe Kebede',
+  },
+  pre_marital_ownership_documents: {
+    id: 'pre_marital_ownership_documents',
+    label: 'Pre-marital Ownership Documents',
+    type: 'Document',
+    credentialLabel: 'Document Reference (e.g., Title Deed No.)',
+    credentialPlaceholder: 'e.g., Title Deed 5678/99',
+  },
+  title_deeds_librec: {
+    id: 'title_deeds_librec',
+    label: 'Title Deeds / Librec',
+    type: 'Document',
+    credentialLabel: 'Title Deed/Librec Number',
+    credentialPlaceholder: 'e.g., LDR/TD/9876',
+  },
 };
 
 export const TEMPLATES: Template[] = [
@@ -191,7 +247,13 @@ export const TEMPLATES: Template[] = [
     label: 'የቤተሰብ ሕግ (Family Law)', 
     icon: Handshake,
     subTemplates: [
-      { id: 'divorce', label: 'የፍቺ ማመልከቻ (Divorce)', icon: Scale },
+      { id: 'family_divorce_dispute', label: 'የፍቺ ክርክር (Divorce Dispute)', icon: Scale },
+      { id: 'family_divorce_agreement', label: 'የፍቺ ስምምነት (Divorce Agreement)', icon: Handshake },
+      { id: 'family_paternity_claim', label: 'የአባትነት ክስ (Paternity Claim)', icon: FileText },
+      { id: 'family_post_judgment_partition', label: 'ከፍቺ በኋላ የንብረት ክፍፍል (Post-Divorce Partition)', icon: Building2 },
+      { id: 'app_temporary_maintenance', label: 'ጊዜያዊ ቀለብ ጥያቄ (Temp Maintenance)', icon: Receipt },
+      { id: 'app_property_preservation', label: 'የንብረት እግድ ጥያቄ (Property Injunction)', icon: Home },
+      { id: 'app_protective_order', label: 'የጥበቃ ትዕዛዝ ጥያቄ (Protective Order)', icon: ShieldAlert },
     ]
   },
   { 
@@ -214,132 +276,201 @@ export const TEMPLATES: Template[] = [
        { id: 'civil_service_benefits_grievance', label: 'Benefits & Rights Grievance', icon: FileText },
     ]
   },
-   { 
-    id: 'criminal_law', 
-    label: 'የወንጀል ሕግ (Criminal Law)', 
-    icon: Shield,
-    subTemplates: [
-       { id: 'bail_application', label: 'Bail Application', icon: FileText },
-    ]
-  },
-  { 
-    id: 'contract_law', 
-    label: 'የውል ሕግ (Contract Law)', 
-    icon: FileSignature,
-    subTemplates: [
-       { id: 'lease_agreement', label: 'Lease Agreement', icon: Home },
-       { id: 'sales_agreement', label: 'Sales Agreement', icon: Receipt },
-    ]
-  },
-  { 
-    id: 'succession_law', 
-    label: 'የውርስ ሕግ (Succession Law)', 
-    icon: BookUser,
-    subTemplates: [
-       { id: 'probate', label: 'Probate Application', icon: FileText },
-    ]
-  },
-  { 
-    id: 'property_law', 
-    label: 'የንብረት ሕግ (Property Law)', 
-    icon: Home,
-    subTemplates: [
-       { id: 'property_dispute', label: 'Property Dispute', icon: FileText },
-    ]
-  },
-  { 
-    id: 'commercial_law', 
-    label: 'የንግድ ሕግ (Commercial)', 
-    icon: Building2,
-    subTemplates: [
-       { id: 'business_formation', label: 'Business Formation', icon: FileText },
-    ]
-  },
-  { 
-    id: 'tort_law', 
-    label: 'ከውል ውጭ ጉዳት (Torts)', 
-    icon: ShieldAlert,
-    subTemplates: [
-       { id: 'civil_damages', label: 'Civil Damages Claim', icon: FileText },
-    ]
-  },
-  { 
-    id: 'tax_law', 
-    label: 'የግብርና ቀረጥ ሕግ (Tax Law)', 
-    icon: Receipt,
-    subTemplates: [
-       { id: 'tax_appeal', label: 'Tax Appeal', icon: FileText },
-    ]
-  },
-  { 
-    id: 'financial_law', 
-    label: 'የገንዘብ ሕግ (Financial Law)', 
-    icon: Banknote,
-    subTemplates: [
-       { id: 'negotiable_instrument', label: 'Negotiable Instrument Claim', icon: FileText },
-    ]
-  },
 ];
 
 export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
-  divorce: {
-    documentTitle: 'የፍቺ ማመልከቻ',
-    jurisdictionText: 'Revised Family Code Proc. No. 213/2000',
+  family_divorce_dispute: {
+    documentTitle: 'Statement of Claim for Dissolution of Marriage',
+    jurisdictionText: 'Art. 11(2) of Federal Courts Proc. 25/96 and Art. 76 of the Revised Family Code.',
     partyTitles: {
-      applicant: 'አመልካች (Applicant)',
-      respondent: 'ተጠሪ (Respondent)',
+      applicant: "Plaintiff",
+      respondent: "Defendant"
     },
     facts: [
       {
-        id: 'conflict',
-        label: 'General Grounds for Divorce (አጠቃላይ የፍቺ ምክንያቶች)',
-        legalText: 'Irreconcilable Differences: በተጋቢዎች መካከል በተፈጠረ አለመግባባት ምክንያት ሰላም የሌለ በመሆኑ እና በትዳር መቀጠል የማይችሉበት ደረጃ ላይ በመድረሳቸው',
-        citation: 'Family Code Art. 75',
-        autoEvidence: ['marriage_cert']
+        id: "fact_marriage_existence",
+        label: "Marriage Validity",
+        legalText: "The Plaintiff and Defendant were legally married on [Date].",
+        citation: "RFC Art. 1",
+        autoEvidence: ["marriage_cert"]
       },
       {
-        id: 'separation',
-        label: 'General Grounds for Divorce (አጠቃላይ የፍቺ ምክንያቶች)',
-        legalText: 'Separation for 2 Years: ተጋቢዎች ለሁለት ዓመት እና ከዚያ በላይ ተለያይተው የኖሩ በመሆኑ',
-        citation: 'Family Code Art. 81',
-        autoEvidence: ['separation_witness']
+        id: "fact_irretrievable_breakdown",
+        label: "Grounds for Dissolution",
+        legalText: "There are irreconcilable differences making the continuation of the marriage impossible.",
+        citation: "RFC Art. 76",
+        autoEvidence: []
       },
       {
-        id: 'desertion',
-        label: 'General Grounds for Divorce (አጠቃላይ የፍቺ ምክንያቶች)',
-        legalText: 'Desertion: ተከሳሽ ትዳሩን እና ቤተሰቡን ጥሎ ከጠፋ ረጅም ጊዜ የሆነው በመሆኑ',
-        citation: 'Family Code Art. (Relevant)',
-        autoEvidence: ['desertion_witness']
+        id: "fact_period_of_separation",
+        label: "Grounds for Dissolution",
+        legalText: "The parties have lived separately for a period exceeding [Number] months.",
+        citation: "RFC Art. 81",
+        autoEvidence: []
+      },
+      {
+        id: "fact_children_existence",
+        label: "Children & Custody",
+        legalText: "The marriage produced [Number] children.",
+        citation: "RFC Art. 113",
+        autoEvidence: ["birth_cert"]
       }
     ],
     reliefs: [
-        {
-            id: 'validate_facts',
-            text: 'ከላይ የተዘረዘሩት የክሱ ፍሬ ነገሮች በፍ/ብ/ስ/ስ/ህ/ቁ 92 መሰረት እንዲረጋገጥልኝ፡፡',
-            isDefault: true,
-        },
-        {
-            id: 'grant_divorce',
-            text: 'በተከሳሽና በአመልካች መካከል በህግ አግባብ የተመሰረተው የጋብቻ ውል በፍቺ እንዲፈርስልኝ፡፡',
-            isDefault: true,
-        },
-        {
-            id: 'maintenance',
-            text: 'ተከሳሽ በወር {{{income}}} ብር ገቢ ስላላቸው፣ ለ {{{children}}} ልጅ/ልጆች አስተዳደግ እና ቀለብ ለእያንዳንዱ ልጅ በወር {{{result}}} ብр እንዲከፍሉ ይወሰንልኝ፡፡',
-            isDefault: false,
-            isDynamic: true,
-        },
-        {
-            id: 'appropriate_judgment',
-            text: 'ተገቢው የፍርድ ውሳኔ እንዲሰጠኝ፡፡',
-            isDefault: true,
-        },
-        {
-            id: 'costs_and_fees',
-            text: 'ወጪ እና ኪሳራ እንዲተካ፡፡',
-            isDefault: true,
-        },
+      { id: "relief_dissolution", text: "Judgment dissolving the marriage between the Plaintiff and Defendant.", isDefault: true },
+      { id: "relief_custody", text: "Order granting sole/joint custody of the minor children to the Plaintiff.", isDefault: false },
+      { id: "relief_child_support", text: "Order for the Defendant to pay monthly child maintenance.", isDefault: false },
+      { id: "relief_property_partition", text: "Order for the liquidation and partition of common marital property.", isDefault: false },
     ]
+  },
+  family_divorce_agreement: {
+      documentTitle: "Petition for Approval of Divorce by Mutual Consent",
+      jurisdictionText: "Art. 77 of the Revised Family Code.",
+      partyTitles: { applicant: "First Petitioner", respondent: "Second Petitioner" },
+      facts: [
+          { id: "fact_mutual_agreement", label: "Consent Details", legalText: "Both parties have voluntarily agreed to dissolve their marriage.", citation: "RFC Art. 77", autoEvidence: ["marriage_cert"] },
+          { id: "fact_agreement_doc", label: "Terms of Agreement", legalText: "The parties have prepared a comprehensive agreement regarding the division of property and custody of children.", citation: "RFC Art. 82", autoEvidence: ["list_of_common_property"] }
+      ],
+      reliefs: [{ id: "relief_approve_agreement", text: "Order approving the divorce agreement and dissolving the marriage.", isDefault: true }]
+  },
+  family_paternity_claim: {
+      documentTitle: "Statement of Claim for Judicial Declaration of Paternity",
+      jurisdictionText: "Art. 143 of the Revised Family Code.",
+      partyTitles: { applicant: "Plaintiff (Child/Guardian)", respondent: "Defendant (Alleged Father)" },
+      facts: [
+          { id: "fact_sexual_intercourse", label: "Sexual Relations", legalText: "The mother and the Defendant had sexual relations during the legal period of conception.", citation: "RFC Art. 143", autoEvidence: [] },
+          { id: "fact_possession_status", label: "Possession of Status", legalText: "The Defendant has treated the child as his own in public and private spheres.", citation: "RFC Art. 136", autoEvidence: ["witness_statements"] }
+      ],
+      reliefs: [
+          { id: "relief_declare_paternity", text: "Judgment declaring the Defendant is the biological father of the child.", isDefault: true },
+          { id: "relief_reimbursement", text: "Order for reimbursement of expenses related to birth and maintenance.", isDefault: false }
+      ]
+  },
+  family_post_judgment_partition: {
+    documentTitle: "Application for Liquidation and Partition of Common Property",
+    jurisdictionText: "Art. 85 & 90 of the Revised Family Code and Art. 219 of the Civil Procedure Code (Execution Proceedings).",
+    partyTitles: {
+      applicant: "Decree Holder (Applicant)",
+      respondent: "Judgment Debtor (Respondent)"
+    },
+    facts: [
+      {
+        id: "fact_prior_dissolution",
+        label: "Procedural History",
+        legalText: "This Honorable Court has already rendered a judgment dissolving the marriage between the parties under this file number.",
+        citation: "Civil Procedure Code Art. 182",
+        autoEvidence: [
+          "copy_of_divorce_judgment"
+        ]
+      },
+      {
+        id: "fact_custody_settled",
+        label: "Procedural History",
+        legalText: "Issues regarding child custody and maintenance have already been adjudicated.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_existence_common_property",
+        label: "Identification of Property",
+        legalText: "The parties acquired movable and immovable property during the existence of the marriage which constitutes Common Property.",
+        citation: "RFC Art. 62",
+        autoEvidence: [
+          "list_of_common_property",
+          "title_deeds_librec"
+        ]
+      },
+      {
+        id: "fact_property_possession",
+        label: "Identification of Property",
+        legalText: "The property is currently in the sole possession/control of the Respondent/Applicant.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_personal_property_claim",
+        label: "Restitution of Personal Property (Pre-Partition)",
+        legalText: "The Applicant possesses proof of personal property owned prior to the marriage or acquired by succession/donation, which must be withdrawn before partition.",
+        citation: "RFC Art. 57 & 86",
+        autoEvidence: [
+          "proof_of_inheritance_donation",
+          "pre_marital_ownership_documents"
+        ]
+      },
+      {
+        id: "fact_dispute_valuation",
+        label: "Valuation & Dispute",
+        legalText: "The parties are unable to agree on the value or mode of partition of the assets.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_expert_need",
+        label: "Valuation & Dispute",
+        legalText: "The complexity of the assets (e.g., business shares, real estate) requires professional valuation.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_appoint_liquidator",
+        text: "Order the appointment of a court-verified expert/liquidator to inventory and value the common property.",
+        isDefault: true
+      },
+      {
+        id: "relief_withdraw_personal",
+        text: "Order the restitution/withdrawal of the Applicant's personal property [List Items] prior to partition.",
+        isDefault: false
+      },
+      {
+        id: "relief_partition_equal",
+        text: "Order the remaining common property be divided equally (50/50) between the parties.",
+        isDefault: true
+      },
+      {
+        id: "relief_auction_sale",
+        text: "Order the sale by auction of indivisible property and the division of the proceeds.",
+        isDefault: false
+      }
+    ]
+  },
+  app_temporary_maintenance: {
+      documentTitle: "Application for Order of Provisional Maintenance",
+      jurisdictionText: "Art. 83(2) of the Revised Family Code & Art. 154 Civil Procedure Code.",
+      partyTitles: { applicant: "Applicant", respondent: "Respondent" },
+      facts: [
+          { id: "fact_pendency_of_suit", label: "Urgency & Need", legalText: "A main suit for divorce is currently pending between the parties.", citation: "RFC Art. 83", autoEvidence: [] },
+          { id: "fact_immediate_need", label: "Urgency & Need", legalText: "The Applicant has no independent income to support themselves/the children during the litigation.", citation: "RFC Art. 106", autoEvidence: ["proof_of_income"] },
+          { id: "fact_ability_to_pay", label: "Urgency & Need", legalText: "The Respondent has sufficient income to provide provisional support.", citation: "", autoEvidence: [] }
+      ],
+      reliefs: [{ id: "relief_prov_maintenance", text: "Order the Respondent to pay [Amount] ETB monthly until final judgment.", isDefault: true }]
+  },
+  app_property_preservation: {
+      documentTitle: "Application for Attachment and Preservation of Common Property",
+      jurisdictionText: "Art. 154 Civil Procedure Code & Art. 83 Revised Family Code.",
+      partyTitles: { applicant: "Applicant", respondent: "Respondent" },
+      facts: [
+          { id: "fact_intent_to_defraud", label: "Risk of Dissipation", legalText: "There is a reasonable apprehension that the Respondent is attempting to sell, transfer, or hide common marital assets.", citation: "CPC Art. 154", autoEvidence: [] },
+          { id: "fact_common_ownership", label: "Risk of Dissipation", legalText: "The property in question is common property acquired during the marriage.", citation: "RFC Art. 62", autoEvidence: ["list_of_common_property"] }
+      ],
+      reliefs: [
+          { id: "relief_injunction_transfer", text: "Order restraining the Respondent from transferring or selling specific assets.", isDefault: true },
+          { id: "relief_freeze_accounts", text: "Order freezing the joint bank accounts pending final partition.", isDefault: false }
+      ]
+  },
+  app_protective_order: {
+      documentTitle: "Application for Urgent Protective Order",
+      jurisdictionText: "Art. 154 Civil Procedure Code (Inherent Power) & Criminal Code References.",
+      partyTitles: { applicant: "Applicant", respondent: "Respondent" },
+      facts: [
+          { id: "fact_imminent_danger", label: "Safety & Harm", legalText: "The Applicant faces immediate physical danger from the Respondent.", citation: "", autoEvidence: ["police_report_domestic_violence"] },
+          { id: "fact_balance_convenience", label: "Safety & Harm", legalText: "The harm to the Applicant if the order is not granted outweighs any inconvenience to the Respondent.", citation: "", autoEvidence: [] }
+      ],
+      reliefs: [
+          { id: "relief_vacate_home", text: "Order the Respondent to temporarily vacate the matrimonial home.", isDefault: true },
+          { id: "relief_restrain_contact", text: "Order restraining the Respondent from coming within [Distance] meters of the Applicant.", isDefault: false }
+      ]
   },
   labour_unlawful_termination: {
     documentTitle: 'Statement of Claim for Unlawful Termination',
@@ -380,16 +511,16 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         {
             id: 'union_membership_termination',
             label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
-            legalText: "Termination was due to the employee's membership in a trade union or participation in union activities.",
+            legalText: 'Termination was due to the employee\'s membership in a trade union or participation in union activities.',
             citation: 'Art. 26(2)(a) of Proc. 1156/2019',
             autoEvidence: ['termination_letter'],
         },
         {
-            id: "maternity_termination",
-            label: "The Act of Termination: Substantive Violations (Unlawful Grounds)",
-            legalText: "Termination was due to the employee's pregnancy or maternity leave status.",
-            citation: "Art. 26(2)(d) of Proc. 1156/2019",
-            autoEvidence: ["termination_letter"]
+            id: 'maternity_termination',
+            label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
+            legalText: 'Termination was due to the employee\'s pregnancy or maternity leave status.',
+            citation: 'Art. 26(2)(d) of Proc. 1156/2019',
+            autoEvidence: ['termination_letter'],
         },
         {
             id: 'whistleblower_termination',
@@ -408,14 +539,14 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         {
             id: 'no_valid_reason',
             label: 'The Act of Termination: The "No Reason" Defense',
-            legalText: "The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking.",
+            legalText: 'The employer failed to provide a valid reason for termination related to the worker\'s capacity or conduct, or the organizational needs of the undertaking.',
             citation: 'Violation of Art. 27 of Proc. 1156/2019',
             autoEvidence: ['termination_letter'],
         },
         {
             id: 'constructive_dismissal',
             label: 'The Act of Termination: Constructive Dismissal',
-            legalText: "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.",
+            legalText: 'Employee was forced to resign due to the employer\'s unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.',
             citation: 'Art. 32 of Proc. 1156/2019',
             autoEvidence: [],
         },
@@ -531,7 +662,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: 'injury_at_work',
         label: 'The Incident',
-        legalText: "The injury occurred during the performance of the employee's duties within the regular working hours and at the designated workplace.",
+        legalText: 'The injury occurred during the performance of the employee\'s duties within the regular working hours and at the designated workplace.',
         citation: 'Art. 95(1)(a)',
         autoEvidence: [],
       },
@@ -579,12 +710,12 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       },
       {
         id: 'disability_compensation',
-        text: "Payment of disability compensation, calculated based on the employee's salary and the percentage of disability as determined by the medical board (Art. 109 & 110).",
+        text: 'Payment of disability compensation, calculated based on the employee\'s salary and the percentage of disability as determined by the medical board (Art. 109 & 110).',
         isDefault: false,
       },
       {
         id: 'periodical_payment',
-        text: "Payment for temporary disability, equivalent to 75% of the employee's daily wage, for the duration of the disability (Art. 106).",
+        text: 'Payment for temporary disability, equivalent to 75% of the employee\'s daily wage, for the duration of the disability (Art. 106).',
         isDefault: false,
       },
       {
@@ -619,7 +750,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: 'measure_fine',
         label: 'The Disciplinary Measure (The Trigger)',
-        legalText: "Imposition of a fine exceeding one month's salary.",
+        legalText: 'Imposition of a fine exceeding one month\'s salary.',
         citation: 'Art. 81(1)(b) of Proc. 1064/2017',
         autoEvidence: ['dismissal_letter'],
       },
@@ -686,7 +817,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       },
       {
         id: 'expunge_record',
-        text: "To order the expunging of the disciplinary measure from the Appellant's personal file.",
+        text: 'To order the expunging of the disciplinary measure from the Appellant\'s personal file.',
         isDefault: false,
       },
     ],
@@ -803,69 +934,6 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       },
     ],
   },
-  bail_application: {
-    documentTitle: 'የዋስትና መብት ማመልከቻ',
-    jurisdictionText: 'Criminal Procedure Code',
-    partyTitles: { applicant: 'አመልካች (Applicant)', respondent: 'ዐቃቤ ሕግ (Prosecutor)' },
-    facts: [],
-    reliefs: [],
-  },
-  lease_agreement: {
-    documentTitle: 'የቤት ኪራይ ውል',
-    jurisdictionText: 'Civil Code',
-    partyTitles: { applicant: 'አከራይ (Lessor)', respondent: 'ተከራይ (Lessee)' },
-    facts: [],
-    reliefs: [],
-  },
-  sales_agreement: {
-    documentTitle: 'የሽያጭ ውል',
-    jurisdictionText: 'Civil Code',
-    partyTitles: { applicant: 'ሻጭ (Seller)', respondent: 'ገዢ (Buyer)' },
-    facts: [],
-    reliefs: [],
-  },
-  probate: {
-    documentTitle: 'የውርስ ማመልከቻ',
-    jurisdictionText: 'Civil Code (Succession)',
-    partyTitles: { applicant: 'ወራሽ (Heir)', respondent: 'ተጠሪ (Respondent)' },
-    facts: [],
-    reliefs: [],
-  },
-  property_dispute: {
-    documentTitle: 'የንብረት ክርክር',
-    jurisdictionText: 'Civil Code (Property)',
-    partyTitles: { applicant: 'ከሳሽ (Plaintiff)', respondent: 'ተከሳሽ (Defendant)' },
-    facts: [],
-    reliefs: [],
-  },
-  business_formation: {
-    documentTitle: 'የንግድ ድርጅት መመስረቻ ጽሑፍ',
-    jurisdictionText: 'Commercial Code',
-    partyTitles: { applicant: 'መሥራች (Founder)', respondent: 'ሚኒስቴር (Ministry)' },
-    facts: [],
-    reliefs: [],
-  },
-  civil_damages: {
-    documentTitle: 'ከውል ውጭ ለደረሰ ጉዳት የካሳ ክስ',
-    jurisdictionText: 'Civil Code (Extra-Contractual Liability)',
-    partyTitles: { applicant: 'ከሳሽ (Plaintiff)', respondent: 'ተከሳሽ (Defendant)' },
-    facts: [],
-    reliefs: [],
-  },
-  tax_appeal: {
-    documentTitle: 'የታክስ ይግባኝ',
-    jurisdictionText: 'Tax Administration Proclamation',
-    partyTitles: { applicant: 'ይግባኝ ባይ (Appellant)', respondent: 'የገቢዎች ሚኒስቴር (MoR)' },
-    facts: [],
-    reliefs: [],
-  },
-  negotiable_instrument: {
-    documentTitle: 'በተላላፊ ሰነድ ላይ የተመሰረተ ክስ',
-    jurisdictionText: 'Commercial Code',
-    partyTitles: { applicant: 'ከሳሽ (Plaintiff)', respondent: 'ተከሳሽ (Defendant)' },
-    facts: [],
-    reliefs: [],
-  },
 };
 
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
@@ -903,3 +971,5 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
+    

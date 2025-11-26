@@ -21,6 +21,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
   const { maintenance, selectedReliefs, selectedSubTemplate } = state;
   const customReliefs = selectedReliefs.filter(r => r.isCustom);
   const standardReliefs = TEMPLATE_DATA[selectedSubTemplate]?.reliefs || [];
+  const isMaintenanceApplicable = standardReliefs.some(r => r.id === 'relief_child_support');
 
   return (
     <div className="space-y-6">
@@ -34,22 +35,21 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
       
       <div className="space-y-3">
         {standardReliefs.map(item => {
-          const isMaintenance = item.id === 'maintenance';
-          if (isMaintenance && state.selectedSubTemplate !== 'divorce') return null;
+          const isMaintenanceCheckbox = isMaintenanceApplicable && item.id === 'relief_child_support';
 
           return (
             <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
               <Checkbox
                 id={`relief-${item.id}`}
-                checked={isMaintenance ? maintenance.active : selectedReliefs.some(sr => sr.id === item.id)}
+                checked={isMaintenanceCheckbox ? maintenance.active : selectedReliefs.some(sr => sr.id === item.id)}
                 onCheckedChange={(checked) => {
-                  if (isMaintenance) {
+                  if (isMaintenanceCheckbox) {
                     dispatch({ type: 'TOGGLE_MAINTENANCE', payload: { checked: !!checked } });
                   } else {
                     dispatch({ type: 'TOGGLE_RELIEF', payload: { reliefId: item.id } });
                   }
                 }}
-                disabled={item.isDefault && !isMaintenance}
+                disabled={item.isDefault && !isMaintenanceCheckbox}
                 className="mt-1"
               />
               <div className="grid gap-1.5 leading-none">
@@ -94,3 +94,5 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
     </div>
   );
 }
+
+    

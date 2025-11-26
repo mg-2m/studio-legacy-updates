@@ -11,7 +11,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { SMART_FACTS } from '@/lib/data';
 import type { AppState } from '@/lib/types';
-import { BrainCircuit, Info, Plus } from 'lucide-react';
+import { BrainCircuit, Info, Plus, X } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
 interface FactsTabProps {
@@ -122,13 +122,21 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
       </div>
 
        {selectedFacts.filter(f => f.isCustom).map(fact => (
-        <Card key={fact.id}>
-            <CardHeader>
-                <CardTitle>Custom Fact</CardTitle>
+        <Card key={fact.id} className="bg-muted/30">
+            <CardHeader className="flex-row items-center justify-between p-4">
+                <CardTitle className="text-base">Custom Fact</CardTitle>
+                 <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => {
+                     // This is a bit of a workaround to remove the custom fact.
+                     // The TOGGLE_FACT action with a non-existent ID from SMART_FACTS will filter it out from selectedFacts.
+                     // A dedicated REMOVE_CUSTOM_FACT would be cleaner.
+                     dispatch({ type: 'TOGGLE_FACT', payload: { factId: fact.id }})
+                 }}>
+                  <X className="h-4 w-4" />
+                </Button>
             </CardHeader>
-            <CardContent>
+            <CardContent className="px-4 pb-4">
                 <Textarea 
-                    value={fact.legalText}
+                    value={fact.legalText === 'Enter custom fact...' ? '' : fact.legalText}
                     onChange={(e) => dispatch({ type: 'UPDATE_FACT_TEXT', payload: { id: fact.id, text: e.target.value } })}
                     placeholder="Enter custom fact details here..."
                     rows={4}

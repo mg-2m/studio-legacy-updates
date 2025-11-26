@@ -125,9 +125,14 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
 
       <div className="space-y-4">
         {evidence.map((item: ManualEvidence) => (
-          <Card key={item.id}>
+          <Card key={item.id} className="bg-muted/30">
              <CardHeader className="flex-row items-center justify-between p-4">
-                <CardTitle className="text-base">{item.type === 'CourtOrder' ? 'Court Order' : item.type} (Manual)</CardTitle>
+                <CardTitle className="text-base">
+                  {item.type === 'Document' && 'Document (ሰነድ)'}
+                  {item.type === 'Witness' && 'Witness (የሰው ምስክር)'}
+                  {item.type === 'CourtOrder' && 'Court Order (የትዕዛዝ)'}
+                  <span className="font-normal text-muted-foreground text-sm ml-2">(Manual)</span>
+                </CardTitle>
                  <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_EVIDENCE', payload: { id: item.id } })}>
                   <X className="h-4 w-4" />
                 </Button>
@@ -137,7 +142,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 {item.type === 'Document' && (
                     <>
                          <div className="space-y-2">
-                            <Label>Description</Label>
+                            <Label>Description (תיאור)</Label>
                             <Input 
                                 placeholder={"e.g., Police report about the incident"}
                                 value={item.description}
@@ -216,9 +221,9 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 )}
                  {(item.type === 'Witness' || item.type === 'CourtOrder') && (
                     <div className="space-y-2">
-                        <Label>{item.type === 'Witness' ? 'Witness Full Name & Address' : 'Details of Court Order'}</Label>
+                        <Label>{item.type === 'Witness' ? 'Witness Full Name & Address (የምስክር ሙሉ ስም እና አድራሻ)' : 'Details of Court Order (የትዕዛዙ ዝርዝር)'}</Label>
                         <Input 
-                            placeholder={item.type === 'Witness' ? "e.g., Ato Kebede, Addis Ababa, Bole Sub-city" : "e.g., Order for temporary injunction"}
+                            placeholder={item.type === 'Witness' ? "e.g., Ato Kebede, Addis Ababa, Bole Sub-city" : "e.g., Order for temporary injunction on property"}
                             value={item.description}
                             onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
                         />

@@ -349,16 +349,16 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       respondent: 'Employer / Organization (ተጠሪ/ቀጣሪ)',
     },
     facts: [
-      {
+       {
         id: 'indefinite_contract',
-        label: 'The Contractual Relationship',
+        label: 'The Contractual Relationship (Prerequisites)',
         legalText: 'Existence of an indefinite period employment contract.',
         citation: 'Art. 9 of Proc. 1156/2019',
         autoEvidence: ['employment_contract']
       },
       {
         id: 'definite_contract_ended',
-        label: 'The Contractual Relationship',
+        label: 'The Contractual Relationship (Prerequisites)',
         legalText: 'A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.',
         citation: 'Art. 10, 11 of Proc. 1156/2019',
         autoEvidence: ['employment_contract']
@@ -384,6 +384,13 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         citation: 'Art. 26(2)(a) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
+        {
+        id: 'maternity_termination',
+        label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
+        legalText: "Termination was due to the employee's pregnancy or maternity leave status.",
+        citation: 'Art. 26(2)(d) of Proc. 1156/2019',
+        autoEvidence: ['termination_letter']
+      },
       {
         id: 'whistleblower_termination',
         label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
@@ -394,13 +401,13 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: 'discriminatory_termination',
         label: 'The Act of Termination: Substantive Violations (Unlawful Grounds)',
-        legalText: 'Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, social origin, HIV/AIDS status, marital status, or family responsibilities.',
+        legalText: 'Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin.',
         citation: 'Art. 26(2)(c) of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
       },
       {
         id: 'no_valid_reason',
-        label: 'The Act of Termination: No Valid Reason',
+        label: 'The Act of Termination: The "No Reason" Defense',
         legalText: 'The employer failed to provide a valid reason for termination related to the worker\'s capacity or conduct, or the organizational needs of the undertaking.',
         citation: 'Violation of Art. 27 of Proc. 1156/2019',
         autoEvidence: ['termination_letter']
@@ -408,7 +415,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: 'constructive_dismissal',
         label: 'The Act of Termination: Constructive Dismissal',
-        legalText: 'Employee was forced to resign due to the employer\'s unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.',
+        legalText: "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.",
         citation: 'Art. 32 of Proc. 1156/2019',
         autoEvidence: []
       },
@@ -480,14 +487,14 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         label: 'Statutory Benefits',
         legalText: 'Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment.',
         citation: 'Art. 77 & 79 (Conversion to cash only upon termination)',
-        autoEvidence: ['unpaid_wage_witness']
+        autoEvidence: []
       },
       {
         id: 'unpaid_holiday_work',
         label: 'Statutory Benefits',
         legalText: 'Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate.',
         citation: 'Art. 73',
-        autoEvidence: ['unpaid_wage_witness']
+        autoEvidence: []
       }
     ],
     reliefs: [
@@ -755,5 +762,7 @@ export const INITIAL_STATE: AppState = {
 
 
 
+
+    
 
     

@@ -2,13 +2,17 @@
 "use client";
 
 import type { AppState, Party, Relief } from '@/lib/types';
+import { TEMPLATES } from '@/lib/data';
 
 interface PageOneProps {
   state: AppState;
 }
 
 export default function PageOne({ state }: PageOneProps) {
-  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles, selectedReliefs } = state;
+  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles, selectedReliefs, selectedTemplate } = state;
+  const currentTemplate = TEMPLATES.find(t => t.id === selectedTemplate);
+  const documentTitle = currentTemplate ? currentTemplate.label : 'Pleading';
+
 
   const summonsMap = {
     self: 'በራሴ አደርሳለው (I will serve summons myself)',
@@ -112,7 +116,7 @@ export default function PageOne({ state }: PageOneProps) {
 
       <div className="text-center my-8">
         <span className="bg-black text-white px-5 py-1.5 font-bold text-lg" style={{ border: '4px double white', boxShadow: '0 0 0 2px black' }}>
-          የፍቺ አቤቱታ (Divorce)
+          {documentTitle}
         </span>
       </div>
 

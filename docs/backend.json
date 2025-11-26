@@ -1,4 +1,3 @@
-
 {
   "entities": {
     "WrittenContract": {
@@ -250,6 +249,30 @@
     "CertificateofLiquidation": {
       "title": "Certificate of Liquidation",
       "description": "Document showing debts have been paid (required before final partition)."
+    },
+    "CertificateOfRegistrationEIPO": {
+      "title": "Certificate of Registration (EIPO)",
+      "description": "Official document proving ownership of a Patent, Trademark, or registered Copyright."
+    },
+    "ProductSampleSpecimen": {
+      "title": "Product Sample / Specimen",
+      "description": "The physical product bearing the trademark or the technical documentation of the invention."
+    },
+    "CeaseAndDesistLetter": {
+      "title": "Cease and Desist Letter",
+      "description": "Formal notice sent to the infringer demanding they stop the unlawful activity."
+    },
+    "MarketSurveyAffidavit": {
+      "title": "Market Survey / Affidavit",
+      "description": "Proof demonstrating consumer confusion in the marketplace (for Trademark cases)."
+    },
+    "CustomsInspectionReport": {
+      "title": "Customs Inspection Report",
+      "description": "Official report confirming the seizure of counterfeit goods at the border."
+    },
+    "TechnicalExpertReport": {
+      "title": "Technical Expert Report",
+      "description": "Report comparing the registered patent claims to the alleged infringing product."
     }
   },
   "templates": {
@@ -1993,6 +2016,250 @@
         {
           "id": "relief_affix_seals",
           "text": "Order the court registrar to affix official seals on the deceased's property/safe."
+        }
+      ]
+    },
+    "ip_trademark_infringement": {
+      "documentTitle": "Statement of Claim for Trademark Infringement and Damages",
+      "jurisdictionText": "Art. 18 of Trademark Proclamation No. 501/2006.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Trademark Owner)",
+        "respondent": "Defendant (Infringer)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Right of Ownership",
+          "facets": [
+            {
+              "id": "fact_tm_registration",
+              "legalText": "The Plaintiff is the registered owner of Trademark No. [Number] for goods/services in Class [Class].",
+              "citation": "Proclamation 501/2006 Art. 11",
+              "evidence": [
+                "CertificateOfRegistrationEIPO"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Infringement Act",
+          "facets": [
+            {
+              "id": "fact_unauthorized_use",
+              "legalText": "The Defendant is using an identical or confusingly similar mark in the course of trade.",
+              "citation": "Proclamation 501/2006 Art. 18",
+              "evidence": [
+                "ProductSampleSpecimen",
+                "MarketSurveyAffidavit"
+              ]
+            },
+            {
+              "id": "fact_consumer_confusion",
+              "legalText": "The Defendant's use is likely to cause confusion among the relevant consumers.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_permanent_injunction",
+          "text": "Judgment granting a permanent injunction restraining the Defendant from further use of the infringing mark."
+        },
+        {
+          "id": "relief_damages_ip",
+          "text": "Order payment of damages suffered by the Plaintiff due to the infringement."
+        },
+        {
+          "id": "relief_destruction_goods",
+          "text": "Order the destruction of all infringing materials and goods."
+        }
+      ]
+    },
+    "ip_patent_infringement": {
+      "documentTitle": "Statement of Claim for Patent Infringement and Compensation",
+      "jurisdictionText": "Art. 21 of Patent Proclamation No. 123/1995.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Patent Holder)",
+        "respondent": "Defendant (Infringer)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Right of Ownership",
+          "facets": [
+            {
+              "id": "fact_patent_validity",
+              "legalText": "The Plaintiff holds Patent No. [Number], which is valid and in force.",
+              "citation": "Proclamation 123/1995 Art. 6",
+              "evidence": [
+                "CertificateOfRegistrationEIPO",
+                "TechnicalExpertReport"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Infringement Act",
+          "facets": [
+            {
+              "id": "fact_unauthorized_manufacture",
+              "legalText": "The Defendant is manufacturing/selling a product that falls within the scope of the patent claims.",
+              "citation": "Proclamation 123/1995 Art. 21",
+              "evidence": []
+            }
+          ]
+        },
+        "group_3": {
+          "title": "Damage",
+          "facets": [
+            {
+              "id": "fact_commercial_loss",
+              "legalText": "The infringement has resulted in direct commercial loss of [Amount] due to lost sales.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_stop_manufacture",
+          "text": "Judgment ordering the Defendant to cease all acts of manufacturing and selling the infringing product."
+        },
+        {
+          "id": "relief_compensation_royalty",
+          "text": "Order payment of compensation calculated based on a reasonable royalty fee.",
+          "citation": "Proclamation 123/1995 Art. 21"
+        },
+        {
+          "id": "relief_seize_equipment",
+          "text": "Order the seizure and disposal of the machinery primarily used to produce the infringing articles."
+        }
+      ]
+    },
+    "ip_copyright_infringement": {
+      "documentTitle": "Statement of Claim for Copyright Violation and Statutory Damages",
+      "jurisdictionText": "Art. 38 of Copyright and Neighboring Rights Proclamation No. 410/2004.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Author/Creator)",
+        "respondent": "Defendant (Pirate/Reproducer)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Right of Authorship",
+          "facets": [
+            {
+              "id": "fact_original_work",
+              "legalText": "The Plaintiff is the author of the original work [Title] published/fixed on [Date].",
+              "citation": "Proclamation 410/2004 Art. 38",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Infringement Act",
+          "facets": [
+            {
+              "id": "fact_unauthorized_reproduction",
+              "legalText": "The Defendant has reproduced, distributed, or publicly performed the work without authorization.",
+              "citation": "Proclamation 410/2004 Art. 9",
+              "evidence": [
+                "ProductSampleSpecimen"
+              ]
+            },
+            {
+              "id": "fact_commercial_scale",
+              "legalText": "The infringement was committed on a commercial scale.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_statutory_damages",
+          "text": "Order payment of statutory damages as provided by law, or actual damages suffered."
+        },
+        {
+          "id": "relief_injunction_copyright",
+          "text": "Order a final injunction prohibiting further unauthorized use."
+        },
+        {
+          "id": "relief_impoundment",
+          "text": "Order the impoundment of all copies of the infringing work."
+        }
+      ]
+    },
+    "app_ip_interlocutory_injunction": {
+      "documentTitle": "Application for Interlocutory Injunction to Restrain Infringement",
+      "jurisdictionText": "Art. 154 of the Civil Procedure Code (General Injunction) and specific IP enabling clauses.",
+      "partyTitles": {
+        "applicant": "Applicant",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Urgency & Harm",
+          "facets": [
+            {
+              "id": "fact_prima_facie_case",
+              "legalText": "The Applicant has established a strong prima facie case of infringement.",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_irreparable_harm",
+              "legalText": "The continued infringement will cause irreparable harm to the Applicant's market share and reputation.",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_balance_convenience",
+              "legalText": "The balance of convenience favors granting the injunction (i.e., less harm to stop than to continue).",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_temporary_restraint",
+          "text": "Order the Respondent to temporarily cease all manufacture, sale, or distribution of the infringing goods pending final judgment."
+        }
+      ]
+    },
+    "app_ip_anton_piller": {
+      "documentTitle": "Application for Preservation and Seizure of Evidence",
+      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Inherent Power) & Art. 10 of Proclamation 410/2004.",
+      "partyTitles": {
+        "applicant": "Applicant",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Preservation of Evidence",
+          "facets": [
+            {
+              "id": "fact_concealment_risk",
+              "legalText": "There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_specific_evidence",
+              "legalText": "The Applicant has specific knowledge of the location and nature of the evidence.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_seize_evidence",
+          "text": "Order a court officer to enter the Respondent's premises to seize and preserve evidence relating to the infringement."
         }
       ]
     }

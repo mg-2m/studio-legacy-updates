@@ -1,3 +1,4 @@
+
 {
   "templates": {
     "civ_proc_amendment_of_pleading": {
@@ -60,7 +61,8 @@
           "id": "civ_proc_relief_grant_amendment",
           "text": "በተያያዘው ረቂቅ መሠረት ክሱ/መቃወሚያው እንዲሻሻል ፈቃድ እንዲሰጥ። (To grant leave to amend the statement of claim/defence as per the draft annexed hereto.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -115,7 +117,8 @@
           "id": "civ_proc_relief_grant_intervention",
           "text": "አመልካቹ በክሱ ውስጥ እንዲገባ እና እንደ ከሳሽ/ተከሳሽ እንዲታከል እንዲፈቀድለት። (To grant the Applicant leave to intervene in the suit and to be joined as a Plaintiff/Defendant.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -175,7 +178,8 @@
           "id": "civ_proc_relief_grant_third_party_notice",
           "text": "በ [thirdPartyName] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ። (To grant leave to serve a third-party notice on [thirdPartyName] and join them as a third-party defendant.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -240,7 +244,8 @@
           "id": "civ_proc_relief_set_aside_judgment",
           "text": "በሌሉበት የተሰጠውን ፍርድ እንዲሻርና ክሱ በፍሬ ነገር እንዲታይ ወደ ተንጠለጠለ መዝገብ እንዲመለስ። (To set aside the ex parte judgment/decree and restore the suit to the list of pending cases for trial on the merits.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -304,7 +309,8 @@
           "id": "civ_proc_relief_grant_review",
           "text": "የዳግም የማየት ጥያቄው ተቀባይነት አግኝቶ ክሱ አዲስ ማስረጃ ለማየት ወይም ስህተቱን ለማረም እንዲከፈት። (To grant the application for review and re-open the case for hearing the new evidence or correcting the error.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}

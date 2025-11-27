@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -452,6 +452,48 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     credentialLabel: 'Reference Number',
     credentialPlaceholder: 'e.g., AFF/GEN/2024/001',
   },
+  TaxAssessmentNotice: {
+    id: 'TaxAssessmentNotice',
+    label: 'Tax Assessment Notice',
+    type: 'Document',
+    credentialLabel: 'Notice Reference Number',
+    credentialPlaceholder: 'e.g., MOR/ASSMT/2024/123'
+  },
+  NoticeOfObjectionInitial: {
+    id: 'NoticeOfObjectionInitial',
+    label: 'Notice of Objection (Initial)',
+    type: 'Document',
+    credentialLabel: 'Date of Submission',
+    credentialPlaceholder: 'e.g., 25/06/2024'
+  },
+  AccountingRecords: {
+    id: 'AccountingRecords',
+    label: 'Accounting Records (Ledgers, Invoices)',
+    type: 'Document',
+    credentialLabel: 'Description of Records',
+    credentialPlaceholder: 'e.g., FY 2023 Sales Ledger'
+  },
+  ImportExportDeclarationSAD: {
+    id: 'ImportExportDeclarationSAD',
+    label: 'Import/Export Declaration (SAD)',
+    type: 'Document',
+    credentialLabel: 'SAD Number',
+    credentialPlaceholder: 'e.g., SAD-IMPORT-2024-9876'
+  },
+  PaymentReceiptsTaxCustoms: {
+    id: 'PaymentReceiptsTaxCustoms',
+    label: 'Payment Receipts (Tax/Customs)',
+    type: 'Document',
+    credentialLabel: 'Receipt Number',
+    credentialPlaceholder: 'e.g., TAX-DEP-2024-5432'
+  },
+  ExternalAuditReport: {
+    id: 'ExternalAuditReport',
+    label: 'External Audit Report',
+    type: 'Document',
+    credentialLabel: 'Report Reference',
+    credentialPlaceholder: 'e.g., EXT-AUD/2024/CLIENT-A'
+  },
 };
 
 export const TEMPLATES: Template[] = [
@@ -550,6 +592,18 @@ export const TEMPLATES: Template[] = [
         { id: 'status_declaration_of_absence', label: 'Declaration of Absence', icon: FileX2 },
         { id: 'app_status_provisional_curator', label: 'Appoint Provisional Curator', icon: BookUser },
         { id: 'app_status_lift_interdiction', label: 'Lift Interdiction', icon: Gavel },
+    ]
+  },
+  {
+    id: 'tax_customs_law',
+    label: 'Tax & Customs Law',
+    icon: LandmarkIcon,
+    subTemplates: [
+        { id: 'tax_objection_admin_review', label: 'Tax Objection (Admin Review)', icon: FileText },
+        { id: 'tax_appeal_ftac', label: 'Tax Appeal (FTAC)', icon: Gavel },
+        { id: 'customs_claim_for_refund', label: 'Customs Refund Claim', icon: Receipt },
+        { id: 'app_tax_stay_of_execution', label: 'Stay of Execution', icon: Shield },
+        { id: 'app_tax_adr_request', label: 'ADR Request', icon: Handshake },
     ]
   }
 ];
@@ -2291,6 +2345,185 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
     reliefs: [
       { id: "relief_terminate_interdiction", text: "Judgment terminating the judicial interdiction and restoring full legal capacity to the individual.", isDefault: true }
     ]
+  },
+  tax_objection_admin_review: {
+    documentTitle: "Notice of Objection to Tax Assessment",
+    jurisdictionText: "Art. 54 of the Federal Tax Administration Proclamation (FTAP) No. 983/2016.",
+    partyTitles: {
+      applicant: "Applicant (Taxpayer)",
+      respondent: "Respondent (Ministry of Revenue Branch Office)"
+    },
+    facts: [
+      {
+        id: "fact_assessment_received",
+        label: "Procedural Compliance (Time Limit)",
+        legalText: "The Tax Assessment Notice was received on [Date].",
+        citation: "FTAP Art. 54",
+        autoEvidence: []
+      },
+      {
+        id: "fact_objection_timely",
+        label: "Procedural Compliance (Time Limit)",
+        legalText: "This Objection is filed within the required 21 days of receipt.",
+        citation: "FTAP Art. 54",
+        autoEvidence: []
+      },
+      {
+        id: "fact_erroneous_income_calc",
+        label: "Grounds for Error",
+        legalText: "The MoR erred by failing to recognize [Specific Deduction/Exemption].",
+        autoEvidence: ["AccountingRecords", "ExternalAuditReport"]
+      },
+      {
+        id: "fact_estimated_basis_wrong",
+        label: "Grounds for Error",
+        legalText: "The assessment was based on an estimate, and the actual gross income is proven by the attached records.",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_revoke_assessment",
+        text: "Order the Ministry of Revenue to revoke the current assessment.",
+        isDefault: true
+      },
+      {
+        id: "relief_recalculate_tax",
+        text: "Order the Ministry to re-calculate the tax liability to [Correct Amount].",
+        isDefault: true
+      }
+    ]
+  },
+  tax_appeal_ftac: {
+    documentTitle: "Petition of Appeal to the Federal Tax Appeal Commission",
+    jurisdictionText: "Art. 88 of the Federal Tax Administration Proclamation (FTAP).",
+    partyTitles: {
+      applicant: "Appellant (Taxpayer)",
+      respondent: "Respondent (Ministry of Revenue)"
+    },
+    facts: [
+      {
+        id: "fact_objection_rejected",
+        label: "Prerequisites",
+        legalText: "The MoR issued a decision rejecting the Taxpayer's Objection on [Date]."
+      },
+      {
+        id: "fact_50_percent_deposit",
+        label: "Prerequisites",
+        legalText: "The Taxpayer has deposited 50% of the disputed tax amount (excluding penalties/interest).",
+        citation: "FTAP Art. 88",
+        autoEvidence: ["PaymentReceiptsTaxCustoms"]
+      },
+      {
+        id: "fact_mof_error",
+        label: "Grounds for Appeal",
+        legalText: "The MoR's internal review decision is erroneous because [Specific Reason, e.g., misapplication of VAT Proclamation 1341/2024]."
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_ftac_overrule",
+        text: "Judgment overturning the MoR's decision and adjusting the tax liability.",
+        isDefault: true
+      },
+      {
+        id: "relief_ftac_remand",
+        text: "Order the MoR to undertake a new assessment using correct legal principles.",
+        isDefault: false
+      }
+    ]
+  },
+  customs_claim_for_refund: {
+    documentTitle: "Application to the Customs Commission for Refund of Duty",
+    jurisdictionText: "Provisions of the Customs Proclamation No. 859/2014 concerning refunds.",
+    partyTitles: {
+      applicant: "Applicant (Importer/Exporter)",
+      respondent: "Respondent (Customs Commission)"
+    },
+    facts: [
+      {
+        id: "fact_duty_paid",
+        label: "Overpayment",
+        legalText: "The Applicant paid Customs Duty of [Amount] for goods imported/exported under Declaration No. [SAD No.]."
+      },
+      {
+        id: "fact_grounds_for_refund",
+        label: "Overpayment",
+        legalText: "The duty was refundable because [e.g., the goods were defective and re-exported, or the valuation was miscalculated].",
+        autoEvidence: ["ImportExportDeclarationSAD", "PaymentReceiptsTaxCustoms"]
+      },
+      {
+        id: "fact_refusal_to_pay",
+        label: "Commission Refusal",
+        legalText: "The Customs Commission has refused or failed to process the refund application."
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_order_refund",
+        text: "Order the Customs Commission to refund the overpaid duty amount of [Amount].",
+        isDefault: true
+      }
+    ]
+  },
+  app_tax_stay_of_execution: {
+    documentTitle: "Application for Stay of Execution of Tax Payment",
+    jurisdictionText: "Art. 154 of the Civil Procedure Code (Injunction) applied to tax execution.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "Respondent"
+    },
+    facts: [
+      {
+        id: "fact_execution_pending",
+        label: "Grounds for Stay",
+        legalText: "The MoR has begun execution procedures (e.g., freezing bank accounts) to collect the disputed tax."
+      },
+      {
+        id: "fact_irreparable_harm",
+        label: "Grounds for Stay",
+        legalText: "Forcing payment of the full amount now would render the company insolvent, causing irreparable harm to the business."
+      },
+      {
+        id: "fact_prima_facie",
+        label: "Grounds for Stay",
+        legalText: "The Taxpayer has a strong likelihood of success on appeal."
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_suspend_payment",
+        text: "Order the Ministry of Revenue to suspend the execution of the outstanding tax liability until the final decision of the FTAC/Court.",
+        isDefault: true
+      }
+    ]
+  },
+  app_tax_adr_request: {
+    documentTitle: "Application for Referral to Tax Dispute Alternative Resolution",
+    jurisdictionText: "Tax Administration Proclamations often include provisions allowing for settlement or ADR.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "Respondent"
+    },
+    facts: [
+      {
+        id: "fact_willingness_to_settle",
+        label: "Grounds for ADR",
+        legalText: "Both the Taxpayer and the MoR have indicated a willingness to resolve the dispute through mutual agreement."
+      },
+      {
+        id: "fact_complex_facts",
+        label: "Grounds for ADR",
+        legalText: "The dispute involves complex factual issues that would be better resolved through expert negotiation than court litigation."
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_refer_to_adr",
+        text: "Order the establishment of a joint committee or referral to a mediator to reach a binding settlement agreement.",
+        isDefault: true
+      }
+    ]
   }
 };
 
@@ -2329,9 +2562,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
-
-    
-    
-    
-
-    

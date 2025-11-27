@@ -19,72 +19,69 @@
         "applicant": "አቤቱታ አቅራቢ/ይግባኝ ባይ (Petitioner / Appellant)",
         "respondent": "መልስ ሰጪ ተቋም (Respondent Agency)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የዳኝነት ቅድመ ሁኔታዎች (Jurisdictional Prerequisites)",
-          "facets": [
-            {
-              "id": "admin_fact_final_decision_issued",
-              "legalText": "መልስ ሰጪው ተቋም በአቤቱታ አቅራቢው መብት ወይም ጥቅም ላይ ተጽእኖ የሚያሳድር የመጨረሻ አስተዳደራዊ ውሳኔ በ [Date of Decision] ሰጥቷል። (The Respondent Agency issued a final, binding administrative decision affecting the rights or interests of the Petitioner on [Date of Decision].)",
-              "citation": "Proc. 1183/2020 Art. 48(1)",
-              "autoEvidence": [
-                "FinalAdminDecision"
-              ]
-            },
-            {
-              "id": "admin_fact_exhausted_remedies",
-              "legalText": "አቤቱታ አቅራቢው በተቋሙ ውስጥ ያሉትን ሁሉንም የውስጥ የቅሬታ መፍትሔ መንገዶች አሟጧል፣ ወይም ተቋሙ በሕግ በተቀመጠው ጊዜ ውስጥ በቅሬታው ላይ ውሳኔ አልሰጠም። (The Petitioner has exhausted all available administrative remedies within the Agency, or the Agency failed to render a decision on the complaint within the legal timeframe.)",
-              "citation": "Proc. 1183/2020 Art. 48(2)",
-              "autoEvidence": [
-                "InternalRemedyExhaustion"
-              ]
-            },
-            {
-              "id": "admin_fact_petition_is_timely",
-              "legalText": "ይህ አቤቱታ ውሳኔው ከደረሰበት ቀን አንስቶ በሠላሳ (30) ቀን የጊዜ ገደብ ውስጥ የቀረበ ነው። (This petition is filed within the thirty (30) day period prescribed from the date of notification of the decision.)",
-              "citation": "Proc. 1183/2020 Art. 51(1)",
-              "autoEvidence": [
-                "DecisionNotificationProof"
-              ]
-            }
+      "facts": [
+        {
+          "id": "admin_fact_final_decision_issued",
+          "label": "የዳኝነት ቅድመ ሁኔታዎች (Jurisdictional Prerequisites)",
+          "legalText": "መልስ ሰጪው ተቋም በአቤቱታ አቅራቢው መብት ወይም ጥቅም ላይ ተጽእኖ የሚያሳድር የመጨረሻ አስተዳደራዊ ውሳኔ በ [decisionDate] ሰጥቷል። (The Respondent Agency issued a final, binding administrative decision affecting the rights or interests of the Petitioner on [decisionDate].)",
+          "citation": "Proc. 1183/2020 Art. 48(1)",
+          "autoEvidence": [
+            "FinalAdminDecision"
           ]
         },
-        "group_2": {
-          "title": "የውሳኔው መሻር ምክንያቶች (Grounds for Annulment)",
-          "facets": [
-            {
-              "id": "admin_fact_procedural_violation_hearing",
-              "legalText": "ውሳኔው የተሰጠው አቤቱታ አቅራቢው ተገቢውን የመሰማት እድል ሳይሰጠው (አንቀጽ ፴፬) ወይም አግባብነት ያላቸውን ማስረጃዎች ከግምት ሳያስገባ ነው። (The decision was made without affording the Petitioner an adequate opportunity for a proper hearing (Art. 34) or without considering relevant evidence.)",
-              "citation": "Proc. 1183/2020 Art. 34",
-              "autoEvidence": []
-            },
-            {
-              "id": "admin_fact_substantive_error_of_law",
-              "legalText": "ውሳኔው መሠረታዊ የሕግ ስህተት ላይ የተመሰረተ ነው፤ ማለትም የሚመለከተውን አዋጅ፣ ደንብ ወይም መመሪያ በተሳሳተ መንገድ ተርጉሟል ወይም ተግብሯል። (The decision is based on a fundamental error of law, misinterpreting or misapplying the governing Proclamation, Regulation, or Directive.)",
-              "citation": "Proc. 1183/2020 Art. 52(1)(a)",
-              "autoEvidence": [
-                "FinalAdminDecision"
-              ]
-            },
-            {
-              "id": "admin_fact_failure_to_state_reason",
-              "legalText": "ተቋሙ በቂ እና ምክንያታዊ የሆነ ውሳኔ ባለመስጠቱ የአቤቱታ አቅራቢውን ምክንያት ያለው ውሳኔ የማግኘት መብት ጥሷል (አንቀጽ ፴፯)። (The Agency failed to provide an adequate and reasoned decision, thus violating the Petitioner's right to a reasoned decision (Art. 37).)",
-              "citation": "Proc. 1183/2020 Art. 37",
-              "autoEvidence": [
-                "FinalAdminDecision"
-              ]
-            },
-            {
-              "id": "admin_fact_abuse_of_discretion",
-              "legalText": "ተቋሙ ከህጋዊ ሥልጣኑ ውጭ በመንቀሳቀስ ወይም ተገቢ ላልሆነ ዓላማ በመጠቀም የውሳኔ ሰጪነት ሥልጣኑን አላግባብ ተጠቅሟል (አንቀጽ ፴፱)። (The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39).)",
-              "citation": "Proc. 1183/2020 Art. 39",
-              "autoEvidence": [
-                "FinalAdminDecision"
-              ]
-            }
+        {
+          "id": "admin_fact_exhausted_remedies",
+          "label": "የዳኝነት ቅድመ ሁኔታዎች (Jurisdictional Prerequisites)",
+          "legalText": "አቤቱታ አቅራቢው በተቋሙ ውስጥ ያሉትን ሁሉንም የውስጥ የቅሬታ መፍትሔ መንገዶች አሟጧል፣ ወይም ተቋሙ በሕግ በተቀመጠው ጊዜ ውስጥ በቅሬታው ላይ ውሳኔ አልሰጠም። (The Petitioner has exhausted all available administrative remedies within the Agency, or the Agency failed to render a decision on the complaint within the legal timeframe.)",
+          "citation": "Proc. 1183/2020 Art. 48(2)",
+          "autoEvidence": [
+            "InternalRemedyExhaustion"
+          ]
+        },
+        {
+          "id": "admin_fact_petition_is_timely",
+          "label": "የዳኝነት ቅድመ ሁኔታዎች (Jurisdictional Prerequisites)",
+          "legalText": "ይህ አቤቱታ ውሳኔው ከደረሰበት ቀን አንስቶ በሠላሳ (30) ቀን የጊዜ ገደብ ውስጥ የቀረበ ነው። (This petition is filed within the thirty (30) day period prescribed from the date of notification of the decision.)",
+          "citation": "Proc. 1183/2020 Art. 51(1)",
+          "autoEvidence": [
+            "DecisionNotificationProof"
+          ]
+        },
+        {
+          "id": "admin_fact_procedural_violation_hearing",
+          "label": "የውሳኔው መሻር ምክንያቶች (Grounds for Annulment)",
+          "legalText": "ውሳኔው የተሰጠው አቤቱታ አቅራቢው ተገቢውን የመሰማት እድል ሳይሰጠው (አንቀጽ ፴፬) ወይም አግባብነት ያላቸውን ማስረጃዎች ከግምት ሳያስገባ ነው። (The decision was made without affording the Petitioner an adequate opportunity for a proper hearing (Art. 34) or without considering relevant evidence.)",
+          "citation": "Proc. 1183/2020 Art. 34",
+          "autoEvidence": []
+        },
+        {
+          "id": "admin_fact_substantive_error_of_law",
+          "label": "የውሳኔው መሻር ምክንያቶች (Grounds for Annulment)",
+          "legalText": "ውሳኔው መሠረታዊ የሕግ ስህተት ላይ የተመሰረተ ነው፤ ማለትም የሚመለከተውን አዋጅ፣ ደንብ ወይም መመሪያ በተሳሳተ መንገድ ተርጉሟል ወይም ተግብሯል። (The decision is based on a fundamental error of law, misinterpreting or misapplying the governing Proclamation, Regulation, or Directive.)",
+          "citation": "Proc. 1183/2020 Art. 52(1)(a)",
+          "autoEvidence": [
+            "FinalAdminDecision"
+          ]
+        },
+        {
+          "id": "admin_fact_failure_to_state_reason",
+          "label": "የውሳኔው መሻር ምክንያቶች (Grounds for Annulment)",
+          "legalText": "ተቋሙ በቂ እና ምክንያታዊ የሆነ ውሳኔ ባለመስጠቱ የአቤቱታ አቅራቢውን ምክንያት ያለው ውሳኔ የማግኘት መብት ጥሷል (አንቀጽ ፴፯)። (The Agency failed to provide an adequate and reasoned decision, thus violating the Petitioner's right to a reasoned decision (Art. 37).)",
+          "citation": "Proc. 1183/2020 Art. 37",
+          "autoEvidence": [
+            "FinalAdminDecision"
+          ]
+        },
+        {
+          "id": "admin_fact_abuse_of_discretion",
+          "label": "የውሳኔው መሻር ምክንያቶች (Grounds for Annulment)",
+          "legalText": "ተቋሙ ከህጋዊ ሥልጣኑ ውጭ በመንቀሳቀስ ወይም ተገቢ ላልሆነ ዓላማ በመጠቀም የውሳኔ ሰጪነት ሥልጣኑን አላግባብ ተጠቅሟል (አንቀጽ ፴፱)። (The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39).)",
+          "citation": "Proc. 1183/2020 Art. 39",
+          "autoEvidence": [
+            "FinalAdminDecision"
           ]
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "admin_relief_quash_decision",
@@ -104,7 +101,8 @@
           "isDefault": false,
           "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
     "admin_review_directive_legality": {
       "documentTitle": "የአስተዳደር መመሪያ ሕጋዊነት በፍርድ ቤት እንዲታይ አቤቱታ (Petition for Judicial Review of Legality of a Directive)",
@@ -125,50 +123,44 @@
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "መልስ ሰጪ ተቋም (Respondent Agency)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የመመሪያ ስልጣን እና ተገዢነት (Directive Authority and Compliance)",
-          "facets": [
-            {
-              "id": "admin_fact_directive_unlawful_delegation",
-              "legalText": "መመሪያው በሕግ ተገቢው የውክልና ሥልጣን ሳይሰጥ የወጣ ነው፣ ወይም ከወከለው አዋጅ ወሰን በላይ አልፏል። (The Directive was issued without proper delegation of power by law, or it exceeds the scope of the delegating Proclamation.)",
-              "citation": "Proc. 1183/2020 Art. 49(2)(a)",
-              "autoEvidence": [
-                "AgencyDirectiveCopy"
-              ]
-            },
-            {
-              "id": "admin_fact_directive_violates_constitution",
-              "legalText": "መመሪያው ሕገ-መንግስትን ወይም ሌላ የበላይ የሆነን ሕግ ይጥሳል። (The Directive violates the Constitution or other superior law.)",
-              "citation": "Proc. 1183/2020 Art. 49(2)(a)",
-              "autoEvidence": [
-                "AgencyDirectiveCopy"
-              ]
-            },
-            {
-              "id": "admin_fact_directive_procedural_flaw",
-              "legalText": "መመሪያው ሲወጣ በሕግ የተደነገገውን የግዴታ የሕዝብ ተሳትፎ ሂደት (ለምሳሌ የሕዝብ አስተያየት መጠየቅ ወይም ከጠቅላይ ዓቃቤ ሕግ ጋር መመካከር) አልተከተለም (አንቀጽ ፯-፲፪)። (The Directive was adopted without following the mandatory procedure (e.g., public notice, soliciting comments, or FAG consultation) required by law (Arts. 7-12).)",
-              "citation": "Proc. 1183/2020 Art. 7-12",
-              "autoEvidence": [
-                "AgencyDirectiveCopy"
-              ]
-            }
+      "facts": [
+        {
+          "id": "admin_fact_directive_unlawful_delegation",
+          "label": "የመመሪያ ስልጣን እና ተገዢነት (Directive Authority and Compliance)",
+          "legalText": "መመሪያው በሕግ ተገቢው የውክልና ሥልጣን ሳይሰጥ የወጣ ነው፣ ወይም ከወከለው አዋጅ ወሰን በላይ አልፏል። (The Directive was issued without proper delegation of power by law, or it exceeds the scope of the delegating Proclamation.)",
+          "citation": "Proc. 1183/2020 Art. 49(2)(a)",
+          "autoEvidence": [
+            "AgencyDirectiveCopy"
           ]
         },
-        "group_2": {
-          "title": "የጥቅም መጎዳት (Injury to Interest)",
-          "facets": [
-            {
-              "id": "admin_fact_directive_affects_rights",
-              "legalText": "መመሪያው የአቤቱታ አቅራቢውን መብት ወይም ጥቅም በቀጥታ ይነካል። (The Directive directly affects the Petitioner's rights or interests.)",
-              "citation": "Proc. 1183/2020 Art. 48(1)",
-              "autoEvidence": [
-                "AgencyDirectiveCopy"
-              ]
-            }
+        {
+          "id": "admin_fact_directive_violates_constitution",
+          "label": "የመመሪያ ስልጣን እና ተገዢነት (Directive Authority and Compliance)",
+          "legalText": "መመሪያው ሕገ-መንግስትን ወይም ሌላ የበላይ የሆነን ሕግ ይጥሳል። (The Directive violates the Constitution or other superior law.)",
+          "citation": "Proc. 1183/2020 Art. 49(2)(a)",
+          "autoEvidence": [
+            "AgencyDirectiveCopy"
+          ]
+        },
+        {
+          "id": "admin_fact_directive_procedural_flaw",
+          "label": "የመመሪያ ስልጣን እና ተገዢነት (Directive Authority and Compliance)",
+          "legalText": "መመሪያው ሲወጣ በሕግ የተደነገገውን የግዴታ የሕዝብ ተሳትፎ ሂደት (ለምሳሌ የሕዝብ አስተያየት መጠየቅ ወይም ከጠቅላይ ዓቃቤ ሕግ ጋር መመካከር) አልተከተለም (አንቀጽ ፯-፲፪)። (The Directive was adopted without following the mandatory procedure (e.g., public notice, soliciting comments, or FAG consultation) required by law (Arts. 7-12).)",
+          "citation": "Proc. 1183/2020 Art. 7-12",
+          "autoEvidence": [
+            "AgencyDirectiveCopy"
+          ]
+        },
+        {
+          "id": "admin_fact_directive_affects_rights",
+          "label": "የጥቅም መጎዳት (Injury to Interest)",
+          "legalText": "መመሪያው የአቤቱታ አቅራቢውን መብት ወይም ጥቅም በቀጥታ ይነካል። (The Directive directly affects the Petitioner's rights or interests.)",
+          "citation": "Proc. 1183/2020 Art. 48(1)",
+          "autoEvidence": [
+            "AgencyDirectiveCopy"
           ]
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "admin_relief_invalidate_directive",
@@ -182,7 +174,8 @@
           "isDefault": false,
           "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     }
   }
 }

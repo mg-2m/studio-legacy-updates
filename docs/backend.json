@@ -413,19 +413,19 @@
   },
   "templates": {
     "property_petitory_vindication": {
-      "documentTitle": "Statement of Claim for Vindication of Property (Petitory Action)",
+      "documentTitle": "Statement of Claim for Vindication of Property (Petitory Action) (የይዞታ ጥያቄ ክስ)",
       "jurisdictionText": "Art. 1206 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Plaintiff (Owner)",
-        "respondent": "Defendant (Unlawful Holder)"
+        "applicant": "Plaintiff (Owner) (ከሳሽ - ባለቤት)",
+        "respondent": "Defendant (Unlawful Holder) (ተከሳሽ - ሕገ-ወጥ ይዞታ)"
       },
       "facts": {
         "group_1": {
-          "title": "Proof of Title",
+          "title": "Proof of Title (የባለቤትነት ማረጋገጫ)",
           "facets": [
             {
               "id": "fact_ownership_proof",
-              "legalText": "The Plaintiff is the legal owner/holder of the immovable property situated at [Location].",
+              "legalText": "The Plaintiff is the legal owner/holder of the immovable property situated at [Location]. (ከሳሽ በ [አካባቢ] የሚገኘው የማይንቀሳቀስ ንብረት ሕጋዊ ባለቤት/ባለይዞታ ነው።)",
               "citation": "Civ. Code Art. 1204",
               "evidence": [
                 "TitleDeed"
@@ -433,24 +433,24 @@
             },
             {
               "id": "fact_chain_of_custody",
-              "legalText": "The Plaintiff acquired the property through [Sale/Succession/Grant] on [Date].",
+              "legalText": "The Plaintiff acquired the property through [Sale/Succession/Grant] on [Date]. (ከሳሽ ንብረቱን በ [ሽያጭ/ውርስ/ስጦታ] በ [ቀን] አግኝቷል።)",
               "citation": "",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Unlawful Holding",
+          "title": "Unlawful Holding (ሕገ-ወጥ ይዞታ)",
           "facets": [
             {
               "id": "fact_defendant_possession",
-              "legalText": "The Defendant is currently in possession of the property without any legal title or right.",
+              "legalText": "The Defendant is currently in possession of the property without any legal title or right. (ተከሳሹ በአሁኑ ጊዜ ያለ ምንም ሕጋዊ መብት ወይም ሰነድ በንብረቱ ላይ ይዞታ አለው።)",
               "citation": "Civ. Code Art. 1206",
               "evidence": []
             },
             {
               "id": "fact_refusal_vacate",
-              "legalText": "Despite demands, the Defendant refuses to vacate the property.",
+              "legalText": "Despite demands, the Defendant refuses to vacate the property. (ተከሳሹ በተደጋጋሚ ቢጠየቅም ንብረቱን ለቆ ለመውጣት ፈቃደኛ አልሆነም።)",
               "citation": "",
               "evidence": []
             }
@@ -460,32 +460,35 @@
       "reliefs": [
         {
           "id": "relief_declare_ownership",
-          "text": "Judgment declaring the Plaintiff as the sole legal owner/holder of the property."
+          "text": "Judgment declaring the Plaintiff as the sole legal owner/holder of the property. (ከሳሽ የንብረቱ ብቸኛ ሕጋዊ ባለቤት/ባለይዞታ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_eviction_order",
-          "text": "Order the Defendant to vacate the property and hand it over to the Plaintiff."
+          "text": "Order the Defendant to vacate the property and hand it over to the Plaintiff. (ተከሳሹ ንብረቱን ለቆ ለከሳሽ እንዲያስረክብ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_mesne_profits",
-          "text": "Order the Defendant to pay compensation (fruits/rent) for the period of unlawful occupation."
+          "text": "Order the Defendant to pay compensation (fruits/rent) for the period of unlawful occupation. (ተከሳሹ በሕገ-ወጥ ይዞታ ለቆየበት ጊዜ ካሳ (ፍራፍሬ/ኪራይ) እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "property_possessory_restoration": {
-      "documentTitle": "Statement of Claim for Restoration of Possession",
+      "documentTitle": "Statement of Claim for Restoration of Possession (የተነጠቀ ይዞታን ለማስመለስ የሚቀርብ ክስ)",
       "jurisdictionText": "Art. 1149 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Plaintiff (Dispossessed)",
-        "respondent": "Defendant (Usurper)"
+        "applicant": "Plaintiff (Dispossessed) (ከሳሽ - ይዞታውን የተነጠቀ)",
+        "respondent": "Defendant (Usurper) (ተከሳሽ - ነጣቂ)"
       },
       "facts": {
         "group_1": {
-          "title": "Fact of Possession",
+          "title": "Fact of Possession (የይዞታ እውነታ)",
           "facets": [
             {
               "id": "fact_actual_possession",
-              "legalText": "The Plaintiff was in peaceful and continuous possession of the property.",
+              "legalText": "The Plaintiff was in peaceful and continuous possession of the property. (ከሳሽ በንብረቱ ላይ ሰላማዊ እና ያልተቋረጠ ይዞታ ነበረው።)",
               "citation": "Civ. Code Art. 1140",
               "evidence": [
                 "TaxLandRentReceipts",
@@ -495,17 +498,17 @@
           ]
         },
         "group_2": {
-          "title": "Illicit Interference (Usurpation)",
+          "title": "Illicit Interference (Usurpation) (ሕገ-ወጥ ጣልቃ ገብነት (መንጠቅ))",
           "facets": [
             {
               "id": "fact_usurpation_act",
-              "legalText": "The Defendant took possession by force/fraud on [Date].",
+              "legalText": "The Defendant took possession by force/fraud on [Date]. (ተከሳሹ በ [ቀን] በኃይል/በማጭበርበር ይዞታውን ወስዷል።)",
               "citation": "Civ. Code Art. 1148",
               "evidence": []
             },
             {
               "id": "fact_timeliness",
-              "legalText": "This claim is filed within two years of the usurpation.",
+              "legalText": "This claim is filed within two years of the usurpation. (ይህ ክስ ይዞታው ከተነጠቀበት ጊዜ ጀምሮ በሁለት ዓመት ውስጥ የቀረበ ነው።)",
               "citation": "Civ. Code Art. 1149",
               "evidence": []
             }
@@ -515,24 +518,25 @@
       "reliefs": [
         {
           "id": "relief_restore_possession",
-          "text": "Order the immediate restoration of possession to the Plaintiff (without prejudice to questions of title)."
+          "text": "Order the immediate restoration of possession to the Plaintiff (without prejudice to questions of title). (የባለቤትነት ጥያቄ እንደተጠበቀ ሆኖ ይዞታው ወዲያውኑ ለከሳሽ እንዲመለስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "property_boundary_encroachment": {
-      "documentTitle": "Statement of Claim for Removal of Boundary Encroachment",
+      "documentTitle": "Statement of Claim for Removal of Boundary Encroachment (የድንበር መጣስ እንዲወገድ የሚቀርብ ክስ)",
       "jurisdictionText": "Art. 1204 & 1211 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant (Neighbor)"
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (Neighbor) (ተከሳሽ - ጎረቤት)"
       },
       "facts": {
         "group_1": {
-          "title": "Boundary Lines",
+          "title": "Boundary Lines (የድንበር መስመሮች)",
           "facets": [
             {
               "id": "fact_defined_boundary",
-              "legalText": "The legal boundary between the Plaintiff's and Defendant's plots is defined by the official Site Plan.",
+              "legalText": "The legal boundary between the Plaintiff's and Defendant's plots is defined by the official Site Plan. (በከሳሽ እና በተከሳሽ ይዞታዎች መካከል ያለው ሕጋዊ ድንበር በይፋዊ የሳይት ፕላን የተገለጸ ነው።)",
               "citation": "",
               "evidence": [
                 "SitePlan"
@@ -541,11 +545,11 @@
           ]
         },
         "group_2": {
-          "title": "The Encroachment",
+          "title": "The Encroachment (የድንበር መጣስ)",
           "facets": [
             {
               "id": "fact_encroachment_act",
-              "legalText": "The Defendant has constructed a wall/structure that crosses the boundary line by [Meters].",
+              "legalText": "The Defendant has constructed a wall/structure that crosses the boundary line by [Meters]. (ተከሳሹ የድንበር መስመሩን በ [ሜትር] የሚያልፍ ግድግዳ/አጥር ገንብቷል።)",
               "citation": "",
               "evidence": [
                 "SurveyorsReport"
@@ -557,40 +561,42 @@
       "reliefs": [
         {
           "id": "relief_demolition",
-          "text": "Order the Defendant to demolish the encroaching structure."
+          "text": "Order the Defendant to demolish the encroaching structure. (ተከሳሹ የጣሰውን ግንባታ እንዲያፈርስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_boundary_restitution",
-          "text": "Order the restoration of the boundary markers to their original position."
+          "text": "Order the restoration of the boundary markers to their original position. (የድንበር ምልክቶቹ ወደ ቀድሞ ቦታቸው እንዲመለሱ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "app_stay_construction": {
-      "documentTitle": "Application for Urgent Order to Suspend Construction",
+      "documentTitle": "Application for Urgent Order to Suspend Construction (ግንባታን ለማገድ አስቸኳይ ትዕዛዝ እንዲሰጥ የሚቀርብ ማመልከቻ)",
       "jurisdictionText": "Art. 154 of the Civil Procedure Code.",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
       },
       "facts": {
         "group_1": {
-          "title": "Irreparable Injury",
+          "title": "Irreparable Injury (የማይተካ ጉዳት)",
           "facets": [
             {
               "id": "fact_ongoing_construction",
-              "legalText": "The Respondent is currently engaged in active construction on the disputed land.",
+              "legalText": "The Respondent is currently engaged in active construction on the disputed land. (ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ በማከናወን ላይ ነው።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_irreparable_harm",
-              "legalText": "If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced.",
+              "legalText": "If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced. (ግንባታው ከተጠናቀቀ ማፍረስ አስቸጋሪ ስለሚሆን የአመልካቹ መብቶች በዘላቂነት ይጎዳሉ።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_prima_facie",
-              "legalText": "The Applicant has demonstrated a strong prima facie case of ownership.",
+              "legalText": "The Applicant has demonstrated a strong prima facie case of ownership. (አመልካቹ ጠንካራ የቅድመ-ገጽታ የባለቤትነት መብት አሳይቷል።)",
               "citation": "",
               "evidence": []
             }
@@ -600,30 +606,31 @@
       "reliefs": [
         {
           "id": "relief_suspend_works",
-          "text": "Order the immediate suspension of all construction activities on the disputed plot pending final judgment."
+          "text": "Order the immediate suspension of all construction activities on the disputed plot pending final judgment. (በተከራካሪው ይዞታ ላይ ያሉ ሁሉም የግንባታ ሥራዎች የመጨረሻ ፍርድ እስከሚሰጥ ድረስ ወዲያውኑ እንዲታገዱ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "app_local_inspection": {
-      "documentTitle": "Application for Order of Local Inspection",
+      "documentTitle": "Application for Order of Local Inspection (የአካባቢ ምርመራ ትዕዛዝ እንዲሰጥ የሚቀርብ ማመልከቻ)",
       "jurisdictionText": "Art. 136 of the Civil Procedure Code.",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
       },
       "facts": {
         "group_1": {
-          "title": "Clarification",
+          "title": "Clarification (ማብራሪያ)",
           "facets": [
             {
               "id": "fact_physical_dispute",
-              "legalText": "The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory.",
+              "legalText": "The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory. (የመሬቱን አካላዊ ገጽታዎች/ወሰኖች በተመለከተ የቃል ምስክርነቶች እና ሰነዶች እርስ በርሳቸው የሚጋጩ ናቸው።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_necessity_to_view",
-              "legalText": "A just decision cannot be rendered without the Court (or its registrar) physically viewing the site.",
+              "legalText": "A just decision cannot be rendered without the Court (or its registrar) physically viewing the site. (ፍርድ ቤቱ (ወይም ሬጅስትራሩ) ቦታውን በአካል ሳይመለከት ፍትሐዊ ውሳኔ መስጠት አይቻልም።)",
               "citation": "CPC Art. 136",
               "evidence": []
             }
@@ -633,30 +640,31 @@
       "reliefs": [
         {
           "id": "relief_order_visit",
-          "text": "Order a local inspection of the property to verify boundaries/possession."
+          "text": "Order a local inspection of the property to verify boundaries/possession. (የወሰን/ይዞታን ለማረጋገጥ የንብረቱ አካባቢያዊ ምርመራ እንዲደረግ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "property_nuisance_cessation": {
-      "documentTitle": "Statement of Claim for Cessation of Abnormal Inconvenience (Nuisance)",
+      "documentTitle": "Statement of Claim for Cessation of Abnormal Inconvenience (Nuisance) (ያልተለመደ ችግር (አደጋ) እንዲቆም የሚቀርብ ክስ)",
       "jurisdictionText": "Art. 1225 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Plaintiff (Injured Party)",
-        "respondent": "Defendant (Source of Nuisance)"
+        "applicant": "Plaintiff (Injured Party) (ከሳሽ - የተጎዳ ወገን)",
+        "respondent": "Defendant (Source of Nuisance) (ተከሳሽ - የአደጋው ምንጭ)"
       },
       "facts": {
         "group_1": {
-          "title": "The Disturbance",
+          "title": "The Disturbance (ችግሩ)",
           "facets": [
             {
               "id": "fact_nature_inconvenience",
-              "legalText": "The Defendant's actions involve [Noise/Smell/Vibration] originating from [Source].",
+              "legalText": "The Defendant's actions involve [Noise/Smell/Vibration] originating from [Source]. (የተከሳሹ ድርጊቶች ከ [ምንጭ] የሚመነጩትን [ጫጫታ/ሽታ/ንዝረት] ያካትታሉ።)",
               "citation": "Civ. Code Art. 1225",
               "evidence": []
             },
             {
               "id": "fact_abnormal_degree",
-              "legalText": "The inconvenience caused by the Defendant is abnormal and exceeds the level normally expected of the neighborhood.",
+              "legalText": "The inconvenience caused by the Defendant is abnormal and exceeds the level normally expected of the neighborhood. (በተከሳሹ የደረሰው ችግር ያልተለመደ እና ከአካባቢው ከሚጠበቀው ደረጃ የላቀ ነው።)",
               "citation": "",
               "evidence": [
                 "WitnessAffidavitsNuisance",
@@ -666,11 +674,11 @@
           ]
         },
         "group_2": {
-          "title": "Knowledge and Refusal",
+          "title": "Knowledge and Refusal (እውቀት እና እምቢተኝነት)",
           "facets": [
             {
               "id": "fact_notice_to_stop",
-              "legalText": "The Defendant was formally notified of the inconvenience but failed to take corrective measures.",
+              "legalText": "The Defendant was formally notified of the inconvenience but failed to take corrective measures. (ተከሳሹ ስለ ችግሩ በይፋ ቢነገረውም የማስተካከያ እርምጃዎችን አልወሰደም።)",
               "citation": "",
               "evidence": []
             }
@@ -680,29 +688,31 @@
       "reliefs": [
         {
           "id": "relief_order_cessation",
-          "text": "Judgment ordering the Defendant to immediately cease the source of the abnormal inconvenience."
+          "text": "Judgment ordering the Defendant to immediately cease the source of the abnormal inconvenience. (ተከሳሹ ያልተለመደውን የችግር ምንጭ ወዲያውኑ እንዲያቆም የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_damages_past",
-          "text": "Order payment of damages suffered by the Plaintiff prior to the cessation.",
-          "citation": "Civ. Code Art. 1226"
+          "text": "Order payment of damages suffered by the Plaintiff prior to the cessation. (ከማቆሙ በፊት በከሳሽ የደረሰውን ጉዳት ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 1226",
+          "isDefault": false
         }
       ]
     },
     "property_servitude_right_of_way": {
-      "documentTitle": "Statement of Claim for Establishment of Servitude (Right of Way)",
+      "documentTitle": "Statement of Claim for Establishment of Servitude (Right of Way) (የመንገድ መብት አገልግሎት እንዲቋቋም የሚቀርብ ክስ)",
       "jurisdictionText": "Art. 1332 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Dominant Tenement (Applicant)",
-        "respondent": "Servient Tenement (Respondent)"
+        "applicant": "Dominant Tenement (Applicant) (አመልካች)",
+        "respondent": "Servient Tenement (Respondent) (ተጠሪ)"
       },
       "facts": {
         "group_1": {
-          "title": "Enclave Status (Necessity)",
+          "title": "Enclave Status (Necessity) (የመዘጋት ሁኔታ (አስፈላጊነት))",
           "facets": [
             {
               "id": "fact_property_enclaved",
-              "legalText": "The Applicant's property has no adequate access to a public road.",
+              "legalText": "The Applicant's property has no adequate access to a public road. (የአመልካቹ ንብረት ወደ ህዝብ መንገድ በቂ መዳረሻ የለውም።)",
               "citation": "Civ. Code Art. 1332",
               "evidence": [
                 "SurveyorsReport",
@@ -711,18 +721,18 @@
             },
             {
               "id": "fact_no_other_means",
-              "legalText": "There are no other practical or less onerous routes available for access.",
+              "legalText": "There are no other practical or less onerous routes available for access. (ለመዳረሻ ሌላ ተግባራዊ ወይም አነስተኛ ሸክም ያለባቸው መንገዶች የሉም።)",
               "citation": "",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Requested Route",
+          "title": "Requested Route (የተጠየቀው መንገድ)",
           "facets": [
             {
               "id": "fact_least_onerous",
-              "legalText": "The requested right of way across the Respondent's land is the route least detrimental to the Servient Tenement (Respondent).",
+              "legalText": "The requested right of way across the Respondent's land is the route least detrimental to the Servient Tenement (Respondent). (በተጠሪው መሬት ላይ የተጠየቀው የመንገድ መብት ለተጠሪው አነስተኛ ጉዳት የሚያደርስ መንገድ ነው።)",
               "citation": "Civ. Code Art. 1334",
               "evidence": []
             }
@@ -732,40 +742,42 @@
       "reliefs": [
         {
           "id": "relief_establish_servitude",
-          "text": "Judgment establishing a Servitude of Right of Way across the Respondent's property."
+          "text": "Judgment establishing a Servitude of Right of Way across the Respondent's property. (በተጠሪው ንብረት ላይ የመንገድ መብት አገልግሎት እንዲቋቋም የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_compensation_fee",
-          "text": "Order the Dominant Tenement to pay fair compensation to the Servient Tenement for the damage caused by the passage.",
-          "citation": "Civ. Code Art. 1333"
+          "text": "Order the Dominant Tenement to pay fair compensation to the Servient Tenement for the damage caused by the passage. (አመልካቹ በመተላለፊያው ምክንያት ለደረሰው ጉዳት ለተጠሪው ፍትሃዊ ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 1333",
+          "isDefault": false
         }
       ]
     },
     "property_possessory_disturbance": {
-      "documentTitle": "Statement of Claim for Cessation of Disturbance of Possession",
+      "documentTitle": "Statement of Claim for Cessation of Disturbance of Possession (የይዞታ መረበሽ እንዲቆም የሚቀርብ ክስ)",
       "jurisdictionText": "Art. 1148 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Plaintiff (Possessor)",
-        "respondent": "Defendant (Disturber)"
+        "applicant": "Plaintiff (Possessor) (ከሳሽ - ባለይዞታ)",
+        "respondent": "Defendant (Disturber) (ተከሳሽ - ረባሽ)"
       },
       "facts": {
         "group_1": {
-          "title": "Fact of Possession",
+          "title": "Fact of Possession (የይዞታ እውነታ)",
           "facets": [
             {
               "id": "fact_actual_possession",
-              "legalText": "The Plaintiff was in peaceful and continuous possession of the property/right.",
+              "legalText": "The Plaintiff was in peaceful and continuous possession of the property/right. (ከሳሽ በንብረቱ/መብቱ ላይ ሰላማዊ እና ያልተቋረጠ ይዞታ ነበረው።)",
               "citation": "Civ. Code Art. 1140",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Disturbance Act",
+          "title": "Disturbance Act (የመረበሽ ድርጊት)",
           "facets": [
             {
               "id": "fact_disturbance_act",
-              "legalText": "The Defendant has performed specific actions that interfere with the Plaintiff's peaceful possession (e.g., removing fences, obstructing access).",
+              "legalText": "The Defendant has performed specific actions that interfere with the Plaintiff's peaceful possession (e.g., removing fences, obstructing access). (ተከሳሹ የከሳሽን ሰላማዊ ይዞታ የሚያውኩ የተወሰኑ ድርጊቶችን ፈጽሟል (ለምሳሌ አጥርን ማስወገድ፣ መዳረሻን መከልከል)።)",
               "citation": "Civ. Code Art. 1148",
               "evidence": [
                 "WitnessAffidavitsNuisance",
@@ -774,7 +786,7 @@
             },
             {
               "id": "fact_timeliness",
-              "legalText": "This claim is filed within two years of the disturbance.",
+              "legalText": "This claim is filed within two years of the disturbance. (ይህ ክስ ረብሻው ከተፈጠረበት ጊዜ ጀምሮ በሁለት ዓመት ውስጥ የቀረበ ነው።)",
               "citation": "Civ. Code Art. 1149",
               "evidence": []
             }
@@ -784,34 +796,36 @@
       "reliefs": [
         {
           "id": "relief_stop_disturbance",
-          "text": "Order the Defendant to cease all acts of disturbance."
+          "text": "Order the Defendant to cease all acts of disturbance. (ተከሳሹ ሁሉንም የረብሻ ድርጊቶች እንዲያቆም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_restore_status",
-          "text": "Order the restoration of the property to the state it was in before the disturbance."
+          "text": "Order the restoration of the property to the state it was in before the disturbance. (ንብረቱ ረብሻው ከመከሰቱ በፊት ወደነበረበት ሁኔታ እንዲመለስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "app_servitude_temporary_passage": {
-      "documentTitle": "Application for Temporary Mandatory Order to Grant Passage",
+      "documentTitle": "Application for Temporary Mandatory Order to Grant Passage (ጊዜያዊ የግዴታ የመተላለፊያ ትዕዛዝ እንዲሰጥ ማመልከቻ)",
       "jurisdictionText": "Art. 154 of the Civil Procedure Code (Injunction) & Art. 1332 Civil Code (Necessity).",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
       },
       "facts": {
         "group_1": {
-          "title": "Urgency & Extreme Need",
+          "title": "Urgency & Extreme Need (አስቸኳይነት እና ከፍተኛ ፍላጎት)",
           "facets": [
             {
               "id": "fact_complete_blockade",
-              "legalText": "The Respondent has completely blocked the Applicant's only access to the public road.",
+              "legalText": "The Respondent has completely blocked the Applicant's only access to the public road. (ተጠሪው የአመልካቹን ብቸኛ መውጫ ወደ ህዝብ መንገድ ሙሉ በሙሉ ዘግቷል።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_imminent_damage",
-              "legalText": "The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.",
+              "legalText": "The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage. (እገዳው የአመልካቹን የመኖር/የንግድ ሥራ የመሥራት ችሎታን አደጋ ላይ ይጥላል፣ ይህም አስቸኳይ እና ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል።)",
               "citation": "",
               "evidence": []
             }
@@ -821,24 +835,25 @@
       "reliefs": [
         {
           "id": "relief_grant_temporary_access",
-          "text": "Order the Respondent to grant temporary passage to the Applicant pending the final decision on the main servitude claim."
+          "text": "Order the Respondent to grant temporary passage to the Applicant pending the final decision on the main servitude claim. (በዋናው የአገልግሎት ጥያቄ ላይ የመጨረሻ ውሳኔ እስከሚሰጥ ድረስ ተጠሪው ለአመልካች ጊዜያዊ መተላለፊያ እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "contract_debt_recovery": {
-      "documentTitle": "Statement of Claim for Recovery of Loan/Debt",
+      "documentTitle": "Statement of Claim for Recovery of Loan/Debt (የብድር/ዕዳ ማስመለሻ ክስ)",
       "jurisdictionText": "Art. 216 et seq. of the Civil Procedure Code & Civil Code Art. 2471.",
       "partyTitles": {
-        "applicant": "Plaintiff (Creditor)",
-        "respondent": "Defendant (Debtor)"
+        "applicant": "Plaintiff (Creditor) (ከሳሽ (አበዳሪ))",
+        "respondent": "Defendant (Debtor) (ተከሳሽ (ተበዳሪ))"
       },
       "facts": {
         "group_1": {
-          "title": "Formation of Contract",
+          "title": "Formation of Contract (የውል መመስረት)",
           "facets": [
             {
               "id": "fact_loan_agreement",
-              "legalText": "On [Date], the Plaintiff and Defendant entered into a written loan agreement.",
+              "legalText": "On [Date], the Plaintiff and Defendant entered into a written loan agreement. (በ [ቀን] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል።)",
               "citation": "Civ. Code Art. 2471",
               "evidence": [
                 "WrittenContract",
@@ -847,7 +862,7 @@
             },
             {
               "id": "fact_disbursement",
-              "legalText": "The Plaintiff disbursed the sum of [Amount] ETB to the Defendant.",
+              "legalText": "The Plaintiff disbursed the sum of [Amount] ETB to the Defendant. (ከሳሽ [መጠን] ብር ለተከሳሽ ሰጥቷል።)",
               "citation": "",
               "evidence": [
                 "PaymentReceipt"
@@ -856,21 +871,21 @@
           ]
         },
         "group_2": {
-          "title": "Default",
+          "title": "Default (ውል ማፍረስ)",
           "facets": [
             {
               "id": "fact_payment_due",
-              "legalText": "The repayment period agreed upon expired on [Date].",
+              "legalText": "The repayment period agreed upon expired on [Date]. (የተስማሙበት የመክፈያ ጊዜ በ [ቀን] አብቅቷል።)",
               "citation": "Civ. Code Art. 1857"
             },
             {
               "id": "fact_failure_to_pay",
-              "legalText": "Despite the maturity of the debt, the Defendant failed to effect payment.",
+              "legalText": "Despite the maturity of the debt, the Defendant failed to effect payment. (ዕዳው ቢደርስም ተከሳሹ ክፍያ አልፈጸመም።)",
               "citation": ""
             },
             {
               "id": "fact_notice_given",
-              "legalText": "The Plaintiff served a formal notice of default on [Date].",
+              "legalText": "The Plaintiff served a formal notice of default on [Date]. (ከሳሽ በ [ቀን] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።)",
               "citation": "Civ. Code Art. 1772",
               "evidence": [
                 "NoticeofDefault"
@@ -882,34 +897,37 @@
       "reliefs": [
         {
           "id": "relief_principal_amount",
-          "text": "Judgment ordering the Defendant to pay the principal sum of [Amount] ETB."
+          "text": "Judgment ordering the Defendant to pay the principal sum of [Amount] ETB. (ተከሳሹ ዋናውን ገንዘብ [መጠን] ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_legal_interest",
-          "text": "Order payment of legal interest (9%) calculated from the date of default.",
-          "citation": "Civ. Code Art. 1751"
+          "text": "Order payment of legal interest (9%) calculated from the date of default. (ከውል ማፍረሻ ቀን ጀምሮ የተሰላውን የሕግ ወለድ (9%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 1751",
+          "isDefault": true
         },
         {
           "id": "relief_contractual_interest",
-          "text": "Order payment of contractual interest agreed at [Percentage] (max 12%).",
-          "citation": "Civ. Code Art. 2479"
+          "text": "Order payment of contractual interest agreed at [Percentage] (max 12%). (በ [ፐርሰንት] የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 2479",
+          "isDefault": false
         }
       ]
     },
     "contract_specific_performance": {
-      "documentTitle": "Statement of Claim for Specific Performance of Contract",
+      "documentTitle": "Statement of Claim for Specific Performance of Contract (ውልን ያለመፈጸም ክስ)",
       "jurisdictionText": "Art. 1776 of the Civil Code & Civil Procedure Code.",
       "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
       },
       "facts": {
         "group_1": {
-          "title": "Contractual Obligation",
+          "title": "Contractual Obligation (የውል ግዴታ)",
           "facets": [
             {
               "id": "fact_valid_contract",
-              "legalText": "A valid contract exists between the parties regarding [Subject Matter].",
+              "legalText": "A valid contract exists between the parties regarding [Subject Matter]. (በ [ጉዳይ] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ።)",
               "citation": "Civ. Code Art. 1678",
               "evidence": [
                 "WrittenContract"
@@ -917,22 +935,22 @@
             },
             {
               "id": "fact_plaintiff_performance",
-              "legalText": "The Plaintiff has fully performed their obligations under the contract.",
+              "legalText": "The Plaintiff has fully performed their obligations under the contract. (ከሳሽ በውሉ መሠረት ግዴታዎቹን ሙሉ በሙሉ ፈጽሟል።)",
               "citation": ""
             }
           ]
         },
         "group_2": {
-          "title": "Breach",
+          "title": "Breach (የውል ጥሰት)",
           "facets": [
             {
               "id": "fact_non_performance",
-              "legalText": "The Defendant has failed to perform [Specific Obligation] without lawful cause.",
+              "legalText": "The Defendant has failed to perform [Specific Obligation] without lawful cause. (ተከሳሹ ያለ ሕጋዊ ምክንያት [የተወሰነ ግዴታ] አልፈጸመም።)",
               "citation": "Civ. Code Art. 1771"
             },
             {
               "id": "fact_special_interest",
-              "legalText": "Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant.",
+              "legalText": "Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant. (የተወሰነ አፈጻጸም ለከሳሽ ልዩ ፍላጎት ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም።)",
               "citation": "Civ. Code Art. 1776"
             }
           ]
@@ -941,38 +959,40 @@
       "reliefs": [
         {
           "id": "relief_enforce_performance",
-          "text": "Order the Defendant to specifically perform the contract by [Action, e.g., transferring title]."
+          "text": "Order the Defendant to specifically perform the contract by [Action, e.g., transferring title]. (ተከሳሹ [ድርጊት፣ ለምሳሌ የባለቤትነት ማስተላለፍ] በማድረግ ውሉን በተለይ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_alt_damages",
-          "text": "Alternatively, if performance is impossible, order payment of damages."
+          "text": "Alternatively, if performance is impossible, order payment of damages. (በአማራጭ፣ አፈጻጸም የማይቻል ከሆነ የካሳ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "contract_termination_claim": {
-      "documentTitle": "Statement of Claim for Judicial Cancellation of Contract",
+      "documentTitle": "Statement of Claim for Judicial Cancellation of Contract (የውል ስረዛ ክስ)",
       "jurisdictionText": "Art. 1784 & 1785 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
       },
       "facts": {
         "group_1": {
-          "title": "Breach Analysis",
+          "title": "Breach Analysis (የጥሰት ትንተና)",
           "facets": [
             {
               "id": "fact_fundamental_breach",
-              "legalText": "The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract.",
+              "legalText": "The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract. (የተከሳሹ አለመፈጸም የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው።)",
               "citation": "Civ. Code Art. 1785"
             }
           ]
         },
         "group_2": {
-          "title": "Restitution",
+          "title": "Restitution (ካሳ)",
           "facets": [
             {
               "id": "fact_payments_made",
-              "legalText": "The Plaintiff has already paid [Amount] to the Defendant.",
+              "legalText": "The Plaintiff has already paid [Amount] to the Defendant. (ከሳሽ ለተከሳሽ [መጠን] ከፍሏል።)",
               "citation": "",
               "evidence": [
                 "PaymentReceipt"
@@ -984,34 +1004,36 @@
       "reliefs": [
         {
           "id": "relief_judicial_cancellation",
-          "text": "Judgment declaring the contract cancelled/terminated."
+          "text": "Judgment declaring the contract cancelled/terminated. (ውሉ መሰረዙን/መቋረጡን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_reinstatement",
-          "text": "Order the parties to be reinstated to their former position (Restitution).",
-          "citation": "Civ. Code Art. 1815"
+          "text": "Order the parties to be reinstated to their former position (Restitution). (ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 1815",
+          "isDefault": true
         }
       ]
     },
     "app_attachment_before_judgment": {
-      "documentTitle": "Application for Attachment of Property Before Judgment",
+      "documentTitle": "Application for Attachment of Property Before Judgment (ከፍርድ በፊት የንብረት እግድ ማመልከቻ)",
       "jurisdictionText": "Art. 151 & 152 of the Civil Procedure Code.",
       "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
       },
       "facts": {
         "group_1": {
-          "title": "Obstruction of Justice",
+          "title": "Obstruction of Justice (የፍትሕ መደናቀፍ)",
           "facets": [
             {
               "id": "fact_intent_to_obstruct",
-              "legalText": "The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree.",
+              "legalText": "The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree. (ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው።)",
               "citation": "CPC Art. 151"
             },
             {
               "id": "fact_prima_facie_case",
-              "legalText": "The Applicant has a strong prima facie case and is likely to succeed in the main suit.",
+              "legalText": "The Applicant has a strong prima facie case and is likely to succeed in the main suit. (አመልካቹ ጠንካራ የቅድመ-ገጽታ ክስ ያለው ሲሆን በዋናው ክስ ላይ ሊሳካለት ይችላል።)",
               "citation": ""
             }
           ]
@@ -1020,28 +1042,30 @@
       "reliefs": [
         {
           "id": "relief_attach_property",
-          "text": "Order the attachment of the Defendant's property [Specify Property] pending final judgment."
+          "text": "Order the attachment of the Defendant's property [Specify Property] pending final judgment. (የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት [ንብረቱን ይግለጹ] እንዲታገድ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_security_bond",
-          "text": "Alternatively, order the Defendant to furnish security for the amount claimed."
+          "text": "Alternatively, order the Defendant to furnish security for the amount claimed. (በአማራጭ፣ ተከሳሹ ለተጠየቀው ገንዘብ ዋስትና እንዲያቀርብ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "app_judgment_on_admission": {
-      "documentTitle": "Application for Judgment on Admissions",
+      "documentTitle": "Application for Judgment on Admissions (በእምነት ላይ ለሚሰጥ ፍርድ ማመልከቻ)",
       "jurisdictionText": "Art. 242 of the Civil Procedure Code.",
       "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
       },
       "facts": {
         "group_1": {
-          "title": "Admission",
+          "title": "Admission (እምነት)",
           "facets": [
             {
               "id": "fact_clear_admission",
-              "legalText": "In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt.",
+              "legalText": "In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt. (በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል።)",
               "citation": "CPC Art. 242"
             }
           ]
@@ -1050,12 +1074,13 @@
       "reliefs": [
         {
           "id": "relief_immediate_judgment",
-          "text": "Enter immediate judgment for the Plaintiff on the admitted portion of the claim."
+          "text": "Enter immediate judgment for the Plaintiff on the admitted portion of the claim. (በተጠየቀው የይገባኛል ጥያቄ ክፍል ላይ ለከሳሽ ወዲያውኑ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "labour_unlawful_termination": {
-      "documentTitle": "Statement of Claim for Unlawful Termination",
+      "documentTitle": "Statement of Claim for Unlawful Termination (ሕገ-ወጥ የስራ ስንብት ክስ)",
       "partyTitles": {
         "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
         "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
@@ -1063,11 +1088,11 @@
       "jurisdictionText": "Labour Proclamation No. 1156/2019",
       "facts": {
         "group_1": {
-          "title": "The Contractual Relationship (Prerequisites)",
+          "title": "The Contractual Relationship (Prerequisites) (የውል ግንኙነት (ቅድመ-ሁኔታዎች))",
           "facets": [
             {
               "id": "indefinite_contract",
-              "legalText": "Existence of an indefinite period employment contract.",
+              "legalText": "Existence of an indefinite period employment contract. (ላልተወሰነ ጊዜ የቅጥር ውል መኖር።)",
               "citation": "Art. 9 of Proc. 1156/2019",
               "evidence": [
                 "EmploymentContract"
@@ -1075,7 +1100,7 @@
             },
             {
               "id": "definite_contract_ended",
-              "legalText": "A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.",
+              "legalText": "A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract. (የተወሰነ ጊዜ ወይም የሙከራ ውል ነበረ፣ እና ጊዜው አልቋል፣ ይህም ወደ ላልተወሰነ ጊዜ ውል መቀየሩን ያመለክታል።)",
               "citation": "Art. 10, 11 of Proc. 1156/2019",
               "evidence": [
                 "EmploymentContract"
@@ -1084,11 +1109,11 @@
           ]
         },
         "group_2": {
-          "title": "The Act of Termination: Procedural Violations",
+          "title": "The Act of Termination: Procedural Violations (የስንብት ድርጊት፡ የሥነ-ሥርዓት ጥሰቶች)",
           "facets": [
             {
               "id": "no_prior_notice",
-              "legalText": "Termination was effected without any prior written notice specifying the reasons and date of termination.",
+              "legalText": "Termination was effected without any prior written notice specifying the reasons and date of termination. (ስንብቱ የተፈጸመው ምክንያቱን እና የስንብት ቀንን የሚገልጽ የጽሑፍ ማስታወቂያ ሳይሰጥ ነው።)",
               "citation": "Violation of Art. 35(1) of Proc. 1156/2019",
               "evidence": [
                 "TerminationLetter"
@@ -1096,7 +1121,7 @@
             },
             {
               "id": "insufficient_notice",
-              "legalText": "The notice period provided was insufficient and less than the legal minimum based on years of service.",
+              "legalText": "The notice period provided was insufficient and less than the legal minimum based on years of service. (የተሰጠው የማስታወቂያ ጊዜ በቂ ያልሆነ እና በአገልግሎት ዓመታት ላይ ከተመሠረተው ሕጋዊ ዝቅተኛው ያነሰ ነበር።)",
               "citation": "Violation of Art. 35(2) of Proc. 1156/2019",
               "evidence": [
                 "TerminationLetter"
@@ -1105,11 +1130,11 @@
           ]
         },
         "group_3": {
-          "title": "The Act of Termination: Substantive Violations (Unlawful Grounds)",
+          "title": "The Act of Termination: Substantive Violations (Unlawful Grounds) (የስንብት ድርጊት፡ ዋና ጥሰቶች (ሕገ-ወጥ ምክንያቶች))",
           "facets": [
             {
               "id": "union_membership_termination",
-              "legalText": "Termination was due to the employee's membership in a trade union or participation in union activities.",
+              "legalText": "Termination was due to the employee's membership in a trade union or participation in union activities. (ስንብቱ የተከሰተው በሠራተኛው የሠራተኛ ማኅበር አባልነት ወይም በማኅበር እንቅስቃሴዎች በመሳተፉ ምክንያት ነው።)",
               "citation": "Art. 26(2)(a) of Proc. 1156/2019",
               "evidence": [
                 "TerminationLetter"
@@ -1117,7 +1142,7 @@
             },
             {
               "id": "maternity_termination",
-              "legalText": "Termination was due to the employee's pregnancy or maternity leave status.",
+              "legalText": "Termination was due to the employee's pregnancy or maternity leave status. (ስንብቱ የተከሰተው በሠራተኛው የእርግዝና ወይም የወሊድ ፈቃድ ሁኔታ ምክንያት ነው።)",
               "citation": "Art. 26(2)(d) of Proc. 1156/2019",
               "evidence": [
                 "TerminationLetter"
@@ -1125,7 +1150,7 @@
             },
             {
               "id": "whistleblower_termination",
-              "legalText": "Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law.",
+              "legalText": "Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law. (ስንብቱ የተከሰተው ሠራተኛው ስለ ሕግ ጥሰት መረጃ በመስጠቱ ወይም በአሠሪው ላይ ቅሬታ በማቅረቡ ምክንያት ነው።)",
               "citation": "Art. 26(2)(b) of Proc. 1156/2019",
               "evidence": [
                 "TerminationLetter"
@@ -1133,7 +1158,7 @@
             },
             {
               "id": "discriminatory_termination",
-              "legalText": "Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin.",
+              "legalText": "Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin. (ስንብቱ የተመሠረተው በዘር፣ በቀለም፣ በጾታ፣ በሃይማኖት፣ በፖለቲካ አስተያየት፣ በብሔራዊ አመጣጥ ወይም በማኅበራዊ አመጣጥ ላይ ባሉ አድሎአዊ ምክንያቶች ላይ ነው።)",
               "citation": "Art. 26(2)(c) of Proc. 1156/2019",
               "evidence": [
                 "TerminationLetter"
@@ -1142,11 +1167,11 @@
           ]
         },
         "group_4": {
-          "title": "The Act of Termination: The \"No Reason\" Defense",
+          "title": "The Act of Termination: The \"No Reason\" Defense (የስንብት ድርጊት፡ \"ምክንያት የለም\" መከላከያ)",
           "facets": [
             {
               "id": "no_valid_reason",
-              "legalText": "The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking.",
+              "legalText": "The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking. (አሠሪው ከሠራተኛው ችሎታ ወይም ምግባር ወይም ከድርጅቱ ድርጅታዊ ፍላጎቶች ጋር የተያያዘ ትክክለኛ የስንብት ምክንያት አልሰጠም።)",
               "citation": "Violation of Art. 27 of Proc. 1156/2019",
               "evidence": [
                 "TerminationLetter"
@@ -1155,11 +1180,11 @@
           ]
         },
         "group_5": {
-          "title": "The Act of Termination: Constructive Dismissal",
+          "title": "The Act of Termination: Constructive Dismissal (የስንብት ድርጊት፡ ገንቢ ስንብት)",
           "facets": [
             {
               "id": "constructive_dismissal",
-              "legalText": "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.",
+              "legalText": "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer. (ሠራተኛው በአሠሪው ሕገ-ወጥ ወይም አስነዋሪ ድርጊቶች (ለምሳሌ ወሲባዊ ትንኮሳ፣ ጥቃት፣ ለደህንነት አስጊ) ምክንያት ሥራውን ለመልቀቅ ተገድዷል፣ ይህም በአሠሪው እንደ ስንብት ይቆጠራል።)",
               "citation": "Art. 32 of Proc. 1156/2019",
               "evidence": []
             }
@@ -1169,32 +1194,38 @@
       "reliefs": [
         {
           "id": "declare_termination_unlawful",
-          "text": "Judgment declaring the termination unlawful pursuant to Art. 43."
+          "text": "Judgment declaring the termination unlawful pursuant to Art. 43. (በአንቀጽ 43 መሠረት ስንብቱ ሕገ-ወጥ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "reinstatement",
-          "text": "Order for reinstatement to previous position with full back pay from the date of termination until reinstatement (Art. 43(1))."
+          "text": "Order for reinstatement to previous position with full back pay from the date of termination until reinstatement (Art. 43(1)). (ከስንብት ቀን ጀምሮ እስከ መመለሻ ድረስ ሙሉ የኋላ ክፍያ በመክፈል ወደ ቀድሞ ቦታው እንዲመለስ ትዕዛዝ እንዲሰጥ (አንቀጽ 43(1))።)",
+          "isDefault": false
         },
         {
           "id": "compensation_in_lieu",
-          "text": "Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (not to exceed 12 months total) (Art. 43(2,3))."
+          "text": "Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (not to exceed 12 months total) (Art. 43(2,3)). (ከመመለስ ይልቅ የካሳ ክፍያ၊ ከአማካይ የቀን ደመወዝ 180 እጥፍ ጋር የሚመጣጠን፣ እና ለእያንዳንዱ የአገልግሎት ዓመት ተጨማሪ 30 ቀናት (በአጠቃላይ ከ12 ወራት የማይበልጥ) (አንቀጽ 43(2,3))።)",
+          "isDefault": false
         },
         {
           "id": "severance_pay",
-          "text": "Payment of Severance Pay as per the calculation in Art. 39 & 40 (Only if not reinstated)."
+          "text": "Payment of Severance Pay as per the calculation in Art. 39 & 40 (Only if not reinstated). (በአንቀጽ 39 እና 40 ስሌት መሠረት የስንብት ክፍያ (ካልተመለሰ ብቻ)።)",
+          "isDefault": false
         },
         {
           "id": "notice_compensation",
-          "text": "Payment of Compensation for lack of proper notice, equivalent to salary for the notice period (Art. 44)."
+          "text": "Payment of Compensation for lack of proper notice, equivalent to salary for the notice period (Art. 44). (ትክክለኛ ማስታወቂያ ባለመስጠቱ ምክንያት ካሳ ክፍያ፣ ከማስታወቂያው ጊዜ ደመወዝ ጋር የሚመጣጠን (አንቀጽ 44)።)",
+          "isDefault": false
         },
         {
           "id": "costs_and_fees_labour",
-          "text": "Costs and fees to be covered by the respondent."
+          "text": "Costs and fees to be covered by the respondent. (ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ።)",
+          "isDefault": true
         }
       ]
     },
     "labour_unpaid_wages": {
-      "documentTitle": "Statement of Claim for Outstanding Payments",
+      "documentTitle": "Statement of Claim for Outstanding Payments (ላልተከፈለ ክፍያ ክስ)",
       "partyTitles": {
         "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
         "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
@@ -1202,11 +1233,11 @@
       "jurisdictionText": "Labour Proclamation No. 1156/2019",
       "facts": {
         "group_1": {
-          "title": "Salary Arrears",
+          "title": "Salary Arrears (የደመወዝ ውዝፍ)",
           "facets": [
             {
               "id": "unpaid_salary",
-              "legalText": "Non-payment of regular monthly salary for the month(s) of [Specify Months].",
+              "legalText": "Non-payment of regular monthly salary for the month(s) of [Specify Months]. (የ [ወራትን ይግለጹ] መደበኛ ወርሃዊ ደመወዝ አለመክፈል።)",
               "citation": "Art. 53 (Payment obligations)",
               "evidence": [
                 "UnpaidWageWitness"
@@ -1214,7 +1245,7 @@
             },
             {
               "id": "unlawful_deduction",
-              "legalText": "An unlawful deduction was made from the salary without employee consent or a valid court order.",
+              "legalText": "An unlawful deduction was made from the salary without employee consent or a valid court order. (ያለ ሠራተኛ ፈቃድ ወይም ሕጋዊ የፍርድ ቤት ትዕዛዝ ከደመወዝ ሕገ-ወጥ ቅናሽ ተደርጓል።)",
               "citation": "Art. 59 (Prohibition of deductions)",
               "evidence": [
                 "UnpaidWageWitness"
@@ -1223,11 +1254,11 @@
           ]
         },
         "group_2": {
-          "title": "Statutory Benefits",
+          "title": "Statutory Benefits (የሕግ ጥቅማጥቅሞች)",
           "facets": [
             {
               "id": "unpaid_overtime",
-              "legalText": "Employee worked beyond the standard 8 hours/day or 48 hours/week without receiving overtime compensation at the legally mandated rates.",
+              "legalText": "Employee worked beyond the standard 8 hours/day or 48 hours/week without receiving overtime compensation at the legally mandated rates. (ሠራተኛው ከመደበኛ 8 ሰዓት/በቀን ወይም 48 ሰዓት/በሳምንት በላይ ሠርቷል ነገር ግን በሕግ በተደነገገው መሠረት የትርፍ ሰዓት ካሳ አላገኘም።)",
               "citation": "Art. 66 & 68 (Calculation rates)",
               "evidence": [
                 "UnpaidWageWitness"
@@ -1235,13 +1266,13 @@
             },
             {
               "id": "unpaid_annual_leave",
-              "legalText": "Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment.",
+              "legalText": "Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment. (ሠራተኛው ዓመታዊ ፈቃድ እንዲወስድ አልተፈቀደለትም እና ሥራው ሲቋረጥ ላላገለገለበት ፈቃድ ካሳ አልተከፈለውም።)",
               "citation": "Art. 77 & 79 (Conversion to cash only upon termination)",
               "evidence": []
             },
             {
               "id": "unpaid_holiday_work",
-              "legalText": "Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate.",
+              "legalText": "Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate. (ሠራተኛው በሕዝባዊ በዓላት ላይ ሠርቷል ነገር ግን ከመደበኛ የሰዓት ደመወዙ በሁለት እጥፍ ካሳ አልተከፈለውም።)",
               "citation": "Art. 73",
               "evidence": []
             }
@@ -1251,24 +1282,28 @@
       "reliefs": [
         {
           "id": "payment_principal",
-          "text": "An order for the Respondent to pay the total principal amount of all outstanding wages and benefits."
+          "text": "An order for the Respondent to pay the total principal amount of all outstanding wages and benefits. (ተጠሪው ሁሉንም ያልተከፈሉ ደመወዞች እና ጥቅማጥቅሞች አጠቃላይ ዋና መጠን እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "payment_interest",
-          "text": "An order for the payment of statutory interest on the delayed payments as per the relevant provisions of the Civil Code."
+          "text": "An order for the payment of statutory interest on the delayed payments as per the relevant provisions of the Civil Code. (በሲቪል ሕጉ አግባብነት ባላቸው ድንጋጌዎች መሠረት በዘገዩ ክፍያዎች ላይ የሕግ ወለድ እንዲከፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         },
         {
           "id": "payment_overtime_specific",
-          "text": "A specific order for the payment of calculated overtime wages."
+          "text": "A specific order for the payment of calculated overtime wages. (የተሰላ የትርፍ ሰዓት ደመወዝ እንዲከፈል የተወሰነ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         },
         {
           "id": "costs_and_fees_labour_wages",
-          "text": "Costs and fees to be covered by the respondent."
+          "text": "Costs and fees to be covered by the respondent. (ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ።)",
+          "isDefault": true
         }
       ]
     },
     "labour_employment_injury": {
-      "documentTitle": "Claim for Employment Injury Compensation",
+      "documentTitle": "Claim for Employment Injury Compensation (የሥራ ጉዳት ካሳ ጥያቄ)",
       "partyTitles": {
         "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
         "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
@@ -1276,46 +1311,46 @@
       "jurisdictionText": "Labour Proclamation No. 1156/2019",
       "facts": {
         "group_1": {
-          "title": "The Incident",
+          "title": "The Incident (ክስተቱ)",
           "facets": [
             {
               "id": "injury_at_work",
-              "legalText": "The injury occurred during the performance of the employee's duties within the regular working hours and at the designated workplace.",
+              "legalText": "The injury occurred during the performance of the employee's duties within the regular working hours and at the designated workplace. (ጉዳቱ የደረሰው ሠራተኛው በተለመደው የሥራ ሰዓት እና በተሰየመው የሥራ ቦታ ላይ ግዴታውን በሚወጣበት ጊዜ ነው።)",
               "citation": "Art. 95(1)(a)",
               "evidence": []
             },
             {
               "id": "injury_commuting",
-              "legalText": "The injury occurred while the employee was commuting directly between their residence and the workplace, using transport provided by the employer.",
+              "legalText": "The injury occurred while the employee was commuting directly between their residence and the workplace, using transport provided by the employer. (ጉዳቱ የደረሰው ሠራተኛው በአሠሪው በተሰጠው መጓጓዣ በቀጥታ በመኖሪያ ቤቱ እና በሥራ ቦታው መካከል ሲጓዝ ነው።)",
               "citation": "Art. 95(1)(c)",
               "evidence": []
             },
             {
               "id": "injury_on_order",
-              "legalText": "The injury occurred outside the regular workplace while the employee was carrying out a specific order given by the employer.",
+              "legalText": "The injury occurred outside the regular workplace while the employee was carrying out a specific order given by the employer. (ጉዳቱ የደረሰው ሠራተኛው በአሠሪው የተሰጠውን የተወሰነ ትዕዛዝ ሲፈጽም ከመደበኛው የሥራ ቦታ ውጭ ነው።)",
               "citation": "Art. 95(1)(b)",
               "evidence": []
             },
             {
               "id": "occupational_disease",
-              "legalText": "The employee has contracted an occupational disease as a direct result of exposure to hazards in the work environment.",
+              "legalText": "The employee has contracted an occupational disease as a direct result of exposure to hazards in the work environment. (ሠራተኛው በሥራ አካባቢ ውስጥ ላሉ አደጋዎች በመጋለጡ ምክንያት የሙያ በሽታ ተይዟል።)",
               "citation": "Art. 98",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "The Damage",
+          "title": "The Damage (ጉዳቱ)",
           "facets": [
             {
               "id": "permanent_partial_disability",
-              "legalText": "A permanent partial disability has been sustained as a result of the injury, confirmed by a medical board certificate.",
+              "legalText": "A permanent partial disability has been sustained as a result of the injury, confirmed by a medical board certificate. (በጉዳቱ ምክንያት ቋሚ ከፊል የአካል ጉዳት ደርሷል፣ ይህም በሕክምና ቦርድ የምስክር ወረቀት የተረጋገጠ ነው።)",
               "citation": "Art. 109 & 110",
               "evidence": []
             },
             {
               "id": "temporary_total_disability",
-              "legalText": "A temporary total disability was sustained, rendering the employee unable to work for a specific period.",
+              "legalText": "A temporary total disability was sustained, rendering the employee unable to work for a specific period. (ጊዜያዊ አጠቃላይ የአካል ጉዳት ደርሶበታል፣ ይህም ሠራተኛው ለተወሰነ ጊዜ መሥራት እንዳይችል አድርጎታል።)",
               "citation": "Art. 106",
               "evidence": []
             }
@@ -1325,24 +1360,28 @@
       "reliefs": [
         {
           "id": "medical_expenses",
-          "text": "An order for the full payment of all medical, surgical, pharmaceutical, and hospital care expenses incurred due to the injury (Art. 105)."
+          "text": "An order for the full payment of all medical, surgical, pharmaceutical, and hospital care expenses incurred due to the injury (Art. 105). (በጉዳቱ ምክንያት ለደረሱት ሁሉም የሕክምና፣ የቀዶ ጥገና፣ የመድኃኒት እና የሆስፒታል እንክብካቤ ወጪዎች ሙሉ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ (አንቀጽ 105)።)",
+          "isDefault": true
         },
         {
           "id": "disability_compensation",
-          "text": "Payment of disability compensation, calculated based on the employee's salary and the percentage of disability as determined by the medical board (Art. 109 & 110)."
+          "text": "Payment of disability compensation, calculated based on the employee's salary and the percentage of disability as determined by the medical board (Art. 109 & 110). (በሠራተኛው ደመወዝ እና በሕክምና ቦርዱ በተወሰነው የአካል ጉዳት መቶኛ ላይ በመመርኮዝ የተሰላ የአካል ጉዳት ካሳ ክፍያ (አንቀጽ 109 እና 110)።)",
+          "isDefault": false
         },
         {
           "id": "periodical_payment",
-          "text": "Payment for temporary disability, equivalent to 75% of the employee's daily wage, for the duration of the disability (Art. 106)."
+          "text": "Payment for temporary disability, equivalent to 75% of the employee's daily wage, for the duration of the disability (Art. 106). (ለጊዜያዊ የአካል ጉዳት ክፍያ፣ ከሠራተኛው የቀን ደመወዝ 75% ጋር የሚመጣጠን፣ ለአካል ጉዳቱ ጊዜ (አንቀጽ 106)።)",
+          "isDefault": false
         },
         {
           "id": "costs_and_fees_injury",
-          "text": "Costs and fees to be covered by the respondent."
+          "text": "Costs and fees to be covered by the respondent. (ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ።)",
+          "isDefault": true
         }
       ]
     },
     "civil_service_disciplinary_appeal": {
-      "documentTitle": "Memorandum of Appeal to the Administrative Tribunal",
+      "documentTitle": "Memorandum of Appeal to the Administrative Tribunal (ለአስተዳደር ፍርድ ቤት ይግባኝ ማቅረቢያ)",
       "partyTitles": {
         "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
         "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
@@ -1350,11 +1389,11 @@
       "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
       "facts": {
         "group_1": {
-          "title": "The Disciplinary Measure (The Trigger)",
+          "title": "The Disciplinary Measure (The Trigger) (የዲሲፕሊን እርምጃ (ቀስቅሴው))",
           "facets": [
             {
               "id": "measure_dismissal",
-              "legalText": "Dismissal from Service.",
+              "legalText": "Dismissal from Service. (ከሥራ መባረር።)",
               "citation": "Art. 81(1)(b) of Proc. 1064/2017",
               "evidence": [
                 "DismissalLetter"
@@ -1362,7 +1401,7 @@
             },
             {
               "id": "measure_demotion",
-              "legalText": "Downgrading of job position/grade.",
+              "legalText": "Downgrading of job position/grade. (የሥራ መደብ/ደረጃ ዝቅ ማድረግ።)",
               "citation": "Art. 81(1)(b) of Proc. 1064/2017",
               "evidence": [
                 "DismissalLetter"
@@ -1370,7 +1409,7 @@
             },
             {
               "id": "measure_fine",
-              "legalText": "Imposition of a fine exceeding one month's salary.",
+              "legalText": "Imposition of a fine exceeding one month's salary. (ከአንድ ወር ደመወዝ በላይ የሆነ ቅጣት መጣል።)",
               "citation": "Art. 81(1)(b) of Proc. 1064/2017",
               "evidence": [
                 "DismissalLetter"
@@ -1379,52 +1418,52 @@
           ]
         },
         "group_2": {
-          "title": "Procedural Violations (The Defense)",
+          "title": "Procedural Violations (The Defense) (የሥነ-ሥርዓት ጥሰቶች (መከላከያው))",
           "facets": [
             {
               "id": "no_right_to_be_heard",
-              "legalText": "The Institution took the measure without giving the Appellant a chance to present a defense.",
+              "legalText": "The Institution took the measure without giving the Appellant a chance to present a defense. (ተቋሙ ይግባኝ ባዩ መከላከያ እንዲያቀርብ እድል ሳይሰጥ እርምጃውን ወስዷል።)",
               "citation": "Violation of Art. 69 of Proc. 1064/2017",
               "evidence": []
             },
             {
               "id": "limitation_period_1yr",
-              "legalText": "The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.",
+              "legalText": "The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation. (ጥብቅ እርምጃው ጥፋቱ ከታወቀ ከ1 ዓመት በላይ ተወስዷል፣ ይህም በይርጋ እንዲታገድ ያደርገዋል።)",
               "citation": "Art. 76(2) of Proc. 1064/2017",
               "evidence": []
             },
             {
               "id": "limitation_period_6mo",
-              "legalText": "The simple measure was taken more than 6 months after the offense was known, barring it by limitation.",
+              "legalText": "The simple measure was taken more than 6 months after the offense was known, barring it by limitation. (ቀላል እርምጃው ጥፋቱ ከታወቀ ከ6 ወራት በላይ ተወስዷል፣ ይህም በይርጋ እንዲታገድ ያደርገዋል።)",
               "citation": "Art. 76(1) of Proc. 1064/2017",
               "evidence": []
             },
             {
               "id": "improper_committee",
-              "legalText": "The Disciplinary Committee was not constituted according to Regulation 77/2002 (e.g., no staff representative).",
+              "legalText": "The Disciplinary Committee was not constituted according to Regulation 77/2002 (e.g., no staff representative). (የዲሲፕሊን ኮሚቴው በደንብ 77/2002 መሠረት አልተቋቋመም (ለምሳሌ የሠራተኛ ተወካይ የለም)።)",
               "citation": "Reg. 77/2002",
               "evidence": []
             }
           ]
         },
         "group_3": {
-          "title": "Substantive Defenses (The Merits)",
+          "title": "Substantive Defenses (The Merits) (ዋና መከላከያዎች (ፍሬ ነገሩ))",
           "facets": [
             {
               "id": "not_an_offense",
-              "legalText": "The alleged act does not constitute a disciplinary offense under the law.",
+              "legalText": "The alleged act does not constitute a disciplinary offense under the law. (የተጠረጠረው ድርጊት በሕጉ መሠረት የዲሲፕሊን ጥፋት አይደለም።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "disproportionate_penalty",
-              "legalText": "The penalty is disproportionate to the offense committed.",
+              "legalText": "The penalty is disproportionate to the offense committed. (ቅጣቱ ለተፈጸመው ጥፋት ተመጣጣኝ አይደለም።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "double_jeopardy",
-              "legalText": "The appellant was already punished for the same alleged offense.",
+              "legalText": "The appellant was already punished for the same alleged offense. (ይግባኝ ባዩ በተመሳሳይ በተጠረጠረ ጥፋት ቀደም ሲል ተቀጥቷል።)",
               "citation": "",
               "evidence": []
             }
@@ -1434,20 +1473,23 @@
       "reliefs": [
         {
           "id": "quash_decision",
-          "text": "To quash/annul the administrative decision of the Respondent Institution."
+          "text": "To quash/annul the administrative decision of the Respondent Institution. (የተጠሪ ተቋሙን አስተዳደራዊ ውሳኔ ለመሻር/ለማበላሸት።)",
+          "isDefault": true
         },
         {
           "id": "reinstate_with_pay",
-          "text": "To order the reinstatement of the Appellant to their former position and payment of full salary for the period of suspension (Art. 81(3))."
+          "text": "To order the reinstatement of the Appellant to their former position and payment of full salary for the period of suspension (Art. 81(3)). (ይግባኝ ባዩ ወደ ቀድሞ ቦታው እንዲመለስ እና ለእግድ ጊዜ ሙሉ ደመወዝ እንዲከፈለው ትዕዛዝ እንዲሰጥ (አንቀጽ 81(3))።)",
+          "isDefault": false
         },
         {
           "id": "expunge_record",
-          "text": "To order the expunging of the disciplinary measure from the Appellant's personal file."
+          "text": "To order the expunging of the disciplinary measure from the Appellant's personal file. (የዲሲፕሊን እርምጃው ከይግባኝ ባዩ የግል ፋይል እንዲሰረዝ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "civil_service_termination_unlawful": {
-      "documentTitle": "Appeal Against Administrative Termination",
+      "documentTitle": "Appeal Against Administrative Termination (በአስተዳደራዊ ስንብት ላይ ይግባኝ)",
       "partyTitles": {
         "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
         "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
@@ -1455,11 +1497,11 @@
       "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
       "facts": {
         "group_1": {
-          "title": "Grounds: Inefficiency (Performance)",
+          "title": "Grounds: Inefficiency (Performance) (ምክንያቶች፡ ብቃት ማነስ (አፈጻጸም))",
           "facets": [
             {
               "id": "inefficiency_not_consecutive",
-              "legalText": "Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations.",
+              "legalText": "Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations. (ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁለት ተከታታይ \"የማያረካ\" ግምገማዎችን አላገኘም።)",
               "citation": "Art. 84(1) of Proc. 1064/2017",
               "evidence": [
                 "PerformanceReview"
@@ -1467,7 +1509,7 @@
             },
             {
               "id": "inefficiency_no_training",
-              "legalText": "Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve.",
+              "legalText": "Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve. (ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ለማሻሻል አስፈላጊውን ሥልጠና እና ድጋፍ ስላልተሰጠው።)",
               "citation": "Art. 84(1) of Proc. 1064/2017",
               "evidence": [
                 "PerformanceReview"
@@ -1476,28 +1518,28 @@
           ]
         },
         "group_2": {
-          "title": "Grounds: Illness / Medical",
+          "title": "Grounds: Illness / Medical (ምክንያቶች፡ ሕመም / ሕክምና)",
           "facets": [
             {
               "id": "illness_before_leave_exhausted",
-              "legalText": "Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay).",
+              "legalText": "Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay). (በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁሉንም ያለውን የሕመም ፈቃድ (8 ወር ሙሉ ደመወዝ፣ 4 ወር ግማሽ ደመወዝ) ከማብቃቱ በፊት የተከሰተ በመሆኑ ነው።)",
               "citation": "Art. 83(1) of Proc. 1064/2017",
               "evidence": []
             },
             {
               "id": "illness_no_medical_board",
-              "legalText": "Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability.",
+              "legalText": "Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability. (በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ቋሚ የአካል ጉዳትን ለማወጅ የሕክምና ቦርድ የምስክር ወረቀት ስላልቀረበ።)",
               "citation": "Art. 83(2) of Proc. 1064/2017",
               "evidence": []
             }
           ]
         },
         "group_3": {
-          "title": "Grounds: Force Majeure / Redundancy",
+          "title": "Grounds: Force Majeure / Redundancy (ምክንያቶች፡ ከአቅም በላይ / ቅነሳ)",
           "facets": [
             {
               "id": "redundancy_no_offer",
-              "legalText": "Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination.",
+              "legalText": "Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination. (በሥራ መደብ መጥፋት (ቅነሳ) ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ከስንብት በፊት ተመሳሳይ ክፍት የሥራ ቦታ ስላልተሰጠው።)",
               "citation": "Art. 85(2) of Proc. 1064/2017",
               "evidence": []
             }
@@ -1507,16 +1549,18 @@
       "reliefs": [
         {
           "id": "quash_termination",
-          "text": "To quash/annul the administrative decision of termination."
+          "text": "To quash/annul the administrative decision of termination. (የስንብት አስተዳደራዊ ውሳኔን ለመሻር/ለማበላሸት።)",
+          "isDefault": true
         },
         {
           "id": "reinstate_civil_servant",
-          "text": "To order the reinstatement of the Appellant to their former position with full back pay."
+          "text": "To order the reinstatement of the Appellant to their former position with full back pay. (ይግባኝ ባዩ ወደ ቀድሞ ቦታው ሙሉ የኋላ ክፍያ እንዲመለስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "civil_service_benefits_grievance": {
-      "documentTitle": "Appeal on Service Rights & Benefits",
+      "documentTitle": "Appeal on Service Rights & Benefits (በአገልግሎት መብቶች እና ጥቅሞች ላይ ይግባኝ)",
       "partyTitles": {
         "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
         "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
@@ -1524,11 +1568,11 @@
       "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
       "facts": {
         "group_1": {
-          "title": "Exhaustion of Remedies (Mandatory)",
+          "title": "Exhaustion of Remedies (Mandatory) (የመፍትሔዎች ማሟጠጥ (ግዴታ))",
           "facets": [
             {
               "id": "exhaustion_grievance_submitted",
-              "legalText": "A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.",
+              "legalText": "A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time. (በ [ቀን] ለተቋሙ የቅሬታ አያያዝ ኮሚቴ ቅሬታ ቀርቧል፣ ነገር ግን ውሳኔው አጥጋቢ አልነበረም ወይም በጊዜ አልተሰጠም።)",
               "citation": "Art. 81(1)(e) of Proc. 1064/2017",
               "evidence": [
                 "GrievanceSubmission"
@@ -1537,23 +1581,23 @@
           ]
         },
         "group_2": {
-          "title": "The Grievance",
+          "title": "The Grievance (ቅሬታው)",
           "facets": [
             {
               "id": "promotion_denied",
-              "legalText": "The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.",
+              "legalText": "The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle. (ይግባኝ ባዩ ከተመረጠው እጩ ከፍ ያለ ነጥብ ቢያስመዘግብም፣ የብቃት መርህን በመጣስ በሕገ-ወጥ መንገድ ዕድገት ተከልክሏል።)",
               "citation": "Art. 13 of Proc. 1064/2017",
               "evidence": []
             },
             {
               "id": "salary_increment_denied",
-              "legalText": "The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.",
+              "legalText": "The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements. (ይግባኝ ባዩ ሁሉንም የአፈጻጸም መስፈርቶች ቢያሟላም በሕገ-ወጥ መንገድ ወቅታዊ የደመወዝ ጭማሪ ተከልክሏል።)",
               "citation": "Art. 81(1)(c) of Proc. 1064/2017",
               "evidence": []
             },
             {
               "id": "acting_allowance_denied",
-              "legalText": "The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.",
+              "legalText": "The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period. (ይግባኝ ባዩ በከፍተኛ የሥራ መደብ በተጠባባቂነት አገልግሏል ነገር ግን ለዚያ ጊዜ በሕገ-ወጥ መንገድ የተጠባባቂ አበል ተከልክሏል።)",
               "citation": "Relevant Regulations",
               "evidence": []
             }
@@ -1563,32 +1607,35 @@
       "reliefs": [
         {
           "id": "grant_promotion",
-          "text": "To order the Respondent Institution to grant the promotion due to the Appellant."
+          "text": "To order the Respondent Institution to grant the promotion due to the Appellant. (ተጠሪው ተቋም ለይግባኝ ባዩ የሚገባውን ዕድገት እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         },
         {
           "id": "grant_salary_increment",
-          "text": "To order the payment of the denied salary increment, with retroactive effect."
+          "text": "To order the payment of the denied salary increment, with retroactive effect. (የተከለከለውን የደመወዝ ጭማሪ፣ ከኋላ ቀር ውጤት ጋር እንዲከፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         },
         {
           "id": "refund_deductions",
-          "text": "To order the refund of any unlawfully deducted salary."
+          "text": "To order the refund of any unlawfully deducted salary. (በሕገ-ወጥ መንገድ የተቀነሰ ማንኛውንም ደመወዝ እንዲመለስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "family_divorce_dispute": {
-      "documentTitle": "Statement of Claim for Dissolution of Marriage",
+      "documentTitle": "Statement of Claim for Dissolution of Marriage (የጋብቻ መፍረስ ክስ)",
       "jurisdictionText": "Art. 11(2) of Federal Courts Proc. 25/96 and Art. 76 of the Revised Family Code.",
       "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
       },
       "facts": {
         "group_1": {
-          "title": "Marriage Validity",
+          "title": "Marriage Validity (የጋብቻ ሕጋዊነት)",
           "facets": [
             {
               "id": "fact_marriage_existence",
-              "legalText": "The Plaintiff and Defendant were legally married on [Date].",
+              "legalText": "The Plaintiff and Defendant were legally married on [Date]. (ከሳሽ እና ተከሳሽ በ [ቀን] በሕጋዊ መንገድ ተጋብተዋል።)",
               "citation": "RFC Art. 1",
               "evidence": [
                 "CertificateofMarriage"
@@ -1597,28 +1644,28 @@
           ]
         },
         "group_2": {
-          "title": "Grounds for Dissolution",
+          "title": "Grounds for Dissolution (የመፍረስ ምክንያቶች)",
           "facets": [
             {
               "id": "fact_irretrievable_breakdown",
-              "legalText": "There are irreconcilable differences making the continuation of the marriage impossible.",
+              "legalText": "There are irreconcilable differences making the continuation of the marriage impossible. (የጋብቻውን መቀጠል የማይቻል የሚያደርጉ የማይታረቁ ልዩነቶች አሉ።)",
               "citation": "RFC Art. 76",
               "evidence": []
             },
             {
               "id": "fact_period_of_separation",
-              "legalText": "The parties have lived separately for a period exceeding [Number] months.",
+              "legalText": "The parties have lived separately for a period exceeding [Number] months. (ተዋዋይ ወገኖች ከ [ቁጥር] ወራት በላይ ለብቻቸው ኖረዋል።)",
               "citation": "RFC Art. 81",
               "evidence": []
             }
           ]
         },
         "group_3": {
-          "title": "Children & Custody",
+          "title": "Children & Custody (ልጆች እና አስተዳደግ)",
           "facets": [
             {
               "id": "fact_children_existence",
-              "legalText": "The marriage produced [Number] children.",
+              "legalText": "The marriage produced [Number] children. (ጋብቻው [ቁጥር] ልጆችን አፍርቷል።)",
               "citation": "RFC Art. 113",
               "evidence": [
                 "BirthCertificate"
@@ -1630,36 +1677,40 @@
       "reliefs": [
         {
           "id": "relief_dissolution",
-          "text": "Judgment dissolving the marriage between the Plaintiff and Defendant."
+          "text": "Judgment dissolving the marriage between the Plaintiff and Defendant. (በከሳሽ እና በተከሳሽ መካከል ያለውን ጋብቻ የሚፈርስ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_custody",
-          "text": "Order granting sole/joint custody of the minor children to the Plaintiff."
+          "text": "Order granting sole/joint custody of the minor children to the Plaintiff. (የአካለ መጠን ያልደረሱ ልጆችን ብቸኛ/የጋራ የማሳደግ መብት ለከሳሽ እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         },
         {
           "id": "relief_child_support",
-          "text": "Order for the Defendant to pay monthly child maintenance."
+          "text": "Order for the Defendant to pay monthly child maintenance. (ተከሳሹ ወርሃዊ የልጅ ማሳደጊያ እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         },
         {
           "id": "relief_property_partition",
-          "text": "Order for the liquidation and partition of common marital property."
+          "text": "Order for the liquidation and partition of common marital property. (የጋራ የጋብቻ ንብረትን ለማፍሰስ እና ለመከፋፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "family_divorce_agreement": {
-      "documentTitle": "Petition for Approval of Divorce by Mutual Consent",
+      "documentTitle": "Petition for Approval of Divorce by Mutual Consent (በጋራ ስምምነት የፍቺ ማመልከቻ)",
       "jurisdictionText": "Art. 77 of the Revised Family Code.",
       "partyTitles": {
-        "applicant": "First Petitioner",
-        "respondent": "Second Petitioner"
+        "applicant": "First Petitioner (የመጀመሪያ አቤቱታ አቅራቢ)",
+        "respondent": "Second Petitioner (ሁለተኛ አቤቱታ አቅራቢ)"
       },
       "facts": {
         "group_1": {
-          "title": "Consent Details",
+          "title": "Consent Details (የስምምነት ዝርዝሮች)",
           "facets": [
             {
               "id": "fact_mutual_agreement",
-              "legalText": "Both parties have voluntarily agreed to dissolve their marriage.",
+              "legalText": "Both parties have voluntarily agreed to dissolve their marriage. (ሁለቱም ወገኖች በፈቃደኝነት ጋብቻቸውን ለማፍረስ ተስማምተዋል።)",
               "citation": "RFC Art. 77",
               "evidence": [
                 "CertificateofMarriage"
@@ -1668,11 +1719,11 @@
           ]
         },
         "group_2": {
-          "title": "Terms of Agreement",
+          "title": "Terms of Agreement (የስምምነት ውሎች)",
           "facets": [
             {
               "id": "fact_agreement_doc",
-              "legalText": "The parties have prepared a comprehensive agreement regarding the division of property and custody of children.",
+              "legalText": "The parties have prepared a comprehensive agreement regarding the division of property and custody of children. (ተዋዋይ ወገኖች የንብረት ክፍፍልን እና የልጆችን የማሳደግ መብትን በተመለከተ አጠቃላይ ስምምነት አዘጋጅተዋል።)",
               "citation": "RFC Art. 82",
               "evidence": [
                 "ListofCommonProperty"
@@ -1684,35 +1735,36 @@
       "reliefs": [
         {
           "id": "relief_approve_agreement",
-          "text": "Order approving the divorce agreement and dissolving the marriage."
+          "text": "Order approving the divorce agreement and dissolving the marriage. (የፍቺውን ስምምነት በማጽደቅ ጋብቻውን የሚፈርስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "family_paternity_claim": {
-      "documentTitle": "Statement of Claim for Judicial Declaration of Paternity",
+      "documentTitle": "Statement of Claim for Judicial Declaration of Paternity (የአባትነት ማረጋገጫ ክስ)",
       "jurisdictionText": "Art. 143 of the Revised Family Code.",
       "partyTitles": {
-        "applicant": "Plaintiff (Child/Guardian)",
-        "respondent": "Defendant (Alleged Father)"
+        "applicant": "Plaintiff (Child/Guardian) (ከሳሽ (ልጅ/አሳዳጊ))",
+        "respondent": "Defendant (Alleged Father) (ተከሳሽ (የተጠረጠረ አባት))"
       },
       "facts": {
         "group_1": {
-          "title": "Sexual Relations",
+          "title": "Sexual Relations (የወሲብ ግንኙነት)",
           "facets": [
             {
               "id": "fact_sexual_intercourse",
-              "legalText": "The mother and the Defendant had sexual relations during the legal period of conception.",
+              "legalText": "The mother and the Defendant had sexual relations during the legal period of conception. (እናት እና ተከሳሽ በሕጋዊ የእርግዝና ወቅት የወሲብ ግንኙነት ነበራቸው።)",
               "citation": "RFC Art. 143",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Possession of Status",
+          "title": "Possession of Status (የሁኔታ ይዞታ)",
           "facets": [
             {
               "id": "fact_possession_status",
-              "legalText": "The Defendant has treated the child as his own in public and private spheres.",
+              "legalText": "The Defendant has treated the child as his own in public and private spheres. (ተከሳሹ ልጁን በሕዝብ እና በግል እንደራሱ አድርጎታል።)",
               "citation": "RFC Art. 136",
               "evidence": [
                 "WitnessStatements"
@@ -1724,34 +1776,36 @@
       "reliefs": [
         {
           "id": "relief_declare_paternity",
-          "text": "Judgment declaring the Defendant is the biological father of the child."
+          "text": "Judgment declaring the Defendant is the biological father of the child. (ተከሳሹ የልጁ ባዮሎጂያዊ አባት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_reimbursement",
-          "text": "Order for reimbursement of expenses related to birth and maintenance."
+          "text": "Order for reimbursement of expenses related to birth and maintenance. (ከትውልድ እና ከጥገና ጋር የተያያዙ ወጪዎችን ለመመለስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "app_temporary_maintenance": {
-      "documentTitle": "Application for Order of Provisional Maintenance",
+      "documentTitle": "Application for Order of Provisional Maintenance (ጊዜያዊ የጥገና ትዕዛዝ ማመልከቻ)",
       "jurisdictionText": "Art. 83(2) of the Revised Family Code & Art. 154 Civil Procedure Code.",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
       },
       "facts": {
         "group_1": {
-          "title": "Urgency & Need",
+          "title": "Urgency & Need (አስቸኳይነት እና ፍላጎት)",
           "facets": [
             {
               "id": "fact_pendency_of_suit",
-              "legalText": "A main suit for divorce is currently pending between the parties.",
+              "legalText": "A main suit for divorce is currently pending between the parties. (በተዋዋይ ወገኖች መካከል የፍቺ ዋና ክስ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው።)",
               "citation": "RFC Art. 83",
               "evidence": []
             },
             {
               "id": "fact_immediate_need",
-              "legalText": "The Applicant has no independent income to support themselves/the children during the litigation.",
+              "legalText": "The Applicant has no independent income to support themselves/the children during the litigation. (አመልካቹ በክርክሩ ወቅት እራሳቸውን/ልጆቻቸውን ለመደገፍ ነፃ ገቢ የላቸውም።)",
               "citation": "RFC Art. 106",
               "evidence": [
                 "ProofofIncome"
@@ -1759,7 +1813,7 @@
             },
             {
               "id": "fact_ability_to_pay",
-              "legalText": "The Respondent has sufficient income to provide provisional support.",
+              "legalText": "The Respondent has sufficient income to provide provisional support. (ተጠሪው ጊዜያዊ ድጋፍ ለመስጠት በቂ ገቢ አለው።)",
               "citation": "",
               "evidence": []
             }
@@ -1769,30 +1823,31 @@
       "reliefs": [
         {
           "id": "relief_prov_maintenance",
-          "text": "Order the Respondent to pay [Amount] ETB monthly until final judgment."
+          "text": "Order the Respondent to pay [Amount] ETB monthly until final judgment. (ተጠሪው የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በወር [መጠን] ብር እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "app_property_preservation": {
-      "documentTitle": "Application for Attachment and Preservation of Common Property",
+      "documentTitle": "Application for Attachment and Preservation of Common Property (የጋራ ንብረትን ለማያያዝ እና ለመጠበቅ ማመልከቻ)",
       "jurisdictionText": "Art. 154 Civil Procedure Code & Art. 83 Revised Family Code.",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
       },
       "facts": {
         "group_1": {
-          "title": "Risk of Dissipation",
+          "title": "Risk of Dissipation (የመበታተን አደጋ)",
           "facets": [
             {
               "id": "fact_intent_to_defraud",
-              "legalText": "There is a reasonable apprehension that the Respondent is attempting to sell, transfer, or hide common marital assets.",
+              "legalText": "There is a reasonable apprehension that the Respondent is attempting to sell, transfer, or hide common marital assets. (ተጠሪው የጋራ የጋብቻ ንብረቶችን ለመሸጥ፣ ለማስተላለፍ ወይም ለመደበቅ እየሞከረ ነው የሚል ምክንያታዊ ስጋት አለ።)",
               "citation": "CPC Art. 154",
               "evidence": []
             },
             {
               "id": "fact_common_ownership",
-              "legalText": "The property in question is common property acquired during the marriage.",
+              "legalText": "The property in question is common property acquired during the marriage. (በጥያቄ ውስጥ ያለው ንብረት በጋብቻ ወቅት የተገኘ የጋራ ንብረት ነው።)",
               "citation": "RFC Art. 62",
               "evidence": [
                 "ListofCommonProperty"
@@ -1804,28 +1859,30 @@
       "reliefs": [
         {
           "id": "relief_injunction_transfer",
-          "text": "Order restraining the Respondent from transferring or selling specific assets."
+          "text": "Order restraining the Respondent from transferring or selling specific assets. (ተጠሪው የተወሰኑ ንብረቶችን ከማስተላለፍ ወይም ከመሸጥ እንዲቆጠብ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_freeze_accounts",
-          "text": "Order freezing the joint bank accounts pending final partition."
+          "text": "Order freezing the joint bank accounts pending final partition. (የመጨረሻው ክፍፍል እስከሚጠናቀቅ ድረስ የጋራ የባንክ ሂሳቦችን እንዲታገዱ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "app_protective_order": {
-      "documentTitle": "Application for Urgent Protective Order",
+      "documentTitle": "Application for Urgent Protective Order (አስቸኳይ የመከላከያ ትዕዛዝ ማመልከቻ)",
       "jurisdictionText": "Art. 154 Civil Procedure Code (Inherent Power) & Criminal Code References.",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
       },
       "facts": {
         "group_1": {
-          "title": "Safety & Harm",
+          "title": "Safety & Harm (ደህንነት እና ጉዳት)",
           "facets": [
             {
               "id": "fact_imminent_danger",
-              "legalText": "The Applicant faces immediate physical danger from the Respondent.",
+              "legalText": "The Applicant faces immediate physical danger from the Respondent. (አመልካቹ ከተጠሪው ወዲያውኑ አካላዊ አደጋ ይደርስበታል።)",
               "citation": "",
               "evidence": [
                 "PoliceReportDomesticViolence"
@@ -1833,7 +1890,7 @@
             },
             {
               "id": "fact_balance_convenience",
-              "legalText": "The harm to the Applicant if the order is not granted outweighs any inconvenience to the Respondent.",
+              "legalText": "The harm to the Applicant if the order is not granted outweighs any inconvenience to the Respondent. (ትዕዛዙ ካልተሰጠ በአመልካቹ ላይ የሚደርሰው ጉዳት በተጠሪው ላይ ከሚደርሰው ማንኛውም ችግር ይበልጣል።)",
               "citation": "",
               "evidence": []
             }
@@ -1843,28 +1900,30 @@
       "reliefs": [
         {
           "id": "relief_vacate_home",
-          "text": "Order the Respondent to temporarily vacate the matrimonial home."
+          "text": "Order the Respondent to temporarily vacate the matrimonial home. (ተጠሪው የጋብቻ ቤቱን ለጊዜው እንዲለቅ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_restrain_contact",
-          "text": "Order restraining the Respondent from coming within [Distance] meters of the Applicant."
+          "text": "Order restraining the Respondent from coming within [Distance] meters of the Applicant. (ተጠሪው ከአመልካቹ [ርቀት] ሜትር ርቀት ውስጥ እንዳይመጣ የሚከለክል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "family_post_judgment_partition": {
-      "documentTitle": "Application for Liquidation and Partition of Common Property",
+      "documentTitle": "Application for Liquidation and Partition of Common Property (የጋራ ንብረትን ለማፍሰስ እና ለመከፋፈል ማመልከቻ)",
       "jurisdictionText": "Art. 85 & 90 of the Revised Family Code and Art. 219 of the Civil Procedure Code (Execution Proceedings).",
       "partyTitles": {
-        "applicant": "Decree Holder (Applicant)",
-        "respondent": "Judgment Debtor (Respondent)"
+        "applicant": "Decree Holder (Applicant) (የፍርድ ባለቤት (አመልካች))",
+        "respondent": "Judgment Debtor (Respondent) (የፍርድ ባለዕዳ (ተጠሪ))"
       },
       "facts": {
         "group_1": {
-          "title": "Procedural History",
+          "title": "Procedural History (የሥነ-ሥርዓት ታሪክ)",
           "facets": [
             {
               "id": "fact_prior_dissolution",
-              "legalText": "This Honorable Court has already rendered a judgment dissolving the marriage between the parties under this file number.",
+              "legalText": "This Honorable Court has already rendered a judgment dissolving the marriage between the parties under this file number. (ይህ የተከበረ ፍርድ ቤት በዚህ የፋይል ቁጥር በተዋዋይ ወገኖች መካከል ያለውን ጋብቻ የሚፈርስ ፍርድ ቀደም ሲል ሰጥቷል።)",
               "citation": "Civil Procedure Code Art. 182",
               "evidence": [
                 "CopyofDivorceJudgment"
@@ -1872,18 +1931,18 @@
             },
             {
               "id": "fact_custody_settled",
-              "legalText": "Issues regarding child custody and maintenance have already been adjudicated.",
+              "legalText": "Issues regarding child custody and maintenance have already been adjudicated. (የልጅ የማሳደግ እና የጥገና ጉዳዮች ቀደም ሲል ተወስነዋል።)",
               "citation": "",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Identification of Property",
+          "title": "Identification of Property (የንብረት መለያ)",
           "facets": [
             {
               "id": "fact_existence_common_property",
-              "legalText": "The parties acquired movable and immovable property during the existence of the marriage which constitutes Common Property.",
+              "legalText": "The parties acquired movable and immovable property during the existence of the marriage which constitutes Common Property. (ተዋዋይ ወገኖች በጋብቻው ወቅት የጋራ ንብረት የሆነውን ተንቀሳቃሽ እና የማይንቀሳቀስ ንብረት አግኝተዋል።)",
               "citation": "RFC Art. 62",
               "evidence": [
                 "ListofCommonProperty",
@@ -1892,18 +1951,18 @@
             },
             {
               "id": "fact_property_possession",
-              "legalText": "The property is currently in the sole possession/control of the Respondent/Applicant.",
+              "legalText": "The property is currently in the sole possession/control of the Respondent/Applicant. (ንብረቱ በአሁኑ ጊዜ በተጠሪው/አመልካቹ ብቸኛ ይዞታ/ቁጥጥር ሥር ነው።)",
               "citation": "",
               "evidence": []
             }
           ]
         },
         "group_3": {
-          "title": "Restitution of Personal Property (Pre-Partition)",
+          "title": "Restitution of Personal Property (Pre-Partition) (የግል ንብረትን መመለስ (ቅድመ-ክፍፍል))",
           "facets": [
             {
               "id": "fact_personal_property_claim",
-              "legalText": "The Applicant possesses proof of personal property owned prior to the marriage or acquired by succession/donation, which must be withdrawn before partition.",
+              "legalText": "The Applicant possesses proof of personal property owned prior to the marriage or acquired by succession/donation, which must be withdrawn before partition. (አመልካቹ ከጋብቻ በፊት የነበረውን ወይም በውርስ/በስጦታ ያገኘውን የግል ንብረት ማረጋገጫ ያለው ሲሆን ይህም ከክፍፍል በፊት መውጣት አለበት።)",
               "citation": "RFC Art. 57 & 86",
               "evidence": [
                 "ProofofInheritanceDonation",
@@ -1913,17 +1972,17 @@
           ]
         },
         "group_4": {
-          "title": "Valuation & Dispute",
+          "title": "Valuation & Dispute (ግምገማ እና ክርክር)",
           "facets": [
             {
               "id": "fact_dispute_valuation",
-              "legalText": "The parties are unable to agree on the value or mode of partition of the assets.",
+              "legalText": "The parties are unable to agree on the value or mode of partition of the assets. (ተዋዋይ ወገኖች በንብረቶቹ ዋጋ ወይም ክፍፍል ሁኔታ ላይ መስማማት አልቻሉም።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_expert_need",
-              "legalText": "The complexity of the assets (e.g., business shares, real estate) requires professional valuation.",
+              "legalText": "The complexity of the assets (e.g., business shares, real estate) requires professional valuation. (የንብረቶቹ ውስብስብነት (ለምሳሌ የንግድ ድርሻዎች፣ ሪል እስቴት) ሙያዊ ግምገማ ይጠይቃል።)",
               "citation": "",
               "evidence": []
             }
@@ -1933,36 +1992,40 @@
       "reliefs": [
         {
           "id": "relief_appoint_liquidator",
-          "text": "Order the appointment of a court-verified expert/liquidator to inventory and value the common property."
+          "text": "Order the appointment of a court-verified expert/liquidator to inventory and value the common property. (የጋራ ንብረቱን ለመመዝገብ እና ለመገምገም በፍርድ ቤት የተረጋገጠ ባለሙያ/አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_withdraw_personal",
-          "text": "Order the restitution/withdrawal of the Applicant's personal property [List Items] prior to partition."
+          "text": "Order the restitution/withdrawal of the Applicant's personal property [List Items] prior to partition. (ከክፍፍል በፊት የአመልካቹን የግል ንብረት [ዕቃዎችን ይዘርዝሩ] እንዲመለስ/እንዲወጣ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         },
         {
           "id": "relief_partition_equal",
-          "text": "Order the remaining common property be divided equally (50/50) between the parties."
+          "text": "Order the remaining common property be divided equally (50/50) between the parties. (የቀረው የጋራ ንብረት በተዋዋይ ወገኖች መካከል በእኩል (50/50) እንዲከፋፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_auction_sale",
-          "text": "Order the sale by auction of indivisible property and the division of the proceeds."
+          "text": "Order the sale by auction of indivisible property and the division of the proceeds. (የማይከፋፈል ንብረትን በጨረታ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
         }
       ]
     },
     "succession_heirship_declaration": {
-      "documentTitle": "Application for Declaration of Heirship",
+      "documentTitle": "Application for Declaration of Heirship (የወራሽነት ማረጋገጫ ማመልከቻ)",
       "jurisdictionText": "Art. 996 of the Civil Code & Civil Procedure Code.",
       "partyTitles": {
-        "applicant": "Applicant / Interested Parties",
-        "respondent": "Public Notice"
+        "applicant": "Applicant / Interested Parties (አመልካች / ፍላጎት ያላቸው ወገኖች)",
+        "respondent": "Public Notice (የሕዝብ ማስታወቂያ)"
       },
       "facts": {
         "group_1": {
-          "title": "Fact of Death",
+          "title": "Fact of Death (የሞት እውነታ)",
           "facets": [
             {
               "id": "fact_deceased_identity",
-              "legalText": "The Deceased, [Name], passed away on [Date] at [Place].",
+              "legalText": "The Deceased, [Name], passed away on [Date] at [Place]. (ሟቹ፣ [ስም]፣ በ [ቀን] በ [ቦታ] ከዚህ ዓለም በሞት ተለይቷል።)",
               "citation": "Civ. Code Art. 826",
               "evidence": [
                 "DeathCertificate"
@@ -1971,28 +2034,28 @@
           ]
         },
         "group_2": {
-          "title": "Relationship (Intestate Rules)",
+          "title": "Relationship (Intestate Rules) (ግንኙነት (ያለ ኑዛዜ ውርስ ሕጎች))",
           "facets": [
             {
               "id": "fact_relationship_descendant",
-              "legalText": "The Applicants are the children/descendants of the deceased.",
+              "legalText": "The Applicants are the children/descendants of the deceased. (አመልካቾች የሟቹ ልጆች/ዘሮች ናቸው።)",
               "citation": "Civ. Code Art. 842",
               "evidence": []
             },
             {
               "id": "fact_no_will",
-              "legalText": "The Deceased left no will, necessitating an intestate succession.",
+              "legalText": "The Deceased left no will, necessitating an intestate succession. (ሟቹ ኑዛዜ አልተወም፣ ይህም ያለ ኑዛዜ ውርስን አስፈላጊ ያደርገዋል።)",
               "citation": "",
               "evidence": []
             }
           ]
         },
         "group_3": {
-          "title": "Witnesses",
+          "title": "Witnesses (ምስክሮች)",
           "facets": [
             {
               "id": "fact_witness_testimony",
-              "legalText": "Three witnesses are present to testify that the Applicants are the only known heirs.",
+              "legalText": "Three witnesses are present to testify that the Applicants are the only known heirs. (አመልካቾች ብቸኛ የታወቁ ወራሾች መሆናቸውን ለመመስከር ሦስት ምስክሮች ቀርበዋል።)",
               "citation": "",
               "evidence": [
                 "WitnessAffidavitsSuccession"
@@ -2004,28 +2067,30 @@
       "reliefs": [
         {
           "id": "relief_declare_heirs",
-          "text": "Judgment declaring the Applicants as the sole legal heirs of the Deceased."
+          "text": "Judgment declaring the Applicants as the sole legal heirs of the Deceased. (አመልካቾችን የሟቹ ብቸኛ ሕጋዊ ወራሾች መሆናቸውን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_certificate_issuance",
-          "text": "Order the issuance of a Certificate of Heirship."
+          "text": "Order the issuance of a Certificate of Heirship. (የወራሽነት ማረጋገጫ ሰርተፍኬት እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "succession_probate_will": {
-      "documentTitle": "Application for Probate of Will",
+      "documentTitle": "Application for Probate of Will (የኑዛዜ ማጽደቅ ማመልከቻ)",
       "jurisdictionText": "Art. 881 (Public), 885 (Holographic) of the Civil Code.",
       "partyTitles": {
-        "applicant": "Petitioner (Executor/Beneficiary)",
-        "respondent": "N/A"
+        "applicant": "Petitioner (Executor/Beneficiary) (አመልካች (ፈጻሚ/ተጠቃሚ))",
+        "respondent": "N/A (የለም)"
       },
       "facts": {
         "group_1": {
-          "title": "Validity of Will",
+          "title": "Validity of Will (የኑዛዜ ሕጋዊነት)",
           "facets": [
             {
               "id": "fact_will_existence",
-              "legalText": "The Deceased left a valid will dated [Date].",
+              "legalText": "The Deceased left a valid will dated [Date]. (ሟቹ በ [ቀን] የተጻፈ ሕጋዊ ኑዛዜ ትቷል።)",
               "citation": "",
               "evidence": [
                 "WillTestament"
@@ -2033,13 +2098,13 @@
             },
             {
               "id": "fact_formality_public",
-              "legalText": "The will was read in the presence of four witnesses and the Registrar.",
+              "legalText": "The will was read in the presence of four witnesses and the Registrar. (ኑዛዜው በአራት ምስክሮች እና በሬጅስትራሩ ፊት ተነቧል።)",
               "citation": "Civ. Code Art. 881",
               "evidence": []
             },
             {
               "id": "fact_formality_holographic",
-              "legalText": "The will is entirely written, dated, and signed by the hand of the deceased.",
+              "legalText": "The will is entirely written, dated, and signed by the hand of the deceased. (ኑዛዜው ሙሉ በሙሉ በሟቹ እጅ የተጻፈ፣ ቀን የተሰጠው እና የተፈረመ ነው።)",
               "citation": "Civ. Code Art. 885",
               "evidence": []
             }
@@ -2049,28 +2114,30 @@
       "reliefs": [
         {
           "id": "relief_validate_will",
-          "text": "Judgment declaring the Will to be valid and the true last wish of the Deceased."
+          "text": "Judgment declaring the Will to be valid and the true last wish of the Deceased. (ኑዛዜው ሕጋዊ እና የሟቹ እውነተኛ የመጨረሻ ፍላጎት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_appoint_executor",
-          "text": "Order confirming the Petitioner as the Executor of the will."
+          "text": "Order confirming the Petitioner as the Executor of the will. (አመልካቹን የኑዛዜው ፈጻሚ መሆኑን የሚያረጋግጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "succession_partition_estate": {
-      "documentTitle": "Application for Partition of Hereditary Estate",
+      "documentTitle": "Application for Partition of Hereditary Estate (የውርስ ንብረት ክፍፍል ማመልከቻ)",
       "jurisdictionText": "Art. 1060 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Plaintiff (Heir)",
-        "respondent": "Defendant (Co-Heir)"
+        "applicant": "Plaintiff (Heir) (ከሳሽ (ወራሽ))",
+        "respondent": "Defendant (Co-Heir) (ተከሳሽ (አብሮ ወራሽ))"
       },
       "facts": {
         "group_1": {
-          "title": "Co-ownership",
+          "title": "Co-ownership (የጋራ ባለቤትነት)",
           "facets": [
             {
               "id": "fact_heirship_established",
-              "legalText": "The parties have been legally declared as co-heirs.",
+              "legalText": "The parties have been legally declared as co-heirs. (ተዋዋይ ወገኖች በሕጋዊ መንገድ እንደ አብሮ ወራሾች ታውጇል።)",
               "citation": "Civ. Code Art. 1060",
               "evidence": [
                 "CertificateofHeirship"
@@ -2079,17 +2146,17 @@
           ]
         },
         "group_2": {
-          "title": "Estate Status",
+          "title": "Estate Status (የንብረት ሁኔታ)",
           "facets": [
             {
               "id": "fact_liquidation_complete",
-              "legalText": "The debts of the estate have been paid, and the assets are ready for division.",
+              "legalText": "The debts of the estate have been paid, and the assets are ready for division. (የንብረቱ እዳዎች ተከፍለዋል፣ እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_disagreement",
-              "legalText": "The Co-heirs cannot agree on a voluntary division of the assets.",
+              "legalText": "The Co-heirs cannot agree on a voluntary division of the assets. (አብሮ ወራሾቹ በንብረቶቹ በፈቃደኝነት ክፍፍል ላይ መስማማት አልቻሉም።)",
               "citation": "",
               "evidence": []
             }
@@ -2099,34 +2166,36 @@
       "reliefs": [
         {
           "id": "relief_partition_kind",
-          "text": "Order the physical division of the property in kind among the heirs."
+          "text": "Order the physical division of the property in kind among the heirs. (ንብረቱን በአይነት በወራሾች መካከል እንዲከፋፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         },
         {
           "id": "relief_partition_sale",
-          "text": "Order the sale of the property and division of proceeds (if division in kind is impossible)."
+          "text": "Order the sale of the property and division of proceeds (if division in kind is impossible). (ንብረቱን በሽያጭ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ (በአይነት ክፍፍል የማይቻል ከሆነ)።)",
+          "isDefault": false
         }
       ]
     },
     "app_appoint_liquidator": {
-      "documentTitle": "Application for Appointment of Liquidator",
+      "documentTitle": "Application for Appointment of Liquidator (የአጣሪ ሹመት ማመልከቻ)",
       "jurisdictionText": "Art. 950 of the Civil Code.",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "N/A"
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "N/A (የለም)"
       },
       "facts": {
         "group_1": {
-          "title": "Necessity",
+          "title": "Necessity (አስፈላጊነት)",
           "facets": [
             {
               "id": "fact_estate_complexity",
-              "legalText": "The estate involves complex debts and multiple assets requiring professional management.",
+              "legalText": "The estate involves complex debts and multiple assets requiring professional management. (ንብረቱ ሙያዊ አስተዳደር የሚጠይቁ ውስብስብ እዳዎች እና በርካታ ንብረቶችን ያካትታል።)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_no_nominee",
-              "legalText": "The will did not nominate an executor, or the heirs cannot agree on one.",
+              "legalText": "The will did not nominate an executor, or the heirs cannot agree on one. (ኑዛዜው ፈጻሚ አልሾመም፣ ወይም ወራሾቹ በአንድ ላይ መስማማት አልቻሉም።)",
               "citation": "Civ. Code Art. 950",
               "evidence": []
             }
@@ -2136,30 +2205,31 @@
       "reliefs": [
         {
           "id": "relief_appoint_official",
-          "text": "Order the appointment of a neutral Liquidator to administer the estate."
+          "text": "Order the appointment of a neutral Liquidator to administer the estate. (ንብረቱን ለማስተዳደር ገለልተኛ አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
         }
       ]
     },
     "app_seal_estate": {
-      "documentTitle": "Application for Affixing of Seals",
+      "documentTitle": "Application for Affixing of Seals (የማሸጊያ ማመልከቻ)",
       "jurisdictionText": "Art. 946 of the Civil Code & Civil Procedure Code.",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "N/A"
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "N/A (የለም)"
       },
       "facts": {
         "group_1": {
-          "title": "Urgency",
+          "title": "Urgency (አስቸኳይነት)",
           "facets": [
             {
               "id": "fact_risk_misappropriation",
-              "legalText": "There is an imminent risk that movables or documents may be removed or hidden.",
+              "legalText": "There is an imminent risk that movables or documents may be removed or hidden. (ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች ሊወገዱ ወይም ሊደበቁ የሚችሉበት አስቸኳይ አደጋ አለ።)",
               "citation": "Civ. Code Art. 946",
               "evidence": []
             },
             {
               "id": "fact_minor_heirs",
-              "legalText": "There are minor heirs whose interests require protection.",
+              "legalText": "There are minor heirs whose interests require protection. (ጥበቃ የሚያስፈልጋቸው አካለ መጠን ያልደረሱ ወራሾች አሉ።)",
               "citation": "",
               "evidence": []
             }
@@ -2169,1655 +2239,10 @@
       "reliefs": [
         {
           "id": "relief_affix_seals",
-          "text": "Order the court registrar to affix official seals on the deceased's property/safe."
-        }
-      ]
-    },
-    "ip_trademark_infringement": {
-      "documentTitle": "Statement of Claim for Trademark Infringement and Damages",
-      "jurisdictionText": "Art. 18 of Trademark Proclamation No. 501/2006.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Trademark Owner)",
-        "respondent": "Defendant (Infringer)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Right of Ownership",
-          "facets": [
-            {
-              "id": "fact_tm_registration",
-              "legalText": "The Plaintiff is the registered owner of Trademark No. [Number] for goods/services in Class [Class].",
-              "citation": "Proclamation 501/2006 Art. 11",
-              "evidence": [
-                "CertificateOfRegistrationEIPO"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Infringement Act",
-          "facets": [
-            {
-              "id": "fact_unauthorized_use",
-              "legalText": "The Defendant is using an identical or confusingly similar mark in the course of trade.",
-              "citation": "Proclamation 501/2006 Art. 18",
-              "evidence": [
-                "ProductSampleSpecimen",
-                "MarketSurveyAffidavit"
-              ]
-            },
-            {
-              "id": "fact_consumer_confusion",
-              "legalText": "The Defendant's use is likely to cause confusion among the relevant consumers.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_permanent_injunction",
-          "text": "Judgment granting a permanent injunction restraining the Defendant from further use of the infringing mark."
-        },
-        {
-          "id": "relief_damages_ip",
-          "text": "Order payment of damages suffered by the Plaintiff due to the infringement."
-        },
-        {
-          "id": "relief_destruction_goods",
-          "text": "Order the destruction of all infringing materials and goods."
-        }
-      ]
-    },
-    "ip_patent_infringement": {
-      "documentTitle": "Statement of Claim for Patent Infringement and Compensation",
-      "jurisdictionText": "Art. 21 of Patent Proclamation No. 123/1995.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Patent Holder)",
-        "respondent": "Defendant (Infringer)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Right of Ownership",
-          "facets": [
-            {
-              "id": "fact_patent_validity",
-              "legalText": "The Plaintiff holds Patent No. [Number], which is valid and in force.",
-              "citation": "Proclamation 123/1995 Art. 6",
-              "evidence": [
-                "CertificateOfRegistrationEIPO",
-                "TechnicalExpertReport"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Infringement Act",
-          "facets": [
-            {
-              "id": "fact_unauthorized_manufacture",
-              "legalText": "The Defendant is manufacturing/selling a product that falls within the scope of the patent claims.",
-              "citation": "Proclamation 123/1995 Art. 21",
-              "evidence": []
-            }
-          ]
-        },
-        "group_3": {
-          "title": "Damage",
-          "facets": [
-            {
-              "id": "fact_commercial_loss",
-              "legalText": "The infringement has resulted in direct commercial loss of [Amount] due to lost sales.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_stop_manufacture",
-          "text": "Judgment ordering the Defendant to cease all acts of manufacturing and selling the infringing product."
-        },
-        {
-          "id": "relief_compensation_royalty",
-          "text": "Order payment of compensation calculated based on a reasonable royalty fee.",
-          "citation": "Proclamation 123/1995 Art. 21"
-        },
-        {
-          "id": "relief_seize_equipment",
-          "text": "Order the seizure and disposal of the machinery primarily used to produce the infringing articles."
-        }
-      ]
-    },
-    "ip_copyright_infringement": {
-      "documentTitle": "Statement of Claim for Copyright Violation and Statutory Damages",
-      "jurisdictionText": "Art. 38 of Copyright and Neighboring Rights Proclamation No. 410/2004.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Author/Creator)",
-        "respondent": "Defendant (Pirate/Reproducer)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Right of Authorship",
-          "facets": [
-            {
-              "id": "fact_original_work",
-              "legalText": "The Plaintiff is the author of the original work [Title] published/fixed on [Date].",
-              "citation": "Proclamation 410/2004 Art. 38",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Infringement Act",
-          "facets": [
-            {
-              "id": "fact_unauthorized_reproduction",
-              "legalText": "The Defendant has reproduced, distributed, or publicly performed the work without authorization.",
-              "citation": "Proclamation 410/2004 Art. 9",
-              "evidence": [
-                "ProductSampleSpecimen"
-              ]
-            },
-            {
-              "id": "fact_commercial_scale",
-              "legalText": "The infringement was committed on a commercial scale.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_statutory_damages",
-          "text": "Order payment of statutory damages as provided by law, or actual damages suffered."
-        },
-        {
-          "id": "relief_injunction_copyright",
-          "text": "Order a final injunction prohibiting further unauthorized use."
-        },
-        {
-          "id": "relief_impoundment",
-          "text": "Order the impoundment of all copies of the infringing work."
-        }
-      ]
-    },
-    "app_ip_interlocutory_injunction": {
-      "documentTitle": "Application for Interlocutory Injunction to Restrain Infringement",
-      "jurisdictionText": "Art. 154 of the Civil Procedure Code (General Injunction) and specific IP enabling clauses.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Urgency & Harm",
-          "facets": [
-            {
-              "id": "fact_prima_facie_case",
-              "legalText": "The Applicant has established a strong prima facie case of infringement.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_irreparable_harm",
-              "legalText": "The continued infringement will cause irreparable harm to the Applicant's market share and reputation.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_balance_convenience",
-              "legalText": "The balance of convenience favors granting the injunction (i.e., less harm to stop than to continue).",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_temporary_restraint",
-          "text": "Order the Respondent to temporarily cease all manufacture, sale, or distribution of the infringing goods pending final judgment."
-        }
-      ]
-    },
-    "app_ip_anton_piller": {
-      "documentTitle": "Application for Preservation and Seizure of Evidence",
-      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Inherent Power) & Art. 10 of Proclamation 410/2004.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Preservation of Evidence",
-          "facets": [
-            {
-              "id": "fact_concealment_risk",
-              "legalText": "There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_specific_evidence",
-              "legalText": "The Applicant has specific knowledge of the location and nature of the evidence.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_seize_evidence",
-          "text": "Order a court officer to enter the Respondent's premises to seize and preserve evidence relating to the infringement."
-        }
-      ]
-    },
-    "status_judicial_interdiction": {
-      "documentTitle": "Petition for Judicial Interdiction and Appointment of Curator",
-      "jurisdictionText": "Art. 339 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Petitioner (Relative/Interested Party)",
-        "respondent": "Interdicted Person (Respondent)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Incapacity",
-          "facets": [
-            {
-              "id": "fact_incapacity_medical",
-              "legalText": "The Respondent suffers from a permanent mental illness/disability rendering them unable to manage their own affairs.",
-              "citation": "Civ. Code Art. 339",
-              "evidence": [
-                "MedicalBoardCertificate"
-              ]
-            },
-            {
-              "id": "fact_risk_of_loss",
-              "legalText": "The Respondent's incapacity exposes their property/rights to imminent loss or dissipation.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Necessity",
-          "facets": [
-            {
-              "id": "fact_relationship_claim",
-              "legalText": "The Petitioner is a close relative of the Respondent and has a legal interest in protecting their affairs.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_declare_incapacity",
-          "text": "Judgment declaring the Respondent to be judicially interdicted."
-        },
-        {
-          "id": "relief_appoint_curator",
-          "text": "Order the appointment of the Petitioner (or another suitable person) as Curator to the Respondent.",
-          "citation": "Civ. Code Art. 343"
-        }
-      ]
-    },
-    "status_correction_civil_record": {
-      "documentTitle": "Petition for Correction of Civil Record (Birth Date/Name)",
-      "jurisdictionText": "Art. 418 of the Civil Procedure Code (Non-Contentious Procedure).",
-      "partyTitles": {
-        "applicant": "Petitioner",
-        "respondent": "Concerned Public Body (e.g., VERA)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "The Error",
-          "facets": [
-            {
-              "id": "fact_document_error",
-              "legalText": "The Petitioner's [Birth Certificate/ID] contains an error, stating the date of birth is [Incorrect Date] instead of [Correct Date].",
-              "citation": "",
-              "evidence": [
-                "BirthMarriageCertificateVERA",
-                "IdentityCard"
-              ]
-            },
-            {
-              "id": "fact_proof_of_correctness",
-              "legalText": "The correct information is proven by the attached [Secondary Document].",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Procedural Prerequisite",
-          "facets": [
-            {
-              "id": "fact_administrative_refusal",
-              "legalText": "The relevant administrative body has been requested to correct the error but has failed or refused to do so.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_order_correction",
-          "text": "Judgment ordering the Vital Events Registration Agency (VERA) to correct the record to state the Petitioner's name/date of birth as [Correct Information]."
-        }
-      ]
-    },
-    "status_declaration_of_absence": {
-      "documentTitle": "Petition for Declaration of Absence and Administration of Property",
-      "jurisdictionText": "Art. 154 and 158 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Petitioner (Relative/Interested Party)",
-        "respondent": "The Absent Person (Named Respondent)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Fact of Absence",
-          "facets": [
-            {
-              "id": "fact_absence_duration",
-              "legalText": "The named person, [Name], has disappeared and not been heard from for more than five years.",
-              "citation": "Civ. Code Art. 158",
-              "evidence": []
-            },
-            {
-              "id": "fact_domicile_proof",
-              "legalText": "The person's last known domicile was [Address].",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Publicity",
-          "facets": [
-            {
-              "id": "fact_public_notice_given",
-              "legalText": "A public notice requesting information on the absent person was published in accordance with the law.",
-              "citation": "",
-              "evidence": [
-                "PublicNoticeOfAbsence"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_declare_absence",
-          "text": "Judgment formally declaring the person to be absent."
-        },
-        {
-          "id": "relief_appoint_administrator",
-          "text": "Order the appointment of an administrator to provisionally manage the property of the absent person."
-        }
-      ]
-    },
-    "app_status_provisional_curator": {
-      "documentTitle": "Application for Appointment of Provisional Curator/Administrator",
-      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Injunction) & Civ. Code Art. 154/343.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Urgency",
-          "facets": [
-            {
-              "id": "fact_immediate_necessity",
-              "legalText": "Due to the immediate inability of the person to act, their property is at risk of misuse or loss.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_petition_pending",
-              "legalText": "A main petition for Interdiction/Absence has been filed and is currently pending.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_appoint_provisional",
-          "text": "Order the immediate, temporary appointment of a named person to act as Provisional Curator/Administrator."
-        }
-      ]
-    },
-    "app_status_lift_interdiction": {
-      "documentTitle": "Petition for Termination of Judicial Interdiction",
-      "jurisdictionText": "Art. 358 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Petitioner",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Cessation of Cause",
-          "facets": [
-            {
-              "id": "fact_cause_ceased",
-              "legalText": "The medical/physical condition that necessitated the interdiction has ceased, and the interdicted person has regained capacity.",
-              "citation": "Civ. Code Art. 358",
-              "evidence": [
-                "MedicalBoardCertificate"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_terminate_interdiction",
-          "text": "Judgment terminating the judicial interdiction and restoring full legal capacity to the individual."
-        }
-      ]
-    },
-    "tax_objection_admin_review": {
-      "documentTitle": "Notice of Objection to Tax Assessment",
-      "jurisdictionText": "Art. 54 of the Federal Tax Administration Proclamation (FTAP) No. 983/2016.",
-      "partyTitles": {
-        "applicant": "Applicant (Taxpayer)",
-        "respondent": "Respondent (Ministry of Revenue Branch Office)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Procedural Compliance (Time Limit)",
-          "facets": [
-            {
-              "id": "fact_assessment_received",
-              "legalText": "The Tax Assessment Notice was received on [Date].",
-              "citation": "FTAP Art. 54",
-              "evidence": []
-            },
-            {
-              "id": "fact_objection_timely",
-              "legalText": "This Objection is filed within the required 21 days of receipt.",
-              "citation": "FTAP Art. 54",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Grounds for Error",
-          "facets": [
-            {
-              "id": "fact_erroneous_income_calc",
-              "legalText": "The MoR erred by failing to recognize [Specific Deduction/Exemption].",
-              "evidence": [
-                "AccountingRecords",
-                "ExternalAuditReport"
-              ]
-            },
-            {
-              "id": "fact_estimated_basis_wrong",
-              "legalText": "The assessment was based on an estimate, and the actual gross income is proven by the attached records.",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_revoke_assessment",
-          "text": "Order the Ministry of Revenue to revoke the current assessment."
-        },
-        {
-          "id": "relief_recalculate_tax",
-          "text": "Order the Ministry to re-calculate the tax liability to [Correct Amount]."
-        }
-      ]
-    },
-    "tax_appeal_ftac": {
-      "documentTitle": "Petition of Appeal to the Federal Tax Appeal Commission",
-      "jurisdictionText": "Art. 88 of the Federal Tax Administration Proclamation (FTAP).",
-      "partyTitles": {
-        "applicant": "Appellant (Taxpayer)",
-        "respondent": "Respondent (Ministry of Revenue)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Prerequisites",
-          "facets": [
-            {
-              "id": "fact_objection_rejected",
-              "legalText": "The MoR issued a decision rejecting the Taxpayer's Objection on [Date]."
-            },
-            {
-              "id": "fact_50_percent_deposit",
-              "legalText": "The Taxpayer has deposited 50% of the disputed tax amount (excluding penalties/interest).",
-              "citation": "FTAP Art. 88",
-              "evidence": [
-                "PaymentReceiptsTaxCustoms"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Grounds for Appeal",
-          "facets": [
-            {
-              "id": "fact_mof_error",
-              "legalText": "The MoR's internal review decision is erroneous because [Specific Reason, e.g., misapplication of VAT Proclamation 1341/2024]."
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_ftac_overrule",
-          "text": "Judgment overturning the MoR's decision and adjusting the tax liability."
-        },
-        {
-          "id": "relief_ftac_remand",
-          "text": "Order the MoR to undertake a new assessment using correct legal principles."
-        }
-      ]
-    },
-    "customs_claim_for_refund": {
-      "documentTitle": "Application to the Customs Commission for Refund of Duty",
-      "jurisdictionText": "Provisions of the Customs Proclamation No. 859/2014 concerning refunds.",
-      "partyTitles": {
-        "applicant": "Applicant (Importer/Exporter)",
-        "respondent": "Respondent (Customs Commission)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Overpayment",
-          "facets": [
-            {
-              "id": "fact_duty_paid",
-              "legalText": "The Applicant paid Customs Duty of [Amount] for goods imported/exported under Declaration No. [SAD No.]."
-            },
-            {
-              "id": "fact_grounds_for_refund",
-              "legalText": "The duty was refundable because [e.g., the goods were defective and re-exported, or the valuation was miscalculated].",
-              "evidence": [
-                "ImportExportDeclarationSAD",
-                "PaymentReceiptsTaxCustoms"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Commission Refusal",
-          "facets": [
-            {
-              "id": "fact_refusal_to_pay",
-              "legalText": "The Customs Commission has refused or failed to process the refund application."
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_order_refund",
-          "text": "Order the Customs Commission to refund the overpaid duty amount of [Amount]."
-        }
-      ]
-    },
-    "app_tax_stay_of_execution": {
-      "documentTitle": "Application for Stay of Execution of Tax Payment",
-      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Injunction) applied to tax execution.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Grounds for Stay",
-          "facets": [
-            {
-              "id": "fact_execution_pending",
-              "legalText": "The MoR has begun execution procedures (e.g., freezing bank accounts) to collect the disputed tax."
-            },
-            {
-              "id": "fact_irreparable_harm",
-              "legalText": "Forcing payment of the full amount now would render the company insolvent, causing irreparable harm to the business."
-            },
-            {
-              "id": "fact_prima_facie",
-              "legalText": "The Taxpayer has a strong likelihood of success on appeal."
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_suspend_payment",
-          "text": "Order the Ministry of Revenue to suspend the execution of the outstanding tax liability until the final decision of the FTAC/Court."
-        }
-      ]
-    },
-    "app_tax_adr_request": {
-      "documentTitle": "Application for Referral to Tax Dispute Alternative Resolution",
-      "jurisdictionText": "Tax Administration Proclamations often include provisions allowing for settlement or ADR.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Grounds for ADR",
-          "facets": [
-            {
-              "id": "fact_willingness_to_settle",
-              "legalText": "Both the Taxpayer and the MoR have indicated a willingness to resolve the dispute through mutual agreement."
-            },
-            {
-              "id": "fact_complex_facts",
-              "legalText": "The dispute involves complex factual issues that would be better resolved through expert negotiation than court litigation."
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_refer_to_adr",
-          "text": "Order the establishment of a joint committee or referral to a mediator to reach a binding settlement agreement."
-        }
-      ]
-    },
-    "tort_general_negligence_claim": {
-      "documentTitle": "Statement of Claim for Extra-Contractual Damages (Negligence)",
-      "jurisdictionText": "Arts. 2028-2061 of the Civil Code of 1960 (Liability arising out of fault).",
-      "partyTitles": {
-        "applicant": "Plaintiff (ከሳሽ)",
-        "respondent": "Defendant (ተከሳሽ)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "The Causal Event & Negligence",
-          "facets": [
-            {
-              "id": "fact_fault_negligence_omission",
-              "legalText": "The Defendant committed a negligent act or omission that violated the general duty of care (Art. 2028).",
-              "citation": "Civil Code Art. 2028",
-              "evidence": [
-                "PoliceAccidentReport",
-                "WitnessStatements"
-              ]
-            },
-            {
-              "id": "fact_traffic_violation",
-              "legalText": "The fault arose from a specific breach of traffic laws or other legal/regulatory duty of caution.",
-              "citation": "Civil Code Art. 2029",
-              "evidence": [
-                "PoliceAccidentReport"
-              ]
-            },
-            {
-              "id": "fact_liability_for_another_person",
-              "legalText": "The Defendant is liable for the act of a minor, apprentice, or employee under their supervision or control (Art. 2085 et seq.).",
-              "citation": "Civil Code Art. 2085",
-              "evidence": [
-                "WitnessStatements",
-                "PoliceAccidentReport"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "The Damage Sustained",
-          "facets": [
-            {
-              "id": "fact_bodily_injury_damage",
-              "legalText": "The Plaintiff sustained bodily injury and incurred expenses for treatment, hospitalization, and rehabilitation.",
-              "citation": "Civil Code Art. 2035",
-              "evidence": [
-                "MedicalExpenseReceipts",
-                "DoctorAssessment"
-              ]
-            },
-            {
-              "id": "fact_property_damage_loss",
-              "legalText": "The Plaintiff's property (e.g., vehicle, structure) was damaged or destroyed, requiring repair or replacement.",
-              "citation": "Civil Code Art. 2035",
-              "evidence": [
-                "PropertyValuationReport",
-                "PoliceAccidentReport"
-              ]
-            },
-            {
-              "id": "fact_moral_damage_pain",
-              "legalText": "The Plaintiff suffered moral damage, including pain and suffering, emotional distress, and loss of amenity.",
-              "citation": "Civil Code Art. 2036",
-              "evidence": [
-                "DoctorAssessment",
-                "WitnessStatements"
-              ]
-            }
-          ]
-        },
-        "group_3": {
-          "title": "Causation & Foreseeability",
-          "facets": [
-            {
-              "id": "fact_direct_causation",
-              "legalText": "There is a direct and certain causal link between the Defendant's fault and the damage sustained by the Plaintiff (Art. 2034).",
-              "citation": "Civil Code Art. 2034",
-              "evidence": [
-                "PoliceAccidentReport",
-                "DoctorAssessment"
-              ]
-            },
-            {
-              "id": "fact_mitigation_of_damages",
-              "legalText": "The Plaintiff has taken reasonable steps to mitigate and reduce the extent of the damages sustained.",
-              "citation": "Civil Code Art. 2043",
-              "evidence": [
-                "MedicalExpenseReceipts",
-                "PropertyValuationReport"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_medical_expenses",
-          "text": "To order the Defendant to pay all costs incurred for medical treatment, hospital stay, and rehabilitation, in the amount of Birr [AMOUNT].",
-          "isDefault": true
-        },
-        {
-          "id": "relief_property_repair_cost",
-          "text": "To order the Defendant to pay the cost of repairing/replacing the damaged property, in the amount of Birr [AMOUNT].",
-          "isDefault": true
-        },
-        {
-          "id": "relief_lost_earnings",
-          "text": "To order the Defendant to pay compensation for lost earnings and future loss of income due to permanent incapacity, in the amount of Birr [AMOUNT].",
-          "isDefault": true
-        },
-        {
-          "id": "relief_moral_damages",
-          "text": "To award the Plaintiff compensation for moral damage (pain, suffering, and distress) in the amount of Birr [AMOUNT].",
-          "isDefault": true
-        }
-      ]
-    },
-    "tort_strict_liability_buildings": {
-      "documentTitle": "Statement of Claim for Damages (Strict Liability for Buildings)",
-      "jurisdictionText": "Art. 2068 of the Civil Code of 1960 (Liability of the owner of a building).",
-      "partyTitles": {
-        "applicant": "Plaintiff (ከሳሽ)",
-        "respondent": "Owner of the Building (የህንፃው ባለቤት)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Basis for Strict Liability",
-          "facets": [
-            {
-              "id": "fact_building_owner_status",
-              "legalText": "The Respondent is the owner of the building or structure from which the damage originated.",
-              "citation": "Civil Code Art. 2068",
-              "evidence": []
-            },
-            {
-              "id": "fact_damage_caused_by_ruin",
-              "legalText": "The damage was caused by the total or partial ruin of the building, which was due to lack of repair or a defect in construction.",
-              "citation": "Civil Code Art. 2068",
-              "evidence": [
-                "WitnessStatements",
-                "PropertyValuationReport"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Damage & Causation",
-          "facets": [
-            {
-              "id": "fact_bodily_injury_building",
-              "legalText": "The Plaintiff sustained bodily injury as a direct result of the building's ruin.",
-              "citation": "Civil Code Art. 2068 & 2035",
-              "evidence": [
-                "MedicalExpenseReceipts",
-                "DoctorAssessment"
-              ]
-            },
-            {
-              "id": "fact_property_damage_building",
-              "legalText": "The Plaintiff's property was damaged as a direct result of the building's ruin.",
-              "citation": "Civil Code Art. 2068 & 2035",
-              "evidence": [
-                "PropertyValuationReport"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_building_repair_cost",
-          "text": "To order the Defendant to pay the cost of repairing the resulting property damage, in the amount of Birr [AMOUNT].",
-          "isDefault": true
-        },
-        {
-          "id": "relief_building_medical_expenses",
-          "text": "To order the Defendant to pay all costs incurred for bodily injury and treatment, in the amount of Birr [AMOUNT].",
-          "isDefault": true
-        }
-      ]
-    },
-    "admin_appeal_judicial_review": {
-      "documentTitle": "Petition for Judicial Review of Administrative Decision (የአስተዳደር ውሳኔ በፍርድ ቤት እንዲታይ አቤቱታ)",
-      "jurisdictionText": "Federal Administrative Procedure Proclamation No. 1183/2020, Art. 51 (የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር ፩ሺ፩፻፹፫/፪ሺ፲፪፣ አንቀጽ ፶፩).",
-      "partyTitles": {
-        "applicant": "Petitioner / Appellant (አቤቱታ አቅራቢ/ይግባኝ ባይ)",
-        "respondent": "Respondent Agency (መልስ ሰጪ ተቋም)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Jurisdictional Prerequisites (የዳኝነት ቅድመ ሁኔታዎች)",
-          "facets": [
-            {
-              "id": "fact_final_decision_issued",
-              "legalText": "The Respondent Agency issued a final, binding administrative decision affecting the rights or interests of the Petitioner on [Date]. (መልስ ሰጪው ተቋም የመጨረሻ የአስተዳደር ውሳኔ አሳልፏል።)",
-              "citation": "Proc. 1183/2020 Art. 48(1)",
-              "evidence": [
-                "FinalAdminDecision"
-              ]
-            },
-            {
-              "id": "fact_exhausted_remedies",
-              "legalText": "The Petitioner has exhausted all available administrative remedies within the Agency, or the Agency failed to render a decision on the complaint within the legal timeframe. (አቤቱታ አቅራቢው በ ተቋሙ ያለውን የውስጥ ቅሬታ የመፍቻ መንገድ ተጠቅሟል ወይም ተቋሙ በጊዜ ውሳኔ መስጠት አልቻለም።)",
-              "citation": "Proc. 1183/2020 Art. 48(2)",
-              "evidence": [
-                "InternalRemedyExhaustion"
-              ]
-            },
-            {
-              "id": "fact_petition_is_timely",
-              "legalText": "This petition is filed within the thirty (30) day period prescribed from the date of notification of the decision. (ይህ አቤቱታ ውሳኔው ከደረሰበት ቀን አንስቶ በሰላሳ (፴) ቀን ውስጥ የቀረበ ነው።)",
-              "citation": "Proc. 1183/2020 Art. 51(1)",
-              "evidence": [
-                "DecisionNotificationProof"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Grounds for Annulment (የውሳኔው መሻር ምክንያቶች)",
-          "facets": [
-            {
-              "id": "fact_procedural_violation_hearing",
-              "legalText": "The decision was made without affording the Petitioner an adequate opportunity for a proper hearing (Art. 34) or without considering relevant evidence. (ውሳኔው አቤቱታ አቅራቢው በአግባቡ ሳይሰማ ቀርቷል (አንቀጽ ፴፬) ወይም አግባብነት ያላቸው ማስረጃዎች ሳይታዩ ቀርቷል።)",
-              "citation": "Proc. 1183/2020 Art. 34",
-              "evidence": []
-            },
-            {
-              "id": "fact_substantive_error_of_law",
-              "legalText": "The decision is based on a fundamental error of law, misinterpreting or misapplying the governing Proclamation, Regulation, or Directive. (ውሳኔው ህጉን በመሳት፣ ወይም አዋጁን፣ ደንቡን ወይም መመሪያውን በተሳሳተ መንገድ በመተርጎም የተሰጠ ነው።)",
-              "citation": "Proc. 1183/2020 Art. 52(1)(a)",
-              "evidence": [
-                "FinalAdminDecision"
-              ]
-            },
-            {
-              "id": "fact_failure_to_state_reason",
-              "legalText": "The Agency failed to provide an adequate and reasoned decision, thus violating the Petitioner's right to a reasoned decision (Art. 37). (ተቋሙ አቤቱታ አቅራቢው ምክንያት ያለው ውሳኔ የማግኘት መብቱን በመጣስ በቂ እና ምክንያት ያለበት ውሳኔ መስጠት ተስኖታል።)",
-              "citation": "Proc. 1183/2020 Art. 37",
-              "evidence": [
-                "FinalAdminDecision"
-              ]
-            },
-            {
-              "id": "fact_abuse_of_discretion",
-              "legalText": "The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39). (ተቋሙ ሕጋዊ ሥልጣኑን ያለአግባብ በመጠቀም، ወይም ለተገቢ ላልሆነ ዓላማ ውሳኔ በመስጠት የሕግ አቅሙን አላግባብ ተጠቅሟል።)",
-              "citation": "Proc. 1183/2020 Art. 39",
-              "evidence": [
-                "FinalAdminDecision"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_quash_decision",
-          "text": "To quash and annul the decision of the Respondent Agency. (የመልስ ሰጪውን ተቋም ውሳኔ ሙሉ በሙሉ እንዲሻር።)",
-          "isDefault": true
-        },
-        {
-          "id": "relief_remand_for_revision",
-          "text": "To order the Administrative Agency to revise or reconsider its decision by rectifying the shortcomings identified by the Court. (ፍርድ ቤቱ ባገኘው ክፍተት መሰረት ተቋሙ ውሳኔውን እንዲያስተካክል ወይም እንደገና እንዲያየው እንዲታዘዝ።)",
-          "isDefault": true
-        },
-        {
-          "id": "relief_damages_fault",
-          "text": "To order the Respondent Agency to pay compensation for damages incurred as a result of the fault committed through the administrative decision (Art. 54). (በአስተዳደራዊ ውሳኔው በደረሰው ስህተት ምክንያት ለደረሰበት ጉዳት ካሳ እንዲከፍለው።)",
-          "isDefault": false
-        }
-      ]
-    },
-    "admin_review_directive_legality": {
-      "documentTitle": "Petition for Judicial Review of Legality of a Directive (የአስተዳደር መመሪያ ሕጋዊነት በፍርድ ቤት እንዲታይ አቤቱታ)",
-      "jurisdictionText": "Federal Administrative Procedure Proclamation No. 1183/2020, Art. 49 (የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር ፩ሺ፩፻፹፫/፪ሺ፲፪፣ አንቀጽ ፵፱).",
-      "partyTitles": {
-        "applicant": "Petitioner (አቤቱታ አቅራቢ)",
-        "respondent": "Respondent Agency (መልስ ሰጪ ተቋም)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Directive Authority and Compliance (የመመሪያ ስልጣን እና ተገዢነት)",
-          "facets": [
-            {
-              "id": "fact_directive_unlawful_delegation",
-              "legalText": "The Directive was issued without proper delegation of power by law, or it exceeds the scope of the delegating Proclamation. (መመሪያው በሕግ ተገቢው ስልጣን ሳይሰጥ የተሰጠ ነው፣ ወይም ከአዋጁ ወሰን በላይ አልፏል።)",
-              "citation": "Proc. 1183/2020 Art. 49(2)(a)",
-              "evidence": [
-                "AgencyDirectiveCopy"
-              ]
-            },
-            {
-              "id": "fact_directive_violates_constitution",
-              "legalText": "The Directive violates the Constitution or other superior law. (መመሪያው ሕገ-መንግስትን ወይም ሌላ የላቀ ህግን ይጥሳል።)",
-              "citation": "Proc. 1183/2020 Art. 49(2)(a)",
-              "evidence": [
-                "AgencyDirectiveCopy"
-              ]
-            },
-            {
-              "id": "fact_directive_procedural_flaw",
-              "legalText": "The Directive was adopted without following the mandatory procedure (e.g., public notice, soliciting comments, or FAG consultation) required by law (Arts. 7-12). (መመሪያው ሲወጣ በህግ የተደነገገው የግዴታ ሂደት (ለምሳሌ የህዝብ አስተያየት መጠየቅ ወይም ጠቅላይ ዓቃቤ ህግን ማማከር) ሳይከተል ቀርቷል (አንቀጽ ፯-፲፪)።)",
-              "citation": "Proc. 1183/2020 Art. 7-12",
-              "evidence": [
-                "AgencyDirectiveCopy"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Injury to Interest (ጥቅም መጎዳት)",
-          "facets": [
-            {
-              "id": "fact_directive_affects_rights",
-              "legalText": "The Directive directly affects the Petitioner's rights or interests. (መመሪያው የአቤቱታ አቅራቢውን መብት ወይም ጥቅም በቀጥታ ይነካል።)",
-              "citation": "Proc. 1183/2020 Art. 48(1)",
-              "evidence": [
-                "AgencyDirectiveCopy"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_invalidate_directive",
-          "text": "To invalidate the Directive in whole or in part. (መመሪያው ሙሉ በሙሉ ወይም በከፊል ውድቅ እንዲደረግለት።)",
-          "isDefault": true
-        },
-        {
-          "id": "relief_order_compliance",
-          "text": "To order the Agency to rectify the procedural flaw and readopt the Directive in compliance with the law. (ተቋሙ የሥነ-ሥርዓት ጉድለቱን እንዲያስተካክል እና መመሪያውን በሕጉ መሠረት ዳግም እንዲያወጣ ትዕዛዝ እንዲሰጥ።)",
-          "isDefault": false
-        }
-      ]
-    },
-    "comm_restitution_nonpayment": {
-      "documentTitle": "Statement of Claim for Payment on a Negotiable Instrument (በንግድ መሣሪያ ላይ የክፍያ ጥያቄ አቤቱታ)",
-      "jurisdictionText": "Commercial Code Proclamation No. 1243/2021, Arts. 715 et seq. (የንግድ ሕግ አዋጅ ቁጥር ፲፪፻፵፫/፪ሺ፲፫፣ አንቀጽ ፯፻፲፭ እና ተከታዮቹ).",
-      "partyTitles": {
-        "applicant": "Holder/Plaintiff (መሣሪያውን የያዘ/ከሳሽ)",
-        "respondent": "Drawee/Drawer/Endorser/Defendant (ከፋይ/አዋጪ/ተላልፊ/ተከሳሽ)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "The Instrument & Validity (የንግድ መሣሪያው እና ሕጋዊነት)",
-          "facets": [
-            {
-              "id": "fact_instrument_valid_form",
-              "legalText": "The instrument (Cheque/Note/Bill) fulfills all formal and essential requirements prescribed by the Code and is valid. (መሣሪያው በሕጉ የተደነገጉትን የቅርጽና አስፈላጊነት መስፈርቶች ያሟላል።)",
-              "citation": "Comm. Code Arts. 735/823/827",
-              "evidence": [
-                "NotarizedCheque"
-              ]
-            },
-            {
-              "id": "fact_due_date_lapsed",
-              "legalText": "The instrument was presented for payment on the due date/within the legal period, and payment was refused. (መሣሪያው በተወሰነው ቀን/በሕግ በተቀመጠው ጊዜ ለክፍያ ቀርቧል፣ ነገር ግን ተከስቷል።)",
-              "citation": "Comm. Code Art. 760",
-              "evidence": [
-                "NotarizedCheque"
-              ]
-            },
-            {
-              "id": "fact_protest_duly_filed",
-              "legalText": "A Certificate of Protest/Non-Payment was duly obtained and registered to protect the Plaintiff's right of recourse against endorsers and other parties. (በተላልፊዎች እና በሌሎች ላይ ያለውን የመመለስ መብት ለማስጠበቅ የክፍያ እምቢታ ማረጋገጫ በሕግ መሠረት ተመዝግቧል።)",
-              "citation": "Comm. Code Art. 763",
-              "evidence": [
-                "ProtestCertificate"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Liability & Recourse (ኃላፊነት እና የማስመለስ ጥያቄ)",
-          "facets": [
-            {
-              "id": "fact_drawer_liability",
-              "legalText": "The Defendant, as the Drawer/Maker, is primarily liable for non-payment of the instrument. (ተከሳሹ እንደ አዋጪ/አስመጪ የመሣሪያውን ክፍያ ባለመፈፀም ቀዳሚ ኃላፊነት አለበት።)",
-              "citation": "Comm. Code Art. 759/824",
-              "evidence": [
-                "NotarizedCheque"
-              ]
-            },
-            {
-              "id": "fact_endorser_recourse",
-              "legalText": "The Defendant, as an Endorser, is liable to the Plaintiff through the exercise of the right of recourse. (ተከሳሹ እንደ ተላልፊ፣ የመመለስ መብት አጠቃቀም አማካኝነት ከሳሹ ለጠየቀው ክፍያ ኃላፊነት አለበት።)",
-              "citation": "Comm. Code Art. 767",
-              "evidence": [
-                "NotarizedCheque",
-                "ProtestCertificate"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_order_principal_payment",
-          "text": "To order the Defendant to pay the principal amount of the instrument, in the amount of Birr [AMOUNT]. (ተከሳሹ የመሣሪያውን ዋና መጠን ብር [AMOUNT] እንዲከፍል እንዲታዘዝ።)",
-          "isDefault": true
-        },
-        {
-          "id": "relief_order_interest_penalty",
-          "text": "To order the Defendant to pay legal interest and collection charges as provided by the Commercial Code. (ተከሳሹ በንግድ ሕጉ የተደነገገውን የሕግ ወለድ እና የክፍያ መሰብሰቢያ ወጪ እንዲከፍል እንዲታዘዝ።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "comm_preventive_restructuring": {
-      "documentTitle": "Application for Preventive Debt Restructuring Proceedings (የዕዳ መልሶ ማዋቀር ጥያቄ ማቅረቢያ)",
-      "jurisdictionText": "Commercial Code Proclamation No. 1243/2021, Art. 598 et seq. (የንግድ ሕግ አዋጅ ቁጥር ፲፪፻፵፫/፪ሺ፲፫፣ አንቀጽ ፭፻፺፰ እና ተከታዮቹ).",
-      "partyTitles": {
-        "applicant": "Debtor Business Organization (ዕዳ ያለበት የንግድ ድርጅት)",
-        "respondent": "Creditors (አበዳሪዎች)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Conditions for Restructuring (የመልሶ ማዋቀር ቅድመ ሁኔታዎች)",
-          "facets": [
-            {
-              "id": "fact_financial_distress",
-              "legalText": "The Applicant is facing serious financial distress but has not yet defaulted on all its debts, and the business is still a viable going concern. (አመልካቹ ከባድ የገንዘብ ችግር ገጥሞታል፣ ነገር ግን በሁሉም ዕዳዎች ላይ መክፈል አላቆመም፣ እና ድርጅቱ አሁንም ሊቀጥል የሚችል ነው።)",
-              "citation": "Comm. Code Art. 600(1)",
-              "evidence": [
-                "BalanceSheetAndAudit"
-              ]
-            },
-            {
-              "id": "fact_restructuring_plan_ready",
-              "legalText": "The Applicant has prepared a concrete and detailed Preventive Restructuring Plan for negotiation with creditors. (አመልካቹ ከአበዳሪዎች ጋር ለመደራደር የተሟላ የመከላከያ መልሶ ማዋቀር ዕቅድ አዘጋጅቷል።)",
-              "citation": "Comm. Code Art. 600(2)",
-              "evidence": []
-            },
-            {
-              "id": "fact_list_of_creditors_submitted",
-              "legalText": "A comprehensive list of all known creditors, their contact details, and the amount of debt owed to each is attached. (የሁሉም አበዳሪዎች የተሟላ ዝርዝር እና የእዳቸው መጠን ተያይዟል።)",
-              "citation": "Comm. Code Art. 600(3)",
-              "evidence": [
-                "ListofCreditors"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Need for Court Protection (የፍርድ ቤት ጥበቃ አስፈላጊነት)",
-          "facets": [
-            {
-              "id": "fact_need_stay_of_proceedings",
-              "legalText": "A stay of individual enforcement proceedings against the Debtor is necessary to facilitate successful restructuring and prevent liquidation. (መልሶ ማዋቀሩን ለማስቻል እና ኪሳራን ለመከላከል የግል አስፈጻሚ ሂደቶች መቆም ያስፈልጋል።)",
-              "citation": "Comm. Code Art. 608",
-              "evidence": [
-                "BalanceSheetAndAudit"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_open_preventive_procedure",
-          "text": "To open the Preventive Debt Restructuring Proceedings for the Applicant Business Organization. (ለአመልካቹ የንግድ ድርጅት የመከላከያ ዕዳ መልሶ ማዋቀር ሂደት እንዲከፈት።)",
-          "isDefault": true
-        },
-        {
-          "id": "relief_grant_stay_of_proceedings",
-          "text": "To grant a provisional stay of all individual enforcement proceedings by creditors for a maximum of four months. (በሁሉም ግለሰባዊ የማስፈጸሚያ ሂደቶች ላይ ለከፍተኛው አራት ወራት የሚቆይ ጊዜያዊ እገዳ እንዲጣልበት።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "comm_dissolution_by_court": {
-      "documentTitle": "Petition for Judicial Dissolution of a Business Organization (የንግድ ድርጅት በፍርድ ቤት እንዲፈርስ አቤቱታ)",
-      "jurisdictionText": "Commercial Code Proclamation No. 1243/2021, Art. 525 (for PLCs) and Art. 384 (for SCs) et seq. (የንግድ ሕግ አዋጅ ቁጥር ፲፪፻፵፫/፪ሺ፲፫፣ አንቀጽ ፭፻፳፭ እና ፫፻፹፬ እና ተከታዮቹ).",
-      "partyTitles": {
-        "applicant": "Shareholder/Partner/Plaintiff (አክሲዮን ባለቤት/አጋር/ከሳሽ)",
-        "respondent": "Business Organization (የንግድ ድርጅት)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Grounds for Dissolution (የመፍረስ ምክንያቶች)",
-          "facets": [
-            {
-              "id": "fact_company_purpose_impossible",
-              "legalText": "The attainment of the company's objective has become impossible, or the company is no longer a going concern. (የኩባንያው ዓላማ መሳካት የማይቻል ሆኗል፣ ወይም ኩባንያው ሥራውን መቀጠል አይችልም።)",
-              "citation": "Comm. Code Art. 525(1)(b)",
-              "evidence": [
-                "BalanceSheetAndAudit",
-                "ShareholdersResolution"
-              ]
-            },
-            {
-              "id": "fact_deadlock_between_partners",
-              "legalText": "A persistent deadlock exists among the partners/shareholders, making the proper functioning of the company impossible (Art. 525). (በአጋሮች/ባለአክሲዮኖች መካከል የማያቋርጥ የሀሳብ ልዩነት አለ، ይህም ኩባንያው በአግባቡ እንዳይሠራ አድርጓል።)",
-              "citation": "Comm. Code Art. 525(1)(c)",
-              "evidence": [
-                "ShareholdersResolution"
-              ]
-            },
-            {
-              "id": "fact_capital_below_minimum",
-              "legalText": "The company's net assets have fallen below the minimum capital requirement (Birr 15,000 for PLC) and the loss has not been covered or the capital reduced. (የኩባንያው ንብረቶች ከዝቅተኛው ካፒታል በታች ወርዷል እና ኪሳራው አልተሸፈነም።)",
-              "citation": "Comm. Code Art. 524",
-              "evidence": [
-                "BalanceSheetAndAudit"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Procedural Compliance (የሥነ-ሥርዓት መሟላት)",
-          "facets": [
-            {
-              "id": "fact_no_internal_solution",
-              "legalText": "All possible internal remedies and efforts to resolve the issue (e.g., General Assembly resolution) have failed. (ጉዳዩን ለመፍታት የተደረጉ ሁሉም ውስጣዊ ጥረቶች አልተሳኩም።)",
-              "citation": "Comm. Code Art. 525",
-              "evidence": [
-                "ShareholdersResolution",
-                "MemorandumAndArticles"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_order_dissolution_liquidation",
-          "text": "To order the judicial dissolution and liquidation of the Business Organization. (የንግድ ድርጅቱ በፍርድ ቤት እንዲፈርስ እና ንብረቱ እንዲወረስ እንዲታዘዝ።)",
-          "isDefault": true
-        },
-        {
-          "id": "relief_appoint_liquidator",
-          "text": "To appoint an Official Liquidator to take control of the company's assets and affairs. (የኩባንያውን ንብረቶች እና ጉዳዮች እንዲቆጣጠር ኦፊሴላዊ አጣሪ እንዲሾምለት።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "crim_defence_justification_self_defence": {
-      "documentTitle": "Plea of Justification: Self-Defence (የሕጋዊነት መቃወሚያ፡- በራስ መከላከል)",
-      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Arts. 79-80 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፸፱-፹).",
-      "partyTitles": {
-        "applicant": "Defendant (ተከሳሽ)",
-        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "The Nature of the Attack (የጥቃቱ ባሕሪ)",
-          "facets": [
-            {
-              "id": "fact_imminent_unlawful_attack",
-              "legalText": "The Defendant was facing an actual, imminent, and unlawful attack upon their life, limb, or property. (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በንብረቱ ላይ ሊደርስ ያለ ትክክለኛ፣ የቅርብ እና ሕገ-ወጥ ጥቃት ገጥሞት ነበር።)",
-              "citation": "Crim. Code Art. 79(1)",
-              "evidence": [
-                "ProofOfImminentDanger"
-              ]
-            },
-            {
-              "id": "fact_defence_of_third_party",
-              "legalText": "The Defendant acted to defend a third party who was also facing an imminent, unlawful attack. (ተከሳሹ ጥቃት ሊደርስበት ያለን ሌላ ሰው ለመከላከል እርምጃ ወስዷል።)",
-              "citation": "Crim. Code Art. 79(2)",
-              "evidence": [
-                "ProofOfImminentDanger",
-                "WitnessStatements"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
-          "facets": [
-            {
-              "id": "fact_no_other_means",
-              "legalText": "The act of defence was necessary because there was no other possible means of preventing the attack. (ጥቃቱን ለመከላከል ሌላ አማራጭ መንገድ ስላልነበረው የመከላከል ተግባሩ አስፈላጊ ነበር።)",
-              "citation": "Crim. Code Art. 80(1)",
-              "evidence": [
-                "WitnessStatements"
-              ]
-            },
-            {
-              "id": "fact_proportionality",
-              "legalText": "The means used for defence were proportional to the gravity of the attack and the threatened harm. (ለመከላከል ጥቅም ላይ የዋለው ዘዴ ከጥቃቱ ክብደት እና ከሚሰጋው ጉዳት ጋር የተመጣጣኝ ነበር።)",
-              "citation": "Crim. Code Art. 80(2)",
-              "evidence": [
-                "ProofOfImminentDanger",
-                "WitnessStatements"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_acquittal_justification",
-          "text": "To acquit the Defendant on the ground that the act was justified and therefore lawful. (ድርጊቱ ህጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "crim_defence_excuse_insanity": {
-      "documentTitle": "Plea of Excuse: Insanity / Non-Culpability (የማስተንፈሻ መቃወሚያ፡- የአእምሮ ሕመም/ተጠያቂነት አለመኖር)",
-      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 50 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፶).",
-      "partyTitles": {
-        "applicant": "Defendant (ተከሳሽ)",
-        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
-          "facets": [
-            {
-              "id": "fact_insane_incapable_understanding",
-              "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of understanding the criminal nature of the act. (በድርጊቱ ጊዜ ተከሳሹ የድርጊቱን የወንጀልነት ባህሪ ለመረዳት በማይችል ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
-              "citation": "Crim. Code Art. 50(1)",
-              "evidence": [
-                "MedicalCertificateMentalState"
-              ]
-            },
-            {
-              "id": "fact_insane_incapable_control",
-              "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of controlling their conduct. (በድርጊቱ ጊዜ ተከሳሹ አካሄዱን መቆጣጠር በማይችልበት ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
-              "citation": "Crim. Code Art. 50(1)",
-              "evidence": [
-                "MedicalCertificateMentalState"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Intoxication (በስካር ሁኔታ)",
-          "facets": [
-            {
-              "id": "fact_intoxication_non_culpable",
-              "legalText": "The Defendant was in a state of involuntary or non-culpable intoxication (e.g., administered by force or error) that led to the lack of culpability. (ተከሳሹ በግዴታ ወይም በስህተት በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ሲሆን ይህም ተጠያቂ እንዳይሆን አድርጎታል።)",
-              "citation": "Crim. Code Art. 54",
-              "evidence": [
-                "WitnessStatementsIntoxication",
-                "MedicalCertificateMentalState"
-              ]
-            },
-            {
-              "id": "fact_intoxication_culpable_negligence",
-              "legalText": "The Defendant was in a state of culpable intoxication, but the offense committed was only foreseeable as a light offense (for mitigation). (ተከሳሹ በግዴታ በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ቢሆንም የተፈፀመው ወንጀል በቀላል ደረጃ የሚገመት ነበር (ለቅጣት ማቅለያ)።)",
-              "citation": "Crim. Code Art. 54(3)",
-              "evidence": [
-                "WitnessStatementsIntoxication"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_acquittal_excuse",
-          "text": "To acquit the Defendant on the grounds of non-culpability and order appropriate security or medical measures (Art. 50(3)). (ተከሳሹ በተጠያቂነት እጦት በነጻ እንዲሰናበት እና ተገቢ የጥበቃ ወይም የህክምና እርምጃ እንዲወሰድበት።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "crim_defence_justification_necessity": {
-      "documentTitle": "Plea of Justification: Necessity (የሕጋዊነት መቃወሚያ፡- በግዴታ)",
-      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 81 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፹፩).",
-      "partyTitles": {
-        "applicant": "Defendant (ተከሳሽ)",
-        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
-          "facets": [
-            {
-              "id": "fact_imminent_threat_necessity",
-              "legalText": "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
-              "citation": "Crim. Code Art. 81(1)",
-              "evidence": [
-                "ProofOfImminentDanger"
-              ]
-            },
-            {
-              "id": "fact_interest_protected_greater",
-              "legalText": "The interest protected by the act (the interest saved) was evidently of a greater or equal value than the interest infringed (the harm caused). (በድርጊቱ የተጠበቀው ጥቅም (የተረፈው) ከተጎዳው ጥቅም (ከተፈጠረው ጉዳት) የበለጠ ወይም እኩል ዋጋ ነበረው።)",
-              "citation": "Crim. Code Art. 81(1)",
-              "evidence": [
-                "WitnessStatements"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
-          "facets": [
-            {
-              "id": "fact_order_of_superior",
-              "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል፣ እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
-              "citation": "Crim. Code Art. 82",
-              "evidence": [
-                "OfficialOrderDocument"
-              ]
-            },
-            {
-              "id": "fact_victim_consent_valid",
-              "legalText": "The victim freely and clearly consented to the minor bodily injury or damage to property, where such consent is valid under the law. (ተጎጂው በሕግ ተቀባይነት ባለው መንገድ ለደረሰበት ቀላል የአካል ጉዳት ወይም የንብረት ጉዳት በነጻ ፈቃዱን ሰጥቷል።)",
-              "citation": "Crim. Code Art. 83",
-              "evidence": [
-                "VictimConsentForm"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_acquittal_necessity",
-          "text": "To acquit the Defendant on the ground that the act was justified by necessity and lawful. (ድርጊቱ በግዴታ ሕጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
-          "isDefault": true
-        },
-        {
-          "id": "relief_mitigation_necessity",
-          "text": "Alternatively, to mitigate the penalty due to the presence of a threatening situation that rendered the offense less culpable (mitigating circumstance). (በአማራጭ፣ ወንጀሉን በተጠያቂነት እንዲቀንስ በሚያስችል አስጊ ሁኔታ በመኖሩ ምክንያት ቅጣቱ እንዲቀልለት።)",
-          "isDefault": false
-        }
-      ]
-    },
-    "proc_amendment_of_pleading": {
-      "documentTitle": "Application for Amendment of Pleading (የፍሬ ነገር ማሻሻያ ጥያቄ)",
-      "jurisdictionText": "Civil Procedure Code of 1965, Art. 222 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፳፪).",
-      "partyTitles": {
-        "applicant": "Applicant/Party Seeking Amendment (ማሻሻያ ጠያቂ)",
-        "respondent": "Opposing Party (ተቃራኒ ወገን)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Grounds for Amendment (የማሻሻያ ምክንያቶች)",
-          "facets": [
-            {
-              "id": "fact_amendment_necessary_for_justice",
-              "legalText": "The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice. (ማሻሻያው በወገኖች መካከል ያለውን እውነተኛ ክርክር ለመወሰን አስፈላጊ ሲሆን የፍትሕንም ዓላማ ለማሳካት የግድ ነው።)",
-              "citation": "C.P.C. Art. 222(2)",
-              "evidence": [
-                "OriginalPleadingCopy",
-                "DraftAmendment"
-              ]
-            },
-            {
-              "id": "fact_amendment_no_prejudice",
-              "legalText": "The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs. (ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒ ወገንን በወጪ የማይካስ ፍትሐዊ ያልሆነ ጉዳት አያስከትልም።)",
-              "citation": "C.P.C. Art. 222(1)",
-              "evidence": [
-                "OriginalPleadingCopy"
-              ]
-            },
-            {
-              "id": "fact_amendment_due_to_clerical_error",
-              "legalText": "The amendment is minor and necessary to correct a clerical, computational, or drafting error in the original pleading. (ማሻሻያው ጥቃቅን ሲሆን በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአፃፃፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው።)",
-              "citation": "C.P.C. Art. 222(1)",
-              "evidence": [
-                "DraftAmendment"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Procedural Timing (የሥነ ሥርዓት ጊዜ)",
-          "facets": [
-            {
-              "id": "fact_amendment_before_judgment",
-              "legalText": "The application for amendment is being made before the court has delivered its final judgment. (የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ውሳኔ ከመስጠቱ በፊት እየቀረበ ነው።)",
-              "citation": "C.P.C. Art. 222(1)",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_grant_amendment",
-          "text": "To grant leave to amend the statement of claim/defence as per the draft annexed hereto. (በዚህ ከተያያዘው ረቂቅ መሠረት ክስ/መቃወሚያ እንዲሻሻል ፈቃድ እንዲሰጥ።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "proc_intervention_by_third_party": {
-      "documentTitle": "Application for Leave to Intervene in a Pending Suit (በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ)",
-      "jurisdictionText": "Civil Procedure Code of 1965, Art. 238 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፴፰).",
-      "partyTitles": {
-        "applicant": "Intervener (ጣልቃ ገቢ)",
-        "respondent": "Original Parties (የመጀመሪያ ተከራካሪ ወገኖች)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Legal Interest and Necessity (ሕጋዊ ጥቅም እና አስፈላጊነት)",
-          "facets": [
-            {
-              "id": "fact_direct_legal_interest",
-              "legalText": "The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment. (ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል።)",
-              "citation": "C.P.C. Art. 238(1)",
-              "evidence": [
-                "IntervenerStatement"
-              ]
-            },
-            {
-              "id": "fact_common_question_of_law_or_fact",
-              "legalText": "The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise. (ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል።)",
-              "citation": "C.P.C. Art. 238(1)",
-              "evidence": [
-                "IntervenerStatement"
-              ]
-            },
-            {
-              "id": "fact_prevent_multiplicity_of_suits",
-              "legalText": "Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter. (ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል።)",
-              "citation": "C.P.C. Art. 238(2)",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_grant_intervention",
-          "text": "To grant the Applicant leave to intervene in the suit and to be joined as a Plaintiff/Defendant. (አመልካቹ በክሱ ውስጥ እንዲገባ እና እንደ ከሳሽ/ተከሳሽ እንዲታከል እንዲፈቀድለት።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "proc_joinder_of_third_party": {
-      "documentTitle": "Application to Join a Third Party (ሶስተኛ ወገንን በክሱ የማካተት ጥያቄ)",
-      "jurisdictionText": "Civil Procedure Code of 1965, Art. 240 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፵).",
-      "partyTitles": {
-        "applicant": "Defendant Seeking Joinder (ሶስተኛ ወገንን እንዲካተት የሚፈልግ ተከሳሽ)",
-        "respondent": "Third Party to be Joined (በክሱ እንዲካተት የተፈለገው ሶስተኛ ወገን)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Basis for Third-Party Liability (ለሶስተኛ ወገን ኃላፊነት መሠረት)",
-          "facets": [
-            {
-              "id": "fact_right_to_indemnity",
-              "legalText": "The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant. (ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው።)",
-              "citation": "C.P.C. Art. 240(1)(a)",
-              "evidence": [
-                "ThirdPartyNotice"
-              ]
-            },
-            {
-              "id": "fact_right_to_contribution",
-              "legalText": "The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim. (ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው።)",
-              "citation": "C.P.C. Art. 240(1)(b)",
-              "evidence": [
-                "ThirdPartyNotice"
-              ]
-            },
-            {
-              "id": "fact_same_issue_arising",
-              "legalText": "The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant. (በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው።)",
-              "citation": "C.P.C. Art. 240(1)(c)",
-              "evidence": [
-                "ThirdPartyNotice"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_grant_third_party_notice",
-          "text": "To grant leave to serve a third-party notice on [Name of Third Party] and join them as a third-party defendant. (በ[የሶስተኛ ወገን ስም] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "proc_judgment_objection_default": {
-      "documentTitle": "Application for Judgment Objection / Setting Aside Ex Parte Decree (በአንድ ወገን ፍርድ ላይ የተቃውሞ ጥያቄ)",
-      "jurisdictionText": "Civil Procedure Code of 1965, Arts. 250 & 252 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፶ እና ፪፻፶፪).",
-      "partyTitles": {
-        "applicant": "Objector / Defaulting Party (ተቃዋሚ / በሌሉበት የተፈረደበት ወገን)",
-        "respondent": "Opposing Party (ተቃራኒ ወገን)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Grounds for Setting Aside (የፍርዱ መሻር ምክንያቶች)",
-          "facets": [
-            {
-              "id": "fact_no_proper_service",
-              "legalText": "The decree was passed ex parte (in absence) because the Objector was not duly served with the summons or notice of the suit. (ፍርዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው።)",
-              "citation": "C.P.C. Art. 252(1)(a)",
-              "evidence": [
-                "ObjectionGroundsMemo"
-              ]
-            },
-            {
-              "id": "fact_sufficient_cause_for_default",
-              "legalText": "The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause. (ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ።)",
-              "citation": "C.P.C. Art. 252(1)(b)",
-              "evidence": [
-                "ObjectionGroundsMemo"
-              ]
-            },
-            {
-              "id": "fact_absence_of_jurisdiction",
-              "legalText": "The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree. (ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው።)",
-              "citation": "C.P.C. Art. 5(2)",
-              "evidence": [
-                "ObjectionGroundsMemo"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Procedural Timing (የሥነ ሥርዓት ጊዜ)",
-          "facets": [
-            {
-              "id": "fact_objection_timely_filed",
-              "legalText": "The objection is filed within the period prescribed by law (usually 30 days from knowledge of the decree). (ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ብዙውን ጊዜ ፍርዱ ከታወቀበት ቀን ጀምሮ በ30 ቀናት ውስጥ) ቀርቧል።)",
-              "citation": "C.P.C. Art. 250/252",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_set_aside_judgment",
-          "text": "To set aside the ex parte judgment/decree and restore the suit to the list of pending cases for trial on the merits. (በሌሉበት የተሰጠውን ፍርድ እንዲሻርና ክሱ በፍሬ ነገር እንዲታይ ወደ ተንጠለጠለ መዝገብ እንዲመለስ።)",
-          "isDefault": true
-        }
-      ]
-    },
-    "proc_review_of_judgment": {
-      "documentTitle": "Application for Review of Judgment (የፍርድ ዳግም ማየት ጥያቄ)",
-      "jurisdictionText": "Civil Procedure Code of 1965, Art. 376 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፫፻፸፮).",
-      "partyTitles": {
-        "applicant": "Applicant for Review (ዳግም እንዲታይለት ጠያቂ)",
-        "respondent": "Opposing Party (ተቃራኒ ወገን)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Grounds for Review (የዳግም የማየት ምክንያቶች)",
-          "facets": [
-            {
-              "id": "fact_new_and_important_evidence",
-              "legalText": "The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed. (አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል።)",
-              "citation": "C.P.C. Art. 376(1)(a)",
-              "evidence": [
-                "ReviewApplicationMemo"
-              ]
-            },
-            {
-              "id": "fact_mistake_or_error_on_face",
-              "legalText": "There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument. (በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)።)",
-              "citation": "C.P.C. Art. 376(1)(b)",
-              "evidence": [
-                "ReviewApplicationMemo"
-              ]
-            },
-            {
-              "id": "fact_other_sufficient_reason",
-              "legalText": "There is any other sufficient reason analogous to the specified grounds justifying a review. (ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ።)",
-              "citation": "C.P.C. Art. 376(1)(c)",
-              "evidence": [
-                "ReviewApplicationMemo"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Procedural Constraints (የሥነ ሥርዓት ገደቦች)",
-          "facets": [
-            {
-              "id": "fact_no_previous_appeal",
-              "legalText": "The Applicant has not previously filed an appeal against the judgment being sought for review. (አመልካቹ ዳግም እንዲታይለት ለሚጠይቀው ፍርድ ከዚህ በፊት ይግባኝ አላቀረበም።)",
-              "citation": "C.P.C. Art. 376(2)",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_grant_review",
-          "text": "To grant the application for review and re-open the case for hearing the new evidence or correcting the error. (የዳግም የማየት ጥያቄው ተቀባይነት አግኝቶ ክሱ አዲስ ማስረጃ ለማየት ወይም ስህተቱን ለማረም እንዲከፈት።)",
+          "text": "Order the court registrar to affix official seals on the deceased's property/safe. (የፍርድ ቤቱ ሬጅስትራር በሟቹ ንብረት/ካዝና ላይ ኦፊሴላዊ ማህተሞችን እንዲያደርግ ትዕዛዝ እንዲሰጥ።)",
           "isDefault": true
         }
       ]
     }
   }
 }
-
-    

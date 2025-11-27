@@ -4,7 +4,7 @@ This document serves as the definitive checklist for transforming the legal know
 
 Each segment must pass both a **Relevancy Check** (ensuring only context-specific information is shown) and an **Exhaustive Rendering Check** (ensuring no relevant information is missing).
 
-## The 7 Segments of UI Implementation
+## The 9 Segments of UI Implementation
 
 1.  **Head, Date, Court Name, Location, Bench Name, and Bench Address:**
     *   **Relevancy Check:** The "Bench/Division" dropdown MUST be filtered by and only show benches relevant to the selected "Court Tier".
@@ -28,8 +28,16 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 
 6.  **Request Judgment and Relief:**
     *   **Relevancy Check:** The UI must ONLY display the relief options that are relevant to the *currently selected template* as defined in `backend.json`.
-    *   **Exhaustive Rendering Check:** All standard reliefs for the template must be presented as a list of checkbox items. Reliefs marked as `isDefault` MUST be checked by default. A "Custom Relief" option must be available.
+    *   **Exhaustive Rendering Check:** All standard reliefs for the template must be presented as a list of checkbox items. A "Custom Relief" option must be available.
 
 7.  **Evidence List Attachment & Auto Oath Statement:**
     *   **Relevancy Check:** Auto-linked evidence MUST be directly relevant to a selected fact. AI-suggested evidence MUST be relevant to the combination of selected facts.
     *   **Exhaustive Rendering Check:** The UI must clearly distinguish between **Required (Auto-Linked)**, **AI-Suggested**, and **Manual** evidence. The final preview MUST render a clean, formatted list of all *active* evidence. Both document pages must end with the static verification/oath statements.
+
+8.  **Bilingual Consistency:**
+    *   **Relevancy Check:** N/A.
+    *   **Exhaustive Rendering Check:** All user-facing text sourced from the template (`documentTitle`, `partyTitles`, fact group titles, fact `legalText`, and relief `text`) MUST be provided in both English and Amharic, using the format "English (Amharic)".
+
+9.  **Default Relief Selection:**
+    *   **Relevancy Check:** N/A.
+    *   **Exhaustive Rendering Check:** Every template MUST have at least one relief option with `isDefault: true` to ensure a sensible starting state and prevent an empty relief section.

@@ -1,413 +1,359 @@
 {
   "entities": {
     "WrittenContract": {
-      "title": "Written Contract",
+      "title": "የጽሑፍ ውል (Written Contract)",
       "description": "The primary agreement signed by both parties. Essential for contracts involving immovable property or administrative bodies."
     },
     "NoticeofDefault": {
-      "title": "Notice of Default (Warning Letter)",
+      "title": "የውል ማፍረሻ ማስታወቂያ (Notice of Default)",
       "description": "A registered letter or legal notice sent to the defaulting party demanding performance, essential for claiming damages."
     },
     "PaymentReceipt": {
-      "title": "Payment Receipt / Bank Advice",
+      "title": "የክፍያ ደረሰኝ (Payment Receipt)",
       "description": "Documentary proof of money transferred (loan disbursement) or payments made (performance)."
     },
     "DeliveryNote": {
-      "title": "Delivery Note (Model 19/22)",
+      "title": "የዕቃ ማቅረቢያ ሰነድ (Delivery Note)",
       "description": "Proof that goods were actually delivered to and received by the buyer."
     },
     "AdmissionofDebt": {
-      "title": "Admission of Debt",
+      "title": "የዕዳ እምነት ሰነድ (Admission of Debt)",
       "description": "A specific written document where the debtor acknowledges the sum owed."
     },
     "AuditReport": {
-      "title": "Audit Report",
+      "title": "የኦዲት ሪፖርት (Audit Report)",
       "description": "A financial report detailing outstanding balances, often required in complex B2B disputes."
     },
     "TitleDeed": {
-      "title": "Title Deed (Librec/Carta)",
+      "title": "የባለቤትነት ማረጋገጫ ካርታ (Title Deed)",
       "description": "The primary certificate of holding rights/ownership for urban houses and land."
     },
     "SitePlan": {
-      "title": "Site Plan",
+      "title": "የቦታ ፕላን (Site Plan)",
       "description": "Official technical map showing the coordinates, boundaries, and area of the plot."
     },
     "LeaseAgreement": {
-      "title": "Lease Agreement",
+      "title": "የኪራይ ስምምነት (Lease Agreement)",
       "description": "Contract between the citizen and the City Administration defining the lease period and rights."
     },
     "ConstructionPermit": {
-      "title": "Construction Permit",
+      "title": "የግንባታ ፈቃድ (Construction Permit)",
       "description": "Official authorization to build, proving legality of the structure."
     },
     "TaxLandRentReceipts": {
-      "title": "Tax/Land Rent Receipts",
+      "title": "የግብር/የሊዝ ክፍያ ደረሰኝ (Tax/Land Rent Receipts)",
       "description": "Proof of continuous payment of obligations, used to evidence continuous possession."
     },
     "SurveyorsReport": {
-      "title": "Surveyor's Report",
+      "title": "የሰርቬየር ሪፖርት (Surveyor's Report)",
       "description": "Technical report verifying boundary encroachments."
     },
     "KebeleConfirmation": {
-      "title": "Kebele Confirmation",
+      "title": "የቀበሌ ማረጋገጫ (Kebele Confirmation)",
       "description": "Letter from the local administration confirming who lives in/occupies the property."
     },
     "WitnessAffidavitsNuisance": {
-      "title": "Witness Affidavits (Nuisance)",
+      "title": "የምስክርነት ቃል (Nuisance) (Witness Affidavits)",
       "description": "Sworn statements detailing the time, duration, and severity of the disturbance (e.g., noise, smell, vibration)."
     },
     "PhotosVideoEvidence": {
-      "title": "Photos/Video Evidence",
+      "title": "ፎቶ/ቪዲዮ ማስረጃ (Photos/Video Evidence)",
       "description": "Visual proof of the nuisance source (e.g., pollution, excessive height of a structure)."
     },
     "PriorAgreementServitude": {
-      "title": "Prior Agreement (Servitude)",
+      "title": "የቀድሞ ስምምነት (Servitude) (Prior Agreement)",
       "description": "If the servitude was created by contract, the written agreement is required."
     },
     "EmploymentContract": {
-      "title": "Employment Contract",
-      "description": "A contract of employment.",
-      "type": "object",
-      "properties": {}
+      "title": "የቅጥር ውል (Employment Contract)",
+      "description": "A contract of employment."
     },
     "TerminationLetter": {
-      "title": "Termination Letter",
-      "description": "A letter terminating employment.",
-      "type": "object",
-      "properties": {}
+      "title": "የስንብት ደብዳቤ (Termination Letter)",
+      "description": "A letter terminating employment."
     },
     "PayrollSlip": {
-      "title": "Payroll Slip",
-      "description": "A document detailing an employee's salary.",
-      "type": "object",
-      "properties": {}
+      "title": "የደመወዝ ወረቀት (Payroll Slip)",
+      "description": "A document detailing an employee's salary."
     },
     "DisciplinaryRecord": {
-      "title": "Disciplinary Record",
-      "description": "An employee's disciplinary record.",
-      "type": "object",
-      "properties": {}
+      "title": "የዲሲፕሊን መዝገብ (Disciplinary Record)",
+      "description": "An employee's disciplinary record."
     },
     "AttendanceSheet": {
-      "title": "Attendance Sheet",
-      "description": "An employee's attendance sheet.",
-      "type": "object",
-      "properties": {}
+      "title": "የ ಹಾజሪ መዝገብ (Attendance Sheet)",
+      "description": "An employee's attendance sheet."
     },
     "AccidentReport": {
-      "title": "Accident Report",
-      "description": "A report of an accident.",
-      "type": "object",
-      "properties": {}
+      "title": "የአደጋ ሪፖርት (Accident Report)",
+      "description": "A report of an accident."
     },
     "MedicalBill": {
-      "title": "Medical Bill",
-      "description": "A bill for medical expenses.",
-      "type": "object",
-      "properties": {}
+      "title": "የሕክምና ደረሰኝ (Medical Bill)",
+      "description": "A bill for medical expenses."
     },
     "DismissalLetter": {
-      "title": "Dismissal Letter",
-      "description": "A letter of dismissal from service.",
-      "type": "object",
-      "properties": {}
+      "title": "የስንብት ደብዳቤ (Dismissal Letter)",
+      "description": "A letter of dismissal from service."
     },
     "GrievanceSubmission": {
-      "title": "Grievance Submission",
-      "description": "A document proving a grievance was submitted.",
-      "type": "object",
-      "properties": {}
+      "title": "የቅሬታ ማቅረቢያ (Grievance Submission)",
+      "description": "A document proving a grievance was submitted."
     },
     "PerformanceReview": {
-      "title": "Performance Review",
-      "description": "An employee's performance review.",
-      "type": "object",
-      "properties": {}
+      "title": "የአፈጻጸም ግምገማ (Performance Review)",
+      "description": "An employee's performance review."
     },
     "WarningLetter": {
-      "title": "Warning Letter",
-      "description": "A warning letter issued to an employee.",
-      "type": "object",
-      "properties": {}
+      "title": "የማስጠንቀቂያ ደብዳቤ (Warning Letter)",
+      "description": "A warning letter issued to an employee."
     },
     "UnpaidWageWitness": {
-      "title": "Unpaid Wage Witness",
-      "description": "A witness for unpaid wages.",
-      "type": "object",
-      "properties": {}
+      "title": "ያልተከፈለ ደመወዝ ምስክር (Unpaid Wage Witness)",
+      "description": "A witness for unpaid wages."
     },
     "CertificateofMarriage": {
-      "title": "Certificate of Marriage",
-      "description": "Official certificate issued by VERA or religious/customary authority proving the existence of the marriage.",
-      "type": "object",
-      "properties": {}
+      "title": "የጋብቻ ምስክር ወረቀት (Certificate of Marriage)",
+      "description": "Official certificate issued by VERA or religious/customary authority proving the existence of the marriage."
     },
     "BirthCertificate": {
-      "title": "Birth Certificate(s)",
-      "description": "Official birth records for all children involved in the dispute, proving age and parentage.",
-      "type": "object",
-      "properties": {}
+      "title": "የልደት የምስክር ወረቀት (Birth Certificate)",
+      "description": "Official birth records for all children involved in the dispute, proving age and parentage."
     },
     "ProofofIncome": {
-      "title": "Proof of Income",
-      "description": "Pay slips, bank statements, or tax records used to calculate maintenance (alimony) capabilities.",
-      "type": "object",
-      "properties": {}
+      "title": "የገቢ ማረጋገጫ (Proof of Income)",
+      "description": "Pay slips, bank statements, or tax records used to calculate maintenance (alimony) capabilities."
     },
     "FamilyArbitratorsReport": {
-      "title": "Family Arbitrators' Report",
-      "description": "(If applicable) A record of the attempt at reconciliation by family elders/arbitrators, often required before formal litigation.",
-      "type": "object",
-      "properties": {}
+      "title": "የቤተሰብ ሽማግሌዎች ሪፖርት (Family Arbitrators' Report)",
+      "description": "(If applicable) A record of the attempt at reconciliation by family elders/arbitrators, often required before formal litigation."
     },
     "ListofCommonProperty": {
-      "title": "List of Common Property",
-      "description": "An inventory document detailing assets acquired during the marriage (movable and immovable).",
-      "type": "object",
-      "properties": {}
+      "title": "የጋራ ንብረት ዝርዝር (List of Common Property)",
+      "description": "An inventory document detailing assets acquired during the marriage (movable and immovable)."
     },
     "PoliceReportDomesticViolence": {
-      "title": "Police Report (Domestic Violence)",
-      "description": "Official record of physical or emotional abuse, used as grounds for immediate dissolution or restraining orders.",
-      "type": "object",
-      "properties": {}
+      "title": "የፖሊስ ሪፖርት (የቤት ውስጥ ጥቃት) (Police Report (Domestic Violence))",
+      "description": "Official record of physical or emotional abuse, used as grounds for immediate dissolution or restraining orders."
     },
     "SchoolFeeReceipts": {
-      "title": "School Fee Receipts",
-      "description": "Documentary proof of educational expenses for children, used to quantify maintenance claims.",
-      "type": "object",
-      "properties": {}
+      "title": "የትምህርት ቤት ክፍያ ደረሰኝ (School Fee Receipts)",
+      "description": "Documentary proof of educational expenses for children, used to quantify maintenance claims."
     },
     "MedicalBoardCertificate": {
-      "title": "Medical Board Certificate",
+      "title": "የሕክምና ቦርድ ምስክር ወረቀት (Medical Board Certificate)",
       "description": "Evidence regarding paternity (DNA) or medical incapacity of a spouse."
     },
     "WitnessStatements": {
-      "title": "Witness Statements",
-      "description": "Affidavits from witnesses.",
-      "type": "object",
-      "properties": {}
+      "title": "የምስክሮች ቃል (Witness Statements)",
+      "description": "Affidavits from witnesses."
     },
     "CopyofDivorceJudgment": {
-      "title": "Copy of Divorce Judgment",
-      "description": "The prior court ruling confirming the marriage is dissolved.",
-      "type": "object",
-      "properties": {}
+      "title": "የፍቺ ፍርድ ቅጂ (Copy of Divorce Judgment)",
+      "description": "The prior court ruling confirming the marriage is dissolved."
     },
     "ProofofInheritanceDonation": {
-      "title": "Proof of Inheritance/Donation",
-      "description": "Documents proving property was acquired via inheritance or donation.",
-      "type": "object",
-      "properties": {}
+      "title": "የውርስ/ስጦታ ማረጋገጫ (Proof of Inheritance/Donation)",
+      "description": "Documents proving property was acquired via inheritance or donation."
     },
     "Pre-maritalOwnershipDocuments": {
-      "title": "Pre-marital Ownership Documents",
-      "description": "Documents proving ownership of property before marriage.",
-      "type": "object",
-      "properties": {}
+      "title": "ከጋብቻ በፊት የነበረ የባለቤትነት ሰነድ (Pre-marital Ownership Documents)",
+      "description": "Documents proving ownership of property before marriage."
     },
     "JudgmentofDivorce": {
-      "title": "Judgment of Divorce",
-      "description": "The prior court ruling confirming the marriage is dissolved and allowing the property phase to commence.",
-      "type": "object",
-      "properties": {}
+      "title": "የፍቺ ፍርድ (Judgment of Divorce)",
+      "description": "The prior court ruling confirming the marriage is dissolved and allowing the property phase to commence."
     },
     "PropertyValuationReport": {
-      "title": "Property Valuation Report",
+      "title": "የንብረት ግምት ሪፖርት (Property Valuation Report)",
       "description": "(Optional/Later Stage) A report by a certified engineer or auditor estimating the value of the assets."
     },
     "TitleDeedsLibrec": {
-      "title": "Title Deeds / Librec",
-      "description": "Official ownership certificates for immovable property (houses, land).",
-      "type": "object",
-      "properties": {}
+      "title": "የባለቤትነት ማረጋገጫ (Title Deeds / Librec)",
+      "description": "Official ownership certificates for immovable property (houses, land)."
     },
     "DeathCertificate": {
-      "title": "Death Certificate",
+      "title": "የሞት የምስክር ወረቀት (Death Certificate)",
       "description": "Official certificate from VERA or municipality confirming the date and place of death."
     },
     "WillTestament": {
-      "title": "Will (Testament)",
+      "title": "ኑዛዜ (Will / Testament)",
       "description": "A Public, Holographic, or Oral will documenting the deceased's wishes."
     },
     "KebeleFamilyID": {
-      "title": "Kebele ID / Family Certificate",
+      "title": "የቀበሌ መታወቂያ / የቤተሰብ ወረቀት (Kebele ID / Family Certificate)",
       "description": "Official document proving the relationship between the claimant and the deceased (e.g., listing children)."
     },
     "InventoryofEstate": {
-      "title": "Inventory of Estate",
+      "title": "የውርስ ንብረት ዝርዝር (Inventory of Estate)",
       "description": "A detailed list of assets (houses, cars, bank accounts) left by the deceased."
     },
     "WitnessAffidavitsSuccession": {
-      "title": "Witness Affidavits (Succession)",
+      "title": "የውርስ ምስክሮች ቃል (Witness Affidavits - Succession)",
       "description": "Sworn statements by individuals (usually 3) confirming who the rightful heirs are."
     },
     "CertificateofLiquidation": {
-      "title": "Certificate of Liquidation",
+      "title": "የዕዳ ነጻነት ማረጋገጫ (Certificate of Liquidation)",
       "description": "Document showing debts have been paid (required before final partition)."
     },
     "CertificateOfRegistrationEIPO": {
-      "title": "Certificate of Registration (EIPO)",
+      "title": "የምዝገባ ምስክር ወረቀት (EIPO) (Certificate of Registration)",
       "description": "Official document proving ownership of a Patent, Trademark, or registered Copyright."
     },
     "ProductSampleSpecimen": {
-      "title": "Product Sample / Specimen",
+      "title": "የምርት ናሙና (Product Sample/Specimen)",
       "description": "The physical product bearing the trademark or the technical documentation of the invention."
     },
     "CeaseAndDesistLetter": {
-      "title": "Cease and Desist Letter",
+      "title": "የማቆሚያ እና የማስጠንቀቂያ ደብዳቤ (Cease and Desist Letter)",
       "description": "Formal notice sent to the infringer demanding they stop the unlawful activity."
     },
     "MarketSurveyAffidavit": {
-      "title": "Market Survey / Affidavit",
+      "title": "የገበያ ጥናት/የምስክርነት ቃል (Market Survey/Affidavit)",
       "description": "Proof demonstrating consumer confusion in the marketplace (for Trademark cases)."
     },
     "CustomsInspectionReport": {
-      "title": "Customs Inspection Report",
+      "title": "የጉምሩክ ምርመራ ሪፖርት (Customs Inspection Report)",
       "description": "Official report confirming the seizure of counterfeit goods at the border."
     },
     "TechnicalExpertReport": {
-      "title": "Technical Expert Report",
+      "title": "የቴክኒክ ባለሙያ ሪፖርት (Technical Expert Report)",
       "description": "Report comparing the registered patent claims to the alleged infringing product."
     },
     "IdentityCard": {
-      "title": "Identity Card (Kebele/National ID)",
+      "title": "የመታወቂያ ወረቀት (Identity Card)",
       "description": "The primary document reflecting the current (incorrect) status information."
     },
     "BirthMarriageCertificateVERA": {
-      "title": "Birth/Marriage Certificate (VERA)",
+      "title": "የልደት/ጋብቻ ምስክር ወረቀት (VERA) (Birth/Marriage Certificate)",
       "description": "Official civil status document requiring correction."
     },
     "PublicNoticeOfAbsence": {
-      "title": "Public Notice of Absence",
+      "title": "የመጥፋት የሕዝብ ማስታወቂያ (Public Notice of Absence)",
       "description": "Proof that the petition for absence was published in a newspaper (Civ. Code Art. 159)."
     },
     "GenealogicalAffidavit": {
-      "title": "Genealogical Affidavit",
+      "title": "የዘር ሐረግ ማረጋገጫ (Genealogical Affidavit)",
       "description": "Document proving the relationship to the deceased (required for Heirship Certification)."
     },
     "TaxAssessmentNotice": {
-      "title": "Tax Assessment Notice",
+      "title": "የግብር ግምት ማስታወቂያ (Tax Assessment Notice)",
       "description": "The official letter from the MoR detailing the tax liability, penalties, and interest."
     },
     "NoticeOfObjectionInitial": {
-      "title": "Notice of Objection (Initial)",
+      "title": "የመጀመሪያ የግብር መቃወሚያ (Notice of Objection - Initial)",
       "description": "The formal letter submitted by the taxpayer to the MoR/CC challenging the initial assessment."
     },
     "AccountingRecords": {
-      "title": "Accounting Records (Ledgers, Invoices)",
+      "title": "የሂሳብ መዝገቦች (Accounting Records)",
       "description": "Mandatory documentation (especially for Category A) to substantiate gross income and deductions."
     },
     "ImportExportDeclarationSAD": {
-      "title": "Import/Export Declaration (SAD)",
+      "title": "የጉምሩክ መግለጫ (Import/Export Declaration)",
       "description": "Official customs document detailing the imported goods, value, and applicable duties."
     },
     "PaymentReceiptsTaxCustoms": {
-      "title": "Payment Receipts (Tax/Customs)",
+      "title": "የግብር/ጉምሩክ ክፍያ ደረሰኝ (Payment Receipts - Tax/Customs)",
       "description": "Proof of compliance, necessary for clearance or to meet the 50% deposit requirement."
     },
     "ExternalAuditReport": {
-      "title": "External Audit Report",
+      "title": "የውጭ ኦዲት ሪፖርት (External Audit Report)",
       "description": "Report from a certified external auditor contradicting the MoR's findings."
     },
     "PoliceAccidentReport": {
-      "title": "Police/Traffic Accident Report",
+      "title": "የፖሊስ የአደጋ ሪፖርት (Police Accident Report)",
       "description": "Official documentation by police detailing the time, location, parties, and preliminary findings of a traffic or civil incident."
     },
     "MedicalExpenseReceipts": {
-      "title": "Medical Expense Receipts and Invoices",
+      "title": "የህክምና ወጪ ደረሰኞች (Medical Expense Receipts)",
       "description": "Receipts, invoices, and payment confirmations for all medical, hospital, and rehabilitation services."
     },
     "DoctorAssessment": {
-      "title": "Medical Doctor's Assessment and Certificate",
+      "title": "የዶክተር ግምገማ (Doctor's Assessment)",
       "description": "A physician's certificate detailing the nature, extent, and duration of the injury, and prognosis for recovery or permanent disability."
     },
-    "LostEarningProof": {
-      "title": "Proof of Lost Earnings (Salary Slips/Tax Docs)",
-      "description": "Documents showing previous income and the period during which the claimant was unable to work due to the injury."
-    },
     "FinalAdminDecision": {
-      "title": "Final Administrative Decision (የመጨረሻ የአስተዳደር ውሳኔ)",
+      "title": "የመጨረሻ የአስተዳደር ውሳኔ (Final Administrative Decision)",
       "description": "The written, final decision issued by the administrative agency, signed by the competent official. This decision must be exhausted before court appeal (Art. 48(1))."
     },
     "DecisionNotificationProof": {
-      "title": "Proof of Decision Notification Date (ውሳኔው የደረሰበት ማስረጃ)",
+      "title": "የውሳኔ ማስታወቂያ ማረጋገጫ (Decision Notification Proof)",
       "description": "Evidence (e.g., date stamp, certified mail receipt) showing the exact date the petitioner was notified of the final administrative decision. Crucial for the 30-day appeal limit (Art. 51(1))."
     },
     "InternalRemedyExhaustion": {
-      "title": "Proof of Exhaustion of Internal Remedies (የውስጥ ቅሬታ መሟጠጥ ማስረጃ)",
+      "title": "የውስጥ መፍትሔዎችን የመጠቀም ማረጋገጫ (Internal Remedy Exhaustion)",
       "description": "Documentation showing the petitioner first raised the complaint to the agency's internal complaint body and received a final decision (Art. 48(2))."
     },
     "AgencyDirectiveCopy": {
-      "title": "Copy of the Challenged Directive (የሚጠየቀው መመሪያ ቅጂ)",
+      "title": "የተቃውሞ መመሪያ ቅጂ (Copy of Challenged Directive)",
       "description": "A copy of the specific Directive issued by the Agency that is being challenged for judicial review (Art. 48(1))."
     },
     "ShareholdersResolution": {
-      "title": "Shareholders' / Partners' Resolution (የአክሲዮን ባለቤቶች/አጋሮች ውሳኔ)",
+      "title": "የባለአክሲዮኖች ውሳኔ (Shareholders' Resolution)",
       "description": "Certified minutes from a General Meeting or Board meeting authorizing the legal action or confirming the internal decision (e.g., dissolution, capital increase)."
     },
     "MemorandumAndArticles": {
-      "title": "Memorandum & Articles of Association (የማኅበር መመስረቻና መተዳደሪያ ደንብ)",
+      "title": "መመስረቻ ጽሑፍ እና መተዳደሪያ ደንብ (Memorandum & Articles of Association)",
       "description": "The registered founding documents (Memorandum/Articles) of the business organization, showing capital structure, purpose, and management rules."
     },
     "NotarizedCheque": {
-      "title": "Notarized Cheque or Promissory Note (በኖታሪ የተረጋገጠ ቼክ ወይም የብድር ቃል ኪዳን)",
+      "title": "በኖታሪ የተረጋገጠ ቼክ (Notarized Cheque)",
       "description": "The original negotiable instrument (cheque, bill of exchange, or promissory note) legally validated for recourse or payment claim."
     },
     "ProtestCertificate": {
-      "title": "Certificate of Protest / Non-Payment (የክፍያ እምቢታ ማረጋገጫ)",
+      "title": "የክፍያ እምቢታ ማረጋገጫ (Certificate of Protest)",
       "description": "Official document from a notary or court certifying that the instrument was duly presented for payment and payment was refused (required for recourse)."
     },
     "BalanceSheetAndAudit": {
-      "title": "Recent Audited Financial Statements (የቅርብ ጊዜ ኦዲት የተደረገ የሒሳብ መግለጫ)",
+      "title": "ኦዲት የተደረገ የሂሳብ መግለጫ (Audited Financial Statements)",
       "description": "The last three years of audited balance sheets and income statements, crucial for insolvency or business valuation proceedings."
     },
     "ListofCreditors": {
-      "title": "Comprehensive List of Creditors (የአበዳሪዎች ዝርዝር)",
+      "title": "የአበዳሪዎች ዝርዝር (List of Creditors)",
       "description": "A detailed, certified list of all creditors, their claims, and security status (required for restructuring or bankruptcy applications)."
     },
     "MedicalCertificateMentalState": {
-      "title": "Medical Certificate of Mental State (የአእምሮ ሁኔታ የህክምና ማስረጃ)",
+      "title": "የአእምሮ ሁኔታ የህክምና ማስረጃ (Medical Certificate of Mental State)",
       "description": "A certified psychiatric or psychological evaluation confirming a severe mental disease or deficiency at the time of the alleged offense."
     },
     "ProofOfImminentDanger": {
-      "title": "Proof of Imminent Danger (የቅርብ አደጋ ማስረጃ)",
+      "title": "የቅርብ አደጋ ማስረጃ (Proof of Imminent Danger)",
       "description": "Witness statements, scene photos, or police reports demonstrating an immediate and unavoidable threat to life or property."
     },
     "OfficialOrderDocument": {
-      "title": "Official Order or Warrant (ኦፊሴላዊ ትዕዛዝ ወይም ማዘዣ)",
+      "title": "ኦፊሴላዊ ትዕዛዝ (Official Order Document)",
       "description": "Written documentation proving the alleged criminal act was carried out under the legal order or command of a superior public authority."
     },
     "VictimConsentForm": {
-      "title": "Victim's Written Consent (ተጎጂው የሰጠው የጽሑፍ ፈቃድ)",
+      "title": "የተጎጂው የጽሑፍ ፈቃድ (Victim's Written Consent)",
       "description": "A signed document showing the victim consented to the act, applicable only where consent is legally valid (e.g., minor bodily harm, property damage)."
     },
     "WitnessStatementsIntoxication": {
-      "title": "Witness Statements on Intoxication (ስለ ስካር ሁኔታ የምስክርነት ቃል)",
+      "title": "ስለ ስካር ሁኔታ የምስክርነት ቃል (Witness Statements on Intoxication)",
       "description": "Statements confirming the defendant's involuntary or non-culpable state of intoxication at the time of the alleged offense."
     },
     "OriginalPleadingCopy": {
-      "title": "Copy of Original Pleading (የመጀመሪያ ክስ ወይም መቃወሚያ ቅጂ)",
+      "title": "የመጀመሪያ ክስ ቅጂ (Original Pleading Copy)",
       "description": "A certified copy of the original statement of claim or statement of defence that is subject to the proposed amendment."
     },
     "DraftAmendment": {
-      "title": "Draft of the Proposed Amendment (የታቀደው ማሻሻያ ረቂቅ)",
+      "title": "የታቀደው ማሻሻያ ረቂቅ (Draft of Amendment)",
       "description": "The full, written text of the changes, additions, or deletions sought to be included in the original pleading."
     },
     "IntervenerStatement": {
-      "title": "Intervener's Statement of Claim/Defence (ጣልቃ ገቢው ክስ/መቃወሚያ)",
+      "title": "ጣልቃ ገቢው ክስ/መቃወሚያ (Intervener's Statement)",
       "description": "A full statement outlining the intervener's legal interest in the subject matter of the existing suit and their claims or defenses."
     },
     "ThirdPartyNotice": {
-      "title": "Draft Third-Party Notice (ለሶስተኛ ወገን የጥሪ ማስታወቂያ ረቂቅ)",
+      "title": "ለሶስተኛ ወገን የጥሪ ማስታወቂያ ረቂቅ (Draft Third-Party Notice)",
       "description": "The specific notice or claim that the Defendant intends to serve on the third party, detailing the basis for indemnity or contribution."
     },
     "ObjectionGroundsMemo": {
-      "title": "Memorandum of Objection Grounds (የተቃውሞ ምክንያቶች ማስታወሻ)",
+      "title": "የተቃውሞ ምክንያቶች ማስታወሻ (Objection Grounds Memo)",
       "description": "A detailed legal memorandum specifying the factual or legal errors upon which the judgment objection is based (e.g., lack of service, fraud)."
     },
     "ReviewApplicationMemo": {
-      "title": "Review Application Memorandum (የፍርድ ዳግም የማየት ማስታወሻ)",
+      "title": "የፍርድ ዳግም የማየት ማስታወሻ (Review Application Memo)",
       "description": "A memorandum specifying the new, crucial evidence discovered or the error on the face of the record required for a review of judgment."
     }
   }

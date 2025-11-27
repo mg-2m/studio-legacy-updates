@@ -1,89 +1,97 @@
 {
   "templates": {
     "civil_service_disciplinary_appeal": {
-      "documentTitle": "Memorandum of Appeal to the Administrative Tribunal (ለአስተዳደር ፍርድ ቤት ይግባኝ ማቅረቢያ)",
-      "partyTitles": {
-        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
-        "respondent": "Institution / Office (መስሪያ ቤት/መልס ሰጪ)"
+      "documentTitle": "የዲሲፕሊን ይግባኝ ለአስተዳደር ፍርድ ቤት (Memorandum of Appeal to the Administrative Tribunal)",
+      "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017 (Federal Civil Servants Proclamation No. 1064/2017)",
+      "meta": {
+        "keywords": ["civil service", "discipline", "appeal", "tribunal", "demotion", "dismissal", "የመንግስት ሰራተኛ", "ይግባኝ", "ቅጣት"],
+        "jurisdictionType": "Administrative Tribunal"
       },
-      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ በተቋሙ የተወሰነበትን ከባድ የዲሲፕሊን ቅጣት (ከሥራ መባረር፣ የደረጃ ዝቅ ማድረግ፣ ከአንድ ወር ደመወዝ በላይ መቀጮ) ለመቃወም ለአስተዳደር ፍርድ ቤት ይግባኝ ሲያቀርብ ይጠቅማል።\n\n### የጊዜ ገደብ (Period of Limitation)\nይግባኙ ውሳኔው ከደረሰበት ቀን ጀምሮ በ90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ከባድ የዲሲፕሊን እርምጃ፡** ይግባኝ ለማለት የሚቻለው የተወሰደው እርምጃ ከባድ ሲሆን ብቻ ነው።\n*   **ማስረጃ (Required Evidence):** የቅጣቱን ውሳኔ የያዘ ደብዳቤ።",
+      "partyTitles": {
+        "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ (Civil Servant / Appellant)",
+        "respondent": "መስሪያ ቤት/መልስ ሰጪ (Institution / Office)"
+      },
       "facts": {
         "group_1": {
-          "title": "The Disciplinary Measure (The Trigger) (የዲሲፕሊን እርምጃ (ቀስቅሴው))",
+          "title": "የዲሲፕሊን እርምጃ (The Disciplinary Measure)",
           "facets": [
             {
-              "id": "measure_dismissal",
-              "legalText": "Dismissal from Service. (ከሥራ መባረር።)",
-              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
+              "id": "pub_serv_fact_measure_dismissal",
+              "legalText": "ከሥራ መባረር። (Dismissal from Service.)",
+              "citation": "Proc. 1064/2017 Art. 81(1)(b)",
               "evidence": [
                 "DismissalLetter"
-              ]
+              ],
+              "mutexGroup": "penalty_type"
             },
             {
-              "id": "measure_demotion",
-              "legalText": "Downgrading of job position/grade. (የሥራ መደብ/ደረጃ ዝቅ ማድረግ።)",
-              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
+              "id": "pub_serv_fact_measure_demotion",
+              "legalText": "የሥራ መደብ/ደረጃ ዝቅ ማድረግ። (Downgrading of job position/grade.)",
+              "citation": "Proc. 1064/2017 Art. 81(1)(b)",
               "evidence": [
                 "DismissalLetter"
-              ]
+              ],
+              "mutexGroup": "penalty_type"
             },
             {
-              "id": "measure_fine",
-              "legalText": "Imposition of a fine exceeding one month's salary. (ከአንድ ወር ደመወዝ በላይ የሆነ ቅጣት መጣል።)",
-              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
+              "id": "pub_serv_fact_measure_fine",
+              "legalText": "ከአንድ ወር ደመወዝ በላይ የሆነ ቅጣት መጣል። (Imposition of a fine exceeding one month's salary.)",
+              "citation": "Proc. 1064/2017 Art. 81(1)(b)",
               "evidence": [
                 "DismissalLetter"
-              ]
+              ],
+              "mutexGroup": "penalty_type"
             }
           ]
         },
         "group_2": {
-          "title": "Procedural Violations (The Defense) (የሥነ-ሥርዓት ጥሰቶች (መከላከያው))",
+          "title": "የሥነ-ሥርዓት ጥሰቶች (Procedural Violations)",
           "facets": [
             {
-              "id": "no_right_to_be_heard",
-              "legalText": "The Institution took the measure without giving the Appellant a chance to present a defense. (ተቋሙ ይግባኝ ባዩ መከላከያ እንዲያቀርብ እድል ሳይሰጥ እርምጃውን ወስዷል።)",
-              "citation": "Violation of Art. 69 of Proc. 1064/2017",
+              "id": "pub_serv_fact_no_right_to_be_heard",
+              "legalText": "ተቋሙ ይግባኝ ባዩ መከላከያ እንዲያቀርብ እድል ሳይሰጥ እርምጃውን ወስዷል። (The Institution took the measure without giving the Appellant a chance to present a defense.)",
+              "citation": "Proc. 1064/2017 Art. 69",
               "evidence": []
             },
             {
-              "id": "limitation_period_1yr",
-              "legalText": "The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation. (ጥብቅ እርምጃው ጥፋቱ ከታወቀ ከ1 ዓመት በላይ ተወስዷል، ይህም በይርጋ እንዲታገድ ያደርገዋል።)",
-              "citation": "Art. 76(2) of Proc. 1064/2017",
+              "id": "pub_serv_fact_limitation_period_1yr",
+              "legalText": "ጥብቅ እርምጃው ጥፋቱ ከታወቀ ከ1 ዓመት በላይ ባለፈ ጊዜ ተወስዷል፣ ይህም በይርጋ እንዲታገድ ያደርገዋል። (The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.)",
+              "citation": "Proc. 1064/2017 Art. 76(2)",
               "evidence": []
             },
             {
-              "id": "limitation_period_6mo",
-              "legalText": "The simple measure was taken more than 6 months after the offense was known, barring it by limitation. (ቀላል እርምጃው ጥፋቱ ከታወቀ ከ6 ወራት በላይ ተወስዷል، ይህም በይርጋ እንዲታገድ ያደርገዋል።)",
-              "citation": "Art. 76(1) of Proc. 1064/2017",
+              "id": "pub_serv_fact_limitation_period_6mo",
+              "legalText": "ቀላል እርምጃው ጥፋቱ ከታወቀ ከ6 ወራት በላይ ባለፈ ጊዜ ተወስዷል፣ ይህም በይርጋ እንዲታገድ ያደርገዋል። (The simple measure was taken more than 6 months after the offense was known, barring it by limitation.)",
+              "citation": "Proc. 1064/2017 Art. 76(1)",
               "evidence": []
             },
             {
-              "id": "improper_committee",
-              "legalText": "The Disciplinary Committee was not constituted according to Regulation 77/2002 (e.g., no staff representative). (የዲሲፕሊን ኮሚቴው በደንብ 77/2002 መሠረት አልተቋቋመም (ለምሳሌ የሠራተኛ ተወካይ የለም)።)",
-              "citation": "Reg. 77/2002",
+              "id": "pub_serv_fact_improper_committee",
+              "legalText": "የዲሲፕሊን ኮሚቴው በደንብ 77/2002 መሠረት አልተቋቋመም (ለምሳሌ የሠራተኛ ተወካይ የለም)። (The Disciplinary Committee was not constituted according to Regulation 77/2002 (e.g., no staff representative).)",
+              "citation": "Regulation 77/2002",
               "evidence": []
             }
           ]
         },
         "group_3": {
-          "title": "Substantive Defenses (The Merits) (ዋና መከላከያዎች (ፍሬ ነገሩ))",
+          "title": "ዋና መከላከያዎች (Substantive Defenses)",
           "facets": [
             {
-              "id": "not_an_offense",
-              "legalText": "The alleged act does not constitute a disciplinary offense under the law. (የተጠረጠረው ድርጊት በሕጉ መሠረት የዲሲፕሊን ጥፋት አይደለም።)",
+              "id": "pub_serv_fact_not_an_offense",
+              "legalText": "የተጠረጠረው ድርጊት በሕጉ መሠረት የዲሲፕሊን ጥፋት አይደለም። (The alleged act does not constitute a disciplinary offense under the law.)",
               "citation": "",
               "evidence": []
             },
             {
-              "id": "disproportionate_penalty",
-              "legalText": "The penalty is disproportionate to the offense committed. (ቅጣቱ ለተፈጸመው ጥፋት ተመጣጣኝ አይደለም።)",
+              "id": "pub_serv_fact_disproportionate_penalty",
+              "legalText": "ቅጣቱ ለተፈጸመው ጥፋት ተመጣጣኝ አይደለም። (The penalty is disproportionate to the offense committed.)",
               "citation": "",
               "evidence": []
             },
             {
-              "id": "double_jeopardy",
-              "legalText": "The appellant was already punished for the same alleged offense. (ይግባኝ ባዩ በተመሳሳይ በተጠረጠረ ጥፋት ቀደም ሲል ተቀጥቷል።)",
+              "id": "pub_serv_fact_double_jeopardy",
+              "legalText": "ይግባኝ ባዩ በተመሳሳይ በተጠረጠረ ጥፋት ቀደም ሲል ተቀጥቷል። (The appellant was already punished for the same alleged offense.)",
               "citation": "",
               "evidence": []
             }
@@ -92,45 +100,50 @@
       },
       "reliefs": [
         {
-          "id": "quash_decision",
-          "text": "To quash/annul the administrative decision of the Respondent Institution. (የተጠሪ ተቋሙን አስተዳደራዊ ውሳኔ ለመሻር/ለማበላሸት።)",
+          "id": "pub_serv_relief_quash_decision",
+          "text": "የተጠሪ ተቋሙን አስተዳደራዊ ውሳኔ እንዲሻር። (To quash/annul the administrative decision of the Respondent Institution.)",
           "isDefault": true
         },
         {
-          "id": "reinstate_with_pay",
-          "text": "To order the reinstatement of the Appellant to their former position and payment of full salary for the period of suspension (Art. 81(3)). (ይግባኝ ባዩ ወደ ቀድሞ ቦታው እንዲመለስ እና ለእግድ ጊዜ ሙሉ ደመወዝ እንዲከፈለው ትዕዛዝ እንዲሰጥ (አንቀጽ 81(3))።)",
+          "id": "pub_serv_relief_reinstate_with_pay",
+          "text": "ይግባኝ ባዩ ወደ ቀድሞ ቦታው እንዲመለስ እና ለእግድ ጊዜ ሙሉ ደመወዝ እንዲከፈለው ትዕዛዝ እንዲሰጥ (አንቀጽ 81(3))። (To order the reinstatement of the Appellant to their former position and payment of full salary for the period of suspension (Art. 81(3)).)",
           "isDefault": false
         },
         {
-          "id": "expunge_record",
-          "text": "To order the expunging of the disciplinary measure from the Appellant's personal file. (የዲሲፕሊን እርምጃው ከይግባኝ ባዩ የግል ፋይል እንዲሰረዝ ትዕዛዝ እንዲሰጥ።)",
+          "id": "pub_serv_relief_expunge_record",
+          "text": "የዲሲፕሊን እርምጃው ከይግባኝ ባዩ የግል ፋይል እንዲሰረዝ ትዕዛዝ እንዲሰጥ። (To order the expunging of the disciplinary measure from the Appellant's personal file.)",
           "isDefault": false
         }
       ]
     },
     "civil_service_termination_unlawful": {
-      "documentTitle": "Appeal Against Administrative Termination (በአስተዳደራዊ ስንብት ላይ ይግባኝ)",
-      "partyTitles": {
-        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
-        "respondent": "Institution / Office (መስሪያ ቤት/መልס ሰጪ)"
+      "documentTitle": "በአስተዳደራዊ ስንብት ላይ ይግባኝ (Appeal Against Administrative Termination)",
+      "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017 (Federal Civil Servants Proclamation No. 1064/2017)",
+      "meta": {
+        "keywords": ["civil service", "administrative termination", "inefficiency", "redundancy", "illness", "የመንግስት ሰራተኛ", "ስንብት"],
+        "jurisdictionType": "Administrative Tribunal"
       },
-      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ በአፈጻጸም፣ በህመም ወይም በመዋቅር ለውጥ ምክንያት ከሥራ ሲሰናበት ውሳኔው ህገ-ወጥ ነው ብሎ ሲያምን ይግባኝ ለማቅረብ ያገለግላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nይግባኙ ውሳኔው ከደረሰበት ቀን ጀምሮ በ90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የመጨረሻ ውሳኔ፡** ተቋሙ የመጨረሻ የስንብት ውሳኔ መስጠቱን ማረጋገጥ።\n*   **ማስረጃ (Required Evidence):** የስንብት ደብዳቤ፣ የአፈጻጸም ግምገማ ውጤቶች፣ ወይም የህክምና ቦርድ መረጃ።",
+      "partyTitles": {
+        "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ (Civil Servant / Appellant)",
+        "respondent": "መስሪያ ቤት/መልስ ሰጪ (Institution / Office)"
+      },
       "facts": {
         "group_1": {
-          "title": "Grounds: Inefficiency (Performance) (ምክንያቶች፡ ብቃት ማነስ (አፈጻጸም))",
+          "title": "ምክንያቶች፡ ብቃት ማነስ (አፈጻጸም) (Grounds: Inefficiency (Performance))",
           "facets": [
             {
-              "id": "inefficiency_not_consecutive",
-              "legalText": "Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations. (ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁለት ተከታታይ \"የማያረካ\" ግምገማዎችን አላገኘም።)",
-              "citation": "Art. 84(1) of Proc. 1064/2017",
+              "id": "pub_serv_fact_inefficiency_not_consecutive",
+              "legalText": "ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁለት ተከታታይ \"የማያረካ\" ግምገማዎችን አላገኘም። (Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations.)",
+              "citation": "Proc. 1064/2017 Art. 84(1)",
               "evidence": [
                 "PerformanceReview"
               ]
             },
             {
-              "id": "inefficiency_no_training",
-              "legalText": "Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve. (ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ለማሻሻል አስፈላጊውን ሥልጠና እና ድጋፍ ስላልተሰጠው።)",
-              "citation": "Art. 84(1) of Proc. 1064/2017",
+              "id": "pub_serv_fact_inefficiency_no_training",
+              "legalText": "ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ለማሻሻል አስፈላጊውን ሥልጠና እና ድጋፍ ስላልተሰጠው። (Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve.)",
+              "citation": "Proc. 1064/2017 Art. 84(1)",
               "evidence": [
                 "PerformanceReview"
               ]
@@ -138,29 +151,29 @@
           ]
         },
         "group_2": {
-          "title": "Grounds: Illness / Medical (ምክንያቶች፡ ሕመም / ሕክምና)",
+          "title": "ምክንያቶች፡ ሕመም / ሕክምና (Grounds: Illness / Medical)",
           "facets": [
             {
-              "id": "illness_before_leave_exhausted",
-              "legalText": "Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay). (በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁሉንም ያለውን የሕመም ፈቃድ (8 ወር ሙሉ ደመወዝ፣ 4 ወር ግማሽ ደመወዝ) ከማብቃቱ በፊት የተከሰተ በመሆኑ ነው።)",
-              "citation": "Art. 83(1) of Proc. 1064/2017",
+              "id": "pub_serv_fact_illness_before_leave_exhausted",
+              "legalText": "በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁሉንም ያለውን የሕመም ፈቃድ (8 ወር ሙሉ ደመወዝ፣ 4 ወር ግማሽ ደመወዝ) ከማብቃቱ በፊት የተከሰተ በመሆኑ ነው። (Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay).)",
+              "citation": "Proc. 1064/2017 Art. 83(1)",
               "evidence": []
             },
             {
-              "id": "illness_no_medical_board",
-              "legalText": "Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability. (በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ቋሚ የአካል ጉዳትን ለማወጅ የሕክምና ቦርድ የምስክር ወረቀት ስላልቀረበ።)",
-              "citation": "Art. 83(2) of Proc. 1064/2017",
-              "evidence": []
+              "id": "pub_serv_fact_illness_no_medical_board",
+              "legalText": "በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ቋሚ የአካል ጉዳትን ለማወጅ የሕክምና ቦርድ የምስክር ወረቀት ስላልቀረበ። (Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability.)",
+              "citation": "Proc. 1064/2017 Art. 83(2)",
+              "evidence": ["MedicalBoardCertificate"]
             }
           ]
         },
         "group_3": {
-          "title": "Grounds: Force Majeure / Redundancy (ምክንያቶች፡ ከአቅም በላይ / ቅነሳ)",
+          "title": "ምክንያቶች፡ ከአቅም በላይ / ቅነሳ (Grounds: Force Majeure / Redundancy)",
           "facets": [
             {
-              "id": "redundancy_no_offer",
-              "legalText": "Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination. (በሥራ መደብ መጥፋት (ቅነሳ) ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ከስንብት በፊት ተመሳሳይ ክፍት የሥራ ቦታ ስላልተሰጠው።)",
-              "citation": "Art. 85(2) of Proc. 1064/2017",
+              "id": "pub_serv_fact_redundancy_no_offer",
+              "legalText": "በሥራ መደብ መጥፋት (ቅነሳ) ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ከስንብት በፊት ተመሳሳይ ክፍት የሥራ ቦታ ስላልተሰጠው። (Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination.)",
+              "citation": "Proc. 1064/2017 Art. 85(2)",
               "evidence": []
             }
           ]
@@ -168,32 +181,37 @@
       },
       "reliefs": [
         {
-          "id": "quash_termination",
-          "text": "To quash/annul the administrative decision of termination. (የስንብት አስተዳደራዊ ውሳኔን ለመሻር/ለማበላሸት።)",
+          "id": "pub_serv_relief_quash_termination",
+          "text": "የስንብት አስተዳደራዊ ውሳኔን እንዲሻር። (To quash/annul the administrative decision of termination.)",
           "isDefault": true
         },
         {
-          "id": "reinstate_civil_servant",
-          "text": "To order the reinstatement of the Appellant to their former position with full back pay. (ይግባኝ ባዩ ወደ ቀድሞ ቦታው ሙሉ የኋላ ክፍያ እንዲመለס ትዕዛዝ እንዲሰጥ።)",
+          "id": "pub_serv_relief_reinstate_civil_servant",
+          "text": "ይግባኝ ባዩ ወደ ቀድሞ ቦታው ሙሉ የኋላ ክፍያ እንዲመለስ ትዕዛዝ እንዲሰጥ። (To order the reinstatement of the Appellant to their former position with full back pay.)",
           "isDefault": true
         }
       ]
     },
     "civil_service_benefits_grievance": {
-      "documentTitle": "Appeal on Service Rights & Benefits (በአገልግሎት መብቶች እና ጥቅሞች ላይ ይግባኝ)",
-      "partyTitles": {
-        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
-        "respondent": "Institution / Office (መስሪያ ቤት/መልס ሰጪ)"
+      "documentTitle": "በአገልግሎት መብቶች እና ጥቅሞች ላይ ይግባኝ (Appeal on Service Rights & Benefits)",
+      "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017 (Federal Civil Servants Proclamation No. 1064/2017)",
+      "meta": {
+        "keywords": ["civil service", "benefits", "promotion", "salary", "grievance", "የመንግስት ሰራተኛ", "ጥቅማጥቅም", "ቅሬታ"],
+        "jurisdictionType": "Administrative Tribunal"
       },
-      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ ከደመወዝ፣ ከዕድገት፣ ወይም ከሌሎች ጥቅማጥቅሞች ጋር በተያያዘ የደረሰበትን በደል ለመቃወም ለአስተዳደር ፍርድ ቤት ይግባኝ ሲያቀርብ ይጠቅማል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበውስጥ ቅሬታ አቅራቢ ኮሚቴ ውሳኔ ቅር የተሰኘ ሰራተኛ፣ ውሳኔው ከደረሰው ቀን ጀምሮ በ90 ቀናት ውስጥ ይግባኝ ማቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የውስጥ መፍትሔዎችን ማሟጠጥ፡** ይግባኝ ከማቅረቡ በፊት ለተቋሙ የቅሬታ ሰሚ ኮሚቴ ቅሬታ አቅርቦ የመጨረሻ ውሳኔ ማግኘት ግዴታ ነው (አንቀጽ 81(1)(e))።\n*   **ማስረጃ (Required Evidence):** ለቅሬታ ሰሚ ኮሚቴ የቀረበው ማመልከቻ እና የተሰጠው ውሳኔ።",
+      "partyTitles": {
+        "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ (Civil Servant / Appellant)",
+        "respondent": "መስሪያ ቤት/መልስ ሰጪ (Institution / Office)"
+      },
       "facts": {
         "group_1": {
-          "title": "Exhaustion of Remedies (Mandatory) (የመፍትሔዎች ማሟጠጥ (ግዴታ))",
+          "title": "የውስጥ መፍትሔዎችን ማሟጠጥ (ግዴታ) (Exhaustion of Remedies (Mandatory))",
           "facets": [
             {
-              "id": "exhaustion_grievance_submitted",
-              "legalText": "A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time. (በ [ቀን] ለተቋሙ የቅሬታ አያያዝ ኮሚቴ ቅሬታ ቀርቧል، ነገር ግን ውሳኔው አጥጋቢ አልነበረም ወይም በጊዜ አልተሰጠም።)",
-              "citation": "Art. 81(1)(e) of Proc. 1064/2017",
+              "id": "pub_serv_fact_exhaustion_grievance_submitted",
+              "legalText": "በ [Date] ለተቋሙ የቅሬታ አያያዝ ኮሚቴ ቅሬታ ቀርቧል፣ ነገር ግን ውሳኔው አጥጋቢ አልነበረም ወይም በጊዜ አልተሰጠም። (A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.)",
+              "citation": "Proc. 1064/2017 Art. 81(1)(e)",
               "evidence": [
                 "GrievanceSubmission"
               ]
@@ -201,23 +219,23 @@
           ]
         },
         "group_2": {
-          "title": "The Grievance (ቅሬታው)",
+          "title": "ቅሬታው (The Grievance)",
           "facets": [
             {
-              "id": "promotion_denied",
-              "legalText": "The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle. (ይግባኝ ባዩ ከተመረጠው እጩ ከፍ ያለ ነጥብ ቢያስመዘግብም، የብቃት መርህን በመጣስ በሕገ-ወጥ መንገድ ዕድገት ተከልክሏል።)",
-              "citation": "Art. 13 of Proc. 1064/2017",
+              "id": "pub_serv_fact_promotion_denied",
+              "legalText": "ይግባኝ ባዩ ከተመረጠው እጩ ከፍ ያለ ነጥብ ቢያስመዘግብም፣ የብቃት መርህን በመጣስ በሕገ-ወጥ መንገድ ዕድገት ተከልክሏል። (The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.)",
+              "citation": "Proc. 1064/2017 Art. 13",
               "evidence": []
             },
             {
-              "id": "salary_increment_denied",
-              "legalText": "The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements. (ይግባኝ ባዩ ሁሉንም የአፈጻጸም መስፈርቶች ቢያሟላም በሕገ-ወጥ መንገድ ወቅታዊ የደመወዝ ጭማሪ ተከልክሏል።)",
-              "citation": "Art. 81(1)(c) of Proc. 1064/2017",
+              "id": "pub_serv_fact_salary_increment_denied",
+              "legalText": "ይግባኝ ባዩ ሁሉንም የአፈጻጸም መስፈርቶች ቢያሟላም በሕገ-ወጥ መንገድ ወቅታዊ የደመወዝ ጭማሪ ተከልክሏል። (The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.)",
+              "citation": "Proc. 1064/2017 Art. 81(1)(c)",
               "evidence": []
             },
             {
-              "id": "acting_allowance_denied",
-              "legalText": "The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period. (ይግባኝ ባዩ በከፍተኛ የሥራ መደብ በተጠባባቂነት አገልግሏል ነገር ግን ለዚያ ጊዜ በሕገ-ወጥ መንገድ የተጠባባቂ አበል ተከልክሏል።)",
+              "id": "pub_serv_fact_acting_allowance_denied",
+              "legalText": "ይግባኝ ባዩ በከፍተኛ የሥራ መደብ በተጠባባቂነት አገልግሏል ነገር ግን ለዚያ ጊዜ በሕገ-ወጥ መንገድ የተጠባባቂ አበል ተከልክሏል። (The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.)",
               "citation": "Relevant Regulations",
               "evidence": []
             }
@@ -226,21 +244,23 @@
       },
       "reliefs": [
         {
-          "id": "grant_promotion",
-          "text": "To order the Respondent Institution to grant the promotion due to the Appellant. (ተጠሪው ተቋም ለይግባኝ ባዩ የሚገባውን ዕድገት እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+          "id": "pub_serv_relief_grant_promotion",
+          "text": "ተጠሪው ተቋም ለይግባኝ ባዩ የሚገባውን ዕድገት እንዲሰጥ ትዕዛዝ እንዲሰጥ። (To order the Respondent Institution to grant the promotion due to the Appellant.)",
           "isDefault": false
         },
         {
-          "id": "grant_salary_increment",
-          "text": "To order the payment of the denied salary increment, with retroactive effect. (የተከለከለውን የደመወዝ ጭማሪ، ከኋላ ቀር ውጤት ጋር እንዲከፈል ትዕዛዝ እንዲሰጥ።)",
+          "id": "pub_serv_relief_grant_salary_increment",
+          "text": "የተከለከለውን የደመወዝ ጭማሪ፣ ከኋላ ቀር ውጤት ጋር እንዲከፈል ትዕዛዝ እንዲሰጥ። (To order the payment of the denied salary increment, with retroactive effect.)",
           "isDefault": false
         },
         {
-          "id": "refund_deductions",
-          "text": "To order the refund of any unlawfully deducted salary. (በሕገ-ወጥ መንገድ የተቀነሰ ማንኛውንም ደመወዝ እንዲመለስ ትዕዛዝ እንዲሰጥ።)",
+          "id": "pub_serv_relief_refund_deductions",
+          "text": "በሕገ-ወጥ መንገድ የተቀነሰ ማንኛውንም ደመወዝ እንዲመለስ ትዕዛዝ እንዲሰጥ። (To order the refund of any unlawfully deducted salary.)",
           "isDefault": false
         }
       ]
     }
   }
 }
+
+    

@@ -1,36 +1,50 @@
 {
   "templates": {
     "status_judicial_interdiction": {
-      "documentTitle": "Petition for Judicial Interdiction and Appointment of Curator",
-      "jurisdictionText": "Art. 339 of the Civil Code.",
+      "documentTitle": "የፍርድ እግድ እና የአስተዳዳሪ ሹመት አቤቱታ (Petition for Judicial Interdiction and Appointment of Curator)",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 339 (Art. 339 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "interdiction",
+          "incapacity",
+          "curator",
+          "guardian",
+          "የፍርድ እግድ",
+          "አስተዳዳሪ"
+        ],
+        "jurisdictionType": "Court of the person's domicile"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው በቋሚ የአእምሮ ሕመም ወይም በሌላ ምክንያት ጉዳዩን በራሱ መምራት በማይችልበት ጊዜ፣ በፍርድ ቤት ትዕዛዝ ከሕግ አንጻር ქმედუუნაროდ እንዲታወጅ እና ጉዳዩን የሚመራለት አስተዳዳሪ (Curator) እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው እግድ እንዲጣልበት የተጠየቀው ሰው በሚኖርበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም። ሰውየው ქმედუუნაროდ እስከሆነ ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የሕክምና ማስረጃ:** ግለሰቡ ጉዳዩን መምራት እንደማይችል የሚያረጋግጥ ከታወቀ የሕክምና ተቋም የተሰጠ የሕክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate) ማቅረብ ክሱን በእጅጉ ያጠናክራል።\n*   **ጥቅም ያለው ወገን፡** አመልካቹ የቅርብ ዘመድ፣ የትዳር አጋር ወይም ሌላ ሕጋዊ ጥቅም ያለው ወገን መሆን አለበት።",
       "partyTitles": {
-        "applicant": "Petitioner (Relative/Interested Party)",
-        "respondent": "Interdicted Person (Respondent)"
+        "applicant": "አቤቱታ አቅራቢ (ዘመድ/ጥቅም ያለው ወገን) (Petitioner (Relative/Interested Party))",
+        "respondent": "እግድ እንዲጣልበት የተጠየቀው ሰው (Interdicted Person (Respondent))"
       },
       "facts": {
         "group_1": {
-          "title": "Incapacity",
+          "title": "የችሎታ ማጣት (Incapacity)",
           "facets": [
             {
               "id": "fact_incapacity_medical",
-              "legalText": "The Respondent suffers from a permanent mental illness/disability rendering them unable to manage their own affairs.",
+              "legalText": "ተጠሪው ጉዳዩን በራሱ መምራት እንዳይችል የሚያደርግ ቋሚ የአእምሮ ሕመም/አካል ጉዳት አለበት። (The Respondent suffers from a permanent mental illness/disability rendering them unable to manage their own affairs.)",
               "citation": "Civ. Code Art. 339",
-              "evidence": ["MedicalBoardCertificate"]
+              "evidence": [
+                "MedicalBoardCertificate"
+              ]
             },
             {
               "id": "fact_risk_of_loss",
-              "legalText": "The Respondent's incapacity exposes their property/rights to imminent loss or dissipation.",
+              "legalText": "የተጠሪው የችሎታ ማጣት ንብረቱን/መብቶቹን ለፈጣን ኪሳራ ወይም ብክነት ያጋልጣል። (The Respondent's incapacity exposes their property/rights to imminent loss or dissipation.)",
               "citation": "",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Necessity",
+          "title": "አስፈላጊነት (Necessity)",
           "facets": [
             {
               "id": "fact_relationship_claim",
-              "legalText": "The Petitioner is a close relative of the Respondent and has a legal interest in protecting their affairs.",
+              "legalText": "አቤቱታ አቅራቢው የተጠሪው የቅርብ ዘመድ ሲሆን ጉዳዮቹን ለመጠበቅ ሕጋዊ ጥቅም አለው። (The Petitioner is a close relative of the Respondent and has a legal interest in protecting their affairs.)",
               "citation": "",
               "evidence": []
             }
@@ -40,48 +54,63 @@
       "reliefs": [
         {
           "id": "relief_declare_incapacity",
-          "text": "Judgment declaring the Respondent to be judicially interdicted.",
+          "text": "ተጠሪው በፍርድ ቤት የታገደ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ። (Judgment declaring the Respondent to be judicially interdicted.)",
           "isDefault": true
         },
         {
           "id": "relief_appoint_curator",
-          "text": "Order the appointment of the Petitioner (or another suitable person) as Curator to the Respondent.",
+          "text": "አቤቱታ አቅራቢውን (ወይም ሌላ ተስማሚ ሰው) ለተጠሪው አስተዳዳሪ አድርጎ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the appointment of the Petitioner (or another suitable person) as Curator to the Respondent.)",
           "citation": "Civ. Code Art. 343",
           "isDefault": true
         }
       ]
     },
     "status_correction_civil_record": {
-      "documentTitle": "Petition for Correction of Civil Record (Birth Date/Name)",
-      "jurisdictionText": "Art. 418 of the Civil Procedure Code (Non-Contentious Procedure).",
+      "documentTitle": "የሲቪል መዝገብ እንዲስተካከል አቤቱታ (የልደት ቀን/ስም) (Petition for Correction of Civil Record (Birth Date/Name))",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ቁጥር ፬፻፲፰ (ክርክር የሌለበት ሥነ ሥርዓት) (Art. 418 of the Civil Procedure Code (Non-Contentious Procedure)).",
+      "meta": {
+        "keywords": [
+          "correction",
+          "civil record",
+          "birth certificate",
+          "name change",
+          "VERA",
+          "የመዝገብ ማስተካከያ"
+        ],
+        "jurisdictionType": "First Instance Court"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ በሲቪል መዝገብ (ለምሳሌ የልደት የምስክር ወረቀት ወይም መታወቂያ) ላይ የተመዘገበ ስም፣ የልደት ቀን ወይም ሌላ መረጃ በስህተት ሲጻፍ፣ ፍርድ ቤቱ እንዲያስተካክለው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ስህተት ያለበት ሰነድ (BirthMarriageCertificateVERA, IdentityCard) እና ትክክለኛውን መረጃ የሚያረጋግጥ ሌላ ደጋፊ ሰነድ (ለምሳሌ የትምህርት ቤት ሰርተፍኬት)።\n*   **የአስተዳደር ጥያቄ፡** ፍርድ ቤት ከመሄድዎ በፊት ስህተቱን እንዲያስተካክል ለሚመለከተው አስተዳደራዊ አካል (ለምሳሌ ወሳኝ ኩነት ምዝገባ ኤጀንሲ) መጠየቅና እምቢታ ማግኘት ያስፈልጋል።",
       "partyTitles": {
-        "applicant": "Petitioner",
-        "respondent": "Concerned Public Body (e.g., VERA)"
+        "applicant": "አቤቱታ አቅራቢ (Petitioner)",
+        "respondent": "የሚመለከተው የመንግስት አካል (ለምሳሌ የወሳኝ ኩነት) (Concerned Public Body (e.g., VERA))"
       },
       "facts": {
         "group_1": {
-          "title": "The Error",
+          "title": "ስህተቱ (The Error)",
           "facets": [
             {
               "id": "fact_document_error",
-              "legalText": "The Petitioner's [Birth Certificate/ID] contains an error, stating the date of birth is [Incorrect Date] instead of [Correct Date].",
+              "legalText": "የአመልካቹ [Birth Certificate/ID] ስህተት የያዘ ሲሆን፣ የልደት ቀኑን [Incorrect Date] በማለት በስህተት ይገልጻል፤ ትክክለኛው ግን [Correct Date] ነው። (The Petitioner's [Birth Certificate/ID] contains an error, stating the date of birth is [Incorrect Date] instead of [Correct Date].)",
               "citation": "",
-              "evidence": ["BirthMarriageCertificateVERA", "IdentityCard"]
+              "evidence": [
+                "BirthMarriageCertificateVERA",
+                "IdentityCard"
+              ]
             },
             {
               "id": "fact_proof_of_correctness",
-              "legalText": "The correct information is proven by the attached [Secondary Document].",
+              "legalText": "ትክክለኛው መረጃ በተያያዘው [Secondary Document] ተረጋግጧል። (The correct information is proven by the attached [Secondary Document].)",
               "citation": "",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Procedural Prerequisite",
+          "title": "የሥነ-ሥርዓት ቅድመ ሁኔታ (Procedural Prerequisite)",
           "facets": [
             {
               "id": "fact_administrative_refusal",
-              "legalText": "The relevant administrative body has been requested to correct the error but has failed or refused to do so.",
+              "legalText": "የሚመለከተው አስተዳደራዊ አካል ስህተቱን እንዲያስተካክል ተጠይቆ ነበር ነገር ግን አልቻለም ወይም ፈቃደኛ አልሆነም። (The relevant administrative body has been requested to correct the error but has failed or refused to do so.)",
               "citation": "",
               "evidence": []
             }
@@ -91,44 +120,57 @@
       "reliefs": [
         {
           "id": "relief_order_correction",
-          "text": "Judgment ordering the Vital Events Registration Agency (VERA) to correct the record to state the Petitioner's name/date of birth as [Correct Information].",
+          "text": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (VERA) መዝገቡን አስተካክሎ የአመልካቹን ስም/የልደት ቀን [Correct Information] እንዲል የሚወስን ፍርድ እንዲሰጥ። (Judgment ordering the Vital Events Registration Agency (VERA) to correct the record to state the Petitioner's name/date of birth as [Correct Information].)",
           "isDefault": true
         }
       ]
     },
     "status_declaration_of_absence": {
-      "documentTitle": "Petition for Declaration of Absence and Administration of Property",
-      "jurisdictionText": "Art. 154 and 158 of the Civil Code.",
+      "documentTitle": "የመጥፋት መግለጫ እና የንብረት አስተዳደር አቤቱታ (Petition for Declaration of Absence and Administration of Property)",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 154 እና 158 (Art. 154 and 158 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "declaration of absence",
+          "missing person",
+          "estate administration",
+          "የመጥፋት መግለጫ",
+          "የጠፋ ሰው"
+        ],
+        "jurisdictionType": "Court of the person's last domicile"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው ለረጅም ጊዜ ሲጠፋና ወሬው ሳይሰማ ሲቀር፣ በፍርድ ቤት ውሳኔ እንደጠፋ እንዲቆጠር እና ንብረቱን የሚያስተዳድርለት ሰው እንዲሾም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው የጠፋው ሰው የመጨረሻ መኖሪያ በነበረበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\n*   **የመጥፋት መግለጫ:** ሰውየው ከጠፋና ወሬው ካልተሰማ ሁለት ዓመት ካለፈ በኋላ ሊጠየቅ ይችላል (አንቀጽ 154)።\n*   **የሞት ግምት:** ሰውየው ከጠፋ አምስት ዓመት ካለፈ በኋላ የሞት ግምት እንዲሰጥ ሊጠየቅ ይችላል (አንቀጽ 158)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የሕዝብ ማስታወቂያ፡** አቤቱታው ከመቅረቡ በፊት ስለጠፋው ሰው መረጃ የሚጠይቅ የጋዜጣ ማስታወቂያ ማውጣት ግዴታ ነው (አንቀጽ 159)።\n*   **ማስረጃ (Required Evidence):** የወጣው የጋዜጣ ማስታወቂያ (PublicNoticeOfAbsence)።",
       "partyTitles": {
-        "applicant": "Petitioner (Relative/Interested Party)",
-        "respondent": "The Absent Person (Named Respondent)"
+        "applicant": "አቤቱታ አቅራቢ (ዘመድ/ጥቅም ያለው ወገን) (Petitioner (Relative/Interested Party))",
+        "respondent": "የጠፋው ሰው (በስም ተጠሪ) (The Absent Person (Named Respondent))"
       },
       "facts": {
         "group_1": {
-          "title": "Fact of Absence",
+          "title": "የመጥፋት እውነታ (Fact of Absence)",
           "facets": [
             {
               "id": "fact_absence_duration",
-              "legalText": "The named person, [Name], has disappeared and not been heard from for more than five years.",
+              "legalText": "[Name] የተባለው ሰው ጠፍቶ ከአምስት ዓመታት በላይ ወሬው አልተሰማም። (The named person, [Name], has disappeared and not been heard from for more than five years.)",
               "citation": "Civ. Code Art. 158",
               "evidence": []
             },
             {
               "id": "fact_domicile_proof",
-              "legalText": "The person's last known domicile was [Address].",
+              "legalText": "የሰውየው የመጨረሻ የታወቀ መኖሪያ [Address] ነበር። (The person's last known domicile was [Address].)",
               "citation": "",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Publicity",
+          "title": "የህዝብ ይፋዊነት (Publicity)",
           "facets": [
             {
               "id": "fact_public_notice_given",
-              "legalText": "A public notice requesting information on the absent person was published in accordance with the law.",
+              "legalText": "በሕጉ መሠረት ስለጠፋው ሰው መረጃ የሚጠይቅ የሕዝብ ማስታወቂያ ታትሟል። (A public notice requesting information on the absent person was published in accordance with the law.)",
               "citation": "",
-              "evidence": ["PublicNoticeOfAbsence"]
+              "evidence": [
+                "PublicNoticeOfAbsence"
+              ]
             }
           ]
         }
@@ -136,36 +178,47 @@
       "reliefs": [
         {
           "id": "relief_declare_absence",
-          "text": "Judgment formally declaring the person to be absent.",
+          "text": "ሰውየው በይፋ እንደጠፋ የሚገልጽ ፍርድ እንዲሰጥ። (Judgment formally declaring the person to be absent.)",
           "isDefault": true
         },
         {
           "id": "relief_appoint_administrator",
-          "text": "Order the appointment of an administrator to provisionally manage the property of the absent person.",
+          "text": "የጠፋውን ሰው ንብረት በጊዜያዊነት የሚያስተዳድር አስተዳዳሪ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the appointment of an administrator to provisionally manage the property of the absent person.)",
           "isDefault": true
         }
       ]
     },
     "app_status_provisional_curator": {
-      "documentTitle": "Application for Appointment of Provisional Curator/Administrator",
-      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Injunction) & Civ. Code Art. 154/343.",
+      "documentTitle": "ጊዜያዊ አስተዳዳሪ/ጠባቂ እንዲሾምለት ማመልከቻ (Application for Appointment of Provisional Curator/Administrator)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (እግድ) እና የፍትሐ ብሔር ሕግ አንቀጽ 154/343 (Art. 154 CPC & Civ. Code Art. 154/343)",
+      "meta": {
+        "keywords": [
+          "provisional curator",
+          "temporary administrator",
+          "injunction",
+          "ጊዜያዊ አስተዳዳሪ",
+          "ጠባቂ"
+        ],
+        "jurisdictionType": "Court handling the main case"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ዋናው የእግድ ወይም የመጥፋት አቤቱታ በፍርድ ቤት እየታየ ባለበት ወቅት፣ የሚመለከተው ሰው ጉዳዩን መምራት ባለመቻሉ ንብረቱ ለአደጋ እንዳይጋለጥ ጊዜያዊ አስተዳዳሪ እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው አቤቱታ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት፡** የንብረቱ ለአደጋ መጋለጥ አስቸኳይ መሆኑን ማሳየት።",
       "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
       },
       "facts": {
         "group_1": {
-          "title": "Urgency",
+          "title": "አስቸኳይነት (Urgency)",
           "facets": [
             {
               "id": "fact_immediate_necessity",
-              "legalText": "Due to the immediate inability of the person to act, their property is at risk of misuse or loss.",
+              "legalText": "ሰውየው ወዲያውኑ እርምጃ መውሰድ ባለመቻሉ ንብረቱ ያለአግባብ ጥቅም ላይ ሊውል ወይም ሊጠፋ ይችላል። (Due to the immediate inability of the person to act, their property is at risk of misuse or loss.)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_petition_pending",
-              "legalText": "A main petition for Interdiction/Absence has been filed and is currently pending.",
+              "legalText": "ዋናው የእግድ/የመጥፋት አቤቱታ ቀርቦ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው። (A main petition for Interdiction/Absence has been filed and is currently pending.)",
               "citation": "",
               "evidence": []
             }
@@ -175,27 +228,40 @@
       "reliefs": [
         {
           "id": "relief_appoint_provisional",
-          "text": "Order the immediate, temporary appointment of a named person to act as Provisional Curator/Administrator.",
+          "text": "የተሰየመውን ሰው እንደ ጊዜያዊ አስተዳዳሪ/ጠባቂ ወዲያውኑ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the immediate, temporary appointment of a named person to act as Provisional Curator/Administrator.)",
           "isDefault": true
         }
       ]
     },
     "app_status_lift_interdiction": {
-      "documentTitle": "Petition for Termination of Judicial Interdiction",
-      "jurisdictionText": "Art. 358 of the Civil Code.",
+      "documentTitle": "የፍርድ እግድ እንዲነሳ አቤቱታ (Petition for Termination of Judicial Interdiction)",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 358 (Art. 358 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "lift interdiction",
+          "termination",
+          "regain capacity",
+          "የእግድ ማንሳት",
+          "ችሎታን መልሶ ማግኘት"
+        ],
+        "jurisdictionType": "Court that ordered the interdiction"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ቀደም ሲል በፍርድ ቤት ትዕዛዝ ქმედუუნაროდ የተባለ ሰው፣ የችግሩ መንስኤ ሲወገድ (ለምሳሌ ከህመም ሲያገግም)፣ እግዱ እንዲነሳለት እና ሙሉ ሕጋዊ ችሎታው እንዲመለስለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nእግዱን ያዘዘው ፍርድ ቤት ራሱ እግዱን የማንሳት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የእግዱ መንስኤ መወገዱን የሚያረጋግጥ የህክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate)።",
       "partyTitles": {
-        "applicant": "Petitioner",
-        "respondent": "Respondent"
+        "applicant": "አቤቱታ አቅራቢ (Petitioner)",
+        "respondent": "ተጠሪ (Respondent)"
       },
       "facts": {
         "group_1": {
-          "title": "Cessation of Cause",
+          "title": "የምክንያት መቋረጥ (Cessation of Cause)",
           "facets": [
             {
               "id": "fact_cause_ceased",
-              "legalText": "The medical/physical condition that necessitated the interdiction has ceased, and the interdicted person has regained capacity.",
+              "legalText": "እግዱን ያስከተለው የሕክምና/አካላዊ ሁኔታ ተወግዷል፣ እና የታገደው ሰው ችሎታውን መልሶ አግኝቷል። (The medical/physical condition that necessitated the interdiction has ceased, and the interdicted person has regained capacity.)",
               "citation": "Civ. Code Art. 358",
-              "evidence": ["MedicalBoardCertificate"]
+              "evidence": [
+                "MedicalBoardCertificate"
+              ]
             }
           ]
         }
@@ -203,7 +269,7 @@
       "reliefs": [
         {
           "id": "relief_terminate_interdiction",
-          "text": "Judgment terminating the judicial interdiction and restoring full legal capacity to the individual.",
+          "text": "የፍርድ እግዱን በማቋረጥ ለግለሰቡ ሙሉ ሕጋዊ ችሎታን የሚመልስ ፍርድ እንዲሰጥ። (Judgment terminating the judicial interdiction and restoring full legal capacity to the individual.)",
           "isDefault": true
         }
       ]

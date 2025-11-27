@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -74,7 +74,7 @@ export const DOCUMENT_ISSUERS = [
   "Federal Attorney General (የፌዴራል ጠቅላይ ዐቃቤ ሕግ)",
   
   // --- Vital Events, Civil Status & Documents ---
-  "Vital Events Registration Agency (የወሳኝ ኩነት ምዝገባ ኤጀንሲ)",
+  "Vital Events Registration Agency (VERA) (የወሳኝ ኩነት ምዝገባ ኤጀንሲ)",
   "Documents Authentication and Registration Service (DARA) (የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት)",
   "Immigration and Citizenship Service (የኢሚግሬሽን እና የዜግነት አገልግሎት)",
   
@@ -274,7 +274,7 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     id: 'employment_contract',
     label: 'Employment Contract (የቅጥር ውል)',
     type: 'Document',
-    credentialLabel: 'Contract Reference Number (የውል ቁጥር)',
+    credentialLabel: 'Contract Reference Number (የውל ቁጥር)',
     credentialPlaceholder: 'e.g., HR/CON/2022/056',
   },
   termination_letter: {
@@ -416,7 +416,42 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     type: 'Document',
     credentialLabel: 'Certificate Number',
     credentialPlaceholder: 'e.g., COH-2024-112233',
-  }
+  },
+  MedicalBoardCertificate: {
+    id: 'MedicalBoardCertificate',
+    label: 'Medical Board Certificate',
+    type: 'Document',
+    credentialLabel: 'Certificate Reference No.',
+    credentialPlaceholder: 'e.g., MED/CERT/2024/005',
+  },
+  IdentityCard: {
+    id: 'IdentityCard',
+    label: 'Identity Card (Kebele/National ID)',
+    type: 'Document',
+    credentialLabel: 'ID Number',
+    credentialPlaceholder: 'e.g., 1000123456789',
+  },
+  BirthMarriageCertificateVERA: {
+    id: 'BirthMarriageCertificateVERA',
+    label: 'Birth/Marriage Certificate (VERA)',
+    type: 'Document',
+    credentialLabel: 'Certificate Number',
+    credentialPlaceholder: 'e.g., VERA/BC/2024/999',
+  },
+  PublicNoticeOfAbsence: {
+    id: 'PublicNoticeOfAbsence',
+    label: 'Public Notice of Absence',
+    type: 'Document',
+    credentialLabel: 'Newspaper Name & Date',
+    credentialPlaceholder: 'e.g., Addis Zemen, 20/05/2024',
+  },
+  GenealogicalAffidavit: {
+    id: 'GenealogicalAffidavit',
+    label: 'Genealogical Affidavit',
+    type: 'Document',
+    credentialLabel: 'Reference Number',
+    credentialPlaceholder: 'e.g., AFF/GEN/2024/001',
+  },
 };
 
 export const TEMPLATES: Template[] = [
@@ -503,6 +538,18 @@ export const TEMPLATES: Template[] = [
         { id: 'ip_copyright_infringement', label: 'Copyright Infringement', icon: FileText },
         { id: 'app_ip_interlocutory_injunction', label: 'Interlocutory Injunction', icon: Shield },
         { id: 'app_ip_anton_piller', label: 'Seizure of Evidence Order', icon: ShieldAlert },
+    ]
+  },
+  {
+    id: 'status_law',
+    label: 'Law of Persons & Status',
+    icon: UserCheck,
+    subTemplates: [
+        { id: 'status_judicial_interdiction', label: 'Judicial Interdiction', icon: FileText },
+        { id: 'status_correction_civil_record', label: 'Correction of Civil Record', icon: FileSignature },
+        { id: 'status_declaration_of_absence', label: 'Declaration of Absence', icon: FileX2 },
+        { id: 'app_status_provisional_curator', label: 'Appoint Provisional Curator', icon: BookUser },
+        { id: 'app_status_lift_interdiction', label: 'Lift Interdiction', icon: Gavel },
     ]
   }
 ];
@@ -2092,6 +2139,157 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         text: "Order a court officer to enter the Respondent's premises to seize and preserve evidence relating to the infringement.",
         isDefault: true
       }
+    ]
+  },
+  status_judicial_interdiction: {
+    documentTitle: "Petition for Judicial Interdiction and Appointment of Curator",
+    jurisdictionText: "Art. 339 of the Civil Code.",
+    partyTitles: {
+      applicant: "Petitioner (Relative/Interested Party)",
+      respondent: "Interdicted Person (Respondent)"
+    },
+    facts: [
+      {
+        id: "fact_incapacity_medical",
+        label: "Incapacity",
+        legalText: "The Respondent suffers from a permanent mental illness/disability rendering them unable to manage their own affairs.",
+        citation: "Civ. Code Art. 339",
+        autoEvidence: ["MedicalBoardCertificate"]
+      },
+      {
+        id: "fact_risk_of_loss",
+        label: "Incapacity",
+        legalText: "The Respondent's incapacity exposes their property/rights to imminent loss or dissipation.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_relationship_claim",
+        label: "Necessity",
+        legalText: "The Petitioner is a close relative of the Respondent and has a legal interest in protecting their affairs.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      { id: "relief_declare_incapacity", text: "Judgment declaring the Respondent to be judicially interdicted.", isDefault: true },
+      { id: "relief_appoint_curator", text: "Order the appointment of the Petitioner (or another suitable person) as Curator to the Respondent.", citation: "Civ. Code Art. 343", isDefault: true }
+    ]
+  },
+  status_correction_civil_record: {
+    documentTitle: "Petition for Correction of Civil Record (Birth Date/Name)",
+    jurisdictionText: "Art. 418 of the Civil Procedure Code (Non-Contentious Procedure).",
+    partyTitles: {
+      applicant: "Petitioner",
+      respondent: "Concerned Public Body (e.g., VERA)"
+    },
+    facts: [
+      {
+        id: "fact_document_error",
+        label: "The Error",
+        legalText: "The Petitioner's [Birth Certificate/ID] contains an error, stating the date of birth is [Incorrect Date] instead of [Correct Date].",
+        citation: "",
+        autoEvidence: ["BirthMarriageCertificateVERA", "IdentityCard"]
+      },
+      {
+        id: "fact_proof_of_correctness",
+        label: "The Error",
+        legalText: "The correct information is proven by the attached [Secondary Document].",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_administrative_refusal",
+        label: "Procedural Prerequisite",
+        legalText: "The relevant administrative body has been requested to correct the error but has failed or refused to do so.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      { id: "relief_order_correction", text: "Judgment ordering the Vital Events Registration Agency (VERA) to correct the record to state the Petitioner's name/date of birth as [Correct Information].", isDefault: true }
+    ]
+  },
+  status_declaration_of_absence: {
+    documentTitle: "Petition for Declaration of Absence and Administration of Property",
+    jurisdictionText: "Art. 154 and 158 of the Civil Code.",
+    partyTitles: {
+      applicant: "Petitioner (Relative/Interested Party)",
+      respondent: "The Absent Person (Named Respondent)"
+    },
+    facts: [
+      {
+        id: "fact_absence_duration",
+        label: "Fact of Absence",
+        legalText: "The named person, [Name], has disappeared and not been heard from for more than five years.",
+        citation: "Civ. Code Art. 158",
+        autoEvidence: []
+      },
+      {
+        id: "fact_domicile_proof",
+        label: "Fact of Absence",
+        legalText: "The person's last known domicile was [Address].",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_public_notice_given",
+        label: "Publicity",
+        legalText: "A public notice requesting information on the absent person was published in accordance with the law.",
+        citation: "",
+        autoEvidence: ["PublicNoticeOfAbsence"]
+      }
+    ],
+    reliefs: [
+      { id: "relief_declare_absence", text: "Judgment formally declaring the person to be absent.", isDefault: true },
+      { id: "relief_appoint_administrator", text: "Order the appointment of an administrator to provisionally manage the property of the absent person.", isDefault: true }
+    ]
+  },
+  app_status_provisional_curator: {
+    documentTitle: "Application for Appointment of Provisional Curator/Administrator",
+    jurisdictionText: "Art. 154 of the Civil Procedure Code (Injunction) & Civ. Code Art. 154/343.",
+    partyTitles: {
+      applicant: "Applicant",
+      respondent: "Respondent"
+    },
+    facts: [
+      {
+        id: "fact_immediate_necessity",
+        label: "Urgency",
+        legalText: "Due to the immediate inability of the person to act, their property is at risk of misuse or loss.",
+        citation: "",
+        autoEvidence: []
+      },
+      {
+        id: "fact_petition_pending",
+        label: "Urgency",
+        legalText: "A main petition for Interdiction/Absence has been filed and is currently pending.",
+        citation: "",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      { id: "relief_appoint_provisional", text: "Order the immediate, temporary appointment of a named person to act as Provisional Curator/Administrator.", isDefault: true }
+    ]
+  },
+  app_status_lift_interdiction: {
+    documentTitle: "Petition for Termination of Judicial Interdiction",
+    jurisdictionText: "Art. 358 of the Civil Code.",
+    partyTitles: {
+      applicant: "Petitioner",
+      respondent: "Respondent"
+    },
+    facts: [
+      {
+        id: "fact_cause_ceased",
+        label: "Cessation of Cause",
+        legalText: "The medical/physical condition that necessitated the interdiction has ceased, and the interdicted person has regained capacity.",
+        citation: "Civ. Code Art. 358",
+        autoEvidence: ["MedicalBoardCertificate"]
+      }
+    ],
+    reliefs: [
+      { id: "relief_terminate_interdiction", text: "Judgment terminating the judicial interdiction and restoring full legal capacity to the individual.", isDefault: true }
     ]
   }
 };

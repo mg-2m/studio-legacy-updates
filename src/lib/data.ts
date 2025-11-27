@@ -521,6 +521,34 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     type: 'Document',
     credentialLabel: 'Document Description',
     credentialPlaceholder: 'e.g., May 2024 Salary Slip'
+  },
+  FinalAdminDecision: {
+    id: 'FinalAdminDecision',
+    label: 'Final Administrative Decision (የመጨረሻ የአስተዳደር ውሳኔ)',
+    type: 'Document',
+    credentialLabel: 'Decision Reference Number',
+    credentialPlaceholder: 'e.g., DEC-MIN-2024-00123'
+  },
+  DecisionNotificationProof: {
+    id: 'DecisionNotificationProof',
+    label: 'Proof of Decision Notification Date (ውሳኔው የደረሰበት ማስረጃ)',
+    type: 'Document',
+    credentialLabel: 'Describe how it was received (e.g., Date Stamp)',
+    credentialPlaceholder: 'e.g., Stamp dated 25/06/2024'
+  },
+  InternalRemedyExhaustion: {
+    id: 'InternalRemedyExhaustion',
+    label: 'Proof of Exhaustion of Internal Remedies (የውስጥ ቅሬታ መሟጠጥ ማስረጃ)',
+    type: 'Document',
+    credentialLabel: 'Internal Complaint Reference No.',
+    credentialPlaceholder: 'e.g., COMP-2024-05-001'
+  },
+  AgencyDirectiveCopy: {
+    id: 'AgencyDirectiveCopy',
+    label: 'Copy of the Challenged Directive (የሚጠየቀው መመሪያ ቅጂ)',
+    type: 'Document',
+    credentialLabel: 'Directive Number or Title',
+    credentialPlaceholder: 'e.g., Directive No. 55/2023'
   }
 };
 
@@ -641,6 +669,15 @@ export const TEMPLATES: Template[] = [
     subTemplates: [
       { id: 'tort_general_negligence_claim', label: 'General Negligence Claim', icon: FileText },
       { id: 'tort_strict_liability_buildings', label: 'Strict Liability (Buildings)', icon: Building2 },
+    ]
+  },
+  {
+    id: 'administrative_law',
+    label: 'Administrative Law',
+    icon: Landmark,
+    subTemplates: [
+      { id: 'admin_appeal_judicial_review', label: 'Judicial Review of Decision', icon: Gavel },
+      { id: 'admin_review_directive_legality', label: 'Judicial Review of Directive', icon: FileX2 },
     ]
   }
 ];
@@ -2575,7 +2612,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         label: "The Causal Event & Negligence",
         legalText: "The Defendant committed a negligent act or omission that violated the general duty of care (Art. 2028).",
         citation: "Civil Code Art. 2028",
-        autoEvidence: ["PoliceAccidentReport", "WitnessStatements"]
+        autoEvidence: ["PoliceAccidentReport", "witness_statements"]
       },
       {
         id: "fact_traffic_violation",
@@ -2589,7 +2626,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         label: "The Causal Event & Negligence",
         legalText: "The Defendant is liable for the act of a minor, apprentice, or employee under their supervision or control (Art. 2085 et seq.).",
         citation: "Civil Code Art. 2085",
-        autoEvidence: ["WitnessStatements", "PoliceAccidentReport"]
+        autoEvidence: ["witness_statements", "PoliceAccidentReport"]
       },
       {
         id: "fact_bodily_injury_damage",
@@ -2610,7 +2647,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         label: "The Damage Sustained",
         legalText: "The Plaintiff suffered moral damage, including pain and suffering, emotional distress, and loss of amenity.",
         citation: "Civil Code Art. 2036",
-        autoEvidence: ["DoctorAssessment", "WitnessStatements"]
+        autoEvidence: ["DoctorAssessment", "witness_statements"]
       },
       {
         id: "fact_direct_causation",
@@ -2670,7 +2707,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         label: "Basis for Strict Liability",
         legalText: "The damage was caused by the total or partial ruin of the building, which was due to lack of repair or a defect in construction.",
         citation: "Civil Code Art. 2068",
-        autoEvidence: ["WitnessStatements", "PropertyValuationReport"]
+        autoEvidence: ["witness_statements", "PropertyValuationReport"]
       },
       {
         id: "fact_bodily_injury_building",
@@ -2697,6 +2734,132 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         id: "relief_building_medical_expenses",
         text: "To order the Defendant to pay all costs incurred for bodily injury and treatment, in the amount of Birr [AMOUNT].",
         isDefault: true
+      }
+    ]
+  },
+  admin_appeal_judicial_review: {
+    documentTitle: "Petition for Judicial Review of Administrative Decision (የአስተዳደር ውሳኔ በፍርድ ቤት እንዲታይ አቤቱታ)",
+    jurisdictionText: "Federal Administrative Procedure Proclamation No. 1183/2020, Art. 51 (የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር ፩ሺ፩፻፹፫/፪ሺ፲፪፣ አንቀጽ ፶፩).",
+    partyTitles: {
+      applicant: "Petitioner / Appellant (አቤቱታ አቅራቢ/ይግባኝ ባይ)",
+      respondent: "Respondent Agency (መልስ ሰጪ ተቋም)"
+    },
+    facts: [
+      {
+        id: "fact_final_decision_issued",
+        label: "Jurisdictional Prerequisites (የዳኝነት ቅድመ ሁኔታዎች)",
+        legalText: "The Respondent Agency issued a final, binding administrative decision affecting the rights or interests of the Petitioner on [Date]. (መልስ ሰጪው ተቋም የመጨረሻ የአስተዳደር ውሳኔ አሳልፏል።)",
+        citation: "Proc. 1183/2020 Art. 48(1)",
+        autoEvidence: ["FinalAdminDecision"]
+      },
+      {
+        id: "fact_exhausted_remedies",
+        label: "Jurisdictional Prerequisites (የዳኝነት ቅድመ ሁኔታዎች)",
+        legalText: "The Petitioner has exhausted all available administrative remedies within the Agency, or the Agency failed to render a decision on the complaint within the legal timeframe. (አቤቱታ አቅራቢው በ ተቋሙ ያለውን የውስጥ ቅሬታ የመፍቻ መንገድ ተጠቅሟል ወይም ተቋሙ በጊዜ ውሳኔ መስጠት አልቻለም።)",
+        citation: "Proc. 1183/2020 Art. 48(2)",
+        autoEvidence: ["InternalRemedyExhaustion"]
+      },
+      {
+        id: "fact_petition_is_timely",
+        label: "Jurisdictional Prerequisites (የዳኝነት ቅድመ ሁኔታዎች)",
+        legalText: "This petition is filed within the thirty (30) day period prescribed from the date of notification of the decision. (ይህ አቤቱታ ውሳኔው ከደረሰበት ቀን አንስቶ በሰላሳ (፴) ቀን ውስጥ የቀረበ ነው።)",
+        citation: "Proc. 1183/2020 Art. 51(1)",
+        autoEvidence: ["DecisionNotificationProof"]
+      },
+      {
+        id: "fact_procedural_violation_hearing",
+        label: "Grounds for Annulment (የውሳኔው መሻር ምክንያቶች)",
+        legalText: "The decision was made without affording the Petitioner an adequate opportunity for a proper hearing (Art. 34) or without considering relevant evidence. (ውሳኔው አቤቱታ አቅራቢው በአግባቡ ሳይሰማ ቀርቷል (አንቀጽ ፴፬) ወይም አግባብነት ያላቸው ማስረጃዎች ሳይታዩ ቀርቷል።)",
+        citation: "Proc. 1183/2020 Art. 34",
+        autoEvidence: []
+      },
+      {
+        id: "fact_substantive_error_of_law",
+        label: "Grounds for Annulment (የውሳኔው መሻር ምክንያቶች)",
+        legalText: "The decision is based on a fundamental error of law, misinterpreting or misapplying the governing Proclamation, Regulation, or Directive. (ውሳኔው ህጉን በመሳት፣ ወይም አዋጁን፣ ደንቡን ወይም መመሪያውን በተሳሳተ መንገድ በመተርጎም የተሰጠ ነው።)",
+        citation: "Proc. 1183/2020 Art. 52(1)(a)",
+        autoEvidence: ["FinalAdminDecision"]
+      },
+      {
+        id: "fact_failure_to_state_reason",
+        label: "Grounds for Annulment (የውሳኔው መሻር ምክንያቶች)",
+        legalText: "The Agency failed to provide an adequate and reasoned decision, thus violating the Petitioner's right to a reasoned decision (Art. 37). (ተቋሙ አቤቱታ አቅራቢው ምክንያት ያለው ውሳኔ የማግኘት መብቱን በመጣስ በቂ እና ምክንያት ያለበት ውሳኔ መስጠት ተስኖታል።)",
+        citation: "Proc. 1183/2020 Art. 37",
+        autoEvidence: ["FinalAdminDecision"]
+      },
+      {
+        id: "fact_abuse_of_discretion",
+        label: "Grounds for Annulment (የውሳኔው መሻር ምክንያቶች)",
+        legalText: "The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39). (ተቋሙ ሕጋዊ ሥልጣኑን ያለአግባብ በመጠቀም፣ ወይም ለተገቢ ላልሆነ ዓላማ ውሳኔ በመስጠት የሕግ አቅሙን አላግባብ ተጠቅሟል።)",
+        citation: "Proc. 1183/2020 Art. 39",
+        autoEvidence: ["FinalAdminDecision"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_quash_decision",
+        text: "To quash and annul the decision of the Respondent Agency. (የመልስ ሰጪውን ተቋም ውሳኔ ሙሉ በሙሉ እንዲሻር።)",
+        isDefault: true
+      },
+      {
+        id: "relief_remand_for_revision",
+        text: "To order the Administrative Agency to revise or reconsider its decision by rectifying the shortcomings identified by the Court. (ፍርድ ቤቱ ባገኘው ክፍተት መሰረት ተቋሙ ውሳኔውን እንዲያስተካክል ወይም እንደገና እንዲያየው እንዲታዘዝ።)",
+        isDefault: true
+      },
+      {
+        id: "relief_damages_fault",
+        text: "To order the Respondent Agency to pay compensation for damages incurred as a result of the fault committed through the administrative decision (Art. 54). (በአስተዳደራዊ ውሳኔው በደረሰው ስህተት ምክንያት ለደረሰበት ጉዳት ካሳ እንዲከፍለው።)",
+        isDefault: false
+      }
+    ]
+  },
+  admin_review_directive_legality: {
+    documentTitle: "Petition for Judicial Review of Legality of a Directive (የአስተዳደር መመሪያ ሕጋዊነት በፍርድ ቤት እንዲታይ አቤቱታ)",
+    jurisdictionText: "Federal Administrative Procedure Proclamation No. 1183/2020, Art. 49 (የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር ፩ሺ፩፻፹፫/፪ሺ፲፪፣ አንቀጽ ፵፱).",
+    partyTitles: {
+      applicant: "Petitioner (አቤቱታ አቅራቢ)",
+      respondent: "Respondent Agency (መልስ ሰጪ ተቋም)"
+    },
+    facts: [
+      {
+        id: "fact_directive_unlawful_delegation",
+        label: "Directive Authority and Compliance (የመመሪያ ስልጣን እና ተገዢነት)",
+        legalText: "The Directive was issued without proper delegation of power by law, or it exceeds the scope of the delegating Proclamation. (መመሪያው በሕግ ተገቢው ስልጣን ሳይሰጥ የተሰጠ ነው፣ ወይም ከአዋጁ ወሰን በላይ አልፏል።)",
+        citation: "Proc. 1183/2020 Art. 49(2)(a)",
+        autoEvidence: ["AgencyDirectiveCopy"]
+      },
+      {
+        id: "fact_directive_violates_constitution",
+        label: "Directive Authority and Compliance (የመመሪያ ስልጣን እና ተገዢነት)",
+        legalText: "The Directive violates the Constitution or other superior law. (መመሪያው ሕገ-መንግስትን ወይም ሌላ የላቀ ህግን ይጥሳል።)",
+        citation: "Proc. 1183/2020 Art. 49(2)(a)",
+        autoEvidence: ["AgencyDirectiveCopy"]
+      },
+      {
+        id: "fact_directive_procedural_flaw",
+        label: "Directive Authority and Compliance (የመመሪያ ስልጣን እና ተገዢነት)",
+        legalText: "The Directive was adopted without following the mandatory procedure (e.g., public notice, soliciting comments, or FAG consultation) required by law (Arts. 7-12). (መመሪያው ሲወጣ በህግ የተደነገገው የግዴታ ሂደት (ለምሳሌ የህዝብ አስተያየት መጠየቅ ወይም ጠቅላይ ዓቃቤ ህግን ማማከር) ሳይከተል ቀርቷൽ (አንቀጽ ፯-፲፪)።)",
+        citation: "Proc. 1183/2020 Art. 7-12",
+        autoEvidence: ["AgencyDirectiveCopy"]
+      },
+      {
+        id: "fact_directive_affects_rights",
+        label: "Injury to Interest (ጥቅም መጎዳት)",
+        legalText: "The Directive directly affects the Petitioner's rights or interests. (መመሪያው የአቤቱታ አቅራቢውን መብት ወይም ጥቅም በቀጥታ ይነካል።)",
+        citation: "Proc. 1183/2020 Art. 48(1)",
+        autoEvidence: ["AgencyDirectiveCopy"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_invalidate_directive",
+        text: "To invalidate the Directive in whole or in part. (መመሪያው ሙሉ በሙሉ ወይም በከፊል ውድቅ እንዲደረግለት።)",
+        isDefault: true
+      },
+      {
+        id: "relief_order_compliance",
+        text: "To order the Agency to rectify the procedural flaw and readopt the Directive in compliance with the law. (ተቋሙ የሥነ-ሥርዓት ጉድለቱን እንዲያስተካክል እና መመሪያውን በሕጉ መሠረት ዳግም እንዲያወጣ ትዕዛዝ እንዲሰጥ።)",
+        isDefault: false
       }
     ]
   }
@@ -2737,3 +2900,4 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+

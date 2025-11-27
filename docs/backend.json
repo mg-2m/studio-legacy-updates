@@ -180,9 +180,7 @@
     },
     "MedicalBoardCertificate": {
       "title": "Medical Board Certificate",
-      "description": "Evidence regarding paternity (DNA) or medical incapacity of a spouse.",
-      "type": "object",
-      "properties": {}
+      "description": "Evidence regarding paternity (DNA) or medical incapacity of a spouse."
     },
     "WitnessStatements": {
       "title": "Witness Statements",
@@ -273,6 +271,22 @@
     "TechnicalExpertReport": {
       "title": "Technical Expert Report",
       "description": "Report comparing the registered patent claims to the alleged infringing product."
+    },
+    "IdentityCard": {
+      "title": "Identity Card (Kebele/National ID)",
+      "description": "The primary document reflecting the current (incorrect) status information."
+    },
+    "BirthMarriageCertificateVERA": {
+      "title": "Birth/Marriage Certificate (VERA)",
+      "description": "Official civil status document requiring correction."
+    },
+    "PublicNoticeOfAbsence": {
+      "title": "Public Notice of Absence",
+      "description": "Proof that the petition for absence was published in a newspaper (Civ. Code Art. 159)."
+    },
+    "GenealogicalAffidavit": {
+      "title": "Genealogical Affidavit",
+      "description": "Document proving the relationship to the deceased (required for Heirship Certification)."
     }
   },
   "templates": {
@@ -2260,6 +2274,207 @@
         {
           "id": "relief_seize_evidence",
           "text": "Order a court officer to enter the Respondent's premises to seize and preserve evidence relating to the infringement."
+        }
+      ]
+    },
+    "status_judicial_interdiction": {
+      "documentTitle": "Petition for Judicial Interdiction and Appointment of Curator",
+      "jurisdictionText": "Art. 339 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Petitioner (Relative/Interested Party)",
+        "respondent": "Interdicted Person (Respondent)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Incapacity",
+          "facets": [
+            {
+              "id": "fact_incapacity_medical",
+              "legalText": "The Respondent suffers from a permanent mental illness/disability rendering them unable to manage their own affairs.",
+              "citation": "Civ. Code Art. 339",
+              "evidence": ["MedicalBoardCertificate"]
+            },
+            {
+              "id": "fact_risk_of_loss",
+              "legalText": "The Respondent's incapacity exposes their property/rights to imminent loss or dissipation.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Necessity",
+          "facets": [
+            {
+              "id": "fact_relationship_claim",
+              "legalText": "The Petitioner is a close relative of the Respondent and has a legal interest in protecting their affairs.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_declare_incapacity",
+          "text": "Judgment declaring the Respondent to be judicially interdicted."
+        },
+        {
+          "id": "relief_appoint_curator",
+          "text": "Order the appointment of the Petitioner (or another suitable person) as Curator to the Respondent.",
+          "citation": "Civ. Code Art. 343"
+        }
+      ]
+    },
+    "status_correction_civil_record": {
+      "documentTitle": "Petition for Correction of Civil Record (Birth Date/Name)",
+      "jurisdictionText": "Art. 418 of the Civil Procedure Code (Non-Contentious Procedure).",
+      "partyTitles": {
+        "applicant": "Petitioner",
+        "respondent": "Concerned Public Body (e.g., VERA)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "The Error",
+          "facets": [
+            {
+              "id": "fact_document_error",
+              "legalText": "The Petitioner's [Birth Certificate/ID] contains an error, stating the date of birth is [Incorrect Date] instead of [Correct Date].",
+              "citation": "",
+              "evidence": ["BirthMarriageCertificateVERA", "IdentityCard"]
+            },
+            {
+              "id": "fact_proof_of_correctness",
+              "legalText": "The correct information is proven by the attached [Secondary Document].",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Prerequisite",
+          "facets": [
+            {
+              "id": "fact_administrative_refusal",
+              "legalText": "The relevant administrative body has been requested to correct the error but has failed or refused to do so.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_order_correction",
+          "text": "Judgment ordering the Vital Events Registration Agency (VERA) to correct the record to state the Petitioner's name/date of birth as [Correct Information]."
+        }
+      ]
+    },
+    "status_declaration_of_absence": {
+      "documentTitle": "Petition for Declaration of Absence and Administration of Property",
+      "jurisdictionText": "Art. 154 and 158 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Petitioner (Relative/Interested Party)",
+        "respondent": "The Absent Person (Named Respondent)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Fact of Absence",
+          "facets": [
+            {
+              "id": "fact_absence_duration",
+              "legalText": "The named person, [Name], has disappeared and not been heard from for more than five years.",
+              "citation": "Civ. Code Art. 158",
+              "evidence": []
+            },
+            {
+              "id": "fact_domicile_proof",
+              "legalText": "The person's last known domicile was [Address].",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Publicity",
+          "facets": [
+            {
+              "id": "fact_public_notice_given",
+              "legalText": "A public notice requesting information on the absent person was published in accordance with the law.",
+              "citation": "",
+              "evidence": ["PublicNoticeOfAbsence"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_declare_absence",
+          "text": "Judgment formally declaring the person to be absent."
+        },
+        {
+          "id": "relief_appoint_administrator",
+          "text": "Order the appointment of an administrator to provisionally manage the property of the absent person."
+        }
+      ]
+    },
+    "app_status_provisional_curator": {
+      "documentTitle": "Application for Appointment of Provisional Curator/Administrator",
+      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Injunction) & Civ. Code Art. 154/343.",
+      "partyTitles": {
+        "applicant": "Applicant",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Urgency",
+          "facets": [
+            {
+              "id": "fact_immediate_necessity",
+              "legalText": "Due to the immediate inability of the person to act, their property is at risk of misuse or loss.",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_petition_pending",
+              "legalText": "A main petition for Interdiction/Absence has been filed and is currently pending.",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_appoint_provisional",
+          "text": "Order the immediate, temporary appointment of a named person to act as Provisional Curator/Administrator."
+        }
+      ]
+    },
+    "app_status_lift_interdiction": {
+      "documentTitle": "Petition for Termination of Judicial Interdiction",
+      "jurisdictionText": "Art. 358 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Petitioner",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Cessation of Cause",
+          "facets": [
+            {
+              "id": "fact_cause_ceased",
+              "legalText": "The medical/physical condition that necessitated the interdiction has ceased, and the interdicted person has regained capacity.",
+              "citation": "Civ. Code Art. 358",
+              "evidence": ["MedicalBoardCertificate"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_terminate_interdiction",
+          "text": "Judgment terminating the judicial interdiction and restoring full legal capacity to the individual."
         }
       ]
     }

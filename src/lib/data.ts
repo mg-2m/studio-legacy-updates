@@ -349,14 +349,22 @@ export const TEMPLATES: Template[] = [
 
 
 // This function processes facts from the old structure to the new one.
-const processFacts = (facts: { [key: string]: { title: string; facets: any[] } }): Fact[] => {
+const processFacts = (facts: any): Fact[] => {
     if (!facts) return [];
-    return Object.values(facts).flatMap(group => 
-        group.facets.map(facet => ({
-            ...facet,
-            label: group.title // Use the group title as the label for grouping in the UI
-        }))
-    );
+    // Check if facts is already a flat array (new structure)
+    if (Array.isArray(facts)) {
+        return facts as Fact[];
+    }
+    // Process the old nested structure
+    if (typeof facts === 'object' && !Array.isArray(facts)) {
+         return Object.values(facts).flatMap((group: any) => 
+            group.facets.map((facet: any) => ({
+                ...facet,
+                label: group.title // Use the group title as the label for grouping in the UI
+            }))
+        );
+    }
+    return [];
 };
 
 export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(allTemplates).reduce((acc, [key, value] : [string, any]) => {
@@ -419,3 +427,5 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
+    

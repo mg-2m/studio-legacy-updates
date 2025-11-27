@@ -1,700 +1,67 @@
 {
-  "entities": {
-    "WrittenContract": {
-      "title": "Written Contract",
-      "description": "The primary agreement signed by both parties. Essential for contracts involving immovable property or administrative bodies."
-    },
-    "NoticeofDefault": {
-      "title": "Notice of Default (Warning Letter)",
-      "description": "A registered letter or legal notice sent to the defaulting party demanding performance, essential for claiming damages."
-    },
-    "PaymentReceipt": {
-      "title": "Payment Receipt / Bank Advice",
-      "description": "Documentary proof of money transferred (loan disbursement) or payments made (performance)."
-    },
-    "DeliveryNote": {
-      "title": "Delivery Note (Model 19/22)",
-      "description": "Proof that goods were actually delivered to and received by the buyer."
-    },
-    "AdmissionofDebt": {
-      "title": "Admission of Debt",
-      "description": "A specific written document where the debtor acknowledges the sum owed."
-    },
-    "AuditReport": {
-      "title": "Audit Report",
-      "description": "A financial report detailing outstanding balances, often required in complex B2B disputes."
-    },
-    "TitleDeed": {
-      "title": "Title Deed (Librec/Carta)",
-      "description": "The primary certificate of holding rights/ownership for urban houses and land."
-    },
-    "SitePlan": {
-      "title": "Site Plan",
-      "description": "Official technical map showing the coordinates, boundaries, and area of the plot."
-    },
-    "LeaseAgreement": {
-      "title": "Lease Agreement",
-      "description": "Contract between the citizen and the City Administration defining the lease period and rights."
-    },
-    "ConstructionPermit": {
-      "title": "Construction Permit",
-      "description": "Official authorization to build, proving legality of the structure."
-    },
-    "TaxLandRentReceipts": {
-      "title": "Tax/Land Rent Receipts",
-      "description": "Proof of continuous payment of obligations, used to evidence continuous possession."
-    },
-    "SurveyorsReport": {
-      "title": "Surveyor's Report",
-      "description": "Technical report verifying boundary encroachments."
-    },
-    "KebeleConfirmation": {
-      "title": "Kebele Confirmation",
-      "description": "Letter from the local administration confirming who lives in/occupies the property."
-    },
-    "WitnessAffidavitsNuisance": {
-      "title": "Witness Affidavits (Nuisance)",
-      "description": "Sworn statements detailing the time, duration, and severity of the disturbance (e.g., noise, smell, vibration)."
-    },
-    "PhotosVideoEvidence": {
-      "title": "Photos/Video Evidence",
-      "description": "Visual proof of the nuisance source (e.g., pollution, excessive height of a structure)."
-    },
-    "PriorAgreementServitude": {
-      "title": "Prior Agreement (Servitude)",
-      "description": "If the servitude was created by contract, the written agreement is required."
-    },
-    "EmploymentContract": {
-      "title": "Employment Contract",
-      "description": "A contract of employment.",
-      "type": "object",
-      "properties": {}
-    },
-    "TerminationLetter": {
-      "title": "Termination Letter",
-      "description": "A letter terminating employment.",
-      "type": "object",
-      "properties": {}
-    },
-    "PayrollSlip": {
-      "title": "Payroll Slip",
-      "description": "A document detailing an employee's salary.",
-      "type": "object",
-      "properties": {}
-    },
-    "DisciplinaryRecord": {
-      "title": "Disciplinary Record",
-      "description": "An employee's disciplinary record.",
-      "type": "object",
-      "properties": {}
-    },
-    "AttendanceSheet": {
-      "title": "Attendance Sheet",
-      "description": "An employee's attendance sheet.",
-      "type": "object",
-      "properties": {}
-    },
-    "AccidentReport": {
-      "title": "Accident Report",
-      "description": "A report of an accident.",
-      "type": "object",
-      "properties": {}
-    },
-    "MedicalBill": {
-      "title": "Medical Bill",
-      "description": "A bill for medical expenses.",
-      "type": "object",
-      "properties": {}
-    },
-    "DismissalLetter": {
-      "title": "Dismissal Letter",
-      "description": "A letter of dismissal from service.",
-      "type": "object",
-      "properties": {}
-    },
-    "GrievanceSubmission": {
-      "title": "Grievance Submission",
-      "description": "A document proving a grievance was submitted.",
-      "type": "object",
-      "properties": {}
-    },
-    "PerformanceReview": {
-      "title": "Performance Review",
-      "description": "An employee's performance review.",
-      "type": "object",
-      "properties": {}
-    },
-    "WarningLetter": {
-      "title": "Warning Letter",
-      "description": "A warning letter issued to an employee.",
-      "type": "object",
-      "properties": {}
-    },
-    "UnpaidWageWitness": {
-      "title": "Unpaid Wage Witness",
-      "description": "A witness for unpaid wages.",
-      "type": "object",
-      "properties": {}
-    },
-    "CertificateofMarriage": {
-      "title": "Certificate of Marriage",
-      "description": "Official certificate issued by VERA or religious/customary authority proving the existence of the marriage.",
-      "type": "object",
-      "properties": {}
-    },
-    "BirthCertificate": {
-      "title": "Birth Certificate(s)",
-      "description": "Official birth records for all children involved in the dispute, proving age and parentage.",
-      "type": "object",
-      "properties": {}
-    },
-    "ProofofIncome": {
-      "title": "Proof of Income",
-      "description": "Pay slips, bank statements, or tax records used to calculate maintenance (alimony) capabilities.",
-      "type": "object",
-      "properties": {}
-    },
-    "FamilyArbitratorsReport": {
-      "title": "Family Arbitrators' Report",
-      "description": "(If applicable) A record of the attempt at reconciliation by family elders/arbitrators, often required before formal litigation.",
-      "type": "object",
-      "properties": {}
-    },
-    "ListofCommonProperty": {
-      "title": "List of Common Property",
-      "description": "An inventory document detailing assets acquired during the marriage (movable and immovable).",
-      "type": "object",
-      "properties": {}
-    },
-    "PoliceReportDomesticViolence": {
-      "title": "Police Report (Domestic Violence)",
-      "description": "Official record of physical or emotional abuse, used as grounds for immediate dissolution or restraining orders.",
-      "type": "object",
-      "properties": {}
-    },
-    "SchoolFeeReceipts": {
-      "title": "School Fee Receipts",
-      "description": "Documentary proof of educational expenses for children, used to quantify maintenance claims.",
-      "type": "object",
-      "properties": {}
-    },
-    "MedicalBoardCertificate": {
-      "title": "Medical Board Certificate",
-      "description": "Evidence regarding paternity (DNA) or medical incapacity of a spouse.",
-      "type": "object",
-      "properties": {}
-    },
-    "WitnessStatements": {
-      "title": "Witness Statements",
-      "description": "Affidavits from witnesses.",
-      "type": "object",
-      "properties": {}
-    },
-    "CopyofDivorceJudgment": {
-      "title": "Copy of Divorce Judgment",
-      "description": "The prior court ruling confirming the marriage is dissolved.",
-      "type": "object",
-      "properties": {}
-    },
-    "ProofofInheritanceDonation": {
-      "title": "Proof of Inheritance/Donation",
-      "description": "Documents proving property was acquired via inheritance or donation.",
-      "type": "object",
-      "properties": {}
-    },
-    "Pre-maritalOwnershipDocuments": {
-      "title": "Pre-marital Ownership Documents",
-      "description": "Documents proving ownership of property before marriage.",
-      "type": "object",
-      "properties": {}
-    },
-    "JudgmentofDivorce": {
-      "title": "Judgment of Divorce",
-      "description": "The prior court ruling confirming the marriage is dissolved and allowing the property phase to commence.",
-      "type": "object",
-      "properties": {}
-    },
-    "PropertyValuationReport": {
-      "title": "Property Valuation Report",
-      "description": "(Optional/Later Stage) A report by a certified engineer or auditor estimating the value of the assets.",
-      "type": "object",
-      "properties": {}
-    },
-    "TitleDeedsLibrec": {
-      "title": "Title Deeds / Librec",
-      "description": "Official ownership certificates for immovable property (houses, land).",
-      "type": "object",
-      "properties": {}
-    },
-    "DeathCertificate": {
-      "title": "Death Certificate",
-      "description": "Official certificate from VERA or municipality confirming the date and place of death."
-    },
-    "WillTestament": {
-      "title": "Will (Testament)",
-      "description": "A Public, Holographic, or Oral will documenting the deceased's wishes."
-    },
-    "KebeleFamilyID": {
-      "title": "Kebele ID / Family Certificate",
-      "description": "Official document proving the relationship between the claimant and the deceased (e.g., listing children)."
-    },
-    "InventoryofEstate": {
-      "title": "Inventory of Estate",
-      "description": "A detailed list of assets (houses, cars, bank accounts) left by the deceased."
-    },
-    "WitnessAffidavitsSuccession": {
-      "title": "Witness Affidavits (Succession)",
-      "description": "Sworn statements by individuals (usually 3) confirming who the rightful heirs are."
-    },
-    "CertificateofLiquidation": {
-      "title": "Certificate of Liquidation",
-      "description": "Document showing debts have been paid (required before final partition)."
-    }
+  "meta": {
+    "branchName": "የንብረት እና የመሬት ሕግ (Property & Land Law)",
+    "branchDescription": "Claims related to ownership, possession, boundaries, and use of immovable property.",
+    "icon": "Home",
+    "version": "1.0"
   },
-  "templates": {
-    "property_petitory_vindication": {
-      "documentTitle": "Statement of Claim for Vindication of Property (Petitory Action)",
-      "jurisdictionText": "Art. 1206 of the Civil Code.",
+  "templates": [
+    {
+      "id": "prop_petitory_vindication",
+      "documentTitle": "የንብረት ባለቤትነትን ለማረጋገጥ የክስ ማመልከቻ (Statement of Claim for Vindication of Property - Petitory Action)",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1206 (Art. 1206 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "petitory action",
+          "vindication",
+          "unlawful possession",
+          "ownership claim",
+          "የይዞታ ክስ",
+          "የባለቤትነት ማረጋገጫ"
+        ],
+        "jurisdictionType": "Federal/Regional First Instance Court"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የንብረትዎ ህጋዊ ባለቤት መሆንዎን ነገር ግን ንብረቱ በሌላ ሰው እጅ ያለአግባብ ተይዞ ሲገኝ፣ የባለቤትነት መብትዎን በፍርድ ቤት ለማረጋገጥ እና ንብረቱ እንዲመለስልዎ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክስ መታየት ያለበት ንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ የማይንቀሳቀስ ንብረትን በተመለከተ የባለቤትነት ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የባለቤትነት ማረጋገጫ ካርታ (TitleDeed) እና ንብረቱን እንዴት እንዳገኙ የሚያሳይ ሰነድ (ለምሳሌ የሽያጭ ውል)።",
       "partyTitles": {
-        "applicant": "Plaintiff (Owner)",
-        "respondent": "Defendant (Unlawful Holder)"
+        "applicant": "ከሳሽ (ባለቤት) (Plaintiff (Owner))",
+        "respondent": "ተከሳሽ (ያለአግባብ የያዘ) (Defendant (Unlawful Holder))"
       },
       "facts": {
         "group_1": {
-          "title": "Proof of Title",
+          "title": "የባለቤትነት ማረጋገጫ (Proof of Title)",
           "facets": [
             {
-              "id": "fact_ownership_proof",
-              "legalText": "The Plaintiff is the legal owner/holder of the immovable property situated at [Location].",
+              "id": "prop_fact_ownership_proof",
+              "legalText": "ከሳሹ በ {{location}} የሚገኘው የማይንቀሳቀስ ንብረት ህጋዊ ባለቤት/ባለይዞታ ነው። (The Plaintiff is the legal owner/holder of the immovable property situated at {{location}}.)",
               "citation": "Civ. Code Art. 1204",
-              "evidence": ["TitleDeed"]
+              "autoEvidence": [
+                "TitleDeed"
+              ]
             },
             {
-              "id": "fact_chain_of_custody",
-              "legalText": "The Plaintiff acquired the property through [Sale/Succession/Grant] on [Date].",
+              "id": "prop_fact_chain_of_custody",
+              "legalText": "ከሳሹ ንብረቱን በ {{acquisition_method}} በ {{date}} አግኝቷል። (The Plaintiff acquired the property through {{acquisition_method}} on {{date}}.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Unlawful Holding",
+          "title": "ያለአግባብ መያዝ (Unlawful Holding)",
           "facets": [
             {
-              "id": "fact_defendant_possession",
-              "legalText": "The Defendant is currently in possession of the property without any legal title or right.",
+              "id": "prop_fact_defendant_possession",
+              "legalText": "ተከሳሹ በአሁኑ ጊዜ ንብረቱን ያለ ምንም ህጋዊ መብት ወይም ባለቤትነት ይይዛል። (The Defendant is currently in possession of the property without any legal title or right.)",
               "citation": "Civ. Code Art. 1206",
-              "evidence": []
-            },
-            {
-              "id": "fact_refusal_vacate",
-              "legalText": "Despite demands, the Defendant refuses to vacate the property.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_declare_ownership",
-          "text": "Judgment declaring the Plaintiff as the sole legal owner/holder of the property."
-        },
-        {
-          "id": "relief_eviction_order",
-          "text": "Order the Defendant to vacate the property and hand it over to the Plaintiff."
-        },
-        {
-          "id": "relief_mesne_profits",
-          "text": "Order the Defendant to pay compensation (fruits/rent) for the period of unlawful occupation."
-        }
-      ]
-    },
-    "property_possessory_restoration": {
-      "documentTitle": "Statement of Claim for Restoration of Possession",
-      "jurisdictionText": "Art. 1149 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Dispossessed)",
-        "respondent": "Defendant (Usurper)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Fact of Possession",
-          "facets": [
-            {
-              "id": "fact_actual_possession",
-              "legalText": "The Plaintiff was in peaceful and continuous possession of the property.",
-              "citation": "Civ. Code Art. 1140",
-              "evidence": ["TaxLandRentReceipts", "KebeleConfirmation"]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Illicit Interference (Usurpation)",
-          "facets": [
-            {
-              "id": "fact_usurpation_act",
-              "legalText": "The Defendant took possession by force/fraud on [Date].",
-              "citation": "Civ. Code Art. 1148",
-              "evidence": []
-            },
-            {
-              "id": "fact_timeliness",
-              "legalText": "This claim is filed within two years of the usurpation.",
-              "citation": "Civ. Code Art. 1149",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_restore_possession",
-          "text": "Order the immediate restoration of possession to the Plaintiff (without prejudice to questions of title)."
-        }
-      ]
-    },
-    "property_boundary_encroachment": {
-      "documentTitle": "Statement of Claim for Removal of Boundary Encroachment",
-      "jurisdictionText": "Art. 1204 & 1211 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant (Neighbor)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Boundary Lines",
-          "facets": [
-            {
-              "id": "fact_defined_boundary",
-              "legalText": "The legal boundary between the Plaintiff's and Defendant's plots is defined by the official Site Plan.",
-              "citation": "",
-              "evidence": ["SitePlan"]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "The Encroachment",
-          "facets": [
-            {
-              "id": "fact_encroachment_act",
-              "legalText": "The Defendant has constructed a wall/structure that crosses the boundary line by [Meters].",
-              "citation": "",
-              "evidence": ["SurveyorsReport"]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_demolition",
-          "text": "Order the Defendant to demolish the encroaching structure."
-        },
-        {
-          "id": "relief_boundary_restitution",
-          "text": "Order the restoration of the boundary markers to their original position."
-        }
-      ]
-    },
-    "app_stay_construction": {
-      "documentTitle": "Application for Urgent Order to Suspend Construction",
-      "jurisdictionText": "Art. 154 of the Civil Procedure Code.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Irreparable Injury",
-          "facets": [
-            {
-              "id": "fact_ongoing_construction",
-              "legalText": "The Respondent is currently engaged in active construction on the disputed land.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_irreparable_harm",
-              "legalText": "If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_prima_facie",
-              "legalText": "The Applicant has demonstrated a strong prima facie case of ownership.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_suspend_works",
-          "text": "Order the immediate suspension of all construction activities on the disputed plot pending final judgment."
-        }
-      ]
-    },
-    "app_local_inspection": {
-      "documentTitle": "Application for Order of Local Inspection",
-      "jurisdictionText": "Art. 136 of the Civil Procedure Code.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Clarification",
-          "facets": [
-            {
-              "id": "fact_physical_dispute",
-              "legalText": "The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_necessity_to_view",
-              "legalText": "A just decision cannot be rendered without the Court (or its registrar) physically viewing the site.",
-              "citation": "CPC Art. 136",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_order_visit",
-          "text": "Order a local inspection of the property to verify boundaries/possession."
-        }
-      ]
-    },
-    "property_nuisance_cessation": {
-      "documentTitle": "Statement of Claim for Cessation of Abnormal Inconvenience (Nuisance)",
-      "jurisdictionText": "Art. 1225 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Injured Party)",
-        "respondent": "Defendant (Source of Nuisance)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "The Disturbance",
-          "facets": [
-            {
-              "id": "fact_nature_inconvenience",
-              "legalText": "The Defendant's actions involve [Noise/Smell/Vibration] originating from [Source].",
-              "citation": "Civ. Code Art. 1225",
-              "evidence": []
-            },
-            {
-              "id": "fact_abnormal_degree",
-              "legalText": "The inconvenience caused by the Defendant is abnormal and exceeds the level normally expected of the neighborhood.",
-              "citation": "",
-              "evidence": ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Knowledge and Refusal",
-          "facets": [
-            {
-              "id": "fact_notice_to_stop",
-              "legalText": "The Defendant was formally notified of the inconvenience but failed to take corrective measures.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_order_cessation",
-          "text": "Judgment ordering the Defendant to immediately cease the source of the abnormal inconvenience."
-        },
-        {
-          "id": "relief_damages_past",
-          "text": "Order payment of damages suffered by the Plaintiff prior to the cessation.",
-          "citation": "Civ. Code Art. 1226"
-        }
-      ]
-    },
-    "property_servitude_right_of_way": {
-      "documentTitle": "Statement of Claim for Establishment of Servitude (Right of Way)",
-      "jurisdictionText": "Art. 1332 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Dominant Tenement (Applicant)",
-        "respondent": "Servient Tenement (Respondent)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Enclave Status (Necessity)",
-          "facets": [
-            {
-              "id": "fact_property_enclaved",
-              "legalText": "The Applicant's property has no adequate access to a public road.",
-              "citation": "Civ. Code Art. 1332",
-              "evidence": ["SurveyorsReport", "SitePlan"]
-            },
-            {
-              "id": "fact_no_other_means",
-              "legalText": "There are no other practical or less onerous routes available for access.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Requested Route",
-          "facets": [
-            {
-              "id": "fact_least_onerous",
-              "legalText": "The requested right of way across the Respondent's land is the route least detrimental to the Servient Tenement (Respondent).",
-              "citation": "Civ. Code Art. 1334",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_establish_servitude",
-          "text": "Judgment establishing a Servitude of Right of Way across the Respondent's property."
-        },
-        {
-          "id": "relief_compensation_fee",
-          "text": "Order the Dominant Tenement to pay fair compensation to the Servient Tenement for the damage caused by the passage.",
-          "citation": "Civ. Code Art. 1333"
-        }
-      ]
-    },
-    "property_possessory_disturbance": {
-      "documentTitle": "Statement of Claim for Cessation of Disturbance of Possession",
-      "jurisdictionText": "Art. 1148 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Possessor)",
-        "respondent": "Defendant (Disturber)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Fact of Possession",
-          "facets": [
-            {
-              "id": "fact_actual_possession",
-              "legalText": "The Plaintiff was in peaceful and continuous possession of the property/right.",
-              "citation": "Civ. Code Art. 1140",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Disturbance Act",
-          "facets": [
-            {
-              "id": "fact_disturbance_act",
-              "legalText": "The Defendant has performed specific actions that interfere with the Plaintiff's peaceful possession (e.g., removing fences, obstructing access).",
-              "citation": "Civ. Code Art. 1148",
-              "evidence": ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
-            },
-            {
-              "id": "fact_timeliness",
-              "legalText": "This claim is filed within two years of the disturbance.",
-              "citation": "Civ. Code Art. 1149",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_stop_disturbance",
-          "text": "Order the Defendant to cease all acts of disturbance."
-        },
-        {
-          "id": "relief_restore_status",
-          "text": "Order the restoration of the property to the state it was in before the disturbance."
-        }
-      ]
-    },
-    "app_servitude_temporary_passage": {
-      "documentTitle": "Application for Temporary Mandatory Order to Grant Passage",
-      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Injunction) & Art. 1332 Civil Code (Necessity).",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Urgency & Extreme Need",
-          "facets": [
-            {
-              "id": "fact_complete_blockade",
-              "legalText": "The Respondent has completely blocked the Applicant's only access to the public road.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_imminent_damage",
-              "legalText": "The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_grant_temporary_access",
-          "text": "Order the Respondent to grant temporary passage to the Applicant pending the final decision on the main servitude claim."
-        }
-      ]
-    },
-    "contract_debt_recovery": {
-      "documentTitle": "Statement of Claim for Recovery of Loan/Debt",
-      "jurisdictionText": "Art. 216 et seq. of the Civil Procedure Code & Civil Code Art. 2471.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Creditor)",
-        "respondent": "Defendant (Debtor)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Formation of Contract",
-          "facets": [
-            {
-              "id": "fact_loan_agreement",
-              "legalText": "On [Date], the Plaintiff and Defendant entered into a written loan agreement.",
-              "citation": "Civ. Code Art. 2471",
-              "evidence": [
-                "WrittenContract",
-                "AdmissionofDebt"
+              "autoEvidence": [
+                "KebeleConfirmation"
               ]
             },
             {
-              "id": "fact_disbursement",
-              "legalText": "The Plaintiff disbursed the sum of [Amount] ETB to the Defendant.",
+              "id": "prop_fact_refusal_vacate",
+              "legalText": "ተደጋጋሚ ጥያቄ ቢቀርብም ተከሳሹ ንብረቱን ለቆ ለመውጣት ፈቃደኛ አልሆነም። (Despite demands, the Defendant refuses to vacate the property.)",
               "citation": "",
-              "evidence": [
-                "PaymentReceipt"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Default",
-          "facets": [
-            {
-              "id": "fact_payment_due",
-              "legalText": "The repayment period agreed upon expired on [Date].",
-              "citation": "Civ. Code Art. 1857"
-            },
-            {
-              "id": "fact_failure_to_pay",
-              "legalText": "Despite the maturity of the debt, the Defendant failed to effect payment.",
-              "citation": ""
-            },
-            {
-              "id": "fact_notice_given",
-              "legalText": "The Plaintiff served a formal notice of default on [Date].",
-              "citation": "Civ. Code Art. 1772",
-              "evidence": [
+              "autoEvidence": [
                 "NoticeofDefault"
               ]
             }
@@ -703,1297 +70,513 @@
       },
       "reliefs": [
         {
-          "id": "relief_principal_amount",
-          "text": "Judgment ordering the Defendant to pay the principal sum of [Amount] ETB."
+          "id": "prop_relief_declare_ownership",
+          "text": "ከሳሹ የንብረቱ ብቸኛ ህጋዊ ባለቤት/ባለይዞታ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ። (Judgment declaring the Plaintiff as the sole legal owner/holder of the property.)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "relief_legal_interest",
-          "text": "Order payment of legal interest (9%) calculated from the date of default.",
-          "citation": "Civ. Code Art. 1751"
+          "id": "prop_relief_eviction_order",
+          "text": "ተከሳሹ ንብረቱን ለቆ ለከሳሽ እንዲያስረክብ ትዕዛዝ እንዲሰጥ። (Order the Defendant to vacate the property and hand it over to the Plaintiff.)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "relief_contractual_interest",
-          "text": "Order payment of contractual interest agreed at [Percentage] (max 12%).",
-          "citation": "Civ. Code Art. 2479"
+          "id": "prop_relief_mesne_profits",
+          "text": "ተከሳሹ በህገ-ወጥ ይዞታው ወቅት ላገኘው ጥቅም (ፍራፍሬ/ኪራይ) ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order the Defendant to pay compensation (fruits/rent) for the period of unlawful occupation.)",
+          "isDefault": false,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
-    "contract_specific_performance": {
-      "documentTitle": "Statement of Claim for Specific Performance of Contract",
-      "jurisdictionText": "Art. 1776 of the Civil Code & Civil Procedure Code.",
+    {
+      "id": "prop_possessory_restoration",
+      "documentTitle": "የተነጠቀን ይዞታ ለማስመለስ የክስ ማመልከቻ (Statement of Claim for Restoration of Possession)",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1149 (Art. 1149 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "possessory action",
+          "usurpation",
+          "dispossession",
+          "የይዞታ ክስ",
+          "ማስመለስ"
+        ],
+        "jurisdictionType": "Federal/Regional First Instance Court"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ይዞታዎ በጉልበት ወይም በማታለል ሲነጠቅ፣ የባለቤትነት ጥያቄ ውስጥ ሳይገባ ይዞታው ብቻ በፍጥነት እንዲመለስልዎ ለመጠየቅ ያገለግላል። ዋናው ዓላማው ሰላምን ማስጠበቅ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nይዞታው ከተነጠቀበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ንብረቱን በሰላም ይዘውት እንደነበር የሚያረጋግጡ ማስረጃዎች (ለምሳሌ የግብር ደረሰኞች፣ የቀበሌ ማረጋገጫ)።",
       "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
+        "applicant": "ከሳሽ (ይዞታው የተነጠቀ) (Plaintiff (Dispossessed))",
+        "respondent": "ተከሳሽ (ነጣቂ) (Defendant (Usurper))"
       },
       "facts": {
         "group_1": {
-          "title": "Contractual Obligation",
+          "title": "የይዞታ እውነታ (Fact of Possession)",
           "facets": [
             {
-              "id": "fact_valid_contract",
-              "legalText": "A valid contract exists between the parties regarding [Subject Matter].",
-              "citation": "Civ. Code Art. 1678",
-              "evidence": [
-                "WrittenContract"
-              ]
-            },
-            {
-              "id": "fact_plaintiff_performance",
-              "legalText": "The Plaintiff has fully performed their obligations under the contract.",
-              "citation": ""
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Breach",
-          "facets": [
-            {
-              "id": "fact_non_performance",
-              "legalText": "The Defendant has failed to perform [Specific Obligation] without lawful cause.",
-              "citation": "Civ. Code Art. 1771"
-            },
-            {
-              "id": "fact_special_interest",
-              "legalText": "Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant.",
-              "citation": "Civ. Code Art. 1776"
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_enforce_performance",
-          "text": "Order the Defendant to specifically perform the contract by [Action, e.g., transferring title]."
-        },
-        {
-          "id": "relief_alt_damages",
-          "text": "Alternatively, if performance is impossible, order payment of damages."
-        }
-      ]
-    },
-    "contract_termination_claim": {
-      "documentTitle": "Statement of Claim for Judicial Cancellation of Contract",
-      "jurisdictionText": "Art. 1784 & 1785 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Breach Analysis",
-          "facets": [
-            {
-              "id": "fact_fundamental_breach",
-              "legalText": "The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract.",
-              "citation": "Civ. Code Art. 1785"
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Restitution",
-          "facets": [
-            {
-              "id": "fact_payments_made",
-              "legalText": "The Plaintiff has already paid [Amount] to the Defendant.",
-              "citation": "",
-              "evidence": [
-                "PaymentReceipt"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_judicial_cancellation",
-          "text": "Judgment declaring the contract cancelled/terminated."
-        },
-        {
-          "id": "relief_reinstatement",
-          "text": "Order the parties to be reinstated to their former position (Restitution).",
-          "citation": "Civ. Code Art. 1815"
-        }
-      ]
-    },
-    "app_attachment_before_judgment": {
-      "documentTitle": "Application for Attachment of Property Before Judgment",
-      "jurisdictionText": "Art. 151 & 152 of the Civil Procedure Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Obstruction of Justice",
-          "facets": [
-            {
-              "id": "fact_intent_to_obstruct",
-              "legalText": "The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree.",
-              "citation": "CPC Art. 151"
-            },
-            {
-              "id": "fact_prima_facie_case",
-              "legalText": "The Applicant has a strong prima facie case and is likely to succeed in the main suit.",
-              "citation": ""
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_attach_property",
-          "text": "Order the attachment of the Defendant's property [Specify Property] pending final judgment."
-        },
-        {
-          "id": "relief_security_bond",
-          "text": "Alternatively, order the Defendant to furnish security for the amount claimed."
-        }
-      ]
-    },
-    "app_judgment_on_admission": {
-      "documentTitle": "Application for Judgment on Admissions",
-      "jurisdictionText": "Art. 242 of the Civil Procedure Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Admission",
-          "facets": [
-            {
-              "id": "fact_clear_admission",
-              "legalText": "In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt.",
-              "citation": "CPC Art. 242"
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_immediate_judgment",
-          "text": "Enter immediate judgment for the Plaintiff on the admitted portion of the claim."
-        }
-      ]
-    },
-    "labour_unlawful_termination": {
-      "documentTitle": "Statement of Claim for Unlawful Termination",
-      "partyTitles": {
-        "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
-        "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
-      },
-      "jurisdictionText": "Labour Proclamation No. 1156/2019",
-      "facts": {
-        "group_1": {
-          "title": "The Contractual Relationship (Prerequisites)",
-          "facets": [
-            {
-              "id": "indefinite_contract",
-              "legalText": "Existence of an indefinite period employment contract.",
-              "citation": "Art. 9 of Proc. 1156/2019",
-              "evidence": [
-                "EmploymentContract"
-              ]
-            },
-            {
-              "id": "definite_contract_ended",
-              "legalText": "A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.",
-              "citation": "Art. 10, 11 of Proc. 1156/2019",
-              "evidence": [
-                "EmploymentContract"
+              "id": "prop_fact_actual_possession",
+              "legalText": "ከሳሹ ንብረቱን በሰላም እና ቀጣይነት ባለው መልኩ ይዞት ነበር። (The Plaintiff was in peaceful and continuous possession of the property.)",
+              "citation": "Civ. Code Art. 1140",
+              "autoEvidence": [
+                "TaxLandRentReceipts",
+                "KebeleConfirmation"
               ]
             }
           ]
         },
         "group_2": {
-          "title": "The Act of Termination: Procedural Violations",
+          "title": "ሕገ-ወጥ ጣልቃ ገብነት (መንጠቅ) (Illicit Interference (Usurpation))",
           "facets": [
             {
-              "id": "no_prior_notice",
-              "legalText": "Termination was effected without any prior written notice specifying the reasons and date of termination.",
-              "citation": "Violation of Art. 35(1) of Proc. 1156/2019",
-              "evidence": [
-                "TerminationLetter"
-              ]
+              "id": "prop_fact_usurpation_act",
+              "legalText": "ተከሳሹ በ {{date}} በጉልበት/በማጭበርበር ይዞታውን ወስዷል። (The Defendant took possession by force/fraud on {{date}}.)",
+              "citation": "Civ. Code Art. 1148",
+              "autoEvidence": ["PhotosVideoEvidence", "WitnessAffidavitsNuisance"]
             },
             {
-              "id": "insufficient_notice",
-              "legalText": "The notice period provided was insufficient and less than the legal minimum based on years of service.",
-              "citation": "Violation of Art. 35(2) of Proc. 1156/2019",
-              "evidence": [
-                "TerminationLetter"
-              ]
-            }
-          ]
-        },
-        "group_3": {
-          "title": "The Act of Termination: Substantive Violations (Unlawful Grounds)",
-          "facets": [
-            {
-              "id": "union_membership_termination",
-              "legalText": "Termination was due to the employee's membership in a trade union or participation in union activities.",
-              "citation": "Art. 26(2)(a) of Proc. 1156/2019",
-              "evidence": [
-                "TerminationLetter"
-              ]
-            },
-            {
-              "id": "maternity_termination",
-              "legalText": "Termination was due to the employee's pregnancy or maternity leave status.",
-              "citation": "Art. 26(2)(d) of Proc. 1156/2019",
-              "evidence": [
-                "TerminationLetter"
-              ]
-            },
-            {
-              "id": "whistleblower_termination",
-              "legalText": "Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law.",
-              "citation": "Art. 26(2)(b) of Proc. 1156/2019",
-              "evidence": [
-                "TerminationLetter"
-              ]
-            },
-            {
-              "id": "discriminatory_termination",
-              "legalText": "Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin.",
-              "citation": "Art. 26(2)(c) of Proc. 1156/2019",
-              "evidence": [
-                "TerminationLetter"
-              ]
-            }
-          ]
-        },
-        "group_4": {
-          "title": "The Act of Termination: The \"No Reason\" Defense",
-          "facets": [
-            {
-              "id": "no_valid_reason",
-              "legalText": "The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking.",
-              "citation": "Violation of Art. 27 of Proc. 1156/2019",
-              "evidence": [
-                "TerminationLetter"
-              ]
-            }
-          ]
-        },
-        "group_5": {
-          "title": "The Act of Termination: Constructive Dismissal",
-          "facets": [
-            {
-              "id": "constructive_dismissal",
-              "legalText": "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.",
-              "citation": "Art. 32 of Proc. 1156/2019",
-              "evidence": []
+              "id": "prop_fact_timeliness",
+              "legalText": "ይህ ክስ ይዞታው ከተነጠቀ በሁለት ዓመት ጊዜ ውስጥ የቀረበ ነው። (This claim is filed within two years of the usurpation.)",
+              "citation": "Civ. Code Art. 1149(2)",
+              "autoEvidence": []
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "declare_termination_unlawful",
-          "text": "Judgment declaring the termination unlawful pursuant to Art. 43."
-        },
-        {
-          "id": "reinstatement",
-          "text": "Order for reinstatement to previous position with full back pay from the date of termination until reinstatement (Art. 43(1))."
-        },
-        {
-          "id": "compensation_in_lieu",
-          "text": "Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (not to exceed 12 months total) (Art. 43(2,3))."
-        },
-        {
-          "id": "severance_pay",
-          "text": "Payment of Severance Pay as per the calculation in Art. 39 & 40 (Only if not reinstated)."
-        },
-        {
-          "id": "notice_compensation",
-          "text": "Payment of Compensation for lack of proper notice, equivalent to salary for the notice period (Art. 44)."
-        },
-        {
-          "id": "costs_and_fees_labour",
-          "text": "Costs and fees to be covered by the respondent."
+          "id": "prop_relief_restore_possession",
+          "text": "ይዞታው ወዲያውኑ ለከሳሽ እንዲመለስ ትዕዛዝ እንዲሰጥ (የባለቤትነት ጥያቄዎችን ሳይነካ)። (Order the immediate restoration of possession to the Plaintiff (without prejudice to questions of title).)",
+          "isDefault": true,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
-    "labour_unpaid_wages": {
-      "documentTitle": "Statement of Claim for Outstanding Payments",
-      "partyTitles": {
-        "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
-        "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
+    {
+      "id": "prop_boundary_encroachment",
+      "documentTitle": "የድንበር መጣስ እንዲወገድ የክስ ማመልከቻ (Statement of Claim for Removal of Boundary Encroachment)",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1204 እና 1211 (Art. 1204 & 1211 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "boundary dispute",
+          "encroachment",
+          "neighbor dispute",
+          "demolition",
+          "የድንበር ክርክር",
+          "መጣስ"
+        ],
+        "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "jurisdictionText": "Labour Proclamation No. 1156/2019",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ጎረቤት በህጋዊ የድንበር መስመርዎ ላይ ግንባታ ሲፈጽም (ለምሳሌ አጥር ወይም የቤት ክፍል)፣ ያንን ግንባታ እንዲያፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የቦታውን ህጋዊ ድንበር የሚያሳይ የሳይት ፕላን (SitePlan) እና ጥሰቱን የሚያረጋግጥ የባለሙያ (ሰርቬየር) ሪፖርት (SurveyorsReport)።",
+      "partyTitles": {
+        "applicant": "ከሳሽ (Plaintiff)",
+        "respondent": "ተከሳሽ (ጎረቤት) (Defendant (Neighbor))"
+      },
       "facts": {
         "group_1": {
-          "title": "Salary Arrears",
+          "title": "የድንበር መስመሮች (Boundary Lines)",
           "facets": [
             {
-              "id": "unpaid_salary",
-              "legalText": "Non-payment of regular monthly salary for the month(s) of [Specify Months].",
-              "citation": "Art. 53 (Payment obligations)",
-              "evidence": [
-                "UnpaidWageWitness"
-              ]
-            },
-            {
-              "id": "unlawful_deduction",
-              "legalText": "An unlawful deduction was made from the salary without employee consent or a valid court order.",
-              "citation": "Art. 59 (Prohibition of deductions)",
-              "evidence": [
-                "UnpaidWageWitness"
+              "id": "prop_fact_defined_boundary",
+              "legalText": "በከሳሽ እና በተከሳሽ ይዞታዎች መካከል ያለው ህጋዊ ድንበር በኦፊሴላዊው የቦታ ፕላን ይገለጻል። (The legal boundary between the Plaintiff's and Defendant's plots is defined by the official Site Plan.)",
+              "citation": "",
+              "autoEvidence": [
+                "SitePlan"
               ]
             }
           ]
         },
         "group_2": {
-          "title": "Statutory Benefits",
+          "title": "መጣሱ (The Encroachment)",
           "facets": [
             {
-              "id": "unpaid_overtime",
-              "legalText": "Employee worked beyond the standard 8 hours/day or 48 hours/week without receiving overtime compensation at the legally mandated rates.",
-              "citation": "Art. 66 & 68 (Calculation rates)",
-              "evidence": [
-                "UnpaidWageWitness"
+              "id": "prop_fact_encroachment_act",
+              "legalText": "ተከሳሹ የድንበር መስመሩን በ {{distance}} ሜትር የሚያልፍ ግድግዳ/ግንባታ ሰርቷል። (The Defendant has constructed a wall/structure that crosses the boundary line by {{distance}}.)",
+              "citation": "",
+              "autoEvidence": [
+                "SurveyorsReport",
+                "PhotosVideoEvidence"
               ]
-            },
-            {
-              "id": "unpaid_annual_leave",
-              "legalText": "Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment.",
-              "citation": "Art. 77 & 79 (Conversion to cash only upon termination)",
-              "evidence": []
-            },
-            {
-              "id": "unpaid_holiday_work",
-              "legalText": "Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate.",
-              "citation": "Art. 73",
-              "evidence": []
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "payment_principal",
-          "text": "An order for the Respondent to pay the total principal amount of all outstanding wages and benefits."
+          "id": "prop_relief_demolition",
+          "text": "ተከሳሹ የጣሰውን ግንባታ እንዲያፈርስ ትዕዛዝ እንዲሰጥ። (Order the Defendant to demolish the encroaching structure.)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "payment_interest",
-          "text": "An order for the payment of statutory interest on the delayed payments as per the relevant provisions of the Civil Code."
-        },
-        {
-          "id": "payment_overtime_specific",
-          "text": "A specific order for the payment of calculated overtime wages."
-        },
-        {
-          "id": "costs_and_fees_labour_wages",
-          "text": "Costs and fees to be covered by the respondent."
+          "id": "prop_relief_boundary_restitution",
+          "text": "የድንበር ምልክቶቹ ወደ ቀድሞ ቦታቸው እንዲመለሱ ትዕዛዝ እንዲሰጥ። (Order the restoration of the boundary markers to their original position.)",
+          "isDefault": false,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
-    "labour_employment_injury": {
-      "documentTitle": "Claim for Employment Injury Compensation",
-      "partyTitles": {
-        "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
-        "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
+    {
+      "id": "app_stay_construction",
+      "documentTitle": "ግንባታ እንዲቆም የሚጠይቅ አስቸኳይ ማመልከቻ (Application for Urgent Order to Suspend Construction)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (Art. 154 of the Civil Procedure Code)",
+      "meta": {
+        "keywords": [
+          "injunction",
+          "stay of construction",
+          "urgent application",
+          "የግንባታ እግድ",
+          "አስቸኳይ"
+        ],
+        "jurisdictionType": "Court Handling the Main Case"
       },
-      "jurisdictionText": "Labour Proclamation No. 1156/2019",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ክርክር ባለበት መሬት ላይ ተቃራኒ ወገን ግንባታ እየሰራ ከሆነ፣ ዋናው ክስ እስኪያልቅ ድረስ ግንባታው እንዲቆም (እንዲታገድ) ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ወቅት ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የማይተካ ጉዳት (Irreparable Harm):** ግንባታው ከቀጠለ ሊጠገን የማይችል ጉዳት እንደሚደርስ ማሳየት።\n*   **ጠንካራ ክስ (Prima Facie Case):** በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
+      "partyTitles": {
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
+      },
       "facts": {
         "group_1": {
-          "title": "The Incident",
+          "title": "የማይተካ ጉዳት (Irreparable Injury)",
           "facets": [
             {
-              "id": "injury_at_work",
-              "legalText": "The injury occurred during the performance of the employee's duties within the regular working hours and at the designated workplace.",
-              "citation": "Art. 95(1)(a)",
-              "evidence": []
+              "id": "prop_fact_ongoing_construction",
+              "legalText": "ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ ላይ ተሰማርቷል። (The Respondent is currently engaged in active construction on the disputed land.)",
+              "citation": "",
+              "autoEvidence": ["PhotosVideoEvidence"]
             },
             {
-              "id": "injury_commuting",
-              "legalText": "The injury occurred while the employee was commuting directly between their residence and the workplace, using transport provided by the employer.",
-              "citation": "Art. 95(1)(c)",
-              "evidence": []
+              "id": "prop_fact_irreparable_harm",
+              "legalText": "ግንባታው ከተጠናቀቀ ማፍረሱ አስቸጋሪ ስለሚሆን የአመልካች መብቶች በቋሚነት ይጎዳሉ። (If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced.)",
+              "citation": "",
+              "autoEvidence": []
             },
             {
-              "id": "injury_on_order",
-              "legalText": "The injury occurred outside the regular workplace while the employee was carrying out a specific order given by the employer.",
-              "citation": "Art. 95(1)(b)",
-              "evidence": []
-            },
-            {
-              "id": "occupational_disease",
-              "legalText": "The employee has contracted an occupational disease as a direct result of exposure to hazards in the work environment.",
-              "citation": "Art. 98",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "The Damage",
-          "facets": [
-            {
-              "id": "permanent_partial_disability",
-              "legalText": "A permanent partial disability has been sustained as a result of the injury, confirmed by a medical board certificate.",
-              "citation": "Art. 109 & 110",
-              "evidence": []
-            },
-            {
-              "id": "temporary_total_disability",
-              "legalText": "A temporary total disability was sustained, rendering the employee unable to work for a specific period.",
-              "citation": "Art. 106",
-              "evidence": []
+              "id": "prop_fact_prima_facie",
+              "legalText": "አመልካቹ ጠንካራ የባለቤትነት መብት እንዳለው አሳይቷል። (The Applicant has demonstrated a strong prima facie case of ownership.)",
+              "citation": "",
+              "autoEvidence": ["TitleDeed"]
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "medical_expenses",
-          "text": "An order for the full payment of all medical, surgical, pharmaceutical, and hospital care expenses incurred due to the injury (Art. 105)."
-        },
-        {
-          "id": "disability_compensation",
-          "text": "Payment of disability compensation, calculated based on the employee's salary and the percentage of disability as determined by the medical board (Art. 109 & 110)."
-        },
-        {
-          "id": "periodical_payment",
-          "text": "Payment for temporary disability, equivalent to 75% of the employee's daily wage, for the duration of the disability (Art. 106)."
-        },
-        {
-          "id": "costs_and_fees_injury",
-          "text": "Costs and fees to be covered by the respondent."
+          "id": "prop_relief_suspend_works",
+          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በተከራካሪው ይዞታ ላይ ያሉ ሁሉም የግንባታ ስራዎች ወዲያውኑ እንዲቆሙ ትዕዛዝ እንዲሰጥ። (Order the immediate suspension of all construction activities on the disputed plot pending final judgment.)",
+          "isDefault": true,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
-    "civil_service_disciplinary_appeal": {
-      "documentTitle": "Memorandum of Appeal to the Administrative Tribunal",
-      "partyTitles": {
-        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
-        "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
+    {
+      "id": "app_local_inspection",
+      "documentTitle": "የአካባቢ ምርመራ ትዕዛዝ እንዲሰጥ ማመልከቻ (Application for Order of Local Inspection)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 136 (Art. 136 of the Civil Procedure Code)",
+      "meta": {
+        "keywords": [
+          "local inspection",
+          "site visit",
+          "court inspection",
+          "የአካባቢ ምርመራ",
+          "ቦታ መጎብኘት"
+        ],
+        "jurisdictionType": "Court Handling the Main Case"
       },
-      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክሩ ውስጥ ያሉ ወገኖች ስለ ንብረቱ አካላዊ ገጽታ (ለምሳሌ ስለ ድንበር ወይም ስለ ይዞታ) የሚሰጡት ቃል ወይም ሰነድ ሲጋጭ፣ ፍርድ ቤቱ እውነታውን ለማረጋገጥ ቦታው ድረስ ሄዶ እንዲመለከት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት፡** ፍርድ ቤቱ ቦታውን በአካል ሳያይ ፍትሃዊ ውሳኔ መስጠት እንደማይቻል ማሳመን ያስፈልጋል።",
+      "partyTitles": {
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
+      },
       "facts": {
         "group_1": {
-          "title": "The Disciplinary Measure (The Trigger)",
+          "title": "ማብራሪያ (Clarification)",
           "facets": [
             {
-              "id": "measure_dismissal",
-              "legalText": "Dismissal from Service.",
-              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
-              "evidence": [
-                "DismissalLetter"
-              ]
-            },
-            {
-              "id": "measure_demotion",
-              "legalText": "Downgrading of job position/grade.",
-              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
-              "evidence": [
-                "DismissalLetter"
-              ]
-            },
-            {
-              "id": "measure_fine",
-              "legalText": "Imposition of a fine exceeding one month's salary.",
-              "citation": "Art. 81(1)(b) of Proc. 1064/2017",
-              "evidence": [
-                "DismissalLetter"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Procedural Violations (The Defense)",
-          "facets": [
-            {
-              "id": "no_right_to_be_heard",
-              "legalText": "The Institution took the measure without giving the Appellant a chance to present a defense.",
-              "citation": "Violation of Art. 69 of Proc. 1064/2017",
-              "evidence": []
-            },
-            {
-              "id": "limitation_period_1yr",
-              "legalText": "The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.",
-              "citation": "Art. 76(2) of Proc. 1064/2017",
-              "evidence": []
-            },
-            {
-              "id": "limitation_period_6mo",
-              "legalText": "The simple measure was taken more than 6 months after the offense was known, barring it by limitation.",
-              "citation": "Art. 76(1) of Proc. 1064/2017",
-              "evidence": []
-            },
-            {
-              "id": "improper_committee",
-              "legalText": "The Disciplinary Committee was not constituted according to Regulation 77/2002 (e.g., no staff representative).",
-              "citation": "Reg. 77/2002",
-              "evidence": []
-            }
-          ]
-        },
-        "group_3": {
-          "title": "Substantive Defenses (The Merits)",
-          "facets": [
-            {
-              "id": "not_an_offense",
-              "legalText": "The alleged act does not constitute a disciplinary offense under the law.",
+              "id": "prop_fact_physical_dispute",
+              "legalText": "ስለ መሬቱ አካላዊ ገጽታዎች/ድንበሮች የሚቀርቡት የቃል ምስክርነቶች እና ሰነዶች እርስ በርሳቸው የሚጋጩ ናቸው። (The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": []
             },
             {
-              "id": "disproportionate_penalty",
-              "legalText": "The penalty is disproportionate to the offense committed.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "double_jeopardy",
-              "legalText": "The appellant was already punished for the same alleged offense.",
-              "citation": "",
-              "evidence": []
+              "id": "prop_fact_necessity_to_view",
+              "legalText": "ፍርድ ቤቱ (ወይም ሬጅስትራሩ) ቦታውን በአካል ሳይመለከት ፍትሃዊ ውሳኔ ሊሰጥ አይችልም። (A just decision cannot be rendered without the Court (or its registrar) physically viewing the site.)",
+              "citation": "CPC Art. 136",
+              "autoEvidence": []
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "quash_decision",
-          "text": "To quash/annul the administrative decision of the Respondent Institution."
-        },
-        {
-          "id": "reinstate_with_pay",
-          "text": "To order the reinstatement of the Appellant to their former position and payment of full salary for the period of suspension (Art. 81(3))."
-        },
-        {
-          "id": "expunge_record",
-          "text": "To order the expunging of the disciplinary measure from the Appellant's personal file."
+          "id": "prop_relief_order_visit",
+          "text": "ድንበሮችን/ይዞታን ለማረጋገጥ የንብረቱ አካባቢያዊ ምርመራ እንዲደረግ ትዕዛዝ እንዲሰጥ። (Order a local inspection of the property to verify boundaries/possession.)",
+          "isDefault": true,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
-    "civil_service_termination_unlawful": {
-      "documentTitle": "Appeal Against Administrative Termination",
-      "partyTitles": {
-        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
-        "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
+    {
+      "id": "property_nuisance_cessation",
+      "documentTitle": "ያልተለመደ ችግር እንዲቆም የክስ ማመልከቻ (Nuisance) (Statement of Claim for Cessation of Abnormal Inconvenience (Nuisance))",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1225 (Art. 1225 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "nuisance",
+          "abnormal inconvenience",
+          "noise",
+          "smell",
+          "neighbor dispute",
+          "ችግር",
+          "ጩኸት",
+          "ሽታ"
+        ],
+        "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ጎረቤት ወይም በአቅራቢያዎ የሚገኝ ሰው በሚያደርገው ተግባር (ለምሳሌ ከልክ ያለፈ ጩኸት፣ መጥፎ ሽታ፣ ንዝረት) ሰላምዎ ሲደፈርስ እና ችግሩ ከአካባቢው መደበኛ ሁኔታ ያለፈ ሲሆን፣ ያንን ተግባር እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nችግሩ በሚከሰትበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nከውል ውጭ ተጠያቂነትን የሚመለከት በመሆኑ፣ የ5 ዓመት የይርጋ ጊዜ ገደብ አለው (አንቀጽ 1851)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የችግሩን ሁኔታ የሚያሳይ ማስረጃ (PhotosVideoEvidence)፣ የምስክሮች ቃል (WitnessAffidavitsNuisance) እና ችግሩ እንዲቆም በጽሑፍ ማስጠንቀቂያ መስጠትዎን የሚያሳይ ማስረጃ።",
+      "partyTitles": {
+        "applicant": "ከሳሽ (የተጎዳ ወገን) (Plaintiff (Injured Party))",
+        "respondent": "ተከሳሽ (የችግሩ ምንጭ) (Defendant (Source of Nuisance))"
+      },
       "facts": {
         "group_1": {
-          "title": "Grounds: Inefficiency (Performance)",
+          "title": "ችግሩ (The Disturbance)",
           "facets": [
             {
-              "id": "inefficiency_not_consecutive",
-              "legalText": "Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations.",
-              "citation": "Art. 84(1) of Proc. 1064/2017",
-              "evidence": [
-                "PerformanceReview"
-              ]
+              "id": "prop_fact_nature_inconvenience",
+              "legalText": "የተከሳሽ ድርጊቶች ከ {{source}} የሚመነጭ {{nuisance_type}} ያካትታሉ። (The Defendant's actions involve {{nuisance_type}} originating from {{source}}.)",
+              "citation": "Civ. Code Art. 1225",
+              "autoEvidence": []
             },
             {
-              "id": "inefficiency_no_training",
-              "legalText": "Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve.",
-              "citation": "Art. 84(1) of Proc. 1064/2017",
-              "evidence": [
-                "PerformanceReview"
+              "id": "prop_fact_abnormal_degree",
+              "legalText": "በተከሳሹ የሚፈጠረው ችግር ያልተለመደ እና ከአካባቢው ከሚጠበቀው ደረጃ ይበልጣል። (The inconvenience caused by the Defendant is abnormal and exceeds the level normally expected of the neighborhood.)",
+              "citation": "",
+              "autoEvidence": [
+                "WitnessAffidavitsNuisance",
+                "PhotosVideoEvidence"
               ]
             }
           ]
         },
         "group_2": {
-          "title": "Grounds: Illness / Medical",
+          "title": "ማወቅ እና እምቢተኝነት (Knowledge and Refusal)",
           "facets": [
             {
-              "id": "illness_before_leave_exhausted",
-              "legalText": "Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay).",
-              "citation": "Art. 83(1) of Proc. 1064/2017",
-              "evidence": []
-            },
-            {
-              "id": "illness_no_medical_board",
-              "legalText": "Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability.",
-              "citation": "Art. 83(2) of Proc. 1064/2017",
-              "evidence": []
-            }
-          ]
-        },
-        "group_3": {
-          "title": "Grounds: Force Majeure / Redundancy",
-          "facets": [
-            {
-              "id": "redundancy_no_offer",
-              "legalText": "Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination.",
-              "citation": "Art. 85(2) of Proc. 1064/2017",
-              "evidence": []
+              "id": "prop_fact_notice_to_stop",
+              "legalText": "ተከሳሹ ስለ ችግሩ በይፋ እንዲያውቅ ተደርጎ ነበር ነገር ግን የማስተካከያ እርምጃዎችን አልወሰደም። (The Defendant was formally notified of the inconvenience but failed to take corrective measures.)",
+              "citation": "",
+              "autoEvidence": ["NoticeofDefault"]
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "quash_termination",
-          "text": "To quash/annul the administrative decision of termination."
+          "id": "prop_relief_order_cessation",
+          "text": "ተከሳሹ ያልተለመደውን ችግር ምንጭ ወዲያውኑ እንዲያቆም የሚገልጽ ፍርድ እንዲሰጥ። (Judgment ordering the Defendant to immediately cease the source of the abnormal inconvenience.)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "reinstate_civil_servant",
-          "text": "To order the reinstatement of the Appellant to their former position with full back pay."
+          "id": "prop_relief_damages_past",
+          "text": "ከማቆሙ በፊት በከሳሽ የደረሰውን ጉዳት ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order payment of damages suffered by the Plaintiff prior to the cessation.)",
+          "citation": "Civ. Code Art. 1226",
+          "isDefault": false,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
-    "civil_service_benefits_grievance": {
-      "documentTitle": "Appeal on Service Rights & Benefits",
-      "partyTitles": {
-        "applicant": "Civil Servant / Appellant (የመንግስት ሰራተኛ/ይግባኝ ባይ)",
-        "respondent": "Institution / Office (መስሪያ ቤት/መልስ ሰጪ)"
+    {
+      "id": "property_servitude_right_of_way",
+      "documentTitle": "የመተላለፊያ መብት (Servitude) እንዲቋቋም የክስ ማመልከቻ (Statement of Claim for Establishment of Servitude (Right of Way))",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1332 (Art. 1332 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "servitude",
+          "right of way",
+          "enclaved property",
+          "passage",
+          "የመተላለፊያ መብት",
+          "የመንገድ መብት"
+        ],
+        "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "jurisdictionText": "Federal Civil Servants Proclamation No. 1064/2017",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ይዞታ ወደ ህዝብ መንገድ መውጫ የሌለው (የተዘጋ) ሲሆን፣ በጎረቤትዎ ይዞታ በኩል የመተላለፊያ መብት እንዲሰጥዎ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይዞታዎቹ በሚገኙበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየመተላለፊያ መብት በማንኛውም ጊዜ ሊጠየቅ ይችላል፤ የተወሰነ የይርጋ ጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት (Necessity):** የእርስዎ ይዞታ በእርግጥ ሌላ አማራጭ መውጫ እንደሌለው በባለሙያ (ሰርቬየር) ማስረጃ ማረጋገጥ።\n*   **ማስረጃ (Required Evidence):** የይዞታዎን እና የጎረቤትዎን ይዞታ የሚያሳይ የሳይት ፕላን (SitePlan) እና የሰርቬየር ሪፖርት (SurveyorsReport)።",
+      "partyTitles": {
+        "applicant": "ዋና ይዞታ (አመልካች) (Dominant Tenement (Applicant))",
+        "respondent": "አገልጋይ ይዞታ (ተጠሪ) (Servient Tenement (Respondent))"
+      },
       "facts": {
         "group_1": {
-          "title": "Exhaustion of Remedies (Mandatory)",
+          "title": "የተዘጋ ይዞታ ሁኔታ (አስፈላጊነት) (Enclave Status (Necessity))",
           "facets": [
             {
-              "id": "exhaustion_grievance_submitted",
-              "legalText": "A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.",
-              "citation": "Art. 81(1)(e) of Proc. 1064/2017",
-              "evidence": [
-                "GrievanceSubmission"
+              "id": "prop_fact_property_enclaved",
+              "legalText": "የአመልካች ንብረት ወደ ህዝብ መንገድ በቂ መዳረሻ የለውም። (The Applicant's property has no adequate access to a public road.)",
+              "citation": "Civ. Code Art. 1332",
+              "autoEvidence": [
+                "SurveyorsReport",
+                "SitePlan"
               ]
+            },
+            {
+              "id": "prop_fact_no_other_means",
+              "legalText": "ለመዳረሻ ምንም ሌሎች ተግባራዊ ወይም አነስተኛ ጉዳት የሚያስከትሉ መንገዶች የሉም። (There are no other practical or less onerous routes available for access.)",
+              "citation": "",
+              "autoEvidence": []
             }
           ]
         },
         "group_2": {
-          "title": "The Grievance",
+          "title": "የተጠየቀው መንገድ (Requested Route)",
           "facets": [
             {
-              "id": "promotion_denied",
-              "legalText": "The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.",
-              "citation": "Art. 13 of Proc. 1064/2017",
-              "evidence": []
-            },
-            {
-              "id": "salary_increment_denied",
-              "legalText": "The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.",
-              "citation": "Art. 81(1)(c) of Proc. 1064/2017",
-              "evidence": []
-            },
-            {
-              "id": "acting_allowance_denied",
-              "legalText": "The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.",
-              "citation": "Relevant Regulations",
-              "evidence": []
+              "id": "prop_fact_least_onerous",
+              "legalText": "በተጠሪው መሬት ላይ የተጠየቀው የመተላለፊያ መብት ለአገልጋይ ይዞታ (ተጠሪ) አነስተኛ ጉዳት የሚያስከትል መንገድ ነው። (The requested right of way across the Respondent's land is the route least detrimental to the Servient Tenement (Respondent).)",
+              "citation": "Civ. Code Art. 1334",
+              "autoEvidence": []
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "grant_promotion",
-          "text": "To order the Respondent Institution to grant the promotion due to the Appellant."
+          "id": "prop_relief_establish_servitude",
+          "text": "በተጠሪው ንብረት ላይ የመተላለፊያ መብት (Servitude of Right of Way) የሚቋቋም ፍርድ እንዲሰጥ። (Judgment establishing a Servitude of Right of Way across the Respondent's property.)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "grant_salary_increment",
-          "text": "To order the payment of the denied salary increment, with retroactive effect."
-        },
-        {
-          "id": "refund_deductions",
-          "text": "To order the refund of any unlawfully deducted salary."
+          "id": "prop_relief_compensation_fee",
+          "text": "ዋናው ይዞታ በመተላለፊያው ለሚደርሰው ጉዳት ለአገልጋይ ይዞታ ፍትሃዊ ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order the Dominant Tenement to pay fair compensation to the Servient Tenement for the damage caused by the passage.)",
+          "citation": "Civ. Code Art. 1333",
+          "isDefault": true,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
-    "family_divorce_dispute": {
-      "documentTitle": "Statement of Claim for Dissolution of Marriage",
-      "jurisdictionText": "Art. 11(2) of Federal Courts Proc. 25/96 and Art. 76 of the Revised Family Code.",
+    {
+      "id": "property_possessory_disturbance",
+      "documentTitle": "የይዞታ መረበሽ እንዲቆም የክስ ማመልከቻ (Statement of Claim for Cessation of Disturbance of Possession)",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1148 (Art. 1148 of the Civil Code)",
+      "meta": {
+        "keywords": [
+          "possessory disturbance",
+          "interference",
+          "peaceful possession",
+          "የይዞታ መረበሽ",
+          "ጣልቃ ገብነት"
+        ],
+        "jurisdictionType": "Federal/Regional First Instance Court"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰው ይዞታዎን ሳይነጥቅ ነገር ግን ሰላማዊ ይዞታዎን በሚረብሹ ድርጊቶች (ለምሳሌ አጥር ማፍረስ፣ መተላለፊያ መዝጋት) ሲያስቸግርዎት፣ እነዚያን የረብሻ ድርጊቶች እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nረብሻው ከተጀመረበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ረብሻውን የሚያሳይ ማስረጃ (ፎቶ፣ ቪዲዮ) እና የምስክሮች ቃል።",
       "partyTitles": {
-        "applicant": "Plaintiff",
-        "respondent": "Defendant"
+        "applicant": "ከሳሽ (ባለይዞታ) (Plaintiff (Possessor))",
+        "respondent": "ተከሳሽ (ረባሽ) (Defendant (Disturber))"
       },
       "facts": {
         "group_1": {
-          "title": "Marriage Validity",
+          "title": "የይዞታ እውነታ (Fact of Possession)",
           "facets": [
             {
-              "id": "fact_marriage_existence",
-              "legalText": "The Plaintiff and Defendant were legally married on [Date].",
-              "citation": "RFC Art. 1",
-              "evidence": [
-                "CertificateofMarriage"
-              ]
+              "id": "prop_fact_actual_possession_disturbance",
+              "legalText": "ከሳሹ ንብረቱን/መብቱን በሰላም እና ቀጣይነት ባለው መልኩ ይዞት ነበር። (The Plaintiff was in peaceful and continuous possession of the property/right.)",
+              "citation": "Civ. Code Art. 1140",
+              "autoEvidence": ["TaxLandRentReceipts", "KebeleConfirmation"]
             }
           ]
         },
         "group_2": {
-          "title": "Grounds for Dissolution",
+          "title": "የረብሻ ድርጊት (Disturbance Act)",
           "facets": [
             {
-              "id": "fact_irretrievable_breakdown",
-              "legalText": "There are irreconcilable differences making the continuation of the marriage impossible.",
-              "citation": "RFC Art. 76",
-              "evidence": []
+              "id": "prop_fact_disturbance_act",
+              "legalText": "ተከሳሹ የከሳሽን ሰላማዊ ይዞታ የሚረብሹ የተወሰኑ ድርጊቶችን ፈጽሟል (ለምሳሌ አጥሮችን ማስወገድ፣ መዳረሻን መዝጋት)። (The Defendant has performed specific actions that interfere with the Plaintiff's peaceful possession (e.g., removing fences, obstructing access).)",
+              "citation": "Civ. Code Art. 1148",
+              "autoEvidence": [
+                "WitnessAffidavitsNuisance",
+                "PhotosVideoEvidence"
+              ]
             },
             {
-              "id": "fact_period_of_separation",
-              "legalText": "The parties have lived separately for a period exceeding [Number] months.",
-              "citation": "RFC Art. 81",
-              "evidence": []
-            }
-          ]
-        },
-        "group_3": {
-          "title": "Children & Custody",
-          "facets": [
-            {
-              "id": "fact_children_existence",
-              "legalText": "The marriage produced [Number] children.",
-              "citation": "RFC Art. 113",
-              "evidence": [
-                "BirthCertificate"
-              ]
+              "id": "prop_fact_timeliness_disturbance",
+              "legalText": "ይህ ክስ ረብሻው ከተጀመረ በሁለት ዓመት ጊዜ ውስጥ የቀረበ ነው። (This claim is filed within two years of the disturbance.)",
+              "citation": "Civ. Code Art. 1149(2)",
+              "autoEvidence": []
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "relief_dissolution",
-          "text": "Judgment dissolving the marriage between the Plaintiff and Defendant."
+          "id": "prop_relief_stop_disturbance",
+          "text": "ተከሳሹ ሁሉንም የረብሻ ድርጊቶች እንዲያቆም ትዕዛዝ እንዲሰጥ። (Order the Defendant to cease all acts of disturbance.)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "relief_custody",
-          "text": "Order granting sole/joint custody of the minor children to the Plaintiff."
-        },
-        {
-          "id": "relief_child_support",
-          "text": "Order for the Defendant to pay monthly child maintenance."
-        },
-        {
-          "id": "relief_property_partition",
-          "text": "Order for the liquidation and partition of common marital property."
+          "id": "prop_relief_restore_status",
+          "text": "ንብረቱ ከረብሻው በፊት ወደነበረበት ሁኔታ እንዲመለስ ትዕዛዝ እንዲሰጥ። (Order the restoration of the property to the state it was in before the disturbance.)",
+          "isDefault": false,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {}
     },
-    "family_divorce_agreement": {
-      "documentTitle": "Petition for Approval of Divorce by Mutual Consent",
-      "jurisdictionText": "Art. 77 of the Revised Family Code.",
+    {
+      "id": "app_servitude_temporary_passage",
+      "documentTitle": "ጊዜያዊ የመተላለፊያ ትዕዛዝ እንዲሰጥ አስገዳጅ ማመልከቻ (Application for Temporary Mandatory Order to Grant Passage)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (Injunction) እና የፍትሐ ብሔር ሕግ አንቀጽ 1332 (Necessity). (Art. 154 CPC & Art. 1332 Civil Code)",
+      "meta": {
+        "keywords": [
+          "temporary injunction",
+          "mandatory order",
+          "passage",
+          "servitude",
+          "ጊዜያዊ እግድ",
+          "የመንገድ መብት"
+        ],
+        "jurisdictionType": "Court Handling the Main Case"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው፣ ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
       "partyTitles": {
-        "applicant": "First Petitioner",
-        "respondent": "Second Petitioner"
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
       },
       "facts": {
         "group_1": {
-          "title": "Consent Details",
+          "title": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
           "facets": [
             {
-              "id": "fact_mutual_agreement",
-              "legalText": "Both parties have voluntarily agreed to dissolve their marriage.",
-              "citation": "RFC Art. 77",
-              "evidence": [
-                "CertificateofMarriage"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Terms of Agreement",
-          "facets": [
+              "id": "prop_fact_complete_blockade",
+              "legalText": "ተጠሪው የአመልካችን ብቸኛ መውጫ ወደ ህዝብ መንገድ ሙሉ በሙሉ ዘግቷል። (The Respondent has completely blocked the Applicant's only access to the public road.)",
+              "citation": "",
+              "autoEvidence": ["PhotosVideoEvidence"]
+            },
             {
-              "id": "fact_agreement_doc",
-              "legalText": "The parties have prepared a comprehensive agreement regarding the division of property and custody of children.",
-              "citation": "RFC Art. 82",
-              "evidence": [
-                "ListofCommonProperty"
-              ]
+              "id": "prop_fact_imminent_damage",
+              "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል፣ ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል። (The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.)",
+              "citation": "",
+              "autoEvidence": []
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "relief_approve_agreement",
-          "text": "Order approving the divorce agreement and dissolving the marriage."
+          "id": "prop_relief_grant_temporary_access",
+          "text": "ዋናው የመተላለፊያ መብት ክስ ላይ የመጨረሻ ውሳኔ እስከሚሰጥ ድረስ ተጠሪው ለአመልካች ጊዜያዊ መተላለፊያ እንዲሰጥ ትዕዛዝ እንዲሰጥ። (Order the Respondent to grant temporary passage to the Applicant pending the final decision on the main servitude claim.)",
+          "isDefault": true,
+          "isDynamic": false
         }
-      ]
-    },
-    "family_paternity_claim": {
-      "documentTitle": "Statement of Claim for Judicial Declaration of Paternity",
-      "jurisdictionText": "Art. 143 of the Revised Family Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Child/Guardian)",
-        "respondent": "Defendant (Alleged Father)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Sexual Relations",
-          "facets": [
-            {
-              "id": "fact_sexual_intercourse",
-              "legalText": "The mother and the Defendant had sexual relations during the legal period of conception.",
-              "citation": "RFC Art. 143",
-              "evidence": []
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Possession of Status",
-          "facets": [
-            {
-              "id": "fact_possession_status",
-              "legalText": "The Defendant has treated the child as his own in public and private spheres.",
-              "citation": "RFC Art. 136",
-              "evidence": [
-                "WitnessStatements"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_declare_paternity",
-          "text": "Judgment declaring the Defendant is the biological father of the child."
-        },
-        {
-          "id": "relief_reimbursement",
-          "text": "Order for reimbursement of expenses related to birth and maintenance."
-        }
-      ]
-    },
-    "app_temporary_maintenance": {
-      "documentTitle": "Application for Order of Provisional Maintenance",
-      "jurisdictionText": "Art. 83(2) of the Revised Family Code & Art. 154 Civil Procedure Code.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Urgency & Need",
-          "facets": [
-            {
-              "id": "fact_pendency_of_suit",
-              "legalText": "A main suit for divorce is currently pending between the parties.",
-              "citation": "RFC Art. 83",
-              "evidence": []
-            },
-            {
-              "id": "fact_immediate_need",
-              "legalText": "The Applicant has no independent income to support themselves/the children during the litigation.",
-              "citation": "RFC Art. 106",
-              "evidence": [
-                "ProofofIncome"
-              ]
-            },
-            {
-              "id": "fact_ability_to_pay",
-              "legalText": "The Respondent has sufficient income to provide provisional support.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_prov_maintenance",
-          "text": "Order the Respondent to pay [Amount] ETB monthly until final judgment."
-        }
-      ]
-    },
-    "app_property_preservation": {
-      "documentTitle": "Application for Attachment and Preservation of Common Property",
-      "jurisdictionText": "Art. 154 Civil Procedure Code & Art. 83 Revised Family Code.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Risk of Dissipation",
-          "facets": [
-            {
-              "id": "fact_intent_to_defraud",
-              "legalText": "There is a reasonable apprehension that the Respondent is attempting to sell, transfer, or hide common marital assets.",
-              "citation": "CPC Art. 154",
-              "evidence": []
-            },
-            {
-              "id": "fact_common_ownership",
-              "legalText": "The property in question is common property acquired during the marriage.",
-              "citation": "RFC Art. 62",
-              "evidence": [
-                "ListofCommonProperty"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_injunction_transfer",
-          "text": "Order restraining the Respondent from transferring or selling specific assets."
-        },
-        {
-          "id": "relief_freeze_accounts",
-          "text": "Order freezing the joint bank accounts pending final partition."
-        }
-      ]
-    },
-    "app_protective_order": {
-      "documentTitle": "Application for Urgent Protective Order",
-      "jurisdictionText": "Art. 154 Civil Procedure Code (Inherent Power) & Criminal Code References.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "Respondent"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Safety & Harm",
-          "facets": [
-            {
-              "id": "fact_imminent_danger",
-              "legalText": "The Applicant faces immediate physical danger from the Respondent.",
-              "citation": "",
-              "evidence": [
-                "PoliceReportDomesticViolence"
-              ]
-            },
-            {
-              "id": "fact_balance_convenience",
-              "legalText": "The harm to the Applicant if the order is not granted outweighs any inconvenience to the Respondent.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_vacate_home",
-          "text": "Order the Respondent to temporarily vacate the matrimonial home."
-        },
-        {
-          "id": "relief_restrain_contact",
-          "text": "Order restraining the Respondent from coming within [Distance] meters of the Applicant."
-        }
-      ]
-    },
-    "family_post_judgment_partition": {
-      "documentTitle": "Application for Liquidation and Partition of Common Property",
-      "jurisdictionText": "Art. 85 & 90 of the Revised Family Code and Art. 219 of the Civil Procedure Code (Execution Proceedings).",
-      "partyTitles": {
-        "applicant": "Decree Holder (Applicant)",
-        "respondent": "Judgment Debtor (Respondent)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Procedural History",
-          "facets": [
-            {
-              "id": "fact_prior_dissolution",
-              "legalText": "This Honorable Court has already rendered a judgment dissolving the marriage between the parties under this file number.",
-              "citation": "Civil Procedure Code Art. 182",
-              "evidence": [
-                "CopyofDivorceJudgment"
-              ]
-            },
-            {
-              "id": "fact_custody_settled",
-              "legalText": "Issues regarding child custody and maintenance have already been adjudicated.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "group_2": {
-        "title": "Identification of Property",
-        "facets": [
-          {
-            "id": "fact_existence_common_property",
-            "legalText": "The parties acquired movable and immovable property during the existence of the marriage which constitutes Common Property.",
-            "citation": "RFC Art. 62",
-            "evidence": [
-              "ListofCommonProperty",
-              "TitleDeedsLibrec"
-            ]
-          },
-          {
-            "id": "fact_property_possession",
-            "legalText": "The property is currently in the sole possession/control of the Respondent/Applicant.",
-            "citation": "",
-            "evidence": []
-          }
-        ]
-      },
-      "group_3": {
-        "title": "Restitution of Personal Property (Pre-Partition)",
-        "facets": [
-          {
-            "id": "fact_personal_property_claim",
-            "legalText": "The Applicant possesses proof of personal property owned prior to the marriage or acquired by succession/donation, which must be withdrawn before partition.",
-            "citation": "RFC Art. 57 & 86",
-            "evidence": [
-              "ProofofInheritanceDonation",
-              "Pre-maritalOwnershipDocuments"
-            ]
-          }
-        ]
-      },
-      "group_4": {
-        "title": "Valuation & Dispute",
-        "facets": [
-          {
-            "id": "fact_dispute_valuation",
-            "legalText": "The parties are unable to agree on the value or mode of partition of the assets.",
-            "citation": "",
-            "evidence": []
-          },
-          {
-            "id": "fact_expert_need",
-            "legalText": "The complexity of the assets (e.g., business shares, real estate) requires professional valuation.",
-            "citation": "",
-            "evidence": []
-          }
-        ]
-      },
-      "reliefs": [
-        {
-          "id": "relief_appoint_liquidator",
-          "text": "Order the appointment of a court-verified expert/liquidator to inventory and value the common property."
-        },
-        {
-          "id": "relief_withdraw_personal",
-          "text": "Order the restitution/withdrawal of the Applicant's personal property [List Items] prior to partition."
-        },
-        {
-          "id": "relief_partition_equal",
-          "text": "Order the remaining common property be divided equally (50/50) between the parties."
-        },
-        {
-          "id": "relief_auction_sale",
-          "text": "Order the sale by auction of indivisible property and the division of the proceeds."
-        }
-      ]
-    },
-    "succession_heirship_declaration": {
-      "documentTitle": "Application for Declaration of Heirship",
-      "jurisdictionText": "Art. 996 of the Civil Code & Civil Procedure Code.",
-      "partyTitles": {
-        "applicant": "Applicant / Interested Parties",
-        "respondent": "Public Notice"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Fact of Death",
-          "facets": [
-            {
-              "id": "fact_deceased_identity",
-              "legalText": "The Deceased, [Name], passed away on [Date] at [Place].",
-              "citation": "Civ. Code Art. 826",
-              "evidence": [
-                "DeathCertificate"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Relationship (Intestate Rules)",
-          "facets": [
-            {
-              "id": "fact_relationship_descendant",
-              "legalText": "The Applicants are the children/descendants of the deceased.",
-              "citation": "Civ. Code Art. 842",
-              "evidence": []
-            },
-            {
-              "id": "fact_no_will",
-              "legalText": "The Deceased left no will, necessitating an intestate succession.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        },
-        "group_3": {
-          "title": "Witnesses",
-          "facets": [
-            {
-              "id": "fact_witness_testimony",
-              "legalText": "Three witnesses are present to testify that the Applicants are the only known heirs.",
-              "citation": "",
-              "evidence": [
-                "WitnessAffidavitsSuccession"
-              ]
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_declare_heirs",
-          "text": "Judgment declaring the Applicants as the sole legal heirs of the Deceased."
-        },
-        {
-          "id": "relief_certificate_issuance",
-          "text": "Order the issuance of a Certificate of Heirship."
-        }
-      ]
-    },
-    "succession_probate_will": {
-      "documentTitle": "Application for Probate of Will",
-      "jurisdictionText": "Art. 881 (Public), 885 (Holographic) of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Petitioner (Executor/Beneficiary)",
-        "respondent": "N/A"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Validity of Will",
-          "facets": [
-            {
-              "id": "fact_will_existence",
-              "legalText": "The Deceased left a valid will dated [Date].",
-              "citation": "",
-              "evidence": [
-                "WillTestament"
-              ]
-            },
-            {
-              "id": "fact_formality_public",
-              "legalText": "The will was read in the presence of four witnesses and the Registrar.",
-              "citation": "Civ. Code Art. 881",
-              "evidence": []
-            },
-            {
-              "id": "fact_formality_holographic",
-              "legalText": "The will is entirely written, dated, and signed by the hand of the deceased.",
-              "citation": "Civ. Code Art. 885",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_validate_will",
-          "text": "Judgment declaring the Will to be valid and the true last wish of the Deceased."
-        },
-        {
-          "id": "relief_appoint_executor",
-          "text": "Order confirming the Petitioner as the Executor of the will."
-        }
-      ]
-    },
-    "succession_partition_estate": {
-      "documentTitle": "Application for Partition of Hereditary Estate",
-      "jurisdictionText": "Art. 1060 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Plaintiff (Heir)",
-        "respondent": "Defendant (Co-Heir)"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Co-ownership",
-          "facets": [
-            {
-              "id": "fact_heirship_established",
-              "legalText": "The parties have been legally declared as co-heirs.",
-              "citation": "Civ. Code Art. 1060",
-              "evidence": [
-                "CertificateofHeirship"
-              ]
-            }
-          ]
-        },
-        "group_2": {
-          "title": "Estate Status",
-          "facets": [
-            {
-              "id": "fact_liquidation_complete",
-              "legalText": "The debts of the estate have been paid, and the assets are ready for division.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_disagreement",
-              "legalText": "The Co-heirs cannot agree on a voluntary division of the assets.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_partition_kind",
-          "text": "Order the physical division of the property in kind among the heirs."
-        },
-        {
-          "id": "relief_partition_sale",
-          "text": "Order the sale of the property and division of proceeds (if division in kind is impossible)."
-        }
-      ]
-    },
-    "app_appoint_liquidator": {
-      "documentTitle": "Application for Appointment of Liquidator",
-      "jurisdictionText": "Art. 950 of the Civil Code.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "N/A"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Necessity",
-          "facets": [
-            {
-              "id": "fact_estate_complexity",
-              "legalText": "The estate involves complex debts and multiple assets requiring professional management.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_no_nominee",
-              "legalText": "The will did not nominate an executor, or the heirs cannot agree on one.",
-              "citation": "Civ. Code Art. 950",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_appoint_official",
-          "text": "Order the appointment of a neutral Liquidator to administer the estate."
-        }
-      ]
-    },
-    "app_seal_estate": {
-      "documentTitle": "Application for Affixing of Seals",
-      "jurisdictionText": "Art. 946 of the Civil Code & Civil Procedure Code.",
-      "partyTitles": {
-        "applicant": "Applicant",
-        "respondent": "N/A"
-      },
-      "facts": {
-        "group_1": {
-          "title": "Urgency",
-          "facets": [
-            {
-              "id": "fact_risk_misappropriation",
-              "legalText": "There is an imminent risk that movables or documents may be removed or hidden.",
-              "citation": "Civ. Code Art. 946",
-              "evidence": []
-            },
-            {
-              "id": "fact_minor_heirs",
-              "legalText": "There are minor heirs whose interests require protection.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "relief_affix_seals",
-          "text": "Order the court registrar to affix official seals on the deceased's property/safe."
-        }
-      ]
+      ],
+      "calculations": {}
     }
-  }
+  ]
 }

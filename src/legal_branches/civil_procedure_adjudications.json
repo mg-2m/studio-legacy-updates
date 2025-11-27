@@ -18,49 +18,43 @@
         "applicant": "ማሻሻያ ጠያቂ (ወገን) (Applicant/Party Seeking Amendment)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
-          "facets": [
-            {
-              "id": "civ_proc_fact_amendment_necessary_for_justice",
-              "legalText": "ማሻሻያው በወገኖች መካከል እውነተኛውን የክርክር ጥያቄ ለመወሰን እና የፍትሕ ዓላማን ለማሳካት አስፈላጊ ነው። (The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice.)",
-              "citation": "C.P.C. Art. 94(2)",
-              "autoEvidence": [
-                "OriginalPleadingCopy",
-                "DraftAmendment"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_amendment_no_prejudice",
-              "legalText": "ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒውን ወገን በወጪ ሊካስ የማይችል ጉዳት አያስከትልም። (The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs.)",
-              "citation": "C.P.C. Art. 94(1)",
-              "autoEvidence": [
-                "OriginalPleadingCopy"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_amendment_due_to_clerical_error",
-              "legalText": "ማሻሻያው በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአጻጻፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው። (The amendment is necessary to correct a clerical, computational, or drafting error in the original pleading.)",
-              "citation": "C.P.C. Art. 94(1)",
-              "autoEvidence": [
-                "DraftAmendment"
-              ]
-            }
+      "facts": [
+        {
+          "id": "civ_proc_fact_amendment_necessary_for_justice",
+          "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
+          "legalText": "ማሻሻያው በወገኖች መካከል እውነተኛውን የክርክር ጥያቄ ለመወሰን እና የፍትሕ ዓላማን ለማሳካት አስፈላጊ ነው። (The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice.)",
+          "citation": "C.P.C. Art. 94(2)",
+          "autoEvidence": [
+            "OriginalPleadingCopy",
+            "DraftAmendment"
           ]
         },
-        "group_2": {
-          "title": "ሥነ ሥርዓት ጊዜ (Procedural Timing)",
-          "facets": [
-            {
-              "id": "civ_proc_fact_amendment_before_judgment",
-              "legalText": "የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት ቀርቧል። (The application for amendment is being made before the court has delivered its final judgment.)",
-              "citation": "C.P.C. Art. 94(1)",
-              "autoEvidence": []
-            }
+        {
+          "id": "civ_proc_fact_amendment_no_prejudice",
+          "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
+          "legalText": "ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒውን ወገን በወጪ ሊካስ የማይችል ጉዳት አያስከትልም። (The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs.)",
+          "citation": "C.P.C. Art. 94(1)",
+          "autoEvidence": [
+            "OriginalPleadingCopy"
           ]
+        },
+        {
+          "id": "civ_proc_fact_amendment_due_to_clerical_error",
+          "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
+          "legalText": "ማሻሻያው በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአጻጻፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው። (The amendment is necessary to correct a clerical, computational, or drafting error in the original pleading.)",
+          "citation": "C.P.C. Art. 94(1)",
+          "autoEvidence": [
+            "DraftAmendment"
+          ]
+        },
+        {
+          "id": "civ_proc_fact_amendment_before_judgment",
+          "label": "ሥነ ሥርዓት ጊዜ (Procedural Timing)",
+          "legalText": "የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት ቀርቧል። (The application for amendment is being made before the court has delivered its final judgment.)",
+          "citation": "C.P.C. Art. 94(1)",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "civ_proc_relief_grant_amendment",
@@ -89,35 +83,33 @@
         "applicant": "ጣልቃ ገቢ (Intervener)",
         "respondent": "የመጀመሪያ ተከራካሪ ወገኖች (Original Parties)"
       },
-      "facts": {
-        "group_1": {
-          "title": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
-          "facets": [
-            {
-              "id": "civ_proc_fact_direct_legal_interest",
-              "legalText": "ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል። (The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment.)",
-              "citation": "C.P.C. Art. 40(1)",
-              "autoEvidence": [
-                "IntervenerStatement"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_common_question_of_law_or_fact",
-              "legalText": "ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል። (The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise.)",
-              "citation": "C.P.C. Art. 40(1)",
-              "autoEvidence": [
-                "IntervenerStatement"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_prevent_multiplicity_of_suits",
-              "legalText": "ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል። (Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter.)",
-              "citation": "",
-              "autoEvidence": []
-            }
+      "facts": [
+        {
+          "id": "civ_proc_fact_direct_legal_interest",
+          "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
+          "legalText": "ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል። (The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment.)",
+          "citation": "C.P.C. Art. 40(1)",
+          "autoEvidence": [
+            "IntervenerStatement"
           ]
+        },
+        {
+          "id": "civ_proc_fact_common_question_of_law_or_fact",
+          "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
+          "legalText": "ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል። (The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise.)",
+          "citation": "C.P.C. Art. 40(1)",
+          "autoEvidence": [
+            "IntervenerStatement"
+          ]
+        },
+        {
+          "id": "civ_proc_fact_prevent_multiplicity_of_suits",
+          "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
+          "legalText": "ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል። (Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter.)",
+          "citation": "",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "civ_proc_relief_grant_intervention",
@@ -146,44 +138,44 @@
         "applicant": "ማካተት የሚፈልግ ተከሳሽ (Defendant Seeking Joinder)",
         "respondent": "በክሱ እንዲካተት የተፈለገው ሶስተኛ ወገን (Third Party to be Joined)"
       },
-      "facts": {
-        "group_1": {
-          "title": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
-          "facets": [
-            {
-              "id": "civ_proc_fact_right_to_indemnity",
-              "legalText": "ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው። (The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant.)",
-              "citation": "C.P.C. Art. 41(1)(a)",
-              "autoEvidence": [
-                "ThirdPartyNotice"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_right_to_contribution",
-              "legalText": "ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው። (The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim.)",
-              "citation": "C.P.C. Art. 41(1)(a)",
-              "autoEvidence": [
-                "ThirdPartyNotice"
-              ],
-              "mutexGroup": "contribution_mutex"
-            },
-            {
-              "id": "civ_proc_fact_same_issue_arising",
-              "legalText": "በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው። (The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant.)",
-              "citation": "C.P.C. Art. 41(1)(b)",
-              "autoEvidence": [
-                "ThirdPartyNotice"
-              ]
-            }
-          ]
+      "facts": [
+        {
+          "id": "civ_proc_fact_right_to_indemnity",
+          "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
+          "legalText": "ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው። (The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant.)",
+          "citation": "C.P.C. Art. 41(1)(a)",
+          "autoEvidence": [
+            "ThirdPartyNotice"
+          ],
+          "mutexGroup": "indemnity_contribution"
+        },
+        {
+          "id": "civ_proc_fact_right_to_contribution",
+          "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
+          "legalText": "ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው። (The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim.)",
+          "citation": "C.P.C. Art. 41(1)(a)",
+          "autoEvidence": [
+            "ThirdPartyNotice"
+          ],
+          "mutexGroup": "indemnity_contribution"
+        },
+        {
+          "id": "civ_proc_fact_same_issue_arising",
+          "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
+          "legalText": "በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው። (The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant.)",
+          "citation": "C.P.C. Art. 41(1)(b)",
+          "autoEvidence": [
+            "ThirdPartyNotice"
+          ],
+          "mutexGroup": "indemnity_contribution"
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "civ_proc_relief_grant_third_party_notice",
-          "text": "በ[ሶስተኛ ወገን ስም] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ። (To grant leave to serve a third-party notice on [Name of Third Party] and join them as a third-party defendant.)",
+          "text": "በ [thirdPartyName] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ። (To grant leave to serve a third-party notice on [thirdPartyName] and join them as a third-party defendant.)",
           "isDefault": true,
-          "isDynamic": true
+          "isDynamic": false
         }
       ],
       "calculations": {}
@@ -207,48 +199,42 @@
         "applicant": "ተቃዋሚ / በሌሉበት የተፈረደበት ወገን (Objector / Defaulting Party)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
-          "facets": [
-            {
-              "id": "civ_proc_fact_no_proper_service",
-              "legalText": "ፍрዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
-              "citation": "C.P.C. Art. 78(1)(a)",
-              "autoEvidence": [
-                "ObjectionGroundsMemo"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_sufficient_cause_for_default",
-              "legalText": "ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ። (The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause.)",
-              "citation": "C.P.C. Art. 78(1)(b)",
-              "autoEvidence": [
-                "ObjectionGroundsMemo"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_absence_of_jurisdiction",
-              "legalText": "ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው። (The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree.)",
-              "citation": "C.P.C. Art. 5(2)",
-              "autoEvidence": [
-                "ObjectionGroundsMemo"
-              ]
-            }
+      "facts": [
+        {
+          "id": "civ_proc_fact_no_proper_service",
+          "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
+          "legalText": "ፍрዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
+          "citation": "C.P.C. Art. 78(1)(a)",
+          "autoEvidence": [
+            "ObjectionGroundsMemo"
           ]
         },
-        "group_2": {
-          "title": "ሥነ ሥርዓት ጊዜ (Procedural Timing)",
-          "facets": [
-            {
-              "id": "civ_proc_fact_objection_timely_filed",
-              "legalText": "ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ፍርዱ ከታወቀ 15 ቀናት) ቀርቧል። (The objection is filed within the period prescribed by law (15 days from knowledge of the decree).)",
-              "citation": "C.P.C. Art. 79",
-              "autoEvidence": []
-            }
+        {
+          "id": "civ_proc_fact_sufficient_cause_for_default",
+          "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
+          "legalText": "ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ። (The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause.)",
+          "citation": "C.P.C. Art. 78(1)(b)",
+          "autoEvidence": [
+            "ObjectionGroundsMemo"
           ]
+        },
+        {
+          "id": "civ_proc_fact_absence_of_jurisdiction",
+          "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
+          "legalText": "ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው። (The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree.)",
+          "citation": "C.P.C. Art. 5(2)",
+          "autoEvidence": [
+            "ObjectionGroundsMemo"
+          ]
+        },
+        {
+          "id": "civ_proc_fact_objection_timely_filed",
+          "label": "ሥነ ሥርዓት ጊዜ (Procedural Timing)",
+          "legalText": "ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ፍርዱ ከታወቀ 15 ቀናት) ቀርቧል። (The objection is filed within the period prescribed by law (15 days from knowledge of the decree).)",
+          "citation": "C.P.C. Art. 79",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "civ_proc_relief_set_aside_judgment",
@@ -277,48 +263,42 @@
         "applicant": "ዳግም እንዲታይለት ጠያቂ (Applicant for Review)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
-          "facets": [
-            {
-              "id": "civ_proc_fact_new_and_important_evidence",
-              "legalText": "አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል። (The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed.)",
-              "citation": "C.P.C. Art. 6(1)(a)",
-              "autoEvidence": [
-                "ReviewApplicationMemo"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_mistake_or_error_on_face",
-              "legalText": "በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)። (There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument.)",
-              "citation": "C.P.C. Art. 6(1)(b)",
-              "autoEvidence": [
-                "ReviewApplicationMemo"
-              ]
-            },
-            {
-              "id": "civ_proc_fact_other_sufficient_reason",
-              "legalText": "ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ። (There is any other sufficient reason analogous to the specified grounds justifying a review.)",
-              "citation": "C.P.C. Art. 6(1)(c)",
-              "autoEvidence": [
-                "ReviewApplicationMemo"
-              ]
-            }
+      "facts": [
+        {
+          "id": "civ_proc_fact_new_and_important_evidence",
+          "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
+          "legalText": "አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል። (The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed.)",
+          "citation": "C.P.C. Art. 6(1)(a)",
+          "autoEvidence": [
+            "ReviewApplicationMemo"
           ]
         },
-        "group_2": {
-          "title": "ሥነ ሥርዓት ገደቦች (Procedural Constraints)",
-          "facets": [
-            {
-              "id": "civ_proc_fact_no_previous_appeal",
-              "legalText": "አመልካቹ ዳግም እንዲታይለት ለሚጠይቀው ፍርድ ከዚህ በፊት ይግባኝ አላቀረበም። (The Applicant has not previously filed an appeal against the judgment being sought for review.)",
-              "citation": "C.P.C. Art. 6(1)",
-              "autoEvidence": []
-            }
+        {
+          "id": "civ_proc_fact_mistake_or_error_on_face",
+          "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
+          "legalText": "በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)። (There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument.)",
+          "citation": "C.P.C. Art. 6(1)(b)",
+          "autoEvidence": [
+            "ReviewApplicationMemo"
           ]
+        },
+        {
+          "id": "civ_proc_fact_other_sufficient_reason",
+          "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
+          "legalText": "ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ። (There is any other sufficient reason analogous to the specified grounds justifying a review.)",
+          "citation": "C.P.C. Art. 6(1)(c)",
+          "autoEvidence": [
+            "ReviewApplicationMemo"
+          ]
+        },
+        {
+          "id": "civ_proc_fact_no_previous_appeal",
+          "label": "ሥነ ሥርዓት ገደቦች (Procedural Constraints)",
+          "legalText": "አመልካቹ ዳግም እንዲታይለት ለሚጠይቀው ፍርድ ከዚህ በፊት ይግባኝ አላቀረበም። (The Applicant has not previously filed an appeal against the judgment being sought for review.)",
+          "citation": "C.P.C. Art. 6(1)",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "civ_proc_relief_grant_review",

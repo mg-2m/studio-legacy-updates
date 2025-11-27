@@ -64,7 +64,8 @@
           "id": "crim_relief_acquittal_justification",
           "text": "To acquit the Defendant on the ground that the act was justified and therefore lawful. (ድርጊቱ ህጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -133,7 +134,8 @@
           "id": "crim_relief_acquittal_excuse",
           "text": "To acquit the Defendant on the grounds of non-culpability and order appropriate security or medical measures (Art. 50(3)). (ተከሳሹ በተጠያቂነት እጦት በነጻ እንዲሰናበት እና ተገቢ የጥበቃ ወይም የህክምና እርምጃ እንዲወሰድበት።)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -201,13 +203,15 @@
           "id": "crim_relief_acquittal_necessity",
           "text": "To acquit the Defendant on the ground that the act was justified by necessity and lawful. (ድርጊቱ በግዴታ ሕጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "crim_relief_mitigation_necessity",
           "text": "Alternatively, to mitigate the penalty due to the presence of a threatening situation that rendered the offense less culpable (mitigating circumstance). (በአማራጭ፣ ወንጀሉን በተጠያቂነት እንዲቀንስ በሚያስችል አስጊ ሁኔታ በመኖሩ ምክንያት ቅጣቱ እንዲቀልለት።)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}

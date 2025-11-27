@@ -214,9 +214,7 @@
     },
     "PropertyValuationReport": {
       "title": "Property Valuation Report",
-      "description": "(Optional/Later Stage) A report by a certified engineer or auditor estimating the value of the assets.",
-      "type": "object",
-      "properties": {}
+      "description": "(Optional/Later Stage) A report by a certified engineer or auditor estimating the value of the assets."
     },
     "TitleDeedsLibrec": {
       "title": "Title Deeds / Librec",
@@ -311,6 +309,22 @@
     "ExternalAuditReport": {
       "title": "External Audit Report",
       "description": "Report from a certified external auditor contradicting the MoR's findings."
+    },
+    "PoliceAccidentReport": {
+      "title": "Police/Traffic Accident Report",
+      "description": "Official documentation by police detailing the time, location, parties, and preliminary findings of a traffic or civil incident."
+    },
+    "MedicalExpenseReceipts": {
+      "title": "Medical Expense Receipts and Invoices",
+      "description": "Receipts, invoices, and payment confirmations for all medical, hospital, and rehabilitation services."
+    },
+    "DoctorAssessment": {
+      "title": "Medical Doctor's Assessment and Certificate",
+      "description": "A physician's certificate detailing the nature, extent, and duration of the injury, and prognosis for recovery or permanent disability."
+    },
+    "LostEarningProof": {
+      "title": "Proof of Lost Earnings (Salary Slips/Tax Docs)",
+      "description": "Documents showing previous income and the period during which the claimant was unable to work due to the injury."
     }
   },
   "templates": {
@@ -329,7 +343,9 @@
               "id": "fact_ownership_proof",
               "legalText": "The Plaintiff is the legal owner/holder of the immovable property situated at [Location].",
               "citation": "Civ. Code Art. 1204",
-              "evidence": ["TitleDeed"]
+              "evidence": [
+                "TitleDeed"
+              ]
             },
             {
               "id": "fact_chain_of_custody",
@@ -387,7 +403,10 @@
               "id": "fact_actual_possession",
               "legalText": "The Plaintiff was in peaceful and continuous possession of the property.",
               "citation": "Civ. Code Art. 1140",
-              "evidence": ["TaxLandRentReceipts", "KebeleConfirmation"]
+              "evidence": [
+                "TaxLandRentReceipts",
+                "KebeleConfirmation"
+              ]
             }
           ]
         },
@@ -431,7 +450,9 @@
               "id": "fact_defined_boundary",
               "legalText": "The legal boundary between the Plaintiff's and Defendant's plots is defined by the official Site Plan.",
               "citation": "",
-              "evidence": ["SitePlan"]
+              "evidence": [
+                "SitePlan"
+              ]
             }
           ]
         },
@@ -442,7 +463,9 @@
               "id": "fact_encroachment_act",
               "legalText": "The Defendant has constructed a wall/structure that crosses the boundary line by [Meters].",
               "citation": "",
-              "evidence": ["SurveyorsReport"]
+              "evidence": [
+                "SurveyorsReport"
+              ]
             }
           ]
         }
@@ -551,7 +574,10 @@
               "id": "fact_abnormal_degree",
               "legalText": "The inconvenience caused by the Defendant is abnormal and exceeds the level normally expected of the neighborhood.",
               "citation": "",
-              "evidence": ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
+              "evidence": [
+                "WitnessAffidavitsNuisance",
+                "PhotosVideoEvidence"
+              ]
             }
           ]
         },
@@ -594,7 +620,10 @@
               "id": "fact_property_enclaved",
               "legalText": "The Applicant's property has no adequate access to a public road.",
               "citation": "Civ. Code Art. 1332",
-              "evidence": ["SurveyorsReport", "SitePlan"]
+              "evidence": [
+                "SurveyorsReport",
+                "SitePlan"
+              ]
             },
             {
               "id": "fact_no_other_means",
@@ -654,7 +683,10 @@
               "id": "fact_disturbance_act",
               "legalText": "The Defendant has performed specific actions that interfere with the Plaintiff's peaceful possession (e.g., removing fences, obstructing access).",
               "citation": "Civ. Code Art. 1148",
-              "evidence": ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
+              "evidence": [
+                "WitnessAffidavitsNuisance",
+                "PhotosVideoEvidence"
+              ]
             },
             {
               "id": "fact_timeliness",
@@ -2316,7 +2348,9 @@
               "id": "fact_incapacity_medical",
               "legalText": "The Respondent suffers from a permanent mental illness/disability rendering them unable to manage their own affairs.",
               "citation": "Civ. Code Art. 339",
-              "evidence": ["MedicalBoardCertificate"]
+              "evidence": [
+                "MedicalBoardCertificate"
+              ]
             },
             {
               "id": "fact_risk_of_loss",
@@ -2365,7 +2399,10 @@
               "id": "fact_document_error",
               "legalText": "The Petitioner's [Birth Certificate/ID] contains an error, stating the date of birth is [Incorrect Date] instead of [Correct Date].",
               "citation": "",
-              "evidence": ["BirthMarriageCertificateVERA", "IdentityCard"]
+              "evidence": [
+                "BirthMarriageCertificateVERA",
+                "IdentityCard"
+              ]
             },
             {
               "id": "fact_proof_of_correctness",
@@ -2426,7 +2463,9 @@
               "id": "fact_public_notice_given",
               "legalText": "A public notice requesting information on the absent person was published in accordance with the law.",
               "citation": "",
-              "evidence": ["PublicNoticeOfAbsence"]
+              "evidence": [
+                "PublicNoticeOfAbsence"
+              ]
             }
           ]
         }
@@ -2490,7 +2529,9 @@
               "id": "fact_cause_ceased",
               "legalText": "The medical/physical condition that necessitated the interdiction has ceased, and the interdicted person has regained capacity.",
               "citation": "Civ. Code Art. 358",
-              "evidence": ["MedicalBoardCertificate"]
+              "evidence": [
+                "MedicalBoardCertificate"
+              ]
             }
           ]
         }
@@ -2533,7 +2574,10 @@
             {
               "id": "fact_erroneous_income_calc",
               "legalText": "The MoR erred by failing to recognize [Specific Deduction/Exemption].",
-              "evidence": ["AccountingRecords", "ExternalAuditReport"]
+              "evidence": [
+                "AccountingRecords",
+                "ExternalAuditReport"
+              ]
             },
             {
               "id": "fact_estimated_basis_wrong",
@@ -2573,7 +2617,9 @@
               "id": "fact_50_percent_deposit",
               "legalText": "The Taxpayer has deposited 50% of the disputed tax amount (excluding penalties/interest).",
               "citation": "FTAP Art. 88",
-              "evidence": ["PaymentReceiptsTaxCustoms"]
+              "evidence": [
+                "PaymentReceiptsTaxCustoms"
+              ]
             }
           ]
         },
@@ -2616,7 +2662,10 @@
             {
               "id": "fact_grounds_for_refund",
               "legalText": "The duty was refundable because [e.g., the goods were defective and re-exported, or the valuation was miscalculated].",
-              "evidence": ["ImportExportDeclarationSAD", "PaymentReceiptsTaxCustoms"]
+              "evidence": [
+                "ImportExportDeclarationSAD",
+                "PaymentReceiptsTaxCustoms"
+              ]
             }
           ]
         },
@@ -2696,6 +2745,188 @@
         {
           "id": "relief_refer_to_adr",
           "text": "Order the establishment of a joint committee or referral to a mediator to reach a binding settlement agreement."
+        }
+      ]
+    },
+    "tort_general_negligence_claim": {
+      "documentTitle": "Statement of Claim for Extra-Contractual Damages (Negligence)",
+      "jurisdictionText": "Arts. 2028-2061 of the Civil Code of 1960 (Liability arising out of fault).",
+      "partyTitles": {
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "The Causal Event & Negligence",
+          "facets": [
+            {
+              "id": "fact_fault_negligence_omission",
+              "legalText": "The Defendant committed a negligent act or omission that violated the general duty of care (Art. 2028).",
+              "citation": "Civil Code Art. 2028",
+              "evidence": [
+                "PoliceAccidentReport",
+                "WitnessStatements"
+              ]
+            },
+            {
+              "id": "fact_traffic_violation",
+              "legalText": "The fault arose from a specific breach of traffic laws or other legal/regulatory duty of caution.",
+              "citation": "Civil Code Art. 2029",
+              "evidence": [
+                "PoliceAccidentReport"
+              ]
+            },
+            {
+              "id": "fact_liability_for_another_person",
+              "legalText": "The Defendant is liable for the act of a minor, apprentice, or employee under their supervision or control (Art. 2085 et seq.).",
+              "citation": "Civil Code Art. 2085",
+              "evidence": [
+                "WitnessStatements",
+                "PoliceAccidentReport"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "The Damage Sustained",
+          "facets": [
+            {
+              "id": "fact_bodily_injury_damage",
+              "legalText": "The Plaintiff sustained bodily injury and incurred expenses for treatment, hospitalization, and rehabilitation.",
+              "citation": "Civil Code Art. 2035",
+              "evidence": [
+                "MedicalExpenseReceipts",
+                "DoctorAssessment"
+              ]
+            },
+            {
+              "id": "fact_property_damage_loss",
+              "legalText": "The Plaintiff's property (e.g., vehicle, structure) was damaged or destroyed, requiring repair or replacement.",
+              "citation": "Civil Code Art. 2035",
+              "evidence": [
+                "PropertyValuationReport",
+                "PoliceAccidentReport"
+              ]
+            },
+            {
+              "id": "fact_moral_damage_pain",
+              "legalText": "The Plaintiff suffered moral damage, including pain and suffering, emotional distress, and loss of amenity.",
+              "citation": "Civil Code Art. 2036",
+              "evidence": [
+                "DoctorAssessment",
+                "WitnessStatements"
+              ]
+            }
+          ]
+        },
+        "group_3": {
+          "title": "Causation & Foreseeability",
+          "facets": [
+            {
+              "id": "fact_direct_causation",
+              "legalText": "There is a direct and certain causal link between the Defendant's fault and the damage sustained by the Plaintiff (Art. 2034).",
+              "citation": "Civil Code Art. 2034",
+              "evidence": [
+                "PoliceAccidentReport",
+                "DoctorAssessment"
+              ]
+            },
+            {
+              "id": "fact_mitigation_of_damages",
+              "legalText": "The Plaintiff has taken reasonable steps to mitigate and reduce the extent of the damages sustained.",
+              "citation": "Civil Code Art. 2043",
+              "evidence": [
+                "MedicalExpenseReceipts",
+                "PropertyValuationReport"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_medical_expenses",
+          "text": "To order the Defendant to pay all costs incurred for medical treatment, hospital stay, and rehabilitation, in the amount of Birr [AMOUNT].",
+          "isDefault": true
+        },
+        {
+          "id": "relief_property_repair_cost",
+          "text": "To order the Defendant to pay the cost of repairing/replacing the damaged property, in the amount of Birr [AMOUNT].",
+          "isDefault": true
+        },
+        {
+          "id": "relief_lost_earnings",
+          "text": "To order the Defendant to pay compensation for lost earnings and future loss of income due to permanent incapacity, in the amount of Birr [AMOUNT].",
+          "isDefault": true
+        },
+        {
+          "id": "relief_moral_damages",
+          "text": "To award the Plaintiff compensation for moral damage (pain, suffering, and distress) in the amount of Birr [AMOUNT].",
+          "isDefault": true
+        }
+      ]
+    },
+    "tort_strict_liability_buildings": {
+      "documentTitle": "Statement of Claim for Damages (Strict Liability for Buildings)",
+      "jurisdictionText": "Art. 2068 of the Civil Code of 1960 (Liability of the owner of a building).",
+      "partyTitles": {
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Owner of the Building (የህንፃው ባለቤት)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Basis for Strict Liability",
+          "facets": [
+            {
+              "id": "fact_building_owner_status",
+              "legalText": "The Respondent is the owner of the building or structure from which the damage originated.",
+              "citation": "Civil Code Art. 2068",
+              "evidence": []
+            },
+            {
+              "id": "fact_damage_caused_by_ruin",
+              "legalText": "The damage was caused by the total or partial ruin of the building, which was due to lack of repair or a defect in construction.",
+              "citation": "Civil Code Art. 2068",
+              "evidence": [
+                "WitnessStatements",
+                "PropertyValuationReport"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Damage & Causation",
+          "facets": [
+            {
+              "id": "fact_bodily_injury_building",
+              "legalText": "The Plaintiff sustained bodily injury as a direct result of the building's ruin.",
+              "citation": "Civil Code Art. 2068 & 2035",
+              "evidence": [
+                "MedicalExpenseReceipts",
+                "DoctorAssessment"
+              ]
+            },
+            {
+              "id": "fact_property_damage_building",
+              "legalText": "The Plaintiff's property was damaged as a direct result of the building's ruin.",
+              "citation": "Civil Code Art. 2068 & 2035",
+              "evidence": [
+                "PropertyValuationReport"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_building_repair_cost",
+          "text": "To order the Defendant to pay the cost of repairing the resulting property damage, in the amount of Birr [AMOUNT].",
+          "isDefault": true
+        },
+        {
+          "id": "relief_building_medical_expenses",
+          "text": "To order the Defendant to pay all costs incurred for bodily injury and treatment, in the amount of Birr [AMOUNT].",
+          "isDefault": true
         }
       ]
     }

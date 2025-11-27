@@ -1,13 +1,14 @@
 
-
 "use client";
 
 import React, { useReducer, useEffect, useCallback } from 'react';
-import type { AppState, Fact } from '@/lib/types';
+import type { AppState, Fact, Calculation } from '@/lib/types';
 import { INITIAL_STATE, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, TEMPLATE_DATA, EVIDENCE_REGISTRY } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
+import { differenceInDays, parseISO } from 'date-fns';
+
 
 import MainLayout from '@/components/main-layout';
 
@@ -24,6 +25,7 @@ type Action =
   | { type: 'TOGGLE_MAINTENANCE'; payload: { checked: boolean } }
   | { type: 'UPDATE_MAINTENANCE'; payload: { key: string; value: any } }
   | { type: 'SET_MAINTENANCE_CONTEXT'; payload: string }
+  | { type: 'UPDATE_CALCULATION'; payload: { calcKey: string; field: string; value: any } }
   | { type: 'ADD_EVIDENCE'; payload: { type: 'Document' | 'Witness' | 'CourtOrder' } }
   | { type: 'REMOVE_EVIDENCE'; payload: { id: string } }
   | { type: 'UPDATE_EVIDENCE'; payload: { id: string; field: string; value: any } }
@@ -47,6 +49,28 @@ function getAutoLinkedEvidence(selectedFacts: Fact[]): Set<string> {
         });
     });
     return autoLinked;
+}
+
+// Formula Execution
+function executeFormula(formula: string, data: { [key: string]: any }): any {
+    const context = {
+        ...data,
+        differenceInDays: (date1: Date, date2: string | Date) => {
+            const d2 = typeof date2 === 'string' ? parseISO(date2) : date2;
+            return differenceInDays(date1, d2);
+        }
+    };
+    
+    const keys = Object.keys(context);
+    const values = Object.values(context);
+    
+    try {
+        const func = new Function(...keys, `return ${formula}`);
+        return func(...values);
+    } catch (e) {
+        console.error("Error executing formula:", e);
+        return 0; // Return 0 or some other default on error
+    }
 }
 
 
@@ -181,6 +205,23 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'SET_MAINTENANCE_CONTEXT':
       return { ...state, maintenance: { ...state.maintenance, context: action.payload } };
     
+    case 'UPDATE_CALCULATION': {
+        const { calcKey, field, value } = action.payload;
+        const currentTemplate = TEMPLATE_DATA[state.selectedSubTemplate];
+        const calcConfig = currentTemplate?.calculations?.[calcKey];
+        if (!calcConfig) return state;
+
+        const newCalcData: Calculation = { ...state.calculations[calcKey], [field]: value };
+        const newCalculations = { ...state.calculations, [calcKey]: newCalcData };
+
+        // Re-run formula calculation
+        calcConfig.outputs.forEach(output => {
+            newCalculations[calcKey][output.id] = executeFormula(calcConfig.formula, newCalculations[calcKey]);
+        });
+        
+        return { ...state, calculations: newCalculations };
+    }
+    
     case 'SET_AI_SUGGESTIONS': {
       const suggestedIds = action.payload.evidenceIds;
       const newSmartEvidence = { ...state.smartEvidence };
@@ -268,6 +309,22 @@ function appReducer(state: AppState, action: Action): AppState {
         const templateData = TEMPLATE_DATA[subTemplateId];
         if (!templateData) return state; // Safety check
 
+        // Initialize calculations for the new template
+        const newCalculations: { [key: string]: Calculation } = {};
+        if (templateData.calculations) {
+            for (const calcKey in templateData.calculations) {
+                const calcConfig = templateData.calculations[calcKey];
+                newCalculations[calcKey] = {};
+                calcConfig.inputs.forEach(input => {
+                    newCalculations[calcKey][input.id] = input.defaultValue;
+                });
+                // Perform initial calculation
+                calcConfig.outputs.forEach(output => {
+                    newCalculations[calcKey][output.id] = executeFormula(calcConfig.formula, newCalculations[calcKey]);
+                });
+            }
+        }
+        
         // Reset state relevant to the template
         return {
             ...state,
@@ -284,6 +341,7 @@ function appReducer(state: AppState, action: Action): AppState {
                 result: 0,
                 context: '',
             },
+            calculations: newCalculations,
         };
     }
 
@@ -406,5 +464,3 @@ export default function Home() {
     <MainLayout state={state} dispatch={dispatch} />
   );
 }
-
-    

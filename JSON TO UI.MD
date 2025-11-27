@@ -6,7 +6,7 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 
 ---
 
-## The 11 Foundational Rules
+## The 12 Foundational Rules
 
 ### 1. Header and Case Metadata
 - **1.1. Relevancy Check:** The "Bench/Division" dropdown MUST be filtered by and only show benches relevant to the selected "Court Tier".
@@ -36,7 +36,7 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 - **7.1. Relevancy Check:** Auto-linked evidence MUST be directly relevant to a selected fact. AI-suggested evidence MUST be relevant to the combination of selected facts.
 - **7.2. Exhaustive Rendering Check:** The UI must clearly distinguish between **Required (Auto-Linked)**, **AI-Suggested**, and **Manual** evidence. The final preview MUST render a clean, formatted list of all *active* evidence. Both document pages must end with the static verification/oath statements.
 
-### 8. Bilingual Consistency (Amharic First)
+### 8. Bilingual Consistency
 - **8.1. Relevancy Check:** N/A.
 - **8.2. Exhaustive Rendering Check:** All user-facing text sourced from the template data MUST be provided in a bilingual format, with Amharic appearing first: **"Amharic (English)"**. This includes:
     - Sidebar branch names and template titles (`template.label` and `subTemplate.label` in `src/lib/data.ts`).
@@ -61,3 +61,9 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 - **11.1. Placeholder-Driven UI:** The backend `legalText` for facts MUST utilize placeholders (e.g., `[Date]`, `[Amount]`, `[Name]`). The UI is required to parse these placeholders and dynamically render appropriate input fields (text, numbers, dates) when a fact is selected.
 - **11.2. Stateful Fact Data:** The application state must be capable of storing the user-provided values for each placeholder within a selected fact.
 - **11.3. Interactive Rendering:** The live preview must instantly update, replacing the placeholders in the fact's legal text with the user's input, achieving a true "what you see is what you get" experience for legal argument construction.
+
+### 12. Interactive Relief Calculation
+- **12.1. Backend Schema:** For templates requiring calculations (e.g., interest on a debt), the `*.json` file MUST contain a `calculations` object. This object defines the inputs (e.g., principal, interest rate), outputs, and the formula to be executed.
+- **12.2. Dynamic UI Rendering:** The UI MUST detect the presence of a `calculations` object for the selected template and dynamically render an interactive calculator widget in the "Reliefs" tab.
+- **12.3. Stateful Calculation:** The application state must store the user's input for the calculator.
+- **12.4. Interactive Preview:** The text of any relief marked with `isDynamic: true` MUST use placeholders (e.g., `{{principal}}`, `{{interestAmount}}`). The preview pane MUST instantly replace these placeholders with the calculated values from the UI widget.

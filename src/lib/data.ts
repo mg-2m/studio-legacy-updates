@@ -1,5 +1,5 @@
 
-import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
+import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
 import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning } from 'lucide-react';
 
 // Import the raw JSON data from the new modular files
@@ -114,7 +114,7 @@ export const DOCUMENT_ISSUERS = [
   
   // --- Vital Events, Civil Status & Documents ---
   "Vital Events Registration Agency (VERA) (የወሳኝ ኩነት ምዝገባ ኤጀንሲ)",
-  "Documents Authentication and Registration Service (DARA) (የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት)",
+  "Documents Authentication and Registration Service (DARS) (የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት)",
   "Immigration and Citizenship Service (የኢሚግሬሽን እና የዜግነት አገልግሎት)",
   
   // --- Economy, Trade & Finance ---
@@ -354,6 +354,18 @@ const initialTemplateId: string = TEMPLATES[0].id;
 const initialSubTemplateId: string = TEMPLATES[0].subTemplates[0].id;
 const initialTemplateData = TEMPLATE_DATA[initialSubTemplateId];
 
+const initialCalculations: { [key: string]: Calculation } = {};
+
+if (initialTemplateData.calculations) {
+    for (const calcKey in initialTemplateData.calculations) {
+        const calcConfig = initialTemplateData.calculations[calcKey];
+        initialCalculations[calcKey] = {};
+        calcConfig.inputs.forEach(input => {
+            initialCalculations[calcKey][input.id] = input.defaultValue;
+        });
+    }
+}
+
 
 export const INITIAL_STATE: AppState = {
   metadata: {
@@ -377,11 +389,10 @@ export const INITIAL_STATE: AppState = {
     result: 0,
     context: '',
   },
+  calculations: initialCalculations,
   evidence: [],
   smartEvidence: {},
   partyTitles: initialTemplateData.partyTitles,
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
-
-    

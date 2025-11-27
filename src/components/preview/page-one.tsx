@@ -25,7 +25,7 @@ const formatFactText = (fact: Fact): string => {
 };
 
 export default function PageOne({ state }: PageOneProps) {
-  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles, selectedReliefs, selectedSubTemplate } = state;
+  const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
   const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
   
   // Guard against missing template data during transition
@@ -48,15 +48,25 @@ export default function PageOne({ state }: PageOneProps) {
     both: '3. በራሴ እና በጠበቃዬ',
   };
 
-  const formatReliefText = (relief: Relief) => {
+  const formatReliefText = (relief: Relief): string => {
     let text = relief.text;
-    if (relief.id === 'maintenance' && maintenance.active) {
-        text = text.replace('{{{income}}}', maintenance.income.toString());
-        text = text.replace('{{{children}}}', maintenance.children.toString());
-        text = text.replace('{{{result}}}', maintenance.result.toFixed(2));
+
+    if (relief.isDynamic && currentTemplateData.calculations) {
+        // Collect all values from all calculators
+        const allCalcValues = Object.values(calculations).reduce((acc, curr) => ({ ...acc, ...curr }), {});
+
+        // Replace placeholders in the text
+        text = text.replace(/\{\{\s*(\w+)\s*\}\}/g, (match, placeholder) => {
+            const value = allCalcValues[placeholder as keyof typeof allCalcValues];
+            if (typeof value === 'number') {
+                return `<strong><u>${value.toFixed(2)}</u></strong>`;
+            }
+            return `<strong><u>${value || '______'}</u></strong>`;
+        });
     }
     return text;
   };
+
 
   const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
@@ -170,7 +180,7 @@ export default function PageOne({ state }: PageOneProps) {
           <p>ስለዚህ የተከበረው ፍርድ ቤት እንዲወስንልኝ የምጠይቀው፡</p>
           <ol className="list-decimal ml-5">
              {selectedReliefs
-                .filter(item => !(item.id === 'maintenance' && !maintenance.active))
+                .filter(item => !(item.id === 'relief_child_support' && !maintenance.active))
                 .map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: formatReliefText(item) }} />)}
           </ol>
         </div>

@@ -5,23 +5,106 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { TEMPLATE_DATA } from '@/lib/data';
-import type { AppState } from '@/lib/types';
-import { Gavel, Info, Plus, X } from 'lucide-react';
+import type { AppState, CalculationConfig } from '@/lib/types';
+import { Gavel, Info, Plus, X, BrainCircuit, Calendar as CalendarIcon } from 'lucide-react';
 import { Separator } from '../ui/separator';
 import { Button } from '../ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
 import { Textarea } from '../ui/textarea';
+import { Input } from '../ui/input';
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { cn } from '@/lib/utils';
+import { Calendar } from '../ui/calendar';
+import { format, parseISO } from 'date-fns';
 
 interface ReliefTabProps {
   state: AppState;
   dispatch: React.Dispatch<any>;
 }
 
+
+const ReliefCalculator: React.FC<{
+    calcKey: string;
+    config: CalculationConfig;
+    state: AppState;
+    dispatch: React.Dispatch<any>;
+}> = ({ calcKey, config, state, dispatch }) => {
+
+    const calcState = state.calculations[calcKey];
+
+    const handleInputChange = (field: string, value: any) => {
+        dispatch({ type: 'UPDATE_CALCULATION', payload: { calcKey, field, value } });
+    };
+
+    return (
+        <Card className="bg-blue-50/50 border-blue-200 dark:bg-blue-950/20">
+            <CardHeader>
+                <CardTitle className="text-blue-800 dark:text-blue-300 flex items-center gap-2">
+                    <BrainCircuit className="w-5 h-5"/>
+                    {config.title}
+                </CardTitle>
+                <CardDescription>{config.description}</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {config.inputs.map(input => (
+                        <div key={input.id} className="space-y-2">
+                            <Label htmlFor={`calc-${calcKey}-${input.id}`}>{input.label}</Label>
+                            {input.type === 'number' ? (
+                                <Input
+                                    id={`calc-${calcKey}-${input.id}`}
+                                    type="number"
+                                    placeholder={`e.g. ${input.defaultValue}`}
+                                    value={calcState[input.id] as number || ''}
+                                    onChange={(e) => handleInputChange(input.id, e.target.valueAsNumber)}
+                                />
+                            ) : (
+                                <Popover>
+                                  <PopoverTrigger asChild>
+                                    <Button
+                                      variant={"outline"}
+                                      className={cn(
+                                        "w-full justify-start text-left font-normal",
+                                        !calcState[input.id] && "text-muted-foreground"
+                                      )}
+                                    >
+                                      <CalendarIcon className="mr-2 h-4 w-4" />
+                                      {calcState[input.id] ? format(parseISO(calcState[input.id] as string), "PPP") : <span>Pick a date</span>}
+                                    </Button>
+                                  </PopoverTrigger>
+                                  <PopoverContent className="w-auto p-0">
+                                    <Calendar
+                                      mode="single"
+                                      selected={parseISO(calcState[input.id] as string)}
+                                      onSelect={(date) => handleInputChange(input.id, date?.toISOString().split('T')[0])}
+                                      initialFocus
+                                    />
+                                  </PopoverContent>
+                                </Popover>
+                            )}
+                        </div>
+                    ))}
+                </div>
+                 {config.outputs.map(output => (
+                    <div key={output.id} className="text-center rounded-lg border-2 border-dashed border-blue-400 bg-background p-4">
+                        <p className="text-sm text-muted-foreground">{output.label}</p>
+                        <p className="text-2xl font-bold text-foreground">
+                            {(calcState[output.id] as number || 0).toFixed(2)} ETB
+                        </p>
+                    </div>
+                ))}
+            </CardContent>
+        </Card>
+    );
+};
+
+
 export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
   const { maintenance, selectedReliefs, selectedSubTemplate } = state;
   const customReliefs = selectedReliefs.filter(r => r.isCustom);
-  const standardReliefs = TEMPLATE_DATA[selectedSubTemplate]?.reliefs || [];
-  const isMaintenanceApplicable = standardReliefs.some(r => r.id === 'relief_child_support');
+  const templateData = TEMPLATE_DATA[selectedSubTemplate];
+  const standardReliefs = templateData?.reliefs || [];
+  const calculationConfigs = templateData?.calculations;
 
   return (
     <div className="space-y-6">
@@ -33,23 +116,41 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
         </AlertDescription>
       </Alert>
       
+      {calculationConfigs && Object.entries(calculationConfigs).map(([key, config]) => (
+          <ReliefCalculator key={key} calcKey={key} config={config} state={state} dispatch={dispatch} />
+      ))}
+
+
       <div className="space-y-3">
         {standardReliefs.map(item => {
-          const isMaintenanceCheckbox = isMaintenanceApplicable && item.id === 'relief_child_support';
+          const isMaintenanceCheckbox = item.id === 'relief_child_support';
+          
+          if (templateData?.id === 'family_divorce_dispute' && isMaintenanceCheckbox) {
+             return (
+                <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
+                  <Checkbox
+                    id={`relief-${item.id}`}
+                    checked={maintenance.active}
+                    onCheckedChange={(checked) => dispatch({ type: 'TOGGLE_MAINTENANCE', payload: { checked: !!checked } })}
+                    className="mt-1"
+                  />
+                  <div className="grid gap-1.5 leading-none">
+                    <label htmlFor={`relief-${item.id}`} className="font-bold cursor-pointer">
+                      {item.text.split('(')[0]}
+                    </label>
+                    <p className="text-sm text-muted-foreground">{item.text}</p>
+                  </div>
+                </div>
+              );
+          }
 
           return (
             <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
               <Checkbox
                 id={`relief-${item.id}`}
-                checked={isMaintenanceCheckbox ? maintenance.active : selectedReliefs.some(sr => sr.id === item.id)}
-                onCheckedChange={(checked) => {
-                  if (isMaintenanceCheckbox) {
-                    dispatch({ type: 'TOGGLE_MAINTENANCE', payload: { checked: !!checked } });
-                  } else {
-                    dispatch({ type: 'TOGGLE_RELIEF', payload: { reliefId: item.id } });
-                  }
-                }}
-                disabled={item.isDefault && !isMaintenanceCheckbox}
+                checked={selectedReliefs.some(sr => sr.id === item.id)}
+                onCheckedChange={() => dispatch({ type: 'TOGGLE_RELIEF', payload: { reliefId: item.id } })}
+                disabled={item.isDefault && !item.isDynamic}
                 className="mt-1"
               />
               <div className="grid gap-1.5 leading-none">
@@ -94,5 +195,3 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
     </div>
   );
 }
-
-    

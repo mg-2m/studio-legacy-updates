@@ -32,6 +32,10 @@ export interface Maintenance {
   context?: string;
 }
 
+export interface Calculation {
+    [key: string]: number | string;
+}
+
 export interface SmartEvidenceData {
   credentialId: string;
   active: boolean;
@@ -93,6 +97,27 @@ export interface PartyTitles {
   respondent: string;
 }
 
+export interface CalculationInput {
+  id: string;
+  label: string;
+  type: 'number' | 'date';
+  defaultValue: number | string;
+}
+
+export interface CalculationOutput {
+  id: string;
+  label: string;
+}
+
+export interface CalculationConfig {
+  title: string;
+  description: string;
+  inputs: CalculationInput[];
+  outputs: CalculationOutput[];
+  formula: string;
+}
+
+
 export interface TemplateData {
   facts: Fact[];
   reliefs: Relief[];
@@ -100,6 +125,9 @@ export interface TemplateData {
   documentTitle: string;
   jurisdictionText: string;
   templateDescription?: string;
+  calculations?: {
+    [key: string]: CalculationConfig;
+  };
 }
 
 
@@ -121,6 +149,9 @@ export interface AppState {
   selectedFacts: Fact[];
   selectedReliefs: Relief[];
   maintenance: Maintenance;
+  calculations: {
+    [key: string]: Calculation;
+  };
   evidence: ManualEvidence[];
   smartEvidence: SmartEvidence;
   partyTitles: PartyTitles;

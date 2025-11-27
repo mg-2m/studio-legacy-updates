@@ -7,6 +7,7 @@
         "applicant": "Plaintiff (Creditor) (ከሳሽ (አበዳሪ))",
         "respondent": "Defendant (Debtor) (ተከሳሽ (ተበዳሪ))"
       },
+      "templateDescription": "### የብድር/ዕዳ ማስመለሻ ክስ (Debt Recovery Claim)\n\n**አጠቃቀም (Use Case):** ይህ አብነት አንድ ሰው ወይም ድርጅት የሰጡትን ብድር ወይም ዕዳ ለመመለስ ፈቃደኛ ሳይሆን ሲቀር ክስ ለመመስረት ያገለግላል። ይህም የጽሑፍ ስምምነት፣ የዕዳ ማስታወሻ ወይም ሌላ የዕዳ ማረጋገጫ ሲኖርዎት ተፈጻሚ ይሆናል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** በአጠቃላይ፣ በጽሑፍ ለተደገፈ የውል ዕዳ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው (የፍትሐ ብሔር ሕግ አንቀጽ 1845)። ነገር ግን የንግድ ሽያጭን የሚመለከት ከሆነ ይህ ሊለያይ ይችላል።\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** የጽሑፍ የብድር ስምምነት ወይም የዕዳ ማመኛ ሰነድ።\n    *   **ተጨማሪ ማስረጃ:** ገንዘቡ መተላለፉን የሚያሳይ የባንክ መረጃ ወይም ደረሰኝ፤ ክፍያ እንዲፈጸም የተላከ የማስጠንቀቂያ ደብዳቤ።\n",
       "facts": {
         "group_1": {
           "title": "Formation of Contract (የውል መመስረት)",
@@ -57,14 +58,16 @@
       "reliefs": [
         {
           "id": "relief_principal_amount",
-          "text": "Judgment ordering the Defendant to pay the principal sum of [Amount] ETB. (ተከሳሹ ዋናውን ገንዘብ [መጠን] ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ።)",
-          "isDefault": true
+          "text": "Judgment ordering the Defendant to pay the principal sum of {{principal}} ETB. (ተከሳሹ ዋናውን ገንዘብ {{principal}} ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ።)",
+          "isDefault": true,
+          "isDynamic": true
         },
         {
           "id": "relief_legal_interest",
-          "text": "Order payment of legal interest (9%) calculated from the date of default. (ከውል ማፍረሻ ቀን ጀምሮ የተሰላውን የሕግ ወለድ (9%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
+          "text": "Order payment of legal interest ({{interestRate}}%) calculated from the date of default ({{defaultDate}}), amounting to {{interestAmount}} ETB. (ከውል ማፍረሻ ቀን ({{defaultDate}}) ጀምሮ የተሰላውን የሕግ ወለድ ({{interestRate}}%) ማለትም {{interestAmount}} ብር እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
           "citation": "Civ. Code Art. 1751",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": true
         },
         {
           "id": "relief_contractual_interest",
@@ -72,7 +75,22 @@
           "citation": "Civ. Code Art. 2479",
           "isDefault": false
         }
-      ]
+      ],
+      "calculations": {
+        "debt_calculator": {
+          "title": "የዕዳ ማስያ (Debt Calculator)",
+          "description": "Calculate principal and interest for the claim.",
+          "inputs": [
+            { "id": "principal", "label": "Principal Amount (የብር መጠን)", "type": "number", "defaultValue": 10000 },
+            { "id": "interestRate", "label": "Annual Interest Rate (%) (ዓመታዊ ወለድ %)", "type": "number", "defaultValue": 9 },
+            { "id": "defaultDate", "label": "Date of Default (የክፍያ ጊዜ ያለፈበት ቀን)", "type": "date", "defaultValue": "2023-01-01" }
+          ],
+          "outputs": [
+            { "id": "interestAmount", "label": "Total Interest Due (ጠቅላላ ወለድ)" }
+          ],
+          "formula": "(principal * (interestRate / 100) / 365) * (differenceInDays(new Date(), defaultDate))"
+        }
+      }
     },
     "contract_specific_performance": {
       "documentTitle": "Statement of Claim for Specific Performance of Contract (ውልን ያለመፈጸም ክስ)",

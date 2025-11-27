@@ -1,28 +1,33 @@
 {
   "templates": {
     "labour_unlawful_termination": {
-      "documentTitle": "Statement of Claim for Unlawful Termination (ሕገ-ወጥ የስራ ስንብት ክስ)",
+      "documentTitle": "ሕገ-ወጥ የስራ ስንብት ክስ (Statement of Claim for Unlawful Termination)",
       "partyTitles": {
         "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
         "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
       },
-      "jurisdictionText": "Labour Proclamation No. 1156/2019",
+      "jurisdictionText": "የሠራተኛ አዋጅ ቁጥር 1156/2019 (Labour Proclamation No. 1156/2019)",
+      "meta": {
+        "keywords": ["unlawful termination", "dismissal", "reinstatement", "severance", "labour", "ስንብት", "የስራ ክርክር"],
+        "jurisdictionType": "Labour Board / First Instance Court"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰራተኛ በሕገ-ወጥ መንገድ ከሥራ ሲሰናበት ካሳ፣ ወደ ሥራ መመለስ ወይም ሌሎች መብቶችን ለመጠየቅ ይጠቅማል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየሥራ ውሉ ከተቋረጠበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ ለሚመለከተው አካል (የሠራተኛ ጉዳይ ወሳኝ ቦርድ) ማቅረብ ያስፈልጋል (አንቀጽ 138(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የቅጥር ውል፣ የስንብት ደብዳቤ፣ እና የደመወዝ ወረቀት።",
       "facts": {
         "group_1": {
-          "title": "The Contractual Relationship (Prerequisites) (የውል ግንኙነት (ቅድመ-ሁኔታዎች))",
+          "title": "የውል ግንኙነት (Prerequisites) (The Contractual Relationship)",
           "facets": [
             {
-              "id": "indefinite_contract",
-              "legalText": "Existence of an indefinite period employment contract. (ላልተወሰነ ጊዜ የቅጥር ውል መኖር።)",
-              "citation": "Art. 9 of Proc. 1156/2019",
+              "id": "lab_fact_indefinite_contract",
+              "legalText": "ላልተወሰነ ጊዜ የቅጥር ውል መኖር። (Existence of an indefinite period employment contract.)",
+              "citation": "አንቀጽ 9, አዋጅ 1156/2019 (Art. 9 of Proc. 1156/2019)",
               "evidence": [
                 "EmploymentContract"
               ]
             },
             {
-              "id": "definite_contract_ended",
-              "legalText": "A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract. (የተወሰነ ጊዜ ወይም የሙከራ ውል ነበረ፣ እና ጊዜው አልቋል፣ ይህም ወደ ላልተወሰነ ጊዜ ውል መቀየሩን ያመለክታል።)",
-              "citation": "Art. 10, 11 of Proc. 1156/2019",
+              "id": "lab_fact_definite_contract_ended",
+              "legalText": "የተወሰነ ጊዜ ወይም የሙከራ ውል ነበረ፣ እና ጊዜው አልቋል፣ ይህም ወደ ላልተወሰነ ጊዜ ውል መቀየሩን ያመለክታል። (A definite period or probationary contract existed, and the period has concluded, implying conversion to an indefinite contract.)",
+              "citation": "አንቀጽ 10, 11, አዋጅ 1156/2019 (Art. 10, 11 of Proc. 1156/2019)",
               "evidence": [
                 "EmploymentContract"
               ]
@@ -30,20 +35,20 @@
           ]
         },
         "group_2": {
-          "title": "The Act of Termination: Procedural Violations (የስንብት ድርጊት፡ የሥነ-ሥርዓት ጥሰቶች)",
+          "title": "የስንብት ድርጊት፡ የሥነ-ሥርዓት ጥሰቶች (The Act of Termination: Procedural Violations)",
           "facets": [
             {
-              "id": "no_prior_notice",
-              "legalText": "Termination was effected without any prior written notice specifying the reasons and date of termination. (ስንብቱ የተፈጸመው ምክንያቱን እና የስንብት ቀንን የሚገልጽ የጽሑፍ ማስታወቂያ ሳይሰጥ ነው።)",
-              "citation": "Violation of Art. 35(1) of Proc. 1156/2019",
+              "id": "lab_fact_no_prior_notice",
+              "legalText": "ስንብቱ የተፈጸመው ምክንያቱን እና የስንብት ቀንን የሚገልጽ የጽሑፍ ማስታወቂያ ሳይሰጥ ነው። (Termination was effected without any prior written notice specifying the reasons and date of termination.)",
+              "citation": "የአንቀጽ 35(1) ጥሰት, አዋጅ 1156/2019 (Violation of Art. 35(1) of Proc. 1156/2019)",
               "evidence": [
                 "TerminationLetter"
               ]
             },
             {
-              "id": "insufficient_notice",
-              "legalText": "The notice period provided was insufficient and less than the legal minimum based on years of service. (የተሰጠው የማስታወቂያ ጊዜ በቂ ያልሆነ እና በአገልግሎት ዓመታት ላይ ከተመሠረተው ሕጋዊ ዝቅተኛው ያነሰ ነበር።)",
-              "citation": "Violation of Art. 35(2) of Proc. 1156/2019",
+              "id": "lab_fact_insufficient_notice",
+              "legalText": "የተሰጠው የማስታወቂያ ጊዜ በቂ ያልሆነ እና በአገልግሎት ዓመታት ላይ ከተመሠረተው ሕጋዊ ዝቅተኛው ያነሰ ነበር። (The notice period provided was insufficient and less than the legal minimum based on years of service.)",
+              "citation": "የአንቀጽ 35(2) ጥሰት, አዋጅ 1156/2019 (Violation of Art. 35(2) of Proc. 1156/2019)",
               "evidence": [
                 "TerminationLetter"
               ]
@@ -51,36 +56,36 @@
           ]
         },
         "group_3": {
-          "title": "The Act of Termination: Substantive Violations (Unlawful Grounds) (የስንብት ድርጊት፡ ዋና ጥሰቶች (ሕገ-ወጥ ምክንያቶች))",
+          "title": "የስንብት ድርጊት፡ ዋና ጥሰቶች (ሕገ-ወጥ ምክንያቶች) (The Act of Termination: Substantive Violations (Unlawful Grounds))",
           "facets": [
             {
-              "id": "union_membership_termination",
-              "legalText": "Termination was due to the employee's membership in a trade union or participation in union activities. (ስንብቱ የተከሰተው በሠራተኛው የሠራተኛ ማኅበር አባልነት ወይም በማኅበር እንቅስቃሴዎች በመሳተፉ ምክንያት ነው።)",
-              "citation": "Art. 26(2)(a) of Proc. 1156/2019",
+              "id": "lab_fact_union_membership_termination",
+              "legalText": "ስንብቱ የተከሰተው በሠራተኛው የሠራተኛ ማኅበር አባልነት ወይም በማኅበር እንቅስቃሴዎች በመሳተፉ ምክንያት ነው። (Termination was due to the employee's membership in a trade union or participation in union activities.)",
+              "citation": "አንቀጽ 26(2)(a), አዋጅ 1156/2019 (Art. 26(2)(a) of Proc. 1156/2019)",
               "evidence": [
                 "TerminationLetter"
               ]
             },
             {
-              "id": "maternity_termination",
-              "legalText": "Termination was due to the employee's pregnancy or maternity leave status. (ስንብቱ የተከሰተው በሠራተኛው የእርግዝና ወይም የወሊድ ፈቃድ ሁኔታ ምክንያት ነው።)",
-              "citation": "Art. 26(2)(d) of Proc. 1156/2019",
+              "id": "lab_fact_maternity_termination",
+              "legalText": "ስንብቱ የተከሰተው በሠራተኛው የእርግዝና ወይም የወሊድ ፈቃድ ሁኔታ ምክንያት ነው። (Termination was due to the employee's pregnancy or maternity leave status.)",
+              "citation": "አንቀጽ 26(2)(d), አዋጅ 1156/2019 (Art. 26(2)(d) of Proc. 1156/2019)",
               "evidence": [
                 "TerminationLetter"
               ]
             },
             {
-              "id": "whistleblower_termination",
-              "legalText": "Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law. (ስንብቱ የተከሰተው ሠራተኛው ስለ ሕግ ጥሰት መረጃ በመስጠቱ ወይም በአሠሪው ላይ ቅሬታ በማቅረቡ ምክንያት ነው።)",
-              "citation": "Art. 26(2)(b) of Proc. 1156/2019",
+              "id": "lab_fact_whistleblower_termination",
+              "legalText": "ስንብቱ የተከሰተው ሠራተኛው ስለ ሕግ ጥሰት መረጃ በመስጠቱ ወይም በአሠሪው ላይ ቅሬታ በማቅረቡ ምክንያት ነው። (Termination was due to the employee giving information or filing a complaint against the employer regarding a breach of law.)",
+              "citation": "አንቀጽ 26(2)(b), አዋጅ 1156/2019 (Art. 26(2)(b) of Proc. 1156/2019)",
               "evidence": [
                 "TerminationLetter"
               ]
             },
             {
-              "id": "discriminatory_termination",
-              "legalText": "Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin. (ስንብቱ የተመሠረተው በዘር፣ በቀለም፣ በጾታ፣ በሃይማኖት፣ በፖለቲካ አስተያየት፣ በብሔራዊ አመጣጥ ወይም በማኅበራዊ አመጣጥ ላይ ባሉ አድሎአዊ ምክንያቶች ላይ ነው።)",
-              "citation": "Art. 26(2)(c) of Proc. 1156/2019",
+              "id": "lab_fact_discriminatory_termination",
+              "legalText": "ስንብቱ የተመሠረተው በዘር፣ በቀለም፣ በጾታ፣ በሃይማኖት፣ በፖለቲካ አስተያየት፣ በብሔራዊ አመጣጥ ወይም በማኅበራዊ አመጣጥ ላይ ባሉ አድሎአዊ ምክንያቶች ላይ ነው። (Termination was based on discriminatory grounds such as race, color, sex, religion, political opinion, national extraction, or social origin.)",
+              "citation": "አንቀጽ 26(2)(c), አዋጅ 1156/2019 (Art. 26(2)(c) of Proc. 1156/2019)",
               "evidence": [
                 "TerminationLetter"
               ]
@@ -88,12 +93,12 @@
           ]
         },
         "group_4": {
-          "title": "The Act of Termination: The \"No Reason\" Defense (የስንብት ድርጊት፡ \"ምክንያት የለም\" መከላከያ)",
+          "title": "የስንብት ድርጊት፡ \"ምክንያት የለም\" መከላከያ (The Act of Termination: The \"No Reason\" Defense)",
           "facets": [
             {
-              "id": "no_valid_reason",
-              "legalText": "The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking. (አሠሪው ከሠራተኛው ችሎታ ወይም ምግባር ወይም ከድርጅቱ ድርጅታዊ ፍላጎቶች ጋር የተያያዘ ትክክለኛ የስንብት ምክንያት አልሰጠም።)",
-              "citation": "Violation of Art. 27 of Proc. 1156/2019",
+              "id": "lab_fact_no_valid_reason",
+              "legalText": "አሠሪው ከሠራተኛው ችሎታ ወይም ምግባር ወይም ከድርጅቱ ድርጅታዊ ፍላጎቶች ጋር የተያያዘ ትክክለኛ የስንብት ምክንያት አልሰጠም። (The employer failed to provide a valid reason for termination related to the worker's capacity or conduct, or the organizational needs of the undertaking.)",
+              "citation": "የአንቀጽ 27 ጥሰት, አዋጅ 1156/2019 (Violation of Art. 27 of Proc. 1156/2019)",
               "evidence": [
                 "TerminationLetter"
               ]
@@ -101,12 +106,12 @@
           ]
         },
         "group_5": {
-          "title": "The Act of Termination: Constructive Dismissal (የስንብት ድርጊት፡ ገንቢ ስንብት)",
+          "title": "የስንብት ድርጊት፡ ገንቢ ስንብት (The Act of Termination: Constructive Dismissal)",
           "facets": [
             {
-              "id": "constructive_dismissal",
-              "legalText": "Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer. (ሠራተኛው በአሠሪው ሕገ-ወጥ ወይም አስነዋሪ ድርጊቶች (ለምሳሌ ወሲባዊ ትንኮሳ፣ ጥቃት፣ ለደህንነት አስጊ) ምክንያት ሥራውን ለመልቀቅ ተገድዷል፣ ይህም በአሠሪው እንደ ስንብት ይቆጠራል።)",
-              "citation": "Art. 32 of Proc. 1156/2019",
+              "id": "lab_fact_constructive_dismissal",
+              "legalText": "ሠራተኛው በአሠሪው ሕገ-ወጥ ወይም አስነዋሪ ድርጊቶች (ለምሳሌ ወሲባዊ ትንኮሳ፣ ጥቃት፣ ለደህንነት አስጊ) ምክንያት ሥራውን ለመልቀቅ ተገድዷል፣ ይህም በአሠሪው እንደ ስንብት ይቆጠራል። (Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.)",
+              "citation": "አንቀጽ 32, አዋጅ 1156/2019 (Art. 32 of Proc. 1156/2019)",
               "evidence": []
             }
           ]
@@ -114,190 +119,230 @@
       },
       "reliefs": [
         {
-          "id": "declare_termination_unlawful",
-          "text": "Judgment declaring the termination unlawful pursuant to Art. 43. (በአንቀጽ 43 መሠረት ስንብቱ ሕገ-ወጥ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
-          "isDefault": true
+          "id": "lab_relief_declare_termination_unlawful",
+          "text": "ስንብቱ ሕገ-ወጥ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ (Judgment declaring the termination unlawful pursuant to Art. 43.)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "reinstatement",
-          "text": "Order for reinstatement to previous position with full back pay from the date of termination until reinstatement (Art. 43(1)). (ከስንብት ቀን ጀምሮ እስከ መመለሻ ድረስ ሙሉ የኋላ ክፍያ በመክፈል ወደ ቀድሞ ቦታው እንዲመለስ ትዕዛዝ እንዲሰጥ (አንቀጽ 43(1))።)",
-          "isDefault": false
+          "id": "lab_relief_reinstatement",
+          "text": "ወደ ቀድሞ ቦታው እንዲመለስ ትዕዛዝ እንዲሰጥ (Order for reinstatement to previous position with full back pay (Art. 43(1)).)",
+          "isDefault": false,
+          "isDynamic": false
         },
         {
-          "id": "compensation_in_lieu",
-          "text": "Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (not to exceed 12 months total) (Art. 43(2,3)). (ከመመለס ይልቅ የካሳ ክፍያ၊ ከአማካይ የቀን ደመወዝ 180 እጥፍ ጋር የሚመጣጠን፣ እና ለእያንዳንዱ የአገልግሎት ዓመት ተጨማሪ 30 ቀናት (በአጠቃላይ ከ12 ወራት የማይበልጥ) (አንቀጽ 43(2,3))።)",
-          "isDefault": false
+          "id": "lab_relief_compensation_in_lieu",
+          "text": "በመመለስ ምትክ ካሳ እንዲከፈል (Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (Art. 43(2,3)).)",
+          "isDefault": false,
+          "isDynamic": false
         },
         {
-          "id": "severance_pay",
-          "text": "Payment of Severance Pay as per the calculation in Art. 39 & 40 (Only if not reinstated). (በአንቀጽ 39 እና 40 ስሌት መሠረት የስንብት ክፍያ (ካልተመለሰ ብቻ)።)",
-          "isDefault": false
+          "id": "lab_relief_severance_pay",
+          "text": "በአንቀጽ 39 እና 40 መሠረት የስንብት ክፍያ {{severancePay}} ብር እንዲከፈል (Payment of Severance Pay in the amount of {{severancePay}} ETB as per the calculation in Art. 39 & 40 (Only if not reinstated).)",
+          "isDefault": false,
+          "isDynamic": true
         },
         {
-          "id": "notice_compensation",
-          "text": "Payment of Compensation for lack of proper notice, equivalent to salary for the notice period (Art. 44). (ትክክለኛ ማስታወቂያ ባለመስጠቱ ምክንያት ካሳ ክፍያ፣ ከማስታወቂያው ጊዜ ደመወዝ ጋር የሚመጣጠን (አንቀጽ 44)።)",
-          "isDefault": false
+          "id": "lab_relief_notice_compensation",
+          "text": "ትክክለኛ ማስታወቂያ ባለመስጠቱ ምክንያት ካሳ እንዲከፈል (Payment of Compensation for lack of proper notice (Art. 44).)",
+          "isDefault": false,
+          "isDynamic": false
         },
         {
-          "id": "costs_and_fees_labour",
-          "text": "Costs and fees to be covered by the respondent. (ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ።)",
-          "isDefault": true
+          "id": "lab_relief_costs_and_fees_labour",
+          "text": "ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ (Costs and fees to be covered by the respondent.)",
+          "isDefault": true,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {
+        "severance_calculator": {
+          "title": "የስንብት ክፍያ ማስያ (Severance Pay Calculator)",
+          "description": "በአገልግሎት ዓመታት ላይ በመመርኮዝ የሚገመተውን የስንብት ክፍያ ያስሉ። (Calculate estimated severance pay based on years of service.)",
+          "inputs": [
+            { "id": "lastSalary", "label": "የመጨረሻ ወርሃዊ ደመወዝ (Last Monthly Salary)", "type": "number", "defaultValue": 10000 },
+            { "id": "yearsService", "label": "የአገልግሎት ዓመታት (Years of Service)", "type": "number", "defaultValue": 5 }
+          ],
+          "outputs": [
+            { "id": "severancePay", "label": "ጠቅላላ የስንብት ክፍያ (Total Severance Pay)" }
+          ],
+          "formula": "(lastSalary * 3) + ((lastSalary / 3) * (yearsService - 1))"
+        }
+      }
     },
     "labour_unpaid_wages": {
-      "documentTitle": "Statement of Claim for Outstanding Payments (ላልተከፈለ ክፍያ ክስ)",
+      "documentTitle": "ላልተከፈለ ክፍያ ክስ (Statement of Claim for Outstanding Payments)",
       "partyTitles": {
         "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
         "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
       },
-      "jurisdictionText": "Labour Proclamation No. 1156/2019",
+      "jurisdictionText": "የሠራተኛ አዋጅ ቁጥር 1156/2019 (Labour Proclamation No. 1156/2019)",
+      "meta": {
+        "keywords": ["unpaid wages", "salary", "overtime", "labour", "ያልተከፈለ ደመወዝ", "ትርፍ ሰዓት"],
+        "jurisdictionType": "Labour Board / First Instance Court"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሰራተኞች ያልተከፈላቸውን ደመወዝ፣ የትርፍ ሰዓት ክፍያ ወይም ሌሎች ሕጋዊ ክፍያዎችን ለመጠየቅ ይጠቅማል።\n\n### የጊዜ ገደብ (Period of Limitation)\nክፍያው መከፈል ከነበረበት ቀን ጀምሮ ባሉት ስድስት (6) ወራት ውስጥ ክስ መቅረብ አለበት (አንቀጽ 164(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የደመወዝ ወረቀት፣ የትርፍ ሰዓት ስራ ማረጋገጫ (ለምሳሌ ምስክር ወይም የሰዓት መቆጣጠሪያ)።",
       "facts": {
         "group_1": {
-          "title": "Salary Arrears (የደመወዝ ውዝፍ)",
+          "title": "የደመወዝ ውዝፍ (Salary Arrears)",
           "facets": [
             {
-              "id": "unpaid_salary",
-              "legalText": "Non-payment of regular monthly salary for the month(s) of [Specify Months]. (የ [ወራትን ይግለጹ] መደበኛ ወርሃዊ ደመወዝ አለመክፈል።)",
-              "citation": "Art. 53 (Payment obligations)",
+              "id": "lab_fact_unpaid_salary",
+              "legalText": "የ [Specify Months] መደበኛ ወርሃዊ ደመወዝ አለመክፈል። (Non-payment of regular monthly salary for the month(s) of [Specify Months].)",
+              "citation": "አንቀጽ 53 (የክፍያ ግዴታዎች) (Art. 53 (Payment obligations))",
               "evidence": [
-                "UnpaidWageWitness"
+                "UnpaidWageWitness",
+                "PayrollSlip"
               ]
             },
             {
-              "id": "unlawful_deduction",
-              "legalText": "An unlawful deduction was made from the salary without employee consent or a valid court order. (ያለ ሠራተኛ ፈቃድ ወይም ሕጋዊ የፍርድ ቤት ትዕዛዝ ከደመወዝ ሕገ-ወጥ ቅናሽ ተደርጓል።)",
-              "citation": "Art. 59 (Prohibition of deductions)",
+              "id": "lab_fact_unlawful_deduction",
+              "legalText": "ያለ ሠራተኛ ፈቃድ ወይም ሕጋዊ የፍርድ ቤት ትዕዛዝ ከደመወዝ ሕገ-ወጥ ቅናሽ ተደርጓል። (An unlawful deduction was made from the salary without employee consent or a valid court order.)",
+              "citation": "አንቀጽ 59 (የቅናሽ ክልከላ) (Art. 59 (Prohibition of deductions))",
               "evidence": [
-                "UnpaidWageWitness"
+                "PayrollSlip"
               ]
             }
           ]
         },
         "group_2": {
-          "title": "Statutory Benefits (የሕግ ጥቅማጥቅሞች)",
+          "title": "የሕግ ጥቅማጥቅሞች (Statutory Benefits)",
           "facets": [
             {
-              "id": "unpaid_overtime",
-              "legalText": "Employee worked beyond the standard 8 hours/day or 48 hours/week without receiving overtime compensation at the legally mandated rates. (ሠራተኛው ከመደበኛ 8 ሰዓት/በቀን ወይም 48 ሰዓት/በሳምንት በላይ ሠርቷል ነገር ግን በሕግ በተደነገገው መሠረት የትርፍ ሰዓት ካሳ አላገኘም።)",
-              "citation": "Art. 66 & 68 (Calculation rates)",
+              "id": "lab_fact_unpaid_overtime",
+              "legalText": "ሠራተኛው ከመደበኛ 8 ሰዓት/በቀን ወይም 48 ሰዓት/በሳምንት በላይ ሠርቷል ነገር ግን በሕግ በተደነገገው መሠረት የትርፍ ሰዓት ካሳ አላገኘም። (Employee worked beyond the standard 8 hours/day or 48 hours/week without receiving overtime compensation at the legally mandated rates.)",
+              "citation": "አንቀጽ 66 & 68 (የስሌት መመዘኛዎች) (Art. 66 & 68 (Calculation rates))",
               "evidence": [
+                "AttendanceSheet",
                 "UnpaidWageWitness"
               ]
             },
             {
-              "id": "unpaid_annual_leave",
-              "legalText": "Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment. (ሠራተኛው ዓመታዊ ፈቃድ እንዲወስድ አልተፈቀደለትም እና ሥራው ሲቋረጥ ላላገለገለበት ፈቃድ ካሳ አልተከፈለውም።)",
-              "citation": "Art. 77 & 79 (Conversion to cash only upon termination)",
+              "id": "lab_fact_unpaid_annual_leave",
+              "legalText": "ሠራተኛው ዓመታዊ ፈቃድ እንዲወስድ አልተፈቀደለትም እና ሥራው ሲቋረጥ ላላገለገለበት ፈቃድ ካሳ አልተከፈለውም። (Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment.)",
+              "citation": "አንቀጽ 77 & 79 (ወደ ገንዘብ መቀየር የሚቻለው ሲቋረጥ ብቻ) (Art. 77 & 79 (Conversion to cash only upon termination))",
               "evidence": []
             },
             {
-              "id": "unpaid_holiday_work",
-              "legalText": "Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate. (ሠራተኛው በሕዝባዊ በዓላት ላይ ሠርቷል ነገር ግን ከመደበኛ የሰዓት ደመወዙ በሁለት እጥፍ ካሳ አልተከፈለውም።)",
-              "citation": "Art. 73",
-              "evidence": []
+              "id": "lab_fact_unpaid_holiday_work",
+              "legalText": "ሠራተኛው በሕዝባዊ በዓላት ላይ ሠርቷል ነገር ግን ከመደበኛ የሰዓት ደመወዙ በሁለት እጥፍ ካሳ አልተከፈለውም። (Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate.)",
+              "citation": "አንቀጽ 73 (Art. 73)",
+              "evidence": ["AttendanceSheet"]
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "payment_principal",
-          "text": "An order for the Respondent to pay the total principal amount of all outstanding wages and benefits. (ተጠሪው ሁሉንም ያልተከፈሉ ደመወዞች እና ጥቅማጥቅሞች አጠቃላይ ዋና መጠን እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
-          "isDefault": true
+          "id": "lab_relief_payment_principal",
+          "text": "ተጠሪው ሁሉንም ያልተከፈሉ ደመወዞች እና ጥቅማጥቅሞች አጠቃላይ ዋና መጠን እንዲከፍል ትዕዛዝ እንዲሰጥ። (An order for the Respondent to pay the total principal amount of all outstanding wages and benefits.)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "payment_interest",
-          "text": "An order for the payment of statutory interest on the delayed payments as per the relevant provisions of the Civil Code. (በሲቪል ሕጉ አግባብነት ባላቸው ድንጋጌዎች መሠረት በዘገዩ ክፍያዎች ላይ የሕግ ወለድ እንዲከፈል ትዕዛዝ እንዲሰጥ።)",
-          "isDefault": false
+          "id": "lab_relief_payment_interest",
+          "text": "በዘገዩ ክፍያዎች ላይ የሕግ ወለድ እንዲከፈል ትዕዛዝ እንዲሰጥ። (An order for the payment of statutory interest on the delayed payments as per the relevant provisions of the Civil Code.)",
+          "isDefault": false,
+          "isDynamic": false
         },
         {
-          "id": "payment_overtime_specific",
-          "text": "A specific order for the payment of calculated overtime wages. (የተሰላ የትርፍ ሰዓት ደመወዝ እንዲከፈል የተወሰነ ትዕዛዝ እንዲሰጥ።)",
-          "isDefault": false
+          "id": "lab_relief_payment_overtime_specific",
+          "text": "የተሰላ የትርፍ ሰዓት ደመወዝ እንዲከፈል የተወሰነ ትዕዛዝ እንዲሰጥ። (A specific order for the payment of calculated overtime wages.)",
+          "isDefault": false,
+          "isDynamic": false
         },
         {
-          "id": "costs_and_fees_labour_wages",
-          "text": "Costs and fees to be covered by the respondent. (ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ።)",
-          "isDefault": true
+          "id": "lab_relief_costs_and_fees_labour_wages",
+          "text": "ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ። (Costs and fees to be covered by the respondent.)",
+          "isDefault": true,
+          "isDynamic": false
         }
       ]
     },
     "labour_employment_injury": {
-      "documentTitle": "Claim for Employment Injury Compensation (የሥራ ጉዳት ካሳ ጥያቄ)",
+      "documentTitle": "የሥራ ጉዳት ካሳ ጥያቄ (Claim for Employment Injury Compensation)",
       "partyTitles": {
         "applicant": "Employee / Applicant (አመልካች/ሰራተኛ)",
         "respondent": "Employer / Organization (ተጠሪ/ቀጣሪ)"
       },
-      "jurisdictionText": "Labour Proclamation No. 1156/2019",
+      "jurisdictionText": "የሠራተኛ አዋጅ ቁጥር 1156/2019 (Labour Proclamation No. 1156/2019)",
+      "meta": {
+        "keywords": ["employment injury", "workplace accident", "compensation", "disability", "የስራ ጉዳት", "አደጋ"],
+        "jurisdictionType": "Labour Board / First Instance Court"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሥራ ላይ እያለ ወይም ከሥራ ጋር በተያያዘ ጉዳት የደረሰበት ሰራተኛ የሕክምና ወጪዎችን እና የጉዳት ካሳ እንዲከፈለው ለመጠየቅ ያገለግላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nጉዳቱ ከደረሰበት ቀን ጀምሮ ባሉት ስድስት (6) ወራት ውስጥ ለአሠሪው ማሳወቅ እና በአንድ (1) ዓመት ውስጥ ክስ ማቅረብ ያስፈልጋል (አንቀጽ 102 እና 164)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የአደጋ ሪፖርት፣ የህክምና ወጪ ደረሰኞች፣ እና የህክምና ቦርድ የጉዳት መጠን ግምገማ።",
       "facts": {
         "group_1": {
-          "title": "The Incident (ክስተቱ)",
+          "title": "ክስተቱ (The Incident)",
           "facets": [
             {
-              "id": "injury_at_work",
-              "legalText": "The injury occurred during the performance of the employee's duties within the regular working hours and at the designated workplace. (ጉዳቱ የደረሰው ሠራተኛው በተለመደው የሥራ ሰዓት እና በተሰየመው የሥራ ቦታ ላይ ግዴታውን በሚወጣበት ጊዜ ነው።)",
-              "citation": "Art. 95(1)(a)",
-              "evidence": []
+              "id": "lab_fact_injury_at_work",
+              "legalText": "ጉዳቱ የደረሰው ሠራተኛው በተለመደው የሥራ ሰዓት እና በተሰየመው የሥራ ቦታ ላይ ግዴታውን በሚወጣበት ጊዜ ነው። (The injury occurred during the performance of the employee's duties within the regular working hours and at the designated workplace.)",
+              "citation": "አንቀጽ 95(1)(a) (Art. 95(1)(a))",
+              "evidence": ["AccidentReport", "WitnessStatements"]
             },
             {
-              "id": "injury_commuting",
-              "legalText": "The injury occurred while the employee was commuting directly between their residence and the workplace, using transport provided by the employer. (ጉዳቱ የደረሰው ሠራተኛው በአሠሪው በተሰጠው መጓጓዣ በቀጥታ በመኖሪያ ቤቱ እና በሥራ ቦታው መካከል ሲጓዝ ነው።)",
-              "citation": "Art. 95(1)(c)",
-              "evidence": []
+              "id": "lab_fact_injury_commuting",
+              "legalText": "ጉዳቱ የደረሰው ሠራተኛው በአሠሪው በተሰጠው መጓጓዣ በቀጥታ በመኖሪያ ቤቱ እና በሥራ ቦታው መካከል ሲጓዝ ነው። (The injury occurred while the employee was commuting directly between their residence and the workplace, using transport provided by the employer.)",
+              "citation": "አንቀጽ 95(1)(c) (Art. 95(1)(c))",
+              "evidence": ["AccidentReport"]
             },
             {
-              "id": "injury_on_order",
-              "legalText": "The injury occurred outside the regular workplace while the employee was carrying out a specific order given by the employer. (ጉዳቱ የደረሰው ሠራተኛው በአሠሪው የተሰጠውን የተወሰነ ትዕዛዝ ሲፈጽም ከመደበኛው የሥራ ቦታ ውጭ ነው።)",
-              "citation": "Art. 95(1)(b)",
-              "evidence": []
+              "id": "lab_fact_injury_on_order",
+              "legalText": "ጉዳቱ የደረሰው ሠራተኛው በአሠሪው የተሰጠውን የተወሰነ ትዕዛዝ ሲፈጽም ከመደበኛው የሥራ ቦታ ውጭ ነው። (The injury occurred outside the regular workplace while the employee was carrying out a specific order given by the employer.)",
+              "citation": "አንቀጽ 95(1)(b) (Art. 95(1)(b))",
+              "evidence": ["AccidentReport"]
             },
             {
-              "id": "occupational_disease",
-              "legalText": "The employee has contracted an occupational disease as a direct result of exposure to hazards in the work environment. (ሠራተኛው በሥራ አካባቢ ውስጥ ላሉ አደጋዎች በመጋለጡ ምክንያት የሙያ በሽታ ተይዟል።)",
-              "citation": "Art. 98",
-              "evidence": []
+              "id": "lab_fact_occupational_disease",
+              "legalText": "ሠራተኛው በሥራ አካባቢ ውስጥ ላሉ አደጋዎች በመጋለጡ ምክንያት የሙያ በሽታ ተይዟል። (The employee has contracted an occupational disease as a direct result of exposure to hazards in the work environment.)",
+              "citation": "አንቀጽ 98 (Art. 98)",
+              "evidence": ["MedicalBoardCertificate"]
             }
           ]
         },
         "group_2": {
-          "title": "The Damage (ጉዳቱ)",
+          "title": "ጉዳቱ (The Damage)",
           "facets": [
             {
-              "id": "permanent_partial_disability",
-              "legalText": "A permanent partial disability has been sustained as a result of the injury, confirmed by a medical board certificate. (በጉዳቱ ምክንያት ቋሚ ከፊል የአካል ጉዳት ደርሷል፣ ይህም በሕክምና ቦርድ የምስክር ወረቀት የተረጋገጠ ነው።)",
-              "citation": "Art. 109 & 110",
-              "evidence": []
+              "id": "lab_fact_permanent_partial_disability",
+              "legalText": "በጉዳቱ ምክንያት ቋሚ ከፊል የአካል ጉዳት ደርሷል፣ ይህም በሕክምና ቦርድ የምስክር ወረቀት የተረጋገጠ ነው። (A permanent partial disability has been sustained as a result of the injury, confirmed by a medical board certificate.)",
+              "citation": "አንቀጽ 109 & 110 (Art. 109 & 110)",
+              "evidence": ["MedicalBoardCertificate"]
             },
             {
-              "id": "temporary_total_disability",
-              "legalText": "A temporary total disability was sustained, rendering the employee unable to work for a specific period. (ጊዜያዊ አጠቃላይ የአካል ጉዳት ደርሶበታል، ይህም ሠራተኛው ለተወሰነ ጊዜ መሥራት እንዳይችል አድርጎታል።)",
-              "citation": "Art. 106",
-              "evidence": []
+              "id": "lab_fact_temporary_total_disability",
+              "legalText": "ጊዜያዊ አጠቃላይ የአካል ጉዳት ደርሶበታል፣ ይህም ሠራተኛው ለተወሰነ ጊዜ መሥራት እንዳይችል አድርጎታል። (A temporary total disability was sustained, rendering the employee unable to work for a specific period.)",
+              "citation": "አንቀጽ 106 (Art. 106)",
+              "evidence": ["MedicalBoardCertificate", "DoctorAssessment"]
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "medical_expenses",
-          "text": "An order for the full payment of all medical, surgical, pharmaceutical, and hospital care expenses incurred due to the injury (Art. 105). (በጉዳቱ ምክንያት ለደረሱት ሁሉም የሕክምና፣ የቀዶ ጥገና፣ የመድኃኒት እና የሆስፒታል እንክብካቤ ወጪዎች ሙሉ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ (አንቀጽ 105)።)",
-          "isDefault": true
+          "id": "lab_relief_medical_expenses",
+          "text": "በጉዳቱ ምክንያት ለደረሱት ሁሉም የሕክምና ወጪዎች ሙሉ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ (An order for the full payment of all medical, surgical, pharmaceutical, and hospital care expenses incurred due to the injury (Art. 105).)",
+          "isDefault": true,
+          "isDynamic": false
         },
         {
-          "id": "disability_compensation",
-          "text": "Payment of disability compensation, calculated based on the employee's salary and the percentage of disability as determined by the medical board (Art. 109 & 110). (በሠራተኛው ደመወዝ እና በሕክምና ቦርዱ በተወሰነው የአካል ጉዳት መቶኛ ላይ በመመርኮዝ የተሰላ የአካል ጉዳት ካሳ ክፍያ (አንቀጽ 109 እና 110)።)",
-          "isDefault": false
+          "id": "lab_relief_disability_compensation",
+          "text": "የአካል ጉዳት ካሳ ክፍያ እንዲፈጸም (Payment of disability compensation, calculated based on the employee's salary and the percentage of disability as determined by the medical board (Art. 109 & 110).)",
+          "isDefault": false,
+          "isDynamic": false
         },
         {
-          "id": "periodical_payment",
-          "text": "Payment for temporary disability, equivalent to 75% of the employee's daily wage, for the duration of the disability (Art. 106). (ለጊዜያዊ የአካል ጉዳት ክፍያ፣ ከሠራተኛው የቀን ደመወዝ 75% ጋር የሚመጣጠን፣ ለአካል ጉዳቱ ጊዜ (አንቀጽ 106)።)",
-          "isDefault": false
+          "id": "lab_relief_periodical_payment",
+          "text": "ለጊዜያዊ የአካል ጉዳት ክፍያ እንዲፈጸም (Payment for temporary disability, equivalent to 75% of the employee's daily wage, for the duration of the disability (Art. 106).)",
+          "isDefault": false,
+          "isDynamic": false
         },
         {
-          "id": "costs_and_fees_injury",
-          "text": "Costs and fees to be covered by the respondent. (ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ።)",
-          "isDefault": true
+          "id": "lab_relief_costs_and_fees_injury",
+          "text": "ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ (Costs and fees to be covered by the respondent.)",
+          "isDefault": true,
+          "isDynamic": false
         }
       ]
     }

@@ -138,12 +138,14 @@
         {
           "id": "relief_enforce_performance",
           "text": "Order the Defendant to specifically perform the contract by [Action, e.g., transferring title]. (ተከሳሹ [ድርጊት፣ ለምሳሌ የባለቤትነት ማስተላለፍ] በማድረግ ውሉን በተለይ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false
         },
         {
           "id": "relief_alt_damages",
           "text": "Alternatively, if performance is impossible, order payment of damages. (በአማራጭ፣ አፈጻጸም የማይቻል ከሆነ የካሳ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ።)",
-          "isDefault": false
+          "isDefault": false,
+          "isDynamic": false
         }
       ]
     },
@@ -183,13 +185,15 @@
         {
           "id": "relief_judicial_cancellation",
           "text": "Judgment declaring the contract cancelled/terminated. (ውሉ መሰረዙን/መቋረጡን የሚገልጽ ፍርድ እንዲሰጥ።)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false
         },
         {
           "id": "relief_reinstatement",
           "text": "Order the parties to be reinstated to their former position (Restitution). (ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።)",
           "citation": "Civ. Code Art. 1815",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false
         }
       ]
     },
@@ -221,12 +225,14 @@
         {
           "id": "relief_attach_property",
           "text": "Order the attachment of the Defendant's property [Specify Property] pending final judgment. (የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት [ንብረቱን ይግለጹ] እንዲታገድ ትዕዛዝ እንዲሰጥ።)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false
         },
         {
           "id": "relief_security_bond",
           "text": "Alternatively, order the Defendant to furnish security for the amount claimed. (በአማራጭ፣ ተከሳሹ ለተጠየቀው ገንዘብ ዋስትና እንዲያቀርብ ትዕዛዝ እንዲሰጥ።)",
-          "isDefault": false
+          "isDefault": false,
+          "isDynamic": false
         }
       ]
     },
@@ -253,7 +259,8 @@
         {
           "id": "relief_immediate_judgment",
           "text": "Enter immediate judgment for the Plaintiff on the admitted portion of the claim. (በተጠየቀው የይገባኛል ጥያቄ ክፍል ላይ ለከሳሽ ወዲያውኑ ፍርድ እንዲሰጥ።)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false
         }
       ]
     }

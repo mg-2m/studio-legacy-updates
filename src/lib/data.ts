@@ -121,7 +121,7 @@ export const DOCUMENT_ISSUERS = [
   "Ministry of Trade and Regional Integration (የንግድ እና ቀጣናዊ ትስስር ሚኒስቴር)",
   "Ministry of Revenues (የገቢዎች ሚኒስቴር)",
   "Ministry of Finance (የገንዘብ ሚኒስቴር)",
-  "Ethiopian Investment Commission (የኢትዮጵያ ኢንቨስትመን트 ኮሚሽን)",
+  "Ethiopian Investment Commission (የኢትዮጵያ ኢንቨስትመንት ኮሚሽን)",
   "National Bank of Ethiopia (የኢትዮጵያ ብሔራዊ ባንክ)",
   "Commercial Bank of Ethiopia (የኢትዮጵያ ንግድ ባንክ)",
 
@@ -129,7 +129,7 @@ export const DOCUMENT_ISSUERS = [
   "Addis Ababa City Land Development and Management Bureau (የአ/አ ከተማ የመሬት ልማት እና ማኔጅመንት ቢሮ)",
   "Ministry of Urban and Infrastructure (የከተማ እና መሠረተ ልማት ሚኒስቴር)",
   "Ethiopian Roads Administration (የኢትዮጵያ መንገዶች አስተዳደር)",
-  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክס ሚኒስቴር)",
+  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክስ ሚኒስቴር)",
   "Ethiopian Electric Power (የኢትዮጵያ ኤሌክትሪክ ኃይል)",
 
   // --- Social & Health ---
@@ -151,8 +151,8 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.entries(allEntities).r
         id: key,
         label: entity.title,
         type: 'Document', // Defaulting to document, can be refined
-        credentialLabel: `${entity.title} Reference`,
-        credentialPlaceholder: `e.g., ${entity.title.substring(0,3).toUpperCase()}-123`
+        credentialLabel: entity.credentialLabel || `${entity.title} Reference`,
+        credentialPlaceholder: entity.credentialPlaceholder || `e.g., ${key.substring(0, 3).toUpperCase()}-123`
     };
     return acc;
 }, {});

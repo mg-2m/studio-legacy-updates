@@ -33,7 +33,7 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 - **6.2. Exhaustive Rendering Check:** All standard reliefs for the template must be presented as a list of checkbox items. A "Custom Relief" option must be available.
 
 ### 7. Evidence Management
-- **7.1. Relevancy Check:** Auto-linked evidence MUST be directly relevant to a selected fact. AI-suggested evidence MUST be relevant to the combination of selected facts.
+- **7.1. Relevancy Check:** Auto-linked evidence MUST be directly relevant to a selected fact. AI-suggested evidence MUST be relevant to the combination of selected facts. The UI must render specific, context-aware input fields for each piece of evidence (auto-linked, AI-suggested, or manual) based on the schema defined in the backend blueprint. Generic fields are not acceptable.
 - **7.2. Exhaustive Rendering Check:** The UI must clearly distinguish between **Required (Auto-Linked)**, **AI-Suggested**, and **Manual** evidence. The final preview MUST render a clean, formatted list of all *active* evidence. Both document pages must end with the static verification/oath statements.
 
 ### 8. Bilingual Consistency

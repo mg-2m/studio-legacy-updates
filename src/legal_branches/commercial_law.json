@@ -1,3 +1,4 @@
+
 {
   "templates": {
     "comm_restitution_nonpayment": {
@@ -44,14 +45,16 @@
           "id": "comm_relief_payment_instrument",
           "text": "ተከሳሹ ያልተከፈለውን የ [amount] ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ። (Judgment ordering the Defendant to pay the unpaid amount of [amount] ETB.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "comm_relief_interest_commercial",
           "text": "ከክፍያ ቀን ጀምሮ የተሰላውን የንግድ ወለድ (12%) እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order payment of commercial interest (12%) from the date of presentation.)",
           "citation": "Commercial Code Art. 886",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -108,13 +111,15 @@
           "id": "comm_relief_approve_plan",
           "text": "የቀረበው የማገገሚያ እና የዕዳ ማዋቀሪያ እቅድ እንዲጸድቅ። (To approve the proposed restructuring and rehabilitation plan.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "comm_relief_stay_proceedings",
           "text": "እቅዱ በሚተገበርበት ጊዜ በአመልካቹ ላይ ያሉ የክስ እና የአፈጻጸም ሂደቶች በሙሉ እንዲታገዱ። (To stay all legal and execution proceedings against the Applicant during the implementation of the plan.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -172,16 +177,20 @@
           "id": "comm_relief_order_dissolution",
           "text": "የንግድ ማህበሩ እንዲፈርስ የሚወስን ፍርድ እንዲሰጥ። (Judgment ordering the dissolution of the business organization.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "comm_relief_appoint_liquidator_commercial",
           "text": "የማህበሩን ንብረትና ዕዳ የሚያጣራ እና ክፍፍል የሚያከናውን ሕጋዊ አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the appointment of a legal liquidator to wind up the affairs and distribute the assets of the company.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
     }
   }
 }
+
+    

@@ -1,220 +1,219 @@
+
 {
-    "templates": {
-        "crim_defence_justification_self_defence": {
-            "documentTitle": "Plea of Justification: Self-Defence (የሕጋዊነት መቃወሚያ፡- በራስ መከላከል)",
-            "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Arts. 79-80 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፸፱-፹).",
-            "meta": {
-                "keywords": [
-                    "self-defence",
-                    "justification",
-                    "criminal defence",
-                    "assault",
-                    "ራስን መከላከል",
-                    "የወንጀል መከላከያ"
-                ],
-                "jurisdictionType": "Court seized of the criminal case"
-            },
-            "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ አንድ ተከሳሽ የፈጸመው ድርጊት በራሱ ወይም በሶስተኛ ወገን ላይ የተቃጣን ሕገ-ወጥ ጥቃት ለመመከት የተደረገ በመሆኑ ሕጋዊ ነው ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** ጥቃቱ ሕገ-ወጥ፣ የቅርብ እና እርምጃው የተመጣጠነ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የጥቃቱን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የፖሊስ ሪፖርት)።",
-            "partyTitles": {
-                "applicant": "Defendant (ተከሳሽ)",
-                "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
-            },
-            "facts": [
-                {
-                    "id": "crim_fact_imminent_unlawful_attack",
-                    "label": "The Nature of the Attack (የጥቃቱ ባሕሪ)",
-                    "legalText": "The Defendant was facing an actual, imminent, and unlawful attack upon their life, limb, or property. (ተከሳሹ በሕይወቱ، በአካሉ ወይም በንብረቱ ላይ ሊደርስ ያለ ትክክለኛ፣ የቅርብ እና ሕገ-ወጥ ጥቃት ገጥሞት ነበር።)",
-                    "citation": "Crim. Code Art. 79(1)",
-                    "autoEvidence": [
-                        "ProofOfImminentDanger"
-                    ]
-                },
-                {
-                    "id": "crim_fact_defence_of_third_party",
-                    "label": "The Nature of the Attack (የጥቃቱ ባሕሪ)",
-                    "legalText": "The Defendant acted to defend a third party who was also facing an imminent, unlawful attack. (ተከሳሹ ጥቃት ሊደርስበት ያለን ሌላ ሰው ለመከላከል እርምጃ ወስዷል።)",
-                    "citation": "Crim. Code Art. 79(2)",
-                    "autoEvidence": [
-                        "ProofOfImminentDanger",
-                        "WitnessStatements"
-                    ]
-                },
-                {
-                    "id": "crim_fact_no_other_means",
-                    "label": "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
-                    "legalText": "The act of defence was necessary because there was no other possible means of preventing the attack. (ጥቃቱን ለመከላከል ሌላ አማራጭ መንገድ ስላልነበረው የመከላከል ተግባሩ አስፈላጊ ነበር።)",
-                    "citation": "Crim. Code Art. 80(1)",
-                    "autoEvidence": [
-                        "WitnessStatements"
-                    ]
-                },
-                {
-                    "id": "crim_fact_proportionality",
-                    "label": "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
-                    "legalText": "The means used for defence were proportional to the gravity of the attack and the threatened harm. (ለመከላከል ጥቅም ላይ የዋለው ዘዴ ከጥቃቱ ክብደት እና ከሚሰጋው ጉዳት ጋር የተመጣጣኝ ነበር።)",
-                    "citation": "Crim. Code Art. 80(2)",
-                    "autoEvidence": [
-                        "ProofOfImminentDanger",
-                        "WitnessStatements"
-                    ]
-                }
-            ],
-            "reliefs": [
-                {
-                    "id": "crim_relief_acquittal_justification",
-                    "text": "To acquit the Defendant on the ground that the act was justified and therefore lawful. (ድርጊቱ ህጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
-                    "isDefault": true,
-                    "isDynamic": false,
-                    "isCustom": false
-                }
-            ],
-            "calculations": {}
+  "templates": {
+    "crim_defence_justification_self_defence": {
+      "documentTitle": "Plea of Justification: Self-Defence (የሕጋዊነት መቃወሚያ፡- በራስ መከላከል)",
+      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Arts. 79-80 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፸፱-፹).",
+      "meta": {
+        "keywords": [
+          "self-defence",
+          "justification",
+          "criminal defence",
+          "assault",
+          "ራስን መከላከል",
+          "የወንጀል መከላከያ"
+        ],
+        "jurisdictionType": "Court seized of the criminal case"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ አንድ ተከሳሽ የፈጸመው ድርጊት በራሱ ወይም በሶስተኛ ወገን ላይ የተቃጣን ሕገ-ወጥ ጥቃት ለመመከት የተደረገ በመሆኑ ሕጋዊ ነው ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** ጥቃቱ ሕገ-ወጥ፣ የቅርብ እና እርምጃው የተመጣጠነ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የጥቃቱን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የፖሊስ ሪፖርት)።",
+      "partyTitles": {
+        "applicant": "Defendant (ተከሳሽ)",
+        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+      },
+      "facts": [
+        {
+          "id": "crim_fact_imminent_unlawful_attack",
+          "label": "The Nature of the Attack (የጥቃቱ ባሕሪ)",
+          "legalText": "The Defendant was facing an actual, imminent, and unlawful attack upon their life, limb, or property. (ተከሳሹ በሕይወቱ، በአካሉ ወይም በንብረቱ ላይ ሊደርስ ያለ ትክክለኛ፣ የቅርብ እና ሕገ-ወጥ ጥቃት ገጥሞት ነበር።)",
+          "citation": "Crim. Code Art. 79(1)",
+          "autoEvidence": [
+            "ProofOfImminentDanger"
+          ]
         },
         {
-            "id": "crim_defence_excuse_insanity",
-            "documentTitle": "Plea of Excuse: Insanity / Non-Culpability (የማስተንፈሻ መቃወሚያ፡- የአእምሮ ሕመም/ተጠያቂነት አለመኖር)",
-            "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 50 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፶).",
-            "meta": {
-                "keywords": [
-                    "insanity defense",
-                    "non-culpability",
-                    "mental illness",
-                    "criminal law",
-                    "የአእምሮ ሕመም",
-                    "ተጠያቂነት የለም"
-                ],
-                "jurisdictionType": "Court seized of the criminal case"
-            },
-            "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ወንጀሉን በፈጸመበት ወቅት በነበረበት ከባድ የአእምሮ ሕመም ወይም የአእምሮ ዝግመት ምክንያት የድርጊቱን የወንጀልነት ባህሪ ለመረዳት ወይም ድርጊቱን ለመቆጣጠር ባለመቻሉ ተጠያቂ አይደለም ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** በድርጊቱ ጊዜ የነበረ ከባድ የአእምሮ ሕመም እና የድርጊቱን ባህሪ ለመረዳት አለመቻል።\n*   **ማስረጃ (Required Evidence):** ከተረጋገጠ የሕክምና ተቋም የተሰጠ የአእምሮ ሁኔታ ምርመራ ሪፖርት (MedicalCertificateMentalState) ወሳኝ ነው።",
-            "partyTitles": {
-                "applicant": "Defendant (ተከሳሽ)",
-                "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
-            },
-            "facts": [
-                {
-                    "id": "crim_fact_insane_incapable_understanding",
-                    "label": "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
-                    "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of understanding the criminal nature of the act. (በድርጊቱ ጊዜ ተከሳሹ የድርጊቱን የወንጀልነት ባህሪ ለመረዳት በማይችል ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
-                    "citation": "Crim. Code Art. 50(1)",
-                    "autoEvidence": [
-                        "MedicalCertificateMentalState"
-                    ]
-                },
-                {
-                    "id": "crim_fact_insane_incapable_control",
-                    "label": "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
-                    "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of controlling their conduct. (በድርጊቱ ጊዜ ተከሳሹ አካሄዱን መቆጣጠር በማይችልበት ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
-                    "citation": "Crim. Code Art. 50(1)",
-                    "autoEvidence": [
-                        "MedicalCertificateMentalState"
-                    ]
-                },
-                {
-                    "id": "crim_fact_intoxication_non_culpable",
-                    "label": "Intoxication (በስካር ሁኔታ)",
-                    "legalText": "The Defendant was in a state of involuntary or non-culpable intoxication (e.g., administered by force or error) that led to the lack of culpability. (ተከሳሹ በግዴታ ወይም በስህተት በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ሲሆን ይህም ተጠያቂ እንዳይሆን አድርጎታል።)",
-                    "citation": "Crim. Code Art. 54",
-                    "autoEvidence": [
-                        "WitnessStatementsIntoxication",
-                        "MedicalCertificateMentalState"
-                    ]
-                },
-                {
-                    "id": "crim_fact_intoxication_culpable_negligence",
-                    "label": "Intoxication (በስካር ሁኔታ)",
-                    "legalText": "The Defendant was in a state of culpable intoxication, but the offense committed was only foreseeable as a light offense (for mitigation). (ተከሳሹ በግዴታ በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ቢሆንም የተፈፀመው ወንጀል በቀላል ደረጃ የሚገመት ነበር (ለቅጣት ማቅለያ)።)",
-                    "citation": "Crim. Code Art. 54(3)",
-                    "autoEvidence": [
-                        "WitnessStatementsIntoxication"
-                    ]
-                }
-            ],
-            "reliefs": [
-                {
-                    "id": "crim_relief_acquittal_excuse",
-                    "text": "To acquit the Defendant on the grounds of non-culpability and order appropriate security or medical measures (Art. 50(3)). (ተከሳሹ በተጠያቂነት እጦት በነጻ እንዲሰናበት እና ተገቢ የጥበቃ ወይም የህክምና እርምጃ እንዲወሰድበት።)",
-                    "isDefault": true,
-                    "isDynamic": false,
-                    "isCustom": false
-                }
-            ],
-            "calculations": {}
+          "id": "crim_fact_defence_of_third_party",
+          "label": "The Nature of the Attack (የጥቃቱ ባሕሪ)",
+          "legalText": "The Defendant acted to defend a third party who was also facing an imminent, unlawful attack. (ተከሳሹ ጥቃት ሊደርስበት ያለን ሌላ ሰው ለመከላከል እርምጃ ወስዷል።)",
+          "citation": "Crim. Code Art. 79(2)",
+          "autoEvidence": [
+            "ProofOfImminentDanger",
+            "WitnessStatements"
+          ]
         },
         {
-            "id": "crim_defence_justification_necessity",
-            "documentTitle": "Plea of Justification: Necessity (የሕጋዊነት መቃወሚያ፡- በግዴታ)",
-            "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 81 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፹፩).",
-            "meta": {
-                "keywords": [
-                    "necessity",
-                    "justification",
-                    "criminal defence",
-                    "imminent danger",
-                    "በግዴታ",
-                    "የወንጀል መከላከያ"
-                ],
-                "jurisdictionType": "Court seized of the criminal case"
-            },
-            "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ወንጀሉን የፈጸመው ከራሱ ወይም ከሌላ ሰው ላይ ሊደርስ የነበረን የበለጠ ጉዳት ለመከላከል ሲል እንደሆነ እና ድርጊቱ አስፈላጊ እንደነበር ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** አደጋው በጣም አስጊ እና ሊቀር የማይችል መሆኑን እና የተጠበቀው ጥቅም ከተጣሰው ጥቅም የበለጠ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የአደጋውን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የቦታው ሁኔታ)።",
-            "partyTitles": {
-                "applicant": "Defendant (ተከሳሽ)",
-                "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
-            },
-            "facts": [
-                {
-                    "id": "crim_fact_imminent_threat_necessity",
-                    "label": "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
-                    "legalText": "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ، በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
-                    "citation": "Crim. Code Art. 81(1)",
-                    "autoEvidence": [
-                        "ProofOfImminentDanger"
-                    ]
-                },
-                {
-                    "id": "crim_fact_interest_protected_greater",
-                    "label": "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
-                    "legalText": "The interest protected by the act (the interest saved) was evidently of a greater or equal value than the interest infringed (the harm caused). (በድርጊቱ የተጠበቀው ጥቅም (የተረፈው) ከተጎዳው ጥቅም (ከተፈጠረው ጉዳት) የበለጠ ወይም እኩል ዋጋ ነበረው።)",
-                    "citation": "Crim. Code Art. 81(1)",
-                    "autoEvidence": [
-                        "WitnessStatements"
-                    ]
-                },
-                {
-                    "id": "crim_fact_order_of_superior",
-                    "label": "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
-                    "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል፣ እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
-                    "citation": "Crim. Code Art. 82",
-                    "autoEvidence": [
-                        "OfficialOrderDocument"
-                    ]
-                },
-                {
-                    "id": "crim_fact_victim_consent_valid",
-                    "label": "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
-                    "legalText": "The victim freely and clearly consented to the minor bodily injury or damage to property, where such consent is valid under the law. (ተጎጂው በሕግ ተቀባይነት ባለው መንገድ ለደረሰበት ቀላል የአካል ጉዳት ወይም የንብረት ጉዳት በነጻ ፈቃዱን ሰጥቷል።)",
-                    "citation": "Crim. Code Art. 83",
-                    "autoEvidence": [
-                        "VictimConsentForm"
-                    ]
-                }
-            ],
-            "reliefs": [
-                {
-                    "id": "crim_relief_acquittal_necessity",
-                    "text": "To acquit the Defendant on the ground that the act was justified by necessity and lawful. (ድርጊቱ በግዴታ ሕጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
-                    "isDefault": true,
-                    "isDynamic": false,
-                    "isCustom": false
-                },
-                {
-                    "id": "crim_relief_mitigation_necessity",
-                    "text": "Alternatively, to mitigate the penalty due to the presence of a threatening situation that rendered the offense less culpable (mitigating circumstance). (በአማራጭ፣ ወንጀሉን በተጠያቂነት እንዲቀንስ በሚያስችል አስጊ ሁኔታ በመኖሩ ምክንያት ቅጣቱ እንዲቀልለት።)",
-                    "isDefault": false,
-                    "isDynamic": false,
-                    "isCustom": false
-                }
-            ],
-            "calculations": {}
+          "id": "crim_fact_no_other_means",
+          "label": "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
+          "legalText": "The act of defence was necessary because there was no other possible means of preventing the attack. (ጥቃቱን ለመከላከል ሌላ አማራጭ መንገድ ስላልነበረው የመከላከል ተግባሩ አስፈላጊ ነበር።)",
+          "citation": "Crim. Code Art. 80(1)",
+          "autoEvidence": [
+            "WitnessStatements"
+          ]
+        },
+        {
+          "id": "crim_fact_proportionality",
+          "label": "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
+          "legalText": "The means used for defence were proportional to the gravity of the attack and the threatened harm. (ለመከላከል ጥቅም ላይ የዋለው ዘዴ ከጥቃቱ ክብደት እና ከሚሰጋው ጉዳት ጋር የተመጣጣኝ ነበር።)",
+          "citation": "Crim. Code Art. 80(2)",
+          "autoEvidence": [
+            "ProofOfImminentDanger",
+            "WitnessStatements"
+          ]
         }
+      ],
+      "reliefs": [
+        {
+          "id": "crim_relief_acquittal_justification",
+          "text": "To acquit the Defendant on the ground that the act was justified and therefore lawful. (ድርጊቱ ህጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
+        }
+      ],
+      "calculations": {}
+    },
+    "crim_defence_excuse_insanity": {
+      "documentTitle": "Plea of Excuse: Insanity / Non-Culpability (የማስተንፈሻ መቃወሚያ፡- የአእምሮ ሕመም/ተጠያቂነት አለመኖር)",
+      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 50 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፶).",
+      "meta": {
+        "keywords": [
+          "insanity defense",
+          "non-culpability",
+          "mental illness",
+          "criminal law",
+          "የአእምሮ ሕመም",
+          "ተጠያቂነት የለም"
+        ],
+        "jurisdictionType": "Court seized of the criminal case"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ወንጀሉን በፈጸመበት ወቅት በነበረበት ከባድ የአእምሮ ሕመም ወይም የአእምሮ ዝግመት ምክንያት የድርጊቱን የወንጀልነት ባህሪ ለመረዳት ወይም ድርጊቱን ለመቆጣጠር ባለመቻሉ ተጠያቂ አይደለም ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** በድርጊቱ ጊዜ የነበረ ከባድ የአእምሮ ሕመም እና የድርጊቱን ባህሪ ለመረዳት አለመቻል።\n*   **ማስረጃ (Required Evidence):** ከተረጋገጠ የሕክምና ተቋም የተሰጠ የአእምሮ ሁኔታ ምርመራ ሪፖርት (MedicalCertificateMentalState) ወሳኝ ነው።",
+      "partyTitles": {
+        "applicant": "Defendant (ተከሳሽ)",
+        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+      },
+      "facts": [
+        {
+          "id": "crim_fact_insane_incapable_understanding",
+          "label": "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
+          "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of understanding the criminal nature of the act. (በድርጊቱ ጊዜ ተከሳሹ የድርጊቱን የወንጀልነት ባህሪ ለመረዳት በማይችል ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
+          "citation": "Crim. Code Art. 50(1)",
+          "autoEvidence": [
+            "MedicalCertificateMentalState"
+          ]
+        },
+        {
+          "id": "crim_fact_insane_incapable_control",
+          "label": "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
+          "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of controlling their conduct. (በድርጊቱ ጊዜ ተከሳሹ አካሄዱን መቆጣጠር በማይችልበት ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
+          "citation": "Crim. Code Art. 50(1)",
+          "autoEvidence": [
+            "MedicalCertificateMentalState"
+          ]
+        },
+        {
+          "id": "crim_fact_intoxication_non_culpable",
+          "label": "Intoxication (በስካር ሁኔታ)",
+          "legalText": "The Defendant was in a state of involuntary or non-culpable intoxication (e.g., administered by force or error) that led to the lack of culpability. (ተከሳሹ በግዴታ ወይም በስህተት በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ሲሆን ይህም ተጠያቂ እንዳይሆን አድርጎታል።)",
+          "citation": "Crim. Code Art. 54",
+          "autoEvidence": [
+            "WitnessStatementsIntoxication",
+            "MedicalCertificateMentalState"
+          ]
+        },
+        {
+          "id": "crim_fact_intoxication_culpable_negligence",
+          "label": "Intoxication (በስካር ሁኔታ)",
+          "legalText": "The Defendant was in a state of culpable intoxication, but the offense committed was only foreseeable as a light offense (for mitigation). (ተከሳሹ በግዴታ በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ቢሆንም የተፈፀመው ወንጀል በቀላል ደረጃ የሚገመት ነበር (ለቅጣት ማቅለያ)።)",
+          "citation": "Crim. Code Art. 54(3)",
+          "autoEvidence": [
+            "WitnessStatementsIntoxication"
+          ]
+        }
+      ],
+      "reliefs": [
+        {
+          "id": "crim_relief_acquittal_excuse",
+          "text": "To acquit the Defendant on the grounds of non-culpability and order appropriate security or medical measures (Art. 50(3)). (ተከሳሹ በተጠያቂነት እጦት በነጻ እንዲሰናበት እና ተገቢ የጥበቃ ወይም የህክምና እርምጃ እንዲወሰድበት።)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
+        }
+      ],
+      "calculations": {}
+    },
+    "crim_defence_justification_necessity": {
+      "documentTitle": "Plea of Justification: Necessity (የሕጋዊነት መቃወሚያ፡- በግዴታ)",
+      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 81 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፹፩).",
+      "meta": {
+        "keywords": [
+          "necessity",
+          "justification",
+          "criminal defence",
+          "imminent danger",
+          "በግዴታ",
+          "የወንጀል መከላከያ"
+        ],
+        "jurisdictionType": "Court seized of the criminal case"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ወንጀሉን የፈጸመው ከራሱ ወይም ከሌላ ሰው ላይ ሊደርስ የነበረን የበለጠ ጉዳት ለመከላከል ሲል እንደሆነ እና ድርጊቱ አስፈላጊ እንደነበር ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** አደጋው በጣም አስጊ እና ሊቀር የማይችል መሆኑን እና የተጠበቀው ጥቅም ከተጣሰው ጥቅም የበለጠ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የአደጋውን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የቦታው ሁኔታ)።",
+      "partyTitles": {
+        "applicant": "Defendant (ተከሳሽ)",
+        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+      },
+      "facts": [
+        {
+          "id": "crim_fact_imminent_threat_necessity",
+          "label": "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
+          "legalText": "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ، በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
+          "citation": "Crim. Code Art. 81(1)",
+          "autoEvidence": [
+            "ProofOfImminentDanger"
+          ]
+        },
+        {
+          "id": "crim_fact_interest_protected_greater",
+          "label": "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
+          "legalText": "The interest protected by the act (the interest saved) was evidently of a greater or equal value than the interest infringed (the harm caused). (በድርጊቱ የተጠበቀው ጥቅም (የተረፈው) ከተጎዳው ጥቅም (ከተፈጠረው ጉዳት) የበለጠ ወይም እኩል ዋጋ ነበረው።)",
+          "citation": "Crim. Code Art. 81(1)",
+          "autoEvidence": [
+            "WitnessStatements"
+          ]
+        },
+        {
+          "id": "crim_fact_order_of_superior",
+          "label": "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
+          "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል፣ እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
+          "citation": "Crim. Code Art. 82",
+          "autoEvidence": [
+            "OfficialOrderDocument"
+          ]
+        },
+        {
+          "id": "crim_fact_victim_consent_valid",
+          "label": "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
+          "legalText": "The victim freely and clearly consented to the minor bodily injury or damage to property, where such consent is valid under the law. (ተጎጂው በሕግ ተቀባይነት ባለው መንገድ ለደረሰበት ቀላል የአካል ጉዳት ወይም የንብረት ጉዳት በነጻ ፈቃዱን ሰጥቷል።)",
+          "citation": "Crim. Code Art. 83",
+          "autoEvidence": [
+            "VictimConsentForm"
+          ]
+        }
+      ],
+      "reliefs": [
+        {
+          "id": "crim_relief_acquittal_necessity",
+          "text": "To acquit the Defendant on the ground that the act was justified by necessity and lawful. (ድርጊቱ በግዴታ ሕጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
+        },
+        {
+          "id": "crim_relief_mitigation_necessity",
+          "text": "Alternatively, to mitigate the penalty due to the presence of a threatening situation that rendered the offense less culpable (mitigating circumstance). (በአማራጭ፣ ወንጀሉን በተጠያቂነት እንዲቀንስ በሚያስችል አስጊ ሁኔታ በመኖሩ ምክንያት ቅጣቱ እንዲቀልለት።)",
+          "isDefault": false,
+          "isDynamic": false,
+          "isCustom": false
+        }
+      ],
+      "calculations": {}
     }
+  }
 }

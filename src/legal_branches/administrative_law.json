@@ -4,10 +4,17 @@
       "documentTitle": "የአስተዳደር ውሳኔ በፍርድ ቤት እንዲታይ አቤቱታ (Petition for Judicial Review of Administrative Decision)",
       "jurisdictionText": "የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር ፩ሺ፩፻፹፫/፪ሺ፲፪፣ አንቀጽ ፶፩ (Federal Administrative Procedure Proclamation No. 1183/2020, Art. 51).",
       "meta": {
-        "keywords": ["judicial review", "administrative appeal", "annulment", "agency decision", "የአስተዳደር ይግባኝ", "የውሳኔ ሽረት"],
+        "keywords": [
+          "judicial review",
+          "administrative appeal",
+          "annulment",
+          "agency decision",
+          "የአስተዳደር ይግባኝ",
+          "የውሳኔ ሽረት"
+        ],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ተቋም የሰጠው የመጨረሻ አስተዳደራዊ ውሳኔ መብትዎን ወይም ጥቅምዎን ሲጎዳ፣ ውሳኔው በፌዴራል ከፍተኛ ፍርድ ቤት እንዲመረመር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየመጨረሻው የአስተዳደር ውሳኔ ከደረሰዎት ቀን ጀምሮ ባሉት ሠላሳ (30) ቀናት ውስጥ ይህ አቤቱታ መቅረብ አለበት (አንቀጽ 51(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የውስጥ መፍትሔዎችን ማሟጠጥ፡** ለፍርድ ቤት ከማቅረብዎ በፊት በተቋሙ ውስጥ ያሉትን ሁሉንም የቅሬታ ማቅረቢያ ደረጃዎች ማጠናቀቅ አለብዎት።\n*   **ማስረጃ (Required Evidence):** ይግባኝ የሚሉት ውሳኔ፣ ውሳኔው የደረሰዎትን ቀን የሚያረጋግጥ ማስረጃ፣ እና ለውስጥ ቅሬታ ሰሚ አካል ያቀረቡትን ማመልከቻና የተሰጠውን ውሳኔ ማያያዝ ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ተቋም የሰጠው የመጨረሻ አስተዳደራዊ ውሳኔ መብትዎን ወይም ጥቅምዎን ሲጎዳ፣ ውሳኔው በፌዴራል ከፍተኛ ፍርድ ቤት እንዲመረመር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአስተዳደር ሥነ-ሥርዓት አዋጅ 1183/2020 አንቀጽ 51 መሰረት፣ ይህን አይነት ጉዳይ የማየት ስልጣን ያለው **የፌዴራል ከፍተኛ ፍርድ ቤት** ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየመጨረሻው የአስተዳደር ውሳኔ ከደረሰዎት ቀን ጀምሮ ባሉት ሠላሳ (30) ቀናት ውስጥ ይህ አቤቱታ መቅረብ አለበት (አንቀጽ 51(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የውስጥ መፍትሔዎችን ማሟጠጥ፡** ለፍርድ ቤት ከማቅረብዎ በፊት በተቋሙ ውስጥ ያሉትን ሁሉንም የቅሬታ ማቅረቢያ ደረጃዎች ማጠናቀቅ አለብዎት።\n*   **ማስረጃ (Required Evidence):** ይግባኝ የሚሉት ውሳኔ፣ ውሳኔው የደረሰዎትን ቀን የሚያረጋግጥ ማስረጃ፣ እና ለውስጥ ቅሬታ ሰሚ አካል ያቀረቡትን ማመልከቻና የተሰጠውን ውሳኔ ማያያዝ ያስፈልጋል።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ/ይግባኝ ባይ (Petitioner / Appellant)",
         "respondent": "መልስ ሰጪ ተቋም (Respondent Agency)"
@@ -18,21 +25,27 @@
           "facets": [
             {
               "id": "admin_fact_final_decision_issued",
-              "legalText": "መልስ ሰጪው ተቋም በአቤቱታ አቅራቢው መብት ወይም ጥቅም ላይ ተጽእኖ የሚያሳድር የመጨረሻ አስተዳደራዊ ውሳኔ በ [Date] ሰጥቷል። (The Respondent Agency issued a final, binding administrative decision affecting the rights or interests of the Petitioner on [Date].)",
+              "legalText": "መልስ ሰጪው ተቋም በአቤቱታ አቅራቢው መብት ወይም ጥቅም ላይ ተጽእኖ የሚያሳድር የመጨረሻ አስተዳደራዊ ውሳኔ በ [Date of Decision] ሰጥቷል። (The Respondent Agency issued a final, binding administrative decision affecting the rights or interests of the Petitioner on [Date of Decision].)",
               "citation": "Proc. 1183/2020 Art. 48(1)",
-              "evidence": ["FinalAdminDecision"]
+              "evidence": [
+                "FinalAdminDecision"
+              ]
             },
             {
               "id": "admin_fact_exhausted_remedies",
               "legalText": "አቤቱታ አቅራቢው በተቋሙ ውስጥ ያሉትን ሁሉንም የውስጥ የቅሬታ መፍትሔ መንገዶች አሟጧል፣ ወይም ተቋሙ በሕግ በተቀመጠው ጊዜ ውስጥ በቅሬታው ላይ ውሳኔ አልሰጠም። (The Petitioner has exhausted all available administrative remedies within the Agency, or the Agency failed to render a decision on the complaint within the legal timeframe.)",
               "citation": "Proc. 1183/2020 Art. 48(2)",
-              "evidence": ["InternalRemedyExhaustion"]
+              "evidence": [
+                "InternalRemedyExhaustion"
+              ]
             },
             {
               "id": "admin_fact_petition_is_timely",
               "legalText": "ይህ አቤቱታ ውሳኔው ከደረሰበት ቀን አንስቶ በሠላሳ (30) ቀን የጊዜ ገደብ ውስጥ የቀረበ ነው። (This petition is filed within the thirty (30) day period prescribed from the date of notification of the decision.)",
               "citation": "Proc. 1183/2020 Art. 51(1)",
-              "evidence": ["DecisionNotificationProof"]
+              "evidence": [
+                "DecisionNotificationProof"
+              ]
             }
           ]
         },
@@ -49,19 +62,25 @@
               "id": "admin_fact_substantive_error_of_law",
               "legalText": "ውሳኔው መሠረታዊ የሕግ ስህተት ላይ የተመሰረተ ነው፤ ማለትም የሚመለከተውን አዋጅ፣ ደንብ ወይም መመሪያ በተሳሳተ መንገድ ተርጉሟል ወይም ተግብሯል። (The decision is based on a fundamental error of law, misinterpreting or misapplying the governing Proclamation, Regulation, or Directive.)",
               "citation": "Proc. 1183/2020 Art. 52(1)(a)",
-              "evidence": ["FinalAdminDecision"]
+              "evidence": [
+                "FinalAdminDecision"
+              ]
             },
             {
               "id": "admin_fact_failure_to_state_reason",
               "legalText": "ተቋሙ በቂ እና ምክንያታዊ የሆነ ውሳኔ ባለመስጠቱ የአቤቱታ አቅራቢውን ምክንያት ያለው ውሳኔ የማግኘት መብት ጥሷል (አንቀጽ ፴፯)። (The Agency failed to provide an adequate and reasoned decision, thus violating the Petitioner's right to a reasoned decision (Art. 37).)",
               "citation": "Proc. 1183/2020 Art. 37",
-              "evidence": ["FinalAdminDecision"]
+              "evidence": [
+                "FinalAdminDecision"
+              ]
             },
             {
               "id": "admin_fact_abuse_of_discretion",
               "legalText": "ተቋሙ ከህጋዊ ሥልጣኑ ውጭ በመንቀሳቀስ ወይም ተገቢ ላልሆነ ዓላማ በመጠቀም የውሳኔ ሰጪነት ሥልጣኑን አላግባብ ተጠቅሟል (አንቀጽ ፴፱)። (The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39).)",
               "citation": "Proc. 1183/2020 Art. 39",
-              "evidence": ["FinalAdminDecision"]
+              "evidence": [
+                "FinalAdminDecision"
+              ]
             }
           ]
         }
@@ -76,7 +95,7 @@
         {
           "id": "admin_relief_remand_for_revision",
           "text": "ፍርድ ቤቱ ባገኘው ክፍተት መሰረት ተቋሙ ውሳኔውን እንዲያስተካክል ወይም እንደገና እንዲያየው እንዲታዘዝ። (To order the Administrative Agency to revise or reconsider its decision by rectifying the shortcomings identified by the Court.)",
-          "isDefault": true,
+          "isDefault": false,
           "isDynamic": false
         },
         {
@@ -91,10 +110,17 @@
       "documentTitle": "የአስተዳደር መመሪያ ሕጋዊነት በፍርድ ቤት እንዲታይ አቤቱታ (Petition for Judicial Review of Legality of a Directive)",
       "jurisdictionText": "የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር ፩ሺ፩፻፹፫/፪ሺ፲፪፣ አንቀጽ ፵፱ (Federal Administrative Procedure Proclamation No. 1183/2020, Art. 49).",
       "meta": {
-        "keywords": ["directive", "legality review", "ultra vires", "administrative law", "የመመሪያ ክለሳ", "ሕጋዊነት"],
+        "keywords": [
+          "directive",
+          "legality review",
+          "ultra vires",
+          "administrative law",
+          "የመመሪያ ክለሳ",
+          "ሕጋዊነት"
+        ],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ተቋም ያወጣው መመሪያ ከሕገ-መንግስቱ ወይም ከበላይ ሕጎች ጋር ሲቃረን ወይም ተቋሙ ሥልጣኑን አልፎ ሲያወጣው፣ መመሪያው ሕጋዊ አይደለም ብሎ ለመከራከር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ዓይነቱ ክስ በአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ይኖረዋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የጥቅም መጎዳት፡** መመሪያው መብትዎን ወይም ጥቅምዎን በቀጥታ የሚነካ መሆኑን ማሳየት አለብዎት።\n*   **ማስረጃ (Required Evidence):** እንዲሻር የሚፈልጉትን መመሪያ ቅጂ ማያያዝ ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ተቋም ያወጣው መመሪያ ከሕገ-መንግስቱ ወይም ከበላይ ሕጎች ጋር ሲቃረን ወይም ተቋሙ ሥልጣኑን አልፎ ሲያወጣው፣ መመሪያው ሕጋዊ አይደለም ብሎ ለመከራከር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአስተዳደር ሥነ-ሥርዓት አዋጅ 1183/2020 አንቀጽ 49 መሰረት፣ ይህን አይነት ጉዳይ የማየት ስልጣን ያለው **የፌዴራል ከፍተኛ ፍርድ ቤት** ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ዓይነቱ ክስ በአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ይኖረዋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የጥቅም መጎዳት፡** መመሪያው መብትዎን ወይም ጥቅምዎን በቀጥታ የሚነካ መሆኑን ማሳየት አለብዎት።\n*   **ማስረጃ (Required Evidence):** እንዲሻር የሚፈልጉትን መመሪያ ቅጂ ማያያዝ ያስፈልጋል።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "መልስ ሰጪ ተቋም (Respondent Agency)"
@@ -107,19 +133,25 @@
               "id": "admin_fact_directive_unlawful_delegation",
               "legalText": "መመሪያው በሕግ ተገቢው የውክልና ሥልጣን ሳይሰጥ የወጣ ነው፣ ወይም ከወከለው አዋጅ ወሰን በላይ አልፏል። (The Directive was issued without proper delegation of power by law, or it exceeds the scope of the delegating Proclamation.)",
               "citation": "Proc. 1183/2020 Art. 49(2)(a)",
-              "evidence": ["AgencyDirectiveCopy"]
+              "evidence": [
+                "AgencyDirectiveCopy"
+              ]
             },
             {
               "id": "admin_fact_directive_violates_constitution",
               "legalText": "መመሪያው ሕገ-መንግስትን ወይም ሌላ የበላይ የሆነን ሕግ ይጥሳል። (The Directive violates the Constitution or other superior law.)",
               "citation": "Proc. 1183/2020 Art. 49(2)(a)",
-              "evidence": ["AgencyDirectiveCopy"]
+              "evidence": [
+                "AgencyDirectiveCopy"
+              ]
             },
             {
               "id": "admin_fact_directive_procedural_flaw",
               "legalText": "መመሪያው ሲወጣ በሕግ የተደነገገውን የግዴታ የሕዝብ ተሳትፎ ሂደት (ለምሳሌ የሕዝብ አስተያየት መጠየቅ ወይም ከጠቅላይ ዓቃቤ ሕግ ጋር መመካከር) አልተከተለም (አንቀጽ ፯-፲፪)። (The Directive was adopted without following the mandatory procedure (e.g., public notice, soliciting comments, or FAG consultation) required by law (Arts. 7-12).)",
               "citation": "Proc. 1183/2020 Art. 7-12",
-              "evidence": ["AgencyDirectiveCopy"]
+              "evidence": [
+                "AgencyDirectiveCopy"
+              ]
             }
           ]
         },
@@ -130,7 +162,9 @@
               "id": "admin_fact_directive_affects_rights",
               "legalText": "መመሪያው የአቤቱታ አቅራቢውን መብት ወይም ጥቅም በቀጥታ ይነካል። (The Directive directly affects the Petitioner's rights or interests.)",
               "citation": "Proc. 1183/2020 Art. 48(1)",
-              "evidence": ["AgencyDirectiveCopy"]
+              "evidence": [
+                "AgencyDirectiveCopy"
+              ]
             }
           ]
         }

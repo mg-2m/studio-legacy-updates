@@ -27,7 +27,7 @@
               "id": "comm_fact_instrument_issuance",
               "legalText": "ተከሳሹ በ [Date]፣ [Amount] ብር የሚያወጣ ቼክ/የሐዋላ ወረቀት ቁጥር [Number] ለከሳሽ ሰጥቷል። (The Defendant issued cheque/instrument No. [Number] for the sum of [Amount] ETB on [Date] to the Plaintiff.)",
               "citation": "Commercial Code Art. 735",
-              "evidence": [
+              "autoEvidence": [
                 "NotarizedCheque"
               ]
             },
@@ -35,7 +35,7 @@
               "id": "comm_fact_instrument_presentation",
               "legalText": "ከሳሽ ሰነዱን ለክፍያ አቅርቦ ነበር ነገር ግን ክፍያ ሳይፈጸም ቀርቷል። (The Plaintiff duly presented the instrument for payment, but it was dishonored.)",
               "citation": "Commercial Code Art. 767",
-              "evidence": [
+              "autoEvidence": [
                 "ProtestCertificate"
               ]
             }
@@ -73,7 +73,7 @@
         ],
         "jurisdictionType": "Federal High Court (Commercial Bench)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገንዘብ ችግር ያጋጠመው ነገር ግን የመዳን ተስፋ ያለው የንግድ ድርጅት፣ ከኪሳራ ለመዳን የዕዳ ማዋቀሪያ እቅድ በፍርድ ቤት እንዲጸድቅለት ለመጠየቅ ያገለግላልል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየከሰሩ ድርጅቶችን ጉዳይ ለማየት ስልጣን ባለው የፌደራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ ድርጅቱ የገንዘብ ችግር እንዳጋጠመው ሲያውቅ ሊያቀርበው ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የድርጅቱ የቅርብ ጊዜ ኦዲት የተደረገ የሂሳብ መግለጫ (BalanceSheetAndAudit)፣ የአበዳሪዎች ዝርዝር (ListofCreditors)፣ እና የማገገሚያ እቅድ ረቂቅ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገንዘብ ችግር ያጋጠመው ነገር ግን የመዳን ተስፋ ያለው የንግድ ድርጅት፣ ከኪሳራ ለመዳን የዕዳ ማዋቀሪያ እቅድ በፍርድ ቤት እንዲጸድቅለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየከሰሩ ድርጅቶችን ጉዳይ ለማየት ስልጣን ባለው የፌደራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ ድርጅቱ የገንዘብ ችግር እንዳጋጠመው ሲያውቅ ሊያቀርበው ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የድርጅቱ የቅርብ ጊዜ ኦዲት የተደረገ የሂሳብ መግለጫ (BalanceSheetAndAudit)፣ የአበዳሪዎች ዝርዝር (ListofCreditors)፣ እና የማገገሚያ እቅድ ረቂቅ።",
       "partyTitles": {
         "applicant": "አመልካች (ባለዕዳው ድርጅት) (Applicant - Debtor Company)",
         "respondent": "አበዳሪዎች (በማስታወቂያ) (Creditors (by notice))"
@@ -86,7 +86,7 @@
               "id": "comm_fact_financial_difficulty",
               "legalText": "አመልካቹ ድርጅት ዕዳውን በወቅቱ መክፈል የማይችልበት ጊዜያዊ የገንዘብ ችግር አጋጥሞታል። (The applicant company is facing temporary financial difficulties preventing it from paying its debts as they fall due.)",
               "citation": "Commercial Code Art. 1171",
-              "evidence": [
+              "autoEvidence": [
                 "BalanceSheetAndAudit"
               ]
             },
@@ -94,7 +94,7 @@
               "id": "comm_fact_business_is_viable",
               "legalText": "የድርጅቱ የንግድ እንቅስቃሴ በመሠረቱ ጤናማ እና ሊቀጥል የሚችል ነው። (The company's business is fundamentally sound and viable for continuation.)",
               "citation": "Commercial Code Art. 1171",
-              "evidence": [
+              "autoEvidence": [
                 "BalanceSheetAndAudit",
                 "ShareholdersResolution"
               ]
@@ -108,7 +108,7 @@
               "id": "comm_fact_plan_details",
               "legalText": "አመልካቹ ዕዳዎችን ለማስተዳደር፣ ንግዱን ለማሻሻል እና ቀጣይነትን ለማረጋገጥ የሚያስችል ዝርዝር የማገገሚያ እቅድ አዘጋጅቷል። (The Applicant has prepared a detailed restructuring plan to manage debts, reform the business, and ensure continued viability.)",
               "citation": "Commercial Code Art. 1173",
-              "evidence": []
+              "autoEvidence": []
             }
           ]
         }
@@ -156,7 +156,7 @@
               "id": "comm_fact_serious_disagreement",
               "legalText": "በማህበሩ ባለአክሲዮኖች/አስተዳዳሪዎች መካከል ማህበሩን ማስተዳደርን በሚመለከት ከባድ እና የማያቋርጥ አለመግባባት አለ። (There are serious and persistent disagreements among the shareholders/managers regarding the management of the organization.)",
               "citation": "Commercial Code Art. 176(a)",
-              "evidence": [
+              "autoEvidence": [
                 "ShareholdersResolution"
               ]
             },
@@ -164,7 +164,7 @@
               "id": "comm_fact_deadlock",
               "legalText": "በአለመግባባቱ ምክንያት የማህበሩ አስተዳደር ሙሉ በሙሉ ተ deadlock በመሆኑ መደበኛ ሥራውን ማከናወን አልቻለም። (The management of the organization is deadlocked due to the disagreement, making it impossible to carry on its normal business.)",
               "citation": "Commercial Code Art. 176(b)",
-              "evidence": [
+              "autoEvidence": [
                 "ShareholdersResolution"
               ]
             }
@@ -177,7 +177,7 @@
               "id": "comm_fact_applicant_standing",
               "legalText": "ከሳሽ በማህበሩ ውስጥ ባለድርሻ ሲሆን፣ ይህን ክስ ለማቅረብ ሕጋዊ መብት አለው። (The Plaintiff has a legitimate interest as a stakeholder in the company to bring this action.)",
               "citation": "",
-              "evidence": [
+              "autoEvidence": [
                 "MemorandumAndArticles"
               ]
             }

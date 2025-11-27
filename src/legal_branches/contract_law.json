@@ -20,7 +20,7 @@
               "id": "con_fact_loan_agreement",
               "legalText": "በ [Date] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል። (On [Date], the Plaintiff and Defendant entered into a written loan agreement.)",
               "citation": "Civ. Code Art. 2471",
-              "evidence": [
+              "autoEvidence": [
                 "WrittenContract",
                 "AdmissionofDebt"
               ]
@@ -29,7 +29,7 @@
               "id": "con_fact_disbursement",
               "legalText": "ከሳሽ [Amount] ብር ለተከሳሽ ሰጥቷል። (The Plaintiff disbursed the sum of [Amount] ETB to the Defendant.)",
               "citation": "",
-              "evidence": [
+              "autoEvidence": [
                 "PaymentReceipt"
               ]
             }
@@ -52,7 +52,7 @@
               "id": "con_fact_notice_given",
               "legalText": "ከሳሽ በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል። (The Plaintiff served a formal notice of default on [Date].)",
               "citation": "Civ. Code Art. 1772",
-              "evidence": [
+              "autoEvidence": [
                 "NoticeofDefault"
               ]
             }
@@ -77,7 +77,8 @@
           "id": "con_relief_contractual_interest",
           "text": "በ [Percentage] የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ። (Order payment of contractual interest agreed at [Percentage] (max 12%).)",
           "citation": "Civ. Code Art. 2479",
-          "isDefault": false
+          "isDefault": false,
+          "isDynamic": false
         }
       ],
       "calculations": {
@@ -116,7 +117,7 @@
               "id": "con_fact_valid_contract",
               "legalText": "በ [Subject Matter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ። (A valid contract exists between the parties regarding [Subject Matter].)",
               "citation": "Civ. Code Art. 1678",
-              "evidence": [
+              "autoEvidence": [
                 "WrittenContract"
               ]
             },
@@ -188,7 +189,7 @@
               "id": "con_fact_payments_made",
               "legalText": "ከሳሽ ለተከሳሽ [Amount] ከፍሏል። (The Plaintiff has already paid [Amount] to the Defendant.)",
               "citation": "",
-              "evidence": [
+              "autoEvidence": [
                 "PaymentReceipt"
               ]
             }

@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning } from 'lucide-react';
 
 // Import the raw JSON data from the new modular files
 import * as baseData from '@/legal_branches/_base.json';
@@ -195,9 +195,9 @@ export const TEMPLATES: Template[] = [
     label: 'የሠራተኛ ሕግ (Labour Law)', 
     icon: Briefcase,
     subTemplates: [
-       { id: 'labour_unlawful_termination', label: 'Unlawful Termination Claim', icon: FileText },
-       { id: 'labour_unpaid_wages', label: 'Unpaid Wages Claim', icon: Receipt },
-       { id: 'labour_employment_injury', label: 'Employment Injury Claim', icon: HeartPulse },
+       { id: 'labour_unlawful_termination', label: 'ሕገ-ወጥ ስንብት (Unlawful Termination)', icon: FileText },
+       { id: 'labour_unpaid_wages', label: 'ያልተከፈለ ደመወዝ (Unpaid Wages)', icon: Receipt },
+       { id: 'labour_employment_injury', label: 'የሥራ ላይ ጉዳት (Employment Injury)', icon: HeartPulse },
     ]
   },
    { 
@@ -205,9 +205,9 @@ export const TEMPLATES: Template[] = [
     label: 'የመንግስት ሰራተኛ ህግ (Public Service Law)', 
     icon: Landmark,
     subTemplates: [
-       { id: 'civil_service_disciplinary_appeal', label: 'Disciplinary Appeal', icon: FileText },
-       { id: 'civil_service_termination_unlawful', label: 'Unlawful Termination Appeal', icon: FileText },
-       { id: 'civil_service_benefits_grievance', label: 'Benefits & Rights Grievance', icon: FileText },
+       { id: 'civil_service_disciplinary_appeal', label: 'የዲሲፕሊን ይግባኝ (Disciplinary Appeal)', icon: FileText },
+       { id: 'civil_service_termination_unlawful', label: 'ሕገ-ወጥ ስንብት ይግባኝ (Unlawful Termination Appeal)', icon: FileText },
+       { id: 'civil_service_benefits_grievance', label: 'የጥቅማጥቅም ቅሬታ (Benefits Grievance)', icon: FileText },
     ]
   },
   {
@@ -218,7 +218,7 @@ export const TEMPLATES: Template[] = [
       { id: 'succession_heirship_declaration', label: 'የወራሽነት ማረጋገጫ (Heirship Declaration)', icon: FileText },
       { id: 'succession_probate_will', label: 'የኑዛዜ ማጽደቅ (Probate of Will)', icon: Gavel },
       { id: 'succession_partition_estate', label: 'የውርስ ንብረት ክፍፍል (Estate Partition)', icon: Building2 },
-      { id: 'app_appoint_liquidator', label: 'ዋና ከፋይ διορισμός (Appoint Liquidator)', icon: BookUser },
+      { id: 'app_appoint_liquidator', label: 'ዋና ከፋይ ሹመት (Appoint Liquidator)', icon: BookUser },
       { id: 'app_seal_estate', label: 'የንብረት ማሸግ (Seal Estate)', icon: Shield }
     ]
   },
@@ -227,14 +227,14 @@ export const TEMPLATES: Template[] = [
     label: 'የንብረት እና መሬት ህግ (Property & Land)',
     icon: Map,
     subTemplates: [
-        { id: 'property_petitory_vindication', label: 'Petitory Action (Vindication)', icon: FileText },
-        { id: 'property_possessory_restoration', label: 'Possessory Action (Restoration)', icon: FileText },
-        { id: 'property_boundary_encroachment', label: 'Boundary Encroachment', icon: Map },
-        { id: 'property_nuisance_cessation', label: 'Nuisance Cessation', icon: ShieldAlert },
-        { id: 'property_servitude_right_of_way', label: 'Servitude (Right of Way)', icon: Map },
-        { id: 'app_stay_construction', label: 'Suspend Construction Order', icon: Shield },
-        { id: 'app_local_inspection', label: 'Local Inspection Order', icon: Map },
-        { id: 'property_possessory_disturbance', label: 'Possessory Action (Disturbance)', icon: FileText },
+        { id: 'property_petitory_vindication', label: 'የይዞታ ክስ (Petitory Action)', icon: FileText },
+        { id: 'property_possessory_restoration', label: 'የተነጠቀ ይዞታን ማስመለስ (Possessory Action)', icon: FileText },
+        { id: 'property_boundary_encroachment', label: 'የድንበር መጣስ (Boundary Encroachment)', icon: Map },
+        { id: 'property_nuisance_cessation', label: 'የአደጋ መከላከል (Nuisance Cessation)', icon: ShieldAlert },
+        { id: 'property_servitude_right_of_way', label: 'የመንገድ መብት (Servitude)', icon: Map },
+        { id: 'app_stay_construction', label: 'ግንባታን የማገድ ትዕዛዝ (Suspend Construction)', icon: Shield },
+        { id: 'app_local_inspection', label: 'የአካባቢ ምርመራ ትዕዛዝ (Local Inspection)', icon: Map },
+        { id: 'property_possessory_disturbance', label: 'የይዞታ መረበሽ (Possessory Disturbance)', icon: FileText },
     ]
   },
   {
@@ -242,85 +242,87 @@ export const TEMPLATES: Template[] = [
     label: 'የአእምሯዊ ንብረት ህግ (IP Law)',
     icon: Brain,
     subTemplates: [
-        { id: 'ip_trademark_infringement', label: 'የንግድ ምልክት ጥሰት (Trademark Infringement)', icon: FileText },
-        { id: 'ip_patent_infringement', label: 'የፓተንት ጥሰት (Patent Infringement)', icon: FileText },
-        { id: 'ip_copyright_infringement', label: 'የቅጂ መብት ጥሰት (Copyright Infringement)', icon: FileText },
+        { id: 'ip_trademark_infringement', label: 'የንግድ ምልክት ጥሰት (Trademark Infringement)', icon: FileWarning },
+        { id: 'ip_trademark_opposition', label: 'የንግድ ምልክት መቃወሚያ (Trademark Opposition)', icon: MessageSquareWarning },
+        { id: 'ip_patent_infringement', label: 'የፓተንት ጥሰት (Patent Infringement)', icon: FileWarning },
+        { id: 'ip_copyright_infringement', label: 'የቅጂ መብት ጥሰት (Copyright Infringement)', icon: FileWarning },
+        { id: 'ip_moral_rights_violation', label: 'የሞራል መብቶች ጥሰት (Moral Rights Violation)', icon: BadgeCheck },
         { id: 'app_ip_interlocutory_injunction', label: 'ጊዜያዊ እገዳ (Interlocutory Injunction)', icon: Shield },
         { id: 'app_ip_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ (Seizure of Evidence)', icon: ShieldAlert },
     ]
   },
   {
     id: 'status_law',
-    label: 'Law of Persons & Status',
+    label: 'የሰው ህግ እና ሁኔታ (Law of Persons & Status)',
     icon: UserCheck,
     subTemplates: [
-        { id: 'status_judicial_interdiction', label: 'Judicial Interdiction', icon: FileText },
-        { id: 'status_correction_civil_record', label: 'Correction of Civil Record', icon: FileSignature },
-        { id: 'status_declaration_of_absence', label: 'Declaration of Absence', icon: FileX2 },
-        { id: 'app_status_provisional_curator', label: 'Appoint Provisional Curator', icon: BookUser },
-        { id: 'app_status_lift_interdiction', label: 'Lift Interdiction', icon: Gavel },
+        { id: 'status_judicial_interdiction', label: 'የፍርድ እገዳ (Judicial Interdiction)', icon: FileText },
+        { id: 'status_correction_civil_record', label: 'የሲቪል መዝገብ ማስተካከያ (Correction of Civil Record)', icon: FileSignature },
+        { id: 'status_declaration_of_absence', label: 'የመጥፋት መግለጫ (Declaration of Absence)', icon: FileX2 },
+        { id: 'app_status_provisional_curator', label: 'ጊዜያዊ ጠባቂ መሾም (Appoint Provisional Curator)', icon: BookUser },
+        { id: 'app_status_lift_interdiction', label: 'የእገዳ ማንሳት (Lift Interdiction)', icon: Gavel },
     ]
   },
   {
     id: 'tax_customs_law',
-    label: 'Tax & Customs Law',
+    label: 'የግብር እና ጉምሩክ ህግ (Tax & Customs Law)',
     icon: LandmarkIcon,
     subTemplates: [
-        { id: 'tax_objection_admin_review', label: 'Tax Objection (Admin Review)', icon: FileText },
-        { id: 'tax_appeal_ftac', label: 'Tax Appeal (FTAC)', icon: Gavel },
-        { id: 'customs_claim_for_refund', label: 'Customs Refund Claim', icon: Receipt },
-        { id: 'app_tax_stay_of_execution', label: 'Stay of Execution', icon: Shield },
-        { id: 'app_tax_adr_request', label: 'ADR Request', icon: Handshake },
+        { id: 'tax_objection_admin_review', label: 'የግብር መቃወሚያ (Tax Objection)', icon: FileText },
+        { id: 'tax_appeal_ftac', label: 'የግብር ይግባኝ (Tax Appeal)', icon: Gavel },
+        { id: 'customs_claim_for_refund', label: 'የጉምሩክ ተመላሽ ጥያቄ (Customs Refund Claim)', icon: Receipt },
+        { id: 'app_tax_stay_of_execution', label: 'የአፈጻጸም እገዳ (Stay of Execution)', icon: Shield },
+        { id: 'app_tax_adr_request', label: 'የአማራጭ መፍትሄ ጥያቄ (ADR Request)', icon: Handshake },
     ]
   },
   {
     id: 'tort_law',
-    label: 'Extra-Contractual (Tort) Law',
+    label: 'ከውል ውጭ ተጠያቂነት (Tort Law)',
     icon: Siren,
     subTemplates: [
-      { id: 'tort_general_negligence_claim', label: 'General Negligence Claim', icon: FileText },
-      { id: 'tort_strict_liability_buildings', label: 'Strict Liability (Buildings)', icon: Building2 },
+      { id: 'tort_general_negligence_claim', label: 'አጠቃላይ የቸልተኝነት ክስ (General Negligence Claim)', icon: FileText },
+      { id: 'tort_strict_liability_buildings', label: 'ጥብቅ ተጠያቂነት (ህንጻዎች) (Strict Liability - Buildings)', icon: Building2 },
     ]
   },
   {
     id: 'administrative_law',
-    label: 'Administrative Law',
+    label: 'የአስተዳደር ህግ (Administrative Law)',
     icon: Landmark,
     subTemplates: [
-      { id: 'admin_appeal_judicial_review', label: 'Judicial Review of Decision', icon: Gavel },
-      { id: 'admin_review_directive_legality', label: 'Judicial Review of Directive', icon: FileX2 },
+      { id: 'admin_appeal_judicial_review', label: 'የውሳኔ ፍርድ ቤት ክለሳ (Judicial Review of Decision)', icon: Gavel },
+      { id: 'admin_review_directive_legality', label: 'የመመሪያ ሕጋዊነት ክለሳ (Review of Directive)', icon: FileX2 },
     ]
   },
   {
     id: 'commercial_law',
-    label: 'Commercial Law',
+    label: 'የንግድ ህግ (Commercial Law)',
     icon: Building2,
     subTemplates: [
-      { id: 'comm_restitution_nonpayment', label: 'Payment on Negotiable Instrument', icon: Banknote },
-      { id: 'comm_preventive_restructuring', label: 'Preventive Debt Restructuring', icon: Shield },
-      { id: 'comm_dissolution_by_court', label: 'Judicial Dissolution', icon: FileX2 },
+      { id: 'comm_restitution_nonpayment', label: 'በንግድ መሣሪያ ላይ ክፍያ (Payment on Instrument)', icon: Banknote },
+      { id: 'comm_preventive_restructuring', label: 'የዕዳ መልሶ ማዋቀር (Debt Restructuring)', icon: Shield },
+      { id: 'comm_dissolution_by_court', label: 'የፍርድ ቤት መፍረስ (Judicial Dissolution)', icon: FileX2 },
     ]
   },
   {
     id: 'criminal_law_defences',
-    label: 'Criminal Law Defences',
+    label: 'የወንጀል መከላከያዎች (Criminal Law Defences)',
     icon: ShieldCheck,
     subTemplates: [
-        { id: 'crim_defence_justification_self_defence', label: 'Justification: Self-Defence', icon: Shield },
-        { id: 'crim_defence_excuse_insanity', label: 'Excuse: Insanity / Non-Culpability', icon: Brain },
-        { id: 'crim_defence_justification_necessity', label: 'Justification: Necessity', icon: ShieldAlert },
+        { id: 'crim_defence_justification_self_defence', label: 'ራስን መከላከል (Self-Defence)', icon: Shield },
+        { id: 'crim_defence_excuse_insanity', label: 'የአእምሮ ሕመም (Insanity)', icon: Brain },
+        { id: 'crim_defence_justification_necessity', label: 'በግዴታ (Necessity)', icon: ShieldAlert },
     ]
   },
   {
     id: 'civil_procedure_adjudications',
-    label: 'Civil Procedure Adjudications',
+    label: 'የፍትሐ ብሔር ሥነ ሥርዓት ውሳኔዎች (Civil Procedure)',
     icon: Gavel,
     subTemplates: [
-      { id: 'proc_amendment_of_pleading', label: 'Amendment of Pleading', icon: FileSignature },
-      { id: 'proc_intervention_by_third_party', label: 'Intervention by Third Party', icon: Users },
-      { id: 'proc_joinder_of_third_party', label: 'Joinder of Third Party', icon: Users },
-      { id: 'proc_judgment_objection_default', label: 'Objection to Default Judgment', icon: ShieldAlert },
-      { id: 'proc_review_of_judgment', label: 'Review of Judgment', icon: FileX2 },
+      { id: 'proc_amendment_of_pleading', label: 'የፍሬ ነገር ማሻሻያ (Amendment of Pleading)', icon: FileSignature },
+      { id: 'proc_intervention_by_third_party', label: 'የሶስተኛ ወገን ጣልቃ ገብነት (Intervention)', icon: Users },
+      { id: 'proc_joinder_of_third_party', label: 'የሶስተኛ ወገን ማካተት (Joinder)', icon: Users },
+      { id: 'proc_judgment_objection_default', label: 'የሌሉበት ፍርድ መቃወሚያ (Default Judgment Objection)', icon: ShieldAlert },
+      { id: 'proc_review_of_judgment', label: 'የፍርድ ዳግም ክለሳ (Review of Judgment)', icon: FileX2 },
     ]
   }
 ];

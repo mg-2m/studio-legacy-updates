@@ -61,6 +61,57 @@
         }
       ]
     },
+    "ip_trademark_opposition": {
+      "documentTitle": "የንግድ ምልክት ምዝገባ መቃወሚያ (Statement of Opposition to Trademark Application)",
+      "jurisdictionText": "Art. 13 of Trademark Proclamation No. 501/2006.",
+      "templateDescription": "### የንግድ ምልክት ምዝገባ መቃወሚያ (Trademark Opposition)\n\n**አጠቃቀም (Use Case):** ይህ አብነት አንድ ሶስተኛ ወገን ያቀረበው የንግድ ምልክት ማመልከቻ ከእርስዎ ቀደምት መብቶች ጋር ሲጋጭ ለመቃወም ያገለግላል። ይህ በፍርድ ቤት ሳይሆን በኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት (EIPO) ፊት የሚቀርብ አስተዳደራዊ ሂደት ነው።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** የተቃውሞ ማመልከቻው የንግድ ምልክቱ በጋዜጣ ከታተመበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የእርስዎ ቀደምት የንግድ ምልክት ምዝገባ ሰርተፍኬት እና በምልክቶቹ መካከል ግራ መጋባት ሊኖር እንደሚችል የሚያሳይ ማስረጃ ማቅረብ ያስፈልጋል።",
+      "partyTitles": {
+        "applicant": "ተቃዋሚ (Opponent)",
+        "respondent": "አመልካች (Applicant)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "የተቃዋሚው ቀደምት መብት (Opponent's Prior Right)",
+          "facets": [
+            {
+              "id": "fact_opponent_prior_registration",
+              "legalText": "ተቃዋሚው ከ [Date] ጀምሮ ለተመሳሳይ/ተዛማጅ ዕቃዎች የንግድ ምልክት ቁጥር [Number] ባለቤት ነው። (The Opponent is the owner of Trademark No. [Number] for similar/related goods since [Date].)",
+              "citation": "Proclamation 501/2006 Art. 7",
+              "evidence": ["CertificateOfRegistrationEIPO"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "የመቃወሚያ ምክንያቶች (Grounds for Opposition)",
+          "facets": [
+            {
+              "id": "fact_similarity_and_confusion",
+              "legalText": "የአመልካቹ ምልክት ከተቃዋሚው ምልክት ጋር ተመሳሳይ ወይም አሳሳች በመሆኑ በሸማቾች ዘንድ ግራ መጋባት ሊፈጥር ይችላል። (The Applicant's mark is identical or confusingly similar to the Opponent's mark, causing a likelihood of confusion.)",
+              "citation": "Proclamation 501/2006 Art. 7(1)(a)",
+              "evidence": []
+            },
+            {
+              "id": "fact_bad_faith_application",
+              "legalText": "ማመልከቻው የቀረበው በተቃዋሚው መልካም ስም ላይ ያለአግባብ ለመጠቀም በማሰብ ነው። (The application was filed in bad faith to trade on the goodwill of the Opponent.)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_reject_application",
+          "text": "የአመልካቹ የንግድ ምልክት ማመልከቻ ውድቅ እንዲደረግ። (To order the rejection of the Applicant's trademark application.)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_award_costs",
+          "text": "ተቃዋሚው ያወጣውን ወጪ እንዲከፈለው እንዲወሰን። (To order the Applicant to cover the costs incurred by the Opponent.)",
+          "isDefault": false
+        }
+      ]
+    },
     "ip_patent_infringement": {
       "documentTitle": "የፓተንት ጥሰት እና የካሳ ክስ (Statement of Claim for Patent Infringement and Compensation)",
       "jurisdictionText": "Art. 21 of Patent Proclamation No. 123/1995.",
@@ -129,7 +180,7 @@
     "ip_copyright_infringement": {
       "documentTitle": "የቅጂ መብት ጥሰት እና የሕግ ካሳ ክስ (Statement of Claim for Copyright Violation and Statutory Damages)",
       "jurisdictionText": "Art. 38 of Copyright and Neighboring Rights Proclamation No. 410/2004.",
-       "templateDescription": "### የቅጂ መብት ጥሰት ክስ (Copyright Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፤ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት ዓመታት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የስራው ደራሲ መሆንዎን እና ጥሰቱ መፈጸሙን ማሳየት ያስፈልጋል። ለምሳሌ፣ የተሰረቀውን ስራ ቅጂ ማቅረብ።",
+      "templateDescription": "### የቅጂ መብት ጥሰት ክስ (Copyright Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፤ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት ዓመታት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የስራው ደራሲ መሆንዎን እና ጥሰቱ መፈጸሙን ማሳየት ያስፈልጋል። ለምሳሌ፣ የተሰረቀውን ስራ ቅጂ ማቅረብ።",
       "partyTitles": {
         "applicant": "ከሳሽ (ደራሲ/ፈጣሪ) (Plaintiff - Author/Creator)",
         "respondent": "ተከሳሽ (ወንበዴ/አባዥ) (Defendant - Pirate/Reproducer)"
@@ -180,6 +231,46 @@
         {
           "id": "relief_impoundment",
           "text": "ሁሉም የጣሱ ሥራ ቅጂዎች እንዲወረሱ ትዕዛዝ እንዲሰጥ። (Order the impoundment of all copies of the infringing work.)",
+          "isDefault": false
+        }
+      ]
+    },
+    "ip_moral_rights_violation": {
+      "documentTitle": "የሞራል መብቶች ጥሰት ክስ (Claim for Violation of Moral Rights)",
+      "jurisdictionText": "Art. 8 of Copyright and Neighboring Rights Proclamation No. 410/2004.",
+      "templateDescription": "### የሞራል መብቶች ጥሰት ክስ (Moral Rights Violation Claim)\n\n**አጠቃቀም (Use Case):** ይህ አብነት የእርስዎ ስራ ያለእርስዎ እውቅና ሲቀርብ (የደራሲነት መብት ጥሰት) ወይም ስራዎ መልካም ስምዎን በሚጎዳ መልኩ ሲቀየር ወይም ሲበላሽ (የስራውን ሙሉነት የመጠበቅ መብት ጥሰት) ያገለግላል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** የሞራል መብቶች ከኢኮኖሚያዊ መብቶች ጋር አብረው የሚቆዩ ሲሆን የህይወት ዘመን ጥበቃ አላቸው።\n*   **ማስረጃ (Required Evidence):** የመጀመሪያውን ስራ እና የተጣሰውን/የተበላሸውን ስራ ጎን ለጎን ማቅረብ ያስፈልጋል።",
+      "partyTitles": {
+        "applicant": "ከሳሽ (ደራሲ) (Plaintiff - Author)",
+        "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "የደራሲነት እና የመብት ጥሰት (Authorship and Violation)",
+          "facets": [
+            {
+              "id": "fact_failure_to_attribute",
+              "legalText": "ተከሳሹ የከሳሽን ስራ [Work Title] ያለአግባብ ስሙን ሳይጠቅስ ተጠቅሞበታል። (The Defendant used the Plaintiff's work [Work Title] without proper attribution of authorship.)",
+              "citation": "Proclamation 410/2004 Art. 8(1)(a)",
+              "evidence": ["ProductSampleSpecimen"]
+            },
+            {
+              "id": "fact_distortion_or_mutilation",
+              "legalText": "ተከሳሹ የከሳሽን ስራ [Work Title] ክብሩን እና መልካም ስሙን በሚጎዳ መልኩ አሻሽሏል ወይም አበላሽቷል። (The Defendant distorted or mutilated the Plaintiff's work [Work Title] in a way that is prejudicial to their honor or reputation.)",
+              "citation": "Proclamation 410/2004 Art. 8(1)(b)",
+              "evidence": ["ProductSampleSpecimen"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_public_apology",
+          "text": "ተከሳሹ የደራሲነት መብቱን እንዲያከብር እና/ወይም ይፋዊ ይቅርታ እንዲጠይቅ ትዕዛዝ እንዲሰጥ። (To order the Defendant to respect the right of attribution and/or issue a public apology.)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_retraction_of_work",
+          "text": "የተበላሸው ስራ ከስርጭት እንዲወገድ ትዕዛዝ እንዲሰጥ። (To order the retraction of the distorted work from circulation.)",
           "isDefault": false
         }
       ]

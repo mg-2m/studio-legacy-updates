@@ -66,6 +66,7 @@ export interface Fact {
   legalText: string;
   citation: string;
   autoEvidence: string[] | null;
+  suggestedEvidence?: string[] | null; // New field for fallback suggestions
   isCustom?: boolean;
   values: { [key: string]: string | number | undefined };
 }

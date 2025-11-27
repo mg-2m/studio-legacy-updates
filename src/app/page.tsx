@@ -406,12 +406,23 @@ export default function Home() {
         dispatch({ type: 'SET_AI_SUGGESTIONS', payload: { evidenceIds: result.suggestedEvidence } });
       }
     } catch (error) {
-      console.error("Error suggesting evidence:", error);
+      console.error("Error suggesting evidence via AI:", error);
       toast({
         variant: "destructive",
-        title: "AI Error",
-        description: "Could not get evidence suggestions from AI.",
+        title: "AI Suggestion Failed",
+        description: "Falling back to rule-based suggestions.",
       });
+
+      // --- FALLBACK LOGIC ---
+      const fallbackSuggestions = new Set<string>();
+      selectedFacts.forEach(fact => {
+        fact.suggestedEvidence?.forEach(id => {
+          if (!autoLinkedIds.includes(id)) {
+            fallbackSuggestions.add(id);
+          }
+        });
+      });
+      dispatch({ type: 'SET_AI_SUGGESTIONS', payload: { evidenceIds: Array.from(fallbackSuggestions) } });
     }
   }, [selectedFacts, toast]);
 

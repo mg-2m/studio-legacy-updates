@@ -3,7 +3,7 @@
     "ip_trademark_infringement": {
       "documentTitle": "የንግድ ምልክት ጥሰት እና የካሳ ክስ (Statement of Claim for Trademark Infringement and Damages)",
       "jurisdictionText": "Art. 18 of Trademark Proclamation No. 501/2006.",
-      "templateDescription": "### የንግድ ምልክት ጥሰት ክስ (Trademark Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህ አብነት የእርስዎ የተመዘገበ የንግድ ምልክት በሌላ ወገን ያለፈቃድ ጥቅም ላይ ሲውል እና በገበያ ላይ ግራ መጋባትን ሲፈጥር ያገለግላል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት ዓመታት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የንግድ ምልክት ምዝገባ ሰርተፍኬት እና ጥሰቱን የሚያሳይ ናሙና (ለምሳሌ፣ የሐሰት ምርት) ማቅረብ የግድ ነው።",
+      "templateDescription": "### የንግድ ምልክት ጥሰት ክስ (Trademark Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህ አብነት የእርስዎ የተመዘገበ የንግድ ምልክት በሌላ ወገን ያለፈቃድ ጥቅም ላይ ሲውል እና በገበያ ላይ ግራ መጋባትን ሲፈጥር ያገለግላል።\n\n**የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት ዓመታት ውስጥ መቅረብ አለበት።\n**ማስረጃ (Required Evidence):** የንግድ ምልክት ምዝገባ ሰርተፍኬት እና ጥሰቱን የሚያሳይ ናሙና (ለምሳሌ፣ የሐሰት ምርት) ማቅረብ የግድ ነው።",
       "partyTitles": {
         "applicant": "ከሳሽ (የንግድ ምልክት ባለቤት) (Plaintiff - Trademark Owner)",
         "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
@@ -16,9 +16,8 @@
               "id": "fact_tm_registration",
               "legalText": "ከሳሽ በክፍል [Class] ውስጥ ለሚገኙ ዕቃዎች/አገልግሎቶች የንግድ ምልክት ቁጥር [Number] የተመዘገበ ባለቤት ነው። (The Plaintiff is the registered owner of Trademark No. [Number] for goods/services in Class [Class].)",
               "citation": "Proclamation 501/2006 Art. 11",
-              "evidence": [
-                "CertificateOfRegistrationEIPO"
-              ]
+              "autoEvidence": ["CertificateOfRegistrationEIPO"],
+              "suggestedEvidence": []
             }
           ]
         },
@@ -29,16 +28,15 @@
               "id": "fact_unauthorized_use",
               "legalText": "ተከሳሹ በንግድ ሂደት ውስጥ ተመሳሳይ ወይም አሳሳች ምልክት እየተጠቀመ ነው። (The Defendant is using an identical or confusingly similar mark in the course of trade.)",
               "citation": "Proclamation 501/2006 Art. 18",
-              "evidence": [
-                "ProductSampleSpecimen",
-                "MarketSurveyAffidavit"
-              ]
+              "autoEvidence": ["ProductSampleSpecimen"],
+              "suggestedEvidence": ["MarketSurveyAffidavit", "CeaseAndDesistLetter"]
             },
             {
               "id": "fact_consumer_confusion",
               "legalText": "የተከሳሹ አጠቃቀም በሚመለከታቸው ሸማቾች መካከል ግራ መጋባት ሊፈጥር ይችላል። (The Defendant's use is likely to cause confusion among the relevant consumers.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": ["MarketSurveyAffidavit"]
             }
           ]
         }
@@ -64,7 +62,7 @@
     "ip_trademark_opposition": {
       "documentTitle": "የንግድ ምልክት ምዝገባ መቃወሚያ (Statement of Opposition to Trademark Application)",
       "jurisdictionText": "Art. 13 of Trademark Proclamation No. 501/2006.",
-      "templateDescription": "### የንግድ ምልክት ምዝገባ መቃወሚያ (Trademark Opposition)\n\n**አጠቃቀም (Use Case):** ይህ አብነት አንድ ሶስተኛ ወገን ያቀረበው የንግድ ምልክት ማመልከቻ ከእርስዎ ቀደምት መብቶች ጋር ሲጋጭ ለመቃወም ያገለግላል። ይህ በፍርድ ቤት ሳይሆን በኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት (EIPO) ፊት የሚቀርብ አስተዳደራዊ ሂደት ነው።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** የተቃውሞ ማመልከቻው የንግድ ምልክቱ በጋዜጣ ከታተመበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የእርስዎ ቀደምት የንግድ ምልክት ምዝገባ ሰርተፍኬት እና በምልክቶቹ መካከል ግራ መጋባት ሊኖር እንደሚችል የሚያሳይ ማስረጃ ማቅረብ ያስፈልጋል።",
+      "templateDescription": "### የንግድ ምልክት ምዝገባ መቃወሚያ (Trademark Opposition)\n\n**አጠቃቀም (Use Case):** ይህ አብነት አንድ ሶስተኛ ወገን ያቀረበው የንግድ ምልክት ማመልከቻ ከእርስዎ ቀደምት መብቶች ጋር ሲጋጭ ለመቃወም ያገለግላል። ይህ በፍርድ ቤት ሳይሆን በኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት (EIPO) ፊት የሚቀርብ አስተዳደራዊ ሂደት ነው።\n\n**የጊዜ ገደብ (Limitation Period):** የተቃውሞ ማመልከቻው የንግድ ምልክቱ በጋዜጣ ከታተመበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ መቅረብ አለበት።\n**ማስረጃ (Required Evidence):** የእርስዎ ቀደምት የንግድ ምልክት ምዝገባ ሰርተፍኬት እና በምልክቶቹ መካከል ግራ መጋባት ሊኖር እንደሚችል የሚያሳይ ማስረጃ ማቅረብ ያስፈልጋል።",
       "partyTitles": {
         "applicant": "ተቃዋሚ (Opponent)",
         "respondent": "አመልካች (Applicant)"
@@ -77,7 +75,8 @@
               "id": "fact_opponent_prior_registration",
               "legalText": "ተቃዋሚው ከ [Date] ጀምሮ ለተመሳሳይ/ተዛማጅ ዕቃዎች የንግድ ምልክት ቁጥር [Number] ባለቤት ነው። (The Opponent is the owner of Trademark No. [Number] for similar/related goods since [Date].)",
               "citation": "Proclamation 501/2006 Art. 7",
-              "evidence": ["CertificateOfRegistrationEIPO"]
+              "autoEvidence": ["CertificateOfRegistrationEIPO"],
+              "suggestedEvidence": []
             }
           ]
         },
@@ -88,13 +87,15 @@
               "id": "fact_similarity_and_confusion",
               "legalText": "የአመልካቹ ምልክት ከተቃዋሚው ምልክት ጋር ተመሳሳይ ወይም አሳሳች በመሆኑ በሸማቾች ዘንድ ግራ መጋባት ሊፈጥር ይችላል። (The Applicant's mark is identical or confusingly similar to the Opponent's mark, causing a likelihood of confusion.)",
               "citation": "Proclamation 501/2006 Art. 7(1)(a)",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": ["MarketSurveyAffidavit"]
             },
             {
               "id": "fact_bad_faith_application",
               "legalText": "ማመልከቻው የቀረበው በተቃዋሚው መልካም ስም ላይ ያለአግባብ ለመጠቀም በማሰብ ነው። (The application was filed in bad faith to trade on the goodwill of the Opponent.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": []
             }
           ]
         }
@@ -115,7 +116,7 @@
     "ip_patent_infringement": {
       "documentTitle": "የፓተንት ጥሰት እና የካሳ ክስ (Statement of Claim for Patent Infringement and Compensation)",
       "jurisdictionText": "Art. 21 of Patent Proclamation No. 123/1995.",
-      "templateDescription": "### የፓተንት ጥሰት ክስ (Patent Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህንን አብነት ይጠቀሙ አንድ ሰው የፈጠራ ባለቤትነት መብትዎን ያለእርስዎ ፈቃድ ሲሰራ፣ ሲጠቀም ወይም ሲሸጥ።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት አምስት ዓመታት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የፓተንት ምዝገባ ሰርተፍኬት እና የጥሰቱን መጠን የሚያሳይ የባለሙያ ሪፖርት ማቅረብ ክሱን ያጠናክራል።",
+      "templateDescription": "### የፓተንት ጥሰት ክስ (Patent Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህንን አብነት ይጠቀሙ አንድ ሰው የፈጠራ ባለቤትነት መብትዎን ያለእርስዎ ፈቃድ ሲሰራ፣ ሲጠቀም ወይም ሲሸጥ።\n\n**የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት አምስት ዓመታት ውስጥ መቅረብ አለበት።\n**ማስረጃ (Required Evidence):** የፓተንት ምዝገባ ሰርተፍኬት እና የጥሰቱን መጠን የሚያሳይ የባለሙያ ሪፖርት ማቅረብ ክሱን ያጠናክራል።",
       "partyTitles": {
         "applicant": "ከሳሽ (የፓተንት ባለቤት) (Plaintiff - Patent Holder)",
         "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
@@ -128,10 +129,8 @@
               "id": "fact_patent_validity",
               "legalText": "ከሳሽ የፓተንት ቁጥር [Number] ያለው ሲሆን ይህም ሕጋዊ እና በሥራ ላይ ነው። (The Plaintiff holds Patent No. [Number], which is valid and in force.)",
               "citation": "Proclamation 123/1995 Art. 6",
-              "evidence": [
-                "CertificateOfRegistrationEIPO",
-                "TechnicalExpertReport"
-              ]
+              "autoEvidence": ["CertificateOfRegistrationEIPO"],
+              "suggestedEvidence": ["TechnicalExpertReport"]
             }
           ]
         },
@@ -142,7 +141,8 @@
               "id": "fact_unauthorized_manufacture",
               "legalText": "ተከሳሹ በፓተንት ጥያቄዎች ወሰን ውስጥ የሚወድቅ ምርት በማምረት/በመሸጥ ላይ ነው። (The Defendant is manufacturing/selling a product that falls within the scope of the patent claims.)",
               "citation": "Proclamation 123/1995 Art. 21",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": ["ProductSampleSpecimen", "TechnicalExpertReport"]
             }
           ]
         },
@@ -153,7 +153,8 @@
               "id": "fact_commercial_loss",
               "legalText": "ጥሰቱ በሽያጭ በመጥፋቱ ምክንያት የ [Amount] ቀጥተኛ የንግድ ኪሳራ አስከትሏል። (The infringement has resulted in direct commercial loss of [Amount] due to lost sales.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": ["AuditReport"]
             }
           ]
         }
@@ -180,7 +181,7 @@
     "ip_copyright_infringement": {
       "documentTitle": "የቅጂ መብት ጥሰት እና የሕግ ካሳ ክስ (Statement of Claim for Copyright Violation and Statutory Damages)",
       "jurisdictionText": "Art. 38 of Copyright and Neighboring Rights Proclamation No. 410/2004.",
-      "templateDescription": "### የቅጂ መብት ጥሰት ክስ (Copyright Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፤ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት ዓመታት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የስራው ደራሲ መሆንዎን እና ጥሰቱ መፈጸሙን ማሳየት ያስፈልጋል። ለምሳሌ፣ የተሰረቀውን ስራ ቅጂ ማቅረብ።",
+      "templateDescription": "### የቅጂ መብት ጥሰት ክስ (Copyright Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፤ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።\n\n**የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት ዓመታት ውስጥ መቅረብ አለበት።\n**ማስረጃ (Required Evidence):** የስራው ደራሲ መሆንዎን እና ጥሰቱ መፈጸሙን ማሳየት ያስፈልጋል። ለምሳሌ፣ የተሰረቀውን ስራ ቅጂ ማቅረብ።",
       "partyTitles": {
         "applicant": "ከሳሽ (ደራሲ/ፈጣሪ) (Plaintiff - Author/Creator)",
         "respondent": "ተከሳሽ (ወንበዴ/አባዥ) (Defendant - Pirate/Reproducer)"
@@ -193,7 +194,8 @@
               "id": "fact_original_work",
               "legalText": "ከሳሽ በ [Date] የታተመ/የተቀረጸው የ [Title] የመጀመሪያ ሥራ ደራሲ ነው። (The Plaintiff is the author of the original work [Title] published/fixed on [Date].)",
               "citation": "Proclamation 410/2004 Art. 38",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": ["ProductSampleSpecimen"]
             }
           ]
         },
@@ -204,15 +206,15 @@
               "id": "fact_unauthorized_reproduction",
               "legalText": "ተከሳሹ ሥራውን ያለፈቃድ አባዝቷል፣ አሰራጭቷል ወይም በይፋ አቅርቧል። (The Defendant has reproduced, distributed, or publicly performed the work without authorization.)",
               "citation": "Proclamation 410/2004 Art. 9",
-              "evidence": [
-                "ProductSampleSpecimen"
-              ]
+              "autoEvidence": [],
+              "suggestedEvidence": ["ProductSampleSpecimen", "CeaseAndDesistLetter"]
             },
             {
               "id": "fact_commercial_scale",
               "legalText": "ጥሰቱ የተፈጸመው በንግድ ደረጃ ነው። (The infringement was committed on a commercial scale.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": ["AuditReport"]
             }
           ]
         }
@@ -238,7 +240,7 @@
     "ip_moral_rights_violation": {
       "documentTitle": "የሞራል መብቶች ጥሰት ክስ (Claim for Violation of Moral Rights)",
       "jurisdictionText": "Art. 8 of Copyright and Neighboring Rights Proclamation No. 410/2004.",
-      "templateDescription": "### የሞራል መብቶች ጥሰት ክስ (Moral Rights Violation Claim)\n\n**አጠቃቀም (Use Case):** ይህ አብነት የእርስዎ ስራ ያለእርስዎ እውቅና ሲቀርብ (የደራሲነት መብት ጥሰት) ወይም ስራዎ መልካም ስምዎን በሚጎዳ መልኩ ሲቀየር ወይም ሲበላሽ (የስራውን ሙሉነት የመጠበቅ መብት ጥሰት) ያገለግላል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** የሞራል መብቶች ከኢኮኖሚያዊ መብቶች ጋር አብረው የሚቆዩ ሲሆን የህይወት ዘመን ጥበቃ አላቸው።\n*   **ማስረጃ (Required Evidence):** የመጀመሪያውን ስራ እና የተጣሰውን/የተበላሸውን ስራ ጎን ለጎን ማቅረብ ያስፈልጋል።",
+      "templateDescription": "### የሞራል መብቶች ጥሰት ክስ (Moral Rights Violation Claim)\n\n**አጠቃቀም (Use Case):** ይህ አብነት የእርስዎ ስራ ያለእርስዎ እውቅና ሲቀርብ (የደራሲነት መብት ጥሰት) ወይም ስራዎ መልካም ስምዎን በሚጎዳ መልኩ ሲቀየር ወይም ሲበላሽ (የስራውን ሙሉነት የመጠበቅ መብት ጥሰት) ያገለግላል።\n\n**የጊዜ ገደብ (Limitation Period):** የሞራል መብቶች ከኢኮኖሚያዊ መብቶች ጋር አብረው የሚቆዩ ሲሆን የህይወት ዘመን ጥበቃ አላቸው።\n**ማስረጃ (Required Evidence):** የመጀመሪያውን ስራ እና የተጣሰውን/የተበላሸውን ስራ ጎን ለጎን ማቅረብ ያስፈልጋል።",
       "partyTitles": {
         "applicant": "ከሳሽ (ደራሲ) (Plaintiff - Author)",
         "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
@@ -251,13 +253,15 @@
               "id": "fact_failure_to_attribute",
               "legalText": "ተከሳሹ የከሳሽን ስራ [Work Title] ያለአግባብ ስሙን ሳይጠቅስ ተጠቅሞበታል። (The Defendant used the Plaintiff's work [Work Title] without proper attribution of authorship.)",
               "citation": "Proclamation 410/2004 Art. 8(1)(a)",
-              "evidence": ["ProductSampleSpecimen"]
+              "autoEvidence": [],
+              "suggestedEvidence": ["ProductSampleSpecimen"]
             },
             {
               "id": "fact_distortion_or_mutilation",
               "legalText": "ተከሳሹ የከሳሽን ስራ [Work Title] ክብሩን እና መልካም ስሙን በሚጎዳ መልኩ አሻሽሏል ወይም አበላሽቷል። (The Defendant distorted or mutilated the Plaintiff's work [Work Title] in a way that is prejudicial to their honor or reputation.)",
               "citation": "Proclamation 410/2004 Art. 8(1)(b)",
-              "evidence": ["ProductSampleSpecimen"]
+              "autoEvidence": [],
+              "suggestedEvidence": ["ProductSampleSpecimen"]
             }
           ]
         }
@@ -291,19 +295,22 @@
               "id": "fact_prima_facie_case",
               "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ የጥሰት ጉዳይ አቋቁሟል። (The Applicant has established a strong prima facie case of infringement.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": ["CertificateOfRegistrationEIPO", "ProductSampleSpecimen"]
             },
             {
               "id": "fact_irreparable_harm",
               "legalText": "የቀጠለው ጥሰት በአመልካቹ የገበያ ድርሻ እና ስም ላይ ሊጠገን የማይችል ጉዳት ያስከትላል። (The continued infringement will cause irreparable harm to the Applicant's market share and reputation.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": []
             },
             {
               "id": "fact_balance_convenience",
               "legalText": "የምቾት ሚዛን እገዳውን ለመስጠት ይደግፋል (ማለትም ከማቆም ይልቅ ለማቆም አነስተኛ ጉዳት)። (The balance of convenience favors granting the injunction (i.e., less harm to stop than to continue).)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": []
             }
           ]
         }
@@ -332,13 +339,15 @@
               "id": "fact_concealment_risk",
               "legalText": "ተከሳሹ ወሳኝ የጥሰት ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ሂሳቦችን) ያጠፋል ወይም ይደብቃል የሚል ከባድ ስጋት አለ። (There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": []
             },
             {
               "id": "fact_specific_evidence",
               "legalText": "አመልካቹ ስለ ማስረጃው ቦታ እና ተፈጥሮ የተወሰነ እውቀት አለው። (The Applicant has specific knowledge of the location and nature of the evidence.)",
               "citation": "",
-              "evidence": []
+              "autoEvidence": [],
+              "suggestedEvidence": []
             }
           ]
         }

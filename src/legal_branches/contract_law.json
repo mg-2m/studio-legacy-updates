@@ -1,3 +1,4 @@
+
 {
   "templates": {
     "contract_debt_recovery": {
@@ -244,7 +245,7 @@
       "reliefs": [
         {
           "id": "con_relief_attach_property",
-          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት [ንብረቱን ይግለጹ] እንዲታገድ ትዕዛዝ እንዲሰጥ። (Order the attachment of the Defendant's property [Specify Property] pending final judgment.)",
+          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት [Specify Property] እንዲታገድ ትዕዛዝ እንዲሰጥ። (Order the attachment of the Defendant's property [Specify Property] pending final judgment.)",
           "isDefault": true,
           "isDynamic": false
         },
@@ -263,7 +264,7 @@
         "keywords": ["judgment on admission", "summary judgment", "pleading", "በእምነት ላይ ፍርድ", "አፋጣኝ ውሳኔ"],
         "jurisdictionType": "Federal/Regional First Instance"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ ተከሳሹ በመከላከያ መልሱ ላይ የክሱን ዋና ዋና ነጥቦች (ለምሳሌ የእዳውን መኖር) በግልጽ ሲያምን፣ ክርክሩን ሳያራዝሙ በታመነው ነጥብ ላይ ብቻ ፍርድ ቤቱ አፋጣኝ ውሳኔ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን ካቀረበ በኋላ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ግልጽ እምነት (Clear Admission):** የተከሳሹ የመከላከያ መልስ ምንም ዓይነት ማስተባበያ የሌለው ግልጽ የሆነ እምነት መያዝ አለበት።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ ተከሳሹ በመከላከያ መልሱ ላይ የክሱን ዋና ዋና ነጥቦች (ለምሳሌ የእዳውን መኖር) በግልጽ ሲያምን، ክርክሩን ሳያራዝሙ በታመነው ነጥብ ላይ ብቻ ፍርድ ቤቱ አፋጣኝ ውሳኔ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን ካቀረበ በኋላ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ግልጽ እምነት (Clear Admission):** የተከሳሹ የመከላከያ መልስ ምንም ዓይነት ማስተባበያ የሌለው ግልጽ የሆነ እምነት መያዝ አለበት።\n",
       "partyTitles": {
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
@@ -291,3 +292,5 @@
     }
   }
 }
+
+    

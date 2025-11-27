@@ -1,20 +1,20 @@
 {
   "templates": {
     "ip_trademark_infringement": {
-      "documentTitle": "Statement of Claim for Trademark Infringement and Damages (የንግድ ምልክት ጥሰት እና የካሳ ክስ)",
+      "documentTitle": "የንግድ ምልክት ጥሰት እና የካሳ ክስ (Statement of Claim for Trademark Infringement and Damages)",
       "jurisdictionText": "Art. 18 of Trademark Proclamation No. 501/2006.",
-      "templateDescription": "Use this template when your registered trademark is being used by another party without permission, causing confusion in the market. (ይህንን አብነት ይጠቀሙ የእርስዎ የተመዘገበ የንግድ ምልክት በሌላ ወገን ያለፈቃድ ጥቅም ላይ ሲውል እና በገበያ ላይ ግራ መጋባትን ሲፈጥር።)",
+      "templateDescription": "### የንግድ ምልክት ጥሰት ክስ (Trademark Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህ አብነት የእርስዎ የተመዘገበ የንግድ ምልክት በሌላ ወገን ያለፈቃድ ጥቅም ላይ ሲውል እና በገበያ ላይ ግራ መጋባትን ሲፈጥር ያገለግላል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት ዓመታት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የንግድ ምልክት ምዝገባ ሰርተፍኬት እና ጥሰቱን የሚያሳይ ናሙና (ለምሳሌ፣ የሐሰት ምርት) ማቅረብ የግድ ነው።",
       "partyTitles": {
-        "applicant": "Plaintiff (Trademark Owner) (ከሳሽ - የንግድ ምልክት ባለቤት)",
-        "respondent": "Defendant (Infringer) (ተከሳሽ - ጥሰት ፈፃሚ)"
+        "applicant": "ከሳሽ (የንግድ ምልክት ባለቤት) (Plaintiff - Trademark Owner)",
+        "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
       },
       "facts": {
         "group_1": {
-          "title": "Right of Ownership (የባለቤትነት መብት)",
+          "title": "የባለቤትነት መብት (Right of Ownership)",
           "facets": [
             {
               "id": "fact_tm_registration",
-              "legalText": "The Plaintiff is the registered owner of Trademark No. [Number] for goods/services in Class [Class]. (ከሳሽ በክፍል [Class] ውስጥ ለሚገኙ ዕቃዎች/አገልግሎቶች የንግድ ምልክት ቁጥር [Number] የተመዘገበ ባለቤት ነው።)",
+              "legalText": "ከሳሽ በክፍል [Class] ውስጥ ለሚገኙ ዕቃዎች/አገልግሎቶች የንግድ ምልክት ቁጥር [Number] የተመዘገበ ባለቤት ነው። (The Plaintiff is the registered owner of Trademark No. [Number] for goods/services in Class [Class].)",
               "citation": "Proclamation 501/2006 Art. 11",
               "evidence": [
                 "CertificateOfRegistrationEIPO"
@@ -23,11 +23,11 @@
           ]
         },
         "group_2": {
-          "title": "Infringement Act (የጥሰት ድርጊት)",
+          "title": "የጥሰት ድርጊት (Infringement Act)",
           "facets": [
             {
               "id": "fact_unauthorized_use",
-              "legalText": "The Defendant is using an identical or confusingly similar mark in the course of trade. (ተከሳሹ በንግድ ሂደት ውስጥ ተመሳሳይ ወይም አሳሳች ምልክት እየተጠቀመ ነው።)",
+              "legalText": "ተከሳሹ በንግድ ሂደት ውስጥ ተመሳሳይ ወይም አሳሳች ምልክት እየተጠቀመ ነው። (The Defendant is using an identical or confusingly similar mark in the course of trade.)",
               "citation": "Proclamation 501/2006 Art. 18",
               "evidence": [
                 "ProductSampleSpecimen",
@@ -36,7 +36,7 @@
             },
             {
               "id": "fact_consumer_confusion",
-              "legalText": "The Defendant's use is likely to cause confusion among the relevant consumers. (የተከሳሹ አጠቃቀም በሚመለከታቸው ሸማቾች መካከል ግራ መጋባት ሊፈጥር ይችላል።)",
+              "legalText": "የተከሳሹ አጠቃቀም በሚመለከታቸው ሸማቾች መካከል ግራ መጋባት ሊፈጥር ይችላል። (The Defendant's use is likely to cause confusion among the relevant consumers.)",
               "citation": "",
               "evidence": []
             }
@@ -46,36 +46,36 @@
       "reliefs": [
         {
           "id": "relief_permanent_injunction",
-          "text": "Judgment granting a permanent injunction restraining the Defendant from further use of the infringing mark. (ተከሳሹ የጣሰውን ምልክት እንዳይጠቀም የሚከለክል ቋሚ እገዳ እንዲሰጥ።)",
+          "text": "ተከሳሹ የጣሰውን ምልክት እንዳይጠቀም የሚከለክል ቋሚ እገዳ እንዲሰጥ። (Judgment granting a permanent injunction restraining the Defendant from further use of the infringing mark.)",
           "isDefault": true
         },
         {
           "id": "relief_damages_ip",
-          "text": "Order payment of damages suffered by the Plaintiff due to the infringement. (በጥሰቱ ምክንያት በከሳሽ የደረሰውን ጉዳት ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "text": "በጥሰቱ ምክንያት በከሳሽ የደረሰውን ጉዳት ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order payment of damages suffered by the Plaintiff due to the infringement.)",
           "isDefault": true
         },
         {
           "id": "relief_destruction_goods",
-          "text": "Order the destruction of all infringing materials and goods. (ሁሉም የጣሱ ቁሳቁሶች እና ዕቃዎች እንዲወድሙ ትዕዛዝ እንዲሰጥ።)",
+          "text": "ሁሉም የጣሱ ቁሳቁሶች እና ዕቃዎች እንዲወድሙ ትዕዛዝ እንዲሰጥ። (Order the destruction of all infringing materials and goods.)",
           "isDefault": false
         }
       ]
     },
     "ip_patent_infringement": {
-      "documentTitle": "Statement of Claim for Patent Infringement and Compensation (የፓተንት ጥሰት እና የካሳ ክስ)",
+      "documentTitle": "የፓተንት ጥሰት እና የካሳ ክስ (Statement of Claim for Patent Infringement and Compensation)",
       "jurisdictionText": "Art. 21 of Patent Proclamation No. 123/1995.",
-      "templateDescription": "Use this template when someone is making, using, or selling your patented invention without your consent. (ይህንን አብነት ይጠቀሙ አንድ ሰው የፈጠራ ባለቤትነት መብትዎን ያለእርስዎ ፈቃድ ሲሰራ፣ ሲጠቀም ወይም ሲሸጥ።)",
+      "templateDescription": "### የፓተንት ጥሰት ክስ (Patent Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህንን አብነት ይጠቀሙ አንድ ሰው የፈጠራ ባለቤትነት መብትዎን ያለእርስዎ ፈቃድ ሲሰራ፣ ሲጠቀም ወይም ሲሸጥ።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት አምስት ዓመታት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የፓተንት ምዝገባ ሰርተፍኬት እና የጥሰቱን መጠን የሚያሳይ የባለሙያ ሪፖርት ማቅረብ ክሱን ያጠናክራል።",
       "partyTitles": {
-        "applicant": "Plaintiff (Patent Holder) (ከሳሽ - የፓተንት ባለቤት)",
-        "respondent": "Defendant (Infringer) (ተከሳሽ - ጥሰት ፈፃሚ)"
+        "applicant": "ከሳሽ (የፓተንት ባለቤት) (Plaintiff - Patent Holder)",
+        "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
       },
       "facts": {
         "group_1": {
-          "title": "Right of Ownership (የባለቤትነት መብት)",
+          "title": "የባለቤትነት መብት (Right of Ownership)",
           "facets": [
             {
               "id": "fact_patent_validity",
-              "legalText": "The Plaintiff holds Patent No. [Number], which is valid and in force. (ከሳሽ የፓተንት ቁጥር [Number] ያለው ሲሆን ይህም ሕጋዊ እና በሥራ ላይ ነው።)",
+              "legalText": "ከሳሽ የፓተንት ቁጥር [Number] ያለው ሲሆን ይህም ሕጋዊ እና በሥራ ላይ ነው። (The Plaintiff holds Patent No. [Number], which is valid and in force.)",
               "citation": "Proclamation 123/1995 Art. 6",
               "evidence": [
                 "CertificateOfRegistrationEIPO",
@@ -85,22 +85,22 @@
           ]
         },
         "group_2": {
-          "title": "Infringement Act (የጥሰት ድርጊት)",
+          "title": "የጥሰት ድርጊት (Infringement Act)",
           "facets": [
             {
               "id": "fact_unauthorized_manufacture",
-              "legalText": "The Defendant is manufacturing/selling a product that falls within the scope of the patent claims. (ተከሳሹ በፓተንት ጥያቄዎች ወሰን ውስጥ የሚወድቅ ምርት በማምረት/በመሸጥ ላይ ነው።)",
+              "legalText": "ተከሳሹ በፓተንት ጥያቄዎች ወሰን ውስጥ የሚወድቅ ምርት በማምረት/በመሸጥ ላይ ነው። (The Defendant is manufacturing/selling a product that falls within the scope of the patent claims.)",
               "citation": "Proclamation 123/1995 Art. 21",
               "evidence": []
             }
           ]
         },
         "group_3": {
-          "title": "Damage (ጉዳት)",
+          "title": "ጉዳት (Damage)",
           "facets": [
             {
               "id": "fact_commercial_loss",
-              "legalText": "The infringement has resulted in direct commercial loss of [Amount] due to lost sales. (ጥሰቱ በሽያጭ በመጥፋቱ ምክንያት የ [Amount] ቀጥተኛ የንግድ ኪሳራ አስከትሏል።)",
+              "legalText": "ጥሰቱ በሽያጭ በመጥፋቱ ምክንያት የ [Amount] ቀጥተኛ የንግድ ኪሳራ አስከትሏል። (The infringement has resulted in direct commercial loss of [Amount] due to lost sales.)",
               "citation": "",
               "evidence": []
             }
@@ -110,48 +110,48 @@
       "reliefs": [
         {
           "id": "relief_stop_manufacture",
-          "text": "Judgment ordering the Defendant to cease all acts of manufacturing and selling the infringing product. (ተከሳሹ የጣሰውን ምርት ማምረት እና መሸጥ እንዲያቆም የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "text": "ተከሳሹ የጣሰውን ምርት ማምረት እና መሸጥ እንዲያቆም የሚገልጽ ፍርድ እንዲሰጥ። (Judgment ordering the Defendant to cease all acts of manufacturing and selling the infringing product.)",
           "isDefault": true
         },
         {
           "id": "relief_compensation_royalty",
-          "text": "Order payment of compensation calculated based on a reasonable royalty fee. (በተመጣጣኝ የሮያሊቲ ክፍያ ላይ ተመስርቶ የካሳ ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
+          "text": "በተመጣጣኝ የሮያሊቲ ክፍያ ላይ ተመስርቶ የካሳ ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ። (Order payment of compensation calculated based on a reasonable royalty fee.)",
           "citation": "Proclamation 123/1995 Art. 21",
           "isDefault": true
         },
         {
           "id": "relief_seize_equipment",
-          "text": "Order the seizure and disposal of the machinery primarily used to produce the infringing articles. (የጣሱትን ዕቃዎች ለማምረት በዋናነት ያገለገሉ ማሽነሪዎች እንዲወረሱ እና እንዲወገዱ ትዕዛዝ እንዲሰጥ።)",
+          "text": "የጣሱትን ዕቃዎች ለማምረት በዋናነት ያገለገሉ ማሽነሪዎች እንዲወረሱ እና እንዲወገዱ ትዕዛዝ እንዲሰጥ። (Order the seizure and disposal of the machinery primarily used to produce the infringing articles.)",
           "isDefault": false
         }
       ]
     },
     "ip_copyright_infringement": {
-      "documentTitle": "Statement of Claim for Copyright Violation and Statutory Damages (የቅጂ መብት ጥሰት እና የሕግ ካሳ ክስ)",
+      "documentTitle": "የቅጂ መብት ጥሰት እና የሕግ ካሳ ክስ (Statement of Claim for Copyright Violation and Statutory Damages)",
       "jurisdictionText": "Art. 38 of Copyright and Neighboring Rights Proclamation No. 410/2004.",
-       "templateDescription": "Use this template for cases of piracy, where your original work (book, music, film) is being reproduced, distributed, or sold without permission. (ይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፣ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።)",
+       "templateDescription": "### የቅጂ መብት ጥሰት ክስ (Copyright Infringement Claim)\n\n**አጠቃቀም (Use Case):** ይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፤ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት ዓመታት ውስጥ መቅረብ አለበት።\n*   **ማስረጃ (Required Evidence):** የስራው ደራሲ መሆንዎን እና ጥሰቱ መፈጸሙን ማሳየት ያስፈልጋል። ለምሳሌ፣ የተሰረቀውን ስራ ቅጂ ማቅረብ።",
       "partyTitles": {
-        "applicant": "Plaintiff (Author/Creator) (ከሳሽ - ደራሲ/ፈጣሪ)",
-        "respondent": "Defendant (Pirate/Reproducer) (ተከሳሽ - ወንበዴ/አባዥ)"
+        "applicant": "ከሳሽ (ደራሲ/ፈጣሪ) (Plaintiff - Author/Creator)",
+        "respondent": "ተከሳሽ (ወንበዴ/አባዥ) (Defendant - Pirate/Reproducer)"
       },
       "facts": {
         "group_1": {
-          "title": "Right of Authorship (የደራሲነት መብት)",
+          "title": "የደራሲነት መብት (Right of Authorship)",
           "facets": [
             {
               "id": "fact_original_work",
-              "legalText": "The Plaintiff is the author of the original work [Title] published/fixed on [Date]. (ከሳሽ በ [Date] የታተመ/የተቀረጸው የ [Title] የመጀመሪያ ሥራ ደራሲ ነው።)",
+              "legalText": "ከሳሽ በ [Date] የታተመ/የተቀረጸው የ [Title] የመጀመሪያ ሥራ ደራሲ ነው። (The Plaintiff is the author of the original work [Title] published/fixed on [Date].)",
               "citation": "Proclamation 410/2004 Art. 38",
               "evidence": []
             }
           ]
         },
         "group_2": {
-          "title": "Infringement Act (የጥሰት ድርጊት)",
+          "title": "የጥሰት ድርጊት (Infringement Act)",
           "facets": [
             {
               "id": "fact_unauthorized_reproduction",
-              "legalText": "The Defendant has reproduced, distributed, or publicly performed the work without authorization. (ተከሳሹ ሥራውን ያለፈቃድ አባዝቷል፣ አሰራጭቷል ወይም በይፋ አቅርቧል።)",
+              "legalText": "ተከሳሹ ሥራውን ያለፈቃድ አባዝቷል፣ አሰራጭቷል ወይም በይፋ አቅርቧል። (The Defendant has reproduced, distributed, or publicly performed the work without authorization.)",
               "citation": "Proclamation 410/2004 Art. 9",
               "evidence": [
                 "ProductSampleSpecimen"
@@ -159,7 +159,7 @@
             },
             {
               "id": "fact_commercial_scale",
-              "legalText": "The infringement was committed on a commercial scale. (ጥሰቱ የተፈጸመው በንግድ ደረጃ ነው።)",
+              "legalText": "ጥሰቱ የተፈጸመው በንግድ ደረጃ ነው። (The infringement was committed on a commercial scale.)",
               "citation": "",
               "evidence": []
             }
@@ -169,48 +169,48 @@
       "reliefs": [
         {
           "id": "relief_statutory_damages",
-          "text": "Order payment of statutory damages as provided by law, or actual damages suffered. (በሕግ የተደነገገውን የሕግ ካሳ ወይም የደረሰውን ትክክለኛ ጉዳት እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "text": "በሕግ የተደነገገውን የሕግ ካሳ ወይም የደረሰውን ትክክለኛ ጉዳት እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order payment of statutory damages as provided by law, or actual damages suffered.)",
           "isDefault": true
         },
         {
           "id": "relief_injunction_copyright",
-          "text": "Order a final injunction prohibiting further unauthorized use. (ተጨማሪ ያልተፈቀደ አጠቃቀምን የሚከለክል የመጨረሻ እገዳ እንዲሰጥ።)",
+          "text": "ተጨማሪ ያልተፈቀደ አጠቃቀምን የሚከለክል የመጨረሻ እገዳ እንዲሰጥ። (Order a final injunction prohibiting further unauthorized use.)",
           "isDefault": true
         },
         {
           "id": "relief_impoundment",
-          "text": "Order the impoundment of all copies of the infringing work. (ሁሉም የጣሱ ሥራ ቅጂዎች እንዲወረሱ ትዕዛዝ እንዲሰጥ።)",
+          "text": "ሁሉም የጣሱ ሥራ ቅጂዎች እንዲወረሱ ትዕዛዝ እንዲሰጥ። (Order the impoundment of all copies of the infringing work.)",
           "isDefault": false
         }
       ]
     },
     "app_ip_interlocutory_injunction": {
-      "documentTitle": "Application for Interlocutory Injunction to Restrain Infringement (የጥሰት እገዳ እንዲጣልበት ጊዜያዊ ትዕዛዝ ማመልከቻ)",
+      "documentTitle": "የጥሰት እገዳ እንዲጣልበት ጊዜያዊ ትዕዛዝ ማመልከቻ (Application for Interlocutory Injunction to Restrain Infringement)",
       "jurisdictionText": "Art. 154 of the Civil Procedure Code (General Injunction) and specific IP enabling clauses.",
-      "templateDescription": "This is an urgent application to be filed with your main claim. Use it to immediately stop an ongoing infringement while the main court case is pending, preventing further damage to your market or reputation. (ይህ ከዋናው ክስዎ ጋር የሚቀርብ አስቸኳይ ማመልከቻ ነው። ዋናው የፍርድ ቤት ጉዳይ በሚታይበት ጊዜ ቀጣይ ጥሰትን ወዲያውኑ ለማስቆም ይጠቀሙበት، ይህም በገበያዎ ወይም በዝናዎ ላይ ተጨማሪ ጉዳት እንዳይደርስ ይከላከላል።)",
+      "templateDescription": "### ጊዜያዊ የጥሰት እገዳ (Interlocutory Injunction)\n\n**አጠቃቀም (Use Case):** ይህ ከዋናው ክስዎ ጋር የሚቀርብ አስቸኳይ ማመልከቻ ነው። ዋናው የፍርድ ቤት ጉዳይ በሚታይበት ጊዜ ቀጣይ ጥሰትን ወዲያውኑ ለማስቆም እና በገበያዎ ወይም በዝናዎ ላይ ተጨማሪ ጉዳት እንዳይደርስ ለመከላከል ይጠቅማል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **አስቸኳይነት (Urgency):** ጥሰቱ አሁንም በመካሄድ ላይ መሆኑን እና አስቸኳይ እርምጃ ካልተወሰደ ሊጠገን የማይችል ጉዳት እንደሚያስከትል ማሳየት አለብዎት።\n*   **ዋና ክስ (Main Claim):** ይህ ማመልከቻ ከዋናው የጥሰት ክስ ጋር በአንድነት መቅረብ አለበት።",
       "partyTitles": {
-        "applicant": "Applicant (አመልካች)",
-        "respondent": "Respondent (ተጠሪ)"
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
       },
       "facts": {
         "group_1": {
-          "title": "Urgency & Harm (አስቸኳይነት እና ጉዳት)",
+          "title": "አስቸኳይነት እና ጉዳት (Urgency & Harm)",
           "facets": [
             {
               "id": "fact_prima_facie_case",
-              "legalText": "The Applicant has established a strong prima facie case of infringement. (አመልካቹ ጠንካራ የቅድመ-ገጽታ የጥሰት ጉዳይ አቋቁሟል።)",
+              "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ የጥሰት ጉዳይ አቋቁሟል። (The Applicant has established a strong prima facie case of infringement.)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_irreparable_harm",
-              "legalText": "The continued infringement will cause irreparable harm to the Applicant's market share and reputation. (የቀጠለው ጥሰት በአመልካቹ የገበያ ድርሻ እና ስም ላይ ሊጠገን የማይችል ጉዳት ያስከትላል።)",
+              "legalText": "የቀጠለው ጥሰት በአመልካቹ የገበያ ድርሻ እና ስም ላይ ሊጠገን የማይችል ጉዳት ያስከትላል። (The continued infringement will cause irreparable harm to the Applicant's market share and reputation.)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_balance_convenience",
-              "legalText": "The balance of convenience favors granting the injunction (i.e., less harm to stop than to continue). (የምቾት ሚዛን እገዳውን ለመስጠት ይደግፋል (ማለትም ከማቆም ይልቅ ለማቆም አነስተኛ ጉዳት)።)",
+              "legalText": "የምቾት ሚዛን እገዳውን ለመስጠት ይደግፋል (ማለትም ከማቆም ይልቅ ለማቆም አነስተኛ ጉዳት)። (The balance of convenience favors granting the injunction (i.e., less harm to stop than to continue).)",
               "citation": "",
               "evidence": []
             }
@@ -220,32 +220,32 @@
       "reliefs": [
         {
           "id": "relief_temporary_restraint",
-          "text": "Order the Respondent to temporarily cease all manufacture, sale, or distribution of the infringing goods pending final judgment. (የመጨረሻ ፍርድ እስከሚሰጥ ድረስ ተጠሪው የጣሱትን ዕቃዎች ማምረት፣ መሸጥ ወይም ማሰራጨት ለጊዜው እንዲያቆም ትዕዛዝ እንዲሰጥ።)",
+          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ ተጠሪው የጣሱትን ዕቃዎች ማምረት፣ መሸጥ ወይም ማሰራጨት ለጊዜው እንዲያቆም ትዕዛዝ እንዲሰጥ። (Order the Respondent to temporarily cease all manufacture, sale, or distribution of the infringing goods pending final judgment.)",
           "isDefault": true
         }
       ]
     },
     "app_ip_anton_piller": {
-      "documentTitle": "Application for Preservation and Seizure of Evidence (የማስረጃ ጥበቃ እና መያዣ ማመልከቻ)",
+      "documentTitle": "የማስረጃ ጥበቃ እና መያዣ ማመልከቻ (Application for Preservation and Seizure of Evidence)",
       "jurisdictionText": "Art. 154 of the Civil Procedure Code (Inherent Power) & Art. 10 of Proclamation 410/2004.",
-      "templateDescription": "This is a highly urgent and special 'search and seize' order used when there is a very strong reason to believe the infringer will destroy evidence (e.g., molds, computers, documents) if they are notified of the lawsuit. It is granted without notifying the other party. (ይህ በጣም አስቸኳይ እና ልዩ 'የፍተሻ እና የመያዝ' ትእዛዝ ነው፣ ይህም አጥፊው ስለ ክሱ ከተነገረው ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ኮምፒተሮችን፣ ሰነዶችን) ያጠፋል ብሎ ለማመን በጣም ጠንካራ ምክንያት ሲኖር ነው። ለሌላኛው ወገን ሳይነገር ነው የሚፈቀደው።)",
+      "templateDescription": "### የማስረጃ መያዣ ትዕዛዝ (Anton Piller Order)\n\n**አጠቃቀም (Use Case):** ይህ በጣም አስቸኳይ እና ልዩ የሆነ 'የፍተሻ እና የመያዝ' ትእዛዝ ነው። አጥፊው ስለ ክሱ ከተነገረው ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ኮምፒተሮችን፣ ሰነዶችን) ያጠፋል ብሎ ለማመን በጣም ጠንካራ ምክንያት ሲኖር ጥቅም ላይ ይውላል። ለሌላኛው ወገን ሳይነገር ነው የሚፈቀደው።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **ከፍተኛ ስጋት (Extreme Risk):** ተከሳሹ ማስረጃዎችን እንደሚያጠፋ የሚያሳይ በጣም ጠንካራ እና ተጨባጭ ስጋት መኖሩን ማሳየት አለብዎት።\n*   **ጠንካራ ክስ (Strong Case):** የጥሰት ክስዎ በጣም ጠንካራ መሆኑን ለፍርድ ቤቱ ማሳመን አለብዎት።",
       "partyTitles": {
-        "applicant": "Applicant (አመልካች)",
-        "respondent": "Respondent (ተጠሪ)"
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
       },
       "facts": {
         "group_1": {
-          "title": "Preservation of Evidence (የማስረጃ ጥበቃ)",
+          "title": "የማስረጃ ጥበቃ (Preservation of Evidence)",
           "facets": [
             {
               "id": "fact_concealment_risk",
-              "legalText": "There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts). (ተከሳሹ ወሳኝ የጥሰት ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ሂሳቦችን) ያጠፋል ወይም ይደብቃል የሚል ከባድ ስጋት አለ።)",
+              "legalText": "ተከሳሹ ወሳኝ የጥሰት ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ሂሳቦችን) ያጠፋል ወይም ይደብቃል የሚል ከባድ ስጋት አለ። (There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).)",
               "citation": "",
               "evidence": []
             },
             {
               "id": "fact_specific_evidence",
-              "legalText": "The Applicant has specific knowledge of the location and nature of the evidence. (አመልካቹ ስለ ማስረጃው ቦታ እና ተፈጥሮ የተወሰነ እውቀት አለው።)",
+              "legalText": "አመልካቹ ስለ ማስረጃው ቦታ እና ተፈጥሮ የተወሰነ እውቀት አለው። (The Applicant has specific knowledge of the location and nature of the evidence.)",
               "citation": "",
               "evidence": []
             }
@@ -255,7 +255,7 @@
       "reliefs": [
         {
           "id": "relief_seize_evidence",
-          "text": "Order a court officer to enter the Respondent's premises to seize and preserve evidence relating to the infringement. (የፍርድ ቤት ባለሥልጣን ከጥሰቱ ጋር የተያያዙ ማስረጃዎችን ለመያዝ እና ለመጠበቅ ወደ ተጠሪው ግቢ እንዲገባ ትዕዛዝ እንዲሰጥ።)",
+          "text": "የፍርድ ቤት ባለሥልጣን ከጥሰቱ ጋር የተያያዙ ማስረጃዎችን ለመያዝ እና ለመጠበቅ ወደ ተጠሪው ግቢ እንዲገባ ትዕዛዝ እንዲሰጥ። (Order a court officer to enter the Respondent's premises to seize and preserve evidence relating to the infringement.)",
           "isDefault": true
         }
       ]

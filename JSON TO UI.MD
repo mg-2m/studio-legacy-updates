@@ -1,53 +1,58 @@
 # Addis Crown Blueprint: JSON to UI Implementation Checklist
 
-This document serves as the definitive checklist for transforming the legal knowledge from the `docs/backend.json` blueprint into a fully functional, "spoon-fed" user interface. This process must be followed for every new legal branch and for any QA validation of existing branches.
+This document serves as the definitive checklist for transforming the legal knowledge from the `src/legal_branches/*.json` blueprints into a fully functional, "spoon-fed" user interface. This process must be followed for every new legal branch and for any QA validation of existing branches.
 
 Each segment must pass both a **Relevancy Check** (ensuring only context-specific information is shown) and an **Exhaustive Rendering Check** (ensuring no relevant information is missing).
 
-## The 10 Segments of UI Implementation
+---
 
-1.  **Head, Date, Court Name, Location, Bench Name, and Bench Address:**
-    *   **Relevancy Check:** The "Bench/Division" dropdown MUST be filtered by and only show benches relevant to the selected "Court Tier".
-    *   **Exhaustive Rendering Check:** All court tiers, benches, and cities defined in `src/lib/data.ts` MUST be available in their respective dropdowns.
+## The 10 Foundational Rules
 
-2.  **Party Head with Titles, Addresses, and Role:**
-    *   **Relevancy Check:** The role of each party (e.g., "Applicant," "Plaintiff," "Decree Holder") MUST dynamically update to be relevant to the `partyTitles` defined for the selected template in `backend.json`.
-    *   **Exhaustive Rendering Check:** All `HONORIFICS`, `REGIONS_AND_CITIES`, and `AA_SUBCITIES` from `data.ts` MUST be populated in their dropdowns.
+### 1. Header and Case Metadata
+- **1.1. Relevancy Check:** The "Bench/Division" dropdown MUST be filtered by and only show benches relevant to the selected "Court Tier".
+- **1.2. Exhaustive Rendering Check:** All court tiers, benches, and cities defined in `src/lib/data.ts` MUST be available in their respective dropdowns.
 
-3.  **Introduction for Procedural Matters:**
-    *   **Relevancy Check:** The jurisdiction text (e.g., "Labour Proclamation No. 1156/2019") MUST be dynamically rendered in the preview, sourced from the `jurisdictionText` property of the *currently selected template*.
-    *   **Exhaustive Rendering Check:** All procedural options (Representation, Summons Delivery) must be present as radio groups or dropdowns.
+### 2. Party Information
+- **2.1. Relevancy Check:** The role of each party (e.g., "Applicant," "Plaintiff") MUST dynamically update to be relevant to the `partyTitles` defined for the selected template in the corresponding `*.json` file.
+- **2.2. Exhaustive Rendering Check:** All `HONORIFICS`, `REGIONS_AND_CITIES`, and `AA_SUBCITIES` from `data.ts` MUST be populated in their respective dropdowns.
 
-4.  **Title of the Suite:**
-    *   **Relevancy Check:** The main document title (e.g., "Statement of Claim for Unlawful Termination") MUST be automatically rendered and relevant to the `documentTitle` of the *currently selected template*.
-    *   **Exhaustive Rendering Check:** The title must always appear in the preview pane; it should never be blank.
+### 3. Procedural Introduction
+- **3.1. Relevancy Check:** The jurisdiction text (e.g., "Labour Proclamation No. 1156/2019") MUST be dynamically rendered in the preview, sourced from the `jurisdictionText` property of the *currently selected template*.
+- **3.2. Exhaustive Rendering Check:** All procedural options (Representation, Summons Delivery) must be present as radio groups or dropdowns.
 
-5.  **Facts Stating and Grounding:**
-    *   **Relevancy Check:** The UI must ONLY display the fact groups and factual facets that are relevant to the *currently selected template* as defined in `backend.json`.
-    *   **Exhaustive Rendering Check:** The UI must display *all* facts and groups for the selected template, and must support the addition of "Custom Facts" not covered by the predefined facets.
+### 4. Document Title
+- **4.1. Relevancy Check:** The main document title (e.g., "Statement of Claim for Unlawful Termination") MUST be automatically rendered and relevant to the `documentTitle` of the *currently selected template*.
+- **4.2. Exhaustive Rendering Check:** The title must always appear in the preview pane; it should never be blank.
 
-6.  **Request Judgment and Relief:**
-    *   **Relevancy Check:** The UI must ONLY display the relief options that are relevant to the *currently selected template* as defined in `backend.json`.
-    *   **Exhaustive Rendering Check:** All standard reliefs for the template must be presented as a list of checkbox items. A "Custom Relief" option must be available.
+### 5. Factual Grounds
+- **5.1. Relevancy Check:** The UI must ONLY display the fact groups and factual facets that are relevant to the *currently selected template* as defined in its `*.json` file.
+- **5.2. Exhaustive Rendering Check:** The UI must display *all* facts and groups for the selected template, and must support the addition of "Custom Facts".
 
-7.  **Evidence List Attachment & Auto Oath Statement:**
-    *   **Relevancy Check:** Auto-linked evidence MUST be directly relevant to a selected fact. AI-suggested evidence MUST be relevant to the combination of selected facts.
-    *   **Exhaustive Rendering Check:** The UI must clearly distinguish between **Required (Auto-Linked)**, **AI-Suggested**, and **Manual** evidence. The final preview MUST render a clean, formatted list of all *active* evidence. Both document pages must end with the static verification/oath statements.
+### 6. Reliefs and Judgments
+- **6.1. Relevancy Check:** The UI must ONLY display the relief options that are relevant to the *currently selected template* as defined in its `*.json` file.
+- **6.2. Exhaustive Rendering Check:** All standard reliefs for the template must be presented as a list of checkbox items. A "Custom Relief" option must be available.
 
-8.  **Bilingual Consistency:**
-    *   **Relevancy Check:** N/A.
-    *   **Exhaustive Rendering Check:** All user-facing text sourced from the template data MUST be provided in both English and Amharic, using the format "English (Amharic)". This includes:
-        *   Sidebar branch names and template titles (`template.label` and `subTemplate.label` in `src/lib/data.ts`).
-        *   Document titles (`documentTitle`).
-        *   Party titles (`partyTitles`).
-        *   Fact group titles.
-        *   Fact `legalText`.
-        *   Relief `text`.
+### 7. Evidence Management
+- **7.1. Relevancy Check:** Auto-linked evidence MUST be directly relevant to a selected fact. AI-suggested evidence MUST be relevant to the combination of selected facts.
+- **7.2. Exhaustive Rendering Check:** The UI must clearly distinguish between **Required (Auto-Linked)**, **AI-Suggested**, and **Manual** evidence. The final preview MUST render a clean, formatted list of all *active* evidence. Both document pages must end with the static verification/oath statements.
 
-9.  **Default Relief Selection:**
-    *   **Relevancy Check:** N/A.
-    *   **Exhaustive Rendering Check:** Every template MUST have at least one relief option with `isDefault: true` to ensure a sensible starting state and prevent an empty relief section.
+### 8. Bilingual Consistency (Amharic First)
+- **8.1. Relevancy Check:** N/A.
+- **8.2. Exhaustive Rendering Check:** All user-facing text sourced from the template data MUST be provided in a bilingual format, with Amharic appearing first: **"Amharic (English)"**. This includes:
+    - Sidebar branch names and template titles (`template.label` and `subTemplate.label` in `src/lib/data.ts`).
+    - Document titles (`documentTitle`).
+    - Party titles (`partyTitles`).
+    - Fact group titles.
+    - Fact `legalText`.
+    - Relief `text`.
+    - Template guidance descriptions (`templateDescription`).
 
-10. **Dynamic Template Guidance:**
-    *   **Relevancy Check:** When a template is selected, a descriptive header MUST appear at the top of the editor, sourced from the template's `templateDescription` property in the backend.
-    *   **Exhaustive Rendering Check:** The description must be bilingual (English and Amharic) and clearly explain the template's use case, target scenarios, and any critical warnings or prerequisites.
+### 9. Default Relief Selection
+- **9.1. Relevancy Check:** N/A.
+- **9.2. Exhaustive Rendering Check:** Every template MUST have at least one relief option with `isDefault: true` to ensure a sensible starting state and prevent an empty relief section.
+
+### 10. Dynamic Template Guidance
+- **10.1. Relevancy Check:** When a template is selected, a descriptive header MUST appear at the top of the editor, sourced from the template's `templateDescription` property in the backend.
+- **10.2. Exhaustive Rendering Check:** The description must be bilingual (Amharic first) and be structured to clearly explain:
+    - **Period of Limitation:** Any statutory deadlines for filing the document.
+    - **Evidentiary & Factual Prerequisites:** The core, non-negotiable evidence and facts required to establish a *prima facie* case.

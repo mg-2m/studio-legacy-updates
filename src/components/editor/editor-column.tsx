@@ -14,6 +14,31 @@ import { TEMPLATE_DATA, TEMPLATES } from '@/lib/data';
 import { ChevronRight, Lightbulb } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
 
+// A simple markdown-to-React component
+const SimpleMarkdown: React.FC<{ content: string }> = ({ content }) => {
+    if (!content) return null;
+
+    // Split by lines to handle paragraphs and bullet points
+    const lines = content.split('\n').filter(line => line.trim() !== '');
+
+    return (
+        <div className="prose prose-sm dark:prose-invert text-yellow-900 dark:text-yellow-300">
+            {lines.map((line, index) => {
+                if (line.startsWith('### ')) {
+                    return <h3 key={index} className="font-bold text-base my-2">{line.substring(4)}</h3>;
+                }
+                if (line.startsWith('**') && line.endsWith('**')) {
+                    return <strong key={index} className="block my-1">{line.substring(2, line.length - 2)}</strong>;
+                }
+                if (line.startsWith('*   ')) {
+                    return <li key={index} className="ml-4 list-disc">{line.substring(4)}</li>;
+                }
+                return <p key={index} className="my-1">{line}</p>;
+            })}
+        </div>
+    );
+};
+
 
 interface EditorColumnProps {
   state: AppState;
@@ -59,7 +84,7 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
                 <Lightbulb className="h-5 w-5 !text-yellow-500" />
                 <AlertTitle className="font-bold">Template Guidance (የአብነት መመሪያ)</AlertTitle>
                 <AlertDescription>
-                  {templateData.templateDescription}
+                  <SimpleMarkdown content={templateData.templateDescription} />
                 </AlertDescription>
               </Alert>
             )}

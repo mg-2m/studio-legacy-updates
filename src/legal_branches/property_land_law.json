@@ -1,0 +1,426 @@
+{
+  "templates": {
+    "property_petitory_vindication": {
+      "documentTitle": "Statement of Claim for Vindication of Property (Petitory Action) (የይዞታ ጥያቄ ክስ)",
+      "jurisdictionText": "Art. 1206 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Owner) (ከሳሽ - ባለቤት)",
+        "respondent": "Defendant (Unlawful Holder) (ተከሳሽ - ሕገ-ወጥ ይዞታ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Proof of Title (የባለቤትነት ማረጋገጫ)",
+          "facets": [
+            {
+              "id": "fact_ownership_proof",
+              "legalText": "The Plaintiff is the legal owner/holder of the immovable property situated at [Location]. (ከሳሽ በ [አካባቢ] የሚገኘው የማይንቀሳቀስ ንብረት ሕጋዊ ባለቤት/ባለይዞታ ነው።)",
+              "citation": "Civ. Code Art. 1204",
+              "evidence": [
+                "TitleDeed"
+              ]
+            },
+            {
+              "id": "fact_chain_of_custody",
+              "legalText": "The Plaintiff acquired the property through [Sale/Succession/Grant] on [Date]. (ከሳሽ ንብረቱን በ [ሽያጭ/ውርስ/ስጦታ] በ [ቀን] አግኝቷል።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Unlawful Holding (ሕገ-ወጥ ይዞታ)",
+          "facets": [
+            {
+              "id": "fact_defendant_possession",
+              "legalText": "The Defendant is currently in possession of the property without any legal title or right. (ተከሳሹ በአሁኑ ጊዜ ያለ ምንም ሕጋዊ መብት ወይም ሰነድ በንብረቱ ላይ ይዞታ አለው።)",
+              "citation": "Civ. Code Art. 1206",
+              "evidence": []
+            },
+            {
+              "id": "fact_refusal_vacate",
+              "legalText": "Despite demands, the Defendant refuses to vacate the property. (ተከሳሹ በተደጋጋሚ ቢጠየቅም ንብረቱን ለቆ ለመውጣት ፈቃደኛ አልሆነም።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_declare_ownership",
+          "text": "Judgment declaring the Plaintiff as the sole legal owner/holder of the property. (ከሳሽ የንብረቱ ብቸኛ ሕጋዊ ባለቤት/ባለይዞታ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_eviction_order",
+          "text": "Order the Defendant to vacate the property and hand it over to the Plaintiff. (ተከሳሹ ንብረቱን ለቆ ለከሳሽ እንዲያስረክብ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_mesne_profits",
+          "text": "Order the Defendant to pay compensation (fruits/rent) for the period of unlawful occupation. (ተከሳሹ በሕገ-ወጥ ይዞታ ለቆየበት ጊዜ ካሳ (ፍራፍሬ/ኪራይ) እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "property_possessory_restoration": {
+      "documentTitle": "Statement of Claim for Restoration of Possession (የተነጠቀ ይዞታን ለማስመለስ የሚቀርብ ክስ)",
+      "jurisdictionText": "Art. 1149 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Dispossessed) (ከሳሽ - ይዞታውን የተነጠቀ)",
+        "respondent": "Defendant (Usurper) (ተከሳሽ - ነጣቂ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Fact of Possession (የይዞታ እውነታ)",
+          "facets": [
+            {
+              "id": "fact_actual_possession",
+              "legalText": "The Plaintiff was in peaceful and continuous possession of the property. (ከሳሽ በንብረቱ ላይ ሰላማዊ እና ያልተቋረጠ ይዞታ ነበረው።)",
+              "citation": "Civ. Code Art. 1140",
+              "evidence": [
+                "TaxLandRentReceipts",
+                "KebeleConfirmation"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Illicit Interference (Usurpation) (ሕገ-ወጥ ጣልቃ ገብነት (መንጠቅ))",
+          "facets": [
+            {
+              "id": "fact_usurpation_act",
+              "legalText": "The Defendant took possession by force/fraud on [Date]. (ተከሳሹ በ [ቀን] በኃይል/በማጭበርበር ይዞታውን ወስዷል።)",
+              "citation": "Civ. Code Art. 1148",
+              "evidence": []
+            },
+            {
+              "id": "fact_timeliness",
+              "legalText": "This claim is filed within two years of the usurpation. (ይህ ክስ ይዞታው ከተነጠቀበት ጊዜ ጀምሮ በሁለት ዓመት ውስጥ የቀረበ ነው።)",
+              "citation": "Civ. Code Art. 1149",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_restore_possession",
+          "text": "Order the immediate restoration of possession to the Plaintiff (without prejudice to questions of title). (የባለቤትነት ጥያቄ እንደተጠበቀ ሆኖ ይዞታው ወዲያውኑ ለከሳሽ እንዲመለס ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "property_boundary_encroachment": {
+      "documentTitle": "Statement of Claim for Removal of Boundary Encroachment (የድንበር መጣስ እንዲወገድ የሚቀርብ ክስ)",
+      "jurisdictionText": "Art. 1204 & 1211 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (Neighbor) (ተከሳሽ - ጎረቤት)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Boundary Lines (የድንበር መስመሮች)",
+          "facets": [
+            {
+              "id": "fact_defined_boundary",
+              "legalText": "The legal boundary between the Plaintiff's and Defendant's plots is defined by the official Site Plan. (በከሳሽ እና በተከሳሽ ይዞታዎች መካከል ያለው ሕጋዊ ድንበር በይፋዊ የሳይት ፕላን የተገለጸ ነው።)",
+              "citation": "",
+              "evidence": [
+                "SitePlan"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "The Encroachment (የድንበር መጣስ)",
+          "facets": [
+            {
+              "id": "fact_encroachment_act",
+              "legalText": "The Defendant has constructed a wall/structure that crosses the boundary line by [Meters]. (ተከሳሹ የድንበር መስመሩን በ [ሜትር] የሚያልፍ ግድግዳ/አጥር ገንብቷል።)",
+              "citation": "",
+              "evidence": [
+                "SurveyorsReport"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_demolition",
+          "text": "Order the Defendant to demolish the encroaching structure. (ተከሳሹ የጣሰውን ግንባታ እንዲያፈርስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_boundary_restitution",
+          "text": "Order the restoration of the boundary markers to their original position. (የድንበር ምልክቶቹ ወደ ቀድሞ ቦታቸው እንዲመለሱ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "app_stay_construction": {
+      "documentTitle": "Application for Urgent Order to Suspend Construction (ግንባታን ለማገድ አስቸኳይ ትዕዛዝ እንዲሰጥ የሚቀርብ ማመልከቻ)",
+      "jurisdictionText": "Art. 154 of the Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Irreparable Injury (የማይተካ ጉዳት)",
+          "facets": [
+            {
+              "id": "fact_ongoing_construction",
+              "legalText": "The Respondent is currently engaged in active construction on the disputed land. (ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ በማከናወን ላይ ነው።)",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_irreparable_harm",
+              "legalText": "If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced. (ግንባታው ከተጠናቀቀ ማፍረስ አስቸጋሪ ስለሚሆን የአመልካቹ መብቶች በዘላቂነት ይጎዳሉ።)",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_prima_facie",
+              "legalText": "The Applicant has demonstrated a strong prima facie case of ownership. (አመልካቹ ጠንካራ የቅድመ-ገጽታ የባለቤትነት መብት አሳይቷል።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_suspend_works",
+          "text": "Order the immediate suspension of all construction activities on the disputed plot pending final judgment. (በተከራካሪው ይዞታ ላይ ያሉ ሁሉም የግንባታ ሥራዎች የመጨረሻ ፍርድ እስከሚሰጥ ድረስ ወዲያውኑ እንዲታገዱ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "app_local_inspection": {
+      "documentTitle": "Application for Order of Local Inspection (የአካባቢ ምርመራ ትዕዛዝ እንዲሰጥ የሚቀርብ ማመልከቻ)",
+      "jurisdictionText": "Art. 136 of the Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Clarification (ማብራሪያ)",
+          "facets": [
+            {
+              "id": "fact_physical_dispute",
+              "legalText": "The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory. (የመሬቱን አካላዊ ገጽታዎች/ወሰኖች በተመለከተ የቃል ምስክርነቶች እና ሰነዶች እርስ በርሳቸው የሚጋጩ ናቸው።)",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_necessity_to_view",
+              "legalText": "A just decision cannot be rendered without the Court (or its registrar) physically viewing the site. (ፍርድ ቤቱ (ወይም ሬጅስትራሩ) ቦታውን በአካል ሳይመለከት ፍትሐዊ ውሳኔ መስጠት አይቻልም።)",
+              "citation": "CPC Art. 136",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_order_visit",
+          "text": "Order a local inspection of the property to verify boundaries/possession. (የወሰን/ይዞታን ለማረጋገጥ የንብረቱ አካባቢያዊ ምርመራ እንዲደረግ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "property_nuisance_cessation": {
+      "documentTitle": "Statement of Claim for Cessation of Abnormal Inconvenience (Nuisance) (ያልተለመደ ችግር (አደጋ) እንዲቆም የሚቀርብ ክስ)",
+      "jurisdictionText": "Art. 1225 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Injured Party) (ከሳሽ - የተጎዳ ወገን)",
+        "respondent": "Defendant (Source of Nuisance) (ተከሳሽ - የአደጋው ምንጭ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "The Disturbance (ችግሩ)",
+          "facets": [
+            {
+              "id": "fact_nature_inconvenience",
+              "legalText": "The Defendant's actions involve [Noise/Smell/Vibration] originating from [Source]. (የተከሳሹ ድርጊቶች ከ [ምንጭ] የሚመነጩትን [ጫጫታ/ሽታ/ንዝረት] ያካትታሉ።)",
+              "citation": "Civ. Code Art. 1225",
+              "evidence": []
+            },
+            {
+              "id": "fact_abnormal_degree",
+              "legalText": "The inconvenience caused by the Defendant is abnormal and exceeds the level normally expected of the neighborhood. (በተከሳሹ የደረሰው ችግር ያልተለመደ እና ከአካባቢው ከሚጠበቀው ደረጃ የላቀ ነው።)",
+              "citation": "",
+              "evidence": ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Knowledge and Refusal (እውቀት እና እምቢተኝነት)",
+          "facets": [
+            {
+              "id": "fact_notice_to_stop",
+              "legalText": "The Defendant was formally notified of the inconvenience but failed to take corrective measures. (ተከሳሹ ስለ ችግሩ በይፋ ቢነገረውም የማስተካከያ እርምጃዎችን አልወሰደም።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_order_cessation",
+          "text": "Judgment ordering the Defendant to immediately cease the source of the abnormal inconvenience. (ተከሳሹ ያልተለመደውን የችግር ምንጭ ወዲያውኑ እንዲያቆም የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_damages_past",
+          "text": "Order payment of damages suffered by the Plaintiff prior to the cessation. (ከማቆሙ በፊት በከሳሽ የደረሰውን ጉዳት ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 1226",
+          "isDefault": false
+        }
+      ]
+    },
+    "property_servitude_right_of_way": {
+      "documentTitle": "Statement of Claim for Establishment of Servitude (Right of Way) (የመንገድ መብት አገልግሎት እንዲቋቋም የሚቀርብ ክስ)",
+      "jurisdictionText": "Art. 1332 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Dominant Tenement (Applicant) (አመልካች)",
+        "respondent": "Servient Tenement (Respondent) (ተጠሪ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Enclave Status (Necessity) (የመዘጋት ሁኔታ (አስፈላጊነት))",
+          "facets": [
+            {
+              "id": "fact_property_enclaved",
+              "legalText": "The Applicant's property has no adequate access to a public road. (የአመልካቹ ንብረት ወደ ህዝብ መንገድ በቂ መዳረሻ የለውም።)",
+              "citation": "Civ. Code Art. 1332",
+              "evidence": [
+                "SurveyorsReport",
+                "SitePlan"
+              ]
+            },
+            {
+              "id": "fact_no_other_means",
+              "legalText": "There are no other practical or less onerous routes available for access. (ለመዳረሻ ሌላ ተግባራዊ ወይም አነስተኛ ሸክም ያለባቸው መንገዶች የሉም።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Requested Route (የተጠየቀው መንገድ)",
+          "facets": [
+            {
+              "id": "fact_least_onerous",
+              "legalText": "The requested right of way across the Respondent's land is the route least detrimental to the Servient Tenement (Respondent). (በተጠሪው መሬት ላይ የተጠየቀው የመንገድ መብት ለተጠሪው አነስተኛ ጉዳት የሚያደርס መንገድ ነው።)",
+              "citation": "Civ. Code Art. 1334",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_establish_servitude",
+          "text": "Judgment establishing a Servitude of Right of Way across the Respondent's property. (በተጠሪው ንብረት ላይ የመንገድ መብት አገልግሎት እንዲቋቋም የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_compensation_fee",
+          "text": "Order the Dominant Tenement to pay fair compensation to the Servient Tenement for the damage caused by the passage. (አመልካቹ በመተላለፊያው ምክንያት ለደረሰው ጉዳት ለተጠሪው ፍትሃዊ ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 1333",
+          "isDefault": false
+        }
+      ]
+    },
+    "property_possessory_disturbance": {
+      "documentTitle": "Statement of Claim for Cessation of Disturbance of Possession (የይዞታ መረበሽ እንዲቆም የሚቀርብ ክስ)",
+      "jurisdictionText": "Art. 1148 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Possessor) (ከሳሽ - ባለይዞታ)",
+        "respondent": "Defendant (Disturber) (ተከሳሽ - ረባሽ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Fact of Possession (የይዞታ እውነታ)",
+          "facets": [
+            {
+              "id": "fact_actual_possession",
+              "legalText": "The Plaintiff was in peaceful and continuous possession of the property/right. (ከሳሽ በንብረቱ/መብቱ ላይ ሰላማዊ እና ያልተቋረጠ ይዞታ ነበረው።)",
+              "citation": "Civ. Code Art. 1140",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Disturbance Act (የመረበሽ ድርጊት)",
+          "facets": [
+            {
+              "id": "fact_disturbance_act",
+              "legalText": "The Defendant has performed specific actions that interfere with the Plaintiff's peaceful possession (e.g., removing fences, obstructing access). (ተከሳሹ የከሳሽን ሰላማዊ ይዞታ የሚያውኩ የተወሰኑ ድርጊቶችን ፈጽሟል (ለምሳሌ አጥርን ማስወገድ፣ መዳረሻን መከልከል)።)",
+              "citation": "Civ. Code Art. 1148",
+              "evidence": ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
+            },
+            {
+              "id": "fact_timeliness",
+              "legalText": "This claim is filed within two years of the disturbance. (ይህ ክስ ረብሻው ከተፈጠረበት ጊዜ ጀምሮ በሁለት ዓመት ውስጥ የቀረበ ነው።)",
+              "citation": "Civ. Code Art. 1149",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_stop_disturbance",
+          "text": "Order the Defendant to cease all acts of disturbance. (ተከሳሹ ሁሉንም የረብሻ ድርጊቶች እንዲያቆም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_restore_status",
+          "text": "Order the restoration of the property to the state it was in before the disturbance. (ንብረቱ ረብሻው ከመከሰቱ በፊት ወደነበረበት ሁኔታ እንዲመለስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "app_servitude_temporary_passage": {
+      "documentTitle": "Application for Temporary Mandatory Order to Grant Passage (ጊዜያዊ የግዴታ የመተላለፊያ ትዕዛዝ እንዲሰጥ ማመልከቻ)",
+      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Injunction) & Art. 1332 Civil Code (Necessity).",
+      "partyTitles": {
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Urgency & Extreme Need (አስቸኳይነት እና ከፍተኛ ፍላጎት)",
+          "facets": [
+            {
+              "id": "fact_complete_blockade",
+              "legalText": "The Respondent has completely blocked the Applicant's only access to the public road. (ተጠሪው የአመልካቹን ብቸኛ መውጫ ወደ ህዝብ መንገድ ሙሉ በሙሉ ዘግቷል።)",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_imminent_damage",
+              "legalText": "The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage. (እገዳው የአመልካቹን የመኖር/የንግድ ሥራ የመሥራት ችሎታን አደጋ ላይ ይጥላል፣ ይህም አስቸኳይ እና ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_temporary_access",
+          "text": "Order the Respondent to grant temporary passage to the Applicant pending the final decision on the main servitude claim. (በዋናው የአገልግሎት ጥያቄ ላይ የመጨረሻ ውሳኔ እስከሚሰጥ ድረስ ተጠሪው ለአመልካች ጊዜያዊ መተላለፊያ እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    }
+  }
+}

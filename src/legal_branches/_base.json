@@ -1,0 +1,416 @@
+{
+  "entities": {
+    "WrittenContract": {
+      "title": "Written Contract",
+      "description": "The primary agreement signed by both parties. Essential for contracts involving immovable property or administrative bodies."
+    },
+    "NoticeofDefault": {
+      "title": "Notice of Default (Warning Letter)",
+      "description": "A registered letter or legal notice sent to the defaulting party demanding performance, essential for claiming damages."
+    },
+    "PaymentReceipt": {
+      "title": "Payment Receipt / Bank Advice",
+      "description": "Documentary proof of money transferred (loan disbursement) or payments made (performance)."
+    },
+    "DeliveryNote": {
+      "title": "Delivery Note (Model 19/22)",
+      "description": "Proof that goods were actually delivered to and received by the buyer."
+    },
+    "AdmissionofDebt": {
+      "title": "Admission of Debt",
+      "description": "A specific written document where the debtor acknowledges the sum owed."
+    },
+    "AuditReport": {
+      "title": "Audit Report",
+      "description": "A financial report detailing outstanding balances, often required in complex B2B disputes."
+    },
+    "TitleDeed": {
+      "title": "Title Deed (Librec/Carta)",
+      "description": "The primary certificate of holding rights/ownership for urban houses and land."
+    },
+    "SitePlan": {
+      "title": "Site Plan",
+      "description": "Official technical map showing the coordinates, boundaries, and area of the plot."
+    },
+    "LeaseAgreement": {
+      "title": "Lease Agreement",
+      "description": "Contract between the citizen and the City Administration defining the lease period and rights."
+    },
+    "ConstructionPermit": {
+      "title": "Construction Permit",
+      "description": "Official authorization to build, proving legality of the structure."
+    },
+    "TaxLandRentReceipts": {
+      "title": "Tax/Land Rent Receipts",
+      "description": "Proof of continuous payment of obligations, used to evidence continuous possession."
+    },
+    "SurveyorsReport": {
+      "title": "Surveyor's Report",
+      "description": "Technical report verifying boundary encroachments."
+    },
+    "KebeleConfirmation": {
+      "title": "Kebele Confirmation",
+      "description": "Letter from the local administration confirming who lives in/occupies the property."
+    },
+    "WitnessAffidavitsNuisance": {
+      "title": "Witness Affidavits (Nuisance)",
+      "description": "Sworn statements detailing the time, duration, and severity of the disturbance (e.g., noise, smell, vibration)."
+    },
+    "PhotosVideoEvidence": {
+      "title": "Photos/Video Evidence",
+      "description": "Visual proof of the nuisance source (e.g., pollution, excessive height of a structure)."
+    },
+    "PriorAgreementServitude": {
+      "title": "Prior Agreement (Servitude)",
+      "description": "If the servitude was created by contract, the written agreement is required."
+    },
+    "EmploymentContract": {
+      "title": "Employment Contract",
+      "description": "A contract of employment.",
+      "type": "object",
+      "properties": {}
+    },
+    "TerminationLetter": {
+      "title": "Termination Letter",
+      "description": "A letter terminating employment.",
+      "type": "object",
+      "properties": {}
+    },
+    "PayrollSlip": {
+      "title": "Payroll Slip",
+      "description": "A document detailing an employee's salary.",
+      "type": "object",
+      "properties": {}
+    },
+    "DisciplinaryRecord": {
+      "title": "Disciplinary Record",
+      "description": "An employee's disciplinary record.",
+      "type": "object",
+      "properties": {}
+    },
+    "AttendanceSheet": {
+      "title": "Attendance Sheet",
+      "description": "An employee's attendance sheet.",
+      "type": "object",
+      "properties": {}
+    },
+    "AccidentReport": {
+      "title": "Accident Report",
+      "description": "A report of an accident.",
+      "type": "object",
+      "properties": {}
+    },
+    "MedicalBill": {
+      "title": "Medical Bill",
+      "description": "A bill for medical expenses.",
+      "type": "object",
+      "properties": {}
+    },
+    "DismissalLetter": {
+      "title": "Dismissal Letter",
+      "description": "A letter of dismissal from service.",
+      "type": "object",
+      "properties": {}
+    },
+    "GrievanceSubmission": {
+      "title": "Grievance Submission",
+      "description": "A document proving a grievance was submitted.",
+      "type": "object",
+      "properties": {}
+    },
+    "PerformanceReview": {
+      "title": "Performance Review",
+      "description": "An employee's performance review.",
+      "type": "object",
+      "properties": {}
+    },
+    "WarningLetter": {
+      "title": "Warning Letter",
+      "description": "A warning letter issued to an employee.",
+      "type": "object",
+      "properties": {}
+    },
+    "UnpaidWageWitness": {
+      "title": "Unpaid Wage Witness",
+      "description": "A witness for unpaid wages.",
+      "type": "object",
+      "properties": {}
+    },
+    "CertificateofMarriage": {
+      "title": "Certificate of Marriage",
+      "description": "Official certificate issued by VERA or religious/customary authority proving the existence of the marriage.",
+      "type": "object",
+      "properties": {}
+    },
+    "BirthCertificate": {
+      "title": "Birth Certificate(s)",
+      "description": "Official birth records for all children involved in the dispute, proving age and parentage.",
+      "type": "object",
+      "properties": {}
+    },
+    "ProofofIncome": {
+      "title": "Proof of Income",
+      "description": "Pay slips, bank statements, or tax records used to calculate maintenance (alimony) capabilities.",
+      "type": "object",
+      "properties": {}
+    },
+    "FamilyArbitratorsReport": {
+      "title": "Family Arbitrators' Report",
+      "description": "(If applicable) A record of the attempt at reconciliation by family elders/arbitrators, often required before formal litigation.",
+      "type": "object",
+      "properties": {}
+    },
+    "ListofCommonProperty": {
+      "title": "List of Common Property",
+      "description": "An inventory document detailing assets acquired during the marriage (movable and immovable).",
+      "type": "object",
+      "properties": {}
+    },
+    "PoliceReportDomesticViolence": {
+      "title": "Police Report (Domestic Violence)",
+      "description": "Official record of physical or emotional abuse, used as grounds for immediate dissolution or restraining orders.",
+      "type": "object",
+      "properties": {}
+    },
+    "SchoolFeeReceipts": {
+      "title": "School Fee Receipts",
+      "description": "Documentary proof of educational expenses for children, used to quantify maintenance claims.",
+      "type": "object",
+      "properties": {}
+    },
+    "MedicalBoardCertificate": {
+      "title": "Medical Board Certificate",
+      "description": "Evidence regarding paternity (DNA) or medical incapacity of a spouse."
+    },
+    "WitnessStatements": {
+      "title": "Witness Statements",
+      "description": "Affidavits from witnesses.",
+      "type": "object",
+      "properties": {}
+    },
+    "CopyofDivorceJudgment": {
+      "title": "Copy of Divorce Judgment",
+      "description": "The prior court ruling confirming the marriage is dissolved.",
+      "type": "object",
+      "properties": {}
+    },
+    "ProofofInheritanceDonation": {
+      "title": "Proof of Inheritance/Donation",
+      "description": "Documents proving property was acquired via inheritance or donation.",
+      "type": "object",
+      "properties": {}
+    },
+    "Pre-maritalOwnershipDocuments": {
+      "title": "Pre-marital Ownership Documents",
+      "description": "Documents proving ownership of property before marriage.",
+      "type": "object",
+      "properties": {}
+    },
+    "JudgmentofDivorce": {
+      "title": "Judgment of Divorce",
+      "description": "The prior court ruling confirming the marriage is dissolved and allowing the property phase to commence.",
+      "type": "object",
+      "properties": {}
+    },
+    "PropertyValuationReport": {
+      "title": "Property Valuation Report",
+      "description": "(Optional/Later Stage) A report by a certified engineer or auditor estimating the value of the assets."
+    },
+    "TitleDeedsLibrec": {
+      "title": "Title Deeds / Librec",
+      "description": "Official ownership certificates for immovable property (houses, land).",
+      "type": "object",
+      "properties": {}
+    },
+    "DeathCertificate": {
+      "title": "Death Certificate",
+      "description": "Official certificate from VERA or municipality confirming the date and place of death."
+    },
+    "WillTestament": {
+      "title": "Will (Testament)",
+      "description": "A Public, Holographic, or Oral will documenting the deceased's wishes."
+    },
+    "KebeleFamilyID": {
+      "title": "Kebele ID / Family Certificate",
+      "description": "Official document proving the relationship between the claimant and the deceased (e.g., listing children)."
+    },
+    "InventoryofEstate": {
+      "title": "Inventory of Estate",
+      "description": "A detailed list of assets (houses, cars, bank accounts) left by the deceased."
+    },
+    "WitnessAffidavitsSuccession": {
+      "title": "Witness Affidavits (Succession)",
+      "description": "Sworn statements by individuals (usually 3) confirming who the rightful heirs are."
+    },
+    "CertificateofLiquidation": {
+      "title": "Certificate of Liquidation",
+      "description": "Document showing debts have been paid (required before final partition)."
+    },
+    "CertificateOfRegistrationEIPO": {
+      "title": "Certificate of Registration (EIPO)",
+      "description": "Official document proving ownership of a Patent, Trademark, or registered Copyright."
+    },
+    "ProductSampleSpecimen": {
+      "title": "Product Sample / Specimen",
+      "description": "The physical product bearing the trademark or the technical documentation of the invention."
+    },
+    "CeaseAndDesistLetter": {
+      "title": "Cease and Desist Letter",
+      "description": "Formal notice sent to the infringer demanding they stop the unlawful activity."
+    },
+    "MarketSurveyAffidavit": {
+      "title": "Market Survey / Affidavit",
+      "description": "Proof demonstrating consumer confusion in the marketplace (for Trademark cases)."
+    },
+    "CustomsInspectionReport": {
+      "title": "Customs Inspection Report",
+      "description": "Official report confirming the seizure of counterfeit goods at the border."
+    },
+    "TechnicalExpertReport": {
+      "title": "Technical Expert Report",
+      "description": "Report comparing the registered patent claims to the alleged infringing product."
+    },
+    "IdentityCard": {
+      "title": "Identity Card (Kebele/National ID)",
+      "description": "The primary document reflecting the current (incorrect) status information."
+    },
+    "BirthMarriageCertificateVERA": {
+      "title": "Birth/Marriage Certificate (VERA)",
+      "description": "Official civil status document requiring correction."
+    },
+    "PublicNoticeOfAbsence": {
+      "title": "Public Notice of Absence",
+      "description": "Proof that the petition for absence was published in a newspaper (Civ. Code Art. 159)."
+    },
+    "GenealogicalAffidavit": {
+      "title": "Genealogical Affidavit",
+      "description": "Document proving the relationship to the deceased (required for Heirship Certification)."
+    },
+    "TaxAssessmentNotice": {
+      "title": "Tax Assessment Notice",
+      "description": "The official letter from the MoR detailing the tax liability, penalties, and interest."
+    },
+    "NoticeOfObjectionInitial": {
+      "title": "Notice of Objection (Initial)",
+      "description": "The formal letter submitted by the taxpayer to the MoR/CC challenging the initial assessment."
+    },
+    "AccountingRecords": {
+      "title": "Accounting Records (Ledgers, Invoices)",
+      "description": "Mandatory documentation (especially for Category A) to substantiate gross income and deductions."
+    },
+    "ImportExportDeclarationSAD": {
+      "title": "Import/Export Declaration (SAD)",
+      "description": "Official customs document detailing the imported goods, value, and applicable duties."
+    },
+    "PaymentReceiptsTaxCustoms": {
+      "title": "Payment Receipts (Tax/Customs)",
+      "description": "Proof of compliance, necessary for clearance or to meet the 50% deposit requirement."
+    },
+    "ExternalAuditReport": {
+      "title": "External Audit Report",
+      "description": "Report from a certified external auditor contradicting the MoR's findings."
+    },
+    "PoliceAccidentReport": {
+      "title": "Police/Traffic Accident Report",
+      "description": "Official documentation by police detailing the time, location, parties, and preliminary findings of a traffic or civil incident."
+    },
+    "MedicalExpenseReceipts": {
+      "title": "Medical Expense Receipts and Invoices",
+      "description": "Receipts, invoices, and payment confirmations for all medical, hospital, and rehabilitation services."
+    },
+    "DoctorAssessment": {
+      "title": "Medical Doctor's Assessment and Certificate",
+      "description": "A physician's certificate detailing the nature, extent, and duration of the injury, and prognosis for recovery or permanent disability."
+    },
+    "LostEarningProof": {
+      "title": "Proof of Lost Earnings (Salary Slips/Tax Docs)",
+      "description": "Documents showing previous income and the period during which the claimant was unable to work due to the injury."
+    },
+    "FinalAdminDecision": {
+      "title": "Final Administrative Decision (የመጨረሻ የአስተዳደር ውሳኔ)",
+      "description": "The written, final decision issued by the administrative agency, signed by the competent official. This decision must be exhausted before court appeal (Art. 48(1))."
+    },
+    "DecisionNotificationProof": {
+      "title": "Proof of Decision Notification Date (ውሳኔው የደረሰበት ማስረጃ)",
+      "description": "Evidence (e.g., date stamp, certified mail receipt) showing the exact date the petitioner was notified of the final administrative decision. Crucial for the 30-day appeal limit (Art. 51(1))."
+    },
+    "InternalRemedyExhaustion": {
+      "title": "Proof of Exhaustion of Internal Remedies (የውስጥ ቅሬታ መሟጠጥ ማስረጃ)",
+      "description": "Documentation showing the petitioner first raised the complaint to the agency's internal complaint body and received a final decision (Art. 48(2))."
+    },
+    "AgencyDirectiveCopy": {
+      "title": "Copy of the Challenged Directive (የሚጠየቀው መመሪያ ቅጂ)",
+      "description": "A copy of the specific Directive issued by the Agency that is being challenged for judicial review (Art. 48(1))."
+    },
+    "ShareholdersResolution": {
+      "title": "Shareholders' / Partners' Resolution (የአክሲዮን ባለቤቶች/አጋሮች ውሳኔ)",
+      "description": "Certified minutes from a General Meeting or Board meeting authorizing the legal action or confirming the internal decision (e.g., dissolution, capital increase)."
+    },
+    "MemorandumAndArticles": {
+      "title": "Memorandum & Articles of Association (የማኅበር መመስረቻና መተዳደሪያ ደንብ)",
+      "description": "The registered founding documents (Memorandum/Articles) of the business organization, showing capital structure, purpose, and management rules."
+    },
+    "NotarizedCheque": {
+      "title": "Notarized Cheque or Promissory Note (በኖታሪ የተረጋገጠ ቼክ ወይም የብድር ቃል ኪዳን)",
+      "description": "The original negotiable instrument (cheque, bill of exchange, or promissory note) legally validated for recourse or payment claim."
+    },
+    "ProtestCertificate": {
+      "title": "Certificate of Protest / Non-Payment (የክፍያ እምቢታ ማረጋገጫ)",
+      "description": "Official document from a notary or court certifying that the instrument was duly presented for payment and payment was refused (required for recourse)."
+    },
+    "BalanceSheetAndAudit": {
+      "title": "Recent Audited Financial Statements (የቅርብ ጊዜ ኦዲት የተደረገ የሒሳብ መግለጫ)",
+      "description": "The last three years of audited balance sheets and income statements, crucial for insolvency or business valuation proceedings."
+    },
+    "ListofCreditors": {
+      "title": "Comprehensive List of Creditors (የአበዳሪዎች ዝርዝር)",
+      "description": "A detailed, certified list of all creditors, their claims, and security status (required for restructuring or bankruptcy applications)."
+    },
+    "MedicalCertificateMentalState": {
+      "title": "Medical Certificate of Mental State (የአእምሮ ሁኔታ የህክምና ማስረጃ)",
+      "description": "A certified psychiatric or psychological evaluation confirming a severe mental disease or deficiency at the time of the alleged offense."
+    },
+    "ProofOfImminentDanger": {
+      "title": "Proof of Imminent Danger (የቅርብ አደጋ ማስረጃ)",
+      "description": "Witness statements, scene photos, or police reports demonstrating an immediate and unavoidable threat to life or property."
+    },
+    "OfficialOrderDocument": {
+      "title": "Official Order or Warrant (ኦፊሴላዊ ትዕዛዝ ወይም ማዘዣ)",
+      "description": "Written documentation proving the alleged criminal act was carried out under the legal order or command of a superior public authority."
+    },
+    "VictimConsentForm": {
+      "title": "Victim's Written Consent (ተጎጂው የሰጠው የጽሑፍ ፈቃድ)",
+      "description": "A signed document showing the victim consented to the act, applicable only where consent is legally valid (e.g., minor bodily harm, property damage)."
+    },
+    "WitnessStatementsIntoxication": {
+      "title": "Witness Statements on Intoxication (ስለ ስካር ሁኔታ የምስክርነት ቃል)",
+      "description": "Statements confirming the defendant's involuntary or non-culpable state of intoxication at the time of the alleged offense."
+    },
+    "OriginalPleadingCopy": {
+      "title": "Copy of Original Pleading (የመጀመሪያ ክስ ወይም መቃወሚያ ቅጂ)",
+      "description": "A certified copy of the original statement of claim or statement of defence that is subject to the proposed amendment."
+    },
+    "DraftAmendment": {
+      "title": "Draft of the Proposed Amendment (የታቀደው ማሻሻያ ረቂቅ)",
+      "description": "The full, written text of the changes, additions, or deletions sought to be included in the original pleading."
+    },
+    "IntervenerStatement": {
+      "title": "Intervener's Statement of Claim/Defence (ጣልቃ ገቢው ክስ/መቃወሚያ)",
+      "description": "A full statement outlining the intervener's legal interest in the subject matter of the existing suit and their claims or defenses."
+    },
+    "ThirdPartyNotice": {
+      "title": "Draft Third-Party Notice (ለሶስተኛ ወገን የጥሪ ማስታወቂያ ረቂቅ)",
+      "description": "The specific notice or claim that the Defendant intends to serve on the third party, detailing the basis for indemnity or contribution."
+    },
+    "ObjectionGroundsMemo": {
+      "title": "Memorandum of Objection Grounds (የተቃውሞ ምክንያቶች ማስታወሻ)",
+      "description": "A detailed legal memorandum specifying the factual or legal errors upon which the judgment objection is based (e.g., lack of service, fraud)."
+    },
+    "ReviewApplicationMemo": {
+      "title": "Review Application Memorandum (የፍርድ ዳግም የማየት ማስታወሻ)",
+      "description": "A memorandum specifying the new, crucial evidence discovered or the error on the face of the record required for a review of judgment."
+    }
+  }
+}
+
+    

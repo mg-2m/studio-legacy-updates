@@ -1,0 +1,394 @@
+{
+  "templates": {
+    "family_divorce_dispute": {
+      "documentTitle": "Statement of Claim for Dissolution of Marriage (የጋብቻ መፍረስ ክስ)",
+      "jurisdictionText": "Art. 11(2) of Federal Courts Proc. 25/96 and Art. 76 of the Revised Family Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Marriage Validity (የጋብቻ ሕጋዊነት)",
+          "facets": [
+            {
+              "id": "fact_marriage_existence",
+              "legalText": "The Plaintiff and Defendant were legally married on [Date]. (ከሳሽ እና ተከሳሽ በ [ቀን] በሕጋዊ መንገድ ተጋብተዋል።)",
+              "citation": "RFC Art. 1",
+              "evidence": [
+                "CertificateofMarriage"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Grounds for Dissolution (የመፍረስ ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_irretrievable_breakdown",
+              "legalText": "There are irreconcilable differences making the continuation of the marriage impossible. (የጋብቻውን መቀጠል የማይቻል የሚያደርጉ የማይታረቁ ልዩነቶች አሉ።)",
+              "citation": "RFC Art. 76",
+              "evidence": []
+            },
+            {
+              "id": "fact_period_of_separation",
+              "legalText": "The parties have lived separately for a period exceeding [Number] months. (ተዋዋይ ወገኖች ከ [ቁጥር] ወራት በላይ ለብቻቸው ኖረዋል።)",
+              "citation": "RFC Art. 81",
+              "evidence": []
+            }
+          ]
+        },
+        "group_3": {
+          "title": "Children & Custody (ልጆች እና አስተዳደግ)",
+          "facets": [
+            {
+              "id": "fact_children_existence",
+              "legalText": "The marriage produced [Number] children. (ጋብቻው [ቁጥር] ልጆችን አፍርቷል።)",
+              "citation": "RFC Art. 113",
+              "evidence": [
+                "BirthCertificate"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_dissolution",
+          "text": "Judgment dissolving the marriage between the Plaintiff and Defendant. (በከሳሽ እና በተከሳሽ መካከል ያለውን ጋብቻ የሚፈርስ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_custody",
+          "text": "Order granting sole/joint custody of the minor children to the Plaintiff. (የአካለ መጠን ያልደረሱ ልጆችን ብቸኛ/የጋራ የማሳደግ መብት ለከሳሽ እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        },
+        {
+          "id": "relief_child_support",
+          "text": "Order for the Defendant to pay monthly child maintenance. (ተከሳሹ ወርሃዊ የልጅ ማሳደጊያ እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        },
+        {
+          "id": "relief_property_partition",
+          "text": "Order for the liquidation and partition of common marital property. (የጋራ የጋብቻ ንብረትን ለማፍሰስ እና ለመከፋፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "family_divorce_agreement": {
+      "documentTitle": "Petition for Approval of Divorce by Mutual Consent (በጋራ ስምምነት የፍቺ ማመልከቻ)",
+      "jurisdictionText": "Art. 77 of the Revised Family Code.",
+      "partyTitles": {
+        "applicant": "First Petitioner (የመጀመሪያ አቤቱታ አቅራቢ)",
+        "respondent": "Second Petitioner (ሁለተኛ አቤቱታ አቅራቢ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Consent Details (የስምምነት ዝርዝሮች)",
+          "facets": [
+            {
+              "id": "fact_mutual_agreement",
+              "legalText": "Both parties have voluntarily agreed to dissolve their marriage. (ሁለቱም ወገኖች በፈቃደኝነት ጋብቻቸውን ለማፍረስ ተስማምተዋል።)",
+              "citation": "RFC Art. 77",
+              "evidence": [
+                "CertificateofMarriage"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Terms of Agreement (የስምምነት ውሎች)",
+          "facets": [
+            {
+              "id": "fact_agreement_doc",
+              "legalText": "The parties have prepared a comprehensive agreement regarding the division of property and custody of children. (ተዋዋይ ወገኖች የንብረት ክፍፍልን እና የልጆችን የማሳደግ መብትን በተመለከተ አጠቃላይ ስምምነት አዘጋጅተዋል።)",
+              "citation": "RFC Art. 82",
+              "evidence": [
+                "ListofCommonProperty"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_approve_agreement",
+          "text": "Order approving the divorce agreement and dissolving the marriage. (የፍቺውን ስምምነት በማጽደቅ ጋብቻውን የሚፈርስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "family_paternity_claim": {
+      "documentTitle": "Statement of Claim for Judicial Declaration of Paternity (የአባትነት ማረጋገጫ ክስ)",
+      "jurisdictionText": "Art. 143 of the Revised Family Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Child/Guardian) (ከሳሽ (ልጅ/አሳዳጊ))",
+        "respondent": "Defendant (Alleged Father) (ተከሳሽ (የተጠረጠረ አባት))"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Sexual Relations (የወሲብ ግንኙነት)",
+          "facets": [
+            {
+              "id": "fact_sexual_intercourse",
+              "legalText": "The mother and the Defendant had sexual relations during the legal period of conception. (እናት እና ተከሳሽ በሕጋዊ የእርግዝና ወቅት የወሲብ ግንኙነት ነበራቸው።)",
+              "citation": "RFC Art. 143",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Possession of Status (የሁኔታ ይዞታ)",
+          "facets": [
+            {
+              "id": "fact_possession_status",
+              "legalText": "The Defendant has treated the child as his own in public and private spheres. (ተከሳሹ ልጁን በሕዝብ እና በግል እንደራሱ አድርጎታል።)",
+              "citation": "RFC Art. 136",
+              "evidence": [
+                "WitnessStatements"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_declare_paternity",
+          "text": "Judgment declaring the Defendant is the biological father of the child. (ተከሳሹ የልጁ ባዮሎጂያዊ አባት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_reimbursement",
+          "text": "Order for reimbursement of expenses related to birth and maintenance. (ከትውልድ እና ከጥገና ጋር የተያያዙ ወጪዎችን ለመመለስ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "app_temporary_maintenance": {
+      "documentTitle": "Application for Order of Provisional Maintenance (ጊዜያዊ የጥገና ትዕዛዝ ማመልከቻ)",
+      "jurisdictionText": "Art. 83(2) of the Revised Family Code & Art. 154 Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Urgency & Need (አስቸኳይነት እና ፍላጎት)",
+          "facets": [
+            {
+              "id": "fact_pendency_of_suit",
+              "legalText": "A main suit for divorce is currently pending between the parties. (በተዋዋይ ወገኖች መካከል የፍቺ ዋና ክስ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው።)",
+              "citation": "RFC Art. 83",
+              "evidence": []
+            },
+            {
+              "id": "fact_immediate_need",
+              "legalText": "The Applicant has no independent income to support themselves/the children during the litigation. (አመልካቹ በክርክሩ ወቅት እራሳቸውን/ልጆቻቸውን ለመደገፍ ነፃ ገቢ የላቸውም።)",
+              "citation": "RFC Art. 106",
+              "evidence": [
+                "ProofofIncome"
+              ]
+            },
+            {
+              "id": "fact_ability_to_pay",
+              "legalText": "The Respondent has sufficient income to provide provisional support. (ተጠሪው ጊዜያዊ ድጋፍ ለመስጠት በቂ ገቢ አለው።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_prov_maintenance",
+          "text": "Order the Respondent to pay [Amount] ETB monthly until final judgment. (ተጠሪው የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በወር [መጠን] ብር እንዲከፍል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "app_property_preservation": {
+      "documentTitle": "Application for Attachment and Preservation of Common Property (የጋራ ንብረትን ለማያያዝ እና ለመጠበቅ ማመልከቻ)",
+      "jurisdictionText": "Art. 154 Civil Procedure Code & Art. 83 Revised Family Code.",
+      "partyTitles": {
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Risk of Dissipation (የመበታተን አደጋ)",
+          "facets": [
+            {
+              "id": "fact_intent_to_defraud",
+              "legalText": "There is a reasonable apprehension that the Respondent is attempting to sell, transfer, or hide common marital assets. (ተጠሪው የጋራ የጋብቻ ንብረቶችን ለመሸጥ፣ ለማስተላለፍ ወይም ለመደበቅ እየሞከረ ነው የሚል ምክንያታዊ ስጋት አለ።)",
+              "citation": "CPC Art. 154",
+              "evidence": []
+            },
+            {
+              "id": "fact_common_ownership",
+              "legalText": "The property in question is common property acquired during the marriage. (በጥያቄ ውስጥ ያለው ንብረት በጋብቻ ወቅት የተገኘ የጋራ ንብረት ነው።)",
+              "citation": "RFC Art. 62",
+              "evidence": [
+                "ListofCommonProperty"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_injunction_transfer",
+          "text": "Order restraining the Respondent from transferring or selling specific assets. (ተጠሪው የተወሰኑ ንብረቶችን ከማስተላለፍ ወይም ከመሸጥ እንዲቆጠብ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_freeze_accounts",
+          "text": "Order freezing the joint bank accounts pending final partition. (የመጨረሻው ክፍፍል እስከሚጠናቀቅ ድረስ የጋራ የባንክ ሂሳቦችን እንዲታገዱ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "app_protective_order": {
+      "documentTitle": "Application for Urgent Protective Order (አስቸኳይ የመከላከያ ትዕዛዝ ማመልከቻ)",
+      "jurisdictionText": "Art. 154 Civil Procedure Code (Inherent Power) & Criminal Code References.",
+      "partyTitles": {
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "Respondent (ተጠሪ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Safety & Harm (ደህንነት እና ጉዳት)",
+          "facets": [
+            {
+              "id": "fact_imminent_danger",
+              "legalText": "The Applicant faces immediate physical danger from the Respondent. (አመልካቹ ከተጠሪው ወዲያውኑ አካላዊ አደጋ ይደርስበታል።)",
+              "citation": "",
+              "evidence": [
+                "PoliceReportDomesticViolence"
+              ]
+            },
+            {
+              "id": "fact_balance_convenience",
+              "legalText": "The harm to the Applicant if the order is not granted outweighs any inconvenience to the Respondent. (ትዕዛዙ ካልተሰጠ በአመልካቹ ላይ የሚደርሰው ጉዳት በተጠሪው ላይ ከሚደርሰው ማንኛውም ችግር ይበልጣል።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_vacate_home",
+          "text": "Order the Respondent to temporarily vacate the matrimonial home. (ተጠሪው የጋብቻ ቤቱን ለጊዜው እንዲለቅ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_restrain_contact",
+          "text": "Order restraining the Respondent from coming within [Distance] meters of the Applicant. (ተጠሪው ከአመልካቹ [ርቀት] ሜትር ርቀት ውስጥ እንዳይመጣ የሚከለክል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "family_post_judgment_partition": {
+      "documentTitle": "Application for Liquidation and Partition of Common Property (የጋራ ንብረትን ለማፍሰስ እና ለመከፋፈል ማመልከቻ)",
+      "jurisdictionText": "Art. 85 & 90 of the Revised Family Code and Art. 219 of the Civil Procedure Code (Execution Proceedings).",
+      "partyTitles": {
+        "applicant": "Decree Holder (Applicant) (የፍርድ ባለቤት (አመልካች))",
+        "respondent": "Judgment Debtor (Respondent) (የፍርድ ባለዕዳ (ተጠሪ))"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Procedural History (የሥነ-ሥርዓት ታሪክ)",
+          "facets": [
+            {
+              "id": "fact_prior_dissolution",
+              "legalText": "This Honorable Court has already rendered a judgment dissolving the marriage between the parties under this file number. (ይህ የተከበረ ፍርድ ቤት በዚህ የፋይል ቁጥር በተዋዋይ ወገኖች መካከል ያለውን ጋብቻ የሚፈርስ ፍርድ ቀደም ሲል ሰጥቷል።)",
+              "citation": "Civil Procedure Code Art. 182",
+              "evidence": [
+                "CopyofDivorceJudgment"
+              ]
+            },
+            {
+              "id": "fact_custody_settled",
+              "legalText": "Issues regarding child custody and maintenance have already been adjudicated. (የልጅ የማሳደግ እና የጥገና ጉዳዮች ቀደም ሲል ተወስነዋል።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Identification of Property (የንብረት መለያ)",
+          "facets": [
+            {
+              "id": "fact_existence_common_property",
+              "legalText": "The parties acquired movable and immovable property during the existence of the marriage which constitutes Common Property. (ተዋዋይ ወገኖች በጋብቻው ወቅት የጋራ ንብረት የሆነውን ተንቀሳቃሽ እና የማይንቀሳቀስ ንብረት አግኝተዋል።)",
+              "citation": "RFC Art. 62",
+              "evidence": [
+                "ListofCommonProperty",
+                "TitleDeedsLibrec"
+              ]
+            },
+            {
+              "id": "fact_property_possession",
+              "legalText": "The property is currently in the sole possession/control of the Respondent/Applicant. (ንብረቱ በአሁኑ ጊዜ በተጠሪው/አመልካቹ ብቸኛ يዞታ/ቁጥጥር ሥር ነው።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_3": {
+          "title": "Restitution of Personal Property (Pre-Partition) (የግል ንብረትን መመለስ (ቅድመ-ክፍፍል))",
+          "facets": [
+            {
+              "id": "fact_personal_property_claim",
+              "legalText": "The Applicant possesses proof of personal property owned prior to the marriage or acquired by succession/donation, which must be withdrawn before partition. (አመልካቹ ከጋብቻ በፊት የነበረውን ወይም በውርስ/በስጦታ ያገኘውን የግል ንብረት ማረጋገጫ ያለው ሲሆን ይህም ከክፍፍል በፊት መውጣት አለበት።)",
+              "citation": "RFC Art. 57 & 86",
+              "evidence": [
+                "ProofofInheritanceDonation",
+                "Pre-maritalOwnershipDocuments"
+              ]
+            }
+          ]
+        },
+        "group_4": {
+          "title": "Valuation & Dispute (ግምገማ እና ክርክር)",
+          "facets": [
+            {
+              "id": "fact_dispute_valuation",
+              "legalText": "The parties are unable to agree on the value or mode of partition of the assets. (ተዋዋይ ወገኖች በንብረቶቹ ዋጋ ወይም ክፍፍል ሁኔታ ላይ መስማማት አልቻሉም።)",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_expert_need",
+              "legalText": "The complexity of the assets (e.g., business shares, real estate) requires professional valuation. (የንብረቶቹ ውስብስብነት (ለምሳሌ የንግድ ድርሻዎች፣ ሪል እስቴት) ሙያዊ ግምገማ ይጠይቃል።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_appoint_liquidator",
+          "text": "Order the appointment of a court-verified expert/liquidator to inventory and value the common property. (የጋራ ንብረቱን ለመመዝገብ እና ለመገምገም በፍርድ ቤት የተረጋገጠ ባለሙያ/አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_withdraw_personal",
+          "text": "Order the restitution/withdrawal of the Applicant's personal property [List Items] prior to partition. (ከክፍፍል በፊት የአመልካቹን የግል ንብረት [ዕቃዎችን ይዘርዝሩ] እንዲመለስ/እንዲወጣ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        },
+        {
+          "id": "relief_partition_equal",
+          "text": "Order the remaining common property be divided equally (50/50) between the parties. (የቀረው የጋራ ንብረት በተዋዋይ ወገኖች መካከል በእኩል (50/50) እንዲከፋፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_auction_sale",
+          "text": "Order the sale by auction of indivisible property and the division of the proceeds. (የማይከፋፈል ንብረትን በጨረታ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    }
+  }
+}

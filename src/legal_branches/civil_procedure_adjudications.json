@@ -1,0 +1,237 @@
+{
+  "templates": {
+    "proc_amendment_of_pleading": {
+      "documentTitle": "Application for Amendment of Pleading (የፍሬ ነገር ማሻሻያ ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Art. 222 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፳፪).",
+      "partyTitles": {
+        "applicant": "Applicant/Party Seeking Amendment (ማሻሻያ ጠያቂ)",
+        "respondent": "Opposing Party (ተቃራኒ ወገን)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for Amendment (የማሻሻያ ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_amendment_necessary_for_justice",
+              "legalText": "The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice. (ማሻሻያው በወገኖች መካከል ያለውን እውነተኛ ክርክር ለመወሰን አስፈላጊ ሲሆን የፍትሕንም ዓላማ ለማሳካት የግድ ነው።)",
+              "citation": "C.P.C. Art. 222(2)",
+              "evidence": ["OriginalPleadingCopy", "DraftAmendment"]
+            },
+            {
+              "id": "fact_amendment_no_prejudice",
+              "legalText": "The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs. (ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒ ወገንን በወጪ የማይካስ ፍትሐዊ ያልሆነ ጉዳት አያስከትልም።)",
+              "citation": "C.P.C. Art. 222(1)",
+              "evidence": ["OriginalPleadingCopy"]
+            },
+            {
+              "id": "fact_amendment_due_to_clerical_error",
+              "legalText": "The amendment is minor and necessary to correct a clerical, computational, or drafting error in the original pleading. (ማሻሻያው ጥቃቅን ሲሆን በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአፃፃፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው።)",
+              "citation": "C.P.C. Art. 222(1)",
+              "evidence": ["DraftAmendment"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Timing (የሥነ ሥርዓት ጊዜ)",
+          "facets": [
+            {
+              "id": "fact_amendment_before_judgment",
+              "legalText": "The application for amendment is being made before the court has delivered its final judgment. (የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ውሳኔ ከመስጠቱ በፊት እየቀረበ ነው።)",
+              "citation": "C.P.C. Art. 222(1)",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_amendment",
+          "text": "To grant leave to amend the statement of claim/defence as per the draft annexed hereto. (በዚህ ከተያያዘው ረቂቅ መሠረት ክስ/መቃወሚያ እንዲሻሻል ፈቃድ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "proc_intervention_by_third_party": {
+      "documentTitle": "Application for Leave to Intervene in a Pending Suit (በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Art. 238 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ ፪፻፴፰).",
+      "partyTitles": {
+        "applicant": "Intervener (ጣልቃ ገቢ)",
+        "respondent": "Original Parties (የመጀመሪያ ተከራካሪ ወገኖች)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Legal Interest and Necessity (ሕጋዊ ጥቅም እና አስፈላጊነት)",
+          "facets": [
+            {
+              "id": "fact_direct_legal_interest",
+              "legalText": "The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment. (ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል።)",
+              "citation": "C.P.C. Art. 238(1)",
+              "evidence": ["IntervenerStatement"]
+            },
+            {
+              "id": "fact_common_question_of_law_or_fact",
+              "legalText": "The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise. (ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል።)",
+              "citation": "C.P.C. Art. 238(1)",
+              "evidence": ["IntervenerStatement"]
+            },
+            {
+              "id": "fact_prevent_multiplicity_of_suits",
+              "legalText": "Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter. (ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል።)",
+              "citation": "C.P.C. Art. 238(2)",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_intervention",
+          "text": "To grant the Applicant leave to intervene in the suit and to be joined as a Plaintiff/Defendant. (አመልካቹ በክሱ ውስጥ እንዲገባ እና እንደ ከሳሽ/ተከሳሽ እንዲታከል እንዲፈቀድለት።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "proc_joinder_of_third_party": {
+      "documentTitle": "Application to Join a Third Party (ሶስተኛ ወገንን በክሱ የማካተት ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Art. 240 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ ፪፻፵).",
+      "partyTitles": {
+        "applicant": "Defendant Seeking Joinder (ሶስተኛ ወገንን እንዲካተት የሚፈልግ ተከሳሽ)",
+        "respondent": "Third Party to be Joined (በክሱ እንዲካተት የተፈለገው ሶስተኛ ወገን)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Basis for Third-Party Liability (ለሶስተኛ ወገን ኃላፊነት መሠረት)",
+          "facets": [
+            {
+              "id": "fact_right_to_indemnity",
+              "legalText": "The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant. (ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው።)",
+              "citation": "C.P.C. Art. 240(1)(a)",
+              "evidence": ["ThirdPartyNotice"]
+            },
+            {
+              "id": "fact_right_to_contribution",
+              "legalText": "The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim. (ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው።)",
+              "citation": "C.P.C. Art. 240(1)(b)",
+              "evidence": ["ThirdPartyNotice"]
+            },
+            {
+              "id": "fact_same_issue_arising",
+              "legalText": "The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant. (በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው።)",
+              "citation": "C.P.C. Art. 240(1)(c)",
+              "evidence": ["ThirdPartyNotice"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_third_party_notice",
+          "text": "To grant leave to serve a third-party notice on [Name of Third Party] and join them as a third-party defendant. (በ[የሶስተኛ ወገን ስም] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "proc_judgment_objection_default": {
+      "documentTitle": "Application for Judgment Objection / Setting Aside Ex Parte Decree (በአንድ ወገን ፍርድ ላይ የተቃውሞ ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Arts. 250 & 252 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ ፪፻፶ እና ፪፻፶፪).",
+      "partyTitles": {
+        "applicant": "Objector / Defaulting Party (ተቃዋሚ / በሌሉበት የተፈረደበት ወገን)",
+        "respondent": "Opposing Party (ተቃራኒ ወገን)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for Setting Aside (የፍрዱ መሻር ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_no_proper_service",
+              "legalText": "The decree was passed ex parte (in absence) because the Objector was not duly served with the summons or notice of the suit. (ፍрዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው።)",
+              "citation": "C.P.C. Art. 252(1)(a)",
+              "evidence": ["ObjectionGroundsMemo"]
+            },
+            {
+              "id": "fact_sufficient_cause_for_default",
+              "legalText": "The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause. (ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ።)",
+              "citation": "C.P.C. Art. 252(1)(b)",
+              "evidence": ["ObjectionGroundsMemo"]
+            },
+            {
+              "id": "fact_absence_of_jurisdiction",
+              "legalText": "The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree. (ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው።)",
+              "citation": "C.P.C. Art. 5(2)",
+              "evidence": ["ObjectionGroundsMemo"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Timing (የሥነ ሥርዓት ጊዜ)",
+          "facets": [
+            {
+              "id": "fact_objection_timely_filed",
+              "legalText": "The objection is filed within the period prescribed by law (usually 30 days from knowledge of the decree). (ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ብዙውን ጊዜ ፍርዱ ከታወቀበት ቀን ጀምሮ በ30 ቀናት ውስጥ) ቀርቧል።)",
+              "citation": "C.P.C. Art. 250/252",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_set_aside_judgment",
+          "text": "To set aside the ex parte judgment/decree and restore the suit to the list of pending cases for trial on the merits. (በሌሉበት የተሰጠውን ፍርድ እንዲሻርና ክሱ በፍሬ ነገር እንዲታይ ወደ ተንጠለጠለ መዝገብ እንዲመለስ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "proc_review_of_judgment": {
+      "documentTitle": "Application for Review of Judgment (የፍርድ ዳግም ማየት ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Art. 376 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ ፫፻፸፮).",
+      "partyTitles": {
+        "applicant": "Applicant for Review (ዳግም እንዲታይለት ጠያቂ)",
+        "respondent": "Opposing Party (ተቃራኒ ወገን)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for Review (የዳግም የማየት ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_new_and_important_evidence",
+              "legalText": "The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed. (አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል።)",
+              "citation": "C.P.C. Art. 376(1)(a)",
+              "evidence": ["ReviewApplicationMemo"]
+            },
+            {
+              "id": "fact_mistake_or_error_on_face",
+              "legalText": "There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument. (በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)።)",
+              "citation": "C.P.C. Art. 376(1)(b)",
+              "evidence": ["ReviewApplicationMemo"]
+            },
+            {
+              "id": "fact_other_sufficient_reason",
+              "legalText": "There is any other sufficient reason analogous to the specified grounds justifying a review. (ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ።)",
+              "citation": "C.P.C. Art. 376(1)(c)",
+              "evidence": ["ReviewApplicationMemo"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Constraints (የሥነ ሥርዓት ገደቦች)",
+          "facets": [
+            {
+              "id": "fact_no_previous_appeal",
+              "legalText": "The Applicant has not previously filed an appeal against the judgment being sought for review. (አመልካቹ ዳግም እንዲታይለት ለሚጠይቀው ፍርድ ከዚህ በፊት ይግባኝ አላቀረበም።)",
+              "citation": "C.P.C. Art. 376(2)",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_review",
+          "text": "To grant the application for review and re-open the case for hearing the new evidence or correcting the error. (የዳግም የማየት ጥያቄው ተቀባይነት አግኝቶ ክሱ አዲስ ማስረጃ ለማየት ወይም ስህተቱን ለማረም እንዲከፈት።)",
+          "isDefault": true
+        }
+      ]
+    }
+  }
+}

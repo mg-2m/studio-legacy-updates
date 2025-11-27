@@ -1,0 +1,139 @@
+{
+  "templates": {
+    "admin_appeal_judicial_review": {
+      "documentTitle": "Petition for Judicial Review of Administrative Decision (የአስተዳደር ውሳኔ በፍርድ ቤት እንዲታይ አቤቱታ)",
+      "jurisdictionText": "Federal Administrative Procedure Proclamation No. 1183/2020, Art. 51 (የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር ፩ሺ፩፻፹፫/፪ሺ፲፪፣ አንቀጽ ፶፩).",
+      "partyTitles": {
+        "applicant": "Petitioner / Appellant (አቤቱታ አቅራቢ/ይግባኝ ባይ)",
+        "respondent": "Respondent Agency (መልስ ሰጪ ተቋም)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Jurisdictional Prerequisites (የዳኝነት ቅድመ ሁኔታዎች)",
+          "facets": [
+            {
+              "id": "fact_final_decision_issued",
+              "legalText": "The Respondent Agency issued a final, binding administrative decision affecting the rights or interests of the Petitioner on [Date]. (መልስ ሰጪው ተቋም የመጨረሻ የአስተዳደር ውሳኔ አሳልፏል።)",
+              "citation": "Proc. 1183/2020 Art. 48(1)",
+              "evidence": ["FinalAdminDecision"]
+            },
+            {
+              "id": "fact_exhausted_remedies",
+              "legalText": "The Petitioner has exhausted all available administrative remedies within the Agency, or the Agency failed to render a decision on the complaint within the legal timeframe. (አቤቱታ አቅራቢው በ ተቋሙ ያለውን የውስጥ ቅሬታ የመፍቻ መንገድ ተጠቅሟል ወይም ተቋሙ በጊዜ ውሳኔ መስጠት አልቻለም።)",
+              "citation": "Proc. 1183/2020 Art. 48(2)",
+              "evidence": ["InternalRemedyExhaustion"]
+            },
+            {
+              "id": "fact_petition_is_timely",
+              "legalText": "This petition is filed within the thirty (30) day period prescribed from the date of notification of the decision. (ይህ አቤቱታ ውሳኔው ከደረሰበት ቀን አንስቶ በሰላሳ (፴) ቀን ውስጥ የቀረበ ነው።)",
+              "citation": "Proc. 1183/2020 Art. 51(1)",
+              "evidence": ["DecisionNotificationProof"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Grounds for Annulment (የውሳኔው መሻር ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_procedural_violation_hearing",
+              "legalText": "The decision was made without affording the Petitioner an adequate opportunity for a proper hearing (Art. 34) or without considering relevant evidence. (ውሳኔው አቤቱታ አቅራቢው በአግባቡ ሳይሰማ ቀርቷል (አንቀጽ ፴፬) ወይም አግባብነት ያላቸው ማስረጃዎች ሳይታዩ ቀርቷል።)",
+              "citation": "Proc. 1183/2020 Art. 34",
+              "evidence": []
+            },
+            {
+              "id": "fact_substantive_error_of_law",
+              "legalText": "The decision is based on a fundamental error of law, misinterpreting or misapplying the governing Proclamation, Regulation, or Directive. (ውሳኔው ህጉን በመሳት፣ ወይም አዋጁን፣ ደንቡን ወይም መመሪያውን በተሳሳተ መንገድ በመተርጎም የተሰጠ ነው።)",
+              "citation": "Proc. 1183/2020 Art. 52(1)(a)",
+              "evidence": ["FinalAdminDecision"]
+            },
+            {
+              "id": "fact_failure_to_state_reason",
+              "legalText": "The Agency failed to provide an adequate and reasoned decision, thus violating the Petitioner's right to a reasoned decision (Art. 37). (ተቋሙ አቤቱታ አቅራቢው ምክንያት ያለው ውሳኔ የማግኘት መብቱን በመጣስ በቂ እና ምክንያት ያለበት ውሳኔ መስጠት ተስኖታል።)",
+              "citation": "Proc. 1183/2020 Art. 37",
+              "evidence": ["FinalAdminDecision"]
+            },
+            {
+              "id": "fact_abuse_of_discretion",
+              "legalText": "The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39). (ተቋሙ ሕጋዊ ሥልጣኑን ያለአግባብ በመጠቀም، ወይም ለተገቢ ላልሆነ ዓላማ ውሳኔ በመስጠት የሕግ አቅሙን አላግባብ ተጠቅሟል።)",
+              "citation": "Proc. 1183/2020 Art. 39",
+              "evidence": ["FinalAdminDecision"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_quash_decision",
+          "text": "To quash and annul the decision of the Respondent Agency. (የመልስ ሰጪውን ተቋም ውሳኔ ሙሉ በሙሉ እንዲሻር።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_remand_for_revision",
+          "text": "To order the Administrative Agency to revise or reconsider its decision by rectifying the shortcomings identified by the Court. (ፍርድ ቤቱ ባገኘው ክፍተት መሰረት ተቋሙ ውሳኔውን እንዲያስተካክል ወይም እንደገና እንዲያየው እንዲታዘዝ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_damages_fault",
+          "text": "To order the Respondent Agency to pay compensation for damages incurred as a result of the fault committed through the administrative decision (Art. 54). (በአስተዳደራዊ ውሳኔው በደረሰው ስህተት ምክንያት ለደረሰበት ጉዳት ካሳ እንዲከፍለው።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "admin_review_directive_legality": {
+      "documentTitle": "Petition for Judicial Review of Legality of a Directive (የአስተዳደር መመሪያ ሕጋዊነት በፍርድ ቤት እንዲታይ አቤቱታ)",
+      "jurisdictionText": "Federal Administrative Procedure Proclamation No. 1183/2020, Art. 49 (የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር ፩ሺ፩፻፹፫/፪ሺ፲፪፣ አንቀጽ ፵፱).",
+      "partyTitles": {
+        "applicant": "Petitioner (አቤቱታ አቅራቢ)",
+        "respondent": "Respondent Agency (መልስ ሰጪ ተቋም)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Directive Authority and Compliance (የመመሪያ ስልጣን እና ተገዢነት)",
+          "facets": [
+            {
+              "id": "fact_directive_unlawful_delegation",
+              "legalText": "The Directive was issued without proper delegation of power by law, or it exceeds the scope of the delegating Proclamation. (መመሪያው በሕግ ተገቢው ስልጣን ሳይሰጥ የተሰጠ ነው፣ ወይም ከአዋጁ ወሰን በላይ አልፏል።)",
+              "citation": "Proc. 1183/2020 Art. 49(2)(a)",
+              "evidence": ["AgencyDirectiveCopy"]
+            },
+            {
+              "id": "fact_directive_violates_constitution",
+              "legalText": "The Directive violates the Constitution or other superior law. (መመሪያው ሕገ-መንግስትን ወይም ሌላ የላቀ ህግን ይጥሳል።)",
+              "citation": "Proc. 1183/2020 Art. 49(2)(a)",
+              "evidence": ["AgencyDirectiveCopy"]
+            },
+            {
+              "id": "fact_directive_procedural_flaw",
+              "legalText": "The Directive was adopted without following the mandatory procedure (e.g., public notice, soliciting comments, or FAG consultation) required by law (Arts. 7-12). (መመሪያው ሲወጣ በህግ የተደነገገው የግዴታ ሂደት (ለምሳሌ የህዝብ አስተያየት መጠየቅ ወይም ጠቅላይ ዓቃቤ ህግን ማማከር) ሳይከተል ቀርቷൽ (አንቀጽ ፯-፲፪)።)",
+              "citation": "Proc. 1183/2020 Art. 7-12",
+              "evidence": ["AgencyDirectiveCopy"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Injury to Interest (ጥቅም መጎዳት)",
+          "facets": [
+            {
+              "id": "fact_directive_affects_rights",
+              "legalText": "The Directive directly affects the Petitioner's rights or interests. (መመሪያው የአቤቱታ አቅራቢውን መብት ወይም ጥቅም በቀጥታ ይነካል።)",
+              "citation": "Proc. 1183/2020 Art. 48(1)",
+              "evidence": ["AgencyDirectiveCopy"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_invalidate_directive",
+          "text": "To invalidate the Directive in whole or in part. (መመሪያው ሙሉ በሙሉ ወይም በከፊል ውድቅ እንዲደረግለት።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_order_compliance",
+          "text": "To order the Agency to rectify the procedural flaw and readopt the Directive in compliance with the law. (ተቋሙ የሥነ-ሥርዓት ጉድለቱን እንዲያስተካክል እና መመሪያውን በሕጉ መሠረት ዳግም እንዲያወጣ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "templates": {
+    "contract_debt_recovery": {
+      "documentTitle": "Statement of Claim for Recovery of Loan/Debt (የብድር/ዕዳ ማስመለሻ ክስ)",
+      "jurisdictionText": "Art. 216 et seq. of the Civil Procedure Code & Civil Code Art. 2471.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Creditor) (ከሳሽ (አበዳሪ))",
+        "respondent": "Defendant (Debtor) (ተከሳሽ (ተበዳሪ))"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Formation of Contract (የውል መመስረት)",
+          "facets": [
+            {
+              "id": "fact_loan_agreement",
+              "legalText": "On [Date], the Plaintiff and Defendant entered into a written loan agreement. (በ [ቀን] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል።)",
+              "citation": "Civ. Code Art. 2471",
+              "evidence": [
+                "WrittenContract",
+                "AdmissionofDebt"
+              ]
+            },
+            {
+              "id": "fact_disbursement",
+              "legalText": "The Plaintiff disbursed the sum of [Amount] ETB to the Defendant. (ከሳሽ [መጠን] ብር ለተከሳሽ ሰጥቷል።)",
+              "citation": "",
+              "evidence": [
+                "PaymentReceipt"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Default (ውል ማፍረስ)",
+          "facets": [
+            {
+              "id": "fact_payment_due",
+              "legalText": "The repayment period agreed upon expired on [Date]. (የተስማሙበት የመክፈያ ጊዜ በ [ቀን] አብቅቷል።)",
+              "citation": "Civ. Code Art. 1857"
+            },
+            {
+              "id": "fact_failure_to_pay",
+              "legalText": "Despite the maturity of the debt, the Defendant failed to effect payment. (ዕዳው ቢደርስም ተከሳሹ ክፍያ አልፈጸመም።)",
+              "citation": ""
+            },
+            {
+              "id": "fact_notice_given",
+              "legalText": "The Plaintiff served a formal notice of default on [Date]. (ከሳሽ በ [ቀን] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።)",
+              "citation": "Civ. Code Art. 1772",
+              "evidence": [
+                "NoticeofDefault"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_principal_amount",
+          "text": "Judgment ordering the Defendant to pay the principal sum of [Amount] ETB. (ተከሳሹ ዋናውን ገንዘብ [መጠን] ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_legal_interest",
+          "text": "Order payment of legal interest (9%) calculated from the date of default. (ከውል ማፍረሻ ቀን ጀምሮ የተሰላውን የሕግ ወለድ (9%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 1751",
+          "isDefault": true
+        },
+        {
+          "id": "relief_contractual_interest",
+          "text": "Order payment of contractual interest agreed at [Percentage] (max 12%). (በ [ፐርሰንት] የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 2479",
+          "isDefault": false
+        }
+      ]
+    },
+    "contract_specific_performance": {
+      "documentTitle": "Statement of Claim for Specific Performance of Contract (ውልን ያለመፈጸም ክስ)",
+      "jurisdictionText": "Art. 1776 of the Civil Code & Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Contractual Obligation (የውል ግዴታ)",
+          "facets": [
+            {
+              "id": "fact_valid_contract",
+              "legalText": "A valid contract exists between the parties regarding [Subject Matter]. (በ [ጉዳይ] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ።)",
+              "citation": "Civ. Code Art. 1678",
+              "evidence": [
+                "WrittenContract"
+              ]
+            },
+            {
+              "id": "fact_plaintiff_performance",
+              "legalText": "The Plaintiff has fully performed their obligations under the contract. (ከሳሽ በውሉ መሠረት ግዴታዎቹን ሙሉ በሙሉ ፈጽሟል።)",
+              "citation": ""
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Breach (የውል ጥሰት)",
+          "facets": [
+            {
+              "id": "fact_non_performance",
+              "legalText": "The Defendant has failed to perform [Specific Obligation] without lawful cause. (ተከሳሹ ያለ ሕጋዊ ምክንያት [የተወሰነ ግዴታ] አልፈጸመም።)",
+              "citation": "Civ. Code Art. 1771"
+            },
+            {
+              "id": "fact_special_interest",
+              "legalText": "Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant. (የተወሰነ አፈጻጸም ለከሳሽ ልዩ ፍላጎት ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም።)",
+              "citation": "Civ. Code Art. 1776"
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_enforce_performance",
+          "text": "Order the Defendant to specifically perform the contract by [Action, e.g., transferring title]. (ተከሳሹ [ድርጊት፣ ለምሳሌ የባለቤትነት ማስተላለፍ] በማድረግ ውሉን በተለይ እንዲፈጽም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_alt_damages",
+          "text": "Alternatively, if performance is impossible, order payment of damages. (በአማራጭ፣ አፈጻጸም የማይቻል ከሆነ የካሳ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "contract_termination_claim": {
+      "documentTitle": "Statement of Claim for Judicial Cancellation of Contract (የውል ስረዛ ክስ)",
+      "jurisdictionText": "Art. 1784 & 1785 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Breach Analysis (የጥሰት ትንተና)",
+          "facets": [
+            {
+              "id": "fact_fundamental_breach",
+              "legalText": "The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract. (የተከሳሹ አለመፈጸም የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው።)",
+              "citation": "Civ. Code Art. 1785"
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Restitution (ካሳ)",
+          "facets": [
+            {
+              "id": "fact_payments_made",
+              "legalText": "The Plaintiff has already paid [Amount] to the Defendant. (ከሳሽ ለተከሳሽ [መጠን] ከፍሏል።)",
+              "citation": "",
+              "evidence": [
+                "PaymentReceipt"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_judicial_cancellation",
+          "text": "Judgment declaring the contract cancelled/terminated. (ውሉ መሰረዙን/መቋረጡን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_reinstatement",
+          "text": "Order the parties to be reinstated to their former position (Restitution). (ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።)",
+          "citation": "Civ. Code Art. 1815",
+          "isDefault": true
+        }
+      ]
+    },
+    "app_attachment_before_judgment": {
+      "documentTitle": "Application for Attachment of Property Before Judgment (ከፍርድ በፊት የንብረት እግድ ማመልከቻ)",
+      "jurisdictionText": "Art. 151 & 152 of the Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Obstruction of Justice (የፍትሕ መደናቀፍ)",
+          "facets": [
+            {
+              "id": "fact_intent_to_obstruct",
+              "legalText": "The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree. (ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው።)",
+              "citation": "CPC Art. 151"
+            },
+            {
+              "id": "fact_prima_facie_case",
+              "legalText": "The Applicant has a strong prima facie case and is likely to succeed in the main suit. (አመልካቹ ጠንካራ የቅድመ-ገጽታ ክስ ያለው ሲሆን በዋናው ክስ ላይ ሊሳካለት ይችላል።)",
+              "citation": ""
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_attach_property",
+          "text": "Order the attachment of the Defendant's property [Specify Property] pending final judgment. (የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት [ንብረቱን ይግለጹ] እንዲታገድ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_security_bond",
+          "text": "Alternatively, order the Defendant to furnish security for the amount claimed. (በአማራጭ፣ ተከሳሹ ለተጠየቀው ገንዘብ ዋስትና እንዲያቀርብ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "app_judgment_on_admission": {
+      "documentTitle": "Application for Judgment on Admissions (በእምነት ላይ ለሚሰጥ ፍርድ ማመልከቻ)",
+      "jurisdictionText": "Art. 242 of the Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (ከሳሽ)",
+        "respondent": "Defendant (ተከሳሽ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Admission (እምነት)",
+          "facets": [
+            {
+              "id": "fact_clear_admission",
+              "legalText": "In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt. (በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል።)",
+              "citation": "CPC Art. 242"
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_immediate_judgment",
+          "text": "Enter immediate judgment for the Plaintiff on the admitted portion of the claim. (በተጠየቀው የይገባኛል ጥያቄ ክፍል ላይ ለከሳሽ ወዲያውኑ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    }
+  }
+}

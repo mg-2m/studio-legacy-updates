@@ -1,0 +1,178 @@
+{
+  "templates": {
+    "comm_restitution_nonpayment": {
+      "documentTitle": "Statement of Claim for Payment on a Negotiable Instrument (በንግድ መሣሪያ ላይ የክፍያ ጥያቄ አቤቱታ)",
+      "jurisdictionText": "Commercial Code Proclamation No. 1243/2021, Arts. 715 et seq. (የንግድ ሕግ አዋጅ ቁጥር ፲፪፻፵፫/፪ሺ፲፫፣ አንቀጽ ፯፻፲፭ እና ተከታዮቹ).",
+      "partyTitles": {
+        "applicant": "Holder/Plaintiff (መሣሪያውን የያዘ/ከሳሽ)",
+        "respondent": "Drawee/Drawer/Endorser/Defendant (ከፋይ/አዋጪ/ተላልፊ/ተከሳሽ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "The Instrument & Validity (የንግድ መሣሪያው እና ሕጋዊነት)",
+          "facets": [
+            {
+              "id": "fact_instrument_valid_form",
+              "legalText": "The instrument (Cheque/Note/Bill) fulfills all formal and essential requirements prescribed by the Code and is valid. (መሣሪያው በሕጉ የተደነገጉትን የቅርጽና አስፈላጊነት መስፈርቶች ያሟላል።)",
+              "citation": "Comm. Code Arts. 735/823/827",
+              "evidence": ["NotarizedCheque"]
+            },
+            {
+              "id": "fact_due_date_lapsed",
+              "legalText": "The instrument was presented for payment on the due date/within the legal period, and payment was refused. (መሣሪያው በተወሰነው ቀን/በሕግ በተቀመጠው ጊዜ ለክፍያ ቀርቧል፣ ነገር ግን ተከስቷል።)",
+              "citation": "Comm. Code Art. 760",
+              "evidence": ["NotarizedCheque"]
+            },
+            {
+              "id": "fact_protest_duly_filed",
+              "legalText": "A Certificate of Protest/Non-Payment was duly obtained and registered to protect the Plaintiff's right of recourse against endorsers and other parties. (በተላልፊዎች እና በሌሎች ላይ ያለውን የመመለስ መብት ለማስጠበቅ የክፍያ እምቢታ ማረጋገጫ በሕግ መሠረት ተመዝግቧል።)",
+              "citation": "Comm. Code Art. 763",
+              "evidence": ["ProtestCertificate"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Liability & Recourse (ኃላፊነት እና የማስመለስ ጥያቄ)",
+          "facets": [
+            {
+              "id": "fact_drawer_liability",
+              "legalText": "The Defendant, as the Drawer/Maker, is primarily liable for non-payment of the instrument. (ተከሳሹ እንደ አዋጪ/አስመጪ የመሣሪያውን ክፍያ ባለመፈፀም ቀዳሚ ኃላፊነት አለበት።)",
+              "citation": "Comm. Code Art. 759/824",
+              "evidence": ["NotarizedCheque"]
+            },
+            {
+              "id": "fact_endorser_recourse",
+              "legalText": "The Defendant, as an Endorser, is liable to the Plaintiff through the exercise of the right of recourse. (ተከሳሹ እንደ ተላልፊ፣ የመመለስ መብት አጠቃቀም አማካኝነት ከሳሹ ለጠየቀው ክፍያ ኃላፊነት አለበት።)",
+              "citation": "Comm. Code Art. 767",
+              "evidence": ["NotarizedCheque", "ProtestCertificate"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_order_principal_payment",
+          "text": "To order the Defendant to pay the principal amount of the instrument, in the amount of Birr [AMOUNT]. (ተከሳሹ የመሣሪያውን ዋና መጠን ብር [AMOUNT] እንዲከፍል እንዲታዘዝ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_order_interest_penalty",
+          "text": "To order the Defendant to pay legal interest and collection charges as provided by the Commercial Code. (ተከሳሹ በንግድ ሕጉ የተደነገገውን የሕግ ወለድ እና የክፍያ መሰብሰቢያ ወጪ እንዲከፍል እንዲታዘዝ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "comm_preventive_restructuring": {
+      "documentTitle": "Application for Preventive Debt Restructuring Proceedings (የዕዳ መልሶ ማዋቀር ጥያቄ ማቅረቢያ)",
+      "jurisdictionText": "Commercial Code Proclamation No. 1243/2021, Art. 598 et seq. (የንግድ ሕግ አዋጅ ቁጥር ፲፪፻፵፫/፪ሺ፲፫፣ አንቀጽ ፭፻፺፰ እና ተከታዮቹ).",
+      "partyTitles": {
+        "applicant": "Debtor Business Organization (ዕዳ ያለበት የንግድ ድርጅት)",
+        "respondent": "Creditors (አበዳሪዎች)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Conditions for Restructuring (የመልሶ ማዋቀር ቅድመ ሁኔታዎች)",
+          "facets": [
+            {
+              "id": "fact_financial_distress",
+              "legalText": "The Applicant is facing serious financial distress but has not yet defaulted on all its debts, and the business is still a viable going concern. (አመልካቹ ከባድ የገንዘብ ችግር ገጥሞታል፣ ነገር ግን በሁሉም ዕዳዎች ላይ መክፈል አላቆመም፣ እና ድርጅቱ አሁንም ሊቀጥል የሚችል ነው።)",
+              "citation": "Comm. Code Art. 600(1)",
+              "evidence": ["BalanceSheetAndAudit"]
+            },
+            {
+              "id": "fact_restructuring_plan_ready",
+              "legalText": "The Applicant has prepared a concrete and detailed Preventive Restructuring Plan for negotiation with creditors. (አመልካቹ ከአበዳሪዎች ጋር ለመደራደር የተሟላ የመከላከያ መልሶ ማዋቀር ዕቅድ አዘጋጅቷል።)",
+              "citation": "Comm. Code Art. 600(2)",
+              "evidence": []
+            },
+            {
+              "id": "fact_list_of_creditors_submitted",
+              "legalText": "A comprehensive list of all known creditors, their contact details, and the amount of debt owed to each is attached. (የሁሉም አበዳሪዎች የተሟላ ዝርዝር እና የእዳቸው መጠን ተያይዟል።)",
+              "citation": "Comm. Code Art. 600(3)",
+              "evidence": ["ListofCreditors"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Need for Court Protection (የፍርድ ቤት ጥበቃ አስፈላጊነት)",
+          "facets": [
+            {
+              "id": "fact_need_stay_of_proceedings",
+              "legalText": "A stay of individual enforcement proceedings against the Debtor is necessary to facilitate successful restructuring and prevent liquidation. (መልሶ ማዋቀሩን ለማስቻል እና ኪሳራን ለመከላከል የግል አስፈጻሚ ሂደቶች መቆም ያስፈልጋል።)",
+              "citation": "Comm. Code Art. 608",
+              "evidence": ["BalanceSheetAndAudit"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_open_preventive_procedure",
+          "text": "To open the Preventive Debt Restructuring Proceedings for the Applicant Business Organization. (ለአመልካቹ የንግድ ድርጅት የመከላከያ ዕዳ መልሶ ማዋቀር ሂደት እንዲከፈት።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_grant_stay_of_proceedings",
+          "text": "To grant a provisional stay of all individual enforcement proceedings by creditors for a maximum of four months. (በሁሉም ግለሰባዊ የማስፈጸሚያ ሂደቶች ላይ ለከፍተኛው አራት ወራት የሚቆይ ጊዜያዊ እገዳ እንዲጣልበት።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "comm_dissolution_by_court": {
+      "documentTitle": "Petition for Judicial Dissolution of a Business Organization (የንግድ ድርጅት በፍርድ ቤት እንዲፈርስ አቤቱታ)",
+      "jurisdictionText": "Commercial Code Proclamation No. 1243/2021, Art. 525 (for PLCs) and Art. 384 (for SCs) et seq. (የንግድ ሕግ አዋጅ ቁጥር ፲፪፻፵፫/፪ሺ፲፫፣ አንቀጽ ፭፻፳፭ እና ፫፻፹፬ እና ተከታዮቹ).",
+      "partyTitles": {
+        "applicant": "Shareholder/Partner/Plaintiff (አክሲዮን ባለቤት/አጋር/ከሳሽ)",
+        "respondent": "Business Organization (የንግድ ድርጅት)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for Dissolution (የመፍረስ ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_company_purpose_impossible",
+              "legalText": "The attainment of the company's objective has become impossible, or the company is no longer a going concern. (የኩባንያው ዓላማ መሳካት የማይቻል ሆኗል، ወይም ኩባንያው ሥራውን መቀጠል አይችልም።)",
+              "citation": "Comm. Code Art. 525(1)(b)",
+              "evidence": ["BalanceSheetAndAudit", "ShareholdersResolution"]
+            },
+            {
+              "id": "fact_deadlock_between_partners",
+              "legalText": "A persistent deadlock exists among the partners/shareholders, making the proper functioning of the company impossible (Art. 525). (በአጋሮች/ባለአክሲዮኖች መካከል የማያቋርጥ የሀሳብ ልዩነት አለ، ይህም ኩባንያው በአግባቡ እንዳይሠራ አድርጓል።)",
+              "citation": "Comm. Code Art. 525(1)(c)",
+              "evidence": ["ShareholdersResolution"]
+            },
+            {
+              "id": "fact_capital_below_minimum",
+              "legalText": "The company's net assets have fallen below the minimum capital requirement (Birr 15,000 for PLC) and the loss has not been covered or the capital reduced. (የኩባንያው ንብረቶች ከዝቅተኛው ካፒታል በታች ወርዷል እና ኪሳራው አልተሸፈነም።)",
+              "citation": "Comm. Code Art. 524",
+              "evidence": ["BalanceSheetAndAudit"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Compliance (የሥነ-ሥርዓት መሟላት)",
+          "facets": [
+            {
+              "id": "fact_no_internal_solution",
+              "legalText": "All possible internal remedies and efforts to resolve the issue (e.g., General Assembly resolution) have failed. (ጉዳዩን ለመፍታት የተደረጉ ሁሉም ውስጣዊ ጥረቶች አልተሳኩም።)",
+              "citation": "Comm. Code Art. 525",
+              "evidence": ["ShareholdersResolution", "MemorandumAndArticles"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_order_dissolution_liquidation",
+          "text": "To order the judicial dissolution and liquidation of the Business Organization. (የንግድ ድርጅቱ በፍርድ ቤት እንዲፈርስ እና ንብረቱ እንዲወረስ እንዲታዘዝ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_appoint_liquidator",
+          "text": "To appoint an Official Liquidator to take control of the company's assets and affairs. (የኩባንያውን ንብረቶች እና ጉዳዮች እንዲቆጣጠር ኦፊሴላዊ አጣሪ እንዲሾምለት።)",
+          "isDefault": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "templates": {
+    "succession_heirship_declaration": {
+      "documentTitle": "Application for Declaration of Heirship (የወራሽነት ማረጋገጫ ማመልከቻ)",
+      "jurisdictionText": "Art. 996 of the Civil Code & Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Applicant / Interested Parties (አመልካች / ፍላጎት ያላቸው ወገኖች)",
+        "respondent": "Public Notice (የሕዝብ ማስታወቂያ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Fact of Death (የሞት እውነታ)",
+          "facets": [
+            {
+              "id": "fact_deceased_identity",
+              "legalText": "The Deceased, [Name], passed away on [Date] at [Place]. (ሟቹ፣ [ስም]፣ በ [ቀን] በ [ቦታ] ከዚህ ዓለም በሞት ተለይቷል።)",
+              "citation": "Civ. Code Art. 826",
+              "evidence": [
+                "DeathCertificate"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Relationship (Intestate Rules) (ግንኙነት (ያለ ኑዛዜ ውርስ ሕጎች))",
+          "facets": [
+            {
+              "id": "fact_relationship_descendant",
+              "legalText": "The Applicants are the children/descendants of the deceased. (አመልካቾች የሟቹ ልጆች/ዘሮች ናቸው።)",
+              "citation": "Civ. Code Art. 842",
+              "evidence": []
+            },
+            {
+              "id": "fact_no_will",
+              "legalText": "The Deceased left no will, necessitating an intestate succession. (ሟቹ ኑዛዜ አልተወም، ይህም ያለ ኑዛዜ ውርስን አስፈላጊ ያደርገዋል።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        },
+        "group_3": {
+          "title": "Witnesses (ምስክሮች)",
+          "facets": [
+            {
+              "id": "fact_witness_testimony",
+              "legalText": "Three witnesses are present to testify that the Applicants are the only known heirs. (አመልካቾች ብቸኛ የታወቁ ወራሾች መሆናቸውን ለመመስከር ሦስት ምስክሮች ቀርበዋል።)",
+              "citation": "",
+              "evidence": [
+                "WitnessAffidavitsSuccession"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_declare_heirs",
+          "text": "Judgment declaring the Applicants as the sole legal heirs of the Deceased. (አመልካቾችን የሟቹ ብቸኛ ሕጋዊ ወራሾች መሆናቸውን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_certificate_issuance",
+          "text": "Order the issuance of a Certificate of Heirship. (የወራሽነት ማረጋገጫ ሰርተፍኬት እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "succession_probate_will": {
+      "documentTitle": "Application for Probate of Will (የኑዛዜ ማጽደቅ ማመልከቻ)",
+      "jurisdictionText": "Art. 881 (Public), 885 (Holographic) of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Petitioner (Executor/Beneficiary) (አመልካች (ፈጻሚ/ተጠቃሚ))",
+        "respondent": "N/A (የለም)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Validity of Will (የኑዛዜ ሕጋዊነት)",
+          "facets": [
+            {
+              "id": "fact_will_existence",
+              "legalText": "The Deceased left a valid will dated [Date]. (ሟቹ በ [ቀን] የተጻፈ ሕጋዊ ኑዛዜ ትቷል።)",
+              "citation": "",
+              "evidence": [
+                "WillTestament"
+              ]
+            },
+            {
+              "id": "fact_formality_public",
+              "legalText": "The will was read in the presence of four witnesses and the Registrar. (ኑዛዜው በአራት ምስክሮች እና በሬጅስትራሩ ፊት ተነቧል።)",
+              "citation": "Civ. Code Art. 881",
+              "evidence": []
+            },
+            {
+              "id": "fact_formality_holographic",
+              "legalText": "The will is entirely written, dated, and signed by the hand of the deceased. (ኑዛዜው ሙሉ በሙሉ በሟቹ እጅ የተጻፈ፣ ቀን የተሰጠው እና የተፈረመ ነው።)",
+              "citation": "Civ. Code Art. 885",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_validate_will",
+          "text": "Judgment declaring the Will to be valid and the true last wish of the Deceased. (ኑዛዜው ሕጋዊ እና የሟቹ እውነተኛ የመጨረሻ ፍላጎት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_appoint_executor",
+          "text": "Order confirming the Petitioner as the Executor of the will. (አመልካቹን የኑዛዜው ፈጻሚ መሆኑን የሚያረጋግጥ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "succession_partition_estate": {
+      "documentTitle": "Application for Partition of Hereditary Estate (የውርስ ንብረት ክፍፍል ማመልከቻ)",
+      "jurisdictionText": "Art. 1060 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Plaintiff (Heir) (ከሳሽ (ወራሽ))",
+        "respondent": "Defendant (Co-Heir) (ተከሳሽ (አብሮ ወራሽ))"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Co-ownership (የጋራ ባለቤትነት)",
+          "facets": [
+            {
+              "id": "fact_heirship_established",
+              "legalText": "The parties have been legally declared as co-heirs. (ተዋዋይ ወገኖች በሕጋዊ መንገድ እንደ አብሮ ወራሾች ታውጇል።)",
+              "citation": "Civ. Code Art. 1060",
+              "evidence": [
+                "CertificateofHeirship"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Estate Status (የንብረት ሁኔታ)",
+          "facets": [
+            {
+              "id": "fact_liquidation_complete",
+              "legalText": "The debts of the estate have been paid, and the assets are ready for division. (የንብረቱ እዳዎች ተከፍለዋል، እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው።)",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_disagreement",
+              "legalText": "The Co-heirs cannot agree on a voluntary division of the assets. (አብሮ ወራሾቹ በንብረቶቹ በፈቃደኝነት ክፍፍል ላይ መስማማት አልቻሉም።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_partition_kind",
+          "text": "Order the physical division of the property in kind among the heirs. (ንብረቱን በአይነት በወራሾች መካከል እንዲከፋፈል ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_partition_sale",
+          "text": "Order the sale of the property and division of proceeds (if division in kind is impossible). (ንብረቱን በሽያጭ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ (በአይነት ክፍፍል የማይቻል ከሆነ)።)",
+          "isDefault": false
+        }
+      ]
+    },
+    "app_appoint_liquidator": {
+      "documentTitle": "Application for Appointment of Liquidator (የአጣሪ ሹመት ማመልከቻ)",
+      "jurisdictionText": "Art. 950 of the Civil Code.",
+      "partyTitles": {
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "N/A (የለም)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Necessity (አስፈላጊነት)",
+          "facets": [
+            {
+              "id": "fact_estate_complexity",
+              "legalText": "The estate involves complex debts and multiple assets requiring professional management. (ንብረቱ ሙያዊ አስተዳደር የሚጠይቁ ውስብስብ እዳዎች እና በርካታ ንብረቶችን ያካትታል።)",
+              "citation": "",
+              "evidence": []
+            },
+            {
+              "id": "fact_no_nominee",
+              "legalText": "The will did not nominate an executor, or the heirs cannot agree on one. (ኑዛዜው ፈጻሚ አልሾመም، ወይም ወራሾቹ በአንድ ላይ መስማማት አልቻሉም።)",
+              "citation": "Civ. Code Art. 950",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_appoint_official",
+          "text": "Order the appointment of a neutral Liquidator to administer the estate. (ንብረቱን ለማስተዳደር ገለልተኛ አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "app_seal_estate": {
+      "documentTitle": "Application for Affixing of Seals (የማሸጊያ ማመልከቻ)",
+      "jurisdictionText": "Art. 946 of the Civil Code & Civil Procedure Code.",
+      "partyTitles": {
+        "applicant": "Applicant (አመልካች)",
+        "respondent": "N/A (የለም)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Urgency (አስቸኳይነት)",
+          "facets": [
+            {
+              "id": "fact_risk_misappropriation",
+              "legalText": "There is an imminent risk that movables or documents may be removed or hidden. (ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች ሊወገዱ ወይም ሊደበቁ የሚችሉበት አስቸኳይ አደጋ አለ።)",
+              "citation": "Civ. Code Art. 946",
+              "evidence": []
+            },
+            {
+              "id": "fact_minor_heirs",
+              "legalText": "There are minor heirs whose interests require protection. (ጥበቃ የሚያስፈልጋቸው አካለ መጠን ያልደረሱ ወራሾች አሉ።)",
+              "citation": "",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_affix_seals",
+          "text": "Order the court registrar to affix official seals on the deceased's property/safe. (የፍርድ ቤቱ ሬጅስትራር በሟቹ ንብረት/ካዝና ላይ ኦፊሴላዊ ማህተሞችን እንዲያደርግ ትዕዛዝ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    }
+  }
+}

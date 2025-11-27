@@ -1,8 +1,9 @@
 {
   "templates": {
     "succession_heirship_declaration": {
-      "documentTitle": "Application for Declaration of Heirship (የወራሽነት ማረጋገጫ ማመልከቻ)",
+      "documentTitle": "የወራሽነት ማረጋገጫ ማመልከቻ (Application for Declaration of Heirship)",
       "jurisdictionText": "Art. 996 of the Civil Code & Civil Procedure Code.",
+      "templateDescription": "### የወራሽነት ማረጋገጫ (Heirship Declaration)\n\n**አጠቃቀም (Use Case):** ይህ አብነት አንድ ሟች ኑዛዜ ሳይተው ሲቀር፣ ሕጋዊ ወራሾቹ እነማን እንደሆኑ በፍርድ ቤት ለማረጋገጥ ያገለግላል። ይህም ወራሾቹ የሟቹን ንብረት በሕጋዊ መንገድ እንዲቆጣጠሩ እና እንዲያስተዳድሩ ያስችላቸዋል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** የወራሽነት ጥያቄ በማንኛውም ጊዜ ሊቀርብ ይችላል፣ የጊዜ ገደብ የለውም።\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** የሟቹ የሞት ማረጋገጫ ወረቀት።\n    *   **ተጨማሪ ማስረጃ:** የወራሾቹን ዝምድና የሚያረጋግጡ ሦስት ምስክሮች እና የቤተሰብ ግንኙነት የሚያሳይ የቀበሌ መታወቂያ።\n",
       "partyTitles": {
         "applicant": "Applicant / Interested Parties (አመልካች / ፍላጎት ያላቸው ወገኖች)",
         "respondent": "Public Notice (የሕዝብ ማስታወቂያ)"
@@ -66,8 +67,9 @@
       ]
     },
     "succession_probate_will": {
-      "documentTitle": "Application for Probate of Will (የኑዛዜ ማጽደቅ ማመልከቻ)",
+      "documentTitle": "የኑዛዜ ማጽደቅ ማመልከቻ (Application for Probate of Will)",
       "jurisdictionText": "Art. 881 (Public), 885 (Holographic) of the Civil Code.",
+      "templateDescription": "### የኑዛዜ ማጽደቅ (Probate of Will)\n\n**አጠቃቀም (Use Case):** ይህ አብነት ሟቹ ሕጋዊ ኑዛዜ ትቶ ሲሄድ፣ ኑዛዜው የሟቹ የመጨረሻ ፍላጎት መሆኑን በፍርድ ቤት ለማረጋገጥ እና ለማጽደቅ ያገለግላል። ይህም በኑዛዜው የተጠቀሱት ፈጻሚዎች ወይም ተጠቃሚዎች ንብረቱን በኑዛዜው መሠረት እንዲያስተዳድሩ ያስችላቸዋል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** ኑዛዜን ለማስከበር ምንም የጊዜ ገደብ የለም።\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** ዋናው የኑዛዜ ሰነድ እና የሟቹ የሞት ማረጋገጫ ወረቀት።\n    *   **ተጨማሪ ማስረጃ:** ኑዛዜው በሕዝብ ፊት የተደረገ ከሆነ፣ የምስክሮች መግለጫ።\n",
       "partyTitles": {
         "applicant": "Petitioner (Executor/Beneficiary) (አመልካች (ፈጻሚ/ተጠቃሚ))",
         "respondent": "N/A (የለም)"
@@ -113,8 +115,9 @@
       ]
     },
     "succession_partition_estate": {
-      "documentTitle": "Application for Partition of Hereditary Estate (የውርስ ንብረት ክፍፍል ማመልከቻ)",
+      "documentTitle": "የውርስ ንብረት ክፍፍል ማመልከቻ (Application for Partition of Hereditary Estate)",
       "jurisdictionText": "Art. 1060 of the Civil Code.",
+      "templateDescription": "### የውርስ ንብረት ክፍፍል (Estate Partition)\n\n**አጠቃቀም (Use Case):** ይህ አብነት ወራሾቹ በሕግ ከታወቁ በኋላ፣ የውርስ ንብረቱን እንዴት እንደሚከፋፈሉ መስማማት ሳይችሉ ሲቀሩ ጥቅም ላይ ይውላል። ክሱ ንብረቱ በፍርድ ቤት በኩል እንዲከፋፈል ለመጠየቅ ነው።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **የጊዜ ገደብ (Limitation Period):** የውርስ ንብረት ክፍፍል በማንኛውም ጊዜ ሊጠየቅ ይችላል።\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** ወራሽ መሆንዎን የሚያረጋግጥ የፍርድ ቤት ውሳኔ ወይም የወራሽነት ሰርተፍኬት።\n    *   **ተጨማሪ ማስረጃ:** የሟቹ እዳዎች መከፈላቸውን የሚያረጋግጥ ሰነድ (የዕዳ ነጻነት ማረጋገጫ)።\n",
       "partyTitles": {
         "applicant": "Plaintiff (Heir) (ከሳሽ (ወራሽ))",
         "respondent": "Defendant (Co-Heir) (ተከሳሽ (አብሮ ወራሽ))"
@@ -165,8 +168,9 @@
       ]
     },
     "app_appoint_liquidator": {
-      "documentTitle": "Application for Appointment of Liquidator (የአጣሪ ሹመት ማመልከቻ)",
+      "documentTitle": "የአጣሪ ሹመት ማመልከቻ (Application for Appointment of Liquidator)",
       "jurisdictionText": "Art. 950 of the Civil Code.",
+      "templateDescription": "### የአጣሪ ሹመት (Appoint Liquidator)\n\n**አጠቃቀም (Use Case):** ይህ አብነት የሟቹ ንብረት ውስብስብ ሲሆን ወይም ወራሾቹ ንብረቱን ለማስተዳደር መስማማት ሳይችሉ ሲቀሩ፣ ፍርድ ቤቱ ገለልተኛ የሆነ አጣሪ እንዲሾም ለመጠየቅ ያገለግላል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **አስፈላጊነት (Necessity):** የንብረቱ ውስብስብነት ወይም በወራሾች መካከል ያለው አለመግባባት መኖሩን ማሳየት ያስፈልጋል።\n*   **ማስረጃ (Required Evidence):** የንብረቱን ዝርዝር እና የእዳዎችን ሁኔታ የሚያሳይ ሰነድ።\n",
       "partyTitles": {
         "applicant": "Applicant (አመልካች)",
         "respondent": "N/A (የለም)"
@@ -199,8 +203,9 @@
       ]
     },
     "app_seal_estate": {
-      "documentTitle": "Application for Affixing of Seals (የማሸጊያ ማመልከቻ)",
+      "documentTitle": "የማሸጊያ ማመልከቻ (Application for Affixing of Seals)",
       "jurisdictionText": "Art. 946 of the Civil Code & Civil Procedure Code.",
+      "templateDescription": "### የንብረት ማሸግ (Seal Estate)\n\n**አጠቃቀም (Use Case):** ይህ አስቸኳይ ማመልከቻ፣ የውርስ ንብረት (በተለይ ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች) እንዳይሰወሩ ወይም እንዳይጠፉ ለመከላከል ፍርድ ቤቱ ንብረቱን እንዲያሽግ ለመጠየቅ ያገለግላል።\n\n**ቅድመ ሁኔታዎች (Prerequisites):**\n*   **አስቸኳይነት (Urgency):** ንብረቱ ሊጠፋ ወይም ሊሰወር እንደሚችል የሚያሳይ ጠንካራ ስጋት መኖሩን ማሳየት ያስፈልጋል።\n*   **ማስረጃ (Required Evidence):** የአደጋውን አስቸኳይነት የሚያሳይ የምስክር ወረቀት ወይም ሌላ ማስረጃ።\n",
       "partyTitles": {
         "applicant": "Applicant (አመልካች)",
         "respondent": "N/A (የለም)"

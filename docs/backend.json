@@ -376,7 +376,7 @@
     },
     "OfficialOrderDocument": {
       "title": "Official Order or Warrant (ኦፊሴላዊ ትዕዛዝ ወይም ማዘዣ)",
-      "description": "Written documentation proving the alleged criminal act was carried out under the legal order or command of a superior officer or public authority."
+      "description": "Written documentation proving the alleged criminal act was carried out under the legal order or command of a superior public authority."
     },
     "VictimConsentForm": {
       "title": "Victim's Written Consent (ተጎጂው የሰጠው የጽሑፍ ፈቃድ)",
@@ -385,6 +385,30 @@
     "WitnessStatementsIntoxication": {
       "title": "Witness Statements on Intoxication (ስለ ስካር ሁኔታ የምስክርነት ቃል)",
       "description": "Statements confirming the defendant's involuntary or non-culpable state of intoxication at the time of the alleged offense."
+    },
+    "OriginalPleadingCopy": {
+      "title": "Copy of Original Pleading (የመጀመሪያ ክስ ወይም መቃወሚያ ቅጂ)",
+      "description": "A certified copy of the original statement of claim or statement of defence that is subject to the proposed amendment."
+    },
+    "DraftAmendment": {
+      "title": "Draft of the Proposed Amendment (የታቀደው ማሻሻያ ረቂቅ)",
+      "description": "The full, written text of the changes, additions, or deletions sought to be included in the original pleading."
+    },
+    "IntervenerStatement": {
+      "title": "Intervener's Statement of Claim/Defence (ጣልቃ ገቢው ክስ/መቃወሚያ)",
+      "description": "A full statement outlining the intervener's legal interest in the subject matter of the existing suit and their claims or defenses."
+    },
+    "ThirdPartyNotice": {
+      "title": "Draft Third-Party Notice (ለሶስተኛ ወገን የጥሪ ማስታወቂያ ረቂቅ)",
+      "description": "The specific notice or claim that the Defendant intends to serve on the third party, detailing the basis for indemnity or contribution."
+    },
+    "ObjectionGroundsMemo": {
+      "title": "Memorandum of Objection Grounds (የተቃውሞ ምክንያቶች ማስታወሻ)",
+      "description": "A detailed legal memorandum specifying the factual or legal errors upon which the judgment objection is based (e.g., lack of service, fraud)."
+    },
+    "ReviewApplicationMemo": {
+      "title": "Review Application Memorandum (የፍርድ ዳግም የማየት ማስታወሻ)",
+      "description": "A memorandum specifying the new, crucial evidence discovered or the error on the face of the record required for a review of judgment."
     }
   },
   "templates": {
@@ -3054,7 +3078,7 @@
             },
             {
               "id": "fact_abuse_of_discretion",
-              "legalText": "The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39). (ተቋሙ ሕጋዊ ሥልጣኑን ያለአግባብ በመጠቀም፣ ወይም ለተገቢ ላልሆነ ዓላማ ውሳኔ በመስጠት የሕግ አቅሙን አላግባብ ተጠቅሟል።)",
+              "legalText": "The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39). (ተቋሙ ሕጋዊ ሥልጣኑን ያለአግባብ በመጠቀም، ወይም ለተገቢ ላልሆነ ዓላማ ውሳኔ በመስጠት የሕግ አቅሙን አላግባብ ተጠቅሟል።)",
               "citation": "Proc. 1183/2020 Art. 39",
               "evidence": [
                 "FinalAdminDecision"
@@ -3361,13 +3385,18 @@
               "id": "fact_imminent_unlawful_attack",
               "legalText": "The Defendant was facing an actual, imminent, and unlawful attack upon their life, limb, or property. (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በንብረቱ ላይ ሊደርስ ያለ ትክክለኛ፣ የቅርብ እና ሕገ-ወጥ ጥቃት ገጥሞት ነበር።)",
               "citation": "Crim. Code Art. 79(1)",
-              "evidence": ["ProofOfImminentDanger"]
+              "evidence": [
+                "ProofOfImminentDanger"
+              ]
             },
             {
               "id": "fact_defence_of_third_party",
               "legalText": "The Defendant acted to defend a third party who was also facing an imminent, unlawful attack. (ተከሳሹ ጥቃት ሊደርስበት ያለን ሌላ ሰው ለመከላከል እርምጃ ወስዷል።)",
               "citation": "Crim. Code Art. 79(2)",
-              "evidence": ["ProofOfImminentDanger", "WitnessStatements"]
+              "evidence": [
+                "ProofOfImminentDanger",
+                "WitnessStatements"
+              ]
             }
           ]
         },
@@ -3378,13 +3407,18 @@
               "id": "fact_no_other_means",
               "legalText": "The act of defence was necessary because there was no other possible means of preventing the attack. (ጥቃቱን ለመከላከል ሌላ አማራጭ መንገድ ስላልነበረው የመከላከል ተግባሩ አስፈላጊ ነበር።)",
               "citation": "Crim. Code Art. 80(1)",
-              "evidence": ["WitnessStatements"]
+              "evidence": [
+                "WitnessStatements"
+              ]
             },
             {
               "id": "fact_proportionality",
               "legalText": "The means used for defence were proportional to the gravity of the attack and the threatened harm. (ለመከላከል ጥቅም ላይ የዋለው ዘዴ ከጥቃቱ ክብደት እና ከሚሰጋው ጉዳት ጋር የተመጣጣኝ ነበር።)",
               "citation": "Crim. Code Art. 80(2)",
-              "evidence": ["ProofOfImminentDanger", "WitnessStatements"]
+              "evidence": [
+                "ProofOfImminentDanger",
+                "WitnessStatements"
+              ]
             }
           ]
         }
@@ -3412,13 +3446,17 @@
               "id": "fact_insane_incapable_understanding",
               "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of understanding the criminal nature of the act. (በድርጊቱ ጊዜ ተከሳሹ የድርጊቱን የወንጀልነት ባህሪ ለመረዳት በማይችል ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
               "citation": "Crim. Code Art. 50(1)",
-              "evidence": ["MedicalCertificateMentalState"]
+              "evidence": [
+                "MedicalCertificateMentalState"
+              ]
             },
             {
               "id": "fact_insane_incapable_control",
               "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of controlling their conduct. (በድርጊቱ ጊዜ ተከሳሹ አካሄዱን መቆጣጠር በማይችልበት ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
               "citation": "Crim. Code Art. 50(1)",
-              "evidence": ["MedicalCertificateMentalState"]
+              "evidence": [
+                "MedicalCertificateMentalState"
+              ]
             }
           ]
         },
@@ -3429,13 +3467,18 @@
               "id": "fact_intoxication_non_culpable",
               "legalText": "The Defendant was in a state of involuntary or non-culpable intoxication (e.g., administered by force or error) that led to the lack of culpability. (ተከሳሹ በግዴታ ወይም በስህተት በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ሲሆን ይህም ተጠያቂ እንዳይሆን አድርጎታል።)",
               "citation": "Crim. Code Art. 54",
-              "evidence": ["WitnessStatementsIntoxication", "MedicalCertificateMentalState"]
+              "evidence": [
+                "WitnessStatementsIntoxication",
+                "MedicalCertificateMentalState"
+              ]
             },
             {
               "id": "fact_intoxication_culpable_negligence",
               "legalText": "The Defendant was in a state of culpable intoxication, but the offense committed was only foreseeable as a light offense (for mitigation). (ተከሳሹ በግዴታ በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ቢሆንም የተፈፀመው ወንጀል በቀላል ደረጃ የሚገመት ነበር (ለቅጣት ማቅለያ)።)",
               "citation": "Crim. Code Art. 54(3)",
-              "evidence": ["WitnessStatementsIntoxication"]
+              "evidence": [
+                "WitnessStatementsIntoxication"
+              ]
             }
           ]
         }
@@ -3463,13 +3506,17 @@
               "id": "fact_imminent_threat_necessity",
               "legalText": "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
               "citation": "Crim. Code Art. 81(1)",
-              "evidence": ["ProofOfImminentDanger"]
+              "evidence": [
+                "ProofOfImminentDanger"
+              ]
             },
             {
               "id": "fact_interest_protected_greater",
               "legalText": "The interest protected by the act (the interest saved) was evidently of a greater or equal value than the interest infringed (the harm caused). (በድርጊቱ የተጠበቀው ጥቅም (የተረፈው) ከተጎዳው ጥቅም (ከተፈጠረው ጉዳት) የበለጠ ወይም እኩል ዋጋ ነበረው።)",
               "citation": "Crim. Code Art. 81(1)",
-              "evidence": ["WitnessStatements"]
+              "evidence": [
+                "WitnessStatements"
+              ]
             }
           ]
         },
@@ -3480,13 +3527,17 @@
               "id": "fact_order_of_superior",
               "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል፣ እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
               "citation": "Crim. Code Art. 82",
-              "evidence": ["OfficialOrderDocument"]
+              "evidence": [
+                "OfficialOrderDocument"
+              ]
             },
             {
               "id": "fact_victim_consent_valid",
               "legalText": "The victim freely and clearly consented to the minor bodily injury or damage to property, where such consent is valid under the law. (ተጎጂው በሕግ ተቀባይነት ባለው መንገድ ለደረሰበት ቀላል የአካል ጉዳት ወይም የንብረት ጉዳት በነጻ ፈቃዱን ሰጥቷል።)",
               "citation": "Crim. Code Art. 83",
-              "evidence": ["VictimConsentForm"]
+              "evidence": [
+                "VictimConsentForm"
+              ]
             }
           ]
         }
@@ -3503,7 +3554,270 @@
           "isDefault": false
         }
       ]
+    },
+    "proc_amendment_of_pleading": {
+      "documentTitle": "Application for Amendment of Pleading (የፍሬ ነገር ማሻሻያ ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Art. 222 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፳፪).",
+      "partyTitles": {
+        "applicant": "Applicant/Party Seeking Amendment (ማሻሻያ ጠያቂ)",
+        "respondent": "Opposing Party (ተቃራኒ ወገን)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for Amendment (የማሻሻያ ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_amendment_necessary_for_justice",
+              "legalText": "The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice. (ማሻሻያው በወገኖች መካከል ያለውን እውነተኛ ክርክር ለመወሰን አስፈላጊ ሲሆን የፍትሕንም ዓላማ ለማሳካት የግድ ነው።)",
+              "citation": "C.P.C. Art. 222(2)",
+              "evidence": [
+                "OriginalPleadingCopy",
+                "DraftAmendment"
+              ]
+            },
+            {
+              "id": "fact_amendment_no_prejudice",
+              "legalText": "The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs. (ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒ ወገንን በወጪ የማይካስ ፍትሐዊ ያልሆነ ጉዳት አያስከትልም።)",
+              "citation": "C.P.C. Art. 222(1)",
+              "evidence": [
+                "OriginalPleadingCopy"
+              ]
+            },
+            {
+              "id": "fact_amendment_due_to_clerical_error",
+              "legalText": "The amendment is minor and necessary to correct a clerical, computational, or drafting error in the original pleading. (ማሻሻያው ጥቃቅን ሲሆን በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአፃፃፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው።)",
+              "citation": "C.P.C. Art. 222(1)",
+              "evidence": [
+                "DraftAmendment"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Timing (የሥነ ሥርዓት ጊዜ)",
+          "facets": [
+            {
+              "id": "fact_amendment_before_judgment",
+              "legalText": "The application for amendment is being made before the court has delivered its final judgment. (የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ውሳኔ ከመስጠቱ በፊት እየቀረበ ነው።)",
+              "citation": "C.P.C. Art. 222(1)",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_amendment",
+          "text": "To grant leave to amend the statement of claim/defence as per the draft annexed hereto. (በዚህ ከተያያዘው ረቂቅ መሠረት ክስ/መቃወሚያ እንዲሻሻል ፈቃድ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "proc_intervention_by_third_party": {
+      "documentTitle": "Application for Leave to Intervene in a Pending Suit (በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Art. 238 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፴፰).",
+      "partyTitles": {
+        "applicant": "Intervener (ጣልቃ ገቢ)",
+        "respondent": "Original Parties (የመጀመሪያ ተከራካሪ ወገኖች)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Legal Interest and Necessity (ሕጋዊ ጥቅም እና አስፈላጊነት)",
+          "facets": [
+            {
+              "id": "fact_direct_legal_interest",
+              "legalText": "The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment. (ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል።)",
+              "citation": "C.P.C. Art. 238(1)",
+              "evidence": [
+                "IntervenerStatement"
+              ]
+            },
+            {
+              "id": "fact_common_question_of_law_or_fact",
+              "legalText": "The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise. (ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል።)",
+              "citation": "C.P.C. Art. 238(1)",
+              "evidence": [
+                "IntervenerStatement"
+              ]
+            },
+            {
+              "id": "fact_prevent_multiplicity_of_suits",
+              "legalText": "Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter. (ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል።)",
+              "citation": "C.P.C. Art. 238(2)",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_intervention",
+          "text": "To grant the Applicant leave to intervene in the suit and to be joined as a Plaintiff/Defendant. (አመልካቹ በክሱ ውስጥ እንዲገባ እና እንደ ከሳሽ/ተከሳሽ እንዲታከል እንዲፈቀድለት።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "proc_joinder_of_third_party": {
+      "documentTitle": "Application to Join a Third Party (ሶስተኛ ወገንን በክሱ የማካተት ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Art. 240 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፵).",
+      "partyTitles": {
+        "applicant": "Defendant Seeking Joinder (ሶስተኛ ወገንን እንዲካተት የሚፈልግ ተከሳሽ)",
+        "respondent": "Third Party to be Joined (በክሱ እንዲካተት የተፈለገው ሶስተኛ ወገን)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Basis for Third-Party Liability (ለሶስተኛ ወገን ኃላፊነት መሠረት)",
+          "facets": [
+            {
+              "id": "fact_right_to_indemnity",
+              "legalText": "The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant. (ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው።)",
+              "citation": "C.P.C. Art. 240(1)(a)",
+              "evidence": [
+                "ThirdPartyNotice"
+              ]
+            },
+            {
+              "id": "fact_right_to_contribution",
+              "legalText": "The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim. (ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው።)",
+              "citation": "C.P.C. Art. 240(1)(b)",
+              "evidence": [
+                "ThirdPartyNotice"
+              ]
+            },
+            {
+              "id": "fact_same_issue_arising",
+              "legalText": "The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant. (በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው።)",
+              "citation": "C.P.C. Art. 240(1)(c)",
+              "evidence": [
+                "ThirdPartyNotice"
+              ]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_third_party_notice",
+          "text": "To grant leave to serve a third-party notice on [Name of Third Party] and join them as a third-party defendant. (በ[የሶስተኛ ወገን ስም] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "proc_judgment_objection_default": {
+      "documentTitle": "Application for Judgment Objection / Setting Aside Ex Parte Decree (በአንድ ወገን ፍርድ ላይ የተቃውሞ ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Arts. 250 & 252 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፶ እና ፪፻፶፪).",
+      "partyTitles": {
+        "applicant": "Objector / Defaulting Party (ተቃዋሚ / በሌሉበት የተፈረደበት ወገን)",
+        "respondent": "Opposing Party (ተቃራኒ ወገን)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for Setting Aside (የፍርዱ መሻር ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_no_proper_service",
+              "legalText": "The decree was passed ex parte (in absence) because the Objector was not duly served with the summons or notice of the suit. (ፍርዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው።)",
+              "citation": "C.P.C. Art. 252(1)(a)",
+              "evidence": [
+                "ObjectionGroundsMemo"
+              ]
+            },
+            {
+              "id": "fact_sufficient_cause_for_default",
+              "legalText": "The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause. (ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ።)",
+              "citation": "C.P.C. Art. 252(1)(b)",
+              "evidence": [
+                "ObjectionGroundsMemo"
+              ]
+            },
+            {
+              "id": "fact_absence_of_jurisdiction",
+              "legalText": "The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree. (ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው።)",
+              "citation": "C.P.C. Art. 5(2)",
+              "evidence": [
+                "ObjectionGroundsMemo"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Timing (የሥነ ሥርዓት ጊዜ)",
+          "facets": [
+            {
+              "id": "fact_objection_timely_filed",
+              "legalText": "The objection is filed within the period prescribed by law (usually 30 days from knowledge of the decree). (ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ብዙውን ጊዜ ፍርዱ ከታወቀበት ቀን ጀምሮ በ30 ቀናት ውስጥ) ቀርቧል።)",
+              "citation": "C.P.C. Art. 250/252",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_set_aside_judgment",
+          "text": "To set aside the ex parte judgment/decree and restore the suit to the list of pending cases for trial on the merits. (በሌሉበት የተሰጠውን ፍርድ እንዲሻርና ክሱ በፍሬ ነገር እንዲታይ ወደ ተንጠለጠለ መዝገብ እንዲመለስ።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "proc_review_of_judgment": {
+      "documentTitle": "Application for Review of Judgment (የፍርድ ዳግም ማየት ጥያቄ)",
+      "jurisdictionText": "Civil Procedure Code of 1965, Art. 376 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፫፻፸፮).",
+      "partyTitles": {
+        "applicant": "Applicant for Review (ዳግም እንዲታይለት ጠያቂ)",
+        "respondent": "Opposing Party (ተቃራኒ ወገን)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for Review (የዳግም የማየት ምክንያቶች)",
+          "facets": [
+            {
+              "id": "fact_new_and_important_evidence",
+              "legalText": "The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed. (አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል።)",
+              "citation": "C.P.C. Art. 376(1)(a)",
+              "evidence": [
+                "ReviewApplicationMemo"
+              ]
+            },
+            {
+              "id": "fact_mistake_or_error_on_face",
+              "legalText": "There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument. (በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)።)",
+              "citation": "C.P.C. Art. 376(1)(b)",
+              "evidence": [
+                "ReviewApplicationMemo"
+              ]
+            },
+            {
+              "id": "fact_other_sufficient_reason",
+              "legalText": "There is any other sufficient reason analogous to the specified grounds justifying a review. (ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ።)",
+              "citation": "C.P.C. Art. 376(1)(c)",
+              "evidence": [
+                "ReviewApplicationMemo"
+              ]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Procedural Constraints (የሥነ ሥርዓት ገደቦች)",
+          "facets": [
+            {
+              "id": "fact_no_previous_appeal",
+              "legalText": "The Applicant has not previously filed an appeal against the judgment being sought for review. (አመልካቹ ዳግም እንዲታይለት ለሚጠይቀው ፍርድ ከዚህ በፊት ይግባኝ አላቀረበም።)",
+              "citation": "C.P.C. Art. 376(2)",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_grant_review",
+          "text": "To grant the application for review and re-open the case for hearing the new evidence or correcting the error. (የዳግም የማየት ጥያቄው ተቀባይነት አግኝቶ ክሱ አዲስ ማስረጃ ለማየት ወይም ስህተቱን ለማረም እንዲከፈት።)",
+          "isDefault": true
+        }
+      ]
     }
   }
 }
+
     

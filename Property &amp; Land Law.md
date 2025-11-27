@@ -1699,58 +1699,58 @@
               "evidence": []
             }
           ]
-        },
-        "group_2": {
-          "title": "Identification of Property",
-          "facets": [
-            {
-              "id": "fact_existence_common_property",
-              "legalText": "The parties acquired movable and immovable property during the existence of the marriage which constitutes Common Property.",
-              "citation": "RFC Art. 62",
-              "evidence": [
-                "ListofCommonProperty",
-                "TitleDeedsLibrec"
-              ]
-            },
-            {
-              "id": "fact_property_possession",
-              "legalText": "The property is currently in the sole possession/control of the Respondent/Applicant.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
-        },
-        "group_3": {
-          "title": "Restitution of Personal Property (Pre-Partition)",
-          "facets": [
-            {
-              "id": "fact_personal_property_claim",
-              "legalText": "The Applicant possesses proof of personal property owned prior to the marriage or acquired by succession/donation, which must be withdrawn before partition.",
-              "citation": "RFC Art. 57 & 86",
-              "evidence": [
-                "ProofofInheritanceDonation",
-                "Pre-maritalOwnershipDocuments"
-              ]
-            }
-          ]
-        },
-        "group_4": {
-          "title": "Valuation & Dispute",
-          "facets": [
-            {
-              "id": "fact_dispute_valuation",
-              "legalText": "The parties are unable to agree on the value or mode of partition of the assets.",
-              "citation": "",
-              "evidence": []
-            },
-            {
-              "id": "fact_expert_need",
-              "legalText": "The complexity of the assets (e.g., business shares, real estate) requires professional valuation.",
-              "citation": "",
-              "evidence": []
-            }
-          ]
         }
+      },
+      "group_2": {
+        "title": "Identification of Property",
+        "facets": [
+          {
+            "id": "fact_existence_common_property",
+            "legalText": "The parties acquired movable and immovable property during the existence of the marriage which constitutes Common Property.",
+            "citation": "RFC Art. 62",
+            "evidence": [
+              "ListofCommonProperty",
+              "TitleDeedsLibrec"
+            ]
+          },
+          {
+            "id": "fact_property_possession",
+            "legalText": "The property is currently in the sole possession/control of the Respondent/Applicant.",
+            "citation": "",
+            "evidence": []
+          }
+        ]
+      },
+      "group_3": {
+        "title": "Restitution of Personal Property (Pre-Partition)",
+        "facets": [
+          {
+            "id": "fact_personal_property_claim",
+            "legalText": "The Applicant possesses proof of personal property owned prior to the marriage or acquired by succession/donation, which must be withdrawn before partition.",
+            "citation": "RFC Art. 57 & 86",
+            "evidence": [
+              "ProofofInheritanceDonation",
+              "Pre-maritalOwnershipDocuments"
+            ]
+          }
+        ]
+      },
+      "group_4": {
+        "title": "Valuation & Dispute",
+        "facets": [
+          {
+            "id": "fact_dispute_valuation",
+            "legalText": "The parties are unable to agree on the value or mode of partition of the assets.",
+            "citation": "",
+            "evidence": []
+          },
+          {
+            "id": "fact_expert_need",
+            "legalText": "The complexity of the assets (e.g., business shares, real estate) requires professional valuation.",
+            "citation": "",
+            "evidence": []
+          }
+        ]
       },
       "reliefs": [
         {

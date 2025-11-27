@@ -1,452 +1,200 @@
 {
   "templates": {
-    "comm_sales_contract_breach": {
-      "documentTitle": "የሽያጭ ውል መጥፋት የክስ ጥያቄ (Statement of Claim for Breach of Sales Contract)",
-      "jurisdictionText": "የመግባቢያ ሕግ አንቀጽ 2272-2328 (Arts. 2272-2328 of the Civil Code - Sales)",
+    "comm_restitution_nonpayment": {
+      "documentTitle": "በድርድር የሚተላለፍ ሰነድ ላይ የተመሰረተ የክፍያ ክስ (Claim for Payment on a Negotiable Instrument)",
+      "jurisdictionText": "የንግድ ሕግ ቁጥር 715 እና ተከታዮቹ (Commercial Code Art. 715 et seq.)",
       "meta": {
-        "keywords": ["ሽያጭ ውል", "የግዢ መጥፋት", "የሽያጭ ክስ", "sales contract", "breach of sale", "non-delivery"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "keywords": [
+          "negotiable instrument",
+          "cheque",
+          "promissory note",
+          "non-payment",
+          "የማይከፈል ቼክ",
+          "የክፍያ ክስ"
+        ],
+        "jurisdictionType": "Federal/Regional First Instance Court (Commercial Bench)"
       },
-      "templateDescription": "### መመሪያ \n ይህ ትንቢት የሽያጭ ውል ተቃውሞ ምክንያት ሽያጭ፣ አስከባሪ ወይም ጉዳት ለመጠየቅ ነው። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የመግባቢያ ሕግ አንቀጽ 1673(1) መሠረት በ10 ዓመታት ውስጥ ከጥቅል ቀን ጀምሮ መጠየቅ አለበት። (Art. 1673(1) Civil Code: 10 years from delivery date.)",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ገንዘቡ ሳይከፈል የቀረን ቼክ፣ የሐዋላ ወረቀት ወይም ሌላ በድርድር የሚተላለፍ ሰነድ መሠረት በማድረግ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ጉዳዮችን ለማየት ስልጣን ባለው ፍርድ ቤት (የንግድ ችሎት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበንግድ ሕጉ አንቀጽ 882(1) መሰረት፣ በቼክ ላይ የተመሰረተ ክስ ቼኩ ከቀረበበት ቀን ጀምሮ በ**ስድስት (6) ወራት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ዋናው ያልተከፈለ የንግድ ሰነድ (ቼክ) እና ክፍያ እንዳልተፈጸመ የሚያሳይ የባንክ ማስታወሻ ወይም የክፍያ እምቢታ ማረጋገጫ (ProtestCertificate)።",
       "partyTitles": {
-        "applicant": "ከሳሽ (ገዢ ተቃቂ) (Plaintiff (Buyer))",
-        "respondent": "ተከሳሽ (ሽያጭ) (Defendant (Seller))"
+        "applicant": "ከሳሽ (ሰነዱን የያዘ) (Plaintiff - Holder of Instrument)",
+        "respondent": "ተከሳሽ (ፈራሚ/አውጪ) (Defendant - Drawer/Maker)"
       },
       "facts": {
         "group_1": {
-          "title": "የሽያጭ ውል መኖር (Existence of Sales Contract)",
+          "title": "የሰነዱ መኖር እና አቀራረብ (Existence and Presentation of Instrument)",
           "facets": [
             {
-              "id": "comm_fact_valid_sales_contract",
-              "legalText": "በ[ቀን] በ[ቦታ] ተፈቀደ ትክክለኛ ሽያጭ ውል ይገኛል። (Valid sales contract exists dated [Date] at [Place].)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2272 (Civ. Code Art. 2272)",
-              "evidence": ["WrittenContract"],
-              "mutexGroup": null
-            }
-          ]
-        },
-        "group_2": {
-          "title": "የግዢ መጠን እና ባህሪ (Description of Goods)",
-          "facets": [
-            {
-              "id": "comm_fact_goods_description",
-              "legalText": "የተቃወመው ግዢ በቁጥር፣ ጽንሰ-ሐሳብ እና ባህሪ ተገለጸ ነው። ([Quantity], [Quality], [Specifications] as described.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2284 (Civ. Code Art. 2284)",
-              "evidence": ["WrittenContract"],
-              "mutexGroup": null
-            }
-          ]
-        },
-        "group_3": {
-          "title": "ውል መጥፋት (Breach of Contract)",
-          "facets": [
-            {
-              "id": "comm_fact_non_delivery",
-              "legalText": "ተከሳሹ በ[ቀን] የተቃወመውን ግዢ አልሰጣም። (Seller failed to deliver goods by [Delivery Date].)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2299 (Civ. Code Art. 2299)",
-              "evidence": [],
-              "mutexGroup": "breach_type"
+              "id": "comm_fact_instrument_issuance",
+              "legalText": "ተከሳሹ በ [Date]፣ [Amount] ብር የሚያወጣ ቼክ/የሐዋላ ወረቀት ቁጥር [Number] ለከሳሽ ሰጥቷል። (The Defendant issued cheque/instrument No. [Number] for the sum of [Amount] ETB on [Date] to the Plaintiff.)",
+              "citation": "Commercial Code Art. 735",
+              "evidence": [
+                "NotarizedCheque"
+              ]
             },
             {
-              "id": "comm_fact_defective_goods",
-              "legalText": "የተሰጠው ግዢ በተቃወመው ጽንሰ-ሐሳብ ያልተሟላ ነው። (Delivered goods do not conform to contracted quality.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2303 (Civ. Code Art. 2303)",
-              "evidence": ["DeliveryNote"],
-              "mutexGroup": "breach_type"
-            }
-          ]
-        },
-        "group_4": {
-          "title": "የግዢ ዋጋ መከፍል (Payment Made)",
-          "facets": [
-            {
-              "id": "comm_fact_payment_made",
-              "legalText": "ከሳሹ የግዢ ዋጋውን በ[ቁጥር] በተሟላ መንገድ ከፈለ። (Buyer paid full contract price of [Amount] as agreed.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2289 (Civ. Code Art. 2289)",
-              "evidence": ["PaymentReceipt"],
-              "mutexGroup": null
+              "id": "comm_fact_instrument_presentation",
+              "legalText": "ከሳሽ ሰነዱን ለክፍያ አቅርቦ ነበር ነገር ግን ክፍያ ሳይፈጸም ቀርቷል። (The Plaintiff duly presented the instrument for payment, but it was dishonored.)",
+              "citation": "Commercial Code Art. 767",
+              "evidence": [
+                "ProtestCertificate"
+              ]
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "comm_relief_specific_performance",
-          "text": "ተከሳሹ በተቃወመው ደረጃ እና ጊዜ ግዢውን እንዲሰጥ መመሪያ። (Order specific performance - delivery as contracted.)",
+          "id": "comm_relief_payment_instrument",
+          "text": "ተከሳሹ ያልተከፈለውን የ [Amount] ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ። (Judgment ordering the Defendant to pay the unpaid amount of [Amount] ETB.)",
           "isDefault": true,
           "isDynamic": false
         },
         {
-          "id": "comm_relief_damages",
-          "text": "ከግዢ መጥፋት የተጎዳ ጉዳት ማስከር። (Damages for losses from breach.)",
-          "isDefault": false,
-          "isDynamic": false
-        },
-        {
-          "id": "comm_relief_rescission",
-          "text": "ውሉን ማስቀረት እና የተከፈለውን ገንዘብ መመለስ። (Rescind contract and refund payments.)",
-          "isDefault": false,
-          "isDynamic": false
-        }
-      ],
-      "calculations": {
-        "calc_damages": {
-          "title": "የጉዳት ሂሳብ (Damages Calculation)",
-          "description": "ከውል መጥፋት የተጎዳ ገንዘባዊ ጉዳት ለማስላት።",
-          "inputs": [
-            {"id": "contract_price", "label": "የውል ዋጋ (Contract Price)", "type": "number", "defaultValue": 0},
-            {"id": "market_price", "label": "የገበያ ዋጋ (Market Price)", "type": "number", "defaultValue": 0},
-            {"id": "days_delay", "label": "የመወዛወዝ ቀናት (Delay Days)", "type": "number", "defaultValue": 0}
-          ],
-          "outputs": [
-            {"id": "total_damages", "label": "ጠቅላላ ጉዳት (Total Damages)"}
-          ],
-          "formula": "total_damages = (market_price - contract_price) + (days_delay * contract_price * 0.01)"
-        }
-      }
-    },
-    "comm_non_compete_violation": {
-      "documentTitle": "የማይጠቃም ባለቤትነት መጥፋት የክስ ጥያቄ (Claim for Breach of Non-Compete Clause)",
-      "jurisdictionText": "የመግባቢያ ሕግ አንቀጽ 2412 እና 2426 (Arts. 2412 & 2426 Civil Code - Lease of Enterprise)",
-      "meta": {
-        "keywords": ["ማይጠቃም ባለቤትነት", "የንግድ ልዩ", "non-compete", "goodwill protection"],
-        "jurisdictionType": "Federal/Regional First Instance"
-      },
-      "templateDescription": "### መመሪያ \n ይህ ትንቢት የንግድ ልዩ ለመጠበቅ ማይጠቃም ባለቤትነት የተጠቀም ከሆነ ነው። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የመግባቢያ ሕግ አንቀጽ 1682 መሠረት በ5 ዓመታት ውስጥ ከመጥፋት ቀን ጀምሮ። (Art. 1682 Civil Code: 5 years from breach for delictual claims.)",
-      "partyTitles": {
-        "applicant": "ከሳሽ (ቀደምት ባለቤት) (Plaintiff (Former Owner))",
-        "respondent": "ተከሳሽ (አዲስ ባለቤት) (Defendant (New Owner))"
-      },
-      "facts": {
-        "group_1": {
-          "title": "የንግድ ዝውውር ሽያጭ (Enterprise Sale)",
-          "facets": [
-            {
-              "id": "comm_fact_enterprise_sale",
-              "legalText": "በ[ቀን] ንግዱ በሙሉ ወይም በአንዳንድ ክፍሎች ተሸከመ። (Enterprise sold in whole/part on [Date].)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2412 (Civ. Code Art. 2412)",
-              "evidence": ["WrittenContract"],
-              "mutexGroup": null
-            }
-          ]
-        },
-        "group_2": {
-          "title": "ማይጠቃም ባለቤትነት ትንቢት (Non-Compete Agreement)",
-          "facets": [
-            {
-              "id": "comm_fact_noncompete_clause",
-              "legalText": "በውል ውስጥ ለ[ጊዜ] በ[ቦታ] ተመሳሳይ ንግድ አይጀምርም ተብሎ ተፈለገ። (Contract prohibits similar business for [Period] in [Area].)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2426 (Civ. Code Art. 2426)",
-              "evidence": ["WrittenContract"],
-              "mutexGroup": null
-            }
-          ]
-        },
-        "group_3": {
-          "title": "ትንቢት መጥፋት (Breach of Prohibition)",
-          "facets": [
-            {
-              "id": "comm_fact_competing_business",
-              "legalText": "ተከሳሹ በ[ቦታ] ተመሳሳይ ንግድ ጀምሮ አገልጋል። (Defendant started competing business at [Location].)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2426 (Civ. Code Art. 2426)",
-              "evidence": ["PhotosVideoEvidence"],
-              "mutexGroup": null
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "comm_relief_cease_competition",
-          "text": "ተከሳሹ ተመሳሳይ ንግድ እንዲቆም መመሪያ። (Order defendant to cease competing business.)",
+          "id": "comm_relief_interest_commercial",
+          "text": "ከክፍያ ቀን ጀምሮ የተሰላውን የንግድ ወለድ (12%) እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order payment of commercial interest (12%) from the date of presentation.)",
+          "citation": "Commercial Code Art. 886",
           "isDefault": true,
-          "isDynamic": false
-        },
-        {
-          "id": "comm_relief_damages_goodwill",
-          "text": "ከልዩ ጉዳት ለመምለስ ጉዳት ማስከር። (Damages for loss of goodwill.)",
-          "isDefault": false,
           "isDynamic": false
         }
       ],
       "calculations": {}
     },
-    "comm_unfair_competition": {
-      "documentTitle": "ያልተገበረ ተፈጣሪነት የክስ ጥያቄ (Claim for Unfair Competition)",
-      "jurisdictionText": "የመግባቢያ ሕግ አንቀጽ 2365-2372 (Arts. 2365-2372 Civil Code - Unfair Competition)",
+    "comm_preventive_restructuring": {
+      "documentTitle": "የዕዳ ማዋቀር እና የማገገሚያ እቅድ ማመልከቻ (Application for Preventive Restructuring Plan)",
+      "jurisdictionText": "የንግድ ሕግ ቁጥር 1171 እና ተከታዮቹ (Commercial Code Art. 1171 et seq.)",
       "meta": {
-        "keywords": ["ያልተገበረ ተፈጣሪነት", "ምልክት ባለቤትነት", "unfair competition", "trademark", "trade secret"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "keywords": [
+          "restructuring",
+          "insolvency",
+          "bankruptcy",
+          "debt",
+          "የዕዳ ማዋቀር",
+          "የከሰረ"
+        ],
+        "jurisdictionType": "Federal High Court (Commercial Bench)"
       },
-      "templateDescription": "### መመሪያ \n ይህ ትንቢት የምልክት፣ ምርምር ወይም ገበያ ልዩ የሚጎዳ ተፈጣሪነት ላይ ነው። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የመግባቢያ ሕግ አንቀጽ 1682 መሠረት በ5 ዓመታት ውስጥ ከተፈጥሮ ቀን ጀምሮ። (Art. 1682 Civil Code: 5 years from act of unfair competition.)",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገንዘብ ችግር ያጋጠመው ነገር ግን የመዳን ተስፋ ያለው የንግድ ድርጅት፣ ከኪሳራ ለመዳን የዕዳ ማዋቀሪያ እቅድ በፍርድ ቤት እንዲጸድቅለት ለመጠየቅ ያገለግላልል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየከሰሩ ድርጅቶችን ጉዳይ ለማየት ስልጣን ባለው የፌደራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ ድርጅቱ የገንዘብ ችግር እንዳጋጠመው ሲያውቅ ሊያቀርበው ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የድርጅቱ የቅርብ ጊዜ ኦዲት የተደረገ የሂሳብ መግለጫ (BalanceSheetAndAudit)፣ የአበዳሪዎች ዝርዝር (ListofCreditors)፣ እና የማገገሚያ እቅድ ረቂቅ።",
       "partyTitles": {
-        "applicant": "ከሳሽ (ተጎዳ) (Plaintiff (Injured Party))",
-        "respondent": "ተከሳሽ (ተፈጣሪ) (Defendant (Competitor))"
+        "applicant": "አመልካች (ባለዕዳው ድርጅት) (Applicant - Debtor Company)",
+        "respondent": "አበዳሪዎች (በማስታወቂያ) (Creditors (by notice))"
       },
       "facts": {
         "group_1": {
-          "title": "የተጠበቀ ልዩ (Protected Goodwill)",
+          "title": "የገንዘብ ችግር እና የመዳን ተስፋ (Financial Distress and Viability)",
           "facets": [
             {
-              "id": "comm_fact_established_goodwill",
-              "legalText": "ከሳሹ በ[ጊዜ] ውስጥ በ[ቦታ] የተመሰረተ ልዩ/ምልክት ያለው ነው። (Plaintiff has established goodwill/trademark over [Time] in [Area].)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2365 (Civ. Code Art. 2365)",
-              "evidence": ["AuditReport"],
-              "mutexGroup": null
+              "id": "comm_fact_financial_difficulty",
+              "legalText": "አመልካቹ ድርጅት ዕዳውን በወቅቱ መክፈል የማይችልበት ጊዜያዊ የገንዘብ ችግር አጋጥሞታል። (The applicant company is facing temporary financial difficulties preventing it from paying its debts as they fall due.)",
+              "citation": "Commercial Code Art. 1171",
+              "evidence": [
+                "BalanceSheetAndAudit"
+              ]
+            },
+            {
+              "id": "comm_fact_business_is_viable",
+              "legalText": "የድርጅቱ የንግድ እንቅስቃሴ በመሠረቱ ጤናማ እና ሊቀጥል የሚችል ነው። (The company's business is fundamentally sound and viable for continuation.)",
+              "citation": "Commercial Code Art. 1171",
+              "evidence": [
+                "BalanceSheetAndAudit",
+                "ShareholdersResolution"
+              ]
             }
           ]
         },
         "group_2": {
-          "title": "ያልተገበረ ተፈጣሪነት (Unfair Acts)",
+          "title": "የእቅዱ ዝርዝሮች (Plan Details)",
           "facets": [
             {
-              "id": "comm_fact_trademark_imitation",
-              "legalText": "ተከሳሹ ከሳሹን ምልክት/ምስል ተመሳሳይ ተጠቅሟል። (Defendant imitated plaintiff's trademark/design.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2366 (Civ. Code Art. 2366)",
-              "evidence": ["PhotosVideoEvidence"],
-              "mutexGroup": "unfair_act"
-            },
-            {
-              "id": "comm_fact_trade_secret_misuse",
-              "legalText": "ተከሳሹ የተጠበቀ ምርምር/የዋጋ ልዩ ተጠቅመው ተጠቅሟል። (Defendant misused protected trade secret/price list.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2368 (Civ. Code Art. 2368)",
-              "evidence": ["WrittenContract"],
-              "mutexGroup": "unfair_act"
+              "id": "comm_fact_plan_details",
+              "legalText": "አመልካቹ ዕዳዎችን ለማስተዳደር፣ ንግዱን ለማሻሻል እና ቀጣይነትን ለማረጋገጥ የሚያስችል ዝርዝር የማገገሚያ እቅድ አዘጋጅቷል። (The Applicant has prepared a detailed restructuring plan to manage debts, reform the business, and ensure continued viability.)",
+              "citation": "Commercial Code Art. 1173",
+              "evidence": []
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "comm_relief_cease_unfair_acts",
-          "text": "ያልተገበረች ተፈጣሪነት እንዲቆም መመሪያ። (Order cessation of unfair competition acts.)",
+          "id": "comm_relief_approve_plan",
+          "text": "የቀረበው የማገገሚያ እና የዕዳ ማዋቀሪያ እቅድ እንዲጸድቅ። (To approve the proposed restructuring and rehabilitation plan.)",
           "isDefault": true,
           "isDynamic": false
         },
         {
-          "id": "comm_relief_accounting_profits",
-          "text": "ከተፈጣሪነት የተገኘውን ትርፍ ማስረቢያ። (Order accounting of profits from unfair acts.)",
-          "isDefault": false,
+          "id": "comm_relief_stay_proceedings",
+          "text": "እቅዱ በሚተገበርበት ጊዜ በአመልካቹ ላይ ያሉ የክስ እና የአፈጻጸም ሂደቶች በሙሉ እንዲታገዱ። (To stay all legal and execution proceedings against the Applicant during the implementation of the plan.)",
+          "isDefault": true,
           "isDynamic": false
         }
       ],
       "calculations": {}
     },
-    "comm_debt_collection": {
-      "documentTitle": "የዕዳ መሰባሰቢያ የክስ ጥያቄ (Debt Collection Claim)",
-      "jurisdictionText": "የመግባቢያ ሕግ አንቀጽ 1697-1715 (Arts. 1697-1715 Civil Code - Obligations)",
+    "comm_dissolution_by_court": {
+      "documentTitle": "የንግድ ማህበር በፍርድ ቤት እንዲፈርስ የማመልከቻ ክስ (Petition for Judicial Dissolution of a Business Organization)",
+      "jurisdictionText": "የንግድ ሕግ ቁጥር 176 (Commercial Code Art. 176)",
       "meta": {
-        "keywords": ["ዕዳ መሰባሰቢያ", "የዋሸት መብት", "debt collection", "loan recovery"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "keywords": [
+          "dissolution",
+          "shareholder dispute",
+          "deadlock",
+          "company",
+          "መፍረስ",
+          "የባለአክሲዮን ክርክር"
+        ],
+        "jurisdictionType": "Federal High Court (Commercial Bench)"
       },
-      "templateDescription": "### መመሪያ \n ይህ ትንቢት የተከፈለ ወይም በውል ተመራገጠ ዕዳ ለመሰባሰብ ነው። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የመግባቢያ ሕግ አንቀጽ 1673(2) መሠረት በ10 ዓመታት ውስጥ ከዕዳ የመፈጸም ቀን ጀምሮ። (Art. 1673(2) Civil Code: 10 years from due date.)",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በባለአክሲዮኖች መካከል በተፈጠረ ከባድ እና ሊፈታ የማይችል አለመግባባት ምክንያት የንግድ ማህበሩን ሥራ ማስቀጠል በማይቻልበት ጊዜ፣ ማህበሩ በፍርድ ቤት ትዕዛዝ እንዲፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ማህበሩ ዋና መሥሪያ ቤት በሚገኝበት ቦታ ስልጣን ባለው የፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ ነገር ግን አለመግባባቱ ከባድ እና ቀጣይ መሆኑን ማሳየት ያስፈልጋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የድርጅቱ መመስረቻ ጽሑፍ (MemorandumAndArticles)፣ አለመግባባቱን የሚያሳዩ የስብሰባ ቃለ-ጉባኤዎች ወይም የደብዳቤ ልውውጦች።",
       "partyTitles": {
-        "applicant": "ከሳሽ (ተዋሹ) (Plaintiff (Creditor))",
-        "respondent": "ተከሳሽ (ዕዳ ተዋጊ) (Defendant (Debtor))"
+        "applicant": "ከሳሽ (ባለአክሲዮን/ዳይሬክተር) (Plaintiff - Shareholder/Director)",
+        "respondent": "ተከሳሽ (የንግድ ማህበሩ እና ሌሎች ባለአክሲዮኖች) (Defendant - The Company & Other Shareholders)"
       },
       "facts": {
         "group_1": {
-          "title": "ዕዳ መፈጸም (Creation of Debt)",
+          "title": "የመፍረስ ምክንያቶች (Grounds for Dissolution)",
           "facets": [
             {
-              "id": "comm_fact_loan_disbursed",
-              "legalText": "በ[ቀን] በ[ቁጥር] ዕዳ ተከፈለ ወይም ተመራገጠ። (Loan of [Amount] disbursed/owed on [Date].)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 1697 (Civ. Code Art. 1697)",
-              "evidence": ["WrittenContract", "PaymentReceipt"],
-              "mutexGroup": "debt_source"
+              "id": "comm_fact_serious_disagreement",
+              "legalText": "በማህበሩ ባለአክሲዮኖች/አስተዳዳሪዎች መካከል ማህበሩን ማስተዳደርን በሚመለከት ከባድ እና የማያቋርጥ አለመግባባት አለ። (There are serious and persistent disagreements among the shareholders/managers regarding the management of the organization.)",
+              "citation": "Commercial Code Art. 176(a)",
+              "evidence": [
+                "ShareholdersResolution"
+              ]
             },
             {
-              "id": "comm_fact_contractual_debt",
-              "legalText": "በተፈቀደለት ውል ተመራገጠ የሚመጣ ዕዳ ነው። (Debt arising from valid contract.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 1705 (Civ. Code Art. 1705)",
-              "evidence": ["WrittenContract"],
-              "mutexGroup": "debt_source"
+              "id": "comm_fact_deadlock",
+              "legalText": "በአለመግባባቱ ምክንያት የማህበሩ አስተዳደር ሙሉ በሙሉ ተ deadlock በመሆኑ መደበኛ ሥራውን ማከናወን አልቻለም። (The management of the organization is deadlocked due to the disagreement, making it impossible to carry on its normal business.)",
+              "citation": "Commercial Code Art. 176(b)",
+              "evidence": [
+                "ShareholdersResolution"
+              ]
             }
           ]
         },
         "group_2": {
-          "title": "ክፍፍል አለመፍጠር (Non-Payment)",
+          "title": "የአመልካች ሁኔታ (Applicant's Standing)",
           "facets": [
             {
-              "id": "comm_fact_due_date_passed",
-              "legalText": "ዕዳው በ[ቀን] መፈጸም አለበት ነገር አልተፈጸመምም። (Debt due on [Date] remains unpaid.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 1710 (Civ. Code Art. 1710)",
-              "evidence": ["NoticeofDefault"],
-              "mutexGroup": null
-            },
-            {
-              "id": "comm_fact_demand_made",
-              "legalText": "በተደረገ ጥያቄ ተከሳሹ መከፍል አልተፈወስም። (Formal demand made; defendant refuses payment.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 1712 (Civ. Code Art. 1712)",
-              "evidence": ["NoticeofDefault", "AdmissionofDebt"],
-              "mutexGroup": null
+              "id": "comm_fact_applicant_standing",
+              "legalText": "ከሳሽ በማህበሩ ውስጥ ባለድርሻ ሲሆን፣ ይህን ክስ ለማቅረብ ሕጋዊ መብት አለው። (The Plaintiff has a legitimate interest as a stakeholder in the company to bring this action.)",
+              "citation": "",
+              "evidence": [
+                "MemorandumAndArticles"
+              ]
             }
           ]
         }
       },
       "reliefs": [
         {
-          "id": "comm_relief_principal_debt",
-          "text": "ዋና ዕዳ በተከፈለው ቁጥር ማስከር። (Payment of principal debt amount.)",
+          "id": "comm_relief_order_dissolution",
+          "text": "የንግድ ማህበሩ እንዲፈርስ የሚወስን ፍርድ እንዲሰጥ። (Judgment ordering the dissolution of the business organization.)",
           "isDefault": true,
           "isDynamic": false
         },
         {
-          "id": "comm_relief_interest",
-          "text": "የዕዳ ዓትራፊት ከፈጠረ ጀምሮ ማስከር። (Legal interest from due date.)",
+          "id": "comm_relief_appoint_liquidator_commercial",
+          "text": "የማህበሩን ንብረትና ዕዳ የሚያጣራ እና ክፍፍል የሚያከናውን ሕጋዊ አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the appointment of a legal liquidator to wind up the affairs and distribute the assets of the company.)",
           "isDefault": true,
-          "isDynamic": false
-        },
-        {
-          "id": "comm_relief_execution",
-          "text": "ፍርዱ የፈጠር ይገባ እንዲሆን መመሪያ። (Decree declared executable.)",
-          "isDefault": true,
-          "isDynamic": false
-        }
-      ],
-      "calculations": {
-        "calc_loan_interest": {
-          "title": "የዕዳ ዓትራፊት ሂሳብ (Loan Interest Calculator)",
-          "description": "የተከፈለ ዕዳ ከመፈጸም ቀን ጀምሮ የህግ ዓትራፊት።",
-          "inputs": [
-            {"id": "principal", "label": "ዋና ዕዳ (Principal)", "type": "number", "defaultValue": 0},
-            {"id": "due_date", "label": "የመፈጸም ቀን (Due Date)", "type": "date", "defaultValue": null},
-            {"id": "today", "label": "ዛሬን ቀን (Today)", "type": "date", "defaultValue": null}
-          ],
-          "outputs": [
-            {"id": "interest_due", "label": "የሚከፈል ዓትራፊት (Interest Due)"},
-            {"id": "total_owed", "label": "ጠቅላላ የሚከፈል (Total Owed)"}
-          ],
-          "formula": "days_past = (today - due_date) / 86400000; interest_due = principal * 0.09 * (days_past / 365); total_owed = principal + interest_due"
-        }
-      }
-    },
-    "comm_partnership_dissolution": {
-      "documentTitle": "የትብብር መፍረስ የክስ ጥያቄ (Partnership Dissolution Claim)",
-      "jurisdictionText": "የመግባቢያ ሕግ አንቀጽ 1985-2035 (Arts. 1985-2035 Civil Code - Partnership)",
-      "meta": {
-        "keywords": ["ትብብር", "መፍረስ", "የትብብር ዕቃዎች", "partnership", "dissolution"],
-        "jurisdictionType": "Federal/Regional First Instance"
-      },
-      "templateDescription": "### መመሪያ \n ይህ ትንቢት ትብብር ለመፍረስ እና ዕቃዎች ለመከፋፈል ነው። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የመግባቢያ ሕግ አንቀጽ 1673 መሠረት በ10 ዓመታት ውስጥ ከመፍረስ መጠየቅ ቀን። (Art. 1673 Civil Code: 10 years from dissolution demand.)",
-      "partyTitles": {
-        "applicant": "ከሳሽ (ተብብር አባል) (Plaintiff (Partner))",
-        "respondent": "ተከሳሽ (ተብብር አባል) (Defendant (Partner))"
-      },
-      "facts": {
-        "group_1": {
-          "title": "ትብብር መፍጠር (Partnership Formation)",
-          "facets": [
-            {
-              "id": "comm_fact_partnership_exists",
-              "legalText": "በ[ቀን] በ[ቦታ] ትብብር ተመሰረተ ነው። (Partnership formed on [Date] at [Place].)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 1985 (Civ. Code Art. 1985)",
-              "evidence": ["WrittenContract"],
-              "mutexGroup": null
-            }
-          ]
-        },
-        "group_2": {
-          "title": "መፍረስ መሠረት (Grounds for Dissolution)",
-          "facets": [
-            {
-              "id": "comm_fact_term_expiry",
-              "legalText": "ትብብሩ በተወሰነ ጊዜ ገደብ ተጠናከረ። (Fixed term partnership expired.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2002 (Civ. Code Art. 2002)",
-              "evidence": [],
-              "mutexGroup": "dissolution_cause"
-            },
-            {
-              "id": "comm_fact_breach_by_partner",
-              "legalText": "ተከሳሹ ትብብር ተቃውሞ በተናጠል ነው። (Defendant partner committed serious breach.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2004 (Civ. Code Art. 2004)",
-              "evidence": ["AuditReport"],
-              "mutexGroup": "dissolution_cause"
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "comm_relief_dissolve_partnership",
-          "text": "ትብብሩ መፍረስ እና ንብረት መከፋፈል መመሪያ። (Order dissolution and division of assets.)",
-          "isDefault": true,
-          "isDynamic": false
-        },
-        {
-          "id": "comm_relief_accounting",
-          "text": "ትብብር የገበያ መወረድ እና ስሪት ማስረቢያ። (Order partnership accounting and profit share.)",
-          "isDefault": true,
-          "isDynamic": false
-        }
-      ],
-      "calculations": {
-        "calc_partnership_share": {
-          "title": "የትብብር ድርሻ አክሲዮን (Partnership Share Calculation)",
-          "description": "አንድ ተብብር አባል የሚያገኝ ድርሻ።",
-          "inputs": [
-            {"id": "total_assets", "label": "ጠቅላላ ንብረት (Total Assets)", "type": "number", "defaultValue": 0},
-            {"id": "capital_contrib", "label": "ዋስትና ውስጥ (Capital Contribution)", "type": "number", "defaultValue": 0},
-            {"id": "profit_share_pct", "label": "% የትርፍ ድርሻ (% Profit Share)", "type": "number", "defaultValue": 50}
-          ],
-          "outputs": [
-            {"id": "partner_share", "label": "የአባል ድርሻ (Partner Share)"}
-          ],
-          "formula": "partner_share = (capital_contrib / total_assets * total_assets * 0.5) + (total_assets * profit_share_pct / 100 * 0.5)"
-        }
-      }
-    },
-    "app_comm_injunction_counterfeit": {
-      "documentTitle": "ተተከለ ምርት ለማቆም የአስፈላጊነት ጥያቄ (Urgent Injunction Against Counterfeit Goods)",
-      "jurisdictionText": "የመግባቢያ ሥነሥርዓት ሕግ አንቀጽ 154 እና የመግባቢያ ሕግ አንቀጽ 2366 (Art. 154 CPC & Art. 2366 Civil Code)",
-      "meta": {
-        "keywords": ["ተተከለ ምርት", "አስፈላጊነት", "counterfeit", "trademark injunction"],
-        "jurisdictionType": "Federal/Regional First Instance"
-      },
-      "templateDescription": "### መመሪያ \n ይህ ጥያቄ ተተከለ ምርቶች ለማምጣት እና ለማሰር አስፈላጊነት ነው። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የመግባቢያ ሥነሥርዓት ሕግ አንቀጽ 154 መሠረት በድጋፍ የሚታደርግ፣ የጊዜ ገደብ የለም። (Art. 154 CPC: Urgent applications, no specific limitation.)",
-      "partyTitles": {
-        "applicant": "ጠያቂ (ምልክት ባለቤት) (Applicant (Trademark Owner))",
-        "respondent": "ተቃራኒ (ተተከለ ተሽከርካሪ) (Respondent (Counterfeiter))"
-      },
-      "facts": {
-        "group_1": {
-          "title": "ድንገተኛነት እና ጉዳት (Urgency & Irreparable Harm)",
-          "facets": [
-            {
-              "id": "comm_fact_counterfeit流通",
-              "legalText": "ተከሳሹ ተተከለ ምርቶች በገበያ ይሸካማል። (Counterfeit goods actively circulating in market.)",
-              "citation": "የመግባቢያ ሥነሥርዓት ሕግ አንቀጽ 154 (CPC Art. 154)",
-              "evidence": ["PhotosVideoEvidence"],
-              "mutexGroup": null
-            },
-            {
-              "id": "comm_fact_brand_damage",
-              "legalText": "ተተከለ ምርቶች ምልክት ልዩን ይጎዳሉ። (Counterfeits causing irreparable brand damage.)",
-              "citation": "የመግባቢያ ሕግ አንቀጽ 2366 (Civ. Code Art. 2366)",
-              "evidence": [],
-              "mutexGroup": null
-            },
-            {
-              "id": "comm_fact_prima_facie_right",
-              "legalText": "ጠያቂ ምልክቱን ለመጠበቅ ግልጽ መብት ያለው። (Applicant shows prima facie trademark rights.)",
-              "citation": "የመግባቢያ ሥነሥርዓት ሕግ አንቀጽ 154 (CPC Art. 154)",
-              "evidence": ["WrittenContract"],
-              "mutexGroup": null
-            }
-          ]
-        }
-      },
-      "reliefs": [
-        {
-          "id": "comm_relief_stop_counterfeits",
-          "text": "ተተከለ ምርቶች ማምጣት፣ ማስተዋወቅ እና ማስተካከል ማቆም መመሪያ። (Immediate cessation of counterfeit production/sale/distribution.)",
-          "isDefault": true,
-          "isDynamic": false
-        },
-        {
-          "id": "comm_relief_destroy_goods",
-          "text": "ተተከለ ምርቶች እና መሳሪያዎች ማጥፋት መመሪያ። (Order destruction of counterfeit goods/equipment.)",
-          "isDefault": false,
           "isDynamic": false
         }
       ],
@@ -454,4 +202,3 @@
     }
   }
 }
-    

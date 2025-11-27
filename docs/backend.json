@@ -365,6 +365,26 @@
     "ListofCreditors": {
       "title": "Comprehensive List of Creditors (የአበዳሪዎች ዝርዝር)",
       "description": "A detailed, certified list of all creditors, their claims, and security status (required for restructuring or bankruptcy applications)."
+    },
+    "MedicalCertificateMentalState": {
+      "title": "Medical Certificate of Mental State (የአእምሮ ሁኔታ የህክምና ማስረጃ)",
+      "description": "A certified psychiatric or psychological evaluation confirming a severe mental disease or deficiency at the time of the alleged offense."
+    },
+    "ProofOfImminentDanger": {
+      "title": "Proof of Imminent Danger (የቅርብ አደጋ ማስረጃ)",
+      "description": "Witness statements, scene photos, or police reports demonstrating an immediate and unavoidable threat to life or property."
+    },
+    "OfficialOrderDocument": {
+      "title": "Official Order or Warrant (ኦፊሴላዊ ትዕዛዝ ወይም ማዘዣ)",
+      "description": "Written documentation proving the alleged criminal act was carried out under the legal order or command of a superior officer or public authority."
+    },
+    "VictimConsentForm": {
+      "title": "Victim's Written Consent (ተጎጂው የሰጠው የጽሑፍ ፈቃድ)",
+      "description": "A signed document showing the victim consented to the act, applicable only where consent is legally valid (e.g., minor bodily harm, property damage)."
+    },
+    "WitnessStatementsIntoxication": {
+      "title": "Witness Statements on Intoxication (ስለ ስካር ሁኔታ የምስክርነት ቃል)",
+      "description": "Statements confirming the defendant's involuntary or non-culpable state of intoxication at the time of the alleged offense."
     }
   },
   "templates": {
@@ -3282,7 +3302,7 @@
             },
             {
               "id": "fact_deadlock_between_partners",
-              "legalText": "A persistent deadlock exists among the partners/shareholders, making the proper functioning of the company impossible (Art. 525). (በአጋሮች/ባለአክሲዮኖች መካከል የማያቋርጥ የሀሳብ ልዩነት አለ፣ ይህም ኩባንያው በአግባቡ እንዳይሠራ አድርጓል።)",
+              "legalText": "A persistent deadlock exists among the partners/shareholders, making the proper functioning of the company impossible (Art. 525). (በአጋሮች/ባለአክሲዮኖች መካከል የማያቋርጥ የሀሳብ ልዩነት አለ، ይህም ኩባንያው በአግባቡ እንዳይሠራ አድርጓል።)",
               "citation": "Comm. Code Art. 525(1)(c)",
               "evidence": [
                 "ShareholdersResolution"
@@ -3323,6 +3343,164 @@
           "id": "relief_appoint_liquidator",
           "text": "To appoint an Official Liquidator to take control of the company's assets and affairs. (የኩባንያውን ንብረቶች እና ጉዳዮች እንዲቆጣጠር ኦፊሴላዊ አጣሪ እንዲሾምለት።)",
           "isDefault": true
+        }
+      ]
+    },
+    "crim_defence_justification_self_defence": {
+      "documentTitle": "Plea of Justification: Self-Defence (የሕጋዊነት መቃወሚያ፡- በራስ መከላከል)",
+      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Arts. 79-80 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፸፱-፹).",
+      "partyTitles": {
+        "applicant": "Defendant (ተከሳሽ)",
+        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "The Nature of the Attack (የጥቃቱ ባሕሪ)",
+          "facets": [
+            {
+              "id": "fact_imminent_unlawful_attack",
+              "legalText": "The Defendant was facing an actual, imminent, and unlawful attack upon their life, limb, or property. (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በንብረቱ ላይ ሊደርስ ያለ ትክክለኛ፣ የቅርብ እና ሕገ-ወጥ ጥቃት ገጥሞት ነበር።)",
+              "citation": "Crim. Code Art. 79(1)",
+              "evidence": ["ProofOfImminentDanger"]
+            },
+            {
+              "id": "fact_defence_of_third_party",
+              "legalText": "The Defendant acted to defend a third party who was also facing an imminent, unlawful attack. (ተከሳሹ ጥቃት ሊደርስበት ያለን ሌላ ሰው ለመከላከል እርምጃ ወስዷል።)",
+              "citation": "Crim. Code Art. 79(2)",
+              "evidence": ["ProofOfImminentDanger", "WitnessStatements"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
+          "facets": [
+            {
+              "id": "fact_no_other_means",
+              "legalText": "The act of defence was necessary because there was no other possible means of preventing the attack. (ጥቃቱን ለመከላከል ሌላ አማራጭ መንገድ ስላልነበረው የመከላከል ተግባሩ አስፈላጊ ነበር።)",
+              "citation": "Crim. Code Art. 80(1)",
+              "evidence": ["WitnessStatements"]
+            },
+            {
+              "id": "fact_proportionality",
+              "legalText": "The means used for defence were proportional to the gravity of the attack and the threatened harm. (ለመከላከል ጥቅም ላይ የዋለው ዘዴ ከጥቃቱ ክብደት እና ከሚሰጋው ጉዳት ጋር የተመጣጣኝ ነበር።)",
+              "citation": "Crim. Code Art. 80(2)",
+              "evidence": ["ProofOfImminentDanger", "WitnessStatements"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_acquittal_justification",
+          "text": "To acquit the Defendant on the ground that the act was justified and therefore lawful. (ድርጊቱ ህጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "crim_defence_excuse_insanity": {
+      "documentTitle": "Plea of Excuse: Insanity / Non-Culpability (የማስተንፈሻ መቃወሚያ፡- የአእምሮ ሕመም/ተጠያቂነት አለመኖር)",
+      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 50 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፶).",
+      "partyTitles": {
+        "applicant": "Defendant (ተከሳሽ)",
+        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
+          "facets": [
+            {
+              "id": "fact_insane_incapable_understanding",
+              "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of understanding the criminal nature of the act. (በድርጊቱ ጊዜ ተከሳሹ የድርጊቱን የወንጀልነት ባህሪ ለመረዳት በማይችል ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
+              "citation": "Crim. Code Art. 50(1)",
+              "evidence": ["MedicalCertificateMentalState"]
+            },
+            {
+              "id": "fact_insane_incapable_control",
+              "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of controlling their conduct. (በድርጊቱ ጊዜ ተከሳሹ አካሄዱን መቆጣጠር በማይችልበት ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
+              "citation": "Crim. Code Art. 50(1)",
+              "evidence": ["MedicalCertificateMentalState"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Intoxication (በስካር ሁኔታ)",
+          "facets": [
+            {
+              "id": "fact_intoxication_non_culpable",
+              "legalText": "The Defendant was in a state of involuntary or non-culpable intoxication (e.g., administered by force or error) that led to the lack of culpability. (ተከሳሹ በግዴታ ወይም በስህተት በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ሲሆን ይህም ተጠያቂ እንዳይሆን አድርጎታል።)",
+              "citation": "Crim. Code Art. 54",
+              "evidence": ["WitnessStatementsIntoxication", "MedicalCertificateMentalState"]
+            },
+            {
+              "id": "fact_intoxication_culpable_negligence",
+              "legalText": "The Defendant was in a state of culpable intoxication, but the offense committed was only foreseeable as a light offense (for mitigation). (ተከሳሹ በግዴታ በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ቢሆንም የተፈፀመው ወንጀል በቀላል ደረጃ የሚገመት ነበር (ለቅጣት ማቅለያ)።)",
+              "citation": "Crim. Code Art. 54(3)",
+              "evidence": ["WitnessStatementsIntoxication"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_acquittal_excuse",
+          "text": "To acquit the Defendant on the grounds of non-culpability and order appropriate security or medical measures (Art. 50(3)). (ተከሳሹ በተጠያቂነት እጦት በነጻ እንዲሰናበት እና ተገቢ የጥበቃ ወይም የህክምና እርምጃ እንዲወሰድበት።)",
+          "isDefault": true
+        }
+      ]
+    },
+    "crim_defence_justification_necessity": {
+      "documentTitle": "Plea of Justification: Necessity (የሕጋዊነት መቃወሚያ፡- በግዴታ)",
+      "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 81 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፹፩).",
+      "partyTitles": {
+        "applicant": "Defendant (ተከሳሽ)",
+        "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
+          "facets": [
+            {
+              "id": "fact_imminent_threat_necessity",
+              "legalText": "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
+              "citation": "Crim. Code Art. 81(1)",
+              "evidence": ["ProofOfImminentDanger"]
+            },
+            {
+              "id": "fact_interest_protected_greater",
+              "legalText": "The interest protected by the act (the interest saved) was evidently of a greater or equal value than the interest infringed (the harm caused). (በድርጊቱ የተጠበቀው ጥቅም (የተረፈው) ከተጎዳው ጥቅም (ከተፈጠረው ጉዳት) የበለጠ ወይም እኩል ዋጋ ነበረው።)",
+              "citation": "Crim. Code Art. 81(1)",
+              "evidence": ["WitnessStatements"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
+          "facets": [
+            {
+              "id": "fact_order_of_superior",
+              "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል፣ እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
+              "citation": "Crim. Code Art. 82",
+              "evidence": ["OfficialOrderDocument"]
+            },
+            {
+              "id": "fact_victim_consent_valid",
+              "legalText": "The victim freely and clearly consented to the minor bodily injury or damage to property, where such consent is valid under the law. (ተጎጂው በሕግ ተቀባይነት ባለው መንገድ ለደረሰበት ቀላል የአካል ጉዳት ወይም የንብረት ጉዳት በነጻ ፈቃዱን ሰጥቷል።)",
+              "citation": "Crim. Code Art. 83",
+              "evidence": ["VictimConsentForm"]
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_acquittal_necessity",
+          "text": "To acquit the Defendant on the ground that the act was justified by necessity and lawful. (ድርጊቱ በግዴታ ሕጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
+          "isDefault": true
+        },
+        {
+          "id": "relief_mitigation_necessity",
+          "text": "Alternatively, to mitigate the penalty due to the presence of a threatening situation that rendered the offense less culpable (mitigating circumstance). (በአማራጭ፣ ወንጀሉን በተጠያቂነት እንዲቀንስ በሚያስችል አስጊ ሁኔታ በመኖሩ ምክንያት ቅጣቱ እንዲቀልለት።)",
+          "isDefault": false
         }
       ]
     }

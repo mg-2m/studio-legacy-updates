@@ -287,6 +287,30 @@
     "GenealogicalAffidavit": {
       "title": "Genealogical Affidavit",
       "description": "Document proving the relationship to the deceased (required for Heirship Certification)."
+    },
+    "TaxAssessmentNotice": {
+      "title": "Tax Assessment Notice",
+      "description": "The official letter from the MoR detailing the tax liability, penalties, and interest."
+    },
+    "NoticeOfObjectionInitial": {
+      "title": "Notice of Objection (Initial)",
+      "description": "The formal letter submitted by the taxpayer to the MoR/CC challenging the initial assessment."
+    },
+    "AccountingRecords": {
+      "title": "Accounting Records (Ledgers, Invoices)",
+      "description": "Mandatory documentation (especially for Category A) to substantiate gross income and deductions."
+    },
+    "ImportExportDeclarationSAD": {
+      "title": "Import/Export Declaration (SAD)",
+      "description": "Official customs document detailing the imported goods, value, and applicable duties."
+    },
+    "PaymentReceiptsTaxCustoms": {
+      "title": "Payment Receipts (Tax/Customs)",
+      "description": "Proof of compliance, necessary for clearance or to meet the 50% deposit requirement."
+    },
+    "ExternalAuditReport": {
+      "title": "External Audit Report",
+      "description": "Report from a certified external auditor contradicting the MoR's findings."
     }
   },
   "templates": {
@@ -2475,6 +2499,203 @@
         {
           "id": "relief_terminate_interdiction",
           "text": "Judgment terminating the judicial interdiction and restoring full legal capacity to the individual."
+        }
+      ]
+    },
+    "tax_objection_admin_review": {
+      "documentTitle": "Notice of Objection to Tax Assessment",
+      "jurisdictionText": "Art. 54 of the Federal Tax Administration Proclamation (FTAP) No. 983/2016.",
+      "partyTitles": {
+        "applicant": "Applicant (Taxpayer)",
+        "respondent": "Respondent (Ministry of Revenue Branch Office)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Procedural Compliance (Time Limit)",
+          "facets": [
+            {
+              "id": "fact_assessment_received",
+              "legalText": "The Tax Assessment Notice was received on [Date].",
+              "citation": "FTAP Art. 54",
+              "evidence": []
+            },
+            {
+              "id": "fact_objection_timely",
+              "legalText": "This Objection is filed within the required 21 days of receipt.",
+              "citation": "FTAP Art. 54",
+              "evidence": []
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Grounds for Error",
+          "facets": [
+            {
+              "id": "fact_erroneous_income_calc",
+              "legalText": "The MoR erred by failing to recognize [Specific Deduction/Exemption].",
+              "evidence": ["AccountingRecords", "ExternalAuditReport"]
+            },
+            {
+              "id": "fact_estimated_basis_wrong",
+              "legalText": "The assessment was based on an estimate, and the actual gross income is proven by the attached records.",
+              "evidence": []
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_revoke_assessment",
+          "text": "Order the Ministry of Revenue to revoke the current assessment."
+        },
+        {
+          "id": "relief_recalculate_tax",
+          "text": "Order the Ministry to re-calculate the tax liability to [Correct Amount]."
+        }
+      ]
+    },
+    "tax_appeal_ftac": {
+      "documentTitle": "Petition of Appeal to the Federal Tax Appeal Commission",
+      "jurisdictionText": "Art. 88 of the Federal Tax Administration Proclamation (FTAP).",
+      "partyTitles": {
+        "applicant": "Appellant (Taxpayer)",
+        "respondent": "Respondent (Ministry of Revenue)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Prerequisites",
+          "facets": [
+            {
+              "id": "fact_objection_rejected",
+              "legalText": "The MoR issued a decision rejecting the Taxpayer's Objection on [Date]."
+            },
+            {
+              "id": "fact_50_percent_deposit",
+              "legalText": "The Taxpayer has deposited 50% of the disputed tax amount (excluding penalties/interest).",
+              "citation": "FTAP Art. 88",
+              "evidence": ["PaymentReceiptsTaxCustoms"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Grounds for Appeal",
+          "facets": [
+            {
+              "id": "fact_mof_error",
+              "legalText": "The MoR's internal review decision is erroneous because [Specific Reason, e.g., misapplication of VAT Proclamation 1341/2024]."
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_ftac_overrule",
+          "text": "Judgment overturning the MoR's decision and adjusting the tax liability."
+        },
+        {
+          "id": "relief_ftac_remand",
+          "text": "Order the MoR to undertake a new assessment using correct legal principles."
+        }
+      ]
+    },
+    "customs_claim_for_refund": {
+      "documentTitle": "Application to the Customs Commission for Refund of Duty",
+      "jurisdictionText": "Provisions of the Customs Proclamation No. 859/2014 concerning refunds.",
+      "partyTitles": {
+        "applicant": "Applicant (Importer/Exporter)",
+        "respondent": "Respondent (Customs Commission)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Overpayment",
+          "facets": [
+            {
+              "id": "fact_duty_paid",
+              "legalText": "The Applicant paid Customs Duty of [Amount] for goods imported/exported under Declaration No. [SAD No.]."
+            },
+            {
+              "id": "fact_grounds_for_refund",
+              "legalText": "The duty was refundable because [e.g., the goods were defective and re-exported, or the valuation was miscalculated].",
+              "evidence": ["ImportExportDeclarationSAD", "PaymentReceiptsTaxCustoms"]
+            }
+          ]
+        },
+        "group_2": {
+          "title": "Commission Refusal",
+          "facets": [
+            {
+              "id": "fact_refusal_to_pay",
+              "legalText": "The Customs Commission has refused or failed to process the refund application."
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_order_refund",
+          "text": "Order the Customs Commission to refund the overpaid duty amount of [Amount]."
+        }
+      ]
+    },
+    "app_tax_stay_of_execution": {
+      "documentTitle": "Application for Stay of Execution of Tax Payment",
+      "jurisdictionText": "Art. 154 of the Civil Procedure Code (Injunction) applied to tax execution.",
+      "partyTitles": {
+        "applicant": "Applicant",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for Stay",
+          "facets": [
+            {
+              "id": "fact_execution_pending",
+              "legalText": "The MoR has begun execution procedures (e.g., freezing bank accounts) to collect the disputed tax."
+            },
+            {
+              "id": "fact_irreparable_harm",
+              "legalText": "Forcing payment of the full amount now would render the company insolvent, causing irreparable harm to the business."
+            },
+            {
+              "id": "fact_prima_facie",
+              "legalText": "The Taxpayer has a strong likelihood of success on appeal."
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_suspend_payment",
+          "text": "Order the Ministry of Revenue to suspend the execution of the outstanding tax liability until the final decision of the FTAC/Court."
+        }
+      ]
+    },
+    "app_tax_adr_request": {
+      "documentTitle": "Application for Referral to Tax Dispute Alternative Resolution",
+      "jurisdictionText": "Tax Administration Proclamations often include provisions allowing for settlement or ADR.",
+      "partyTitles": {
+        "applicant": "Applicant",
+        "respondent": "Respondent"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Grounds for ADR",
+          "facets": [
+            {
+              "id": "fact_willingness_to_settle",
+              "legalText": "Both the Taxpayer and the MoR have indicated a willingness to resolve the dispute through mutual agreement."
+            },
+            {
+              "id": "fact_complex_facts",
+              "legalText": "The dispute involves complex factual issues that would be better resolved through expert negotiation than court litigation."
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "relief_refer_to_adr",
+          "text": "Order the establishment of a joint committee or referral to a mediator to reach a binding settlement agreement."
         }
       ]
     }

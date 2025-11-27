@@ -1,8 +1,22 @@
 {
   "templates": {
     "tort_general_negligence_claim": {
-      "documentTitle": "Statement of Claim for Extra-Contractual Damages (Negligence)",
+      "documentTitle": "ከውል ውጭ ለደረሰ ጉዳት የካሳ ክስ (Statement of Claim for Extra-Contractual Damages - Negligence)",
       "jurisdictionText": "Arts. 2028-2061 of the Civil Code of 1960 (Liability arising out of fault).",
+      "meta": {
+        "keywords": [
+          "tort",
+          "negligence",
+          "damages",
+          "extra-contractual",
+          "accident",
+          "ከውል ውጭ",
+          "ቸልተኝነት",
+          "ካሳ"
+        ],
+        "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላ ሰው ቸልተኝነት ወይም ጥፋት ምክንያት በአካልዎ ወይም በንብረትዎ ላይ ለደረሰ ጉዳት የካሳ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሚጠየቀው የካሳ መጠን የፍርድ ቤቱን የገንዘብ ዳኝነት ሥልጣን ይወስናል። ጉዳዩ ንብረቱ በሚገኝበት ወይም አደጋው በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2045 መሠረት፣ ከውል ውጭ ለሚደርስ ጉዳት የካሳ ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ **ሁለት (2) ዓመት** ነው። ይህ ጊዜ መቆጠር የሚጀምረው ተጎጂው ወገን በደረሰው ጉዳት እና ጉዳቱን ያደረሰውን ሰው ማንነት ካወቀበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ የሚያስፈልግ ማስረጃ:** የጥፋቱን መኖር የሚያሳይ ማስረጃ (የፖሊስ የአደጋ ሪፖርት) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ (የሕክምና ወጪ ደረሰኞች፣ የንብረት ግምት)።\n    *   **ተጨማሪ ማስረጃ:** የምስክሮች ቃል፣ የጉዳቱን ሁኔታ የሚያሳዩ ፎቶዎች።\n",
       "partyTitles": {
         "applicant": "Plaintiff (ከሳሽ)",
         "respondent": "Defendant (ተከሳሽ)"
@@ -15,19 +29,27 @@
               "id": "fact_fault_negligence_omission",
               "legalText": "The Defendant committed a negligent act or omission that violated the general duty of care (Art. 2028).",
               "citation": "Civil Code Art. 2028",
-              "evidence": ["PoliceAccidentReport", "witness_statements"]
+              "evidence": [
+                "PoliceAccidentReport",
+                "WitnessStatements"
+              ]
             },
             {
               "id": "fact_traffic_violation",
               "legalText": "The fault arose from a specific breach of traffic laws or other legal/regulatory duty of caution.",
               "citation": "Civil Code Art. 2029",
-              "evidence": ["PoliceAccidentReport"]
+              "evidence": [
+                "PoliceAccidentReport"
+              ]
             },
             {
               "id": "fact_liability_for_another_person",
               "legalText": "The Defendant is liable for the act of a minor, apprentice, or employee under their supervision or control (Art. 2085 et seq.).",
               "citation": "Civil Code Art. 2085",
-              "evidence": ["witness_statements", "PoliceAccidentReport"]
+              "evidence": [
+                "WitnessStatements",
+                "PoliceAccidentReport"
+              ]
             }
           ]
         },
@@ -38,19 +60,28 @@
               "id": "fact_bodily_injury_damage",
               "legalText": "The Plaintiff sustained bodily injury and incurred expenses for treatment, hospitalization, and rehabilitation.",
               "citation": "Civil Code Art. 2035",
-              "evidence": ["MedicalExpenseReceipts", "DoctorAssessment"]
+              "evidence": [
+                "MedicalExpenseReceipts",
+                "DoctorAssessment"
+              ]
             },
             {
               "id": "fact_property_damage_loss",
               "legalText": "The Plaintiff's property (e.g., vehicle, structure) was damaged or destroyed, requiring repair or replacement.",
               "citation": "Civil Code Art. 2035",
-              "evidence": ["PropertyValuationReport", "PoliceAccidentReport"]
+              "evidence": [
+                "PropertyValuationReport",
+                "PoliceAccidentReport"
+              ]
             },
             {
               "id": "fact_moral_damage_pain",
               "legalText": "The Plaintiff suffered moral damage, including pain and suffering, emotional distress, and loss of amenity.",
               "citation": "Civil Code Art. 2036",
-              "evidence": ["DoctorAssessment", "witness_statements"]
+              "evidence": [
+                "DoctorAssessment",
+                "WitnessStatements"
+              ]
             }
           ]
         },
@@ -61,13 +92,19 @@
               "id": "fact_direct_causation",
               "legalText": "There is a direct and certain causal link between the Defendant's fault and the damage sustained by the Plaintiff (Art. 2034).",
               "citation": "Civil Code Art. 2034",
-              "evidence": ["PoliceAccidentReport", "DoctorAssessment"]
+              "evidence": [
+                "PoliceAccidentReport",
+                "DoctorAssessment"
+              ]
             },
             {
               "id": "fact_mitigation_of_damages",
               "legalText": "The Plaintiff has taken reasonable steps to mitigate and reduce the extent of the damages sustained.",
               "citation": "Civil Code Art. 2043",
-              "evidence": ["MedicalExpenseReceipts", "PropertyValuationReport"]
+              "evidence": [
+                "MedicalExpenseReceipts",
+                "PropertyValuationReport"
+              ]
             }
           ]
         }
@@ -96,8 +133,21 @@
       ]
     },
     "tort_strict_liability_buildings": {
-      "documentTitle": "Statement of Claim for Damages (Strict Liability for Buildings)",
+      "documentTitle": "በህንጻ ጉድለት ለደረሰ ጉዳት የካሳ ክስ (Statement of Claim for Damages - Strict Liability for Buildings)",
       "jurisdictionText": "Art. 2068 of the Civil Code of 1960 (Liability of the owner of a building).",
+      "meta": {
+        "keywords": [
+          "strict liability",
+          "building collapse",
+          "defect",
+          "ruin",
+          "owner liability",
+          "ጥብቅ ተጠያቂነት",
+          "የህንጻ ጉዳት"
+        ],
+        "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ህንጻ በግንባታ ጉድለት ወይም በጥገና እጦት ምክንያት ጉዳት ሲያደርስ፣ የህንጻውን ባለቤት ጥፋት ማረጋገጥ ሳያስፈልግ ካሳ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ጉዳቱ በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2045 መሠረት፣ የይርጋ ጊዜ ገደቡ **ሁለት (2) ዓመት** ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የጉዳቱን መንስኤ (የህንጻ መፍረስ) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ። የባለሙያ ሪፖርት ክሱን በእጅጉ ያጠናክረዋል።\n",
       "partyTitles": {
         "applicant": "Plaintiff (ከሳሽ)",
         "respondent": "Owner of the Building (የህንፃው ባለቤት)"
@@ -116,7 +166,10 @@
               "id": "fact_damage_caused_by_ruin",
               "legalText": "The damage was caused by the total or partial ruin of the building, which was due to lack of repair or a defect in construction.",
               "citation": "Civil Code Art. 2068",
-              "evidence": ["witness_statements", "PropertyValuationReport"]
+              "evidence": [
+                "WitnessStatements",
+                "PropertyValuationReport"
+              ]
             }
           ]
         },
@@ -127,13 +180,18 @@
               "id": "fact_bodily_injury_building",
               "legalText": "The Plaintiff sustained bodily injury as a direct result of the building's ruin.",
               "citation": "Civil Code Art. 2068 & 2035",
-              "evidence": ["MedicalExpenseReceipts", "DoctorAssessment"]
+              "evidence": [
+                "MedicalExpenseReceipts",
+                "DoctorAssessment"
+              ]
             },
             {
               "id": "fact_property_damage_building",
               "legalText": "The Plaintiff's property was damaged as a direct result of the building's ruin.",
               "citation": "Civil Code Art. 2068 & 2035",
-              "evidence": ["PropertyValuationReport"]
+              "evidence": [
+                "PropertyValuationReport"
+              ]
             }
           ]
         }

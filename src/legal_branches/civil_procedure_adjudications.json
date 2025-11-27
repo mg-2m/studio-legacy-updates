@@ -2,40 +2,50 @@
   "templates": {
     "civ_proc_amendment_of_pleading": {
       "documentTitle": "የፍሬ ነገር ማሻሻያ ጥያቄ (Application for Amendment of Pleading)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 222 (Civil Procedure Code of 1965, Art. 222)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 94 (Civil Procedure Code of 1965, Art. 94)",
       "meta": {
-        "keywords": ["ፍሬ ነገር ማሻሻያ", "amendment", "pleading"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "keywords": [
+          "amendment",
+          "pleading",
+          "correction",
+          "ፍሬ ነገር ማሻሻያ",
+          "ክስ ማሻሻል"
+        ],
+        "jurisdictionType": "Court seized of the original case"
       },
-      "templateDescription": "### መመሪያ \n ይህ ጥያቄ ያለፈውን ፍሬ ነገር ለማሻሻል ነው። የፍትሕ ለማሳካት አስፈላጊ ካለ። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 222(1) መሠረት የመጨረሻ ፍርድ ከተሰጠ በፊት መጠየቅ አለበት። ዋና ጥያቄው የጊዜ ገደብ ይገዛል። (CPC Art. 222(1): Before final judgment; subject to main claim limitation.)",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክር ሂደት ላይ ያለን የክስ ወይም የመከላከያ መልስ ፍሬ ነገር ለማሻሻል፣ ስህተት ለማረም ወይም አዲስ ነገር ለማካተት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 94(1) መሠረት፣ ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት በማንኛውም የክርክር ደረጃ ላይ ሊፈቀድ ይችላል። ዋናው ጥያቄ የሚገዛበት የይርጋ ጊዜ ገደብ በማሻሻያው ላይም ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት፡** ማሻሻያው በወገኖች መካከል ያለውን እውነተኛ የክርክር ነጥብ ለመወሰን አስፈላጊ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** ሊሻሻል የሚገባው የክስ ወይም የመከላከያ መልስ ቅጂ (OriginalPleadingCopy) እና የታቀደው ማሻሻያ ረቂቅ (DraftAmendment)።",
       "partyTitles": {
         "applicant": "ማሻሻያ ጠያቂ (ወገን) (Applicant/Party Seeking Amendment)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
       },
       "facts": {
         "group_1": {
-          "title": "የማሻሻያ መሠረታዎች (Grounds for Amendment)",
+          "title": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
           "facets": [
             {
               "id": "civ_proc_fact_amendment_necessary_for_justice",
-              "legalText": "ማሻሻያው በወገኖች መካከል እውነተኛ ክርክር ለመወሰን እና የፍትሕ ዓላማ ለማሳካት አስፈላጊ ነው። (The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 222(2) (C.P.C. Art. 222(2))",
-              "evidence": ["OriginalPleadingCopy", "DraftAmendment"],
-              "mutexGroup": null
+              "legalText": "ማሻሻያው በወገኖች መካከል እውነተኛውን የክርክር ጥያቄ ለመወሰን እና የፍትሕ ዓላማን ለማሳካት አስፈላጊ ነው። (The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice.)",
+              "citation": "C.P.C. Art. 94(2)",
+              "evidence": [
+                "OriginalPleadingCopy",
+                "DraftAmendment"
+              ]
             },
             {
               "id": "civ_proc_fact_amendment_no_prejudice",
-              "legalText": "ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ ተቃራኒውን ወገንም በወጪ የማይካስ ጉዳት አያስከትልም። (The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 222(1) (C.P.C. Art. 222(1))",
-              "evidence": ["OriginalPleadingCopy"],
-              "mutexGroup": null
+              "legalText": "ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒውን ወገን በወጪ ሊካስ የማይችል ጉዳት አያስከትልም። (The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs.)",
+              "citation": "C.P.C. Art. 94(1)",
+              "evidence": [
+                "OriginalPleadingCopy"
+              ]
             },
             {
               "id": "civ_proc_fact_amendment_due_to_clerical_error",
-              "legalText": "ማሻሻያው ጥቃቅ እና በመጀመሪያው ፍሬ አቀራረብ ውስጥ ያለ የአፃፃፍ/ሂሳብ/ቅየሳ ስህተት ለማረም አስፈላጊ ነው። (The amendment is minor and necessary to correct a clerical, computational, or drafting error in the original pleading.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 222(1) (C.P.C. Art. 222(1))",
-              "evidence": ["DraftAmendment"],
-              "mutexGroup": null
+              "legalText": "ማሻሻያው በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአጻጻፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው። (The amendment is necessary to correct a clerical, computational, or drafting error in the original pleading.)",
+              "citation": "C.P.C. Art. 94(1)",
+              "evidence": [
+                "DraftAmendment"
+              ]
             }
           ]
         },
@@ -44,10 +54,9 @@
           "facets": [
             {
               "id": "civ_proc_fact_amendment_before_judgment",
-              "legalText": "ማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት ቀርቧል። (The application for amendment is being made before the court has delivered its final judgment.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 222(1) (C.P.C. Art. 222(1))",
-              "evidence": [],
-              "mutexGroup": null
+              "legalText": "የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት ቀርቧል። (The application for amendment is being made before the court has delivered its final judgment.)",
+              "citation": "C.P.C. Art. 94(1)",
+              "evidence": []
             }
           ]
         }
@@ -55,7 +64,7 @@
       "reliefs": [
         {
           "id": "civ_proc_relief_grant_amendment",
-          "text": "በተያያዘው ረቂቅ መሠረት ክስ/መቃወሚያ እንዲሻሻል ፈቃድ መስጠት። (To grant leave to amend the statement of claim/defence as per the draft annexed hereto.)",
+          "text": "በተያያዘው ረቂቅ መሠረት ክሱ/መቃወሚያው እንዲሻሻል ፈቃድ እንዲሰጥ። (To grant leave to amend the statement of claim/defence as per the draft annexed hereto.)",
           "isDefault": true,
           "isDynamic": false
         }
@@ -64,15 +73,21 @@
     },
     "civ_proc_intervention_by_third_party": {
       "documentTitle": "በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ (Application for Leave to Intervene in a Pending Suit)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 238 (Civil Procedure Code of 1965, Art. 238)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 40 (Civil Procedure Code of 1965, Art. 40)",
       "meta": {
-        "keywords": ["ጣልቃ ገብ", "intervention", "third party intervention"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "keywords": [
+          "intervention",
+          "third party",
+          "joinder",
+          "ጣልቃ ገብ",
+          "ሶስተኛ ወገን"
+        ],
+        "jurisdictionType": "Court seized of the original case"
       },
-      "templateDescription": "### መመሪያ \n ይህ ጥያቄ ሦስተኛ ወገን በተንጠለጠለ ክስ ውስጥ እንዲገባ ለመፈቀድ ነው። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 238 መሠረት በክሱ ተጀምሮ መጠየቅ አለበት፣ ዋና ጥያቄ የጊዜ ገደብ ይገዛል። (CPC Art. 238: During pendency; subject to main claim.)",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ በሁለት ወገኖች መካከል እየታየ ባለ ክርክር ውስጥ መብቱ ወይም ጥቅሙ ሊነካ የሚችል ሶስተኛ ወገን፣ በክርክሩ ውስጥ ገብቶ እንዲሳተፍ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 40(2) መሠረት፣ ጣልቃ ገብቶ ለመከራከር ጥያቄ ማቅረብ የሚቻለው ክሱ ከመዘጋቱ በፊት በማንኛውም ጊዜ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ሕጋዊ ጥቅም፡** ጣልቃ ገቢው በክርክሩ ውጤት ላይ ቀጥተኛ ሕጋዊ ጥቅም እንዳለው ማሳየት አለበት።\n*   **ማስረጃ (Required Evidence):** ጣልቃ ገቢው የሚያቀርበውን የክስ ወይም የመከላከያ መልስ (IntervenerStatement) ማያያዝ።",
       "partyTitles": {
         "applicant": "ጣልቃ ገቢ (Intervener)",
-        "respondent": "የመጀመሪያ ወገኖች (Original Parties)"
+        "respondent": "የመጀመሪያ ተከራካሪ ወገኖች (Original Parties)"
       },
       "facts": {
         "group_1": {
@@ -80,24 +95,25 @@
           "facets": [
             {
               "id": "civ_proc_fact_direct_legal_interest",
-              "legalText": "ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ፍርዱም ይነካል። (The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 238(1) (C.P.C. Art. 238(1))",
-              "evidence": ["IntervenerStatement"],
-              "mutexGroup": null
+              "legalText": "ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል። (The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment.)",
+              "citation": "C.P.C. Art. 40(1)",
+              "evidence": [
+                "IntervenerStatement"
+              ]
             },
             {
               "id": "civ_proc_fact_common_question_of_law_or_fact",
-              "legalText": "ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይ የሕግ ወይም ፍሬ ጥያቄዎች ያስነሳል። (The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 238(1) (C.P.C. Art. 238(1))",
-              "evidence": ["IntervenerStatement"],
-              "mutexGroup": null
+              "legalText": "ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል። (The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise.)",
+              "citation": "C.P.C. Art. 40(1)",
+              "evidence": [
+                "IntervenerStatement"
+              ]
             },
             {
               "id": "civ_proc_fact_prevent_multiplicity_of_suits",
-              "legalText": "ጣልቃ ገብነት በዚህ ጉዳይ ላይ በርካታ ክሶችን ያስቀርታል። (Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 238(2) (C.P.C. Art. 238(2))",
-              "evidence": [],
-              "mutexGroup": null
+              "legalText": "ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል። (Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter.)",
+              "citation": "",
+              "evidence": []
             }
           ]
         }
@@ -105,7 +121,7 @@
       "reliefs": [
         {
           "id": "civ_proc_relief_grant_intervention",
-          "text": "አመልካቹ በክሱ ውስጥ እንዲገባ እና እንደ ከሳሽ/ተከሳሽ እንዲታከል ፈቃድ መስጠት። (To grant the Applicant leave to intervene in the suit and to be joined as a Plaintiff/Defendant.)",
+          "text": "አመልካቹ በክሱ ውስጥ እንዲገባ እና እንደ ከሳሽ/ተከሳሽ እንዲታከል እንዲፈቀድለት። (To grant the Applicant leave to intervene in the suit and to be joined as a Plaintiff/Defendant.)",
           "isDefault": true,
           "isDynamic": false
         }
@@ -113,16 +129,22 @@
       "calculations": {}
     },
     "civ_proc_joinder_of_third_party": {
-      "documentTitle": "ሶስተኛ ወገን ማካተት ጥያቄ (Application to Join a Third Party)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 240 (Civil Procedure Code of 1965, Art. 240)",
+      "documentTitle": "ሶስተኛ ወገንን በክሱ የማካተት ጥያቄ (Application to Join a Third Party)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 41 (Civil Procedure Code of 1965, Art. 41)",
       "meta": {
-        "keywords": ["ሶስተኛ ወገን", "ማካተት", "third party joinder", "indemnity"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "keywords": [
+          "third party joinder",
+          "indemnity",
+          "contribution",
+          "ማካተት",
+          "ሶስተኛ ወገን"
+        ],
+        "jurisdictionType": "Court seized of the original case"
       },
-      "templateDescription": "### መመሪያ \n ይህ ጥያቄ ተከሳሽ ሶስተኛ ወገን ለማካተት ነው። ለአስተዋጽኦ ወይም ማስከር። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 240 መሠረት በክሱ ተጀምሮ፣ ዋና ጥያቄ የጊዜ ገደብ። (CPC Art. 240: During suit; main claim limitation applies.)",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ ተከሳሽ በሆነ ሰው ላይ ክስ ሲቀርብበት፣ ለዚያ ክስ ተጠያቂ ሊሆን የሚችል ሌላ ሶስተኛ ወገን ካለ፣ ያንን ሶስተኛ ወገን በክርክሩ ውስጥ እንዲካተት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን በሚያቀርብበት ጊዜ ወይም ከዚያ በፊት መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የኃላፊነት ጥያቄ፡** ተከሳሹ በሶስተኛው ወገን ላይ የካሳ ወይም የመተካት መብት እንዳለው ማሳየት።\n*   **ማስረጃ (Required Evidence):** ለሶስተኛው ወገን ሊቀርብ የታሰበው የክስ ማስታወቂያ ረቂቅ (ThirdPartyNotice)።",
       "partyTitles": {
         "applicant": "ማካተት የሚፈልግ ተከሳሽ (Defendant Seeking Joinder)",
-        "respondent": "ለማካተት ሶስተኛ ወገን (Third Party to be Joined)"
+        "respondent": "በክሱ እንዲካተት የተፈለገው ሶስተኛ ወገን (Third Party to be Joined)"
       },
       "facts": {
         "group_1": {
@@ -130,24 +152,28 @@
           "facets": [
             {
               "id": "civ_proc_fact_right_to_indemnity",
-              "legalText": "ተከሳሹ ከሶስተኛ ወገን ከሳሽ ሊያገኘውን ሙሉ/ከፊል ካሳ ለማስከር መብት አለው። (The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 240(1)(a) (C.P.C. Art. 240(1)(a))",
-              "evidence": ["ThirdPartyNotice"],
-              "mutexGroup": null
+              "legalText": "ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው። (The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant.)",
+              "citation": "C.P.C. Art. 41(1)(a)",
+              "evidence": [
+                "ThirdPartyNotice"
+              ]
             },
             {
               "id": "civ_proc_fact_right_to_contribution",
-              "legalText": "ተከሳሹ በከሳሽ ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው። (The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 240(1)(b) (C.P.C. Art. 240(1)(b))",
-              "evidence": ["ThirdPartyNotice"],
+              "legalText": "ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው። (The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim.)",
+              "citation": "C.P.C. Art. 41(1)(a)",
+              "evidence": [
+                "ThirdPartyNotice"
+              ],
               "mutexGroup": "contribution_mutex"
             },
             {
               "id": "civ_proc_fact_same_issue_arising",
-              "legalText": "በሶስተኛ ወገን ላይ እፎይታ ከመጀመሪያ ክስ ጋር ተመሳሳይ የሕግ/ፍሬ ጥያቄ ላይ የተመሰረተ ነው። (The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 240(1)(c) (C.P.C. Art. 240(1)(c))",
-              "evidence": ["ThirdPartyNotice"],
-              "mutexGroup": null
+              "legalText": "በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው። (The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant.)",
+              "citation": "C.P.C. Art. 41(1)(b)",
+              "evidence": [
+                "ThirdPartyNotice"
+              ]
             }
           ]
         }
@@ -155,7 +181,7 @@
       "reliefs": [
         {
           "id": "civ_proc_relief_grant_third_party_notice",
-          "text": "በ[ሶስተኛ ወገን ስም] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ መስጠት። (To grant leave to serve a third-party notice on [Name of Third Party] and join them as a third-party defendant.)",
+          "text": "በ[ሶስተኛ ወገን ስም] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ። (To grant leave to serve a third-party notice on [Name of Third Party] and join them as a third-party defendant.)",
           "isDefault": true,
           "isDynamic": true
         }
@@ -163,41 +189,51 @@
       "calculations": {}
     },
     "civ_proc_judgment_objection_default": {
-      "documentTitle": "በአንድ ወገን ፍርድ ላይ ተቃውሞ ጥያቄ (Application for Judgment Objection / Setting Aside Ex Parte Decree)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 250 እና 252 (Civil Procedure Code of 1965, Arts. 250 &amp; 252)",
+      "documentTitle": "በአንድ ወገን ፍርድ ላይ የተቃውሞ ጥያቄ (Application for Judgment Objection / Setting Aside Ex Parte Decree)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 78 እና 79 (Civil Procedure Code of 1965, Arts. 78 & 79)",
       "meta": {
-        "keywords": ["በሌሉበት ፍርድ", "ተቃውሞ", "default judgment", "set aside"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "keywords": [
+          "default judgment",
+          "ex parte",
+          "set aside",
+          "objection",
+          "በሌሉበት የተሰጠ ፍርድ",
+          "ተቃውሞ"
+        ],
+        "jurisdictionType": "Court which passed the ex-parte decree"
       },
-      "templateDescription": "### መመሪያ \n ይህ ጥያቄ በሌሉበት የተሰጠ ፍርድ ለማሻር ነው። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 250/252 መሠረት ብዙውን ጊዜ ፍርድ ከታወቀ በ30 ቀናት ውስጥ። (CPC Arts. 250/252: Usually 30 days from knowledge.)",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ አንድ ወገን ችሎት ሳይቀርብ በሌለበት የተሰጠበትን ፍርድ ለመቃወም እና ክርክሩ እንደ አዲስ እንዲታይለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበሌሉበት ውሳኔ የሰጠው ፍርድ ቤት ራሱ ይህንኑ ተቃውሞ የማየት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nተቃውሞው መቅረብ ያለበት ተቃዋሚው ስለ ፍርዱ ካወቀበት ቀን ጀምሮ ባሉት አስራ አምስት (15) ቀናት ውስጥ ነው (አንቀጽ 79)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **በቂ ምክንያት፡** ችሎት ላይ መቅረብ ያልተቻለበት በቂ እና ከአቅም በላይ የሆነ ምክንያት መኖሩን ማሳየት።\n*   **ማስረጃ (Required Evidence):** መጥሪያ ያልደረሰ መሆኑን ወይም ለመቅረብ ያልተቻለበትን ምክንያት የሚያረጋግጥ ማስረጃ (ለምሳሌ የህመም ማስረጃ)።",
       "partyTitles": {
-        "applicant": "ተቃዋሚ / በሌሉበት ወገን (Objector / Defaulting Party)",
+        "applicant": "ተቃዋሚ / በሌሉበት የተፈረደበት ወገን (Objector / Defaulting Party)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
       },
       "facts": {
         "group_1": {
-          "title": "የፍርድ ማሻር ምክንያቶች (Grounds for Setting Aside)",
+          "title": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
           "facets": [
             {
               "id": "civ_proc_fact_no_proper_service",
-              "legalText": "ፍርዱ በሌሉበት ተቃዋሚው መጥሪያ/ማስታወቂያ በአግባቡ ላልደረሰበት ተሰጠ ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 252(1)(a) (C.P.C. Art. 252(1)(a))",
-              "evidence": ["ObjectionGroundsMemo"],
-              "mutexGroup": null
+              "legalText": "ፍрዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
+              "citation": "C.P.C. Art. 78(1)(a)",
+              "evidence": [
+                "ObjectionGroundsMemo"
+              ]
             },
             {
               "id": "civ_proc_fact_sufficient_cause_for_default",
-              "legalText": "ተቃዋሚው በቂ እና ማስቀረት የማይቻል ምክንያት ከመግለጫ አቋርጠ ነበር። (The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 252(1)(b) (C.P.C. Art. 252(1)(b))",
-              "evidence": ["ObjectionGroundsMemo"],
-              "mutexGroup": null
+              "legalText": "ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ። (The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause.)",
+              "citation": "C.P.C. Art. 78(1)(b)",
+              "evidence": [
+                "ObjectionGroundsMemo"
+              ]
             },
             {
               "id": "civ_proc_fact_absence_of_jurisdiction",
-              "legalText": "ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው ፍርዱ የማይፀና ነው። (The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 5(2) (C.P.C. Art. 5(2))",
-              "evidence": ["ObjectionGroundsMemo"],
-              "mutexGroup": null
+              "legalText": "ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው። (The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree.)",
+              "citation": "C.P.C. Art. 5(2)",
+              "evidence": [
+                "ObjectionGroundsMemo"
+              ]
             }
           ]
         },
@@ -206,10 +242,9 @@
           "facets": [
             {
               "id": "civ_proc_fact_objection_timely_filed",
-              "legalText": "ተቃውሞው በሕግ ተቀመጠው (ብዙውን ጊዜ 30 ቀናት) ውስጥ ቀርቧል። (The objection is filed within the period prescribed by law (usually 30 days from knowledge of the decree).)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 250/252 (C.P.C. Art. 250/252)",
-              "evidence": [],
-              "mutexGroup": null
+              "legalText": "ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ፍርዱ ከታወቀ 15 ቀናት) ቀርቧል። (The objection is filed within the period prescribed by law (15 days from knowledge of the decree).)",
+              "citation": "C.P.C. Art. 79",
+              "evidence": []
             }
           ]
         }
@@ -217,7 +252,7 @@
       "reliefs": [
         {
           "id": "civ_proc_relief_set_aside_judgment",
-          "text": "በሌሉበት ፍርዱን ማሻር እና ክሱን በፍሬ ነገር ለመታከስ ወደ ተንጠለጠለ ዝርዝር መመለስ። (To set aside the ex parte judgment/decree and restore the suit to the list of pending cases for trial on the merits.)",
+          "text": "በሌሉበት የተሰጠውን ፍርድ እንዲሻርና ክሱ በፍሬ ነገር እንዲታይ ወደ ተንጠለጠለ መዝገብ እንዲመለስ። (To set aside the ex parte judgment/decree and restore the suit to the list of pending cases for trial on the merits.)",
           "isDefault": true,
           "isDynamic": false
         }
@@ -226,40 +261,49 @@
     },
     "civ_proc_review_of_judgment": {
       "documentTitle": "የፍርድ ዳግም ማየት ጥያቄ (Application for Review of Judgment)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 376 (Civil Procedure Code of 1965, Art. 376)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 6 (Civil Procedure Code of 1965, Art. 6)",
       "meta": {
-        "keywords": ["የፍርድ ዳግም ማየት", "review", "new evidence"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "keywords": [
+          "review of judgment",
+          "new evidence",
+          "error on record",
+          "የፍርድ ዳግም ክለሳ",
+          "አዲስ ማስረጃ"
+        ],
+        "jurisdictionType": "Court which passed the original decree"
       },
-      "templateDescription": "### መመሪያ \n ይህ ጥያቄ ፍርድ ለዳግም ማየት ነው። አዲስ ማስረጃ ወይም ስህተት። \n\n ### የጊዜ ገደብ (Period of Limitation) \n የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 378 መሠረት በፍርድ ከተሰጠ በ3 ዓመታት ውስጥ (አዲስ ማስረጃ)። (CPC Art. 378: 3 years from decree for new evidence.)",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ ይግባኝ የማይባልበት የመጨረሻ ፍርድ ከተሰጠ በኋላ፣ አዲስና ወሳኝ ማስረጃ ሲገኝ ወይም በፍርዱ ላይ ግልጽ የሆነ የሕግ ወይም የፍሬ ነገር ስህተት ሲኖር ፍርዱ እንደገና እንዲታይ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nፍርዱን የሰጠው ፍርድ ቤት ራሱ የማመልከቻውን ተቀባይነት የማየት ስልጣን አለው (አንቀጽ 6(2))።\n\n### የጊዜ ገደብ (Period of Limitation)\nአዲስ ማስረጃ በመገኘቱ ምክንያት ከሆነ፣ ማስረጃው ከተገኘበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 6(3))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ይግባኝ አለመኖር፡** በፍርዱ ላይ ይግባኝ ያልተባለ መሆን አለበት።\n*   **አዲስ ማስረጃ፡** የቀረበው ማስረጃ ከፍርዱ በኋላ የተገኘ እና በክርክሩ ወቅት በትጋት ፈልጎ ማግኘት የማይቻል የነበረ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** አዲሱን ማስረጃ እና ለምን ወሳኝ እንደሆነ የሚያብራራ ማስታወሻ (ReviewApplicationMemo)።",
       "partyTitles": {
-        "applicant": "ዳግም ማየት ጠያቂ (Applicant for Review)",
+        "applicant": "ዳግም እንዲታይለት ጠያቂ (Applicant for Review)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
       },
       "facts": {
         "group_1": {
-          "title": "የዳግም ማየት ምክንያቶች (Grounds for Review)",
+          "title": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
           "facets": [
             {
               "id": "civ_proc_fact_new_and_important_evidence",
-              "legalText": "አመልካቹ ፍርዱ በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል። (The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 376(1)(a) (C.P.C. Art. 376(1)(a))",
-              "evidence": ["ReviewApplicationMemo"],
-              "mutexGroup": null
+              "legalText": "አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል። (The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed.)",
+              "citation": "C.P.C. Art. 6(1)(a)",
+              "evidence": [
+                "ReviewApplicationMemo"
+              ]
             },
             {
               "id": "civ_proc_fact_mistake_or_error_on_face",
-              "legalText": "በመዝገቡ ገጽታ ላይ ግልጽ ስህተት ወይም የሕግ ስሕተት አለ። (There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation).)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 376(1)(b) (C.P.C. Art. 376(1)(b))",
-              "evidence": ["ReviewApplicationMemo"],
-              "mutexGroup": null
+              "legalText": "በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)። (There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument.)",
+              "citation": "C.P.C. Art. 6(1)(b)",
+              "evidence": [
+                "ReviewApplicationMemo"
+              ]
             },
             {
               "id": "civ_proc_fact_other_sufficient_reason",
-              "legalText": "ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ በቂ ምክንያት አለ። (There is any other sufficient reason analogous to the specified grounds justifying a review.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 376(1)(c) (C.P.C. Art. 376(1)(c))",
-              "evidence": ["ReviewApplicationMemo"],
-              "mutexGroup": null
+              "legalText": "ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ። (There is any other sufficient reason analogous to the specified grounds justifying a review.)",
+              "citation": "C.P.C. Art. 6(1)(c)",
+              "evidence": [
+                "ReviewApplicationMemo"
+              ]
             }
           ]
         },
@@ -268,10 +312,9 @@
           "facets": [
             {
               "id": "civ_proc_fact_no_previous_appeal",
-              "legalText": "አመልካቹ ለፍርዱ ከዚህ በፊት ይግባኝ አላቀረበም። (The Applicant has not previously filed an appeal against the judgment being sought for review.)",
-              "citation": "ፊፊፊ.ሥ.ሕ. አንቀጽ 376(2) (C.P.C. Art. 376(2))",
-              "evidence": [],
-              "mutexGroup": null
+              "legalText": "አመልካቹ ዳግም እንዲታይለት ለሚጠይቀው ፍርድ ከዚህ በፊት ይግባኝ አላቀረበም። (The Applicant has not previously filed an appeal against the judgment being sought for review.)",
+              "citation": "C.P.C. Art. 6(1)",
+              "evidence": []
             }
           ]
         }
@@ -279,7 +322,7 @@
       "reliefs": [
         {
           "id": "civ_proc_relief_grant_review",
-          "text": "የዳግም ማየት ጥያቄው ተቀባ አግኝቶ ክሱን አዲስ ማስረጃ ለማየት ወይም ስህተቱን ለማረም መክፈቻ። (To grant the application for review and re-open the case for hearing the new evidence or correcting the error.)",
+          "text": "የዳግም የማየት ጥያቄው ተቀባይነት አግኝቶ ክሱ አዲስ ማስረጃ ለማየት ወይም ስህተቱን ለማረም እንዲከፈት። (To grant the application for review and re-open the case for hearing the new evidence or correcting the error.)",
           "isDefault": true,
           "isDynamic": false
         }

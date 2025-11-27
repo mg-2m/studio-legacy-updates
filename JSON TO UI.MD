@@ -4,7 +4,7 @@ This document serves as the definitive checklist for transforming the legal know
 
 Each segment must pass both a **Relevancy Check** (ensuring only context-specific information is shown) and an **Exhaustive Rendering Check** (ensuring no relevant information is missing).
 
-## The 9 Segments of UI Implementation
+## The 10 Segments of UI Implementation
 
 1.  **Head, Date, Court Name, Location, Bench Name, and Bench Address:**
     *   **Relevancy Check:** The "Bench/Division" dropdown MUST be filtered by and only show benches relevant to the selected "Court Tier".
@@ -47,3 +47,7 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 9.  **Default Relief Selection:**
     *   **Relevancy Check:** N/A.
     *   **Exhaustive Rendering Check:** Every template MUST have at least one relief option with `isDefault: true` to ensure a sensible starting state and prevent an empty relief section.
+
+10. **Dynamic Template Guidance:**
+    *   **Relevancy Check:** When a template is selected, a descriptive header MUST appear at the top of the editor, sourced from the template's `templateDescription` property in the backend.
+    *   **Exhaustive Rendering Check:** The description must be bilingual (English and Amharic) and clearly explain the template's use case, target scenarios, and any critical warnings or prerequisites.

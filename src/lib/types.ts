@@ -97,6 +97,7 @@ export interface TemplateData {
   partyTitles: PartyTitles;
   documentTitle: string;
   jurisdictionText: string;
+  templateDescription?: string;
 }
 
 

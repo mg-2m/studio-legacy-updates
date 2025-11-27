@@ -19,59 +19,58 @@
         "applicant": "አመልካች (ግብር ከፋይ) (Applicant (Taxpayer))",
         "respondent": "መልስ ሰጪ (የገቢዎች ሚኒስቴር ቅርንጫፍ) (Respondent (Ministry of Revenue Branch Office))"
       },
-      "facts": {
-        "group_1": {
-          "title": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ) (Procedural Compliance (Time Limit))",
-          "facets": [
-            {
-              "id": "fact_assessment_received",
-              "legalText": "የግብር ግምት ማስታወቂያው በ [Date] ደርሶኛል። (The Tax Assessment Notice was received on [Date].)",
-              "citation": "FTAP Art. 54",
-              "evidence": [
-                "TaxAssessmentNotice"
-              ]
-            },
-            {
-              "id": "fact_objection_timely",
-              "legalText": "ይህ መቃወሚያ ማስታወቂያው ከደረሰኝ በ21 ቀናት ውስጥ ቀርቧል። (This Objection is filed within the required 21 days of receipt.)",
-              "citation": "FTAP Art. 54(1)",
-              "evidence": []
-            }
+      "facts": [
+        {
+          "id": "tax_fact_assessment_received",
+          "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ) (Procedural Compliance (Time Limit))",
+          "legalText": "የግብር ግምት ማስታወቂያው በ [assessmentDate] ደርሶኛል። (The Tax Assessment Notice was received on [assessmentDate].)",
+          "citation": "FTAP Art. 54",
+          "autoEvidence": [
+            "TaxAssessmentNotice"
           ]
         },
-        "group_2": {
-          "title": "የስህተት ምክንያቶች (Grounds for Error)",
-          "facets": [
-            {
-              "id": "fact_erroneous_income_calc",
-              "legalText": "ገቢዎች ሚኒስቴር [Specific Deduction/Exemption]ን ከግምት ባለማስገባቱ በስሌት ላይ ስህተት ሰርቷል። (The MoR erred by failing to recognize [Specific Deduction/Exemption].)",
-              "evidence": [
-                "AccountingRecords",
-                "ExternalAuditReport"
-              ]
-            },
-            {
-              "id": "fact_estimated_basis_wrong",
-              "legalText": "ግምቱ በግምት ላይ የተመሰረተ ሲሆን፣ ትክክለኛው ጠቅላላ ገቢ በተያያዙት መዝገቦች ተረጋግጧል። (The assessment was based on an estimate, and the actual gross income is proven by the attached records.)",
-              "evidence": [
-                "AccountingRecords"
-              ]
-            }
+        {
+          "id": "tax_fact_objection_timely",
+          "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ) (Procedural Compliance (Time Limit))",
+          "legalText": "ይህ መቃወሚያ ማስታወቂያው ከደረሰኝ በ21 ቀናት ውስጥ ቀርቧል። (This Objection is filed within the required 21 days of receipt.)",
+          "citation": "FTAP Art. 54(1)",
+          "autoEvidence": []
+        },
+        {
+          "id": "tax_fact_erroneous_income_calc",
+          "label": "የስህተት ምክንያቶች (Grounds for Error)",
+          "legalText": "ገቢዎች ሚኒስቴር [specificDeductionOrExemption]ን ከግምት ባለማስገባቱ በስሌት ላይ ስህተት ሰርቷል። (The MoR erred by failing to recognize [specificDeductionOrExemption].)",
+          "autoEvidence": [
+            "AccountingRecords",
+            "ExternalAuditReport"
+          ]
+        },
+        {
+          "id": "tax_fact_estimated_basis_wrong",
+          "label": "የስህተት ምክንያቶች (Grounds for Error)",
+          "legalText": "ግምቱ በግምት ላይ የተመሰረተ ሲሆን፣ ትክክለኛው ጠቅላላ ገቢ በተያያዙት መዝገቦች ተረጋግጧል። (The assessment was based on an estimate, and the actual gross income is proven by the attached records.)",
+          "autoEvidence": [
+            "AccountingRecords"
           ]
         }
-      },
+      ],
       "reliefs": [
         {
-          "id": "relief_revoke_assessment",
+          "id": "tax_relief_revoke_assessment",
           "text": "የገቢዎች ሚኒስቴር የአሁኑን ግምት እንዲሽር ትዕዛዝ እንዲሰጥ። (Order the Ministry of Revenue to revoke the current assessment.)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
         },
         {
-          "id": "relief_recalculate_tax",
-          "text": "ሚኒስቴሩ የግብር ግዴታውን ወደ [Correct Amount] ብር እንደገና እንዲያሰላ ትዕዛዝ እንዲሰጥ። (Order the Ministry to re-calculate the tax liability to [Correct Amount].)",
-          "isDefault": true
+          "id": "tax_relief_recalculate_tax",
+          "text": "ሚኒስቴሩ የግብር ግዴታውን ወደ [correctAmount] ብር እንደገና እንዲያሰላ ትዕዛዝ እንዲሰጥ። (Order the Ministry to re-calculate the tax liability to [correctAmount].)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
         }
-      ]
+      ],
+      "calculations": {}
     },
     "tax_appeal_ftac": {
       "documentTitle": "የይግባኝ ማመልከቻ ለፌደራል የግብር ይግባኝ ኮሚሽን (Petition of Appeal to the Federal Tax Appeal Commission)",
@@ -92,50 +91,48 @@
         "applicant": "ይግባኝ ባይ (ግብር ከፋይ) (Appellant (Taxpayer))",
         "respondent": "መልስ ሰጪ (የገቢዎች ሚኒስቴር) (Respondent (Ministry of Revenue))"
       },
-      "facts": {
-        "group_1": {
-          "title": "ቅድመ ሁኔታዎች (Prerequisites)",
-          "facets": [
-            {
-              "id": "fact_objection_rejected",
-              "legalText": "ገቢዎች ሚኒስቴር በ [Date] የግብር ከፋዩን መቃወሚያ ውድቅ የሚያደርግ ውሳኔ ሰጥቷል። (The MoR issued a decision rejecting the Taxpayer's Objection on [Date].)",
-              "evidence": [
-                "NoticeOfObjectionInitial"
-              ]
-            },
-            {
-              "id": "fact_50_percent_deposit",
-              "legalText": "ግብር ከፋዩ ከተከራከረበት የግብር መጠን 50% (ቅጣቶችን/ወለድን ሳይጨምር) አስቀምጧል። (The Taxpayer has deposited 50% of the disputed tax amount (excluding penalties/interest).)",
-              "citation": "FTAP Art. 88(3)",
-              "evidence": [
-                "PaymentReceiptsTaxCustoms"
-              ]
-            }
+      "facts": [
+        {
+          "id": "tax_fact_objection_rejected",
+          "label": "ቅድመ ሁኔታዎች (Prerequisites)",
+          "legalText": "ገቢዎች ሚኒስቴር በ [rejectionDate] የግብር ከፋዩን መቃወሚያ ውድቅ የሚያደርግ ውሳኔ ሰጥቷል። (The MoR issued a decision rejecting the Taxpayer's Objection on [rejectionDate].)",
+          "autoEvidence": [
+            "NoticeOfObjectionInitial"
           ]
         },
-        "group_2": {
-          "title": "የይግባኝ ምክንያቶች (Grounds for Appeal)",
-          "facets": [
-            {
-              "id": "fact_mof_error",
-              "legalText": "የገቢዎች ሚኒስቴር የውስጥ ግምገማ ውሳኔ ስህተት ነው ምክንያቱም [Specific Reason, e.g., misapplication of VAT Proclamation 1341/2024]። (The MoR's internal review decision is erroneous because [Specific Reason, e.g., misapplication of VAT Proclamation 1341/2024].)",
-              "evidence": []
-            }
+        {
+          "id": "tax_fact_50_percent_deposit",
+          "label": "ቅድመ ሁኔታዎች (Prerequisites)",
+          "legalText": "ግብር ከፋዩ ከተከራከረበት የግብር መጠን 50% (ቅጣቶችን/ወለድን ሳይጨምር) አስቀምጧል። (The Taxpayer has deposited 50% of the disputed tax amount (excluding penalties/interest).)",
+          "citation": "FTAP Art. 88(3)",
+          "autoEvidence": [
+            "PaymentReceiptsTaxCustoms"
           ]
+        },
+        {
+          "id": "tax_fact_mof_error",
+          "label": "የይግባኝ ምክንያቶች (Grounds for Appeal)",
+          "legalText": "የገቢዎች ሚኒስቴር የውስጥ ግምገማ ውሳኔ ስህተት ነው ምክንያቱም [specificReason]። (The MoR's internal review decision is erroneous because [specificReason].)",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
-          "id": "relief_ftac_overrule",
+          "id": "tax_relief_ftac_overrule",
           "text": "የገቢዎች ሚኒስቴርን ውሳኔ በመሻር እና የግብር ግዴታውን በማስተካከል ፍርድ እንዲሰጥ። (Judgment overturning the MoR's decision and adjusting the tax liability.)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
         },
         {
-          "id": "relief_ftac_remand",
+          "id": "tax_relief_ftac_remand",
           "text": "ገቢዎች ሚኒስቴር ትክክለኛ የሕግ መርሆዎችን በመጠቀም አዲስ ግምት እንዲያካሂድ ትዕዛዝ እንዲሰጥ። (Order the MoR to undertake a new assessment using correct legal principles.)",
-          "isDefault": false
+          "isDefault": false,
+          "isDynamic": false,
+          "isCustom": false
         }
-      ]
+      ],
+      "calculations": {}
     },
     "customs_claim_for_refund": {
       "documentTitle": "የጉምሩክ ቀረጥ ተመላሽ እንዲሆን ለጉምሩክ ኮሚሽን ማመልከቻ (Application to the Customs Commission for Refund of Duty)",
@@ -157,45 +154,41 @@
         "applicant": "አመልካች (አስመጪ/ላኪ) (Applicant (Importer/Exporter))",
         "respondent": "መልስ ሰጪ (ጉምሩክ ኮሚሽን) (Respondent (Customs Commission))"
       },
-      "facts": {
-        "group_1": {
-          "title": "ከመጠን በላይ ክፍያ (Overpayment)",
-          "facets": [
-            {
-              "id": "fact_duty_paid",
-              "legalText": "አመልካቹ በዲክላሬሽን ቁጥር [SAD No.] ለገቡ/ለወጡ ዕቃዎች [Amount] የጉምሩክ ቀረጥ ከፍሏል። (The Applicant paid Customs Duty of [Amount] for goods imported/exported under Declaration No. [SAD No.].)",
-              "evidence": [
-                "PaymentReceiptsTaxCustoms"
-              ]
-            },
-            {
-              "id": "fact_grounds_for_refund",
-              "legalText": "ቀረጡ ተመላሽ ሊደረግ የሚገባው [e.g., the goods were defective and re-exported, or the valuation was miscalculated] ስለሆነ ነው። (The duty was refundable because [e.g., the goods were defective and re-exported, or the valuation was miscalculated].)",
-              "evidence": [
-                "ImportExportDeclarationSAD",
-                "PaymentReceiptsTaxCustoms"
-              ]
-            }
+      "facts": [
+        {
+          "id": "customs_fact_duty_paid",
+          "label": "ከመጠን በላይ ክፍያ (Overpayment)",
+          "legalText": "አመልካቹ በዲክላሬሽን ቁጥር [declarationNumber] ለገቡ/ለወጡ ዕቃዎች [paidAmount] የጉምሩክ ቀረጥ ከፍሏል። (The Applicant paid Customs Duty of [paidAmount] for goods imported/exported under Declaration No. [declarationNumber].)",
+          "autoEvidence": [
+            "PaymentReceiptsTaxCustoms"
           ]
         },
-        "group_2": {
-          "title": "የኮሚሽኑ እምቢተኝነት (Commission Refusal)",
-          "facets": [
-            {
-              "id": "fact_refusal_to_pay",
-              "legalText": "ጉምሩክ ኮሚሽኑ የተመላሽ ገንዘብ ማመልከቻውን ለማስተናገድ ፈቃደኛ አልሆነም ወይም አልቻለም። (The Customs Commission has refused or failed to process the refund application.)",
-              "evidence": []
-            }
+        {
+          "id": "customs_fact_grounds_for_refund",
+          "label": "ከመጠን በላይ ክፍያ (Overpayment)",
+          "legalText": "ቀረጡ ተመላሽ ሊደረግ የሚገባው [reasonForRefund] ስለሆነ ነው። (The duty was refundable because [reasonForRefund].)",
+          "autoEvidence": [
+            "ImportExportDeclarationSAD",
+            "PaymentReceiptsTaxCustoms"
           ]
+        },
+        {
+          "id": "customs_fact_refusal_to_pay",
+          "label": "የኮሚሽኑ እምቢተኝነት (Commission Refusal)",
+          "legalText": "ጉምሩክ ኮሚሽኑ የተመላሽ ገንዘብ ማመልከቻውን ለማስተናገድ ፈቃደኛ አልሆነም ወይም አልቻለም። (The Customs Commission has refused or failed to process the refund application.)",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
-          "id": "relief_order_refund",
-          "text": "ጉምሩክ ኮሚሽኑ ከልክ በላይ የተከፈለውን [Amount] ብር እንዲመልስ ትዕዛዝ እንዲሰጥ። (Order the Customs Commission to refund the overpaid duty amount of [Amount].)",
-          "isDefault": true
+          "id": "customs_relief_order_refund",
+          "text": "ጉምሩክ ኮሚሽኑ ከልክ በላይ የተከፈለውን [refundAmount] ብር እንዲመልስ ትዕዛዝ እንዲሰጥ። (Order the Customs Commission to refund the overpaid duty amount of [refundAmount].)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
         }
-      ]
+      ],
+      "calculations": {}
     },
     "app_tax_stay_of_execution": {
       "documentTitle": "የግብር ክፍያ አፈጻጸም እንዲቆም ማመልከቻ (Application for Stay of Execution of Tax Payment)",
@@ -216,35 +209,36 @@
         "applicant": "አመልካች (Applicant)",
         "respondent": "መልስ ሰጪ (Respondent)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የእገዳ ምክንያቶች (Grounds for Stay)",
-          "facets": [
-            {
-              "id": "fact_execution_pending",
-              "legalText": "ገቢዎች ሚኒስቴር አከራካሪውን ግብር ለመሰብሰብ የአፈጻጸም ሂደቶችን (ለምሳሌ፣ የባንክ ሂሳቦችን ማገድ) ጀምሯል። (The MoR has begun execution procedures (e.g., freezing bank accounts) to collect the disputed tax.)",
-              "evidence": []
-            },
-            {
-              "id": "fact_irreparable_harm",
-              "legalText": "ሙሉውን ገንዘብ አሁን መክፈል ድርጅቱን ለኪሳራ የሚዳርግ ሲሆን በንግዱ ላይ ሊጠገን የማይችል ጉዳት ያስከትላል። (Forcing payment of the full amount now would render the company insolvent, causing irreparable harm to the business.)",
-              "evidence": []
-            },
-            {
-              "id": "fact_prima_facie",
-              "legalText": "ግብር ከፋዩ በይግባኝ ላይ የማሸነፍ ከፍተኛ ዕድል አለው። (The Taxpayer has a strong likelihood of success on appeal.)",
-              "evidence": []
-            }
-          ]
+      "facts": [
+        {
+          "id": "app_tax_fact_execution_pending",
+          "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
+          "legalText": "ገቢዎች ሚኒስቴር አከራካሪውን ግብር ለመሰብሰብ የአፈጻጸም ሂደቶችን (ለምሳሌ፣ የባንክ ሂሳቦችን ማገድ) ጀምሯል። (The MoR has begun execution procedures (e.g., freezing bank accounts) to collect the disputed tax.)",
+          "autoEvidence": []
+        },
+        {
+          "id": "app_tax_fact_irreparable_harm",
+          "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
+          "legalText": "ሙሉውን ገንዘብ አሁን መክፈል ድርጅቱን ለኪሳራ የሚዳርግ ሲሆን በንግዱ ላይ ሊጠገን የማይችል ጉዳት ያስከትላል። (Forcing payment of the full amount now would render the company insolvent, causing irreparable harm to the business.)",
+          "autoEvidence": []
+        },
+        {
+          "id": "app_tax_fact_prima_facie",
+          "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
+          "legalText": "ግብር ከፋዩ በይግባኝ ላይ የማሸነፍ ከፍተኛ ዕድል አለው። (The Taxpayer has a strong likelihood of success on appeal.)",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
-          "id": "relief_suspend_payment",
+          "id": "app_tax_relief_suspend_payment",
           "text": "የግብር ይግባኝ ኮሚሽኑ/ፍርድ ቤቱ የመጨረሻ ውሳኔ እስኪሰጥ ድረስ የገቢዎች ሚኒስቴር ያልተከፈለውን የግብር ግዴታ አፈጻጸም እንዲያቆም ትዕዛዝ እንዲሰጥ። (Order the Ministry of Revenue to suspend the execution of the outstanding tax liability until the final decision of the FTAC/Court.)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
         }
-      ]
+      ],
+      "calculations": {}
     },
     "app_tax_adr_request": {
       "documentTitle": "የግብር ክርክርን በአማራጭ መፍትሔ እንዲታይ ማመልከቻ (Application for Referral to Tax Dispute Alternative Resolution)",
@@ -265,32 +259,30 @@
         "applicant": "አመልካች (Applicant)",
         "respondent": "መልስ ሰጪ (Respondent)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የADR ምክንያቶች (Grounds for ADR)",
-          "facets": [
-            {
-              "id": "fact_willingness_to_settle",
-              "legalText": "ግብር ከፋዩም ሆነ ገቢዎች ሚኒስቴር ክርክሩን በጋራ ስምምነት ለመፍታት ፈቃደኛ መሆናቸውን አሳይተዋል። (Both the Taxpayer and the MoR have indicated a willingness to resolve the dispute through mutual agreement.)",
-              "evidence": []
-            },
-            {
-              "id": "fact_complex_facts",
-              "legalText": "ክርክሩ በፍርድ ቤት ክርክር ሳይሆን በባለሙያ ድርድር በተሻለ ሁኔታ ሊፈቱ የሚችሉ ውስብስብ የፍሬ ነገር ጉዳዮችን ያካትታል። (The dispute involves complex factual issues that would be better resolved through expert negotiation than court litigation.)",
-              "evidence": []
-            }
-          ]
+      "facts": [
+        {
+          "id": "app_tax_fact_willingness_to_settle",
+          "label": "የADR ምክንያቶች (Grounds for ADR)",
+          "legalText": "ግብር ከፋዩም ሆነ ገቢዎች ሚኒስቴር ክርክሩን በጋራ ስምምነት ለመፍታት ፈቃደኛ መሆናቸውን አሳይተዋል። (Both the Taxpayer and the MoR have indicated a willingness to resolve the dispute through mutual agreement.)",
+          "autoEvidence": []
+        },
+        {
+          "id": "app_tax_fact_complex_facts",
+          "label": "የADR ምክንያቶች (Grounds for ADR)",
+          "legalText": "ክርክሩ በፍርድ ቤት ክርክር ሳይሆን በባለሙያ ድርድር በተሻለ ሁኔታ ሊፈቱ የሚችሉ ውስብስብ የፍሬ ነገር ጉዳዮችን ያካትታል። (The dispute involves complex factual issues that would be better resolved through expert negotiation than court litigation.)",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
-          "id": "relief_refer_to_adr",
+          "id": "app_tax_relief_refer_to_adr",
           "text": "የጋራ ኮሚቴ እንዲቋቋም ወይም አስገዳጅ የስምምነት ስምምነት ላይ ለመድረስ ወደ አስታራቂ እንዲመራ ትዕዛዝ እንዲሰጥ። (Order the establishment of a joint committee or referral to a mediator to reach a binding settlement agreement.)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
         }
-      ]
+      ],
+      "calculations": {}
     }
   }
 }
-
-    

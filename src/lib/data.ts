@@ -82,7 +82,7 @@ export const DOCUMENT_ISSUERS = [
   "Ministry of Trade and Regional Integration (የንግድ እና ቀጣናዊ ትስስር ሚኒስቴር)",
   "Ministry of Revenues (የገቢዎች ሚኒስቴር)",
   "Ministry of Finance (የገንዘብ ሚኒስቴር)",
-  "Ethiopian Investment Commission (የኢትዮጵያ ኢንቨስትመንት ኮሚሽን)",
+  "Ethiopian Investment Commission (የኢትዮጵያ ኢንቨስትመን트 ኮሚሽን)",
   "National Bank of Ethiopia (የኢትዮጵያ ብሔራዊ ባንክ)",
   "Commercial Bank of Ethiopia (የኢትዮጵያ ንግድ ባንክ)",
 
@@ -626,6 +626,48 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     type: 'Witness',
     credentialLabel: 'Witness Full Name',
     credentialPlaceholder: 'e.g., Ato Tadesse Geremew'
+  },
+  OriginalPleadingCopy: {
+    id: 'OriginalPleadingCopy',
+    label: 'Copy of Original Pleading (የመጀመሪያ ክስ ወይም መቃወሚያ ቅጂ)',
+    type: 'Document',
+    credentialLabel: 'Pleading Title and Date',
+    credentialPlaceholder: 'e.g., Statement of Claim, 15/05/2024'
+  },
+  DraftAmendment: {
+    id: 'DraftAmendment',
+    label: 'Draft of the Proposed Amendment (የታቀደው ማሻሻያ ረቂቅ)',
+    type: 'Document',
+    credentialLabel: 'Version or Date of Draft',
+    credentialPlaceholder: 'e.g., v2, 25/06/2024'
+  },
+  IntervenerStatement: {
+    id: 'IntervenerStatement',
+    label: 'Intervener\'s Statement of Claim/Defence (ጣልቃ ገቢው ክስ/መቃወሚያ)',
+    type: 'Document',
+    credentialLabel: 'Title of Intervener Pleading',
+    credentialPlaceholder: 'e.g., Intervener Statement of Interest'
+  },
+  ThirdPartyNotice: {
+    id: 'ThirdPartyNotice',
+    label: 'Draft Third-Party Notice (ለሶስተኛ ወገን የጥሪ ማስታወቂያ ረቂቅ)',
+    type: 'Document',
+    credentialLabel: 'Reference to Original Suit',
+    credentialPlaceholder: 'e.g., In re: FHC/CV/123/2024'
+  },
+  ObjectionGroundsMemo: {
+    id: 'ObjectionGroundsMemo',
+    label: 'Memorandum of Objection Grounds (የተቃውሞ ምክንያቶች ማስታወሻ)',
+    type: 'Document',
+    credentialLabel: 'Date of Memo',
+    credentialPlaceholder: 'e.g., 25/06/2024'
+  },
+  ReviewApplicationMemo: {
+    id: 'ReviewApplicationMemo',
+    label: 'Review Application Memorandum (የፍርድ ዳግም የማየት ማስታወሻ)',
+    type: 'Document',
+    credentialLabel: 'Date of Memo',
+    credentialPlaceholder: 'e.g., 25/06/2024'
   }
 };
 
@@ -775,6 +817,18 @@ export const TEMPLATES: Template[] = [
         { id: 'crim_defence_justification_self_defence', label: 'Justification: Self-Defence', icon: Shield },
         { id: 'crim_defence_excuse_insanity', label: 'Excuse: Insanity / Non-Culpability', icon: Brain },
         { id: 'crim_defence_justification_necessity', label: 'Justification: Necessity', icon: ShieldAlert },
+    ]
+  },
+  {
+    id: 'civil_procedure_adjudications',
+    label: 'Civil Procedure Adjudications',
+    icon: Gavel,
+    subTemplates: [
+      { id: 'proc_amendment_of_pleading', label: 'Amendment of Pleading', icon: FileSignature },
+      { id: 'proc_intervention_by_third_party', label: 'Intervention by Third Party', icon: Users },
+      { id: 'proc_joinder_of_third_party', label: 'Joinder of Third Party', icon: Users },
+      { id: 'proc_judgment_objection_default', label: 'Objection to Default Judgment', icon: ShieldAlert },
+      { id: 'proc_review_of_judgment', label: 'Review of Judgment', icon: FileX2 },
     ]
   }
 ];
@@ -3078,7 +3132,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: "fact_company_purpose_impossible",
         label: "Grounds for Dissolution (የመፍረስ ምክንያቶች)",
-        legalText: "The attainment of the company's objective has become impossible, or the company is no longer a going concern. (የኩባንያው ዓላማ መሳካት የማይቻል ሆኗል፣ ወይም ኩባንያው ሥራውን መቀጠል አይችልም።)",
+        legalText: "The attainment of the company's objective has become impossible, or the company is no longer a going concern. (የኩባንያው ዓላማ መሳካት የማይቻል ሆኗል، ወይም ኩባንያው ሥራውን መቀጠል አይችልም።)",
         citation: "Comm. Code Art. 525(1)(b)",
         autoEvidence: ["BalanceSheetAndAudit", "ShareholdersResolution"]
       },
@@ -3218,7 +3272,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: "fact_imminent_threat_necessity",
         label: "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
-        legalText: "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
+        legalText: "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ، በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
         citation: "Crim. Code Art. 81(1)",
         autoEvidence: ["ProofOfImminentDanger"]
       },
@@ -3254,6 +3308,217 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         id: "relief_mitigation_necessity",
         text: "Alternatively, to mitigate the penalty due to the presence of a threatening situation that rendered the offense less culpable (mitigating circumstance). (በአማራጭ፣ ወንጀሉን በተጠያቂነት እንዲቀንስ በሚያስችል አስጊ ሁኔታ በመኖሩ ምክንያት ቅጣቱ እንዲቀልለት።)",
         isDefault: false
+      }
+    ]
+  },
+  proc_amendment_of_pleading: {
+    documentTitle: "Application for Amendment of Pleading (የፍሬ ነገር ማሻሻያ ጥያቄ)",
+    jurisdictionText: "Civil Procedure Code of 1965, Art. 222 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ ፪፻፳፪).",
+    partyTitles: {
+      applicant: "Applicant/Party Seeking Amendment (ማሻሻያ ጠያቂ)",
+      respondent: "Opposing Party (ተቃራኒ ወገን)"
+    },
+    facts: [
+      {
+        id: "fact_amendment_necessary_for_justice",
+        label: "Grounds for Amendment (የማሻሻያ ምክንያቶች)",
+        legalText: "The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice. (ማሻሻያው በወገኖች መካከል ያለውን እውነተኛ ክርክር ለመወሰን አስፈላጊ ሲሆን የፍትሕንም ዓላማ ለማሳካት የግድ ነው።)",
+        citation: "C.P.C. Art. 222(2)",
+        autoEvidence: ["OriginalPleadingCopy", "DraftAmendment"]
+      },
+      {
+        id: "fact_amendment_no_prejudice",
+        label: "Grounds for Amendment (የማሻሻያ ምክንያቶች)",
+        legalText: "The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs. (ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒ ወገንን በወጪ የማይካስ ፍትሐዊ ያልሆነ ጉዳት አያስከትልም።)",
+        citation: "C.P.C. Art. 222(1)",
+        autoEvidence: ["OriginalPleadingCopy"]
+      },
+      {
+        id: "fact_amendment_due_to_clerical_error",
+        label: "Grounds for Amendment (የማሻሻያ ምክንያቶች)",
+        legalText: "The amendment is minor and necessary to correct a clerical, computational, or drafting error in the original pleading. (ማሻሻያው ጥቃቅን ሲሆን በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአፃፃፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው።)",
+        citation: "C.P.C. Art. 222(1)",
+        autoEvidence: ["DraftAmendment"]
+      },
+      {
+        id: "fact_amendment_before_judgment",
+        label: "Procedural Timing (የሥነ ሥርዓት ጊዜ)",
+        legalText: "The application for amendment is being made before the court has delivered its final judgment. (የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ውሳኔ ከመስጠቱ በፊት እየቀረበ ነው።)",
+        citation: "C.P.C. Art. 222(1)",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_grant_amendment",
+        text: "To grant leave to amend the statement of claim/defence as per the draft annexed hereto. (በዚህ ከተያያዘው ረቂቅ መሠረት ክስ/መቃወሚያ እንዲሻሻል ፈቃድ እንዲሰጥ።)",
+        isDefault: true
+      }
+    ]
+  },
+  proc_intervention_by_third_party: {
+    documentTitle: "Application for Leave to Intervene in a Pending Suit (በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ)",
+    jurisdictionText: "Civil Procedure Code of 1965, Art. 238 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ ፪፻፴፰).",
+    partyTitles: {
+      applicant: "Intervener (ጣልቃ ገቢ)",
+      respondent: "Original Parties (የመጀመሪያ ተከራካሪ ወገኖች)"
+    },
+    facts: [
+      {
+        id: "fact_direct_legal_interest",
+        label: "Legal Interest and Necessity (ሕጋዊ ጥቅም እና አስፈላጊነት)",
+        legalText: "The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment. (ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል።)",
+        citation: "C.P.C. Art. 238(1)",
+        autoEvidence: ["IntervenerStatement"]
+      },
+      {
+        id: "fact_common_question_of_law_or_fact",
+        label: "Legal Interest and Necessity (ሕጋዊ ጥቅም እና አስፈላጊነት)",
+        legalText: "The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise. (ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል።)",
+        citation: "C.P.C. Art. 238(1)",
+        autoEvidence: ["IntervenerStatement"]
+      },
+      {
+        id: "fact_prevent_multiplicity_of_suits",
+        label: "Legal Interest and Necessity (ሕጋዊ ጥቅም እና አስፈላጊነት)",
+        legalText: "Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter. (ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል።)",
+        citation: "C.P.C. Art. 238(2)",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_grant_intervention",
+        text: "To grant the Applicant leave to intervene in the suit and to be joined as a Plaintiff/Defendant. (አመልካቹ በክሱ ውስጥ እንዲገባ እና እንደ ከሳሽ/ተከሳሽ እንዲታከል እንዲፈቀድለት።)",
+        isDefault: true
+      }
+    ]
+  },
+  proc_joinder_of_third_party: {
+    documentTitle: "Application to Join a Third Party (ሶስተኛ ወገንን በክሱ የማካተት ጥያቄ)",
+    jurisdictionText: "Civil Procedure Code of 1965, Art. 240 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ ፪፻፵).",
+    partyTitles: {
+      applicant: "Defendant Seeking Joinder (ሶስተኛ ወገንን እንዲካተት የሚፈልግ ተከሳሽ)",
+      respondent: "Third Party to be Joined (በክሱ እንዲካተት የተፈለገው ሶስተኛ ወገን)"
+    },
+    facts: [
+      {
+        id: "fact_right_to_indemnity",
+        label: "Basis for Third-Party Liability (ለሶስተኛ ወገን ኃላፊነት መሠረት)",
+        legalText: "The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant. (ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው።)",
+        citation: "C.P.C. Art. 240(1)(a)",
+        autoEvidence: ["ThirdPartyNotice"]
+      },
+      {
+        id: "fact_right_to_contribution",
+        label: "Basis for Third-Party Liability (ለሶስተኛ ወገን ኃላፊነት መሠረት)",
+        legalText: "The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim. (ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው።)",
+        citation: "C.P.C. Art. 240(1)(b)",
+        autoEvidence: ["ThirdPartyNotice"]
+      },
+      {
+        id: "fact_same_issue_arising",
+        label: "Basis for Third-Party Liability (ለሶስተኛ ወገን ኃላፊነት መሠረት)",
+        legalText: "The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant. (በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው።)",
+        citation: "C.P.C. Art. 240(1)(c)",
+        autoEvidence: ["ThirdPartyNotice"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_grant_third_party_notice",
+        text: "To grant leave to serve a third-party notice on [Name of Third Party] and join them as a third-party defendant. (በ[የሶስተኛ ወገን ስም] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ።)",
+        isDefault: true
+      }
+    ]
+  },
+  proc_judgment_objection_default: {
+    documentTitle: "Application for Judgment Objection / Setting Aside Ex Parte Decree (በአንድ ወገን ፍርድ ላይ የተቃውሞ ጥያቄ)",
+    jurisdictionText: "Civil Procedure Code of 1965, Arts. 250 & 252 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ ፪፻፶ እና ፪፻፶፪).",
+    partyTitles: {
+      applicant: "Objector / Defaulting Party (ተቃዋሚ / በሌሉበት የተፈረደበት ወገን)",
+      respondent: "Opposing Party (ተቃራኒ ወገን)"
+    },
+    facts: [
+      {
+        id: "fact_no_proper_service",
+        label: "Grounds for Setting Aside (የፍрዱ መሻር ምክንያቶች)",
+        legalText: "The decree was passed ex parte (in absence) because the Objector was not duly served with the summons or notice of the suit. (ፍርዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው።)",
+        citation: "C.P.C. Art. 252(1)(a)",
+        autoEvidence: ["ObjectionGroundsMemo"]
+      },
+      {
+        id: "fact_sufficient_cause_for_default",
+        label: "Grounds for Setting Aside (የፍрዱ መሻር ምክንያቶች)",
+        legalText: "The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause. (ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ።)",
+        citation: "C.P.C. Art. 252(1)(b)",
+        autoEvidence: ["ObjectionGroundsMemo"]
+      },
+      {
+        id: "fact_absence_of_jurisdiction",
+        label: "Grounds for Setting Aside (የፍрዱ መሻር ምክንያቶች)",
+        legalText: "The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree. (ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው።)",
+        citation: "C.P.C. Art. 5(2)",
+        autoEvidence: ["ObjectionGroundsMemo"]
+      },
+      {
+        id: "fact_objection_timely_filed",
+        label: "Procedural Timing (የሥነ ሥርዓት ጊዜ)",
+        legalText: "The objection is filed within the period prescribed by law (usually 30 days from knowledge of the decree). (ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ብዙውን ጊዜ ፍርዱ ከታወቀበት ቀን ጀምሮ በ30 ቀናት ውስጥ) ቀርቧል።)",
+        citation: "C.P.C. Art. 250/252",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_set_aside_judgment",
+        text: "To set aside the ex parte judgment/decree and restore the suit to the list of pending cases for trial on the merits. (በሌሉበት የተሰጠውን ፍርድ እንዲሻርና ክሱ በፍሬ ነገር እንዲታይ ወደ ተንጠለጠለ መዝገብ እንዲመለስ።)",
+        isDefault: true
+      }
+    ]
+  },
+  proc_review_of_judgment: {
+    documentTitle: "Application for Review of Judgment (የፍርድ ዳግም ማየት ጥያቄ)",
+    jurisdictionText: "Civil Procedure Code of 1965, Art. 376 (የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ ፫፻፸፮).",
+    partyTitles: {
+      applicant: "Applicant for Review (ዳግም እንዲታይለት ጠያቂ)",
+      respondent: "Opposing Party (ተቃራኒ ወገን)"
+    },
+    facts: [
+      {
+        id: "fact_new_and_important_evidence",
+        label: "Grounds for Review (የዳግም የማየት ምክንያቶች)",
+        legalText: "The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed. (አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል።)",
+        citation: "C.P.C. Art. 376(1)(a)",
+        autoEvidence: ["ReviewApplicationMemo"]
+      },
+      {
+        id: "fact_mistake_or_error_on_face",
+        label: "Grounds for Review (የዳግም የማየት ምክንያቶች)",
+        legalText: "There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument. (በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)።)",
+        citation: "C.P.C. Art. 376(1)(b)",
+        autoEvidence: ["ReviewApplicationMemo"]
+      },
+      {
+        id: "fact_other_sufficient_reason",
+        label: "Grounds for Review (የዳግም የማየት ምክንያቶች)",
+        legalText: "There is any other sufficient reason analogous to the specified grounds justifying a review. (ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ።)",
+        citation: "C.P.C. Art. 376(1)(c)",
+        autoEvidence: ["ReviewApplicationMemo"]
+      },
+      {
+        id: "fact_no_previous_appeal",
+        label: "Procedural Constraints (የሥነ ሥርዓት ገደቦች)",
+        legalText: "The Applicant has not previously filed an appeal against the judgment being sought for review. (አመልካቹ ዳግም እንዲታይለት ለሚጠይቀው ፍርድ ከዚህ በፊት ይግባኝ አላቀረበም።)",
+        citation: "C.P.C. Art. 376(2)",
+        autoEvidence: []
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_grant_review",
+        text: "To grant the application for review and re-open the case for hearing the new evidence or correcting the error. (የዳግም የማየት ጥያቄው ተቀባይነት አግኝቶ ክሱ አዲስ ማስረጃ ለማየት ወይም ስህተቱን ለማረም እንዲከፈት።)",
+        isDefault: true
       }
     ]
   }
@@ -3294,6 +3559,7 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
 
 
 

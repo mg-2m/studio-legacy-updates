@@ -36,7 +36,13 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 
 8.  **Bilingual Consistency:**
     *   **Relevancy Check:** N/A.
-    *   **Exhaustive Rendering Check:** All user-facing text sourced from the template (`documentTitle`, `partyTitles`, fact group titles, fact `legalText`, and relief `text`) MUST be provided in both English and Amharic, using the format "English (Amharic)".
+    *   **Exhaustive Rendering Check:** All user-facing text sourced from the template data MUST be provided in both English and Amharic, using the format "English (Amharic)". This includes:
+        *   Sidebar branch names and template titles (`template.label` and `subTemplate.label` in `src/lib/data.ts`).
+        *   Document titles (`documentTitle`).
+        *   Party titles (`partyTitles`).
+        *   Fact group titles.
+        *   Fact `legalText`.
+        *   Relief `text`.
 
 9.  **Default Relief Selection:**
     *   **Relevancy Check:** N/A.

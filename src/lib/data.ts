@@ -3,9 +3,6 @@ import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, T
 import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck } from 'lucide-react';
 
 // Import the raw JSON data from the new modular files
-// Note: This approach uses require and is simplified for this context. 
-// In a real-world Next.js app, you might use fs.readdirSync in a Node.js script at build time
-// or another method to dynamically import these. For this environment, we'll simulate it.
 import * as baseData from '@/legal_branches/_base.json';
 import * as contractLaw from '@/legal_branches/contract_law.json';
 import * as familyLaw from '@/legal_branches/family_law.json';
@@ -245,11 +242,11 @@ export const TEMPLATES: Template[] = [
     label: 'የአእምሯዊ ንብረት ህግ (IP Law)',
     icon: Brain,
     subTemplates: [
-        { id: 'ip_trademark_infringement', label: 'Trademark Infringement', icon: FileText },
-        { id: 'ip_patent_infringement', label: 'Patent Infringement', icon: FileText },
-        { id: 'ip_copyright_infringement', label: 'Copyright Infringement', icon: FileText },
-        { id: 'app_ip_interlocutory_injunction', label: 'Interlocutory Injunction', icon: Shield },
-        { id: 'app_ip_anton_piller', label: 'Seizure of Evidence Order', icon: ShieldAlert },
+        { id: 'ip_trademark_infringement', label: 'የንግድ ምልክት ጥሰት (Trademark Infringement)', icon: FileText },
+        { id: 'ip_patent_infringement', label: 'የፓተንት ጥሰት (Patent Infringement)', icon: FileText },
+        { id: 'ip_copyright_infringement', label: 'የቅጂ መብት ጥሰት (Copyright Infringement)', icon: FileText },
+        { id: 'app_ip_interlocutory_injunction', label: 'ጊዜያዊ እገዳ (Interlocutory Injunction)', icon: Shield },
+        { id: 'app_ip_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ (Seizure of Evidence)', icon: ShieldAlert },
     ]
   },
   {

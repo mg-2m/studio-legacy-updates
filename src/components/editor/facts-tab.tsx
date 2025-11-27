@@ -45,7 +45,9 @@ interface FactsTabProps {
 
 export default function FactsTab({ state, dispatch }: FactsTabProps) {
   const { maintenance, selectedFacts, selectedSubTemplate } = state;
-  const templateFacts = TEMPLATE_DATA[selectedSubTemplate]?.facts || [];
+  const templateData = TEMPLATE_DATA[selectedSubTemplate];
+
+  const templateFacts = templateData?.facts || [];
 
   const groupedFacts = templateFacts.reduce((acc, fact) => {
     const groupTitle = fact.label;

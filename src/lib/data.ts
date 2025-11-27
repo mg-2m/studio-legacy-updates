@@ -1,6 +1,8 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
 import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning } from 'lucide-react';
+import { differenceInDays, parseISO } from 'date-fns';
+
 
 // Import the raw JSON data from the new modular files
 import * as baseData from '@/legal_branches/_base.json';
@@ -39,6 +41,30 @@ const allTemplates = {
 const allEntities = {
     ...baseData.entities
 };
+
+// Formula Execution
+function executeFormula(formula: string, data: { [key: string]: any }): any {
+    const context = {
+        ...data,
+        differenceInDays: (date1: Date, date2: string | Date) => {
+             if (!date1 || !date2) return 0;
+            const d2 = typeof date2 === 'string' ? parseISO(date2) : date2;
+            if (isNaN(d2.getTime())) return 0;
+            return differenceInDays(date1, d2);
+        }
+    };
+    
+    const keys = Object.keys(context);
+    const values = Object.values(context);
+    
+    try {
+        const func = new Function(...keys, `return ${formula}`);
+        return func(...values);
+    } catch (e) {
+        console.error("Error executing formula:", e);
+        return 0; // Return 0 or some other default on error
+    }
+}
 
 
 export const COURT_HIERARCHY = {
@@ -221,11 +247,11 @@ export const TEMPLATES: Template[] = [
     label: 'የንብረት እና መሬት ህግ (Property & Land)',
     icon: Map,
     subTemplates: [
-        { id: 'property_petitory_vindication', label: 'የይዞታ ክስ (Petitory Action)', icon: FileText },
-        { id: 'property_possessory_restoration', label: 'የተነጠቀ ይዞታን ማስመለስ (Possessory Action)', icon: FileText },
-        { id: 'property_boundary_encroachment', label: 'የድንበር መጣስ (Boundary Encroachment)', icon: Map },
-        { id: 'property_nuisance_cessation', label: 'የአደጋ መከላከል (Nuisance Cessation)', icon: ShieldAlert },
-        { id: 'property_servitude_right_of_way', label: 'የመንገድ መብት (Servitude)', icon: Map },
+        { id: 'prop_petitory_vindication', label: 'የይዞታ ክስ (Petitory Action)', icon: FileText },
+        { id: 'prop_possessory_restoration', label: 'የተነጠቀ ይዞታን ማስመለስ (Possessory Action)', icon: FileText },
+        { id: 'prop_boundary_encroachment', label: 'የድንበር መጣስ (Boundary Encroachment)', icon: Map },
+        { id: 'prop_nuisance_cessation', label: 'የአደጋ መከላከል (Nuisance Cessation)', icon: ShieldAlert },
+        { id: 'prop_servitude_right_of_way', label: 'የመንገድ መብት (Servitude)', icon: Map },
         { id: 'app_stay_construction', label: 'ግንባታን የማገድ ትዕዛዝ (Suspend Construction)', icon: Shield },
         { id: 'app_local_inspection', label: 'የአካባቢ ምርመራ ትዕዛዝ (Local Inspection)', icon: Map },
         { id: 'property_possessory_disturbance', label: 'የይዞታ መረበሽ (Possessory Disturbance)', icon: FileText },
@@ -312,11 +338,11 @@ export const TEMPLATES: Template[] = [
     label: 'የፍትሐ ብሔር ሥነ ሥርዓት ውሳኔዎች (Civil Procedure)',
     icon: Gavel,
     subTemplates: [
-      { id: 'proc_amendment_of_pleading', label: 'የፍሬ ነገር ማሻሻያ (Amendment of Pleading)', icon: FileSignature },
-      { id: 'proc_intervention_by_third_party', label: 'የሶስተኛ ወገን ጣልቃ ገብነት (Intervention)', icon: Users },
-      { id: 'proc_joinder_of_third_party', label: 'የሶስተኛ ወገን ማካተት (Joinder)', icon: Users },
-      { id: 'proc_judgment_objection_default', label: 'የሌሉበት ፍርድ መቃወሚያ (Default Judgment Objection)', icon: ShieldAlert },
-      { id: 'proc_review_of_judgment', label: 'የፍርድ ዳግም ክለሳ (Review of Judgment)', icon: FileX2 },
+      { id: 'civ_proc_amendment_of_pleading', label: 'የፍሬ ነገር ማሻሻያ (Amendment of Pleading)', icon: FileSignature },
+      { id: 'civ_proc_intervention_by_third_party', label: 'የሶስተኛ ወገን ጣልቃ ገብነት (Intervention)', icon: Users },
+      { id: 'civ_proc_joinder_of_third_party', label: 'የሶስተኛ ወገን ማካተት (Joinder)', icon: Users },
+      { id: 'civ_proc_judgment_objection_default', label: 'የሌሉበት ፍርድ መቃወሚያ (Default Judgment Objection)', icon: ShieldAlert },
+      { id: 'civ_proc_review_of_judgment', label: 'የፍርድ ዳግም ክለሳ (Review of Judgment)', icon: FileX2 },
     ]
   }
 ];
@@ -356,6 +382,9 @@ if (initialTemplateData.calculations) {
         initialCalculations[calcKey] = {};
         calcConfig.inputs.forEach(input => {
             initialCalculations[calcKey][input.id] = input.defaultValue;
+        });
+        calcConfig.outputs.forEach(output => {
+            initialCalculations[calcKey][output.id] = executeFormula(calcConfig.formula, initialCalculations[calcKey]);
         });
     }
 }

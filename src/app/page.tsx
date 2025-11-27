@@ -56,7 +56,9 @@ function executeFormula(formula: string, data: { [key: string]: any }): any {
     const context = {
         ...data,
         differenceInDays: (date1: Date, date2: string | Date) => {
+            if (!date1 || !date2) return 0;
             const d2 = typeof date2 === 'string' ? parseISO(date2) : date2;
+             if (isNaN(d2.getTime())) return 0;
             return differenceInDays(date1, d2);
         }
     };
@@ -169,20 +171,20 @@ function appReducer(state: AppState, action: Action): AppState {
         const maintenanceRelief = TEMPLATE_DATA.family_divorce_dispute.reliefs.find(r => r.id === 'relief_child_support');
 
         if (newActive) {
-          if (EVIDENCE_REGISTRY['birth_certificate']) {
-              if (!newSmartEvidence['birth_certificate']) {
-                  newSmartEvidence['birth_certificate'] = { credentialId: '', active: true, type: 'auto' };
+          if (EVIDENCE_REGISTRY['BirthCertificate']) {
+              if (!newSmartEvidence['BirthCertificate']) {
+                  newSmartEvidence['BirthCertificate'] = { credentialId: '', active: true, type: 'auto' };
               } else {
-                  newSmartEvidence['birth_certificate'].active = true;
+                  newSmartEvidence['BirthCertificate'].active = true;
               }
           }
           if (maintenanceRelief && !newSelectedReliefs.some(r => r.id === 'relief_child_support')) {
               newSelectedReliefs.push(maintenanceRelief);
           }
         } else {
-          const isBirthCertRequiredByOtherFact = state.selectedFacts.some(fact => fact.autoEvidence?.includes('birth_certificate'));
+          const isBirthCertRequiredByOtherFact = state.selectedFacts.some(fact => fact.autoEvidence?.includes('BirthCertificate'));
           if (!isBirthCertRequiredByOtherFact) {
-              delete newSmartEvidence['birth_certificate'];
+              delete newSmartEvidence['BirthCertificate'];
           }
            if (maintenanceRelief) {
               const index = newSelectedReliefs.findIndex(r => r.id === 'relief_child_support');

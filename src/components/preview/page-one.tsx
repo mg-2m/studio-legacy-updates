@@ -51,7 +51,7 @@ export default function PageOne({ state }: PageOneProps) {
   const formatReliefText = (relief: Relief): string => {
     let text = relief.text;
 
-    if (relief.isDynamic && currentTemplateData.calculations) {
+    if (relief.isDynamic && calculations) {
         // Collect all values from all calculators
         const allCalcValues = Object.values(calculations).reduce((acc, curr) => ({ ...acc, ...curr }), {});
 
@@ -60,6 +60,12 @@ export default function PageOne({ state }: PageOneProps) {
             const value = allCalcValues[placeholder as keyof typeof allCalcValues];
             if (typeof value === 'number') {
                 return `<strong><u>${value.toFixed(2)}</u></strong>`;
+            }
+             if (typeof value === 'string' && value.includes('-')) {
+                // assume it's a date
+                 try {
+                    return `<strong><u>${new Date(value).toLocaleDateString('en-GB')}</u></strong>`;
+                } catch(e) { /* ignore */ }
             }
             return `<strong><u>${value || '______'}</u></strong>`;
         });

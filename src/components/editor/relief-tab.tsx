@@ -31,6 +31,8 @@ const ReliefCalculator: React.FC<{
 }> = ({ calcKey, config, state, dispatch }) => {
 
     const calcState = state.calculations[calcKey];
+    if (!calcState) return null;
+
 
     const handleInputChange = (field: string, value: any) => {
         dispatch({ type: 'UPDATE_CALCULATION', payload: { calcKey, field, value } });
@@ -64,7 +66,7 @@ const ReliefCalculator: React.FC<{
                                     <Button
                                       variant={"outline"}
                                       className={cn(
-                                        "w-full justify-start text-left font-normal",
+                                        "w-full justify-start text-left font-normal bg-white",
                                         !calcState[input.id] && "text-muted-foreground"
                                       )}
                                     >
@@ -75,7 +77,7 @@ const ReliefCalculator: React.FC<{
                                   <PopoverContent className="w-auto p-0">
                                     <Calendar
                                       mode="single"
-                                      selected={parseISO(calcState[input.id] as string)}
+                                      selected={calcState[input.id] ? parseISO(calcState[input.id] as string) : undefined}
                                       onSelect={(date) => handleInputChange(input.id, date?.toISOString().split('T')[0])}
                                       initialFocus
                                     />

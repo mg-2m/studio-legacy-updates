@@ -7,18 +7,18 @@
                 "keywords": ["inheritance", "intestate", "heirship", "declaration", "ወራሽነት", "ውርስ"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### የወራሽነት ማረጋገጫ (Heirship Declaration)\n\n**አጠቃቀም (Use Case):** ይህ አብነት አንድ ሟች ኑዛዜ ሳይተው ሲቀር፣ ሕጋዊ ወራሾቹ እነማን እንደሆኑ በፍርድ ቤት ለማረጋገጥ ያገለግላል። ይህም ወራሾቹ የሟቹን ንብረት በሕጋዊ መንገድ እንዲቆጣጠሩ እና እንዲያስተዳድሩ ያስችላቸዋል።\n\n**### Period of Limitation**\nየወራሽነት ጥያቄ በማንኛውም ጊዜ ሊቀርብ ይችላል፣ የጊዜ ገደብ የለውም።\n\n**### Prerequisites**\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** የሟቹ የሞት ማረጋገጫ ወረቀት።\n    *   **ተጨማሪ ማስረጃ:** የወራሾቹን ዝምድና የሚያረጋግጡ ሦስት ምስክሮች እና የቤተሰብ ግንኙነት የሚያሳይ የቀበሌ መታወቂያ።\n",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሟች ኑዛዜ ሳይተው ሲቀር፣ ሕጋዊ ወራሾቹ እነማን እንደሆኑ በፍርድ ቤት ለማረጋገጥ ያገለግላል። ይህም ወራሾቹ የሟቹን ንብረት በሕጋዊ መንገድ እንዲቆጣጠሩ እና እንዲያስተዳድሩ ያስችላቸዋል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው ሟቹ የመጨረሻ የመኖሪያ አድራሻ በነበረበት አካባቢ በሚገኘው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየወራሽነት ጥያቄ በማንኛውም ጊዜ ሊቀርብ ይችላል፣ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** የሟቹ የሞት ማረጋገጫ ወረቀት።\n    *   **ተጨማሪ ማስረጃ:** የወራሾቹን ዝምድና የሚያረጋግጡ ሦስት ምስክሮች እና የቤተሰብ ግንኙነት የሚያሳይ የቀበሌ መታወቂያ።\n",
             "partyTitles": {
-                "applicant": "Applicant / Interested Parties (አመልካች / ፍላጎት ያላቸው ወገኖች)",
-                "respondent": "Public Notice (የሕዝብ ማስታወቂያ)"
+                "applicant": "አመልካች / ፍላጎት ያላቸው ወገኖች (Applicant / Interested Parties)",
+                "respondent": "የሕዝብ ማስታወቂያ (Public Notice)"
             },
             "facts": {
                 "group_1": {
-                    "title": "Fact of Death (የሞት እውነታ)",
+                    "title": "የሞት እውነታ (Fact of Death)",
                     "facets": [
                         {
                             "id": "succ_fact_deceased_identity",
-                            "legalText": "The Deceased, [Name], passed away on [Date] at [Place]. (ሟቹ፣ [ስም]፣ በ [ቀን] በ [ቦታ] ከዚህ ዓለም በሞት ተለይቷል።)",
+                            "legalText": "ሟቹ፣ [Name]፣ በ [Date] በ [Place] ከዚህ ዓለም በሞት ተለይቷል። (The Deceased, [Name], passed away on [Date] at [Place].)",
                             "citation": "Civ. Code Art. 826",
                             "evidence": [
                                 "DeathCertificate"
@@ -27,28 +27,28 @@
                     ]
                 },
                 "group_2": {
-                    "title": "Relationship (Intestate Rules) (ግንኙነት (ያለ ኑዛዜ ውርስ ሕጎች))",
+                    "title": "ግንኙነት (ያለ ኑዛዜ ውርስ ሕጎች) (Relationship (Intestate Rules))",
                     "facets": [
                         {
                             "id": "succ_fact_relationship_descendant",
-                            "legalText": "The Applicants are the children/descendants of the deceased. (አመልካቾች የሟቹ ልጆች/ዘሮች ናቸው።)",
+                            "legalText": "አመልካቾች የሟቹ ልጆች/ዘሮች ናቸው። (The Applicants are the children/descendants of the deceased.)",
                             "citation": "Civ. Code Art. 842",
                             "evidence": []
                         },
                         {
                             "id": "succ_fact_no_will",
-                            "legalText": "The Deceased left no will, necessitating an intestate succession. (ሟቹ ኑዛዜ አልተወም، ይህም ያለ ኑዛዜ ውርስን አስፈላጊ ያደርገዋል።)",
+                            "legalText": "ሟቹ ኑዛዜ አልተወም، ይህም ያለ ኑዛዜ ውርስን አስፈላጊ ያደርገዋል። (The Deceased left no will, necessitating an intestate succession.)",
                             "citation": "Civ. Code Art. 829",
                             "evidence": []
                         }
                     ]
                 },
                 "group_3": {
-                    "title": "Witnesses (ምስክሮች)",
+                    "title": "ምስክሮች (Witnesses)",
                     "facets": [
                         {
                             "id": "succ_fact_witness_testimony",
-                            "legalText": "Three witnesses are present to testify that the Applicants are the only known heirs. (አመልካቾች ብቸኛ የታወቁ ወራሾች መሆናቸውን ለመመስከር ሦስት ምስክሮች ቀርበዋል።)",
+                            "legalText": "አመልካቾች ብቸኛ የታወቁ ወራሾች መሆናቸውን ለመመስከር ሦስት ምስክሮች ቀርበዋል። (Three witnesses are present to testify that the Applicants are the only known heirs.)",
                             "citation": "",
                             "evidence": [
                                 "WitnessAffidavitsSuccession"
@@ -60,13 +60,13 @@
             "reliefs": [
                 {
                     "id": "succ_relief_declare_heirs",
-                    "text": "Judgment declaring the Applicants as the sole legal heirs of the Deceased. (አመልካቾችን የሟቹ ብቸኛ ሕጋዊ ወራሾች መሆናቸውን የሚገልጽ ፍርድ እንዲሰጥ።)",
+                    "text": "አመልካቾችን የሟቹ ብቸኛ ሕጋዊ ወራሾች መሆናቸውን የሚገልጽ ፍርድ እንዲሰጥ። (Judgment declaring the Applicants as the sole legal heirs of the Deceased.)",
                     "isDefault": true,
                     "isDynamic": false
                 },
                 {
                     "id": "succ_relief_certificate_issuance",
-                    "text": "Order the issuance of a Certificate of Heirship. (የወራሽነት ማረጋገጫ ሰርተፍኬት እንዲሰጥ ትዕዛዝ እንዲሰጥ።)",
+                    "text": "የወራሽነት ማረጋገጫ ሰርተፍኬት እንዲሰጥ ትዕዛዝ እንዲሰጥ። (Order the issuance of a Certificate of Heirship.)",
                     "isDefault": true,
                     "isDynamic": false
                 }
@@ -80,18 +80,18 @@
                 "keywords": ["will", "probate", "testament", "ኑዛዜ", "ማጽደቅ"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### የኑዛዜ ማጽደቅ (Probate of Will)\n\n**አጠቃቀም (Use Case):** ይህ አብነት ሟቹ ሕጋዊ ኑዛዜ ትቶ ሲሄድ፣ ኑዛዜው የሟቹ የመጨረሻ ፍላጎት መሆኑን በፍርድ ቤት ለማረጋገጥ እና ለማጽደቅ ያገለግላል። ይህም በኑዛዜው የተጠቀሱት ፈጻሚዎች ወይም ተጠቃሚዎች ንብረቱን በኑዛዜው መሠረት እንዲያስተዳድሩ ያስችላቸዋል።\n\n**### Period of Limitation**\nኑዛዜን ለማስከበር ምንም የጊዜ ገደብ የለም።\n\n**### Prerequisites**\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** ዋናው የኑዛዜ ሰነድ እና የሟቹ የሞት ማረጋገጫ ወረቀት።\n    *   **ተጨማሪ ማስረጃ:** ኑዛዜው በሕዝብ ፊት የተደረገ ከሆነ፣ የምስክሮች መግለጫ።\n",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሟቹ ሕጋዊ ኑዛዜ ትቶ ሲሄድ፣ ኑዛዜው የሟቹ የመጨረሻ ፍላጎት መሆኑን በፍርድ ቤት ለማረጋገጥ እና ለማጽደቅ ያገለግላል። ይህም በኑዛዜው የተጠቀሱት ፈጻሚዎች ወይም ተጠቃሚዎች ንብረቱን በኑዛዜው መሠረት እንዲያስተዳድሩ ያስችላቸዋል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው ሟቹ የመጨረሻ የመኖሪያ አድራሻ በነበረበት አካባቢ በሚገኘው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nኑዛዜን ለማስከበር ምንም የጊዜ ገደብ የለም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** ዋናው የኑዛዜ ሰነድ እና የሟቹ የሞት ማረጋገጫ ወረቀት።\n    *   **ተጨማሪ ማስረጃ:** ኑዛዜው በሕዝብ ፊት የተደረገ ከሆነ፣ የምስክሮች መግለጫ።\n",
             "partyTitles": {
-                "applicant": "Petitioner (Executor/Beneficiary) (አመልካች (ፈጻሚ/ተጠቃሚ))",
-                "respondent": "N/A (የለም)"
+                "applicant": "አመልካች (ፈጻሚ/ተጠቃሚ) (Petitioner (Executor/Beneficiary))",
+                "respondent": "የለም (N/A)"
             },
             "facts": {
                 "group_1": {
-                    "title": "Validity of Will (የኑዛዜ ሕጋዊነት)",
+                    "title": "የኑዛዜ ሕጋዊነት (Validity of Will)",
                     "facets": [
                         {
                             "id": "succ_fact_will_existence",
-                            "legalText": "The Deceased left a valid will dated [Date]. (ሟቹ በ [ቀን] የተጻፈ ሕጋዊ ኑዛዜ ትቷል።)",
+                            "legalText": "ሟቹ በ [Date] የተጻፈ ሕጋዊ ኑዛዜ ትቷል። (The Deceased left a valid will dated [Date].)",
                             "citation": "Civ. Code Art. 912",
                             "evidence": [
                                 "WillTestament"
@@ -99,14 +99,14 @@
                         },
                         {
                             "id": "succ_fact_formality_public",
-                            "legalText": "The will was read in the presence of four witnesses and the Registrar. (ኑዛዜው በአራት ምስክሮች እና በሬጅስትራሩ ፊት ተነቧል።)",
+                            "legalText": "ኑዛዜው በአራት ምስክሮች እና በሬጅስትራሩ ፊት ተነቧል። (The will was read in the presence of four witnesses and the Registrar.)",
                             "citation": "Civ. Code Art. 881",
                             "evidence": [],
                             "mutexGroup": "will_type"
                         },
                         {
                             "id": "succ_fact_formality_holographic",
-                            "legalText": "The will is entirely written, dated, and signed by the hand of the deceased. (ኑዛዜው ሙሉ በሙሉ በሟቹ እጅ የተጻፈ፣ ቀን የተሰጠው እና የተፈረመ ነው።)",
+                            "legalText": "ኑዛዜው ሙሉ በሙሉ በሟቹ እጅ የተጻፈ، ቀን የተሰጠው እና የተፈረመ ነው። (The will is entirely written, dated, and signed by the hand of the deceased.)",
                             "citation": "Civ. Code Art. 885",
                             "evidence": [],
                             "mutexGroup": "will_type"
@@ -117,13 +117,13 @@
             "reliefs": [
                 {
                     "id": "succ_relief_validate_will",
-                    "text": "Judgment declaring the Will to be valid and the true last wish of the Deceased. (ኑዛዜው ሕጋዊ እና የሟቹ እውነተኛ የመጨረሻ ፍላጎት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።)",
+                    "text": "ኑዛዜው ሕጋዊ እና የሟቹ እውነተኛ የመጨረሻ ፍላጎት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ። (Judgment declaring the Will to be valid and the true last wish of the Deceased.)",
                     "isDefault": true,
                     "isDynamic": false
                 },
                 {
                     "id": "succ_relief_appoint_executor",
-                    "text": "Order confirming the Petitioner as the Executor of the will. (አመልካቹን የኑዛዜው ፈጻሚ መሆኑን የሚያረጋግጥ ትዕዛዝ እንዲሰጥ።)",
+                    "text": "አመልካቹን የኑዛዜው ፈጻሚ መሆኑን የሚያረጋግጥ ትዕዛዝ እንዲሰጥ። (Order confirming the Petitioner as the Executor of the will.)",
                     "isDefault": true,
                     "isDynamic": false
                 }
@@ -137,18 +137,18 @@
                 "keywords": ["partition", "estate", "division", "ክፍፍል", "ውርስ", "ንብረት"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### የውርስ ንብረት ክፍፍል (Estate Partition)\n\n**አጠቃቀም (Use Case):** ይህ አብነት ወራሾቹ በሕግ ከታወቁ በኋላ፣ የውርስ ንብረቱን እንዴት እንደሚከፋፈሉ መስማማት ሳይችሉ ሲቀሩ ጥቅም ላይ ይውላል። ክሱ ንብረቱ በፍርድ ቤት በኩል እንዲከፋፈል ለመጠየቅ ነው።\n\n**### Period of Limitation**\nCassation File 186329 መሠረት በ3 ዓመታት ውስጥ ከረጅም ማስረጃ ተደረገ ጀምሮ።\n\n**### Prerequisites**\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ 필요한 ማስረጃ:** ወራሽ መሆንዎን የሚያረጋግጥ የፍርድ ቤት ውሳኔ ወይም የወራሽነት ሰርተፍኬት።\n    *   **ተጨማሪ ማስረጃ:** የሟቹ እዳዎች መከፈላቸውን የሚያረጋግጥ ሰነድ (የዕዳ ነጻነት ማረጋገጫ)።\n",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ወራሾቹ በሕግ ከታወቁ በኋላ፣ የውርስ ንብረቱን እንዴት እንደሚከፋፈሉ መስማማት ሳይችሉ ሲቀሩ ጥቅም ላይ ይውላል። ክሱ ንብረቱ በፍርድ ቤት በኩል እንዲከፋፈል ለመጠየቅ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክስ መታየት ያለበት ውርስ ንብረቶቹ በሚገኙበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው። ንብረቶቹ በተለያዩ ቦታዎች የሚገኙ ከሆነ፣ የሟቹ የመጨረሻ መኖሪያ በነበረበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n**Cassation Decision:** The Federal Supreme Court Cassation Bench in **File No. 186329** (Vol. 23) clarified that the general 10-year limitation for contractual obligations does not apply. Instead, a **3-year** period of limitation applies, starting from when the co-heirs manifest an unequivocal intention to treat the property as their own private property, thereby adversely possessing against other co-heirs. (የፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በ**መዝገብ ቁጥር ፩፰፮፫፳፱** (ቅጽ ፳፫) በሰጠው ውሳኔ፣ የ10 ዓመት የይርጋ ጊዜ እንደማይሠራ በማረጋገጥ፣ የ**3 ዓመት** የይርጋ ጊዜ እንደሚኖር አስቀምጧል። ይህም ጊዜ መቆጠር የሚጀምረው አንድ ወራሽ ንብረቱን እንደግል ንብረቱ አድርጎ በሌሎች ወራሾች ላይ መብቱን የሚፃረር ድርጊት ከፈጸመበት ጊዜ ጀምሮ ነው።)\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ የሚያስፈልግ ማስረጃ:** ወራሽ መሆንዎን የሚያረጋግጥ የፍርድ ቤት ውሳኔ ወይም የወራሽነት ሰርተፍኬት።\n    *   **ተጨማሪ ማስረጃ:** የሟቹ እዳዎች መከፈላቸውን የሚያረጋግጥ ሰነድ (የዕዳ ነጻነት ማረጋገጫ)።\n",
             "partyTitles": {
-                "applicant": "Plaintiff (Heir) (ከሳሽ (ወራሽ))",
-                "respondent": "Defendant (Co-Heir) (ተከሳሽ (አብሮ ወራሽ))"
+                "applicant": "ከሳሽ (ወራሽ) (Plaintiff (Heir))",
+                "respondent": "ተከሳሽ (አብሮ ወራሽ) (Defendant (Co-Heir))"
             },
             "facts": {
                 "group_1": {
-                    "title": "Co-ownership (የጋራ ባለቤትነት)",
+                    "title": "የጋራ ባለቤትነት (Co-ownership)",
                     "facets": [
                         {
                             "id": "succ_fact_heirship_established",
-                            "legalText": "The parties have been legally declared as co-heirs. (ተዋዋይ ወገኖች በሕጋዊ መንገድ እንደ አብሮ ወራሾች ታውጇል።)",
+                            "legalText": "ተዋዋይ ወገኖች በሕጋዊ መንገድ እንደ አብሮ ወራሾች ታውጇል። (The parties have been legally declared as co-heirs.)",
                             "citation": "Civ. Code Art. 1060",
                             "evidence": [
                                 "CertificateofHeirship"
@@ -157,17 +157,17 @@
                     ]
                 },
                 "group_2": {
-                    "title": "Estate Status (የንብረት ሁኔታ)",
+                    "title": "የንብረት ሁኔታ (Estate Status)",
                     "facets": [
                         {
                             "id": "succ_fact_liquidation_complete",
-                            "legalText": "The debts of the estate have been paid, and the assets are ready for division. (የንብረቱ እዳዎች ተከፍለዋል، እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው።)",
+                            "legalText": "የንብረቱ እዳዎች ተከፍለዋል، እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው። (The debts of the estate have been paid, and the assets are ready for division.)",
                             "citation": "",
                             "evidence": []
                         },
                         {
                             "id": "succ_fact_disagreement",
-                            "legalText": "The Co-heirs cannot agree on a voluntary division of the assets. (አብሮ ወራሾቹ በንብረቶቹ በፈቃደኝነት ክፍፍል ላይ መስማማት አልቻሉም።)",
+                            "legalText": "አብሮ ወራሾቹ በንብረቶቹ በፈቃደኝነት ክፍፍል ላይ መስማማት አልቻሉም። (The Co-heirs cannot agree on a voluntary division of the assets.)",
                             "citation": "",
                             "evidence": []
                         }
@@ -177,13 +177,13 @@
             "reliefs": [
                 {
                     "id": "succ_relief_partition_kind",
-                    "text": "Order the physical division of the property in kind among the heirs. (ንብረቱን በአይነት በወራሾች መካከል እንዲከፋፈል ትዕዛዝ እንዲሰጥ።)",
+                    "text": "ንብረቱን በአይነት በወራሾች መካከል እንዲከፋፈል ትዕዛዝ እንዲሰጥ። (Order the physical division of the property in kind among the heirs.)",
                     "isDefault": true,
                     "isDynamic": false
                 },
                 {
                     "id": "succ_relief_partition_sale",
-                    "text": "Order the sale of the property and division of proceeds (if division in kind is impossible). (ንብረቱን በሽያጭ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ (በአይነት ክፍፍል የማይቻል ከሆነ)።)",
+                    "text": "ንብረቱን በሽያጭ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ (በአይነት ክፍፍል የማይቻል ከሆነ)። (Order the sale of the property and division of proceeds (if division in kind is impossible).)",
                     "isDefault": false,
                     "isDynamic": false
                 }
@@ -197,24 +197,24 @@
                 "keywords": ["liquidator", "estate", "appointment", "አጣሪ", "ሹመት"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### የአጣሪ ሹመት (Appoint Liquidator)\n\n**አጠቃቀም (Use Case):** ይህ አብነት የሟቹ ንብረት ውስብስብ ሲሆን ወይም ወራሾቹ ንብረቱን ለማስተዳደር መስማማት ሳይችሉ ሲቀሩ፣ ፍርድ ቤቱ ገለልተኛ የሆነ አጣሪ እንዲሾም ለመጠየቅ ያገለግላል።\n\n**### Period of Limitation**\nN/A\n\n**### Prerequisites**\n*   **አስፈላጊነት (Necessity):** የንብረቱ ውስብስብነት ወይም በወራሾች መካከል ያለው አለመግባባት መኖሩን ማሳየት ያስፈልጋል።\n*   **ማስረጃ (Required Evidence):** የንብረቱን ዝርዝር እና የእዳዎችን ሁኔታ የሚያሳይ ሰነድ።\n",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የሟቹ ንብረት ውስብስብ ሲሆን ወይም ወራሾቹ ንብረቱን ለማስተዳደር መስማማት ሳይችሉ ሲቀሩ፣ ፍርድ ቤቱ ገለልተኛ የሆነ አጣሪ እንዲሾም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ የሚቀርበው ውርሱን ለሚመለከተው ዋናው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት (Necessity):** የንብረቱ ውስብስብነት ወይም በወራሾች መካከል ያለው አለመግባባት መኖሩን ማሳየት ያስፈልጋል።\n*   **ማስረጃ (Required Evidence):** የንብረቱን ዝርዝር እና የእዳዎችን ሁኔታ የሚያሳይ ሰነድ።\n",
             "partyTitles": {
-                "applicant": "Applicant (አመልካች)",
-                "respondent": "N/A (የለም)"
+                "applicant": "አመልካች (Applicant)",
+                "respondent": "የለም (N/A)"
             },
             "facts": {
                 "group_1": {
-                    "title": "Necessity (አስፈላጊነት)",
+                    "title": "አስፈላጊነት (Necessity)",
                     "facets": [
                         {
                             "id": "succ_fact_estate_complexity",
-                            "legalText": "The estate involves complex debts and multiple assets requiring professional management. (ንብረቱ ሙያዊ አስተዳደር የሚጠይቁ ውስብስብ እዳዎች እና በርካታ ንብረቶችን ያካትታል።)",
+                            "legalText": "ንብረቱ ሙያዊ አስተዳደር የሚጠይቁ ውስብስብ እዳዎች እና በርካታ ንብረቶችን ያካትታል። (The estate involves complex debts and multiple assets requiring professional management.)",
                             "citation": "",
                             "evidence": []
                         },
                         {
                             "id": "succ_fact_no_nominee",
-                            "legalText": "The will did not nominate an executor, or the heirs cannot agree on one. (ኑዛዜው ፈጻሚ አልሾመም، ወይም ወራሾቹ በአንድ ላይ መስማማት አልቻሉም።)",
+                            "legalText": "ኑዛዜው ፈጻሚ አልሾመም، ወይም ወራሾቹ በአንድ ላይ መስማማት አልቻሉም። (The will did not nominate an executor, or the heirs cannot agree on one.)",
                             "citation": "Civ. Code Art. 950",
                             "evidence": []
                         }
@@ -224,7 +224,7 @@
             "reliefs": [
                 {
                     "id": "succ_relief_appoint_official",
-                    "text": "Order the appointment of a neutral Liquidator to administer the estate. (ንብረቱን ለማስተዳደር ገለልተኛ አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ።)",
+                    "text": "ንብረቱን ለማስተዳደር ገለልተኛ አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the appointment of a neutral Liquidator to administer the estate.)",
                     "isDefault": true,
                     "isDynamic": false
                 }
@@ -238,24 +238,24 @@
                 "keywords": ["seal", "estate", "preserve", "ማሸግ", "ንብረት"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### የንብረት ማሸግ (Seal Estate)\n\n**አጠቃቀም (Use Case):** ይህ አስቸኳይ ማመልከቻ፣ የውርስ ንብረት (በተለይ ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች) እንዳይሰወሩ ወይም እንዳይጠፉ ለመከላከል ፍርድ ቤቱ ንብረቱን እንዲያሽግ ለመጠየቅ ያገለግላል።\n\n**### Period of Limitation**\nN/A\n\n**### Prerequisites**\n*   **አስቸኳይነት (Urgency):** ንብረቱ ሊጠፋ ወይም ሊሰወር እንደሚችል የሚያሳይ ጠንካራ ስጋት መኖሩን ማሳየት ያስፈልጋል።\n*   **ማስረጃ (Required Evidence):** የአደጋውን አስቸኳይነት የሚያሳይ የምስክር ወረቀት ወይም ሌላ ማስረጃ።\n",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ የውርስ ንብረት (በተለይ ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች) እንዳይሰወሩ ወይም እንዳይጠፉ ለመከላከል ፍርድ ቤቱ ንብረቱን እንዲያሽግ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ የሚቀርበው ውርሱን ለሚመለከተው ዋናው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** ንብረቱ ሊጠፋ ወይም ሊሰወር እንደሚችል የሚያሳይ ጠንካራ ስጋት መኖሩን ማሳየት ያስፈልጋል።\n*   **ማስረጃ (Required Evidence):** የአደጋውን አስቸኳይነት የሚያሳይ የምስክር ወረቀት ወይም ሌላ ማስረጃ።\n",
             "partyTitles": {
-                "applicant": "Applicant (አመልካች)",
-                "respondent": "N/A (የለም)"
+                "applicant": "አመልካች (Applicant)",
+                "respondent": "የለም (N/A)"
             },
             "facts": {
                 "group_1": {
-                    "title": "Urgency (አስቸኳይነት)",
+                    "title": "አስቸኳይነት (Urgency)",
                     "facets": [
                         {
                             "id": "succ_fact_risk_misappropriation",
-                            "legalText": "There is an imminent risk that movables or documents may be removed or hidden. (ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች ሊወገዱ ወይም ሊደበቁ የሚችሉበት አስቸኳይ አደጋ አለ።)",
+                            "legalText": "ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች ሊወገዱ ወይም ሊደበቁ የሚችሉበት አስቸኳይ አደጋ አለ። (There is an imminent risk that movables or documents may be removed or hidden.)",
                             "citation": "Civ. Code Art. 946",
                             "evidence": []
                         },
                         {
                             "id": "succ_fact_minor_heirs",
-                            "legalText": "There are minor heirs whose interests require protection. (ጥበቃ የሚያስፈልጋቸው አካለ መጠን ያልደረሱ ወራሾች አሉ።)",
+                            "legalText": "ጥበቃ የሚያስፈልጋቸው አካለ መጠን ያልደረሱ ወራሾች አሉ። (There are minor heirs whose interests require protection.)",
                             "citation": "",
                             "evidence": []
                         }
@@ -265,7 +265,7 @@
             "reliefs": [
                 {
                     "id": "succ_relief_affix_seals",
-                    "text": "Order the court registrar to affix official seals on the deceased's property/safe. (የፍርድ ቤቱ ሬጅስትራር በሟቹ ንብረት/ካዝና ላይ ኦፊሴላዊ ማህተሞችን እንዲያደርግ ትዕዛዝ እንዲሰጥ።)",
+                    "text": "የፍርድ ቤቱ ሬጅስትራር በሟቹ ንብረት/ካዝና ላይ ኦፊሴላዊ ማህተሞችን እንዲያደርግ ትዕዛዝ እንዲሰጥ። (Order the court registrar to affix official seals on the deceased's property/safe.)",
                     "isDefault": true,
                     "isDynamic": false
                 }

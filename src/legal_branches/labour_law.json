@@ -11,7 +11,7 @@
         "keywords": ["unlawful termination", "dismissal", "reinstatement", "severance", "labour", "ስንብት", "የስራ ክርክር"],
         "jurisdictionType": "Labour Board / First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰራተኛ በሕገ-ወጥ መንገድ ከሥራ ሲሰናበት ካሳ፣ ወደ ሥራ መመለስ ወይም ሌሎች መብቶችን ለመጠየቅ ይጠቅማል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየሥራ ውሉ ከተቋረጠበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ ለሚመለከተው አካል (የሠራተኛ ጉዳይ ወሳኝ ቦርድ) ማቅረብ ያስፈልጋል (አንቀጽ 138(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የቅጥር ውል፣ የስንብት ደብዳቤ፣ እና የደመወዝ ወረቀት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰራተኛ በሕገ-ወጥ መንገድ ከሥራ ሲሰናበት ካሳ፣ ወደ ሥራ መመለስ ወይም ሌሎች መብቶችን ለመጠየቅ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሠራተኛ ጉዳዮች በመጀመሪያ ደረጃ የሚታዩት በሠራተኛ ጉዳይ ወሳኝ ቦርድ (Labour Adjudication Board) ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየሥራ ውሉ ከተቋረጠበት ቀን ጀምሮ ባሉት **ዘጠና (90) ቀናት** ውስጥ ለሚመለከተው አካል (የሠራተኛ ጉዳይ ወሳኝ ቦርድ) ማቅረብ ያስፈልጋል (አንቀጽ 138(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የቅጥር ውል (EmploymentContract)፣ የስንብት ደብዳቤ (TerminationLetter)፣ እና የደመወዝ ወረቀት (PayrollSlip)።\n",
       "facts": {
         "group_1": {
           "title": "የውል ግንኙነት (Prerequisites) (The Contractual Relationship)",
@@ -181,7 +181,7 @@
         "keywords": ["unpaid wages", "salary", "overtime", "labour", "ያልተከፈለ ደመወዝ", "ትርፍ ሰዓት"],
         "jurisdictionType": "Labour Board / First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሰራተኞች ያልተከፈላቸውን ደመወዝ፣ የትርፍ ሰዓት ክፍያ ወይም ሌሎች ሕጋዊ ክፍያዎችን ለመጠየቅ ይጠቅማል።\n\n### የጊዜ ገደብ (Period of Limitation)\nክፍያው መከፈል ከነበረበት ቀን ጀምሮ ባሉት ስድስት (6) ወራት ውስጥ ክስ መቅረብ አለበት (አንቀጽ 164(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የደመወዝ ወረቀት፣ የትርፍ ሰዓት ስራ ማረጋገጫ (ለምሳሌ ምስክር ወይም የሰዓት መቆጣጠሪያ)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሰራተኞች ያልተከፈላቸውን ደመወዝ፣ የትርፍ ሰዓት ክፍያ ወይም ሌሎች ሕጋዊ ክፍያዎችን ለመጠየቅ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሠራተኛ ጉዳዮች በመጀመሪያ ደረጃ የሚታዩት በሠራተኛ ጉዳይ ወሳኝ ቦርድ (Labour Adjudication Board) ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nክፍያው መከፈል ከነበረበት ቀን ጀምሮ ባሉት **ስድስት (6) ወራት** ውስጥ ክስ መቅረብ አለበት (አንቀጽ 164(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የደመወዝ ወረቀት (PayrollSlip)، የትርፍ ሰዓት ስራ ማረጋገጫ (ለምሳሌ ምስክር (UnpaidWageWitness) ወይም የሰዓት መቆጣጠሪያ (AttendanceSheet))።\n",
       "facts": {
         "group_1": {
           "title": "የደመወዝ ውዝፍ (Salary Arrears)",
@@ -270,7 +270,7 @@
         "keywords": ["employment injury", "workplace accident", "compensation", "disability", "የስራ ጉዳት", "አደጋ"],
         "jurisdictionType": "Labour Board / First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሥራ ላይ እያለ ወይም ከሥራ ጋር በተያያዘ ጉዳት የደረሰበት ሰራተኛ የሕክምና ወጪዎችን እና የጉዳት ካሳ እንዲከፈለው ለመጠየቅ ያገለግላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nጉዳቱ ከደረሰበት ቀን ጀምሮ ባሉት ስድስት (6) ወራት ውስጥ ለአሠሪው ማሳወቅ እና በአንድ (1) ዓመት ውስጥ ክስ ማቅረብ ያስፈልጋል (አንቀጽ 102 እና 164)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የአደጋ ሪፖርት፣ የህክምና ወጪ ደረሰኞች፣ እና የህክምና ቦርድ የጉዳት መጠን ግምገማ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሥራ ላይ እያለ ወይም ከሥራ ጋር በተያያዘ ጉዳት የደረሰበት ሰራተኛ የሕክምና ወጪዎችን እና የጉዳት ካሳ እንዲከፈለው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሠራተኛ ጉዳዮች በመጀመሪያ ደረጃ የሚታዩት በሠራተኛ ጉዳይ ወሳኝ ቦርድ (Labour Adjudication Board) ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nጉዳቱ ከደረሰበት ቀን ጀምሮ ባሉት ስድስት (6) ወራት ውስጥ ለአሠሪው ማሳወቅ እና በአንድ (1) ዓመት ውስጥ ክስ ማቅረብ ያስፈልጋል (አንቀጽ 102 እና 164)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የአደጋ ሪፖርት (AccidentReport)، የህክምና ወጪ ደረሰኞች (MedicalBill)، እና የህክምና ቦርድ የጉዳት መጠን ግምገማ (MedicalBoardCertificate)።\n",
       "facts": {
         "group_1": {
           "title": "ክስተቱ (The Incident)",

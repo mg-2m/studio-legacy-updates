@@ -64,6 +64,8 @@ Here is the **Corrected and Expanded** Frontend Protocol. It preserves your exac
 * **11.3. Interactive Preview:** **UPGRADE:** As the user types in the input field, the text in the Preview pane must update **instantaneously** (Real-time WYSIWYG), highlighting the inserted variable in **Bold Blue** to show context.
 
 ### 12. Interactive Relief Calculation (The Math Engine)
-* **12.1. Dynamic UI Rendering:** Detect `calculations` object. **UPGRADE:** Render a dedicated **Calculator Widget** (e.g., Severance Calculator) inside the Reliefs tab if the template requires it.
-* **12.2. Stateful Calculation:** Store inputs.
-* **12.3. Interactive Preview:** **UPGRADE:** The Preview text must dynamically replace placeholders like `{{principal}}` with the live calculated result. The UI should optionally show a "Math Breakdown" tooltip to explain the result.
+* **12.1. Dynamic UI Rendering:** The UI MUST detect a `calculations` object in a template and render a dedicated **Calculator Widget** (e.g., Severance Calculator) inside the Reliefs tab if the template requires it.
+* **12.2. Stateful Calculation:** The application state must store the calculator's inputs.
+* **12.3. Interactive Preview:** The Preview text must dynamically replace placeholders like `{{principal}}` in `dynamic` reliefs with the live calculated result from the corresponding calculator. The UI should optionally show a "Math Breakdown" tooltip to explain the result.
+
+    

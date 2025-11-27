@@ -34,7 +34,7 @@ A "Fact" is not a sentence; it is a logic block.
       * *Bad:* "Defendant failed to pay rent and damaged the property."
       * *Good (Fact A):* "Defendant failed to pay rent for the period of [Period]."
       * *Good (Fact B):* "Defendant caused damage to the property beyond reasonable wear and tear."
-  * **2.2. Mutually Exclusive Logic (`mutex`):** Facts that contradict each other MUST be grouped logically (even if visually separated). *Future-proofing: Prepare the JSON structure to handle `mutexGroup` IDs to prevent users from selecting contradictory facts.*
+  * **2.2. Mutually Exclusive Logic (`mutexGroup`):** Facts that contradict each other MUST be grouped logically by assigning them the same `mutexGroup` ID string. This prevents users from selecting legally contradictory facts (e.g., a marriage was 'civil' vs 'customary').
 
 ### 3\. Smart Evidence Topology (`_base.json`)
 
@@ -129,9 +129,24 @@ All `*.json` files must strictly adhere to this extended schema structure.
         {
           "id": "fam_relief_approve_agreement",
           "text": "The court to approve the attached divorce agreement and dissolve the marriage. (ፍርድ ቤቱ የተያያዘውን የፍቺ ስምምነት በማፅደቅ ጋብቻውን እንዲያፈርስልን።)",
-          "isDefault": true
+          "isDefault": true,
+          "isDynamic": false
         }
-      ]
+      ],
+      "calculations": {
+        "calc_damages": {
+          "title": "የጉዳት ማስያ (Damages Calculator)",
+          "description": "የሚሰላበትን ጉዳት ለማስላት...",
+          "inputs": [
+            { "id": "principal", "label": "ዋና መጠን (Principal Amount)", "type": "number", "defaultValue": 10000 },
+            { "id": "interestRate", "label": "የወለድ መጠን (%) (Interest Rate)", "type": "number", "defaultValue": 9 }
+          ],
+          "outputs": [
+            { "id": "totalDamages", "label": "ጠቅላላ ጉዳት (Total Damages)" }
+          ],
+          "formula": "principal * (interestRate / 100)"
+        }
+      }
     }
   ]
 }
@@ -149,12 +164,13 @@ Before committing any `.json` file, the Research & Documentation Wing MUST verif
 4.  **[ ] Evidence Map:** Are `autoEvidence` IDs present in `_base.json`?
 5.  **[ ] Placeholder Specificity:** Are placeholders clear instructions (e.g., `[Date]` vs `[Date of Contract]`)?
 6.  **[ ] Search Tags:** Are at least 5 relevant keywords included in the `meta` object?
-7.  **[ ] Calculator Logic:** If money is involved, is the formula object present and accurate?
+7.  **[ ] Calculator Logic:** If money is involved, is the `calculations` object present and accurate?
+8.  **[ ] Mutex Logic:** Are contradictory facts assigned a `mutexGroup` ID?
+9.  **[ ] Dynamic Reliefs:** Are reliefs dependent on a calculator marked with `isDynamic: true`?
 
 -----
 
 ### Command for the Research Wing:
 
 *When generating a new legal branch, you are now commanded to output the data strictly adhering to **The Supreme Mandate v2.0**. You will prioritize Cassation precedent, Jurisdiction logic, and Amharic legal accuracy above all else.*
-there fore by strictly understanding the purpose and results conduct the research and documentation for contract law branch and generate the single 
-xxxyyyzzz.json file
+    

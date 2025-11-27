@@ -69,6 +69,7 @@ export interface Fact {
   suggestedEvidence?: string[] | null; // New field for fallback suggestions
   isCustom?: boolean;
   values: { [key: string]: string | number | undefined };
+  mutexGroup?: string;
 }
 
 export interface Relief {

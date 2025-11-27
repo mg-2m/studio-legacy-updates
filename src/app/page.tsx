@@ -17,7 +17,7 @@ type Action =
   | { type: 'ADD_PARTY'; payload: { role: 'applicants' | 'respondents' } }
   | { type: 'REMOVE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string } }
   | { type: 'UPDATE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string; field: string; value: any } }
-  | { type: 'TOGGLE_FACT'; payload: { factId: string } }
+  | { type: 'TOGGLE_FACT'; payload: { factId: string; mutexGroup?: string } }
   | { type: 'UPDATE_FACT_VALUE'; payload: { factId: string; field: string; value: string } }
   | { type: 'ADD_CUSTOM_FACT' }
   | { type: 'UPDATE_FACT_TEXT'; payload: { id: string; text: string } }
@@ -107,35 +107,52 @@ function appReducer(state: AppState, action: Action): AppState {
     }
 
     case 'TOGGLE_FACT': {
-      const { factId } = action.payload;
-      const smartFactsForTemplate = TEMPLATE_DATA[state.selectedSubTemplate]?.facts || [];
-      const factExists = state.selectedFacts.some(f => f.id === factId);
-      
-      const newSelectedFacts = factExists
-        ? state.selectedFacts.filter(f => f.id !== factId)
-        : [...state.selectedFacts, { ...smartFactsForTemplate.find(f => f.id === factId)!, values: {} }];
+        const { factId, mutexGroup } = action.payload;
+        const allFactsForTemplate = TEMPLATE_DATA[state.selectedSubTemplate]?.facts || [];
+        const factToAdd = allFactsForTemplate.find(f => f.id === factId);
+        
+        if (!factToAdd) return state;
 
-      const newAutoLinkedIds = getAutoLinkedEvidence(newSelectedFacts);
-      
-      const newSmartEvidence = { ...state.smartEvidence };
-      
-      // Add new auto-linked evidence
-      newAutoLinkedIds.forEach(id => {
-          if (!newSmartEvidence[id]) {
-              newSmartEvidence[id] = { credentialId: '', active: true, type: 'auto' };
-          } else {
-              newSmartEvidence[id] = { ...newSmartEvidence[id], active: true, type: 'auto' };
-          }
-      });
+        let newSelectedFacts: Fact[];
 
-      // Deactivate or remove old auto-linked evidence if no longer required
-      for (const id in state.smartEvidence) {
-          if (state.smartEvidence[id].type === 'auto' && !newAutoLinkedIds.has(id)) {
-              delete newSmartEvidence[id];
-          }
-      }
-      
-      return { ...state, selectedFacts: newSelectedFacts, smartEvidence: newSmartEvidence };
+        const factExists = state.selectedFacts.some(f => f.id === factId);
+
+        if (mutexGroup) {
+            if (factExists) {
+                // If it's a radio button and already selected, do nothing.
+                newSelectedFacts = state.selectedFacts;
+            } else {
+                // Remove other facts from the same mutex group, then add the new one.
+                newSelectedFacts = state.selectedFacts.filter(f => f.mutexGroup !== mutexGroup);
+                newSelectedFacts.push({ ...factToAdd, values: {} });
+            }
+        } else {
+            // Standard checkbox behavior
+            newSelectedFacts = factExists
+                ? state.selectedFacts.filter(f => f.id !== factId)
+                : [...state.selectedFacts, { ...factToAdd, values: {} }];
+        }
+
+        const newAutoLinkedIds = getAutoLinkedEvidence(newSelectedFacts);
+        const newSmartEvidence = { ...state.smartEvidence };
+
+        // Add new auto-linked evidence
+        newAutoLinkedIds.forEach(id => {
+            if (!newSmartEvidence[id]) {
+                newSmartEvidence[id] = { credentialId: '', active: true, type: 'auto' };
+            } else {
+                newSmartEvidence[id] = { ...newSmartEvidence[id], active: true, type: 'auto' };
+            }
+        });
+
+        // Deactivate or remove old auto-linked evidence if no longer required
+        for (const id in state.smartEvidence) {
+            if (state.smartEvidence[id].type === 'auto' && !newAutoLinkedIds.has(id)) {
+                delete newSmartEvidence[id];
+            }
+        }
+
+        return { ...state, selectedFacts: newSelectedFacts, smartEvidence: newSmartEvidence };
     }
     
     case 'UPDATE_FACT_VALUE': {

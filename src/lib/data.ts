@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -494,6 +494,34 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     credentialLabel: 'Report Reference',
     credentialPlaceholder: 'e.g., EXT-AUD/2024/CLIENT-A'
   },
+  PoliceAccidentReport: {
+    id: 'PoliceAccidentReport',
+    label: 'Police/Traffic Accident Report',
+    type: 'Document',
+    credentialLabel: 'Report Number',
+    credentialPlaceholder: 'e.g., TFC-2024-12345'
+  },
+  MedicalExpenseReceipts: {
+    id: 'MedicalExpenseReceipts',
+    label: 'Medical Expense Receipts and Invoices',
+    type: 'Document',
+    credentialLabel: 'Total Amount or Invoice Number',
+    credentialPlaceholder: 'e.g., INV-HOSP-5678'
+  },
+  DoctorAssessment: {
+    id: 'DoctorAssessment',
+    label: 'Medical Doctor\'s Assessment and Certificate',
+    type: 'Document',
+    credentialLabel: 'Certificate Reference',
+    credentialPlaceholder: 'e.g., MED-ASSESS-2024-987'
+  },
+  LostEarningProof: {
+    id: 'LostEarningProof',
+    label: 'Proof of Lost Earnings (Salary Slips/Tax Docs)',
+    type: 'Document',
+    credentialLabel: 'Document Description',
+    credentialPlaceholder: 'e.g., May 2024 Salary Slip'
+  }
 };
 
 export const TEMPLATES: Template[] = [
@@ -604,6 +632,15 @@ export const TEMPLATES: Template[] = [
         { id: 'customs_claim_for_refund', label: 'Customs Refund Claim', icon: Receipt },
         { id: 'app_tax_stay_of_execution', label: 'Stay of Execution', icon: Shield },
         { id: 'app_tax_adr_request', label: 'ADR Request', icon: Handshake },
+    ]
+  },
+  {
+    id: 'tort_law',
+    label: 'Extra-Contractual (Tort) Law',
+    icon: Siren,
+    subTemplates: [
+      { id: 'tort_general_negligence_claim', label: 'General Negligence Claim', icon: FileText },
+      { id: 'tort_strict_liability_buildings', label: 'Strict Liability (Buildings)', icon: Building2 },
     ]
   }
 ];
@@ -2521,6 +2558,144 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: "relief_refer_to_adr",
         text: "Order the establishment of a joint committee or referral to a mediator to reach a binding settlement agreement.",
+        isDefault: true
+      }
+    ]
+  },
+  tort_general_negligence_claim: {
+    documentTitle: "Statement of Claim for Extra-Contractual Damages (Negligence)",
+    jurisdictionText: "Arts. 2028-2061 of the Civil Code of 1960 (Liability arising out of fault).",
+    partyTitles: {
+      applicant: "Plaintiff (ከሳሽ)",
+      respondent: "Defendant (ተከሳሽ)"
+    },
+    facts: [
+      {
+        id: "fact_fault_negligence_omission",
+        label: "The Causal Event & Negligence",
+        legalText: "The Defendant committed a negligent act or omission that violated the general duty of care (Art. 2028).",
+        citation: "Civil Code Art. 2028",
+        autoEvidence: ["PoliceAccidentReport", "WitnessStatements"]
+      },
+      {
+        id: "fact_traffic_violation",
+        label: "The Causal Event & Negligence",
+        legalText: "The fault arose from a specific breach of traffic laws or other legal/regulatory duty of caution.",
+        citation: "Civil Code Art. 2029",
+        autoEvidence: ["PoliceAccidentReport"]
+      },
+      {
+        id: "fact_liability_for_another_person",
+        label: "The Causal Event & Negligence",
+        legalText: "The Defendant is liable for the act of a minor, apprentice, or employee under their supervision or control (Art. 2085 et seq.).",
+        citation: "Civil Code Art. 2085",
+        autoEvidence: ["WitnessStatements", "PoliceAccidentReport"]
+      },
+      {
+        id: "fact_bodily_injury_damage",
+        label: "The Damage Sustained",
+        legalText: "The Plaintiff sustained bodily injury and incurred expenses for treatment, hospitalization, and rehabilitation.",
+        citation: "Civil Code Art. 2035",
+        autoEvidence: ["MedicalExpenseReceipts", "DoctorAssessment"]
+      },
+      {
+        id: "fact_property_damage_loss",
+        label: "The Damage Sustained",
+        legalText: "The Plaintiff's property (e.g., vehicle, structure) was damaged or destroyed, requiring repair or replacement.",
+        citation: "Civil Code Art. 2035",
+        autoEvidence: ["PropertyValuationReport", "PoliceAccidentReport"]
+      },
+      {
+        id: "fact_moral_damage_pain",
+        label: "The Damage Sustained",
+        legalText: "The Plaintiff suffered moral damage, including pain and suffering, emotional distress, and loss of amenity.",
+        citation: "Civil Code Art. 2036",
+        autoEvidence: ["DoctorAssessment", "WitnessStatements"]
+      },
+      {
+        id: "fact_direct_causation",
+        label: "Causation & Foreseeability",
+        legalText: "There is a direct and certain causal link between the Defendant's fault and the damage sustained by the Plaintiff (Art. 2034).",
+        citation: "Civil Code Art. 2034",
+        autoEvidence: ["PoliceAccidentReport", "DoctorAssessment"]
+      },
+      {
+        id: "fact_mitigation_of_damages",
+        label: "Causation & Foreseeability",
+        legalText: "The Plaintiff has taken reasonable steps to mitigate and reduce the extent of the damages sustained.",
+        citation: "Civil Code Art. 2043",
+        autoEvidence: ["MedicalExpenseReceipts", "PropertyValuationReport"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_medical_expenses",
+        text: "To order the Defendant to pay all costs incurred for medical treatment, hospital stay, and rehabilitation, in the amount of Birr [AMOUNT].",
+        isDefault: true
+      },
+      {
+        id: "relief_property_repair_cost",
+        text: "To order the Defendant to pay the cost of repairing/replacing the damaged property, in the amount of Birr [AMOUNT].",
+        isDefault: true
+      },
+      {
+        id: "relief_lost_earnings",
+        text: "To order the Defendant to pay compensation for lost earnings and future loss of income due to permanent incapacity, in the amount of Birr [AMOUNT].",
+        isDefault: true
+      },
+      {
+        id: "relief_moral_damages",
+        text: "To award the Plaintiff compensation for moral damage (pain, suffering, and distress) in the amount of Birr [AMOUNT].",
+        isDefault: true
+      }
+    ]
+  },
+  tort_strict_liability_buildings: {
+    documentTitle: "Statement of Claim for Damages (Strict Liability for Buildings)",
+    jurisdictionText: "Art. 2068 of the Civil Code of 1960 (Liability of the owner of a building).",
+    partyTitles: {
+      applicant: "Plaintiff (ከሳሽ)",
+      respondent: "Owner of the Building (የህንፃው ባለቤት)"
+    },
+    facts: [
+      {
+        id: "fact_building_owner_status",
+        label: "Basis for Strict Liability",
+        legalText: "The Respondent is the owner of the building or structure from which the damage originated.",
+        citation: "Civil Code Art. 2068",
+        autoEvidence: []
+      },
+      {
+        id: "fact_damage_caused_by_ruin",
+        label: "Basis for Strict Liability",
+        legalText: "The damage was caused by the total or partial ruin of the building, which was due to lack of repair or a defect in construction.",
+        citation: "Civil Code Art. 2068",
+        autoEvidence: ["WitnessStatements", "PropertyValuationReport"]
+      },
+      {
+        id: "fact_bodily_injury_building",
+        label: "Damage & Causation",
+        legalText: "The Plaintiff sustained bodily injury as a direct result of the building's ruin.",
+        citation: "Civil Code Art. 2068 & 2035",
+        autoEvidence: ["MedicalExpenseReceipts", "DoctorAssessment"]
+      },
+      {
+        id: "fact_property_damage_building",
+        label: "Damage & Causation",
+        legalText: "The Plaintiff's property was damaged as a direct result of the building's ruin.",
+        citation: "Civil Code Art. 2068 & 2035",
+        autoEvidence: ["PropertyValuationReport"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_building_repair_cost",
+        text: "To order the Defendant to pay the cost of repairing the resulting property damage, in the amount of Birr [AMOUNT].",
+        isDefault: true
+      },
+      {
+        id: "relief_building_medical_expenses",
+        text: "To order the Defendant to pay all costs incurred for bodily injury and treatment, in the amount of Birr [AMOUNT].",
         isDefault: true
       }
     ]

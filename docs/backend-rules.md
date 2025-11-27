@@ -1,80 +1,160 @@
-# Addis Crown Backend: The Supreme Mandate of Knowledge
+This is a pivotal moment for **Addis Crown**. By shifting from a monolithic backend to a modular, sector-specific architecture, you are moving from a "prototype" mindset to an "enterprise" mindset. This allows for infinite scalability, easier maintenance, and deep specialization.
 
-This document is the **single source of truth** for structuring and populating the legal knowledge base that powers the Addis Crown platform. Every `*.json` file within the `src/legal_branches/` directory MUST adhere to these principles without deviation. This is the codification of the "God Principle."
+To truly become the "beast" of the Ethiopian legal ecosystem, your backend rules must go beyond simple formatting. They must encode **legal logic**, **jurisdictional nuance**, and **search intelligence** directly into the JSON.
 
----
+Here is the expanded, high-fidelity **Supreme Mandate of Knowledge v2.0**. This document serves as the constitutional law for your codebase.
 
-## The 12 Foundational Backend Rules
+-----
 
-### 1. The Supreme Mandate: 360-Degree Knowledge Population
-This is the Prime Directive. Each legal branch must be treated as a deep, comprehensive domain. A shallow or incomplete knowledge base is an absolute failure.
+# Addis Crown Backend: The Supreme Mandate of Knowledge (v2.0)
 
-- **1.1. Exhaustive Research:** For every template, conduct expert-level research covering all common and edge-case scenarios. This includes substantive law, procedural requirements, and relevant cassation decisions.
-- **1.2. Fact Granularity:** Do not use broad facts. Break down legal arguments into their smallest constituent facets, each with its own citation and evidence links.
-- **1.3. Evidence Mapping:** Every fact MUST be mapped to its required (`autoEvidence`) and suggested (`suggestedEvidence`) evidence types. The `_base.json` encyclopedia must be updated with any new evidence entities discovered during research.
-- **1.4. Holistic Coverage:** Ensure templates cover not just primary claims but also common applications (e.g., injunctions, appeals, procedural motions) relevant to that branch.
+**Effective Date:** Immediately
+**Scope:** All files within `src/legal_branches/*.json` and `src/data/_base.json`
+**Status:** **NON-NEGOTIABLE**
 
-### 2. Bilingual Consistency: Amharic First
-All user-facing text strings within the JSON files must be bilingual, with Amharic appearing first, followed by the English translation in parentheses.
+This document defines the architecture of Truth for the Addis Crown platform. We do not just store text; we store **computable legal logic** tailored specifically to the Ethiopian Federal and Regional legal systems.
 
-- **2.1. Format:** The required format is **"Amharic (English)"**.
-- **2.2. Scope:** This applies to:
-    - `documentTitle`
-    - `jurisdictionText`
-    - All `partyTitles`
-    - Fact group `title`s
-    - Fact `legalText`
-    - Relief `text`
-    - `templateDescription`
-    - Evidence `title` and `description` in `_base.json`
-    - `credentialLabel` and `credentialPlaceholder` in `_base.json`
-    - Calculator `title`, `description`, and input/output `label`s.
+-----
 
-### 3. Dynamic Template Guidance
-Every template MUST have a `templateDescription` property. This is not optional.
+## Pillar I: The Architecture of Legal Depth
 
-- **3.1. Content Structure:** The description must be a structured, multi-part guide written in markdown.
-- **3.2. Period of Limitation:** It must clearly state any statutory deadlines or periods of limitation for filing the document.
-- **3.3. Evidentiary Prerequisites:** It must detail the core, non-negotiable evidence and facts required to establish a *prima facie* case. This section should explicitly list the essential documents or proofs.
+### 1\. The "Cassation-Ready" Research Standard
 
-### 4. Dynamic Fact Construction Schema
-To enable the "zero-typing" UI, `legalText` for facts MUST be structured with placeholders.
+In Ethiopia, interpretation of law is often governed by binding decisions from the Federal Supreme Court Cassation Bench. Templates must reflect this.
 
-- **4.1. Placeholder Syntax:** Use square brackets for dynamic values (e.g., `[Date]`, `[Amount]`, `[Location]`).
-- **4.2. Specificity:** Placeholders must be specific. Use `[Name of Infringing Product]` instead of just `[Product]`.
+  * **1.1. Cassation Binding:** If a template relies on a legal interpretation settled by the Cassation Bench, the `jurisdictionText` or specific `fact` citations MUST reference the File Number (መዝገብ ቁጥር) and Volume.
+  * **1.2. Statute of Limitations (ይርጋ):** Every `templateDescription` MUST contain a dedicated section titled `### Period of Limitation`. It must cite the specific Article from the Civil Code or relevant Proclamation that dictates when the claim expires.
+  * **1.3. Preconditions (Exhaustion of Remedies):** For Administrative Law templates, facts must explicitly check for the "Exhaustion of Internal Remedies" (የውስጥ ቅሬታ ሰሚ አካል) before allowing a court pleading generation.
 
-### 5. Interactive Relief Calculation Schema
-Templates that involve financial calculations MUST include a `calculations` object.
+### 2\. The Granular "Fact-Facet" Taxonomy
 
-- **5.1. Object Structure:** The `calculations` object must contain nested objects for each calculator, each with `title`, `description`, `inputs`, `outputs`, and a `formula`.
-- **5.2. Dynamic Relief Linking:** Any relief `text` that displays a calculated value MUST be marked with `isDynamic: true`.
-- **5.3. Placeholder Syntax:** Dynamic relief text MUST use double curly brace placeholders (e.g., `{{principal}}`, `{{interestAmount}}`) that correspond to an `id` in the `calculations` object's inputs or outputs.
+A "Fact" is not a sentence; it is a logic block.
 
-### 6. Default Relief Selection
-Every template MUST have at least one relief option with `isDefault: true`.
+  * **2.1. The Facet Principle:** Do not bundle multiple legal arguments into one checkbox.
+      * *Bad:* "Defendant failed to pay rent and damaged the property."
+      * *Good (Fact A):* "Defendant failed to pay rent for the period of [Period]."
+      * *Good (Fact B):* "Defendant caused damage to the property beyond reasonable wear and tear."
+  * **2.2. Mutually Exclusive Logic (`mutex`):** Facts that contradict each other MUST be grouped logically (even if visually separated). *Future-proofing: Prepare the JSON structure to handle `mutexGroup` IDs to prevent users from selecting contradictory facts.*
 
-- **6.1. Purpose:** This ensures a sensible starting state for the user and prevents a confusing empty relief section upon template selection.
+### 3\. Smart Evidence Topology (`_base.json`)
 
-### 7. Evidence Entity Schema
-The master evidence encyclopedia (`_base.json`) defines the schema for all evidence types.
+Evidence is the fuel of the legal engine. The `_base.json` file is the master registry.
 
-- **7.1. Required Fields:** Every evidence entity MUST have `title`, `description`, `credentialLabel`, and `credentialPlaceholder`.
-- **7.2. Contextual Credentials:** The `credentialLabel` and `credentialPlaceholder` must be specific and informative, guiding the user on exactly what information to provide (e.g., "Police File No. & Date" instead of "Reference").
+  * **3.1. Entity Standardization:** Evidence keys must be generic enough to be reused but specific enough to be useful. (e.g., `proof_of_marriage` is better than `marriage_certificate` because it could also include customary validity witnesses).
+  * **3.2. Credential Enforceability:** The `credentialPlaceholder` must guide the user to the exact data point required by the court registrar (e.g., "Registration No. & Date of Issue" rather than just "Number").
 
-### 8. Document & Party Title Schema
-- **8.1. Document Title:** Every template MUST have a `documentTitle` string.
-- **8.2. Jurisdiction Text:** Every template MUST have a `jurisdictionText` string, citing the primary law.
-- **8.3. Party Titles:** Every template MUST have a `partyTitles` object with `applicant` and `respondent` keys.
+-----
 
-### 9. Fact Schema
-- **9.1. Structure:** Every fact must belong to a group and have an `id`, `legalText`, `citation`, `autoEvidence` list, and `suggestedEvidence` list.
-- **9.2. Null Evidence:** If no evidence is associated, the value for `autoEvidence` or `suggestedEvidence` MUST be `null` or an empty array `[]`.
+## Pillar II: The "Amharic First" UI/UX Protocol
 
-### 10. Relief Schema
-- **10.1. Structure:** Every relief must have an `id`, `text`, and `isDefault` boolean property.
+### 4\. Bilingual Supremacy
 
-### 11. JSON Validity
-- **11.1. Syntax:** All `*.json` files MUST be well-formed JSON. No trailing commas, mismatched brackets, or syntax errors are permitted.
+  * **4.1. The "Legal Amharic" Standard:** Do not use colloquial Amharic. Use the specific terminology found in the Codes (e.g., use "ይርጋ" not "የጊዜ ገደብ", use "ክስ ማመልከቻ" not "የክስ ወረቀት").
+  * **4.2. Visual Hierarchy:** The Amharic text acts as the primary visual anchor. English text in parentheses is strictly for accessibility and educational reinforcement.
 
-### 12. File Naming Convention
-- **12.1. Convention:** All branch knowledge files MUST be named using snake_case and reside in `src/legal_branches/` (e.g., `ip_law.json`, `family_law.json`).
+### 5\. Zero-Typing variable Injection
+
+  * **5.1. Variable Semantics:** Placeholders must describe the *nature* of the data, not just the data type.
+      * *Bad:* `[Date]`
+      * *Good:* `[Date of Contract Signature]` or `[Date of Incident]`
+  * **5.2. Enumerated Options:** Where legally finite options exist (e.g., "Kebele," "Woreda," "Sub-City"), the backend should eventually support enum-lists rather than open text placeholders.
+
+-----
+
+## Pillar III: Search, Discovery, and Scalability
+
+### 6\. The "Search Meta" Object
+
+To make the platform the "Google of Ethiopian Law," every template object within the JSON MUST include a `meta` object.
+
+  * **6.1. Keywords (Tags):** A list of strings containing colloquial terms, synonyms, and misspellings users might search for.
+      * *Example:* `keywords: ["divorce", "feta", "tihilo", "family court", "custody"]`
+  * **6.2. Aliases:** Legal terms often have street names. (e.g., "Extra-Contractual Liability" is technically correct, but users search for "Tort" or "Compensation").
+
+### 7\. Modular File Architecture
+
+  * **7.1. Branch Segregation:** Files are strictly segregated by legal domain:
+      * `family_law.json`
+      * `labor_law.json`
+      * `commercial_law.json`
+      * `criminal_law.json`
+      * `property_land_law.json`
+  * **7.2. ID Namespacing:** All IDs within a file MUST be prefixed with the branch shorthand to avoid collisions when the app loads the global state.
+      * *Format:* `branch_subcat_action` (e.g., `fam_divorce_adultery_fact`).
+
+-----
+
+## Pillar IV: The Computational Law Schema (JSON Structure)
+
+All `*.json` files must strictly adhere to this extended schema structure.
+
+```json
+{
+  "meta": {
+    "branchName": "Family Law (የቤተሰብ ሕግ)",
+    "branchDescription": "Divorce, Custody, Maintenance, and Adoption proceedings under the Revised Family Code.",
+    "icon": "Users",
+    "version": "1.0"
+  },
+  "templates": [
+    {
+      "id": "fam_divorce_mutual",
+      "documentTitle": "Joint Petition for Divorce by Mutual Consent (በስምምነት ለመፋታት የሚቀርብ የጋራ አቤቱታ)",
+      "jurisdictionText": "Revised Family Code Proclamation No. 213/2000, Article 77 (የተሻሻለው የቤተሰብ ሕግ አዋጅ ቁጥር ፪፻፲፫/፲፱፻፺፪ አንቀጽ ፸፯)",
+      "meta": {
+        "keywords": ["divorce", "mutual consent", "agreement", "semimnet", "feta"],
+        "complexity": "Low",
+        "jurisdictionType": "Federal/Regional First Instance"
+      },
+      "templateDescription": "### Guide \n\n This template is for spouses who have agreed to divorce... \n\n ### Period of Limitation \n\n None (Action permissible at any time during marriage). \n\n ### Prerequisites \n\n 1. Marriage Certificate \n 2. Written Divorce Agreement",
+      "partyTitles": {
+        "applicant": "1st Petitioner (፩ኛ አቤቱታ አቅራቢ)",
+        "respondent": "2nd Petitioner (፪ኛ አቤቱታ አቅራቢ)"
+      },
+      "facts": {
+        "group_1": {
+          "title": "Existence of Marriage (የጋብቻ መኖር)",
+          "facets": [
+            {
+              "id": "fam_fact_marriage_civil",
+              "legalText": "The petitioners concluded a valid civil marriage on [Date] at [Place of Marriage]. (አቤቱታ አቅራቢዎች በ[Date] በ[Place of Marriage] ሕጋዊ የክብር መዝገብ ጋብቻ ፈፅመዋል።)",
+              "citation": "Rev. Family Code Art. 1",
+              "autoEvidence": ["proof_of_marriage"],
+              "mutexGroup": "marriage_type" 
+            }
+          ]
+        }
+      },
+      "reliefs": [
+        {
+          "id": "fam_relief_approve_agreement",
+          "text": "The court to approve the attached divorce agreement and dissolve the marriage. (ፍርድ ቤቱ የተያያዘውን የፍቺ ስምምነት በማፅደቅ ጋብቻውን እንዲያፈርስልን።)",
+          "isDefault": true
+        }
+      ]
+    }
+  ]
+}
+```
+
+-----
+
+## Pillar V: Quality Assurance (QA) Checklist
+
+Before committing any `.json` file, the Research & Documentation Wing MUST verify:
+
+1.  **[ ] Syntax Check:** Is the JSON valid? (Use a linter).
+2.  **[ ] Amharic Accuracy:** Are the legal terms strictly from the Proclamations?
+3.  **[ ] Citation Check:** Do the Article numbers actually match the text in the Proclamation?
+4.  **[ ] Evidence Map:** Are `autoEvidence` IDs present in `_base.json`?
+5.  **[ ] Placeholder Specificity:** Are placeholders clear instructions (e.g., `[Date]` vs `[Date of Contract]`)?
+6.  **[ ] Search Tags:** Are at least 5 relevant keywords included in the `meta` object?
+7.  **[ ] Calculator Logic:** If money is involved, is the formula object present and accurate?
+
+-----
+
+### Command for the Research Wing:
+
+*When generating a new legal branch, you are now commanded to output the data strictly adhering to **The Supreme Mandate v2.0**. You will prioritize Cassation precedent, Jurisdiction logic, and Amharic legal accuracy above all else.*
+there fore by strictly understanding the purpose and results conduct the research and documentation for contract law branch and generate the single 
+xxxyyyzzz.json file

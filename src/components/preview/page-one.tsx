@@ -1,12 +1,28 @@
 
+
 "use client";
 
-import type { AppState, Party, Relief } from '@/lib/types';
+import type { AppState, Party, Relief, Fact } from '@/lib/types';
 import { TEMPLATE_DATA } from '@/lib/data';
 
 interface PageOneProps {
   state: AppState;
 }
+
+// Function to format the fact text by replacing placeholders
+const formatFactText = (fact: Fact): string => {
+  let { legalText, values } = fact;
+  if (!values) return legalText;
+
+  for (const key in values) {
+    const placeholder = `[${key}]`;
+    const value = values[key];
+    // Replace placeholder with a bold, underlined value, or a default if empty
+    const replacement = `<strong><u>${value || '______'}</u></strong>`;
+    legalText = legalText.replace(new RegExp(placeholder.replace(/\[/g, '\\[').replace(/\]/g, '\\]'), 'g'), replacement);
+  }
+  return legalText;
+};
 
 export default function PageOne({ state }: PageOneProps) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, partyTitles, selectedReliefs, selectedSubTemplate } = state;
@@ -141,7 +157,7 @@ export default function PageOne({ state }: PageOneProps) {
         <ol className="ml-5 list-decimal">
           {selectedFacts.length > 0 ? selectedFacts.map((f, i) => (
             <li key={i} className="mb-2 text-justify">
-              <span className="bg-yellow-100 px-1">{f.legalText}</span>
+              <span className="bg-yellow-100 px-1" dangerouslySetInnerHTML={{ __html: formatFactText(f) }} />
               {f.citation && <span className="text-xs font-bold ml-1">[{f.citation}]</span>}
             </li>
           )) : <li className="text-gray-500 italic">Select facts from the editor...</li>}

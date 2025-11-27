@@ -1,4 +1,5 @@
 
+
 export interface Party {
   id: string;
   name: string;
@@ -62,6 +63,7 @@ export interface Fact {
   citation: string;
   autoEvidence: string[] | null;
   isCustom?: boolean;
+  values: { [key: string]: string | number | undefined };
 }
 
 export interface Relief {

@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import React, { useReducer, useEffect, useCallback } from 'react';
@@ -16,6 +17,7 @@ type Action =
   | { type: 'REMOVE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string } }
   | { type: 'UPDATE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string; field: string; value: any } }
   | { type: 'TOGGLE_FACT'; payload: { factId: string } }
+  | { type: 'UPDATE_FACT_VALUE'; payload: { factId: string; field: string; value: string } }
   | { type: 'ADD_CUSTOM_FACT' }
   | { type: 'UPDATE_FACT_TEXT'; payload: { id: string; text: string } }
   | { type: 'REMOVE_CUSTOM_FACT'; payload: { id: string } }
@@ -85,7 +87,7 @@ function appReducer(state: AppState, action: Action): AppState {
       
       const newSelectedFacts = factExists
         ? state.selectedFacts.filter(f => f.id !== factId)
-        : [...state.selectedFacts, smartFactsForTemplate.find(f => f.id === factId)!];
+        : [...state.selectedFacts, { ...smartFactsForTemplate.find(f => f.id === factId)!, values: {} }];
 
       const newAutoLinkedIds = getAutoLinkedEvidence(newSelectedFacts);
       
@@ -109,9 +111,22 @@ function appReducer(state: AppState, action: Action): AppState {
       
       return { ...state, selectedFacts: newSelectedFacts, smartEvidence: newSmartEvidence };
     }
+    
+    case 'UPDATE_FACT_VALUE': {
+      const { factId, field, value } = action.payload;
+      return {
+        ...state,
+        selectedFacts: state.selectedFacts.map(f => {
+          if (f.id === factId) {
+            return { ...f, values: { ...f.values, [field]: value } };
+          }
+          return f;
+        })
+      };
+    }
 
     case 'ADD_CUSTOM_FACT': {
-      const newFact = { id: 'c' + Date.now(), label: 'Custom', legalText: 'Enter custom fact...', citation: '', autoEvidence: null, isCustom: true };
+      const newFact = { id: 'c' + Date.now(), label: 'Custom', legalText: 'Enter custom fact...', citation: '', autoEvidence: null, isCustom: true, values: {} };
       return { ...state, selectedFacts: [...state.selectedFacts, newFact] };
     }
 

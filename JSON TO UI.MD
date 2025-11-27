@@ -6,7 +6,7 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 
 ---
 
-## The 10 Foundational Rules
+## The 11 Foundational Rules
 
 ### 1. Header and Case Metadata
 - **1.1. Relevancy Check:** The "Bench/Division" dropdown MUST be filtered by and only show benches relevant to the selected "Court Tier".
@@ -56,3 +56,8 @@ Each segment must pass both a **Relevancy Check** (ensuring only context-specifi
 - **10.2. Exhaustive Rendering Check:** The description must be bilingual (Amharic first) and be structured to clearly explain:
     - **Period of Limitation:** Any statutory deadlines for filing the document.
     - **Evidentiary & Factual Prerequisites:** The core, non-negotiable evidence and facts required to establish a *prima facie* case.
+
+### 11. Dynamic Fact Construction
+- **11.1. Placeholder-Driven UI:** The backend `legalText` for facts MUST utilize placeholders (e.g., `[Date]`, `[Amount]`, `[Name]`). The UI is required to parse these placeholders and dynamically render appropriate input fields (text, numbers, dates) when a fact is selected.
+- **11.2. Stateful Fact Data:** The application state must be capable of storing the user-provided values for each placeholder within a selected fact.
+- **11.3. Interactive Rendering:** The live preview must instantly update, replacing the placeholders in the fact's legal text with the user's input, achieving a true "what you see is what you get" experience for legal argument construction.

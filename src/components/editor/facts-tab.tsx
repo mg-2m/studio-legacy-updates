@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -12,7 +13,30 @@ import { Button } from '@/components/ui/button';
 import { TEMPLATE_DATA } from '@/lib/data';
 import type { AppState, Fact } from '@/lib/types';
 import { BrainCircuit, Info, Plus, X } from 'lucide-react';
-import { Badge } from '../ui/badge';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/collapsible';
+
+
+interface DynamicFieldProps {
+  fact: Fact;
+  field: string;
+  dispatch: React.Dispatch<any>;
+}
+
+const DynamicField: React.FC<DynamicFieldProps> = ({ fact, field, dispatch }) => {
+  const fieldKey = field.replace(/[\[\]]/g, '');
+  
+  return (
+    <div className="space-y-2">
+      <Label htmlFor={`fact-${fact.id}-${fieldKey}`} className="capitalize text-sm">{fieldKey}</Label>
+      <Input
+        id={`fact-${fact.id}-${fieldKey}`}
+        placeholder={`Enter ${fieldKey}...`}
+        value={fact.values[fieldKey] as string || ''}
+        onChange={(e) => dispatch({ type: 'UPDATE_FACT_VALUE', payload: { factId: fact.id, field: fieldKey, value: e.target.value } })}
+      />
+    </div>
+  );
+};
 
 interface FactsTabProps {
   state: AppState;
@@ -23,9 +47,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
   const { maintenance, selectedFacts, selectedSubTemplate } = state;
   const templateFacts = TEMPLATE_DATA[selectedSubTemplate]?.facts || [];
 
-  // Group facts by their group title, honouring the structure from backend.json
   const groupedFacts = templateFacts.reduce((acc, fact) => {
-    // The 'label' property now correctly represents the group title.
     const groupTitle = fact.label;
     if (!acc[groupTitle]) {
       acc[groupTitle] = [];
@@ -33,6 +55,12 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
     acc[groupTitle].push(fact);
     return acc;
   }, {} as Record<string, Fact[]>);
+
+  // Function to extract placeholders like [Date] or [Amount]
+  const getPlaceholders = (text: string): string[] => {
+    const regex = /\[(.*?)\]/g;
+    return (text.match(regex) || []);
+  };
 
   return (
     <div className="space-y-6">
@@ -125,22 +153,46 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
           <div key={groupTitle}>
             <h3 className="mb-2 text-base font-semibold text-primary">{groupTitle}</h3>
             <div className="space-y-3">
-              {facts.map(fact => (
-                <div key={fact.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
-                  <Checkbox
-                    id={`fact-${fact.id}`}
-                    checked={selectedFacts.some(sf => sf.id === fact.id)}
-                    onCheckedChange={() => dispatch({ type: 'TOGGLE_FACT', payload: { factId: fact.id } })}
-                    className="mt-1"
-                  />
-                  <div className="grid gap-1.5 leading-none">
-                    <label htmlFor={`fact-${fact.id}`} className="font-medium cursor-pointer">
-                      {fact.legalText}
-                    </label>
-                    <p className="text-sm text-muted-foreground">{fact.citation}</p>
-                  </div>
-                </div>
-              ))}
+              {facts.map(fact => {
+                const isSelected = selectedFacts.some(sf => sf.id === fact.id);
+                const selectedFact = selectedFacts.find(sf => sf.id === fact.id);
+                const placeholders = getPlaceholders(fact.legalText);
+                
+                return (
+                  <Collapsible key={fact.id} open={isSelected} onOpenChange={() => dispatch({ type: 'TOGGLE_FACT', payload: { factId: fact.id }})}>
+                    <div className="rounded-md border bg-background has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
+                      <div className="flex items-start space-x-3 p-4">
+                        <CollapsibleTrigger asChild>
+                           <Checkbox
+                            id={`fact-${fact.id}`}
+                            checked={isSelected}
+                            className="mt-1"
+                          />
+                        </CollapsibleTrigger>
+                        <div className="grid gap-1.5 leading-none flex-1">
+                          <CollapsibleTrigger asChild>
+                            <label htmlFor={`fact-${fact.id}`} className="font-medium cursor-pointer">
+                              {fact.legalText}
+                            </label>
+                          </CollapsibleTrigger>
+                          <p className="text-sm text-muted-foreground">{fact.citation}</p>
+                        </div>
+                      </div>
+
+                      {isSelected && placeholders.length > 0 && (
+                        <CollapsibleContent>
+                          <div className="border-t bg-blue-50/50 dark:bg-blue-950/20 p-4 space-y-4">
+                            <h4 className="font-semibold text-blue-800 dark:text-blue-300">Fact Details</h4>
+                            {placeholders.map(p => (
+                              <DynamicField key={p} fact={selectedFact!} field={p} dispatch={dispatch} />
+                            ))}
+                          </div>
+                        </CollapsibleContent>
+                      )}
+                    </div>
+                  </Collapsible>
+                );
+              })}
             </div>
           </div>
         ))}

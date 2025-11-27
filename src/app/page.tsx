@@ -169,20 +169,20 @@ function appReducer(state: AppState, action: Action): AppState {
         const maintenanceRelief = TEMPLATE_DATA.family_divorce_dispute.reliefs.find(r => r.id === 'relief_child_support');
 
         if (newActive) {
-          if (EVIDENCE_REGISTRY['birth_cert']) {
-              if (!newSmartEvidence['birth_cert']) {
-                  newSmartEvidence['birth_cert'] = { credentialId: '', active: true, type: 'auto' };
+          if (EVIDENCE_REGISTRY['birth_certificate']) {
+              if (!newSmartEvidence['birth_certificate']) {
+                  newSmartEvidence['birth_certificate'] = { credentialId: '', active: true, type: 'auto' };
               } else {
-                  newSmartEvidence['birth_cert'].active = true;
+                  newSmartEvidence['birth_certificate'].active = true;
               }
           }
           if (maintenanceRelief && !newSelectedReliefs.some(r => r.id === 'relief_child_support')) {
               newSelectedReliefs.push(maintenanceRelief);
           }
         } else {
-          const isBirthCertRequiredByOtherFact = state.selectedFacts.some(fact => fact.autoEvidence?.includes('birth_cert'));
+          const isBirthCertRequiredByOtherFact = state.selectedFacts.some(fact => fact.autoEvidence?.includes('birth_certificate'));
           if (!isBirthCertRequiredByOtherFact) {
-              delete newSmartEvidence['birth_cert'];
+              delete newSmartEvidence['birth_certificate'];
           }
            if (maintenanceRelief) {
               const index = newSelectedReliefs.findIndex(r => r.id === 'relief_child_support');

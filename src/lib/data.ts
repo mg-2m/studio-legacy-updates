@@ -146,15 +146,9 @@ export const DOCUMENT_ISSUERS = [
   "Other (ሌላ)",
 ];
 
-export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.values(allEntities).reduce((acc: EvidenceRegistry, entity: any, index) => {
-    // Generate a simple key based on the title, e.g., "Written Contract" -> "written_contract"
-    const key = entity.title.toLowerCase().replace(/[^a-zA-Z0-9]/g, ' ').replace(/\s+/g, '_');
-    
-    // Fallback key if the generated one is not unique or empty
-    const finalKey = acc[key] ? `${key}_${index}` : key;
-    
-    acc[finalKey] = {
-        id: finalKey,
+export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.entries(allEntities).reduce((acc: EvidenceRegistry, [key, entity]: [string, any]) => {
+    acc[key] = {
+        id: key,
         label: entity.title,
         type: 'Document', // Defaulting to document, can be refined
         credentialLabel: `${entity.title} Reference`,

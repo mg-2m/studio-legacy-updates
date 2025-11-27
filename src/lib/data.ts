@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck } from 'lucide-react';
 
 export const COURT_HIERARCHY = {
   "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
@@ -591,6 +591,41 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = {
     type: 'Document',
     credentialLabel: 'Date of Compilation',
     credentialPlaceholder: 'e.g., 30/06/2024'
+  },
+  MedicalCertificateMentalState: {
+    id: 'MedicalCertificateMentalState',
+    label: 'Medical Certificate of Mental State (የአእምሮ ሁኔታ የህክምና ማስረጃ)',
+    type: 'Document',
+    credentialLabel: 'Certificate Reference',
+    credentialPlaceholder: 'e.g., PSY-CERT-2024-001'
+  },
+  ProofOfImminentDanger: {
+    id: 'ProofOfImminentDanger',
+    label: 'Proof of Imminent Danger (የቅርብ አደጋ ማስረጃ)',
+    type: 'Document',
+    credentialLabel: 'Evidence Description (e.g., Photo, Report No.)',
+    credentialPlaceholder: 'e.g., Police Report TFC-2024-123'
+  },
+  OfficialOrderDocument: {
+    id: 'OfficialOrderDocument',
+    label: 'Official Order or Warrant (ኦፊሴላዊ ትዕዛዝ ወይም ማዘዣ)',
+    type: 'Document',
+    credentialLabel: 'Order/Warrant Reference Number',
+    credentialPlaceholder: 'e.g., ORD-2024-555'
+  },
+  VictimConsentForm: {
+    id: 'VictimConsentForm',
+    label: 'Victim\'s Written Consent (ተጎጂው የሰጠው የጽሑፍ ፈቃድ)',
+    type: 'Document',
+    credentialLabel: 'Date of Consent',
+    credentialPlaceholder: 'e.g., 25/06/2024'
+  },
+  WitnessStatementsIntoxication: {
+    id: 'WitnessStatementsIntoxication',
+    label: 'Witness Statements on Intoxication (ስለ ስካር ሁኔታ የምስክርነት ቃል)',
+    type: 'Witness',
+    credentialLabel: 'Witness Full Name',
+    credentialPlaceholder: 'e.g., Ato Tadesse Geremew'
   }
 };
 
@@ -730,6 +765,16 @@ export const TEMPLATES: Template[] = [
       { id: 'comm_restitution_nonpayment', label: 'Payment on Negotiable Instrument', icon: Banknote },
       { id: 'comm_preventive_restructuring', label: 'Preventive Debt Restructuring', icon: Shield },
       { id: 'comm_dissolution_by_court', label: 'Judicial Dissolution', icon: FileX2 },
+    ]
+  },
+  {
+    id: 'criminal_law_defences',
+    label: 'Criminal Law Defences',
+    icon: ShieldCheck,
+    subTemplates: [
+        { id: 'crim_defence_justification_self_defence', label: 'Justification: Self-Defence', icon: Shield },
+        { id: 'crim_defence_excuse_insanity', label: 'Excuse: Insanity / Non-Culpability', icon: Brain },
+        { id: 'crim_defence_justification_necessity', label: 'Justification: Necessity', icon: ShieldAlert },
     ]
   }
 ];
@@ -2842,7 +2887,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
       {
         id: "fact_abuse_of_discretion",
         label: "Grounds for Annulment (የውሳኔው መሻር ምክንያቶች)",
-        legalText: "The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39). (ተቋሙ ሕጋዊ ሥልጣኑን ያለአግባብ በመጠቀም፣ ወይም ለተገቢ ላልሆነ ዓላማ ውሳኔ በመስጠት የሕግ አቅሙን አላግባብ ተጠቅሟል።)",
+        legalText: "The Agency abused its discretionary power by acting outside the scope of its legal mandate or for an improper purpose (Art. 39). (ተቋሙ ሕጋዊ ሥልጣኑን ያለአግባብ በመጠቀም، ወይም ለተገቢ ላልሆነ ዓላማ ውሳኔ በመስጠት የሕግ አቅሙን አላግባብ ተጠቅሟል።)",
         citation: "Proc. 1183/2020 Art. 39",
         autoEvidence: ["FinalAdminDecision"]
       }
@@ -3071,6 +3116,146 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = {
         isDefault: true
       }
     ]
+  },
+  crim_defence_justification_self_defence: {
+    documentTitle: "Plea of Justification: Self-Defence (የሕጋዊነት መቃወሚያ፡- በራስ መከላከል)",
+    jurisdictionText: "Criminal Code Proclamation No. 414/2004, Arts. 79-80 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፸፱-፹).",
+    partyTitles: {
+      applicant: "Defendant (ተከሳሽ)",
+      respondent: "Public Prosecutor (ዐቃቤ ሕግ)"
+    },
+    facts: [
+      {
+        id: "fact_imminent_unlawful_attack",
+        label: "The Nature of the Attack (የጥቃቱ ባሕሪ)",
+        legalText: "The Defendant was facing an actual, imminent, and unlawful attack upon their life, limb, or property. (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በንብረቱ ላይ ሊደርስ ያለ ትክክለኛ፣ የቅርብ እና ሕገ-ወጥ ጥቃት ገጥሞት ነበር።)",
+        citation: "Crim. Code Art. 79(1)",
+        autoEvidence: ["ProofOfImminentDanger"]
+      },
+      {
+        id: "fact_defence_of_third_party",
+        label: "The Nature of the Attack (የጥቃቱ ባሕሪ)",
+        legalText: "The Defendant acted to defend a third party who was also facing an imminent, unlawful attack. (ተከሳሹ ጥቃት ሊደርስበት ያለን ሌላ ሰው ለመከላከል እርምጃ ወስዷል።)",
+        citation: "Crim. Code Art. 79(2)",
+        autoEvidence: ["ProofOfImminentDanger", "witness_statements"]
+      },
+      {
+        id: "fact_no_other_means",
+        label: "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
+        legalText: "The act of defence was necessary because there was no other possible means of preventing the attack. (ጥቃቱን ለመከላከል ሌላ አማራጭ መንገድ ስላልነበረው የመከላከል ተግባሩ አስፈላጊ ነበር።)",
+        citation: "Crim. Code Art. 80(1)",
+        autoEvidence: ["witness_statements"]
+      },
+      {
+        id: "fact_proportionality",
+        label: "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
+        legalText: "The means used for defence were proportional to the gravity of the attack and the threatened harm. (ለመከላከል ጥቅም ላይ የዋለው ዘዴ ከጥቃቱ ክብደት እና ከሚሰጋው ጉዳት ጋር የተመጣጣኝ ነበር።)",
+        citation: "Crim. Code Art. 80(2)",
+        autoEvidence: ["ProofOfImminentDanger", "witness_statements"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_acquittal_justification",
+        text: "To acquit the Defendant on the ground that the act was justified and therefore lawful. (ድርጊቱ ህጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
+        isDefault: true
+      }
+    ]
+  },
+  crim_defence_excuse_insanity: {
+    documentTitle: "Plea of Excuse: Insanity / Non-Culpability (የማስተንፈሻ መቃወሚያ፡- የአእምሮ ሕመም/ተጠያቂነት አለመኖር)",
+    jurisdictionText: "Criminal Code Proclamation No. 414/2004, Art. 50 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፶).",
+    partyTitles: {
+      applicant: "Defendant (ተከሳሽ)",
+      respondent: "Public Prosecutor (ዐቃቤ ሕግ)"
+    },
+    facts: [
+      {
+        id: "fact_insane_incapable_understanding",
+        label: "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
+        legalText: "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of understanding the criminal nature of the act. (በድርጊቱ ጊዜ ተከሳሹ የድርጊቱን የወንጀልነት ባህሪ ለመረዳት በማይችል ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
+        citation: "Crim. Code Art. 50(1)",
+        autoEvidence: ["MedicalCertificateMentalState"]
+      },
+      {
+        id: "fact_insane_incapable_control",
+        label: "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
+        legalText: "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of controlling their conduct. (በድርጊቱ ጊዜ ተከሳሹ አካሄዱን መቆጣጠር በማይችልበት ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
+        citation: "Crim. Code Art. 50(1)",
+        autoEvidence: ["MedicalCertificateMentalState"]
+      },
+      {
+        id: "fact_intoxication_non_culpable",
+        label: "Intoxication (በስካር ሁኔታ)",
+        legalText: "The Defendant was in a state of involuntary or non-culpable intoxication (e.g., administered by force or error) that led to the lack of culpability. (ተከሳሹ በግዴታ ወይም በስህተት በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ሲሆን ይህም ተጠያቂ እንዳይሆን አድርጎታል።)",
+        citation: "Crim. Code Art. 54",
+        autoEvidence: ["WitnessStatementsIntoxication", "MedicalCertificateMentalState"]
+      },
+      {
+        id: "fact_intoxication_culpable_negligence",
+        label: "Intoxication (በስካር ሁኔታ)",
+        legalText: "The Defendant was in a state of culpable intoxication, but the offense committed was only foreseeable as a light offense (for mitigation). (ተከሳሹ በግዴታ በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ቢሆንም የተፈፀመው ወንጀል በቀላል ደረጃ የሚገመት ነበር (ለቅጣት ማቅለያ)።)",
+        citation: "Crim. Code Art. 54(3)",
+        autoEvidence: ["WitnessStatementsIntoxication"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_acquittal_excuse",
+        text: "To acquit the Defendant on the grounds of non-culpability and order appropriate security or medical measures (Art. 50(3)). (ተከሳሹ በተጠያቂነት እጦት በነጻ እንዲሰናበት እና ተገቢ የጥበቃ ወይም የህክምና እርምጃ እንዲወሰድበት።)",
+        isDefault: true
+      }
+    ]
+  },
+  crim_defence_justification_necessity: {
+    documentTitle: "Plea of Justification: Necessity (የሕጋዊነት መቃወሚያ፡- በግዴታ)",
+    jurisdictionText: "Criminal Code Proclamation No. 414/2004, Art. 81 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲፱፻፺፮፣ አንቀጽ ፹፩).",
+    partyTitles: {
+      applicant: "Defendant (ተከሳሽ)",
+      respondent: "Public Prosecutor (ዐቃቤ ሕግ)"
+    },
+    facts: [
+      {
+        id: "fact_imminent_threat_necessity",
+        label: "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
+        legalText: "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ፣ በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
+        citation: "Crim. Code Art. 81(1)",
+        autoEvidence: ["ProofOfImminentDanger"]
+      },
+      {
+        id: "fact_interest_protected_greater",
+        label: "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
+        legalText: "The interest protected by the act (the interest saved) was evidently of a greater or equal value than the interest infringed (the harm caused). (በድርጊቱ የተጠበቀው ጥቅም (የተረፈው) ከተጎዳው ጥቅም (ከተፈጠረው ጉዳት) የበለጠ ወይም እኩል ዋጋ ነበረው።)",
+        citation: "Crim. Code Art. 81(1)",
+        autoEvidence: ["witness_statements"]
+      },
+      {
+        id: "fact_order_of_superior",
+        label: "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
+        legalText: "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል፣ እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
+        citation: "Crim. Code Art. 82",
+        autoEvidence: ["OfficialOrderDocument"]
+      },
+      {
+        id: "fact_victim_consent_valid",
+        label: "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
+        legalText: "The victim freely and clearly consented to the minor bodily injury or damage to property, where such consent is valid under the law. (ተጎጂው በሕግ ተቀባይነት ባለው መንገድ ለደረሰበት ቀላል የአካል ጉዳት ወይም የንብረት ጉዳት በነጻ ፈቃዱን ሰጥቷል።)",
+        citation: "Crim. Code Art. 83",
+        autoEvidence: ["VictimConsentForm"]
+      }
+    ],
+    reliefs: [
+      {
+        id: "relief_acquittal_necessity",
+        text: "To acquit the Defendant on the ground that the act was justified by necessity and lawful. (ድርጊቱ በግዴታ ሕጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
+        isDefault: true
+      },
+      {
+        id: "relief_mitigation_necessity",
+        text: "Alternatively, to mitigate the penalty due to the presence of a threatening situation that rendered the offense less culpable (mitigating circumstance). (በአማራጭ፣ ወንጀሉን በተጠያቂነት እንዲቀንስ በሚያስችል አስጊ ሁኔታ በመኖሩ ምክንያት ቅጣቱ እንዲቀልለት።)",
+        isDefault: false
+      }
+    ]
   }
 };
 
@@ -3109,5 +3294,6 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
 
 

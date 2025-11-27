@@ -19,33 +19,30 @@
         "applicant": "ከሳሽ (ሰነዱን የያዘ) (Plaintiff - Holder of Instrument)",
         "respondent": "ተከሳሽ (ፈራሚ/አውጪ) (Defendant - Drawer/Maker)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የሰነዱ መኖር እና አቀራረብ (Existence and Presentation of Instrument)",
-          "facets": [
-            {
-              "id": "comm_fact_instrument_issuance",
-              "legalText": "ተከሳሹ በ [Date]፣ [Amount] ብር የሚያወጣ ቼክ/የሐዋላ ወረቀት ቁጥር [Number] ለከሳሽ ሰጥቷል። (The Defendant issued cheque/instrument No. [Number] for the sum of [Amount] ETB on [Date] to the Plaintiff.)",
-              "citation": "Commercial Code Art. 735",
-              "autoEvidence": [
-                "NotarizedCheque"
-              ]
-            },
-            {
-              "id": "comm_fact_instrument_presentation",
-              "legalText": "ከሳሽ ሰነዱን ለክፍያ አቅርቦ ነበር ነገር ግን ክፍያ ሳይፈጸም ቀርቷል። (The Plaintiff duly presented the instrument for payment, but it was dishonored.)",
-              "citation": "Commercial Code Art. 767",
-              "autoEvidence": [
-                "ProtestCertificate"
-              ]
-            }
+      "facts": [
+        {
+          "id": "comm_fact_instrument_issuance",
+          "label": "የሰነዱ መኖር እና አቀራረብ (Existence and Presentation of Instrument)",
+          "legalText": "ተከሳሹ በ [issueDate]፣ [amount] ብር የሚያወጣ ቼክ/የሐዋላ ወረቀት ቁጥር [instrumentNumber] ለከሳሽ ሰጥቷል። (The Defendant issued cheque/instrument No. [instrumentNumber] for the sum of [amount] ETB on [issueDate] to the Plaintiff.)",
+          "citation": "Commercial Code Art. 735",
+          "autoEvidence": [
+            "NotarizedCheque"
+          ]
+        },
+        {
+          "id": "comm_fact_instrument_presentation",
+          "label": "የሰነዱ መኖር እና አቀራረብ (Existence and Presentation of Instrument)",
+          "legalText": "ከሳሽ ሰነዱን ለክፍያ አቅርቦ ነበር ነገር ግን ክፍያ ሳይፈጸም ቀርቷል። (The Plaintiff duly presented the instrument for payment, but it was dishonored.)",
+          "citation": "Commercial Code Art. 767",
+          "autoEvidence": [
+            "ProtestCertificate"
           ]
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "comm_relief_payment_instrument",
-          "text": "ተከሳሹ ያልተከፈለውን የ [Amount] ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ። (Judgment ordering the Defendant to pay the unpaid amount of [Amount] ETB.)",
+          "text": "ተከሳሹ ያልተከፈለውን የ [amount] ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ። (Judgment ordering the Defendant to pay the unpaid amount of [amount] ETB.)",
           "isDefault": true,
           "isDynamic": false
         },
@@ -78,41 +75,34 @@
         "applicant": "አመልካች (ባለዕዳው ድርጅት) (Applicant - Debtor Company)",
         "respondent": "አበዳሪዎች (በማስታወቂያ) (Creditors (by notice))"
       },
-      "facts": {
-        "group_1": {
-          "title": "የገንዘብ ችግር እና የመዳን ተስፋ (Financial Distress and Viability)",
-          "facets": [
-            {
-              "id": "comm_fact_financial_difficulty",
-              "legalText": "አመልካቹ ድርጅት ዕዳውን በወቅቱ መክፈል የማይችልበት ጊዜያዊ የገንዘብ ችግር አጋጥሞታል። (The applicant company is facing temporary financial difficulties preventing it from paying its debts as they fall due.)",
-              "citation": "Commercial Code Art. 1171",
-              "autoEvidence": [
-                "BalanceSheetAndAudit"
-              ]
-            },
-            {
-              "id": "comm_fact_business_is_viable",
-              "legalText": "የድርጅቱ የንግድ እንቅስቃሴ በመሠረቱ ጤናማ እና ሊቀጥል የሚችል ነው። (The company's business is fundamentally sound and viable for continuation.)",
-              "citation": "Commercial Code Art. 1171",
-              "autoEvidence": [
-                "BalanceSheetAndAudit",
-                "ShareholdersResolution"
-              ]
-            }
+      "facts": [
+        {
+          "id": "comm_fact_financial_difficulty",
+          "label": "የገንዘብ ችግር እና የመዳን ተስፋ (Financial Distress and Viability)",
+          "legalText": "አመልካቹ ድርጅት ዕዳውን በወቅቱ መክፈል የማይችልበት ጊዜያዊ የገንዘብ ችግር አጋጥሞታል። (The applicant company is facing temporary financial difficulties preventing it from paying its debts as they fall due.)",
+          "citation": "Commercial Code Art. 1171",
+          "autoEvidence": [
+            "BalanceSheetAndAudit"
           ]
         },
-        "group_2": {
-          "title": "የእቅዱ ዝርዝሮች (Plan Details)",
-          "facets": [
-            {
-              "id": "comm_fact_plan_details",
-              "legalText": "አመልካቹ ዕዳዎችን ለማስተዳደር፣ ንግዱን ለማሻሻል እና ቀጣይነትን ለማረጋገጥ የሚያስችል ዝርዝር የማገገሚያ እቅድ አዘጋጅቷል። (The Applicant has prepared a detailed restructuring plan to manage debts, reform the business, and ensure continued viability.)",
-              "citation": "Commercial Code Art. 1173",
-              "autoEvidence": []
-            }
+        {
+          "id": "comm_fact_business_is_viable",
+          "label": "የገንዘብ ችግር እና የመዳን ተስፋ (Financial Distress and Viability)",
+          "legalText": "የድርጅቱ የንግድ እንቅስቃሴ በመሠረቱ ጤናማ እና ሊቀጥል የሚችል ነው። (The company's business is fundamentally sound and viable for continuation.)",
+          "citation": "Commercial Code Art. 1171",
+          "autoEvidence": [
+            "BalanceSheetAndAudit",
+            "ShareholdersResolution"
           ]
+        },
+        {
+          "id": "comm_fact_plan_details",
+          "label": "የእቅዱ ዝርዝሮች (Plan Details)",
+          "legalText": "አመልካቹ ዕዳዎችን ለማስተዳደር፣ ንግዱን ለማሻሻል እና ቀጣይነትን ለማረጋገጥ የሚያስችል ዝርዝር የማገገሚያ እቅድ አዘጋጅቷል። (The Applicant has prepared a detailed restructuring plan to manage debts, reform the business, and ensure continued viability.)",
+          "citation": "Commercial Code Art. 1173",
+          "autoEvidence": []
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "comm_relief_approve_plan",
@@ -148,42 +138,35 @@
         "applicant": "ከሳሽ (ባለአክሲዮን/ዳይሬክተር) (Plaintiff - Shareholder/Director)",
         "respondent": "ተከሳሽ (የንግድ ማህበሩ እና ሌሎች ባለአክሲዮኖች) (Defendant - The Company & Other Shareholders)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የመፍረስ ምክንያቶች (Grounds for Dissolution)",
-          "facets": [
-            {
-              "id": "comm_fact_serious_disagreement",
-              "legalText": "በማህበሩ ባለአክሲዮኖች/አስተዳዳሪዎች መካከል ማህበሩን ማስተዳደርን በሚመለከት ከባድ እና የማያቋርጥ አለመግባባት አለ። (There are serious and persistent disagreements among the shareholders/managers regarding the management of the organization.)",
-              "citation": "Commercial Code Art. 176(a)",
-              "autoEvidence": [
-                "ShareholdersResolution"
-              ]
-            },
-            {
-              "id": "comm_fact_deadlock",
-              "legalText": "በአለመግባባቱ ምክንያት የማህበሩ አስተዳደር ሙሉ በሙሉ ተ deadlock በመሆኑ መደበኛ ሥራውን ማከናወን አልቻለም። (The management of the organization is deadlocked due to the disagreement, making it impossible to carry on its normal business.)",
-              "citation": "Commercial Code Art. 176(b)",
-              "autoEvidence": [
-                "ShareholdersResolution"
-              ]
-            }
+      "facts": [
+        {
+          "id": "comm_fact_serious_disagreement",
+          "label": "የመፍረስ ምክንያቶች (Grounds for Dissolution)",
+          "legalText": "በማህበሩ ባለአክሲዮኖች/አስተዳዳሪዎች መካከል ማህበሩን ማስተዳደርን በሚመለከት ከባድ እና የማያቋርጥ አለመግባባት አለ። (There are serious and persistent disagreements among the shareholders/managers regarding the management of the organization.)",
+          "citation": "Commercial Code Art. 176(a)",
+          "autoEvidence": [
+            "ShareholdersResolution"
           ]
         },
-        "group_2": {
-          "title": "የአመልካች ሁኔታ (Applicant's Standing)",
-          "facets": [
-            {
-              "id": "comm_fact_applicant_standing",
-              "legalText": "ከሳሽ በማህበሩ ውስጥ ባለድርሻ ሲሆን፣ ይህን ክስ ለማቅረብ ሕጋዊ መብት አለው። (The Plaintiff has a legitimate interest as a stakeholder in the company to bring this action.)",
-              "citation": "",
-              "autoEvidence": [
-                "MemorandumAndArticles"
-              ]
-            }
+        {
+          "id": "comm_fact_deadlock",
+          "label": "የመፍረስ ምክንያቶች (Grounds for Dissolution)",
+          "legalText": "በአለመግባባቱ ምክንያት የማህበሩ አስተዳደር ሙሉ በሙሉ ተ deadlock በመሆኑ መደበኛ ሥራውን ማከናወን አልቻለም። (The management of the organization is deadlocked due to the disagreement, making it impossible to carry on its normal business.)",
+          "citation": "Commercial Code Art. 176(b)",
+          "autoEvidence": [
+            "ShareholdersResolution"
+          ]
+        },
+        {
+          "id": "comm_fact_applicant_standing",
+          "label": "የአመልካች ሁኔታ (Applicant's Standing)",
+          "legalText": "ከሳሽ በማህበሩ ውስጥ ባለድርሻ ሲሆን፣ ይህን ክስ ለማቅረብ ሕጋዊ መብት አለው። (The Plaintiff has a legitimate interest as a stakeholder in the company to bring this action.)",
+          "citation": "",
+          "autoEvidence": [
+            "MemorandumAndArticles"
           ]
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "comm_relief_order_dissolution",

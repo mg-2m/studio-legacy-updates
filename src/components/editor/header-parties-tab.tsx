@@ -47,6 +47,35 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         <AccordionTrigger className="px-4 text-primary">የፍ/ቤት እና የክስ ራስጌ (Court & Header)</AccordionTrigger>
         <AccordionContent className="px-4 space-y-4">
           <div className="space-y-2">
+            <Label>ቀን (Date)</Label>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant={"outline"}
+                  className={cn(
+                    "w-full justify-start text-left font-normal",
+                    !metadata.date && "text-muted-foreground"
+                  )}
+                >
+                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  {metadata.date ? metadata.date : <span>Pick a date</span>}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0">
+                <Calendar
+                  mode="single"
+                  selected={dateObject}
+                  onSelect={(date) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: date ? format(date, "dd/MM/yyyy") + ' ዓ/ም' : '' } })}
+                  initialFocus
+                />
+              </PopoverContent>
+            </Popover>
+          </div>
+          <div className="space-y-2">
+            <Label>የመዝገብ ቁጥር (File No.)</Label>
+            <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
+          </div>
+          <div className="space-y-2">
             <Label>የፍ/ቤት ደረጃ (Court Tier)</Label>
             <Select 
               value={metadata.courtLevel} 
@@ -73,35 +102,6 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 <SelectTrigger><SelectValue placeholder="Select city" /></SelectTrigger>
                 <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
             </Select>
-          </div>
-          <div className="space-y-2">
-            <Label>የመዝገብ ቁጥር (File No.)</Label>
-            <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
-          </div>
-          <div className="space-y-2">
-            <Label>ቀን (Date)</Label>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  variant={"outline"}
-                  className={cn(
-                    "w-full justify-start text-left font-normal",
-                    !metadata.date && "text-muted-foreground"
-                  )}
-                >
-                  <CalendarIcon className="mr-2 h-4 w-4" />
-                  {metadata.date ? metadata.date : <span>Pick a date</span>}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0">
-                <Calendar
-                  mode="single"
-                  selected={dateObject}
-                  onSelect={(date) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: date ? format(date, "dd/MM/yyyy") + ' ዓ/ም' : '' } })}
-                  initialFocus
-                />
-              </PopoverContent>
-            </Popover>
           </div>
         </AccordionContent>
       </AccordionItem>

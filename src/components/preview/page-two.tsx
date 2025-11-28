@@ -90,14 +90,14 @@ export default function PageTwo({ state }: PageTwoProps) {
             fullDescription += `፣ ${detailsParts.join('፣ ')}`;
         }
         
-        // Add the type of document attached
-        if (e.documentType) {
-            fullDescription += `፣ ${e.documentType}`;
+        if (e.documentType === 'Copy') {
+          fullDescription += '፣ ኮፒ';
+        } else if (e.documentType === 'Original') {
+          fullDescription += '፣ ኦርጅናል';
         }
 
         fullDescription += " ተያይዙዋል";
 
-        // Add the location of the original document
         if (e.originalLocation && e.originalLocation !== 'የማይመለከተው') {
             const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
             if (location) fullDescription += `፣ ኦርጅናሉ ${location} የሚገኝ።`;

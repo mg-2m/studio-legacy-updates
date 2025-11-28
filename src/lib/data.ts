@@ -482,7 +482,7 @@ export const INITIAL_STATE: AppState = {
   calculations: initialCalculations,
   evidence: [],
   smartEvidence: {},
-  partyTitles: initialTemplateData ? initialTemplateData.partyTitles : { applicant: 'Applicant', respondent: 'Respondent' },
+  partyTitles: initialTemplateData ? initialTemplateData.partyTitles : { applicant: 'አመልካች', respondent: 'ተከሳሽ' },
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };

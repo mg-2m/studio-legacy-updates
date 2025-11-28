@@ -30,7 +30,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
   
   return (
     <div className="w-full space-y-4">
-      <Card className="bg-background">
+      <Card>
         <CardHeader>
             <CardTitle className="text-base text-primary">የፍ/ቤት እና የክስ ራስጌ</CardTitle>
         </CardHeader>
@@ -39,7 +39,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
             {/* Left Column for Court Details */}
             <div className="space-y-2">
                 <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                    <Label className="whitespace-nowrap">የፍ/ቤት ደረጃ</Label>
+                    <Label>የፍ/ቤት ደረጃ</Label>
                     <Select 
                       value={metadata.courtLevel} 
                       onValueChange={(value) => {
@@ -83,7 +83,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         </CardContent>
       </Card>
       
-      <Card className="bg-background">
+      <Card>
         <CardHeader>
             <CardTitle className="text-base text-primary">ሥነ-ሥርዓት እና መግቢያ</CardTitle>
         </CardHeader>
@@ -115,7 +115,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         </CardContent>
       </Card>
       
-      <Card className="bg-background">
+      <Card>
         <CardContent className="p-4 space-y-2">
           {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} title={partyTitles.applicant} />)}
           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
@@ -124,7 +124,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         </CardContent>
       </Card>
       
-      <Card className="bg-background">
+      <Card>
         <CardContent className="p-4 space-y-2">
           {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} title={partyTitles.respondent}/>)}
            <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>

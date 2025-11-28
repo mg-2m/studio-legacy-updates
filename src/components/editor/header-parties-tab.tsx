@@ -69,11 +69,15 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
             </div>
 
             {/* Right Column for Date and File Number */}
-            <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4">
-                <Label>ቀን</Label>
-                <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
-                <Label>የመዝገብ ቁጥር</Label>
-                <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
+            <div className="space-y-2">
+                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                    <Label>ቀን</Label>
+                    <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
+                </div>
+                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                    <Label>የመዝገብ ቁጥር</Label>
+                    <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
+                </div>
             </div>
           </div>
         </CardContent>

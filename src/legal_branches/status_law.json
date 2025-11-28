@@ -180,7 +180,7 @@
       ],
       "calculations": {}
     },
-    "status_app_provisional_curator": {
+    "app_status_provisional_curator": {
       "documentTitle": "ጊዜያዊ አስተዳዳሪ/ጠባቂ እንዲሾምለት ማመልከቻ (Application for Appointment of Provisional Curator/Administrator)",
       "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (እግድ) እና የፍትሐ ብሔር ሕግ አንቀጽ 154/343 (Art. 154 CPC & Civ. Code Art. 154/343)",
       "meta": {
@@ -200,14 +200,14 @@
       },
       "facts": [
         {
-          "id": "status_fact_immediate_necessity",
+          "id": "app_status_fact_immediate_necessity",
           "label": "አስቸኳይነት (Urgency)",
           "legalText": "ሰውየው ወዲያውኑ እርምጃ መውሰድ ባለመቻሉ ንብረቱ ያለአግባብ ጥቅም ላይ ሊውል ወይም ሊጠፋ ይችላል። (Due to the immediate inability of the person to act, their property is at risk of misuse or loss.)",
           "citation": "",
           "autoEvidence": []
         },
         {
-          "id": "status_fact_petition_pending",
+          "id": "app_status_fact_petition_pending",
           "label": "አስቸኳይነት (Urgency)",
           "legalText": "ዋናው የእግድ/የመጥፋት አቤቱታ ቀርቦ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው። (A main petition for Interdiction/Absence has been filed and is currently pending.)",
           "citation": "",
@@ -216,7 +216,7 @@
       ],
       "reliefs": [
         {
-          "id": "status_relief_appoint_provisional",
+          "id": "app_status_relief_appoint_provisional",
           "text": "የተሰየመውን ሰው እንደ ጊዜያዊ አስተዳዳሪ/ጠባቂ ወዲያውኑ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the immediate, temporary appointment of a named person to act as Provisional Curator/Administrator.)",
           "isDefault": true,
           "isDynamic": false,
@@ -225,7 +225,7 @@
       ],
       "calculations": {}
     },
-    "status_app_lift_interdiction": {
+    "app_status_lift_interdiction": {
       "documentTitle": "የፍርድ እግድ እንዲነሳ አቤቱታ (Petition for Termination of Judicial Interdiction)",
       "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 358 (Art. 358 of the Civil Code)",
       "meta": {
@@ -245,7 +245,7 @@
       },
       "facts": [
         {
-          "id": "status_fact_cause_ceased",
+          "id": "app_status_fact_cause_ceased",
           "label": "የምክንያት መቋረጥ (Cessation of Cause)",
           "legalText": "እግዱን ያስከተለው የሕክምና/አካላዊ ሁኔታ ተወግዷል፣ እና የታገደው ሰው ችሎታውን መልሶ አግኝቷል። (The medical/physical condition that necessitated the interdiction has ceased, and the interdicted person has regained capacity.)",
           "citation": "Civ. Code Art. 358",
@@ -256,7 +256,7 @@
       ],
       "reliefs": [
         {
-          "id": "status_relief_terminate_interdiction",
+          "id": "app_status_relief_terminate_interdiction",
           "text": "የፍርድ እግዱን በማቋረጥ ለግለሰቡ ሙሉ ሕጋዊ ችሎታን የሚመልስ ፍርድ እንዲሰጥ። (Judgment terminating the judicial interdiction and restoring full legal capacity to the individual.)",
           "isDefault": true,
           "isDynamic": false,
@@ -267,3 +267,5 @@
     }
   }
 }
+
+    

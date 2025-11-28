@@ -29,14 +29,18 @@ const ManualEvidenceCard: React.FC<{
   item: ManualEvidence;
   dispatch: React.Dispatch<any>;
 }> = ({ item, dispatch }) => {
+  const isDocument = item.type === 'Document';
+
   return (
     <Card key={item.id} className="bg-muted/30">
       <CardHeader className="flex-row items-center justify-between p-4">
         <CardTitle className="text-base">
-          {item.type === 'Document' && 'ሰነድ'}
-          {item.type === 'Witness' && 'የሰው ምስክር'}
-          {item.type === 'CourtOrder' && 'የትዕዛዝ'}
-          <span className="font-normal text-muted-foreground text-sm ml-2">(Manual)</span>
+          {!isDocument && (
+            <>
+              {item.type === 'Witness' && 'የሰው ምስክር'}
+              {item.type === 'CourtOrder' && 'የትዕዛዝ'}
+            </>
+          )}
         </CardTitle>
         <Button
           variant="ghost"
@@ -50,9 +54,10 @@ const ManualEvidenceCard: React.FC<{
       <CardContent className="space-y-4 px-4 pb-4">
         {item.type === 'Document' && (
           <>
-            <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4 gap-y-2">
+            <div className="grid grid-cols-[auto_1fr_auto_1.5fr] items-center gap-x-4 gap-y-2">
                 <Label>ገለጻ</Label>
                 <Input
+                  className="col-span-1"
                   placeholder={'e.g., Police report about the incident'}
                   value={item.description}
                   onChange={(e) =>
@@ -485,5 +490,3 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
-
-    

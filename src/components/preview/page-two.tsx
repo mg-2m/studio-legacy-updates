@@ -58,7 +58,7 @@ export default function PageTwo({ state }: PageTwoProps) {
   const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
 
 
-  const documentEvidence: { label: string; details: string }[] = [];
+  const documentEvidence: { description: string; details: string }[] = [];
   const witnessEvidence: { label: string; details: string }[] = [];
   const courtOrderEvidence: { label: string; details: string }[] = [];
 
@@ -68,7 +68,7 @@ export default function PageTwo({ state }: PageTwoProps) {
     const registryItem = EVIDENCE_REGISTRY[regId];
     if (registryItem) {
       documentEvidence.push({
-        label: registryItem.label,
+        description: registryItem.label,
         details: smartEv.credentialId ? `${stripEnglish(registryItem.credentialLabel)}: ${smartEv.credentialId}` : 'No details provided'
       });
     }
@@ -77,27 +77,32 @@ export default function PageTwo({ state }: PageTwoProps) {
   // Process Manual Evidence
   evidence.forEach((e: ManualEvidence) => {
     if (e.type === 'Document') {
-        const label = e.description || stripEnglish(e.type);
+        const description = e.description || 'የሰነድ ማስረጃ';
         const issuer = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
         
         let detailsParts = [];
-        
-        const typePrefix = e.documentType === 'Original' ? 'ኦርጅናሉ' : (e.documentType === 'Copy' ? 'ኮፒው' : '');
-
-        if (e.originalLocation) {
-            const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
-            if (typePrefix) {
-                detailsParts.push(`${typePrefix} ${location} የሚገኝ`);
-            }
-        }
-        
         if (e.refNumber) detailsParts.push(`ቁጥር: ${e.refNumber}`);
         if (e.issueDate) detailsParts.push(`የተሰጠበት ቀን: ${e.issueDate}`);
         if (issuer) detailsParts.push(`አውጪ: ${issuer}`);
         if (e.pageCount) detailsParts.push(`ገጽ: ${e.pageCount}`);
 
-        const details = detailsParts.join(', ');
-        documentEvidence.push({ label, details });
+        let locationString = '';
+        if (e.originalLocation) {
+            const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
+            if (e.documentType === 'Original') {
+                locationString = ` ኦርጅናሉ ${location} የሚገኝ`;
+            } else if (e.documentType === 'Copy') {
+                locationString = ` ኮፒው ${location} የሚገኝ`;
+            }
+        }
+        
+        let details = detailsParts.join(', ');
+        if (e.documentType !== 'N/A') {
+            details += `, ${e.documentType}`;
+        }
+        details += locationString;
+
+        documentEvidence.push({ description, details });
 
     } else if (e.type === 'Witness') {
         const label = `${stripEnglish(e.honorific)} ${e.name}` || 'Unnamed Witness';
@@ -115,6 +120,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         courtOrderEvidence.push({ label, details });
     }
   });
+
 
   const hasEvidence = documentEvidence.length > 0 || witnessEvidence.length > 0 || courtOrderEvidence.length > 0;
 
@@ -171,8 +177,7 @@ export default function PageTwo({ state }: PageTwoProps) {
             <ol className="ml-8 list-decimal" style={{ lineHeight: 1.8 }}>
               {documentEvidence.map((e, i) => (
                 <li key={`doc-${i}`} className="mb-3 text-justify">
-                  <strong>{stripEnglish(e.label)}</strong>
-                  {e.details && <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">{stripEnglish(e.details)}</p>}
+                  <span dangerouslySetInnerHTML={{ __html: `<strong>${stripEnglish(e.description)}</strong> ${stripEnglish(e.details)}` }} />
                 </li>
               ))}
             </ol>
@@ -229,3 +234,5 @@ export default function PageTwo({ state }: PageTwoProps) {
     </div>
   );
 }
+
+    

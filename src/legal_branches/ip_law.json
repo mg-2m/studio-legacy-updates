@@ -338,7 +338,7 @@
       ],
       "calculations": {}
     },
-    "ip_app_interlocutory_injunction": {
+    "app_ip_interlocutory_injunction": {
       "documentTitle": "የጥሰት እገዳ እንዲጣልበት ጊዜያዊ ትዕዛዝ ማመልከቻ (Application for Interlocutory Injunction to Restrain Infringement)",
       "jurisdictionText": "Art. 154 of the Civil Procedure Code (General Injunction) and specific IP enabling clauses.",
        "meta": {
@@ -387,7 +387,7 @@
       ],
       "calculations": {}
     },
-    "ip_app_anton_piller": {
+    "app_ip_anton_piller": {
       "documentTitle": "የማስረጃ ጥበቃ እና መያዣ ማመልከቻ (Application for Preservation and Seizure of Evidence - 'Anton Piller Order')",
       "jurisdictionText": "Art. 154 of the Civil Procedure Code (Inherent Power) & Art. 10 of Proclamation 410/2004.",
        "meta": {

@@ -30,7 +30,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
   
   return (
     <div className="w-full space-y-4">
-      <Card>
+       <Card>
         <CardHeader>
             <CardTitle className="text-base text-primary">የፍ/ቤት እና የክስ ራስጌ</CardTitle>
         </CardHeader>
@@ -135,3 +135,5 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
     </div>
   );
 }
+
+    

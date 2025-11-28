@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS } from '@/lib/data';
+import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, AA_SUBCITIES, REGIONS_AND_CITIES } from '@/lib/data';
 import type { AppState, ManualEvidence } from '@/lib/types';
 import { BrainCircuit, Plus, X, File, Users, Gavel, Link } from 'lucide-react';
 import {
@@ -232,11 +232,61 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                                 </div>
                             </>
                         )}
-                        {(item.type === 'Witness' || item.type === 'CourtOrder') && (
+                        {item.type === 'Witness' && (
+                            <div className="space-y-4">
+                                <div className="space-y-2">
+                                    <Label>Witness Full Name (የምስክር ሙሉ ስም)</Label>
+                                    <Input
+                                        placeholder="e.g., Ato Kebede Alemayehu"
+                                        value={item.name}
+                                        onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'name', value: e.target.value } })}
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="text-xs">City/Region (ከተማ/ክልል)</Label>
+                                    <Select
+                                        value={item.city}
+                                        onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'city', value } })}
+                                    >
+                                        <SelectTrigger><SelectValue placeholder="Select City/Region" /></SelectTrigger>
+                                        <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                                    </Select>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="space-y-2">
+                                        <Label className="text-xs">Subcity (ክፍለ ከተማ)</Label>
+                                        <Select
+                                            value={item.subcity}
+                                            onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'subcity', value } })}
+                                        >
+                                            <SelectTrigger><SelectValue placeholder="Select Subcity" /></SelectTrigger>
+                                            <SelectContent>{AA_SUBCITIES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
+                                        </Select>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <Label className="text-xs">Woreda (ወረዳ)</Label>
+                                        <Input
+                                            placeholder="e.g., 03"
+                                            value={item.woreda}
+                                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'woreda', value: e.target.value } })}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <Label className="text-xs">House No. (የቤት ቁጥር)</Label>
+                                    <Input
+                                        placeholder="e.g., 1234"
+                                        value={item.houseNo}
+                                        onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'houseNo', value: e.target.value } })}
+                                    />
+                                </div>
+                            </div>
+                        )}
+                        {item.type === 'CourtOrder' && (
                             <div className="space-y-2">
-                                <Label>{item.type === 'Witness' ? 'Witness Full Name & Address (የምስክር ሙሉ ስም እና አድራሻ)' : 'Details of Court Order (የትዕዛዙ ዝርዝር)'}</Label>
+                                <Label>Details of Court Order (የትዕዛዙ ዝርዝር)</Label>
                                 <Input 
-                                    placeholder={item.type === 'Witness' ? "e.g., Ato Kebede, Addis Ababa, Bole Sub-city" : "e.g., Order for temporary injunction on property"}
+                                    placeholder="e.g., Order for temporary injunction on property"
                                     value={item.description}
                                     onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })}
                                 />

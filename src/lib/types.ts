@@ -47,19 +47,39 @@ export interface SmartEvidence {
   [key: string]: SmartEvidenceData;
 }
 
-export interface ManualEvidence {
+interface BaseManualEvidence {
   id: string;
-  type: 'Document' | 'Witness' | 'CourtOrder';
-  description: string;
-  issuer: string;
-  issuerOther?: string;
-  refNumber: string;
   isManual: true;
-  pageCount: string;
-  documentType: 'Original' | 'Copy';
-  originalLocation: string;
-  originalLocationOther?: string;
 }
+
+interface ManualDocumentEvidence extends BaseManualEvidence {
+    type: 'Document';
+    description: string;
+    issuer: string;
+    issuerOther?: string;
+    refNumber: string;
+    pageCount: string;
+    documentType: 'Original' | 'Copy';
+    originalLocation: string;
+    originalLocationOther?: string;
+}
+
+interface ManualWitnessEvidence extends BaseManualEvidence {
+    type: 'Witness';
+    name: string;
+    city: string;
+    subcity: string;
+    woreda: string;
+    houseNo: string;
+}
+
+interface ManualCourtOrderEvidence extends BaseManualEvidence {
+    type: 'CourtOrder';
+    description: string;
+}
+
+export type ManualEvidence = ManualDocumentEvidence | ManualWitnessEvidence | ManualCourtOrderEvidence;
+
 
 export interface Fact {
   id: string;

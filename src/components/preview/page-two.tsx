@@ -1,7 +1,7 @@
 
 "use client";
 
-import type { AppState } from '@/lib/types';
+import type { AppState, ManualEvidence } from '@/lib/types';
 import { EVIDENCE_REGISTRY } from '@/lib/data';
 
 interface PageTwoProps {
@@ -27,15 +27,25 @@ export default function PageTwo({ state }: PageTwoProps) {
   });
 
   // Process Manual Evidence
-  evidence.forEach(e => {
-    let details = e.description || e.type;
+  evidence.forEach((e: ManualEvidence) => {
+    let details = '';
+    let label = '';
+
     if (e.type === 'Document') {
+        label = e.description || e.type;
         const issuer = e.issuer === 'Other (ሌላ)' ? e.issuerOther : e.issuer;
         const location = e.originalLocation === 'Other (ሌላ)' ? e.originalLocationOther : e.originalLocation;
         details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issuer: ${issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${location || 'N/A'})`;
+    } else if (e.type === 'Witness') {
+        label = e.name || 'Unnamed Witness';
+        details = `Address: ${e.city}, ${e.subcity} Subcity, Woreda: ${e.woreda}, House No: ${e.houseNo}`;
+    } else if (e.type === 'CourtOrder') {
+        label = e.description || e.type;
+        details = e.description;
     }
+    
     allEvidence.push({
-      label: e.description || e.type,
+      label: label,
       details: details,
       type: `Manual (${e.type})`
     });

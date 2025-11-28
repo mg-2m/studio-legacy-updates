@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useReducer, useEffect, useCallback } from 'react';
-import type { AppState, Fact, Calculation } from '@/lib/types';
+import type { AppState, Fact, Calculation, ManualEvidence } from '@/lib/types';
 import { INITIAL_STATE, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, TEMPLATE_DATA, EVIDENCE_REGISTRY } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
@@ -298,21 +298,52 @@ function appReducer(state: AppState, action: Action): AppState {
     }
     
     case 'ADD_EVIDENCE': {
-      const newEvidence = { 
-        id: Date.now().toString(), 
-        type: action.payload.type, 
-        description: '', 
-        issuer: DOCUMENT_ISSUERS[0], 
-        issuerOther: '',
-        refNumber: '',
-        pageCount: '',
-        documentType: 'Copy' as const,
-        originalLocation: EVIDENCE_LOCATIONS[0],
-        originalLocationOther: '',
-        isManual: true as const 
-      };
-      return { ...state, evidence: [...state.evidence, newEvidence] };
+        const newId = Date.now().toString();
+        let newEvidence: ManualEvidence;
+
+        switch (action.payload.type) {
+            case 'Document':
+                newEvidence = {
+                    id: newId,
+                    type: 'Document',
+                    description: '',
+                    issuer: DOCUMENT_ISSUERS[0],
+                    issuerOther: '',
+                    refNumber: '',
+                    pageCount: '',
+                    documentType: 'Copy',
+                    originalLocation: EVIDENCE_LOCATIONS[0],
+                    originalLocationOther: '',
+                    isManual: true,
+                };
+                break;
+            case 'Witness':
+                newEvidence = {
+                    id: newId,
+                    type: 'Witness',
+                    name: '',
+                    city: REGIONS_AND_CITIES[0],
+                    subcity: AA_SUBCITIES[0],
+                    woreda: '',
+                    houseNo: '',
+                    isManual: true,
+                };
+                break;
+            case 'CourtOrder':
+                newEvidence = {
+                    id: newId,
+                    type: 'CourtOrder',
+                    description: '',
+                    isManual: true,
+                };
+                break;
+            default:
+                // This should not happen with TypeScript
+                return state;
+        }
+        return { ...state, evidence: [...state.evidence, newEvidence] };
     }
+
     case 'REMOVE_EVIDENCE':
       return { ...state, evidence: state.evidence.filter(e => e.id !== action.payload.id) };
     case 'UPDATE_EVIDENCE': {

@@ -5,13 +5,7 @@
       "documentTitle": "የፍሬ ነገር ማሻሻያ ጥያቄ (Application for Amendment of Pleading)",
       "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 94 (Civil Procedure Code of 1965, Art. 94)",
       "meta": {
-        "keywords": [
-          "amendment",
-          "pleading",
-          "correction",
-          "ፍሬ ነገር ማሻሻያ",
-          "ክስ ማሻሻል"
-        ],
+        "keywords": ["amendment", "pleading", "correction", "ፍሬ ነገር ማሻሻያ", "ክስ ማሻሻል"],
         "jurisdictionType": "Court seized of the original case"
       },
       "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክር ሂደት ላይ ያለን የክስ ወይም የመከላከያ መልስ ፍሬ ነገር ለማሻሻል፣ ስህተት ለማረም ወይም አዲስ ነገር ለማካተት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 94(1) መሠረት፣ ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት በማንኛውም የክርክር ደረጃ ላይ ሊፈቀድ ይችላል። ዋናው ጥያቄ የሚገዛበት የይርጋ ጊዜ ገደብ በማሻሻያው ላይም ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት፡** ማሻሻያው በወገኖች መካከል ያለውን እውነተኛ የክርክር ነጥብ ለመወሰን አስፈላጊ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** ሊሻሻል የሚገባው የክስ ወይም የመከላከያ መልስ ቅጂ (OriginalPleadingCopy) እና የታቀደው ማሻሻያ ረቂቅ (DraftAmendment)።",
@@ -25,28 +19,21 @@
           "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
           "legalText": "ማሻሻያው በወገኖች መካከል እውነተኛውን የክርክር ጥያቄ ለመወሰን እና የፍትሕ ዓላማን ለማሳካት አስፈላጊ ነው። (The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice.)",
           "citation": "C.P.C. Art. 94(2)",
-          "autoEvidence": [
-            "OriginalPleadingCopy",
-            "DraftAmendment"
-          ]
+          "autoEvidence": ["OriginalPleadingCopy", "DraftAmendment"]
         },
         {
           "id": "civ_proc_fact_amendment_no_prejudice",
           "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
           "legalText": "ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒውን ወገን በወጪ ሊካስ የማይችል ጉዳት አያስከትልም። (The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs.)",
           "citation": "C.P.C. Art. 94(1)",
-          "autoEvidence": [
-            "OriginalPleadingCopy"
-          ]
+          "autoEvidence": ["OriginalPleadingCopy"]
         },
         {
           "id": "civ_proc_fact_amendment_due_to_clerical_error",
           "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
           "legalText": "ማሻሻያው በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአጻጻፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው። (The amendment is necessary to correct a clerical, computational, or drafting error in the original pleading.)",
           "citation": "C.P.C. Art. 94(1)",
-          "autoEvidence": [
-            "DraftAmendment"
-          ]
+          "autoEvidence": ["DraftAmendment"]
         },
         {
           "id": "civ_proc_fact_amendment_before_judgment",
@@ -71,13 +58,7 @@
       "documentTitle": "በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ (Application for Leave to Intervene in a Pending Suit)",
       "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 40 (Civil Procedure Code of 1965, Art. 40)",
       "meta": {
-        "keywords": [
-          "intervention",
-          "third party",
-          "joinder",
-          "ጣልቃ ገብ",
-          "ሶስተኛ ወገን"
-        ],
+        "keywords": ["intervention", "third party", "joinder", "ጣልቃ ገብ", "ሶስተኛ ወገን"],
         "jurisdictionType": "Court seized of the original case"
       },
       "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ በሁለት ወገኖች መካከል እየታየ ባለ ክርክር ውስጥ መብቱ ወይም ጥቅሙ ሊነካ የሚችል ሶስተኛ ወገን፣ በክርክሩ ውስጥ ገብቶ እንዲሳተፍ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 40(2) መሠረት፣ ጣልቃ ገብቶ ለመከራከር ጥያቄ ማቅረብ የሚቻለው ክሱ ከመዘጋቱ በፊት በማንኛውም ጊዜ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ሕጋዊ ጥቅም፡** ጣልቃ ገቢው በክርክሩ ውጤት ላይ ቀጥተኛ ሕጋዊ ጥቅም እንዳለው ማሳየት አለበት።\n*   **ማስረጃ (Required Evidence):** ጣልቃ ገቢው የሚያቀርበውን የክስ ወይም የመከላከያ መልስ (IntervenerStatement) ማያያዝ።",
@@ -91,18 +72,14 @@
           "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
           "legalText": "ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል። (The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment.)",
           "citation": "C.P.C. Art. 40(1)",
-          "autoEvidence": [
-            "IntervenerStatement"
-          ]
+          "autoEvidence": ["IntervenerStatement"]
         },
         {
           "id": "civ_proc_fact_common_question_of_law_or_fact",
           "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
           "legalText": "ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል። (The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise.)",
           "citation": "C.P.C. Art. 40(1)",
-          "autoEvidence": [
-            "IntervenerStatement"
-          ]
+          "autoEvidence": ["IntervenerStatement"]
         },
         {
           "id": "civ_proc_fact_prevent_multiplicity_of_suits",
@@ -127,13 +104,7 @@
       "documentTitle": "ሶስተኛ ወገንን በክሱ የማካተት ጥያቄ (Application to Join a Third Party)",
       "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 41 (Civil Procedure Code of 1965, Art. 41)",
       "meta": {
-        "keywords": [
-          "third party joinder",
-          "indemnity",
-          "contribution",
-          "ማካተት",
-          "ሶስተኛ ወገን"
-        ],
+        "keywords": ["third party joinder", "indemnity", "contribution", "ማካተት", "ሶስተኛ ወገን"],
         "jurisdictionType": "Court seized of the original case"
       },
       "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ ተከሳሽ በሆነ ሰው ላይ ክስ ሲቀርብበት፣ ለዚያ ክስ ተጠያቂ ሊሆን የሚችል ሌላ ሶስተኛ ወገን ካለ፣ ያንን ሶስተኛ ወገን በክርክሩ ውስጥ እንዲካተት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን በሚያቀርብበት ጊዜ ወይም ከዚያ በፊት መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የኃላፊነት ጥያቄ፡** ተከሳሹ በሶስተኛው ወገን ላይ የካሳ ወይም የመተካት መብት እንዳለው ማሳየት።\n*   **ማስረጃ (Required Evidence):** ለሶስተኛው ወገን ሊቀርብ የታሰበው የክስ ማስታወቂያ ረቂቅ (ThirdPartyNotice)።",
@@ -147,9 +118,7 @@
           "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
           "legalText": "ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው። (The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant.)",
           "citation": "C.P.C. Art. 41(1)(a)",
-          "autoEvidence": [
-            "ThirdPartyNotice"
-          ],
+          "autoEvidence": ["ThirdPartyNotice"],
           "mutexGroup": "indemnity_contribution"
         },
         {
@@ -157,9 +126,7 @@
           "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
           "legalText": "ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው። (The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim.)",
           "citation": "C.P.C. Art. 41(1)(a)",
-          "autoEvidence": [
-            "ThirdPartyNotice"
-          ],
+          "autoEvidence": ["ThirdPartyNotice"],
           "mutexGroup": "indemnity_contribution"
         },
         {
@@ -167,9 +134,7 @@
           "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
           "legalText": "በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው። (The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant.)",
           "citation": "C.P.C. Art. 41(1)(b)",
-          "autoEvidence": [
-            "ThirdPartyNotice"
-          ],
+          "autoEvidence": ["ThirdPartyNotice"],
           "mutexGroup": "indemnity_contribution"
         }
       ],
@@ -188,14 +153,7 @@
       "documentTitle": "በአንድ ወገን ፍርድ ላይ የተቃውሞ ጥያቄ (Application for Judgment Objection / Setting Aside Ex Parte Decree)",
       "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 78 እና 79 (Civil Procedure Code of 1965, Arts. 78 & 79)",
       "meta": {
-        "keywords": [
-          "default judgment",
-          "ex parte",
-          "set aside",
-          "objection",
-          "በሌሉበት የተሰጠ ፍርድ",
-          "ተቃውሞ"
-        ],
+        "keywords": ["default judgment", "ex parte", "set aside", "objection", "በሌሉበት የተሰጠ ፍርድ", "ተቃውሞ"],
         "jurisdictionType": "Court which passed the ex-parte decree"
       },
       "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ አንድ ወገን ችሎት ሳይቀርብ በሌለበት የተሰጠበትን ፍርድ ለመቃወም እና ክርክሩ እንደ አዲስ እንዲታይለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበሌሉበት ውሳኔ የሰጠው ፍርድ ቤት ራሱ ይህንኑ ተቃውሞ የማየት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nተቃውሞው መቅረብ ያለበት ተቃዋሚው ስለ ፍርዱ ካወቀበት ቀን ጀምሮ ባሉት አስራ አምስት (15) ቀናት ውስጥ ነው (አንቀጽ 79)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **በቂ ምክንያት፡** ችሎት ላይ መቅረብ ያልተቻለበት በቂ እና ከአቅም በላይ የሆነ ምክንያት መኖሩን ማሳየት።\n*   **ማስረጃ (Required Evidence):** መጥሪያ ያልደረሰ መሆኑን ወይም ለመቅረብ ያልተቻለበትን ምክንያት የሚያረጋግጥ ማስረጃ (ለምሳሌ የህመም ማስረጃ)።",
@@ -207,29 +165,23 @@
         {
           "id": "civ_proc_fact_no_proper_service",
           "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
-          "legalText": "ፍрዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
+          "legalText": "ፍርዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
           "citation": "C.P.C. Art. 78(1)(a)",
-          "autoEvidence": [
-            "ObjectionGroundsMemo"
-          ]
+          "autoEvidence": ["ObjectionGroundsMemo"]
         },
         {
           "id": "civ_proc_fact_sufficient_cause_for_default",
           "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
           "legalText": "ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ። (The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause.)",
           "citation": "C.P.C. Art. 78(1)(b)",
-          "autoEvidence": [
-            "ObjectionGroundsMemo"
-          ]
+          "autoEvidence": ["ObjectionGroundsMemo"]
         },
         {
           "id": "civ_proc_fact_absence_of_jurisdiction",
           "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
           "legalText": "ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው። (The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree.)",
           "citation": "C.P.C. Art. 5(2)",
-          "autoEvidence": [
-            "ObjectionGroundsMemo"
-          ]
+          "autoEvidence": ["ObjectionGroundsMemo"]
         },
         {
           "id": "civ_proc_fact_objection_timely_filed",
@@ -254,13 +206,7 @@
       "documentTitle": "የፍርድ ዳግም ማየት ጥያቄ (Application for Review of Judgment)",
       "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 6 (Civil Procedure Code of 1965, Art. 6)",
       "meta": {
-        "keywords": [
-          "review of judgment",
-          "new evidence",
-          "error on record",
-          "የፍርድ ዳግም ክለሳ",
-          "አዲስ ማስረጃ"
-        ],
+        "keywords": ["review of judgment", "new evidence", "error on record", "የፍርድ ዳግም ክለሳ", "አዲስ ማስረጃ"],
         "jurisdictionType": "Court which passed the original decree"
       },
       "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ ይግባኝ የማይባልበት የመጨረሻ ፍርድ ከተሰጠ በኋላ፣ አዲስና ወሳኝ ማስረጃ ሲገኝ ወይም በፍርዱ ላይ ግልጽ የሆነ የሕግ ወይም የፍሬ ነገር ስህተት ሲኖር ፍርዱ እንደገና እንዲታይ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nፍርዱን የሰጠው ፍርድ ቤት ራሱ የማመልከቻውን ተቀባይነት የማየት ስልጣን አለው (አንቀጽ 6(2))።\n\n### የጊዜ ገደብ (Period of Limitation)\nአዲስ ማስረጃ በመገኘቱ ምክንያት ከሆነ፣ ማስረጃው ከተገኘበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 6(3))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ይግባኝ አለመኖር፡** በፍርዱ ላይ ይግባኝ ያልተባለ መሆን አለበት።\n*   **አዲስ ማስረጃ፡** የቀረበው ማስረጃ ከፍርዱ በኋላ የተገኘ እና በክርክሩ ወቅት በትጋት ፈልጎ ማግኘት የማይቻል የነበረ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** አዲሱን ማስረጃ እና ለምን ወሳኝ እንደሆነ የሚያብራራ ማስታወሻ (ReviewApplicationMemo)።",
@@ -274,27 +220,21 @@
           "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
           "legalText": "አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል። (The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed.)",
           "citation": "C.P.C. Art. 6(1)(a)",
-          "autoEvidence": [
-            "ReviewApplicationMemo"
-          ]
+          "autoEvidence": ["ReviewApplicationMemo"]
         },
         {
           "id": "civ_proc_fact_mistake_or_error_on_face",
           "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
           "legalText": "በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)። (There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument.)",
           "citation": "C.P.C. Art. 6(1)(b)",
-          "autoEvidence": [
-            "ReviewApplicationMemo"
-          ]
+          "autoEvidence": ["ReviewApplicationMemo"]
         },
         {
           "id": "civ_proc_fact_other_sufficient_reason",
           "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
           "legalText": "ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ። (There is any other sufficient reason analogous to the specified grounds justifying a review.)",
           "citation": "C.P.C. Art. 6(1)(c)",
-          "autoEvidence": [
-            "ReviewApplicationMemo"
-          ]
+          "autoEvidence": ["ReviewApplicationMemo"]
         },
         {
           "id": "civ_proc_fact_no_previous_appeal",
@@ -308,6 +248,130 @@
         {
           "id": "civ_proc_relief_grant_review",
           "text": "የዳግም የማየት ጥያቄው ተቀባይነት አግኝቶ ክሱ አዲስ ማስረጃ ለማየት ወይም ስህተቱን ለማረም እንዲከፈት። (To grant the application for review and re-open the case for hearing the new evidence or correcting the error.)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
+        }
+      ],
+      "calculations": {}
+    },
+    "app_stay_construction": {
+      "documentTitle": "ግንባታ እንዲቆም የሚጠይቅ አስቸኳይ ማመልከቻ (Application for Urgent Order to Suspend Construction)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (Art. 154 of the Civil Procedure Code)",
+      "meta": {
+        "keywords": ["injunction", "stay of construction", "urgent application", "የግንባታ እግድ", "አስቸኳይ"],
+        "jurisdictionType": "Court Handling the Main Case"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ክርክር ባለበት መሬት ላይ ተቃራኒ ወገን ግንባታ እየሰራ ከሆነ፣ ዋናው ክስ እስኪያልቅ ድረስ ግንባታው እንዲቆም (እንዲታገድ) ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ወቅት ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የማይተካ ጉዳት (Irreparable Harm):** ግንባታው ከቀጠለ ሊጠገን የማይችል ጉዳት እንደሚደርስ ማሳየት።\n*   **ጠንካራ ክስ (Prima Facie Case):** በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
+      "partyTitles": {
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
+      },
+      "facts": [
+        {
+          "id": "app_fact_ongoing_construction",
+          "label": "የማይተካ ጉዳት (Irreparable Injury)",
+          "legalText": "ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ ላይ ተሰማርቷል። (The Respondent is currently engaged in active construction on the disputed land.)",
+          "citation": "",
+          "autoEvidence": ["PhotosVideoEvidence"]
+        },
+        {
+          "id": "app_fact_irreparable_harm",
+          "label": "የማይተካ ጉዳት (Irreparable Injury)",
+          "legalText": "ግንባታው ከተጠናቀቀ ማፍረሱ አስቸጋሪ ስለሚሆን የአመልካች መብቶች በቋሚነት ይጎዳሉ። (If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced.)",
+          "citation": "",
+          "autoEvidence": []
+        },
+        {
+          "id": "app_fact_prima_facie",
+          "label": "የማይተካ ጉዳት (Irreparable Injury)",
+          "legalText": "አመልካቹ ጠንካራ የባለቤትነት መብት እንዳለው አሳይቷል። (The Applicant has demonstrated a strong prima facie case of ownership.)",
+          "citation": "",
+          "autoEvidence": ["TitleDeed"]
+        }
+      ],
+      "reliefs": [
+        {
+          "id": "app_relief_suspend_works",
+          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በተከራካሪው ይዞታ ላይ ያሉ ሁሉም የግንባታ ስራዎች ወዲያውኑ እንዲቆሙ ትዕዛዝ እንዲሰጥ። (Order the immediate suspension of all construction activities on the disputed plot pending final judgment.)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
+        }
+      ],
+      "calculations": {}
+    },
+    "app_local_inspection": {
+      "documentTitle": "የአካባቢ ምርመራ ትዕዛዝ እንዲሰጥ ማመልከቻ (Application for Order of Local Inspection)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 136 (Art. 136 of the Civil Procedure Code)",
+      "meta": {
+        "keywords": ["local inspection", "site visit", "court inspection", "የአካባቢ ምርመራ", "ቦታ መጎብኘት"],
+        "jurisdictionType": "Court Handling the Main Case"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክሩ ውስጥ ያሉ ወገኖች ስለ ንብረቱ አካላዊ ገጽታ (ለምሳሌ ስለ ድንበር ወይም ስለ ይዞታ) የሚሰጡት ቃል ወይም ሰነድ ሲጋጭ፣ ፍርድ ቤቱ እውነታውን ለማረጋገጥ ቦታው ድረስ ሄዶ እንዲመለከት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት፡** ፍርድ ቤቱ ቦታውን በአካል ሳያይ ፍትሃዊ ውሳኔ መስጠት እንደማይቻል ማሳመን ያስፈልጋል።",
+      "partyTitles": {
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
+      },
+      "facts": [
+        {
+          "id": "app_fact_physical_dispute",
+          "label": "ማብራሪያ (Clarification)",
+          "legalText": "ስለ መሬቱ አካላዊ ገጽታዎች/ድንበሮች የሚቀርቡት የቃል ምስክርነቶች እና ሰነዶች እርስ በርሳቸው የሚጋጩ ናቸው። (The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory.)",
+          "citation": "",
+          "autoEvidence": []
+        },
+        {
+          "id": "app_fact_necessity_to_view",
+          "label": "ማብራሪያ (Clarification)",
+          "legalText": "ፍርድ ቤቱ (ወይም ሬጅስትራሩ) ቦታውን በአካል ሳይመለከት ፍትሃዊ ውሳኔ ሊሰጥ አይችልም። (A just decision cannot be rendered without the Court (or its registrar) physically viewing the site.)",
+          "citation": "CPC Art. 136",
+          "autoEvidence": []
+        }
+      ],
+      "reliefs": [
+        {
+          "id": "app_relief_order_visit",
+          "text": "ድንበሮችን/ይዞታን ለማረጋገጥ የንብረቱ አካባቢያዊ ምርመራ እንዲደረግ ትዕዛዝ እንዲሰጥ። (Order a local inspection of the property to verify boundaries/possession.)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
+        }
+      ],
+      "calculations": {}
+    },
+    "app_servitude_temporary_passage": {
+      "documentTitle": "ጊዜያዊ የመተላለፊያ ትዕዛዝ እንዲሰጥ አስገዳጅ ማመልከቻ (Application for Temporary Mandatory Order to Grant Passage)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (Injunction) እና የፍትሐ ብሔር ሕግ አንቀጽ 1332 (Necessity). (Art. 154 CPC & Art. 1332 Civil Code)",
+      "meta": {
+        "keywords": ["temporary injunction", "mandatory order", "passage", "servitude", "ጊዜያዊ እግድ", "የመንገድ መብት"],
+        "jurisdictionType": "Court Handling the Main Case"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው፣ ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
+      "partyTitles": {
+        "applicant": "አመልካች (Applicant)",
+        "respondent": "ተጠሪ (Respondent)"
+      },
+      "facts": [
+        {
+          "id": "app_fact_complete_blockade",
+          "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
+          "legalText": "ተጠሪው የአመልካችን ብቸኛ መውጫ ወደ ህዝብ መንገድ ሙሉ በሙሉ ዘግቷል። (The Respondent has completely blocked the Applicant's only access to the public road.)",
+          "citation": "",
+          "autoEvidence": ["PhotosVideoEvidence"]
+        },
+        {
+          "id": "app_fact_imminent_damage",
+          "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
+          "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል፣ ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል። (The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.)",
+          "citation": "",
+          "autoEvidence": []
+        }
+      ],
+      "reliefs": [
+        {
+          "id": "app_relief_grant_temporary_access",
+          "text": "ዋናው የመተላለፊያ መብት ክስ ላይ የመጨረሻ ውሳኔ እስከሚሰጥ ድረስ ተጠሪው ለአመልካች ጊዜያዊ መተላለፊያ እንዲሰጥ ትዕዛዝ እንዲሰጥ። (Order the Respondent to grant temporary passage to the Applicant pending the final decision on the main servitude claim.)",
           "isDefault": true,
           "isDynamic": false,
           "isCustom": false

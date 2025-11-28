@@ -55,7 +55,7 @@ const ManualEvidenceCard: React.FC<{
       <CardContent className="space-y-4 px-4 pb-4">
         {item.type === 'Document' && (
           <>
-            <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4">
+             <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4">
                 <Label>ገለጻ</Label>
                 <Input
                   className="h-9"
@@ -176,99 +176,52 @@ const ManualEvidenceCard: React.FC<{
           </>
         )}
         {item.type === 'Witness' && (
-          <div className="space-y-4">
-            <div className="grid grid-cols-4 gap-4">
-              <div className="space-y-2 col-span-1">
-                <Label>ማዕረግ</Label>
-                <Select
-                  value={item.honorific}
-                  onValueChange={(value) =>
-                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'honorific', value } })
-                  }
-                >
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {HONORIFICS.map((h) => (
-                      <SelectItem key={h} value={h}>
-                        {h}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2 col-span-3">
-                <Label>የምስክር ሙሉ ስም</Label>
-                <Input
-                  value={item.name}
-                  onChange={(e) =>
-                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'name', value: e.target.value } })
-                  }
-                />
-              </div>
+            <div className="space-y-4">
+                <div className="grid grid-cols-[auto_100px_auto_1fr_auto] items-center gap-x-4">
+                    <Label className="whitespace-nowrap">ማዕረግ</Label>
+                    <Select value={item.honorific} onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'honorific', value } })}>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
+                        <SelectContent>{HONORIFICS.map(h => <SelectItem key={h} value={h}>{h}</SelectItem>)}</SelectContent>
+                    </Select>
+                    <Label className="whitespace-nowrap">ሙሉ ስም</Label>
+                    <Input value={item.name} onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'name', value: e.target.value } })} />
+                </div>
+
+                <div className="space-y-3 pt-2">
+                    <div className="grid grid-cols-[auto_auto_1.5fr_auto_1fr_auto_0.5fr_auto_0.5fr] items-center gap-x-2 gap-y-3">
+                        <Label className="font-semibold text-sm">አድራሻ</Label>
+                        <Label className="text-xs">ከተማ/ክልል</Label>
+                        <Select value={item.city} onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'city', value } })}>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
+                        <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                        </Select>
+                        
+                        <Label className="text-xs">ክ/ከተማ</Label>
+                        <Select 
+                            value={item.subcity} 
+                            onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'subcity', value } })}
+                        >
+                            <SelectTrigger><SelectValue /></SelectTrigger>
+                            <SelectContent>{AA_SUBCITIES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
+                        </Select>
+                        
+                        <Label className="text-xs">ወረዳ</Label>
+                        <Input className="h-9" value={item.woreda} onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'woreda', value: e.target.value } })} />
+                        
+                        <Label className="text-xs">ቤት/ቁ</Label>
+                        <Input className="h-9" value={item.houseNo} onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'houseNo', value: e.target.value } })} />
+                    </div>
+                    {item.subcity === 'ሌላ' && (
+                        <div className="grid grid-cols-[auto_1fr] items-center gap-x-4 pt-1">
+                            <Label className="text-xs">ሌላ ክ/ከተማ</Label>
+                            <Input
+                                value={item.subcityOther || ''}
+                                onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'subcityOther', value: e.target.value }})}
+                            />
+                        </div>
+                    )}
+                </div>
             </div>
-            <div className="space-y-2">
-              <Label className="text-xs">ከተማ/ክልል</Label>
-              <Select
-                value={item.city}
-                onValueChange={(value) =>
-                  dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'city', value } })
-                }
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select City/Region" />
-                </SelectTrigger>
-                <SelectContent>
-                  {REGIONS_AND_CITIES.map((c) => (
-                    <SelectItem key={c} value={c}>
-                      {c}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label className="text-xs">ክፍለ ከተማ</Label>
-                <Select
-                  value={item.subcity}
-                  onValueChange={(value) =>
-                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'subcity', value } })
-                  }
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select Subcity" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {AA_SUBCITIES.map((s) => (
-                      <SelectItem key={s} value={s}>
-                        {s}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label className="text-xs">ወረዳ</Label>
-                <Input
-                  value={item.woreda}
-                  onChange={(e) =>
-                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'woreda', value: e.target.value } })
-                  }
-                />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <Label className="text-xs">የቤት ቁጥር</Label>
-              <Input
-                value={item.houseNo}
-                onChange={(e) =>
-                  dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'houseNo', value: e.target.value } })
-                }
-              />
-            </div>
-          </div>
         )}
         {item.type === 'CourtOrder' && (
           <div className="space-y-2">
@@ -479,3 +432,5 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
+
+    

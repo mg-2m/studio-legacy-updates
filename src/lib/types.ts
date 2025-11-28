@@ -55,13 +55,11 @@ interface ManualDocumentEvidence extends BaseManualEvidence {
     type: 'Document';
     description: string;
     issuer: string;
-    issuerOther?: string;
     refNumber: string;
     issueDate: string;
     pageCount: string;
     documentType: 'Original' | 'Copy';
     originalLocation: string;
-    originalLocationOther?: string;
 }
 
 interface ManualWitnessEvidence extends BaseManualEvidence {

@@ -307,14 +307,12 @@ function appReducer(state: AppState, action: Action): AppState {
                     id: newId,
                     type: 'Document',
                     description: '',
-                    issuer: DOCUMENT_ISSUERS[0],
-                    issuerOther: '',
+                    issuer: '',
                     refNumber: '',
                     issueDate: '',
                     pageCount: '',
                     documentType: 'Copy',
-                    originalLocation: EVIDENCE_LOCATIONS[0],
-                    originalLocationOther: '',
+                    originalLocation: '',
                     isManual: true,
                 };
                 break;

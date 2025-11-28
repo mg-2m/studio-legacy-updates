@@ -2,7 +2,6 @@
 "use client";
 
 import React from 'react';
-import { Alert } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -35,9 +34,11 @@ const ManualEvidenceCard: React.FC<{
     <Card key={item.id} className="bg-muted/30">
       <CardHeader className="flex-row items-center justify-between p-4">
         <div className="flex items-center gap-2">
+            {item.type === 'Document' && <File className="h-5 w-5 text-primary" />}
             {item.type === 'Witness' && <Users className="h-5 w-5 text-primary" />}
             {item.type === 'CourtOrder' && <Gavel className="h-5 w-5 text-primary" />}
             <CardTitle className="text-base">
+              {item.type === 'Document' && 'የሰነድ ማስረጃ'}
               {item.type === 'Witness' && 'የሰው ምስክር'}
               {item.type === 'CourtOrder' && 'የትዕዛዝ'}
             </CardTitle>
@@ -54,7 +55,7 @@ const ManualEvidenceCard: React.FC<{
       <CardContent className="space-y-4 px-4 pb-4">
         {item.type === 'Document' && (
           <>
-            <div className="grid grid-cols-[auto_1fr_auto_1.5fr] items-center gap-x-4">
+            <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4">
                 <Label>ገለጻ</Label>
                 <Input
                   className="h-9"
@@ -67,46 +68,42 @@ const ManualEvidenceCard: React.FC<{
                     })
                   }
                 />
-                <Label>አውጪ</Label>
-                <div className="flex gap-2">
-                    <Select
-                      value={item.issuer}
-                      onValueChange={(value) =>
+                 <Label>አውጪ</Label>
+                <div className="flex items-center gap-2">
+                  <Input
+                    className="h-9 flex-1"
+                    placeholder="Enter issuer name..."
+                    value={item.issuer}
+                    onChange={(e) =>
+                      dispatch({
+                        type: 'UPDATE_EVIDENCE',
+                        payload: { id: item.id, field: 'issuer', value: e.target.value },
+                      })
+                    }
+                  />
+                  <Select
+                    onValueChange={(value) =>
                         dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value } })
-                      }
-                    >
-                      <SelectTrigger className="h-9">
-                        <SelectValue placeholder="Select issuer" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {DOCUMENT_ISSUERS.map((issuer) => (
-                          <SelectItem key={issuer} value={issuer}>
-                            {issuer}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {item.issuer === 'ሌላ' && (
-                      <Input
-                        className="h-9"
-                        placeholder="Please specify other issuer"
-                        value={item.issuerOther || ''}
-                        onChange={(e) =>
-                          dispatch({
-                            type: 'UPDATE_EVIDENCE',
-                            payload: { id: item.id, field: 'issuerOther', value: e.target.value },
-                          })
-                        }
-                      />
-                    )}
+                    }
+                  >
+                    <SelectTrigger className="h-9 w-auto">
+                        <SelectValue placeholder="ይምረጡ" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {DOCUMENT_ISSUERS.map((issuer) => (
+                        <SelectItem key={issuer} value={issuer}>
+                          {issuer}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
             </div>
-
-            <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4 gap-y-3">
+            
+            <div className="grid grid-cols-[auto_1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-x-4">
                 <Label>ቁጥር</Label>
                 <Input
                   className="h-9"
-                  placeholder="e.g., AA/Pol/123/24"
                   value={item.refNumber}
                   onChange={(e) =>
                     dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'refNumber', value: e.target.value } })
@@ -115,7 +112,6 @@ const ManualEvidenceCard: React.FC<{
                 <Label>የተሰጠበት ቀን</Label>
                 <Input
                   className="h-9"
-                  placeholder="e.g., 22/05/2024"
                   value={item.issueDate}
                   onChange={(e) =>
                     dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issueDate', value: e.target.value } })
@@ -125,7 +121,6 @@ const ManualEvidenceCard: React.FC<{
                 <Input
                   className="h-9"
                   type="number"
-                  placeholder="e.g., 5"
                   value={item.pageCount}
                   onChange={(e) =>
                     dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'pageCount', value: e.target.value } })
@@ -133,14 +128,20 @@ const ManualEvidenceCard: React.FC<{
                 />
                  <Label>ኦርጅናሉ ያለበት</Label>
                 <div className="flex items-center gap-2">
+                    <Input
+                        className="h-9 flex-1"
+                        value={item.originalLocation}
+                        onChange={(e) =>
+                            dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value: e.target.value } })
+                        }
+                    />
                     <Select
-                      value={item.originalLocation}
                       onValueChange={(value) =>
                         dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value } })
                       }
                     >
-                      <SelectTrigger className="h-9">
-                        <SelectValue placeholder="Select location" />
+                      <SelectTrigger className="h-9 w-auto">
+                        <SelectValue placeholder="ይምረጡ"/>
                       </SelectTrigger>
                       <SelectContent>
                         {EVIDENCE_LOCATIONS.map((loc) => (
@@ -150,19 +151,6 @@ const ManualEvidenceCard: React.FC<{
                         ))}
                       </SelectContent>
                     </Select>
-                    {item.originalLocation === 'ሌላ' && (
-                      <Input
-                        className="h-9"
-                        placeholder="Please specify other location"
-                        value={item.originalLocationOther || ''}
-                        onChange={(e) =>
-                          dispatch({
-                            type: 'UPDATE_EVIDENCE',
-                            payload: { id: item.id, field: 'originalLocationOther', value: e.target.value },
-                          })
-                        }
-                      />
-                    )}
                 </div>
             </div>
             
@@ -213,7 +201,6 @@ const ManualEvidenceCard: React.FC<{
               <div className="space-y-2 col-span-3">
                 <Label>የምስክር ሙሉ ስም</Label>
                 <Input
-                  placeholder="e.g., Ato Kebede Alemayehu"
                   value={item.name}
                   onChange={(e) =>
                     dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'name', value: e.target.value } })
@@ -265,7 +252,6 @@ const ManualEvidenceCard: React.FC<{
               <div className="space-y-2">
                 <Label className="text-xs">ወረዳ</Label>
                 <Input
-                  placeholder="e.g., 03"
                   value={item.woreda}
                   onChange={(e) =>
                     dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'woreda', value: e.target.value } })
@@ -276,7 +262,6 @@ const ManualEvidenceCard: React.FC<{
             <div className="space-y-2">
               <Label className="text-xs">የቤት ቁጥር</Label>
               <Input
-                placeholder="e.g., 1234"
                 value={item.houseNo}
                 onChange={(e) =>
                   dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'houseNo', value: e.target.value } })
@@ -289,7 +274,6 @@ const ManualEvidenceCard: React.FC<{
           <div className="space-y-2">
             <Label>የትዕዛዙ ዝርዝር</Label>
             <Input
-              placeholder="e.g., Order for temporary injunction on property"
               value={item.description}
               onChange={(e) =>
                 dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })
@@ -495,5 +479,3 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
-
-    

@@ -326,7 +326,10 @@ function appReducer(state: AppState, action: Action): AppState {
         }
 
         const templateData = TEMPLATE_DATA[subTemplateId];
-        if (!templateData) return state; // Safety check
+        if (!templateData) {
+            console.error(`Error: Template data not found for subTemplateId: ${subTemplateId}`);
+            return state; // Safety check: Do not update state if data is missing
+        }
 
         // Initialize calculations for the new template
         const newCalculations: { [key: string]: Calculation } = {};
@@ -366,11 +369,15 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'TOGGLE_RELIEF': {
       const { reliefId } = action.payload;
-      const isMaintenanceRelief = TEMPLATE_DATA[state.selectedSubTemplate]?.reliefs.some(r => r.id === 'relief_child_support');
+      const currentTemplate = TEMPLATE_DATA[state.selectedSubTemplate];
+      if (!currentTemplate) return state;
+
+      const isMaintenanceRelief = currentTemplate.reliefs.some(r => r.id === 'relief_child_support');
       if (isMaintenanceRelief && reliefId === 'relief_child_support') {
           return appReducer(state, { type: 'TOGGLE_MAINTENANCE', payload: { checked: !state.maintenance.active } });
       }
-      const reliefItem = TEMPLATE_DATA[state.selectedSubTemplate]?.reliefs.find(r => r.id === reliefId);
+      
+      const reliefItem = currentTemplate.reliefs.find(r => r.id === reliefId);
       if (!reliefItem) return state;
 
       const isSelected = state.selectedReliefs.some(r => r.id === reliefId);
@@ -383,7 +390,7 @@ function appReducer(state: AppState, action: Action): AppState {
     }
     
     case 'ADD_CUSTOM_RELIEF': {
-      const newRelief = { id: 'cr' + Date.now(), text: 'Enter custom relief...', isDefault: false, isCustom: true };
+      const newRelief = { id: 'cr' + Date.now(), text: 'Enter custom relief...', isDefault: false, isDynamic: false, isCustom: true };
       return { ...state, selectedReliefs: [...state.selectedReliefs, newRelief] };
     }
 
@@ -494,3 +501,5 @@ export default function Home() {
     <MainLayout state={state} dispatch={dispatch} />
   );
 }
+
+    

@@ -368,6 +368,10 @@ const processFacts = (facts: any): Fact[] => {
 };
 
 export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(allTemplates).reduce((acc, [key, value] : [string, any]) => {
+  if (!value) {
+    console.error(`Template data for key "${key}" is missing or invalid. Skipping.`);
+    return acc;
+  }
   acc[key] = {
     ...value,
     facts: processFacts(value.facts), // Process facts into the new flat structure with group labels
@@ -384,7 +388,7 @@ const initialTemplateData = TEMPLATE_DATA[initialSubTemplateId];
 
 const initialCalculations: { [key: string]: Calculation } = {};
 
-if (initialTemplateData.calculations) {
+if (initialTemplateData && initialTemplateData.calculations) {
     for (const calcKey in initialTemplateData.calculations) {
         const calcConfig = initialTemplateData.calculations[calcKey];
         initialCalculations[calcKey] = {};
@@ -412,7 +416,7 @@ export const INITIAL_STATE: AppState = {
   applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '' } }],
   respondents: [],
   selectedFacts: [],
-  selectedReliefs: initialTemplateData.reliefs.filter(r => r.isDefault),
+  selectedReliefs: initialTemplateData ? initialTemplateData.reliefs.filter(r => r.isDefault) : [],
   maintenance: { 
     active: false, 
     income: 0, 
@@ -423,8 +427,11 @@ export const INITIAL_STATE: AppState = {
   calculations: initialCalculations,
   evidence: [],
   smartEvidence: {},
-  partyTitles: initialTemplateData.partyTitles,
+  partyTitles: initialTemplateData ? initialTemplateData.partyTitles : { applicant: 'Applicant', respondent: 'Respondent' },
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
 
+
+
+    

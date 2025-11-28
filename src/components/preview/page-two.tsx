@@ -31,7 +31,7 @@ const formatPartyList = (parties: Party[]) => {
 
             return (
               <li key={index} className="mb-2">
-                 <div className="grid grid-cols-[auto_1fr] text-left">
+                 <div className="grid grid-cols-1 text-left">
                     <span className="font-bold text-base whitespace-nowrap">{stripEnglish(party.honorific)} {party.name}</span>
                     <div></div>
                 </div>
@@ -56,7 +56,6 @@ export default function PageTwo({ state }: PageTwoProps) {
 
   const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
   const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
-
 
   const documentEvidence: { description: string; details: string }[] = [];
   const witnessEvidence: { label: string; details: string }[] = [];
@@ -86,21 +85,20 @@ export default function PageTwo({ state }: PageTwoProps) {
         if (issuer) detailsParts.push(`አውጪ: ${issuer}`);
         if (e.pageCount) detailsParts.push(`ገጽ: ${e.pageCount}`);
 
-        let locationString = '';
-        if (e.originalLocation) {
-            const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
-            if (e.documentType === 'Original') {
-                locationString = ` ኦርጅናሉ ${location} የሚገኝ`;
-            } else if (e.documentType === 'Copy') {
-                locationString = ` ኮፒው ${location} የሚገኝ`;
-            }
-        }
-        
         let details = detailsParts.join(', ');
-        if (e.documentType !== 'N/A') {
-            details += `, ${e.documentType}`;
+
+        // Part 1: Describe the attached document (Copy or Original)
+        if (e.documentType === 'Copy' || e.documentType === 'Original') {
+            details += `, ${e.documentType} ተያይዙዋል`;
+        } else {
+            details += ` ተያይዙዋል`;
         }
-        details += locationString;
+
+        // Part 2: Describe the location of the ORIGINAL document
+        if (e.originalLocation && e.originalLocation !== 'የማይመለከተው') {
+            const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
+            details += ` ኦርጅናሉ ${location} የሚገኝ`;
+        }
 
         documentEvidence.push({ description, details });
 
@@ -176,9 +174,7 @@ export default function PageTwo({ state }: PageTwoProps) {
             <h3 className="font-bold">ሀ). የሰነድ ማስረጃ</h3>
             <ol className="ml-8 list-decimal" style={{ lineHeight: 1.8 }}>
               {documentEvidence.map((e, i) => (
-                <li key={`doc-${i}`} className="mb-3 text-justify">
-                  <span dangerouslySetInnerHTML={{ __html: `<strong>${stripEnglish(e.description)}</strong> ${stripEnglish(e.details)}` }} />
-                </li>
+                <li key={`doc-${i}`} className="mb-3 text-justify" dangerouslySetInnerHTML={{ __html: `${e.description} ${e.details}` }} />
               ))}
             </ol>
           </div>
@@ -206,8 +202,11 @@ export default function PageTwo({ state }: PageTwoProps) {
             <ol className="ml-8 list-decimal" style={{ lineHeight: 1.8 }}>
               {courtOrderEvidence.map((e, i) => (
                 <li key={`co-${i}`} className="mb-3 text-justify">
-                  <strong>{stripEnglish(e.label)}</strong>
-                  {e.details && <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">{stripEnglish(e.details)}</p>}
+                  {e.details ? (
+                    <span dangerouslySetInnerHTML={{ __html: stripEnglish(e.details) }} />
+                  ) : (
+                    <strong>{stripEnglish(e.label)}</strong>
+                  )}
                 </li>
               ))}
             </ol>

@@ -125,5 +125,3 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
     </div>
   );
 }
-
-    

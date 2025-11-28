@@ -155,7 +155,7 @@ export const DOCUMENT_ISSUERS = [
   "Addis Ababa City Land Development and Management Bureau (የአ/አ ከተማ የመሬት ልማት እና ማኔጅመንት ቢሮ)",
   "Ministry of Urban and Infrastructure (የከተማ እና መሠረተ ልማት ሚኒስቴር)",
   "Ethiopian Roads Administration (የኢትዮጵያ መንገዶች አስተዳደር)",
-  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክס ሚኒስቴር)",
+  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክስ ሚኒስቴር)",
   "Ethiopian Electric Power (የኢትዮጵያ ኤሌክትሪክ ኃይል)",
 
   // --- Social & Health ---

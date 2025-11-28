@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { Button } from '@/components/ui/button';
@@ -34,7 +35,7 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
           <CardContent className="space-y-4 px-4 pb-4">
             <div className="grid grid-cols-4 gap-4">
               <div className="space-y-2 col-span-1">
-                 <Label>Title</Label>
+                 <Label>ማዕረግ (Title)</Label>
                  <Select value={party.honorific} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'honorific', value } })}>
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>{HONORIFICS.map(h => <SelectItem key={h} value={h}>{h}</SelectItem>)}</SelectContent>

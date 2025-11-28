@@ -142,7 +142,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                     </div>
                     <div className="text-center rounded-lg border-2 border-dashed border-accent/50 bg-background p-4">
                     <p className="text-sm text-muted-foreground">ለአንድ ልጅ የሚገመት ቀለብ</p>
-                    <p className="text-2xl font-bold text-foreground">{maintenance.result.toFixed(2)} ETB</p>
+                    <p className="text-2xl font-bold text-foreground">{maintenance.result.toFixed(2)} ብር</p>
                     </div>
                     {maintenance.context && (
                     <Alert variant="default" className="bg-background">

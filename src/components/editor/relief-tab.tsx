@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -91,7 +92,7 @@ const ReliefCalculator: React.FC<{
                     <div key={output.id} className="text-center rounded-lg border-2 border-dashed border-blue-400 bg-background p-4">
                         <p className="text-sm text-muted-foreground">{output.label}</p>
                         <p className="text-2xl font-bold text-foreground">
-                            {(calcState[output.id] as number || 0).toFixed(2)} ETB
+                            {(calcState[output.id] as number || 0).toFixed(2)} ብር
                         </p>
                     </div>
                 ))}

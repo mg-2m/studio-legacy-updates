@@ -15,11 +15,11 @@ const formatFactText = (fact: Fact): string => {
   if (!values) return legalText;
 
   for (const key in values) {
-    const placeholder = `[${key}]`;
+    const placeholder = `\\[${key}\\]`;
     const value = values[key];
     // Replace placeholder with a bold, underlined value, or a default if empty
     const replacement = `<strong><u>${value || '______'}</u></strong>`;
-    legalText = legalText.replace(new RegExp(placeholder.replace(/\[/g, '\\[').replace(/\]/g, '\\]'), 'g'), replacement);
+    legalText = legalText.replace(new RegExp(placeholder, 'g'), replacement);
   }
   return legalText;
 };
@@ -55,7 +55,7 @@ export default function PageOne({ state }: PageOneProps) {
   };
 
   const formatReliefText = (relief: Relief): string => {
-    let text = stripEnglish(relief.text);
+    let text = relief.text;
 
     if (relief.isDynamic && calculations) {
         // Collect all values from all calculators
@@ -81,10 +81,8 @@ export default function PageOne({ state }: PageOneProps) {
 
 
   const getPluralizedTitle = (title: string, count: number): string => {
-    if (count <= 1) return stripEnglish(title).toUpperCase();
-    
-    const amharicPart = stripEnglish(title);
-    return `${amharicPart}ዎች`.toUpperCase();
+    if (count <= 1) return title.toUpperCase();
+    return `${title}ዎች`.toUpperCase();
   };
 
   const formatPartyList = (parties: Party[]) => {
@@ -120,10 +118,10 @@ export default function PageOne({ state }: PageOneProps) {
     <div className="a4-page">
       <div className="header-block">
         <div className="text-right mb-1">
-          <span className="green-box">{stripEnglish('ቀን (Date)')}: {meta.date || '___________'}</span>
+          <span className="green-box">ቀን: {meta.date || '___________'}</span>
         </div>
         <div>
-          <span className="black-box text-lg">{stripEnglish('ለ (To)')}: {stripEnglish(meta.courtLevel) || '___________'}</span>
+          <span className="black-box text-lg">ለ: {stripEnglish(meta.courtLevel) || '___________'}</span>
         </div>
         <div className="mt-1">
           <span className="green-box">{stripEnglish(meta.bench) || '___________'}</span>
@@ -132,7 +130,7 @@ export default function PageOne({ state }: PageOneProps) {
           <span className="black-box">{stripEnglish(meta.city) || '___________'}</span>
         </div>
         <div className="mt-2 inline-block border-2 border-black px-2 py-0.5 font-bold">
-          {stripEnglish('መዝገብ ቁጥር (File No.)')}: {meta.fileNumber || '___________'}
+          መዝገብ ቁጥር: {meta.fileNumber || '___________'}
         </div>
       </div>
 
@@ -156,12 +154,12 @@ export default function PageOne({ state }: PageOneProps) {
 
       <div className="text-center my-8">
         <span className="bg-black text-white px-5 py-1.5 font-bold text-lg" style={{ border: '4px double white', boxShadow: '0 0 0 2px black' }}>
-          {stripEnglish(documentTitle)}
+          {documentTitle}
         </span>
       </div>
 
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
-        <h4 className="m-0 mb-2 underline font-bold">{stripEnglish('መግቢያ (Introduction)')}:</h4>
+        <h4 className="m-0 mb-2 underline font-bold">መግቢያ:</h4>
         <ul className="list-none p-0 leading-relaxed">
           <li>➤ ይህ <strong>{stripEnglish(meta.courtLevel)}</strong> በ <strong>{jurisdictionText}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ አመልካች ጉዳዩን የምከታተለው፡ <strong>[{repMap[meta.representation]}]</strong></li>
@@ -171,7 +169,7 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mb-5">
-        <div className="black-box mb-2">{stripEnglish('የክሱ ፍሬ ነገሮች (Statement of Facts)')}</div>
+        <div className="black-box mb-2">የክሱ ፍሬ ነገሮች</div>
         <ol className="ml-5 list-decimal">
           {selectedFacts.length > 0 ? selectedFacts.map((f, i) => (
             <li key={i} className="mb-2 text-justify">
@@ -183,7 +181,7 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mb-5">
-        <div className="black-box mb-2">{stripEnglish('ዳኝነት (Relief)')}</div>
+        <div className="black-box mb-2">ዳኝነት</div>
         <div className="border-l-2 border-black pl-4">
           <p>ስለዚህ የተከበረው ፍርድ ቤት እንዲወስንልኝ የምጠይቀው፡</p>
           <ol className="list-decimal ml-5">
@@ -195,15 +193,16 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mt-12">
-        <div className="black-box">{stripEnglish('ማረጋገጫ (Verification)')}</div>
+        <div className="black-box">ማረጋገጫ</div>
         <p>ከላይ የቀረበው አቤቱታ እውነት መሆኑን በፍ/ብ/ሥ/ሥ/ሕግ ቁ. 92 መሰረት አረጋግጣለሁ፡፡</p>
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>
-            <strong>{stripEnglish('የአመልካች ፊርማ (Applicant\'s Signature)')}</strong>
+            <strong>የአመልካች ፊርማ</strong>
           </div>
         </div>
       </div>
     </div>
   );
 }
+

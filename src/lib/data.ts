@@ -354,6 +354,11 @@ export const TEMPLATES: Template[] = [
   }
 ];
 
+// Helper to strip English parenthetical text
+const stripEnglish = (text: string | undefined): string => {
+    if (!text) return '';
+    return text.split('(')[0].trim();
+};
 
 // This function processes facts from the old structure to the new one.
 const processFacts = (facts: any): Fact[] => {
@@ -392,10 +397,33 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(all
     console.error(`Template data for key "${key}" is missing or invalid. Skipping.`);
     return acc;
   }
-  acc[key] = {
-    ...value,
-    facts: processFacts(value.facts), // Process facts into the new flat structure with group labels
-  };
+  
+  // Create a deep copy to avoid mutating the original `allTemplates` object
+  const newTemplateData = JSON.parse(JSON.stringify(value));
+
+  // Strip english from all relevant fields
+  newTemplateData.documentTitle = stripEnglish(newTemplateData.documentTitle);
+  newTemplateData.jurisdictionText = stripEnglish(newTemplateData.jurisdictionText);
+  if (newTemplateData.partyTitles) {
+      newTemplateData.partyTitles.applicant = stripEnglish(newTemplateData.partyTitles.applicant);
+      newTemplateData.partyTitles.respondent = stripEnglish(newTemplateData.partyTitles.respondent);
+  }
+  if (newTemplateData.facts) {
+      const processedFacts = processFacts(newTemplateData.facts);
+      newTemplateData.facts = processedFacts.map(fact => ({
+          ...fact,
+          legalText: stripEnglish(fact.legalText),
+          label: stripEnglish(fact.label)
+      }));
+  }
+   if (newTemplateData.reliefs) {
+    newTemplateData.reliefs = newTemplateData.reliefs.map((relief: Relief) => ({
+      ...relief,
+      text: stripEnglish(relief.text)
+    }));
+  }
+  
+  acc[key] = newTemplateData;
   return acc;
 }, {} as { [key: string]: TemplateData });
 
@@ -451,3 +479,4 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+

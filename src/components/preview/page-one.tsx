@@ -27,7 +27,8 @@ const formatFactText = (fact: Fact): string => {
 // Function to strip english parenthetical text
 const stripEnglish = (text: string) => {
     if (!text) return '';
-    return text.split('(')[0].trim();
+    const match = text.match(/^(.*?)\s*\(/);
+    return match ? match[1].trim() : text;
 }
 
 export default function PageOne({ state }: PageOneProps) {
@@ -100,7 +101,7 @@ export default function PageOne({ state }: PageOneProps) {
 
             return (
               <li key={index} className="mb-2">
-                <span className="font-bold text-base">{party.honorific} {party.name}</span>
+                <span className="font-bold text-base">{stripEnglish(party.honorific)} {party.name}</span>
                 <div className="text-sm pl-6">
                   አድራሻ፡ {party.address.city}, {subcity}{woreda}
                 </div>
@@ -135,18 +136,18 @@ export default function PageOne({ state }: PageOneProps) {
       </div>
 
       <div className="mb-5">
-        <div className="flex justify-between items-start">
-            <div className="purple-box flex-shrink-0">{applicantTitle}</div>
-            <div className="text-right w-3/4">
+        <div className="grid grid-cols-3 items-start">
+            <div className="purple-box flex-shrink-0 col-span-1">{applicantTitle}</div>
+            <div className="text-left col-span-2">
                 {formatPartyList(applicants)}
             </div>
         </div>
       </div>
 
       <div className="mb-5">
-        <div className="flex justify-between items-start">
-            <div className="purple-box flex-shrink-0">{respondentTitle}</div>
-            <div className="text-right w-3/4">
+        <div className="grid grid-cols-3 items-start">
+            <div className="purple-box flex-shrink-0 col-span-1">{respondentTitle}</div>
+            <div className="text-left col-span-2">
                 {formatPartyList(respondents)}
             </div>
         </div>
@@ -162,7 +163,7 @@ export default function PageOne({ state }: PageOneProps) {
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ:</h4>
         <ul className="list-none p-0 leading-relaxed">
           <li>➤ ይህ <strong>{stripEnglish(meta.courtLevel)}</strong> በ <strong>{stripEnglish(jurisdictionText)}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
-          <li>➤ አመልካች ጉዳዩን የምከታተለው፡ <strong>[{repMap[meta.representation]}]</strong></li>
+          <li>➤ አመልካች ጉዳዩን የምከታተለው፡ <strong>[{stripEnglish(repMap[meta.representation])}]</strong></li>
           <li>➤ መጥሪያውን፡ <strong>{summonsMap[meta.summonsDelivery]}</strong></li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል::</li>
         </ul>
@@ -205,6 +206,7 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
+
 
 
 

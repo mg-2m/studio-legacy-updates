@@ -16,8 +16,7 @@ import {
 import { COURT_HIERARCHY, REGIONS_AND_CITIES } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import PartyForm from './party-form';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-import { Separator } from '../ui/separator';
+import { Card, CardContent } from '../ui/card';
 
 
 interface HeaderPartiesTabProps {
@@ -32,40 +31,35 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
     <div className="w-full space-y-4">
        <Card>
         <CardContent className="space-y-4 p-4">
-           <div className="grid grid-cols-2 gap-8">
-            {/* Left Column for Court Details */}
-            <div className="space-y-4">
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                    <Label>የፍ/ቤት ደረጃ</Label>
-                    <Select 
-                      value={metadata.courtLevel} 
-                      onValueChange={(value) => {
-                        dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevel', value } });
-                        const newDefaultBench = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY][0];
-                        dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
-                      }}
-                    >
-                      <SelectTrigger><SelectValue /></SelectTrigger>
-                      <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
-                    </Select>
-                </div>
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                    <Label>ችሎት</Label>
-                    <Select value={metadata.bench} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value } })}>
-                        <SelectTrigger><SelectValue /></SelectTrigger>
-                        <SelectContent>{(COURT_HIERARCHY[metadata.courtLevel as keyof typeof COURT_HIERARCHY] || []).map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
-                    </Select>
-                </div>
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                    <Label>ከተማ</Label>
-                    <Select value={metadata.city} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'city', value } })}>
-                        <SelectTrigger><SelectValue /></SelectTrigger>
-                        <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
-                    </Select>
-                </div>
+          <div className="space-y-4">
+            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+              <Label>የፍ/ቤት ደረጃ</Label>
+              <Select 
+                value={metadata.courtLevel} 
+                onValueChange={(value) => {
+                  dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevel', value } });
+                  const newDefaultBench = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY][0];
+                  dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
+                }}
+              >
+                <SelectTrigger><SelectValue /></SelectTrigger>
+                <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+              </Select>
             </div>
-
-            {/* Right Column for Date and File Number */}
+            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+              <Label>ችሎት</Label>
+              <Select value={metadata.bench} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value } })}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>{(COURT_HIERARCHY[metadata.courtLevel as keyof typeof COURT_HIERARCHY] || []).map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
+              </Select>
+            </div>
+            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+              <Label>ከተማ</Label>
+              <Select value={metadata.city} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'city', value } })}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+              </Select>
+            </div>
             <div className="space-y-4">
                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                   <Label>ቀን</Label>

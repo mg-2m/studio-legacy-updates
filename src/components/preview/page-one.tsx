@@ -123,6 +123,9 @@ export default function PageOne({ state }: PageOneProps) {
       <div className="header-block">
         <div className="text-right mb-1">
           <span className="green-box">ቀን: {meta.date || '___________'}</span>
+          <div className="mt-2 inline-block border-2 border-black px-2 py-0.5 font-bold">
+            መዝገብ ቁጥር: {meta.fileNumber || '___________'}
+          </div>
         </div>
         <div>
           <span className="black-box text-lg">ለ: {stripEnglish(meta.courtLevel) || '___________'}</span>
@@ -132,9 +135,6 @@ export default function PageOne({ state }: PageOneProps) {
         </div>
         <div className="mt-1">
           <span className="black-box">{stripEnglish(meta.city) || '___________'}</span>
-        </div>
-        <div className="mt-2 inline-block border-2 border-black px-2 py-0.5 font-bold">
-          መዝገብ ቁጥር: {meta.fileNumber || '___________'}
         </div>
       </div>
 
@@ -209,8 +209,3 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
-
-
-
-
-

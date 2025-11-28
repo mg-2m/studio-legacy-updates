@@ -16,8 +16,7 @@ import {
 import { COURT_HIERARCHY, REGIONS_AND_CITIES } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import PartyForm from './party-form';
-import { Card, CardContent } from '../ui/card';
-
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
 interface HeaderPartiesTabProps {
   state: AppState;
@@ -30,7 +29,10 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
   return (
     <div className="w-full space-y-4">
       <Card>
-        <CardContent className="space-y-4 p-4">
+        <CardHeader>
+            <CardTitle className="text-base text-primary">የፍ/ቤት እና የክስ ራስጌ</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4 p-4 pt-0">
           <div className="space-y-4">
             <div className="grid grid-cols-[auto_1fr] items-center gap-4">
               <Label>የፍ/ቤት ደረጃ</Label>

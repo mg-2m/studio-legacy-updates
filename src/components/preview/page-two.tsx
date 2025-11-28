@@ -3,6 +3,7 @@
 
 import type { AppState, ManualEvidence } from '@/lib/types';
 import { EVIDENCE_REGISTRY } from '@/lib/data';
+import { format } from 'date-fns';
 
 interface PageTwoProps {
   state: AppState;
@@ -35,7 +36,8 @@ export default function PageTwo({ state }: PageTwoProps) {
         label = e.description || e.type;
         const issuer = e.issuer === 'Other (ሌላ)' ? e.issuerOther : e.issuer;
         const location = e.originalLocation === 'Other (ሌላ)' ? e.originalLocationOther : e.originalLocation;
-        details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issuer: ${issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${location || 'N/A'})`;
+        const issueDate = e.issueDate ? format(new Date(e.issueDate), 'dd/MM/yyyy') : 'N/A';
+        details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issued: ${issueDate}, Issuer: ${issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${location || 'N/A'})`;
     } else if (e.type === 'Witness') {
         label = `${e.honorific} ${e.name}` || 'Unnamed Witness';
         let subcity = e.subcity === 'ሌላ' ? e.subcityOther : e.subcity;

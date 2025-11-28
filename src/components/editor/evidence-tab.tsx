@@ -2,6 +2,7 @@
 "use client";
 
 import React from 'react';
+import { format } from "date-fns";
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,7 +12,7 @@ import { Separator } from '@/components/ui/separator';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, AA_SUBCITIES, REGIONS_AND_CITIES, HONORIFICS } from '@/lib/data';
 import type { AppState, ManualEvidence } from '@/lib/types';
-import { BrainCircuit, Plus, X, File, Users, Gavel, Link } from 'lucide-react';
+import { BrainCircuit, Plus, X, File, Users, Gavel, Link, Calendar as CalendarIcon } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -19,6 +20,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '../ui/select';
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { Calendar } from '../ui/calendar';
+import { cn } from '@/lib/utils';
 
 interface EvidenceTabProps {
   state: AppState;
@@ -97,7 +101,7 @@ const ManualEvidenceCard: React.FC<{
               )}
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
+               <div className="space-y-2">
                 <Label>Reference No. (ቁጥር)</Label>
                 <Input
                   placeholder="e.g., AA/Pol/123/24"
@@ -108,6 +112,38 @@ const ManualEvidenceCard: React.FC<{
                 />
               </div>
               <div className="space-y-2">
+                <Label>Issue Date (የተሰጠበት ቀን)</Label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant={"outline"}
+                      className={cn(
+                        "w-full justify-start text-left font-normal",
+                        !item.issueDate && "text-muted-foreground"
+                      )}
+                    >
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      {item.issueDate ? format(new Date(item.issueDate), "PPP") : <span>Pick a date</span>}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0">
+                    <Calendar
+                      mode="single"
+                      selected={item.issueDate ? new Date(item.issueDate) : undefined}
+                      onSelect={(date) =>
+                        dispatch({
+                          type: 'UPDATE_EVIDENCE',
+                          payload: { id: item.id, field: 'issueDate', value: date ? date.toISOString().split('T')[0] : '' },
+                        })
+                      }
+                      initialFocus
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+             
+            </div>
+             <div className="space-y-2">
                 <Label>Page Count (የገጽ ብዛት)</Label>
                 <Input
                   type="number"
@@ -118,7 +154,6 @@ const ManualEvidenceCard: React.FC<{
                   }
                 />
               </div>
-            </div>
             <div className="space-y-2">
               <Label>Document Type (የሰነዱ አይነት)</Label>
               <RadioGroup
@@ -481,5 +516,3 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
-
-

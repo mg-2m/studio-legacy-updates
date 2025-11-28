@@ -310,6 +310,7 @@ function appReducer(state: AppState, action: Action): AppState {
                     issuer: DOCUMENT_ISSUERS[0],
                     issuerOther: '',
                     refNumber: '',
+                    issueDate: '',
                     pageCount: '',
                     documentType: 'Copy',
                     originalLocation: EVIDENCE_LOCATIONS[0],
@@ -325,6 +326,7 @@ function appReducer(state: AppState, action: Action): AppState {
                     name: '',
                     city: REGIONS_AND_CITIES[0],
                     subcity: AA_SUBCITIES[0],
+                    subcityOther: '',
                     woreda: '',
                     houseNo: '',
                     isManual: true,
@@ -404,8 +406,8 @@ function appReducer(state: AppState, action: Action): AppState {
       const currentTemplate = TEMPLATE_DATA[state.selectedSubTemplate];
       if (!currentTemplate) return state;
 
-      const isMaintenanceRelief = currentTemplate.reliefs.some(r => r.id === 'relief_child_support');
-      if (isMaintenanceRelief && reliefId === 'relief_child_support') {
+      const isMaintenanceCheckbox = currentTemplate.reliefs.some(r => r.id === 'relief_child_support');
+      if (isMaintenanceCheckbox && reliefId === 'relief_child_support') {
           return appReducer(state, { type: 'TOGGLE_MAINTENANCE', payload: { checked: !state.maintenance.active } });
       }
       

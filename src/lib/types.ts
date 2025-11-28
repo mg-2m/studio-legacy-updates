@@ -58,6 +58,7 @@ interface ManualDocumentEvidence extends BaseManualEvidence {
     issuer: string;
     issuerOther?: string;
     refNumber: string;
+    issueDate: string;
     pageCount: string;
     documentType: 'Original' | 'Copy';
     originalLocation: string;

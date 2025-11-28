@@ -455,7 +455,7 @@ export const INITIAL_STATE: AppState = {
     bench: defaultBench,
     city: REGIONS_AND_CITIES[0],
     fileNumber: '',
-    date: new Date().toLocaleDateString('en-GB') + ' EC',
+    date: new Date().toLocaleDateString('en-GB') + ' ዓ/ም',
     jurisdictionLaw: '1234/2012',
     representation: 'self',
     summonsDelivery: 'self'

@@ -39,7 +39,7 @@ interface HeaderPartiesTabProps {
 
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
   const { metadata, applicants, respondents, partyTitles } = state;
-  const dateObject = metadata.date.endsWith(' EC') ? new Date() : new Date(metadata.date);
+  const dateObject = metadata.date.endsWith(' ዓ/ም') ? new Date() : new Date(metadata.date);
   
   return (
     <Accordion type="multiple" defaultValue={['item-1', 'item-4', 'item-5']} className="w-full space-y-4">
@@ -97,7 +97,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 <Calendar
                   mode="single"
                   selected={dateObject}
-                  onSelect={(date) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: date ? format(date, "dd/MM/yyyy") + ' EC' : '' } })}
+                  onSelect={(date) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: date ? format(date, "dd/MM/yyyy") + ' ዓ/ም' : '' } })}
                   initialFocus
                 />
               </PopoverContent>

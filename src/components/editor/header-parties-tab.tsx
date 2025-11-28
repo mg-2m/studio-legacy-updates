@@ -34,7 +34,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         </CardHeader>
         <CardContent className="space-y-4 p-4 pt-0">
           <div className="space-y-4">
-            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+             <div className="grid grid-cols-[auto_1fr] items-center gap-4">
               <Label>የፍ/ቤት ደረጃ</Label>
               <Select 
                 value={metadata.courtLevel} 

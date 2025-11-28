@@ -9,12 +9,10 @@ interface PageTwoProps {
   state: AppState;
 }
 
-// Function to strip english parenthetical text
-const stripEnglish = (text: string) => {
-    if (!text) return '';
-    const match = text.match(/^(.*?)\s*\(/);
-    return match ? match[1].trim() : text;
-}
+const getPluralizedTitle = (title: string, count: number): string => {
+    if (count <= 1) return title.toUpperCase();
+    return `${title}ዎች`.toUpperCase();
+};
 
 
 const formatPartyList = (parties: Party[]) => {
@@ -49,11 +47,6 @@ const formatPartyList = (parties: Party[]) => {
 
 export default function PageTwo({ state }: PageTwoProps) {
   const { metadata: meta, applicants, respondents, partyTitles, smartEvidence, evidence } = state;
-
-  const getPluralizedTitle = (title: string, count: number): string => {
-    if (count <= 1) return stripEnglish(title).toUpperCase();
-    return `${stripEnglish(title)}ዎች`.toUpperCase();
-  };
 
   const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
   const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
@@ -246,3 +239,4 @@ export default function PageTwo({ state }: PageTwoProps) {
   );
 }
 
+    

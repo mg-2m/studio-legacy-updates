@@ -24,13 +24,6 @@ const formatFactText = (fact: Fact): string => {
   return legalText;
 };
 
-// Function to strip english parenthetical text
-const stripEnglish = (text: string) => {
-    if (!text) return '';
-    const match = text.match(/^(.*?)\s*\(/);
-    return match ? match[1].trim() : text;
-}
-
 export default function PageOne({ state }: PageOneProps) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
   const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
@@ -82,8 +75,8 @@ export default function PageOne({ state }: PageOneProps) {
 
 
   const getPluralizedTitle = (title: string, count: number): string => {
-    if (count <= 1) return stripEnglish(title).toUpperCase();
-    return `${stripEnglish(title)}ዎች`.toUpperCase();
+    if (count <= 1) return title.toUpperCase();
+    return `${title}ዎች`.toUpperCase();
   };
 
   const formatPartyList = (parties: Party[]) => {
@@ -195,7 +188,7 @@ export default function PageOne({ state }: PageOneProps) {
           <ol className="list-decimal ml-5">
              {selectedReliefs
                 .filter(item => !(item.id === 'relief_child_support' && !maintenance.active))
-                .map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: stripEnglish(formatReliefText(item)) }} />)}
+                .map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: formatReliefText(item) }} />)}
           </ol>
         </div>
       </div>
@@ -213,3 +206,5 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
+
+    

@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import { Plus } from 'lucide-react';
@@ -38,7 +37,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         <CardContent className="space-y-4">
            <div className="grid grid-cols-2 gap-8">
             {/* Left Column for Court Details */}
-            <div className="space-y-4">
+            <div className="space-y-2">
                 <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                     <Label className="whitespace-nowrap">የፍ/ቤት ደረጃ</Label>
                     <Select 
@@ -49,36 +48,32 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                         dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
                       }}
                     >
-                      <SelectTrigger><SelectValue placeholder="Select court tier" /></SelectTrigger>
+                      <SelectTrigger><SelectValue /></SelectTrigger>
                       <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
                     </Select>
                 </div>
                 <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                     <Label>ችሎት</Label>
                     <Select value={metadata.bench} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value } })}>
-                        <SelectTrigger><SelectValue placeholder="Select bench" /></SelectTrigger>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
                         <SelectContent>{(COURT_HIERARCHY[metadata.courtLevel as keyof typeof COURT_HIERARCHY] || []).map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
                     </Select>
                 </div>
                 <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                     <Label>ከተማ</Label>
                     <Select value={metadata.city} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'city', value } })}>
-                        <SelectTrigger><SelectValue placeholder="Select city" /></SelectTrigger>
+                        <SelectTrigger><SelectValue /></SelectTrigger>
                         <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
                     </Select>
                 </div>
             </div>
 
             {/* Right Column for Date and File Number */}
-            <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label>ቀን</Label>
-                  <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
-                </div>
-                <div className="space-y-2">
-                    <Label>የመዝገብ ቁጥር</Label>
-                    <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
-                </div>
+            <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4">
+                <Label>ቀን</Label>
+                <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
+                <Label>የመዝገብ ቁጥር</Label>
+                <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
             </div>
           </div>
         </CardContent>

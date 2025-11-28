@@ -394,6 +394,9 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(all
   
   // Create a deep copy to avoid mutating the original `allTemplates` object
   const newTemplateData = JSON.parse(JSON.stringify(value));
+
+  // Process facts for the copied data
+  newTemplateData.facts = processFacts(newTemplateData.facts);
   
   acc[key] = newTemplateData;
   return acc;
@@ -451,5 +454,6 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
 
 

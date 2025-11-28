@@ -50,9 +50,9 @@ export default function PageOne({ state }: PageOneProps) {
   };
 
   const repMap = {
-    self: '1. ራሴ በመቅረብ ነው',
-    lawyer: '2. በጠበቃዬ አማካይነት ነው',
-    both: '3. በራሴ እና በጠበቃዬ',
+    self: 'ራሴ በመቅረብ ነው',
+    lawyer: 'በጠበቃዬ አማካይነት ነው',
+    both: 'በራሴ እና በጠበቃዬ',
   };
 
   const formatReliefText = (relief: Relief): string => {
@@ -121,15 +121,15 @@ export default function PageOne({ state }: PageOneProps) {
   return (
     <div className="a4-page">
       <div className="header-block">
-        <div className="text-right mb-1">
-          <div>
-            <span className="green-box">ቀን: {meta.date || '___________'}</span>
-          </div>
-          <div className="mt-2">
-            <div className="inline-block border-2 border-black px-2 py-0.5 font-bold">
-              መዝገብ ቁጥር: {meta.fileNumber || '___________'}
+        <div className="text-right mb-2">
+            <div>
+                <span className="green-box">ቀን: {meta.date || '___________'}</span>
             </div>
-          </div>
+            <div className="mt-2">
+                <div className="inline-block border-2 border-black px-2 py-0.5 font-bold">
+                መዝገብ ቁጥር: {meta.fileNumber || '___________'}
+                </div>
+            </div>
         </div>
         <div>
           <span className="black-box text-lg">ለ: {stripEnglish(meta.courtLevel) || '___________'}</span>
@@ -169,8 +169,8 @@ export default function PageOne({ state }: PageOneProps) {
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ:</h4>
         <ul className="list-none p-0 leading-relaxed">
-          <li>➤ ይህ <strong>{stripEnglish(meta.courtLevel)}</strong> በ <strong>{stripEnglish(jurisdictionText)}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
-          <li>➤ አመልካች ጉዳዩን የምከታተለው፡ <strong>[{stripEnglish(repMap[meta.representation])}]</strong></li>
+          <li>➤ ይህ <strong>{stripEnglish(meta.courtLevel)}</strong> በ <strong>{jurisdictionText}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
+          <li>➤ አመልካች ጉዳዩን የምከታተለው፡ {repMap[meta.representation]}</li>
           <li>➤ መጥሪያውን፡ <strong>{summonsMap[meta.summonsDelivery]}</strong></li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል::</li>
         </ul>
@@ -213,3 +213,5 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
+
+    

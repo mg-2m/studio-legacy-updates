@@ -178,6 +178,12 @@ const stripEnglish = (text: string) => {
     return match ? match[1].trim() : text;
 }
 
+const getAmharic = (text: string) => {
+    if (!text) return '';
+    const match = text.match(/^(.*?)\s*\(/);
+    return match ? match[1].trim() : text;
+};
+
 export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.entries(allEntities).reduce((acc: EvidenceRegistry, [key, entity]: [string, any]) => {
     acc[key] = {
         id: key,
@@ -402,7 +408,8 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(all
   newTemplateData.facts = processFacts(newTemplateData.facts);
 
   newTemplateData.documentTitle = stripEnglish(newTemplateData.documentTitle);
-  newTemplateData.jurisdictionText = stripEnglish(newTemplateData.jurisdictionText);
+  // Keep the Amharic part of jurisdiction text
+  newTemplateData.jurisdictionText = getAmharic(newTemplateData.jurisdictionText);
   
   if (newTemplateData.partyTitles) {
       newTemplateData.partyTitles.applicant = stripEnglish(newTemplateData.partyTitles.applicant);
@@ -478,3 +485,5 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
+    

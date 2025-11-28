@@ -29,7 +29,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
   
   return (
     <div className="w-full space-y-4">
-       <Card>
+      <Card>
         <CardContent className="space-y-4 p-4">
           <div className="space-y-4">
             <div className="grid grid-cols-[auto_1fr] items-center gap-4">
@@ -60,15 +60,15 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                   <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
               </Select>
             </div>
-            <div className="space-y-4">
-               <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                  <Label>ቀን</Label>
-                  <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
-              </div>
-              <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                  <Label>የመዝገብ ቁጥር</Label>
-                  <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
-              </div>
+            <div className="space-y-2">
+                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                    <Label>ቀን</Label>
+                    <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
+                </div>
+                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                    <Label>የመዝገብ ቁጥር</Label>
+                    <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
+                </div>
             </div>
           </div>
         </CardContent>

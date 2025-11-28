@@ -265,8 +265,8 @@ export const TEMPLATES: Template[] = [
         { id: 'ip_patent_infringement', label: 'የፓተንት ጥሰት (Patent Infringement)', icon: FileWarning },
         { id: 'ip_copyright_infringement', label: 'የቅጂ መብት ጥሰት (Copyright Infringement)', icon: FileWarning },
         { id: 'ip_moral_rights_violation', label: 'የሞራል መብቶች ጥሰት (Moral Rights Violation)', icon: BadgeCheck },
-        { id: 'app_ip_interlocutory_injunction', label: 'ጊዜያዊ እገዳ (Interlocutory Injunction)', icon: Shield },
-        { id: 'app_ip_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ (Seizure of Evidence)', icon: ShieldAlert },
+        { id: 'ip_app_interlocutory_injunction', label: 'ጊዜያዊ እገዳ (Interlocutory Injunction)', icon: Shield },
+        { id: 'ip_app_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ (Seizure of Evidence)', icon: ShieldAlert },
     ]
   },
   {
@@ -274,8 +274,11 @@ export const TEMPLATES: Template[] = [
     label: 'የሰው ህግ እና ሁኔታ (Law of Persons & Status)',
     icon: UserCheck,
     subTemplates: [
-        { id: 'status_judicial_interdiction', label: 'የፍርድ እገዳ (Judicial Interdiction)', icon: FileText },
-        { id: 'status_correction_civil_record', label: 'የሲቪል መዝገብ ማስተካከያ (Correction of Civil Record)', icon: FileSignature },
+        { id: 'status_judicial_interdiction', label: 'የፍርድ እግድ (Judicial Interdiction)', icon: FileText },
+        { id: 'status_name_change', label: 'የስም ለውጥ (Name Change)', icon: FileSignature },
+        { id: 'status_birth_date_correction', label: 'የልደት ቀን ማስተካከያ (Birth Date Correction)', icon: FileSignature },
+        { id: 'status_double_record_correction', label: 'የተደጋገመ መዝገብ ማስተካከያ (Double Record Correction)', icon: FileSignature },
+        { id: 'status_ethiopian_descent_id', label: 'የትውልደ ኢትዮጵያዊ መታወቂያ (Ethiopian Origin ID)', icon: FileSignature },
         { id: 'status_declaration_of_absence', label: 'የመጥፋት መግለጫ (Declaration of Absence)', icon: FileX2 },
         { id: 'app_status_provisional_curator', label: 'ጊዜያዊ ጠባቂ መሾም (Appoint Provisional Curator)', icon: BookUser },
         { id: 'app_status_lift_interdiction', label: 'የእገዳ ማንሳት (Lift Interdiction)', icon: Gavel },

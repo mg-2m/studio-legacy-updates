@@ -28,7 +28,6 @@ const ManualEvidenceCard: React.FC<{
   item: ManualEvidence;
   dispatch: React.Dispatch<any>;
 }> = ({ item, dispatch }) => {
-  const isDocument = item.type === 'Document';
 
   return (
     <Card key={item.id} className="bg-muted/30">
@@ -38,6 +37,7 @@ const ManualEvidenceCard: React.FC<{
             {item.type === 'Witness' && <Users className="h-5 w-5 text-primary" />}
             {item.type === 'CourtOrder' && <Gavel className="h-5 w-5 text-primary" />}
             <CardTitle className="text-base">
+              {item.type === 'Document' && 'የሰነድ ማስረጃ'}
               {item.type === 'Witness' && 'የሰው ምስክር'}
               {item.type === 'CourtOrder' && 'የትዕዛዝ'}
             </CardTitle>
@@ -53,7 +53,7 @@ const ManualEvidenceCard: React.FC<{
       </CardHeader>
       <CardContent className="space-y-4 px-4 pb-4">
         {item.type === 'Document' && (
-          <>
+          <div className="space-y-4">
              <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4">
                 <Label>ገለጻ</Label>
                 <Input
@@ -99,34 +99,40 @@ const ManualEvidenceCard: React.FC<{
                 </div>
             </div>
             
-            <div className="grid grid-cols-[auto_1.5fr_auto_1.5fr_auto_1fr_auto_2fr] items-center gap-x-4">
-                <Label>ቁጥር</Label>
-                <Input
-                  className="h-9"
-                  value={item.refNumber}
-                  onChange={(e) =>
-                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'refNumber', value: e.target.value } })
-                  }
-                />
-                <Label>የተሰጠበት ቀን</Label>
-                <Input
-                  className="h-9"
-                  value={item.issueDate}
-                  onChange={(e) =>
-                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issueDate', value: e.target.value } })
-                  }
-                />
-                <Label>የገጽ ብዛት</Label>
-                <Input
-                  className="h-9"
-                  type="number"
-                  value={item.pageCount}
-                  onChange={(e) =>
-                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'pageCount', value: e.target.value } })
-                  }
-                />
-                 <Label>ኦርጅናሉ ያለበት</Label>
-                <div className="flex items-center gap-2">
+            <div className="grid grid-cols-12 items-center gap-x-4">
+                <Label className="col-span-1">ቁጥር</Label>
+                <div className="col-span-2">
+                  <Input
+                    className="h-9"
+                    value={item.refNumber}
+                    onChange={(e) =>
+                      dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'refNumber', value: e.target.value } })
+                    }
+                  />
+                </div>
+                <Label className="col-span-1 text-right">የተሰጠበት ቀን</Label>
+                <div className="col-span-2">
+                  <Input
+                    className="h-9"
+                    value={item.issueDate}
+                    onChange={(e) =>
+                      dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issueDate', value: e.target.value } })
+                    }
+                  />
+                </div>
+                <Label className="col-span-1 text-right">የገጽ ብዛት</Label>
+                <div className="col-span-1">
+                  <Input
+                    className="h-9"
+                    type="number"
+                    value={item.pageCount}
+                    onChange={(e) =>
+                      dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'pageCount', value: e.target.value } })
+                    }
+                  />
+                </div>
+                 <Label className="col-span-1 text-right">ኦርጅናሉ ያለበት</Label>
+                <div className="col-span-3 flex items-center gap-2">
                     <Input
                         className="h-9 flex-1"
                         value={item.originalLocation}
@@ -172,7 +178,7 @@ const ManualEvidenceCard: React.FC<{
                 </div>
               </RadioGroup>
             </div>
-          </>
+          </div>
         )}
         {item.type === 'Witness' && (
             <div className="space-y-4">
@@ -432,3 +438,5 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
+
+    

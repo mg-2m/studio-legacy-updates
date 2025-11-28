@@ -81,9 +81,27 @@ export default function PageTwo({ state }: PageTwoProps) {
     if (e.type === 'Document') {
         label = e.description || e.type;
         const issuer = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
-        const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
+        
         const issueDate = e.issueDate || 'N/A';
-        details = `${e.description} (ቁጥር: ${e.refNumber || 'N/A'}, የተሰጠበት ቀን: ${issueDate}, አውጪ: ${issuer || 'N/A'}, ገጽ: ${e.pageCount || 'N/A'}, አይነት: ${e.documentType}, ኦርጅናሉ ያለበት: ${location || 'N/A'})`;
+        
+        let detailsParts = [];
+        if (e.description) detailsParts.push(e.description);
+        if (e.refNumber) detailsParts.push(`ቁጥር: ${e.refNumber}`);
+        if (e.issueDate) detailsParts.push(`የተሰጠበት ቀን: ${e.issueDate}`);
+        if (issuer) detailsParts.push(`አውጪ: ${issuer}`);
+        if (e.pageCount) detailsParts.push(`ገጽ: ${e.pageCount}`);
+
+        if (e.documentType === 'Original') {
+            detailsParts.push(`አይነት: ${e.documentType}`);
+        }
+        
+        if (e.originalLocation) {
+            const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
+            detailsParts.push(`ኦርጅናሉ ${location} የሚገኝ`);
+        }
+        
+        details = detailsParts.join(', ');
+
     } else if (e.type === 'Witness') {
         label = `${stripEnglish(e.honorific)} ${e.name}` || 'Unnamed Witness';
         let subcity = e.subcity === 'ሌላ' ? e.subcityOther : e.subcity;
@@ -156,23 +174,23 @@ export default function PageTwo({ state }: PageTwoProps) {
       <ol className="ml-5 list-decimal" style={{ lineHeight: 1.8 }}>
         {allEvidence.map((e, i) => (
           <li key={i} className="mb-3 text-justify">
-            <strong>{e.label}</strong>
+            <strong>{stripEnglish(e.label)}</strong>
             <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">
-              {e.details}
+              {stripEnglish(e.details)}
             </p>
           </li>
         ))}
       </ol>
 
       <div className="mt-12 pt-5 border-t-2 border-black">
-        <div className="black-box mb-4">ማረጋገጫ</div>
+        <div className="black-box mb-4">{stripEnglish("ማረጋገጫ (VERIFICATION)")}</div>
         <p className="text-justify leading-relaxed">
           ከላይ የተዘረዘረው ማስረጃ ሁሉ እውነት መሆኑን ተምሪ ነኝ። መረጃዎቹ በፍርድ ቤት ስሙ ውስጥ ስሚ በተጠየቀ ጊዜ ዋናውን ማስረጃ ቀርቦ አረጋግጣለሁ።
         </p>
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>
-            <strong className="text-sm">የአመልካች ፊርማ</strong>
+            <strong className="text-sm">{stripEnglish("የአመልካች ፊርማ (Applicant's Signature)")}</strong>
           </div>
         </div>
       </div>

@@ -44,9 +44,9 @@ export default function PageOne({ state }: PageOneProps) {
 
 
   const summonsMap = {
-    self: 'በራሴ አደርሳለው፡፡',
-    police: 'በፖሊስ እንዲደርስልኝ እጠይቃለሁ፡፡',
-    post: 'በፖስታ እንዲላክልኝ እጠይቃለሁ፡፡',
+    self: 'መጥሪያውን በራሴ አደርሳለው፡፡',
+    police: 'መጥሪያውን በፖሊስ እንዲደርስልኝ እጠይቃለሁ፡፡',
+    post: 'መጥሪያውን በፖስታ እንዲላክልኝ እጠይቃለሁ፡፡',
   };
 
   const repMap = {
@@ -213,5 +213,3 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
-
-    

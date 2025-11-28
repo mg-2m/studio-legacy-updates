@@ -37,7 +37,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         <CardContent className="space-y-4">
            <div className="grid grid-cols-2 gap-8">
             {/* Left Column for Court Details */}
-            <div className="space-y-2">
+            <div className="space-y-4">
                 <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                     <Label>የፍ/ቤት ደረጃ</Label>
                     <Select 
@@ -69,15 +69,15 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
             </div>
 
             {/* Right Column for Date and File Number */}
-            <div className="space-y-2">
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                    <Label>ቀን</Label>
-                    <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
-                </div>
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                    <Label>የመዝገብ ቁጥር</Label>
-                    <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
-                </div>
+            <div className="space-y-4">
+              <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                  <Label>ቀን</Label>
+                  <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
+              </div>
+              <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                  <Label>የመዝገብ ቁጥር</Label>
+                  <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
+              </div>
             </div>
           </div>
         </CardContent>
@@ -95,8 +95,8 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'representation', value } })}
                 className="flex space-x-6"
             >
-                <div className="flex items-center space-x-2"><RadioGroupItem value="self" id="rep-self" /><Label htmlFor="rep-self">ራሴ በመቅረብ</Label></div>
-                <div className="flex items-center space-x-2"><RadioGroupItem value="lawyer" id="rep-lawyer" /><Label htmlFor="rep-lawyer">በጠበቃዬ አማካይነት</Label></div>
+                <div className="flex items-center space-x-2"><RadioGroupItem value="self" id="rep-self" /><Label htmlFor="rep-self">በራሴ</Label></div>
+                <div className="flex items-center space-x-2"><RadioGroupItem value="lawyer" id="rep-lawyer" /><Label htmlFor="rep-lawyer">በጠበቃዬ</Label></div>
                 <div className="flex items-center space-x-2"><RadioGroupItem value="both" id="rep-both" /><Label htmlFor="rep-both">በራሴ እና በጠበቃዬ</Label></div>
             </RadioGroup>
           </div>
@@ -119,7 +119,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         <CardContent className="p-4 space-y-2">
           {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} title={partyTitles.applicant} />)}
           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
-            <Plus className="mr-2 h-4 w-4" /> {partyTitles.applicant} ጨምር
+            <Plus className="mr-2 h-4 w-4" /> አመልካች ጨምር
           </Button>
         </CardContent>
       </Card>
@@ -128,12 +128,10 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         <CardContent className="p-4 space-y-2">
           {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} title={partyTitles.respondent}/>)}
            <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>
-            <Plus className="mr-2 h-4 w-4" /> {partyTitles.respondent} ጨምር
+            <Plus className="mr-2 h-4 w-4" /> ተከሳሽ ጨምር
           </Button>
         </CardContent>
       </Card>
     </div>
   );
 }
-
-    

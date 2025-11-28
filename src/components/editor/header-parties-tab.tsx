@@ -31,10 +31,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
   return (
     <div className="w-full space-y-4">
        <Card>
-        <CardHeader>
-            <CardTitle className="text-base text-primary">የፍ/ቤት እና የክስ ራስጌ</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-4 p-4">
            <div className="grid grid-cols-2 gap-8">
             {/* Left Column for Court Details */}
             <div className="space-y-4">
@@ -70,7 +67,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
 
             {/* Right Column for Date and File Number */}
             <div className="space-y-4">
-              <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+               <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                   <Label>ቀን</Label>
                   <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
               </div>
@@ -84,10 +81,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       </Card>
       
       <Card>
-        <CardHeader>
-            <CardTitle className="text-base text-primary">ሥነ-ሥርዓት እና መግቢያ</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6 p-4">
           <div className="space-y-2">
             <Label>ውክልና</Label>
             <RadioGroup 

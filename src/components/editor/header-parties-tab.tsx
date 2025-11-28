@@ -18,6 +18,11 @@ import type { AppState } from '@/lib/types';
 import PartyForm from './party-form';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
+interface HeaderPartiesTabProps {
+  state: AppState;
+  dispatch: React.Dispatch<any>;
+}
+
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
   const { metadata, applicants, respondents, partyTitles } = state;
   

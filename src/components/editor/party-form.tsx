@@ -42,8 +42,8 @@ export default function PartyForm({ role, party, dispatch, title }: PartyFormPro
             </div>
 
             <div className="space-y-3 pt-2">
-                <Label className="font-semibold text-sm">አድራሻ</Label>
-                 <div className="grid grid-cols-[auto_1.5fr_auto_1.5fr_auto_1fr_auto_1fr] items-center gap-x-2 gap-y-3">
+                 <div className="grid grid-cols-[auto_auto_1.5fr_auto_1fr_auto_0.5fr_auto_0.5fr] items-center gap-x-2 gap-y-3">
+                    <Label className="font-semibold text-sm">አድራሻ</Label>
                     <Label className="text-xs">ከተማ/ክልል</Label>
                     <Select value={party.address.city} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.city', value } })}>
                       <SelectTrigger><SelectValue /></SelectTrigger>

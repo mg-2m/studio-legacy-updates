@@ -1,5 +1,4 @@
 
-
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
 import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning } from 'lucide-react';
 import { differenceInDays, parseISO } from 'date-fns';
@@ -12,7 +11,6 @@ import * as familyLaw from '@/legal_branches/family_law.json';
 import * as labourLaw from '@/legal_branches/labour_law.json';
 import * as publicServiceLaw from '@/legal_branches/public_service_law.json';
 import * as successionLaw from '@/legal_branches/succession_law.json';
-import * as propertyAndLandLaw from '@/legal_branches/property_land_law.json';
 import * as ipLaw from '@/legal_branches/ip_law.json';
 import * as statusLaw from '@/legal_branches/status_law.json';
 import * as taxCustomsLaw from '@/legal_branches/tax_customs_law.json';
@@ -28,7 +26,6 @@ const allTemplates = {
     ...labourLaw.templates,
     ...publicServiceLaw.templates,
     ...successionLaw.templates,
-    ...propertyAndLandLaw.templates,
     ...ipLaw.templates,
     ...statusLaw.templates,
     ...taxCustomsLaw.templates,
@@ -244,19 +241,6 @@ export const TEMPLATES: Template[] = [
     ]
   },
   {
-    id: 'property_land_law',
-    label: 'የንብረት እና መሬት ህግ (Property & Land)',
-    icon: Map,
-    subTemplates: [
-        { id: 'prop_petitory_vindication', label: 'የይዞታ ክስ (Petitory Action)', icon: FileText },
-        { id: 'prop_possessory_restoration', label: 'የተነጠቀ ይዞታን ማስመለስ (Possessory Action)', icon: FileText },
-        { id: 'prop_boundary_encroachment', label: 'የድንበር መጣስ (Boundary Encroachment)', icon: Map },
-        { id: 'prop_nuisance_cessation', label: 'የአደጋ መከላከል (Nuisance Cessation)', icon: ShieldAlert },
-        { id: 'prop_servitude_right_of_way', label: 'የመንገድ መብት (Servitude)', icon: Map },
-        { id: 'prop_possessory_disturbance', label: 'የይዞታ መረበሽ (Possessory Disturbance)', icon: FileText },
-    ]
-  },
-  {
     id: 'ip_law',
     label: 'የአእምሯዊ ንብረት ህግ (IP Law)',
     icon: Brain,
@@ -272,7 +256,7 @@ export const TEMPLATES: Template[] = [
   },
   {
     id: 'status_law',
-    label: 'የሰው ህግ እና ሁኔታ (Law of Persons & Status)',
+    label: 'የሰው ህግ እና ሁኔታ (Law of Persons &amp; Status)',
     icon: UserCheck,
     subTemplates: [
         { id: 'status_judicial_interdiction', label: 'የፍርድ እገዳ (Judicial Interdiction)', icon: FileText },
@@ -284,7 +268,7 @@ export const TEMPLATES: Template[] = [
   },
   {
     id: 'tax_customs_law',
-    label: 'የግብር እና ጉምሩክ ህግ (Tax & Customs Law)',
+    label: 'የግብር እና ጉምሩክ ህግ (Tax &amp; Customs Law)',
     icon: LandmarkIcon,
     subTemplates: [
         { id: 'tax_objection_admin_review', label: 'የግብር መቃወሚያ (Tax Objection)', icon: FileText },
@@ -446,7 +430,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
-
-
-
-    

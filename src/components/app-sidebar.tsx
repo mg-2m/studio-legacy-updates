@@ -43,14 +43,14 @@ export default function AppSidebar({ selectedTemplate, selectedSubTemplate, disp
       <SidebarContent>
         <Accordion type="multiple" defaultValue={[selectedTemplate]} className="w-full">
             {TEMPLATES.map(template => (
-              <AccordionItem value={template.id} key={template.id} className="border-none">
-                <AccordionTrigger className="px-2 py-1.5 text-base font-semibold hover:bg-sidebar-accent hover:no-underline rounded-md [&[data-state=open]]:bg-sidebar-accent">
-                    <div className="flex items-center gap-2">
+              <AccordionItem value={template.id} key={template.id} className="border-b border-sidebar-border/50">
+                <AccordionTrigger className="px-2 py-2 text-sm font-semibold hover:bg-sidebar-accent/70 hover:no-underline [&[data-state=open]]:bg-sidebar-accent">
+                    <div className="flex items-center gap-2 text-sidebar-foreground">
                         <template.icon className="size-5" />
                         <span>{template.label}</span>
                     </div>
                 </AccordionTrigger>
-                <AccordionContent className="pt-1">
+                <AccordionContent className="pt-1 bg-black/20">
                     <SidebarMenu>
                     {template.subTemplates.map(subTemplate => (
                         <SidebarMenuItem key={subTemplate.id}>

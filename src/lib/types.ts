@@ -3,14 +3,13 @@
 export interface Party {
   id: string;
   name: string;
-  idNumber: string;
-  phone: string;
   honorific: string;
   address: {
     city: string;
     subcity: string;
     subcityOther?: string;
     woreda: string;
+    houseNo: string;
   };
 }
 

@@ -38,7 +38,6 @@ const ManualEvidenceCard: React.FC<{
             {item.type === 'Witness' && <Users className="h-5 w-5 text-primary" />}
             {item.type === 'CourtOrder' && <Gavel className="h-5 w-5 text-primary" />}
             <CardTitle className="text-base">
-              {item.type === 'Document' && 'የሰነድ ማስረጃ'}
               {item.type === 'Witness' && 'የሰው ምስክር'}
               {item.type === 'CourtOrder' && 'የትዕዛዝ'}
             </CardTitle>
@@ -100,7 +99,7 @@ const ManualEvidenceCard: React.FC<{
                 </div>
             </div>
             
-            <div className="grid grid-cols-[auto_1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-x-4">
+            <div className="grid grid-cols-[auto_1.5fr_auto_1.5fr_auto_1fr_auto_2fr] items-center gap-x-4">
                 <Label>ቁጥር</Label>
                 <Input
                   className="h-9"
@@ -177,7 +176,8 @@ const ManualEvidenceCard: React.FC<{
         )}
         {item.type === 'Witness' && (
             <div className="space-y-4">
-                <div className="grid grid-cols-[auto_100px_auto_1fr_auto] items-center gap-x-4">
+                <div className="grid grid-cols-[auto_auto_100px_auto_1fr_auto] items-center gap-x-4">
+                    <Label className="font-semibold">{item.type === 'Witness' && 'የሰው ምስክር'}</Label>
                     <Label className="whitespace-nowrap">ማዕረግ</Label>
                     <Select value={item.honorific} onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'honorific', value } })}>
                         <SelectTrigger><SelectValue /></SelectTrigger>
@@ -188,7 +188,7 @@ const ManualEvidenceCard: React.FC<{
                 </div>
 
                 <div className="space-y-3 pt-2">
-                    <div className="grid grid-cols-[auto_auto_1.5fr_auto_1fr_auto_0.5fr_auto_0.5fr] items-center gap-x-2 gap-y-3">
+                     <div className="grid grid-cols-[auto_auto_1.5fr_auto_1fr_auto_0.5fr_auto_0.5fr] items-center gap-x-2 gap-y-3">
                         <Label className="font-semibold text-sm">አድራሻ</Label>
                         <Label className="text-xs">ከተማ/ክልል</Label>
                         <Select value={item.city} onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'city', value } })}>
@@ -432,5 +432,3 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
     </div>
   );
 }
-
-    

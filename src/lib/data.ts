@@ -433,7 +433,7 @@ export const INITIAL_STATE: AppState = {
     representation: 'self',
     summonsDelivery: 'self'
   },
-  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '' } }],
+  applicants: [{ id: '1', name: '', idNumber: '', phone: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '', woreda: '' } }],
   respondents: [],
   selectedFacts: [],
   selectedReliefs: initialTemplateData ? initialTemplateData.reliefs.filter(r => r.isDefault) : [],

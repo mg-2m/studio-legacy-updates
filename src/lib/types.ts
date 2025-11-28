@@ -10,6 +10,7 @@ export interface Party {
     city: string;
     subcity: string;
     subcityOther?: string;
+    woreda: string;
   };
 }
 

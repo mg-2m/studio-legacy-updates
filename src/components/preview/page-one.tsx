@@ -24,6 +24,12 @@ const formatFactText = (fact: Fact): string => {
   return legalText;
 };
 
+// Function to strip english parenthetical text
+const stripEnglish = (text: string) => {
+    if (!text) return '';
+    return text.split('(')[0].trim();
+}
+
 export default function PageOne({ state }: PageOneProps) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
   const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
@@ -75,19 +81,10 @@ export default function PageOne({ state }: PageOneProps) {
 
 
   const getPluralizedTitle = (title: string, count: number): string => {
-    if (count <= 1) return title.toUpperCase();
+    if (count <= 1) return stripEnglish(title).toUpperCase();
     
-    if (!title.includes('(') || !title.includes(')')) {
-        return (title + 'S').toUpperCase();
-    }
-
-    const amharicPart = title.split('(')[0].trim();
-    const englishPart = title.split('(')[1].replace(')', '').trim();
-    
-    const pluralAmharic = amharicPart + 'ዎች';
-    const pluralEnglish = englishPart.endsWith('s') ? englishPart : englishPart + 's';
-
-    return `${pluralAmharic} (${pluralEnglish})`.toUpperCase();
+    const amharicPart = stripEnglish(title);
+    return `${amharicPart}ዎች`.toUpperCase();
   };
 
   const formatPartyList = (parties: Party[]) => {
@@ -97,12 +94,17 @@ export default function PageOne({ state }: PageOneProps) {
     return (
       <ol className="list-decimal list-inside">
         {parties.map((party, index) => {
-            const subcity = party.address.subcity === 'Other (ሌላ)' ? party.address.subcityOther : party.address.subcity;
+            let subcity = party.address.subcity === 'Other (ሌላ)' ? party.address.subcityOther : stripEnglish(party.address.subcity);
+            if(subcity && party.address.city.includes('Addis Ababa')) {
+                subcity += ' Sub-City';
+            }
+            const woreda = party.address.woreda ? `, Woreda ${party.address.woreda}` : '';
+
             return (
               <li key={index} className="mb-2">
-                <span className="font-bold text-base">{party.honorific.split('(')[0].trim()} {party.name}</span>
+                <span className="font-bold text-base">{stripEnglish(party.honorific)} {party.name}</span>
                 <div className="text-sm pl-6">
-                  አድራሻ፡ {party.address.city}, {subcity}
+                  አድራሻ፡ {stripEnglish(party.address.city)}, {subcity}{woreda}
                 </div>
               </li>
             )
@@ -121,13 +123,13 @@ export default function PageOne({ state }: PageOneProps) {
           <span className="green-box">ቀን: {meta.date || '___________'}</span>
         </div>
         <div>
-          <span className="black-box text-lg">ለ: {meta.courtLevel || '___________'}</span>
+          <span className="black-box text-lg">ለ: {stripEnglish(meta.courtLevel) || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="green-box">{meta.bench || '___________'}</span>
+          <span className="green-box">{stripEnglish(meta.bench) || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="black-box">{meta.city || '___________'}</span>
+          <span className="black-box">{stripEnglish(meta.city) || '___________'}</span>
         </div>
         <div className="mt-2 inline-block border-2 border-black px-2 py-0.5 font-bold">
           መዝገብ ቁጥር: {meta.fileNumber || '___________'}
@@ -161,7 +163,7 @@ export default function PageOne({ state }: PageOneProps) {
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ (Introduction)፡</h4>
         <ul className="list-none p-0 leading-relaxed">
-          <li>➤ ይህ <strong>{meta.courtLevel}</strong> በ <strong>{jurisdictionText}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
+          <li>➤ ይህ <strong>{stripEnglish(meta.courtLevel)}</strong> በ <strong>{jurisdictionText}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ አመልካች ጉዳዩን የምከታተለው፡ <strong>[{repMap[meta.representation]}]</strong></li>
           <li>➤ መጥሪያውን፡ <strong>{summonsMap[meta.summonsDelivery]}</strong></li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል::</li>

@@ -351,19 +351,32 @@ export const TEMPLATES: Template[] = [
 // This function processes facts from the old structure to the new one.
 const processFacts = (facts: any): Fact[] => {
     if (!facts) return [];
-    // Check if facts is already a flat array (new structure)
-    if (Array.isArray(facts)) {
-        return facts as Fact[];
-    }
-    // Process the old nested structure
+    
+    // This is the NEW, ROBUST logic.
+    // If it's the old nested structure, flatten it and add labels.
     if (typeof facts === 'object' && !Array.isArray(facts)) {
          return Object.values(facts).flatMap((group: any) => 
-            group.facets.map((facet: any) => ({
+            (group.facets || []).map((facet: any) => ({
                 ...facet,
                 label: group.title // Use the group title as the label for grouping in the UI
             }))
         );
     }
+
+    // If it's ALREADY a flat array (new structure), ensure every fact has a label.
+    // This was the missing piece.
+    if (Array.isArray(facts)) {
+        let lastLabel = 'Facts'; // Default label if the first fact has no label
+        return (facts as Fact[]).map(fact => {
+            if (fact.label) {
+                lastLabel = fact.label;
+            } else {
+                fact.label = lastLabel;
+            }
+            return fact;
+        });
+    }
+
     return [];
 };
 

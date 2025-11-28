@@ -1,4 +1,5 @@
 
+
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
 import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning } from 'lucide-react';
 import { differenceInDays, parseISO } from 'date-fns';
@@ -11,7 +12,7 @@ import * as familyLaw from '@/legal_branches/family_law.json';
 import * as labourLaw from '@/legal_branches/labour_law.json';
 import * as publicServiceLaw from '@/legal_branches/public_service_law.json';
 import * as successionLaw from '@/legal_branches/succession_law.json';
-import * as propertyLandLaw from '@/legal_branches/property_land_law.json';
+import * as propertyAndLandLaw from '@/legal_branches/property_land_law.json';
 import * as ipLaw from '@/legal_branches/ip_law.json';
 import * as statusLaw from '@/legal_branches/status_law.json';
 import * as taxCustomsLaw from '@/legal_branches/tax_customs_law.json';
@@ -27,7 +28,7 @@ const allTemplates = {
     ...labourLaw.templates,
     ...publicServiceLaw.templates,
     ...successionLaw.templates,
-    ...propertyLandLaw.templates,
+    ...propertyAndLandLaw.templates,
     ...ipLaw.templates,
     ...statusLaw.templates,
     ...taxCustomsLaw.templates,

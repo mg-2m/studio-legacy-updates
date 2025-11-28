@@ -57,7 +57,7 @@ export default function PageTwo({ state }: PageTwoProps) {
   const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
   const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
 
-  const documentEvidence: { description: string; details: string }[] = [];
+  const documentEvidence: { description: string }[] = [];
   const witnessEvidence: { label: string; details: string }[] = [];
   const courtOrderEvidence: { label: string; details: string }[] = [];
 
@@ -66,41 +66,47 @@ export default function PageTwo({ state }: PageTwoProps) {
     if (!smartEv.active) return;
     const registryItem = EVIDENCE_REGISTRY[regId];
     if (registryItem) {
-      documentEvidence.push({
-        description: registryItem.label,
-        details: smartEv.credentialId ? `${stripEnglish(registryItem.credentialLabel)}: ${smartEv.credentialId}` : 'No details provided'
-      });
+        documentEvidence.push({
+            description: `${registryItem.label}${smartEv.credentialId ? `፣ ${registryItem.credentialLabel}: ${smartEv.credentialId}` : ''}`
+        });
     }
   });
 
   // Process Manual Evidence
   evidence.forEach((e: ManualEvidence) => {
     if (e.type === 'Document') {
-        const description = e.description || 'የሰነድ ማስረጃ';
-        const issuer = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
+        let fullDescription = e.description || 'የሰነድ ማስረጃ';
         
         let detailsParts = [];
         if (e.refNumber) detailsParts.push(`ቁጥር: ${e.refNumber}`);
         if (e.issueDate) detailsParts.push(`የተሰጠበት ቀን: ${e.issueDate}`);
-        if (issuer) detailsParts.push(`አውጪ: ${issuer}`);
+        if (e.issuer) {
+            const issuerText = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
+            if (issuerText) detailsParts.push(`አውጪ: ${issuerText}`);
+        }
         if (e.pageCount) detailsParts.push(`ገጽ: ${e.pageCount}`);
 
-        let details = detailsParts.join(', ');
-
-        // Part 1: Describe the attached document (Copy or Original)
-        if (e.documentType === 'Copy' || e.documentType === 'Original') {
-            details += `, ${e.documentType} ተያይዙዋል`;
-        } else {
-            details += ` ተያይዙዋል`;
+        if (detailsParts.length > 0) {
+            fullDescription += `፣ ${detailsParts.join('፣ ')}`;
+        }
+        
+        // Add the type of document attached
+        if (e.documentType) {
+            fullDescription += `፣ ${e.documentType}`;
         }
 
-        // Part 2: Describe the location of the ORIGINAL document
+        fullDescription += " ተያይዙዋል";
+
+        // Add the location of the original document
         if (e.originalLocation && e.originalLocation !== 'የማይመለከተው') {
             const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
-            details += ` ኦርጅናሉ ${location} የሚገኝ`;
+            if (location) fullDescription += `፣ ኦርጅናሉ ${location} የሚገኝ።`;
+        } else {
+             fullDescription += "።";
         }
 
-        documentEvidence.push({ description, details });
+
+        documentEvidence.push({ description: fullDescription });
 
     } else if (e.type === 'Witness') {
         const label = `${stripEnglish(e.honorific)} ${e.name}` || 'Unnamed Witness';
@@ -174,7 +180,7 @@ export default function PageTwo({ state }: PageTwoProps) {
             <h3 className="font-bold">ሀ). የሰነድ ማስረጃ</h3>
             <ol className="ml-8 list-decimal" style={{ lineHeight: 1.8 }}>
               {documentEvidence.map((e, i) => (
-                <li key={`doc-${i}`} className="mb-3 text-justify" dangerouslySetInnerHTML={{ __html: `${e.description} ${e.details}` }} />
+                <li key={`doc-${i}`} className="mb-3 text-justify" dangerouslySetInnerHTML={{ __html: e.description }} />
               ))}
             </ol>
           </div>
@@ -233,5 +239,3 @@ export default function PageTwo({ state }: PageTwoProps) {
     </div>
   );
 }
-
-    

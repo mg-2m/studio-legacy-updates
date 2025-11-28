@@ -1,3 +1,4 @@
+
 {
   "templates": {
     "admin_appeal_judicial_review": {
@@ -87,19 +88,22 @@
           "id": "admin_relief_quash_decision",
           "text": "የመልስ ሰጪውን ተቋም ውሳኔ ሙሉ በሙሉ እንዲሻር። (To quash and annul the decision of the Respondent Agency.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "admin_relief_remand_for_revision",
           "text": "ፍርድ ቤቱ ባገኘው ክፍተት መሰረት ተቋሙ ውሳኔውን እንዲያስተካክል ወይም እንደገና እንዲያየው እንዲታዘዝ። (To order the Administrative Agency to revise or reconsider its decision by rectifying the shortcomings identified by the Court.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "admin_relief_damages_fault",
           "text": "በአስተዳደራዊ ውሳኔው በፈጸመው ስህተት ምክንያት ለደረሰው ጉዳት መልስ ሰጪው ተቋም ካሳ እንዲከፍል እንዲታዘዝ (አንቀጽ 54)። (To order the Respondent Agency to pay compensation for damages incurred as a result of the fault committed through the administrative decision (Art. 54).)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -118,7 +122,7 @@
         ],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ተቋም ያወጣው መመሪያ ከሕገ-መንግስቱ ወይም ከበላይ ሕጎች ጋር ሲቃረን ወይም ተቋሙ ሥልጣኑን አልፎ ሲያወጣው፣ መመሪያው ሕጋዊ አይደለም ብሎ ለመከራከር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአስተዳደር ሥነ-ሥርዓት አዋጅ 1183/2020 አንቀጽ 49 መሰረት፣ ይህን አይነት ጉዳይ የማየት ስልጣን ያለው **የፌዴራል ከፍተኛ ፍርድ ቤት** ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ዓይነቱ ክስ በአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ይኖረዋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የጥቅም መጎዳት፡** መመሪያው መብትዎን ወይም ጥቅምዎን በቀጥታ የሚነካ መሆኑን ማሳየት አለብዎት።\n*   **ማስረጃ (Required Evidence):** እንዲሻር የሚፈልጉትን መመሪያ ቅጂ ማያያዝ ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ተቋም ያወጣው መመሪያ ከሕገ-መንግስቱ ወይም ከበላይ ሕጎች ጋር ሲቃረን ወይም ተቋሙ ሥልጣኑን አልፎ ሲያወጣው፣ መመሪያው ሕጋዊ አይደለም ብሎ ለመከራከር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአስተዳደር ሥነ-ሥርዓት አዋጅ 1183/2020 አንቀጽ 49 መሰረት، ይህን አይነት ጉዳይ የማየት ስልጣን ያለው **የፌዴራል ከፍተኛ ፍርድ ቤት** ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ዓይነቱ ክስ በአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ይኖረዋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የጥቅም መጎዳት፡** መመሪያው መብትዎን ወይም ጥቅምዎን በቀጥታ የሚነካ መሆኑን ማሳየት አለብዎት።\n*   **ማስረጃ (Required Evidence):** እንዲሻር የሚፈልጉትን መመሪያ ቅጂ ማያያዝ ያስፈልጋል።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "መልስ ሰጪ ተቋም (Respondent Agency)"
@@ -166,13 +170,15 @@
           "id": "admin_relief_invalidate_directive",
           "text": "መመሪያው ሙሉ በሙሉ ወይም በከፊል ውድቅ እንዲደረግ። (To invalidate the Directive in whole or in part.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "admin_relief_order_compliance",
           "text": "ተቋሙ የሥነ-ሥርዓት ጉድለቱን እንዲያስተካክል እና መመሪያውን በሕጉ መሠረት ዳግም እንዲያወጣ ትዕዛዝ እንዲሰጥ። (To order the Agency to rectify the procedural flaw and readopt the Directive in compliance with the law.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}

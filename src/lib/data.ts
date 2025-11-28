@@ -225,9 +225,9 @@ export const TEMPLATES: Template[] = [
     label: 'የመንግስት ሰራተኛ ህግ (Public Service Law)', 
     icon: Landmark,
     subTemplates: [
-       { id: 'civil_service_disciplinary_appeal', label: 'የዲሲፕሊን ይግባኝ (Disciplinary Appeal)', icon: FileText },
-       { id: 'civil_service_termination_unlawful', label: 'ሕገ-ወጥ ስንብት ይግባኝ (Unlawful Termination Appeal)', icon: FileText },
-       { id: 'civil_service_benefits_grievance', label: 'የጥቅማጥቅም ቅሬታ (Benefits Grievance)', icon: FileText },
+       { id: 'pub_serv_disciplinary_appeal', label: 'የዲሲፕሊን ይግባኝ (Disciplinary Appeal)', icon: FileText },
+       { id: 'pub_serv_termination_unlawful', label: 'ሕገ-ወጥ ስንብት ይግባኝ (Unlawful Termination Appeal)', icon: FileText },
+       { id: 'pub_serv_benefits_grievance', label: 'የጥቅማጥቅም ቅሬታ (Benefits Grievance)', icon: FileText },
     ]
   },
   {
@@ -238,8 +238,8 @@ export const TEMPLATES: Template[] = [
       { id: 'succession_heirship_declaration', label: 'የወራሽነት ማረጋገጫ (Heirship Declaration)', icon: FileText },
       { id: 'succession_probate_will', label: 'የኑዛዜ ማጽደቅ (Probate of Will)', icon: Gavel },
       { id: 'succession_partition_estate', label: 'የውርስ ንብረት ክፍፍል (Estate Partition)', icon: Building2 },
-      { id: 'app_appoint_liquidator', label: 'ዋና ከፋይ ሹመት (Appoint Liquidator)', icon: BookUser },
-      { id: 'app_seal_estate', label: 'የንብረት ማሸግ (Seal Estate)', icon: Shield }
+      { id: 'succ_app_appoint_liquidator', label: 'ዋና ከፋይ ሹመት (Appoint Liquidator)', icon: BookUser },
+      { id: 'succ_app_seal_estate', label: 'የንብረት ማሸግ (Seal Estate)', icon: Shield }
     ]
   },
   {
@@ -252,9 +252,9 @@ export const TEMPLATES: Template[] = [
         { id: 'prop_boundary_encroachment', label: 'የድንበር መጣስ (Boundary Encroachment)', icon: Map },
         { id: 'prop_nuisance_cessation', label: 'የአደጋ መከላከል (Nuisance Cessation)', icon: ShieldAlert },
         { id: 'prop_servitude_right_of_way', label: 'የመንገድ መብት (Servitude)', icon: Map },
-        { id: 'app_stay_construction', label: 'ግንባታን የማገድ ትዕዛዝ (Suspend Construction)', icon: Shield },
-        { id: 'app_local_inspection', label: 'የአካባቢ ምርመራ ትዕዛዝ (Local Inspection)', icon: Map },
-        { id: 'property_possessory_disturbance', label: 'የይዞታ መረበሽ (Possessory Disturbance)', icon: FileText },
+        { id: 'app_prop_stay_construction', label: 'ግንባታን የማገድ ትዕዛዝ (Suspend Construction)', icon: Shield },
+        { id: 'app_prop_local_inspection', label: 'የአካባቢ ምርመራ ትዕዛዝ (Local Inspection)', icon: Map },
+        { id: 'prop_possessory_disturbance', label: 'የይዞታ መረበሽ (Possessory Disturbance)', icon: FileText },
     ]
   },
   {
@@ -428,4 +428,3 @@ export const INITIAL_STATE: AppState = {
   selectedSubTemplate: initialSubTemplateId,
 };
 
-    

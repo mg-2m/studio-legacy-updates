@@ -1,3 +1,4 @@
+
 {
     "templates": {
         "succession_heirship_declaration": {
@@ -178,7 +179,7 @@
             ],
             "calculations": {}
         },
-        "succession_app_appoint_liquidator": {
+        "succ_app_appoint_liquidator": {
             "documentTitle": "የአጣሪ ሹመት ማመልከቻ (Application for Appointment of Liquidator)",
             "jurisdictionText": "Art. 950 of the Civil Code.",
             "meta": {
@@ -219,7 +220,7 @@
             ],
             "calculations": {}
         },
-        "succession_app_seal_estate": {
+        "succ_app_seal_estate": {
             "documentTitle": "የማሸጊያ ማመልከቻ (Application for Affixing of Seals)",
             "jurisdictionText": "Art. 946 of the Civil Code & Civil Procedure Code.",
             "meta": {
@@ -260,5 +261,3 @@
         }
     }
 }
-
-    

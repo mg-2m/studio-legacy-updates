@@ -147,7 +147,7 @@
     {
       "id": "prop_boundary_encroachment",
       "documentTitle": "የድንበር መጣስ እንዲወገድ የክስ ማመልከቻ (Statement of Claim for Removal of Boundary Encroachment)",
-      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1204 እና 1211 (Art. 1204 & 1211 of the Civil Code)",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1204 እና 1211 (Art. 1204 &amp; 1211 of the Civil Code)",
       "meta": {
         "keywords": [
           "boundary dispute",
@@ -319,7 +319,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ጎረቤት ወይም በአቅራቢያዎ የሚገኝ ሰው በሚያደርገው ተግባር (ለምሳሌ ከልክ ያለፈ ጩኸት፣ መጥፎ ሽታ፣ ንዝረት) ሰላምዎ ሲደፈርስ እና ችግሩ ከአካባቢው መደበኛ ሁኔታ ያለፈ ሲሆን፣ ያንን ተግባር እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nችግሩ በሚከሰትበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nከውል ውጭ ተጠያቂነትን የሚመለከት በመሆኑ፣ የ5 ዓመት የይርጋ ጊዜ ገደብ አለው (አንቀጽ 1851)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የችግሩን ሁኔታ የሚያሳይ ማስረጃ (PhotosVideoEvidence)፣ የምስክሮች ቃል (WitnessAffidavitsNuisance) እና ችግሩ እንዲቆም በጽሑፍ ማስጠንቀቂያ መስጠትዎን የሚያሳይ ማስረጃ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ጎረቤት ወይም በአቅራቢያዎ የሚገኝ ሰው በሚያደርገው ተግባር (ለምሳሌ ከልክ ያለፈ ጩኸት፣ መጥፎ ሽታ፣ ንዝረት) ሰላምዎ ሲደፈርስ እና ችግሩ ከአካባቢው መደበኛ ሁኔታ ያለፈ ሲሆን، ያንን ተግባር እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nችግሩ በሚከሰትበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nከውል ውጭ ተጠያቂነትን የሚመለከት በመሆኑ፣ የ5 ዓመት የይርጋ ጊዜ ገደብ አለው (አንቀጽ 1851)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የችግሩን ሁኔታ የሚያሳይ ማስረጃ (PhotosVideoEvidence)፣ የምስክሮች ቃል (WitnessAffidavitsNuisance) እና ችግሩ እንዲቆም በጽሑፍ ማስጠንቀቂያ መስጠትዎን የሚያሳይ ማስረጃ።",
       "partyTitles": {
         "applicant": "ከሳሽ (የተጎዳ ወገን) (Plaintiff (Injured Party))",
         "respondent": "ተከሳሽ (የችግሩ ምንጭ) (Defendant (Source of Nuisance))"
@@ -500,7 +500,7 @@
     {
       "id": "app_prop_servitude_temporary_passage",
       "documentTitle": "ጊዜያዊ የመተላለፊያ ትዕዛዝ እንዲሰጥ አስገዳጅ ማመልከቻ (Application for Temporary Mandatory Order to Grant Passage)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (Injunction) እና የፍትሐ ብሔር ሕግ አንቀጽ 1332 (Necessity). (Art. 154 CPC & Art. 1332 Civil Code)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (Injunction) እና የፍትሐ ብሔር ሕግ አንቀጽ 1332 (Necessity). (Art. 154 CPC &amp; Art. 1332 Civil Code)",
       "meta": {
         "keywords": [
           "temporary injunction",

@@ -1,3 +1,4 @@
+
 {
   "templates": {
     "ip_trademark_infringement": {
@@ -351,7 +352,7 @@
       },
       "facts": [
         {
-          "id": "ip_fact_prima_facie_case_injunction",
+          "id": "app_ip_fact_prima_facie_case_injunction",
           "label": "አስቸኳይነት እና ጉዳት (Urgency & Harm)",
           "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ የጥሰት ጉዳይ አቋቁሟል። (The Applicant has established a strong prima facie case of infringement.)",
           "citation": "CPC Art. 154",
@@ -361,14 +362,14 @@
           ]
         },
         {
-          "id": "ip_fact_irreparable_harm",
+          "id": "app_ip_fact_irreparable_harm",
           "label": "አስቸኳይነት እና ጉዳት (Urgency & Harm)",
           "legalText": "የቀጠለው ጥሰት በአመልካቹ የገበያ ድርሻ እና ስም ላይ ሊጠገን የማይችል ጉዳት ያስከትላል። (The continued infringement will cause irreparable harm to the Applicant's market share and reputation.)",
           "citation": "",
           "autoEvidence": []
         },
         {
-          "id": "ip_fact_balance_convenience",
+          "id": "app_ip_fact_balance_convenience",
           "label": "አስቸኳይነት እና ጉዳት (Urgency & Harm)",
           "legalText": "የምቾት ሚዛን እገዳውን ለመስጠት ይደግፋል (ማለትም ከማቆም ይልቅ ለማቆም አነስተኛ ጉዳት)። (The balance of convenience favors granting the injunction (i.e., less harm to stop than to continue).)",
           "citation": "",
@@ -377,7 +378,7 @@
       ],
       "reliefs": [
         {
-          "id": "ip_relief_temporary_restraint",
+          "id": "app_ip_relief_temporary_restraint",
           "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ ተጠሪው የጣሱትን ዕቃዎች ማምረት፣ መሸጥ ወይም ማሰራጨት ለጊዜው እንዲያቆም ትዕዛዝ እንዲሰጥ። (Order the Respondent to temporarily cease all manufacture, sale, or distribution of the infringing goods pending final judgment.)",
           "isDefault": true,
           "isDynamic": false,
@@ -400,14 +401,14 @@
       },
       "facts": [
         {
-          "id": "ip_fact_concealment_risk",
+          "id": "app_ip_fact_concealment_risk",
           "label": "የማስረጃ ጥበቃ (Preservation of Evidence)",
           "legalText": "ተከሳሹ ወሳኝ የጥሰት ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ሂሳቦችን) ያጠፋል ወይም ይደብቃል የሚል ከባድ ስጋት አለ። (There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).)",
           "citation": "CPC Art. 154",
           "autoEvidence": []
         },
         {
-          "id": "ip_fact_specific_evidence_location",
+          "id": "app_ip_fact_specific_evidence_location",
           "label": "የማስረጃ ጥበቃ (Preservation of Evidence)",
           "legalText": "አመልካቹ ስለ ማስረጃው ቦታ እና ተፈጥሮ የተወሰነ እውቀት አለው። (The Applicant has specific knowledge of the location and nature of the evidence.)",
           "citation": "",
@@ -416,7 +417,7 @@
       ],
       "reliefs": [
         {
-          "id": "ip_relief_seize_evidence",
+          "id": "app_ip_relief_seize_evidence",
           "text": "የፍርድ ቤት ባለሥልጣን ከጥሰቱ ጋር የተያያዙ ማስረጃዎችን ለመያዝ እና ለመጠበቅ ወደ ተጠሪው ግቢ እንዲገባ ትዕዛዝ እንዲሰጥ። (Order a court officer to enter the Respondent's premises to seize and preserve evidence relating to the infringement.)",
           "isDefault": true,
           "isDynamic": false,
@@ -427,5 +428,3 @@
     }
   }
 }
-
-    

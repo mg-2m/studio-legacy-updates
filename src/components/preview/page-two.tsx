@@ -37,8 +37,14 @@ export default function PageTwo({ state }: PageTwoProps) {
         const location = e.originalLocation === 'Other (ሌላ)' ? e.originalLocationOther : e.originalLocation;
         details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issuer: ${issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${location || 'N/A'})`;
     } else if (e.type === 'Witness') {
-        label = e.name || 'Unnamed Witness';
-        details = `Address: ${e.city}, ${e.subcity} Subcity, Woreda: ${e.woreda}, House No: ${e.houseNo}`;
+        label = `${e.honorific} ${e.name}` || 'Unnamed Witness';
+        let subcity = e.subcity === 'ሌላ' ? e.subcityOther : e.subcity;
+        if(subcity && subcity !== 'ሌላ') {
+            subcity += ' ክፍለ ከተማ';
+        }
+        const woreda = e.woreda ? `, ወረዳ ${e.woreda}` : '';
+        const houseNo = e.houseNo ? `, የቤት ቁጥር ${e.houseNo}` : '';
+        details = `Address: ${e.city}, ${subcity}${woreda}${houseNo}`;
     } else if (e.type === 'CourtOrder') {
         label = e.description || e.type;
         details = e.description;

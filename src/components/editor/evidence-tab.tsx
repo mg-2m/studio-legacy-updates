@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, AA_SUBCITIES, REGIONS_AND_CITIES } from '@/lib/data';
+import { EVIDENCE_REGISTRY, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, AA_SUBCITIES, REGIONS_AND_CITIES, HONORIFICS } from '@/lib/data';
 import type { AppState, ManualEvidence } from '@/lib/types';
 import { BrainCircuit, Plus, X, File, Users, Gavel, Link } from 'lucide-react';
 import {
@@ -234,13 +234,25 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                         )}
                         {item.type === 'Witness' && (
                             <div className="space-y-4">
-                                <div className="space-y-2">
-                                    <Label>Witness Full Name (የምስክር ሙሉ ስም)</Label>
-                                    <Input
-                                        placeholder="e.g., Ato Kebede Alemayehu"
-                                        value={item.name}
-                                        onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'name', value: e.target.value } })}
-                                    />
+                                <div className="grid grid-cols-4 gap-4">
+                                    <div className="space-y-2 col-span-1">
+                                        <Label>ማዕረግ</Label>
+                                        <Select 
+                                            value={item.honorific} 
+                                            onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'honorific', value } })}
+                                        >
+                                            <SelectTrigger><SelectValue /></SelectTrigger>
+                                            <SelectContent>{HONORIFICS.map(h => <SelectItem key={h} value={h}>{h}</SelectItem>)}</SelectContent>
+                                        </Select>
+                                    </div>
+                                    <div className="space-y-2 col-span-3">
+                                        <Label>Witness Full Name (የምስክር ሙሉ ስም)</Label>
+                                        <Input
+                                            placeholder="e.g., Ato Kebede Alemayehu"
+                                            value={item.name}
+                                            onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'name', value: e.target.value } })}
+                                        />
+                                    </div>
                                 </div>
                                 <div className="space-y-2">
                                     <Label className="text-xs">City/Region (ከተማ/ክልል)</Label>

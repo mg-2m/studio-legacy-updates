@@ -321,6 +321,7 @@ function appReducer(state: AppState, action: Action): AppState {
                 newEvidence = {
                     id: newId,
                     type: 'Witness',
+                    honorific: HONORIFICS[0],
                     name: '',
                     city: REGIONS_AND_CITIES[0],
                     subcity: AA_SUBCITIES[0],

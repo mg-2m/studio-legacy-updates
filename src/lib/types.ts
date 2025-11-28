@@ -66,9 +66,11 @@ interface ManualDocumentEvidence extends BaseManualEvidence {
 
 interface ManualWitnessEvidence extends BaseManualEvidence {
     type: 'Witness';
+    honorific: string;
     name: string;
     city: string;
     subcity: string;
+    subcityOther?: string;
     woreda: string;
     houseNo: string;
 }

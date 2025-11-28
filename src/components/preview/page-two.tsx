@@ -91,13 +91,14 @@ export default function PageTwo({ state }: PageTwoProps) {
             fullDescription += `፣ ${detailsParts.join('፣ ')}`;
         }
         
-        if (e.documentType === 'Copy') {
-          fullDescription += '፣ ኮፒ';
-        } else if (e.documentType === 'Original') {
-          fullDescription += '፣ ኦርጅናል';
-        }
+        const docTypeMap = {
+            'Original': 'ኦርጅናል',
+            'Copy': 'ኮፒ'
+        };
 
-        fullDescription += " ተያይዙዋል";
+        const attachedType = docTypeMap[e.documentType] || e.documentType;
+
+        fullDescription += `፣ ${attachedType} ተያይዙዋል`;
 
         if (e.originalLocation && e.originalLocation !== 'የማይመለከተው') {
             const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
@@ -136,10 +137,14 @@ export default function PageTwo({ state }: PageTwoProps) {
   return (
     <div className="a4-page">
        <div className="header-block">
-         <div className="text-right mb-1">
-          <span className="green-box">ቀን: {meta.date || '___________'}</span>
-          <div className="mt-2 inline-block border-2 border-black px-2 py-0.5 font-bold">
-            መዝገብ ቁጥር: {meta.fileNumber || '___________'}
+        <div className="text-right mb-1">
+          <div>
+            <span className="green-box">ቀን: {meta.date || '___________'}</span>
+          </div>
+          <div className="mt-2">
+            <div className="inline-block border-2 border-black px-2 py-0.5 font-bold">
+              መዝገብ ቁጥር: {meta.fileNumber || '___________'}
+            </div>
           </div>
         </div>
         <div>
@@ -222,7 +227,7 @@ export default function PageTwo({ state }: PageTwoProps) {
       </div>
 
       <div className="mt-12 pt-5 border-t-2 border-black">
-        <div className="black-box mb-4">ማረጋገጫ</div>
+        <div className="black-box">ማረጋገጫ</div>
         <p className="text-justify leading-relaxed">
           ከላይ የተዘረዘረው ማስረጃ ሁሉ እውነት መሆኑን ተምሪ ነኝ። መረጃዎቹ በፍርድ ቤት ስሙ ውስጥ ስሚ በተጠየቀ ጊዜ ዋናውን ማስረጃ ቀርቦ አረጋግጣለሁ።
         </p>

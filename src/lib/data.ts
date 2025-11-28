@@ -68,108 +68,108 @@ function executeFormula(formula: string, data: { [key: string]: any }): any {
 
 
 export const COURT_HIERARCHY = {
-  "Federal First Instance Court (የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት)": [
-    "Lideta Division, 1st Bench (ልደታ ምድብ 1ኛ ችሎት)", 
-    "Lideta Division, 2nd Bench (ልደታ ምድብ 2ኛ ችሎት)",
-    "Bole Division (ቦሌ ምድብ)",
-    "Kirkos Division (ቂርቆስ ምድብ)",
-    "Arada Division (አራዳ ምድብ)",
-    "Yeka Division (የካ ምድብ)", 
-    "Akaki Kality Division (አቃቂ ቃሊቲ ምድብ)",
-    "Lideta Division, 1st Labour Relations Bench (ልደታ ምድб 1ኛ የሠራተኛ ግንኙነት ችሎት)",
-    "Lideta Division, Tax Bench (ልደታ ምድብ የታክስ ችሎት)",
+  "የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት": [
+    "ልደታ ምድብ 1ኛ ችሎት", 
+    "ልደታ ምድብ 2ኛ ችሎት",
+    "ቦሌ ምድብ",
+    "ቂርቆስ ምድብ",
+    "አራዳ ምድብ",
+    "የካ ምድብ", 
+    "አቃቂ ቃሊቲ ምድብ",
+    "ልደታ ምድብ 1ኛ የሠራተኛ ግንኙነት ችሎት",
+    "ልደታ ምድብ የታክስ ችሎት",
   ],
-  "Federal High Court (የፌዴራል ከፍተኛ ፍርድ ቤት)": [
-    "Lideta Division, 1st Civil Bench (ልደታ ምድብ 1ኛ ፍትሐብሔር ችሎት)",
-    "Lideta Division, 2nd Civil Bench (ልደታ ምድብ 2ኛ ፍትሐብሔር ችሎት)",
-    "Lideta Division, 1st Criminal Bench (ልደታ ምድб 1ኛ ወንጀል ችሎት)",
-    "Bole Division (ቦሌ ምድብ)",
-    "Lideta Division, Commercial Bench (ልደታ ምድብ የንግድ ችሎት)",
-    "Lideta Division, Labour Division (ልደታ ምድб የሠራተኛ ችሎት)",
+  "የፌዴራል ከፍተኛ ፍርድ ቤት": [
+    "ልደታ ምድብ 1ኛ ፍትሐብሔር ችሎት",
+    "ልደታ ምድብ 2ኛ ፍትሐብሔር ችሎት",
+    "ልደታ ምድብ 1ኛ ወንጀል ችሎት",
+    "ቦሌ ምድብ",
+    "ልደታ ምድብ የንግድ ችሎት",
+    "ልደታ ምድብ የሠራተኛ ችሎት",
   ],
-  "Federal Supreme Court (የፌዴራል ጠቅላይ ፍርድ ቤት)": [
-    "1st Cassation Bench (1ኛ ሰበር ሰሚ ችሎት)", 
-    "2nd Cassation Bench (2ኛ ሰበር ሰሚ ችሎት)",
-    "3rd Cassation Bench (3ኛ ሰበር ሰሚ ችሎት)",
-    "1st Appellate Bench (1ኛ ይግባኝ ሰሚ ችሎት)"
+  "የፌዴራል ጠቅላይ ፍርድ ቤት": [
+    "1ኛ ሰበር ሰሚ ችሎት", 
+    "2ኛ ሰበር ሰሚ ችሎት",
+    "3ኛ ሰበር ሰሚ ችሎት",
+    "1ኛ ይግባኝ ሰሚ ችሎት"
   ]
 };
 
 export const REGIONS_AND_CITIES = [
-  "Addis Ababa City Administration (የአዲስ አበባ ከተማ አስተዳደር)",
-  "Afar Regional State (የአፋር ክልל)",
-  "Amhara Regional State (የአማራ ክልል)",
-  "Benishangul-Gumuz Regional State (የቤኒሻንጉል ጉሙዝ ክልል)",
-  "Central Ethiopia Regional State (የማዕከላዊ ኢትዮጵያ ክልል)",
-  "Dire Dawa City Administration (የድሬዳዋ ከተማ አስተዳደር)",
-  "Gambela Regional State (የጋምቤላ ክልል)",
-  "Harari Regional State (የሐረሪ ክልል)",
-  "Oromia Regional State (የኦሮሚያ ክልል)",
-  "Sidama Regional State (የሲዳማ ክልል)",
-  "Somali Regional State (የሶማሌ ክልል)",
-  "South Ethiopia Regional State (የደቡብ ኢትዮጵያ ክልל)",
-  "South West Ethiopia Peoples' Regional State (የደቡብ ምዕራብ ኢትዮጵIA ህዝቦች ክልል)",
-  "Tigray Regional State (የትግራይ ክልል)",
+  "የአዲስ አበባ ከተማ አስተዳደር",
+  "የአፋር ክልል",
+  "የአማራ ክልል",
+  "የቤኒሻንጉል ጉሙዝ ክልል",
+  "የማዕከላዊ ኢትዮጵያ ክልል",
+  "የድሬዳዋ ከተማ አስተዳደር",
+  "የጋምቤላ ክልል",
+  "የሐረሪ ክልል",
+  "የኦሮሚያ ክልል",
+  "የሲዳማ ክልል",
+  "የሶማሌ ክልል",
+  "የደቡብ ኢትዮጵያ ክልል",
+  "የደቡብ ምዕራብ ኢትዮጵያ ህዝቦች ክልል",
+  "የትግራይ ክልል",
 ];
 
 export const AA_SUBCITIES = [
-  "Arada (አራዳ)", "Bole (ቦሌ)", "Addis Ketema (አዲስ ከተማ)", "Nifas Silk-Lafto (ኒፋስ ስልክ)",
-  "Kirkos (ቂርቆስ)", "Gullele (ጉለሌ)", "Lideta (ልደታ)", "Akaki Kality (አቃቂ ቃሊቲ)",
-  "Yeka (የካ)", "Lemi Kura (ለሚ ኩራ)", "Kolfe Keranio (ኮልፌ ቀራኒዮ)", "Other (ሌላ)"
+  "አራዳ", "ቦሌ", "አዲስ ከተማ", "ኒፋስ ስልክ",
+  "ቂርቆስ", "ጉለሌ", "ልደታ", "አቃቂ ቃሊቲ",
+  "የካ", "ለሚ ኩራ", "ኮልፌ ቀራኒዮ", "ሌላ"
 ];
 
-export const HONORIFICS = ["አቶ (Mr.)", "ወ/ሮ (Mrs.)", "ወ/ሪት (Miss)"];
+export const HONORIFICS = ["አቶ", "ወ/ሮ", "ወ/ሪት"];
 
 export const EVIDENCE_LOCATIONS = [
-  "With Applicant (ከአመልካች ጋር)",
-  "With Respondent (ከተከሳሽ ጋር)",
-  "With the Court (ፍርድ ቤት ውስጥ)",
-  "Lost (ጠፍቷል)",
-  "N/A (የማይመለከተው)",
-  "Other (ሌላ)",
+  "ከአመልካች ጋር",
+  "ከተከሳሽ ጋር",
+  "ፍርድ ቤት ውስጥ",
+  "ጠፍቷል",
+  "የማይመለከተው",
+  "ሌላ",
 ];
 
 export const DOCUMENT_ISSUERS = [
   // --- Law Enforcement & Justice ---
-  "Federal Police Commission (የፌደራል ፖሊስ ኮሚሽን)",
-  "Addis Ababa Police Commission (የአዲስ አበባ ፖሊስ ኮሚሽን)",
-  "Oromia Police Commission (የኦሮሚያ ፖሊስ ኮሚሽን)",
-  "Amhara Police Commission (የአማራ ፖሊስ ኮሚሽን)",
-  "Ministry of Justice (የፍትህ ሚኒስቴር)",
-  "Federal Attorney General (የፌዴራል ጠቅላይ ዐቃቤ ሕግ)",
+  "የፌደራል ፖሊስ ኮሚሽን",
+  "የአዲስ አበባ ፖሊስ ኮሚሽን",
+  "የኦሮሚያ ፖሊስ ኮሚሽን",
+  "የአማራ ፖሊስ ኮሚሽን",
+  "የፍትህ ሚኒስቴር",
+  "የፌዴራል ጠቅላይ ዐቃቤ ሕግ",
   
   // --- Vital Events, Civil Status & Documents ---
-  "Vital Events Registration Agency (VERA) (የወሳኝ ኩነት ምዝገባ ኤጀንሲ)",
-  "Documents Authentication and Registration Service (DARS) (የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት)",
-  "Immigration and Citizenship Service (የኢሚግሬሽን እና የዜግነት አገልግሎት)",
+  "የወሳኝ ኩነት ምዝገባ ኤጀንሲ",
+  "የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት",
+  "የኢሚግሬሽን እና የዜግነት አገልግሎት",
   
   // --- Economy, Trade & Finance ---
-  "Ministry of Trade and Regional Integration (የንግድ እና ቀጣናዊ ትስስር ሚኒስቴር)",
-  "Ministry of Revenues (የገቢዎች ሚኒስቴር)",
-  "Ministry of Finance (የገንዘብ ሚኒስቴር)",
-  "Ethiopian Investment Commission (የኢትዮጵያ ኢንቨስትመንት ኮሚሽን)",
-  "National Bank of Ethiopia (የኢትዮጵያ ብሔራዊ ባንክ)",
-  "Commercial Bank of Ethiopia (የኢትዮጵያ ንግድ ባንክ)",
+  "የንግድ እና ቀጣናዊ ትስስር ሚኒስቴር",
+  "የገቢዎች ሚኒስቴር",
+  "የገንዘብ ሚኒስቴር",
+  "የኢትዮጵያ ኢንቨስትመንት ኮሚሽን",
+  "የኢትዮጵያ ብሔራዊ ባንክ",
+  "የኢትዮጵያ ንግድ ባንክ",
 
   // --- Land, Property & Infrastructure ---
-  "Addis Ababa City Land Development and Management Bureau (የአ/አ ከተማ የመሬት ልማት እና ማኔጅመንት ቢሮ)",
-  "Ministry of Urban and Infrastructure (የከተማ እና መሠረተ ልማት ሚኒስቴር)",
-  "Ethiopian Roads Administration (የኢትዮጵያ መንገዶች አስተዳደር)",
-  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክስ ሚኒስቴር)",
-  "Ethiopian Electric Power (የኢትዮጵያ ኤሌክትሪክ ኃይል)",
+  "የአ/አ ከተማ የመሬት ልማት እና ማኔጅመንት ቢሮ",
+  "የከተማ እና መሠረተ ልማት ሚኒስቴር",
+  "የኢትዮጵያ መንገዶች አስተዳደር",
+  "የትራንስፖርት እና ሎጂስቲክስ ሚኒስቴር",
+  "የኢትዮጵያ ኤሌክትሪክ ኃይል",
 
   // --- Social & Health ---
-  "Ministry of Health (የጤና ጥበቃ ሚኒስቴር)",
-  "A hospital or clinic (ሆስፒታል ወይም ክሊኒክ)",
-  "Ministry of Education (የትምህርት ሚኒስቴር)",
-  "A university or educational institution (ዩኒቨርሲቲ ወይም የትምህርት ተቋም)",
-  "Ministry of Labor and Skills (የሥራ እና ክህሎት ሚኒስቴር)",
+  "የጤና ጥበቃ ሚኒስቴር",
+  "ሆስፒታል ወይም ክሊኒክ",
+  "የትምህርት ሚኒስቴር",
+  "ዩኒቨርሲቲ ወይም የትምህርት ተቋም",
+  "የሥራ እና ክህሎት ሚኒስቴር",
   
   // --- IP ---
-  "Ethiopian Intellectual Property Office (EIPO) (የኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት)",
+  "የኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት",
   
   // --- Other ---
-  "Other (ሌላ)",
+  "ሌላ",
 ];
 
 export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.entries(allEntities).reduce((acc: EvidenceRegistry, [key, entity]: [string, any]) => {
@@ -292,7 +292,7 @@ export const TEMPLATES: Template[] = [
         { id: 'tax_objection_admin_review', label: 'የግብር መቃወሚያ (Tax Objection)', icon: FileText },
         { id: 'tax_appeal_ftac', label: 'የግብር ይግባኝ (Tax Appeal)', icon: Gavel },
         { id: 'customs_claim_for_refund', label: 'የጉምሩክ ተመላሽ ጥያቄ (Customs Refund Claim)', icon: Receipt },
-        { id: 'app_tax_stay_of_execution', label: 'የአፈጻጸም እገዳ (Stay of Execution)', icon: Shield },
+        { id: 'app_tax_stay_of_execution', label: 'የአፈጻጸም እግዳ (Stay of Execution)', icon: Shield },
         { id: 'app_tax_adr_request', label: 'የአማራጭ መፍትሄ ጥያቄ (ADR Request)', icon: Handshake },
     ]
   },
@@ -354,12 +354,6 @@ export const TEMPLATES: Template[] = [
   }
 ];
 
-// Helper to strip English parenthetical text
-const stripEnglish = (text: string | undefined): string => {
-    if (!text) return '';
-    return text.split('(')[0].trim();
-};
-
 // This function processes facts from the old structure to the new one.
 const processFacts = (facts: any): Fact[] => {
     if (!facts) return [];
@@ -400,28 +394,6 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(all
   
   // Create a deep copy to avoid mutating the original `allTemplates` object
   const newTemplateData = JSON.parse(JSON.stringify(value));
-
-  // Strip english from all relevant fields
-  newTemplateData.documentTitle = stripEnglish(newTemplateData.documentTitle);
-  newTemplateData.jurisdictionText = stripEnglish(newTemplateData.jurisdictionText);
-  if (newTemplateData.partyTitles) {
-      newTemplateData.partyTitles.applicant = stripEnglish(newTemplateData.partyTitles.applicant);
-      newTemplateData.partyTitles.respondent = stripEnglish(newTemplateData.partyTitles.respondent);
-  }
-  if (newTemplateData.facts) {
-      const processedFacts = processFacts(newTemplateData.facts);
-      newTemplateData.facts = processedFacts.map(fact => ({
-          ...fact,
-          legalText: stripEnglish(fact.legalText),
-          label: stripEnglish(fact.label)
-      }));
-  }
-   if (newTemplateData.reliefs) {
-    newTemplateData.reliefs = newTemplateData.reliefs.map((relief: Relief) => ({
-      ...relief,
-      text: stripEnglish(relief.text)
-    }));
-  }
   
   acc[key] = newTemplateData;
   return acc;
@@ -479,4 +451,5 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
+
 

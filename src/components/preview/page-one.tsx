@@ -45,8 +45,8 @@ export default function PageOne({ state }: PageOneProps) {
 
   const summonsMap = {
     self: 'በራሴ አደርሳለው',
-    police: 'በፖሊስ',
-    post: 'በፖስታ',
+    police: 'በፖሊስ እንዲደርስልኝ እጠይቃለሁ',
+    post: 'በፖስታ እንዲላክልኝ እጠይቃለሁ',
   };
 
   const repMap = {
@@ -162,16 +162,16 @@ export default function PageOne({ state }: PageOneProps) {
 
       <div className="text-center my-8">
         <span className="bg-black text-white px-5 py-1.5 font-bold text-lg" style={{ border: '4px double white', boxShadow: '0 0 0 2px black' }}>
-          {stripEnglish(documentTitle)}
+          {documentTitle}
         </span>
       </div>
 
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ:</h4>
         <ul className="list-none p-0 leading-relaxed">
-          <li>➤ ይህ <strong>{stripEnglish(meta.courtLevel)}</strong> በ <strong>{jurisdictionText}</strong> መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
+          <li>➤ ይህ {meta.courtLevel} በ {jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ አመልካች ጉዳዩን የምከታተለው፡ {repMap[meta.representation]}</li>
-          <li>➤ መጥሪያውን፡ <strong>{summonsMap[meta.summonsDelivery]}</strong></li>
+          <li>➤ መጥሪያውን፡ {summonsMap[meta.summonsDelivery]}</li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል::</li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 {
   "templates": {
-    "civil_service_disciplinary_appeal": {
+    "pub_serv_disciplinary_appeal": {
       "documentTitle": "የዲሲፕሊን ይግባኝ ለአስተዳደር ፍርድ ቤት (Memorandum of Appeal to the Administrative Tribunal)",
       "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017 (Federal Civil Servants Proclamation No. 1064/2017)",
       "meta": {
@@ -36,7 +36,7 @@
         {
           "id": "pub_serv_fact_measure_fine",
           "label": "የዲሲፕሊን እርምጃ (The Disciplinary Measure)",
-          "legalText": "ከአንድ ወር ደመወዝ በላይ የሆነ ቅጣት መጣል። (Imposition of a fine exceeding one month's salary.)",
+          "legalText": "ከአንድ ወር ደመወዝ በላይ የሆነ ቅጣት መጣ። (Imposition of a fine exceeding one month's salary.)",
           "citation": "Proc. 1064/2017 Art. 81(1)(b)",
           "autoEvidence": [
             "DismissalLetter"
@@ -118,7 +118,7 @@
       ],
       "calculations": {}
     },
-    "civil_service_termination_unlawful": {
+    "pub_serv_termination_unlawful": {
       "documentTitle": "በአስተዳደራዊ ስንብት ላይ ይግባኝ (Appeal Against Administrative Termination)",
       "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017 (Federal Civil Servants Proclamation No. 1064/2017)",
       "meta": {
@@ -189,7 +189,7 @@
       ],
       "calculations": {}
     },
-    "civil_service_benefits_grievance": {
+    "pub_serv_benefits_grievance": {
       "documentTitle": "በአገልግሎት መብቶች እና ጥቅሞች ላይ ይግባኝ (Appeal on Service Rights & Benefits)",
       "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017 (Federal Civil Servants Proclamation No. 1064/2017)",
       "meta": {
@@ -205,7 +205,7 @@
         {
           "id": "pub_serv_fact_exhaustion_grievance_submitted",
           "label": "የውስጥ መፍትሔዎችን ማሟጠጥ (ግዴታ) (Exhaustion of Remedies (Mandatory))",
-          "legalText": "በ [Date] ለተቋሙ የቅሬታ አያያዝ ኮሚቴ ቅሬታ ቀርቧል፣ ነገር ግን ውሳኔው አጥጋቢ አልነበረም ወይም በጊዜ አልተሰጠም። (A complaint was submitted to the institutional Grievance Handling Committee on [Date], but the decision was unsatisfactory or not rendered in time.)",
+          "legalText": "በ [date] ለተቋሙ የቅሬታ አያያዝ ኮሚቴ ቅሬታ ቀርቧል፣ ነገር ግን ውሳኔው አጥጋቢ አልነበረም ወይም በጊዜ አልተሰጠም። (A complaint was submitted to the institutional Grievance Handling Committee on [date], but the decision was unsatisfactory or not rendered in time.)",
           "citation": "Proc. 1064/2017 Art. 81(1)(e)",
           "autoEvidence": [
             "GrievanceSubmission"
@@ -260,5 +260,3 @@
     }
   }
 }
-
-    

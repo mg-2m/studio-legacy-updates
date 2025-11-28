@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import { Button } from '@/components/ui/button';
@@ -15,7 +14,6 @@ import {
 import { REGIONS_AND_CITIES, AA_SUBCITIES, HONORIFICS } from '@/lib/data';
 import type { Party } from '@/lib/types';
 import { X } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Separator } from '../ui/separator';
 
 interface PartyFormProps {
@@ -45,15 +43,14 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
 
             <div className="space-y-3 pt-2">
                 <Label className="font-semibold text-sm">አድራሻ</Label>
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                 <div className="grid grid-cols-[auto_1.5fr_auto_1.5fr_auto_1fr_auto_1fr] items-center gap-x-2 gap-y-3">
                     <Label className="text-xs">ከተማ/ክልል</Label>
                     <Select value={party.address.city} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.city', value } })}>
                       <SelectTrigger><SelectValue /></SelectTrigger>
                       <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
                     </Select>
-                </div>
-                 <div className="grid grid-cols-[auto_1fr_auto_1fr_auto_1fr] items-center gap-x-4 gap-y-3">
-                    <Label className="text-xs">ክፍለ ከተማ</Label>
+                    
+                    <Label className="text-xs">ክ/ከተማ</Label>
                     <Select 
                         value={party.address.subcity} 
                         onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.subcity', value } })}
@@ -65,7 +62,7 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
                     <Label className="text-xs">ወረዳ</Label>
                     <Input className="h-9" value={party.address.woreda} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.woreda', value: e.target.value } })} />
                     
-                    <Label className="text-xs">የቤት ቁጥር</Label>
+                    <Label className="text-xs">ቤት/ቁ</Label>
                      <Input className="h-9" value={party.address.houseNo} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.houseNo', value: e.target.value } })} />
                 </div>
                 {party.address.subcity === 'ሌላ' && (

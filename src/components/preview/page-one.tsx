@@ -44,15 +44,15 @@ export default function PageOne({ state }: PageOneProps) {
 
 
   const summonsMap = {
-    self: 'በራሴ አደርሳለው',
-    police: 'በፖሊስ እንዲደርስልኝ እጠይቃለሁ',
-    post: 'በፖስታ እንዲላክልኝ እጠይቃለሁ',
+    self: 'በራሴ አደርሳለው፡፡',
+    police: 'በፖሊስ እንዲደርስልኝ እጠይቃለሁ፡፡',
+    post: 'በፖስታ እንዲላክልኝ እጠይቃለሁ፡፡',
   };
 
   const repMap = {
-    self: 'ራሴ በመቅረብ ነው',
-    lawyer: 'በጠበቃዬ አማካይነት ነው',
-    both: 'በራሴ እና በጠበቃዬ',
+    self: 'ራሴ በመቅረብ ነው፡፡',
+    lawyer: 'በጠበቃዬ አማካይነት ነው፡፡',
+    both: 'በራሴ እና በጠበቃዬ ነው፡፡',
   };
 
   const formatReliefText = (relief: Relief): string => {
@@ -122,7 +122,7 @@ export default function PageOne({ state }: PageOneProps) {
     <div className="a4-page">
       <div className="header-block">
         <div className="text-right mb-2">
-            <div>
+            <div className="mt-2">
                 <span className="green-box">ቀን: {meta.date || '___________'}</span>
             </div>
             <div className="mt-2">
@@ -169,10 +169,10 @@ export default function PageOne({ state }: PageOneProps) {
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ:</h4>
         <ul className="list-none p-0 leading-relaxed">
-          <li>➤ ይህ {meta.courtLevel} በ {jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
+          <li>➤ ይህ {stripEnglish(meta.courtLevel)} በ {jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ አመልካች ጉዳዩን የምከታተለው፡ {repMap[meta.representation]}</li>
           <li>➤ መጥሪያውን፡ {summonsMap[meta.summonsDelivery]}</li>
-          <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል::</li>
+          <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
         </ul>
       </div>
 

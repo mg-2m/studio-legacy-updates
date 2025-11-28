@@ -1,3 +1,4 @@
+
 {
   "meta": {
     "branchName": "የንብረት እና የመሬት ሕግ (Property & Land Law)",
@@ -32,7 +33,9 @@
           "label": "የባለቤትነት ማረጋገጫ (Proof of Title)",
           "legalText": "ከሳሹ በ [location] የሚገኘው የማይንቀሳቀስ ንብረት ህጋዊ ባለቤት/ባለይዞታ ነው። (The Plaintiff is the legal owner/holder of the immovable property situated at [location].)",
           "citation": "Civ. Code Art. 1204",
-          "autoEvidence": ["TitleDeed"]
+          "autoEvidence": [
+            "TitleDeed"
+          ]
         },
         {
           "id": "prop_fact_chain_of_custody",
@@ -46,14 +49,18 @@
           "label": "ያለአግባብ መያዝ (Unlawful Holding)",
           "legalText": "ተከሳሹ በአሁኑ ጊዜ ንብረቱን ያለ ምንም ህጋዊ መብት ወይም ባለቤትነት ይይዛል። (The Defendant is currently in possession of the property without any legal title or right.)",
           "citation": "Civ. Code Art. 1206",
-          "autoEvidence": ["KebeleConfirmation"]
+          "autoEvidence": [
+            "KebeleConfirmation"
+          ]
         },
         {
           "id": "prop_fact_refusal_vacate",
           "label": "ያለአግባብ መያዝ (Unlawful Holding)",
           "legalText": "ተደጋጋሚ ጥያቄ ቢቀርብም ተከሳሹ ንብረቱን ለቆ ለመውጣት ፈቃደኛ አልሆነም። (Despite demands, the Defendant refuses to vacate the property.)",
           "citation": "",
-          "autoEvidence": ["NoticeofDefault"]
+          "autoEvidence": [
+            "NoticeofDefault"
+          ]
         }
       ],
       "reliefs": [
@@ -86,7 +93,13 @@
       "documentTitle": "የተነጠቀን ይዞታ ለማስመለስ የክስ ማመልከቻ (Statement of Claim for Restoration of Possession)",
       "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1149 (Art. 1149 of the Civil Code)",
       "meta": {
-        "keywords": ["possessory action", "usurpation", "dispossession", "የይዞታ ክስ", "ማስመለስ"],
+        "keywords": [
+          "possessory action",
+          "usurpation",
+          "dispossession",
+          "የይዞታ ክስ",
+          "ማስመለስ"
+        ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
       "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ይዞታዎ በጉልበት ወይም በማታለል ሲነጠቅ፣ የባለቤትነት ጥያቄ ውስጥ ሳይገባ ይዞታው ብቻ በፍጥነት እንዲመለስልዎ ለመጠየቅ ያገለግላል። ዋናው ዓላማው ሰላምን ማስጠበቅ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nይዞታው ከተነጠቀበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ንብረቱን በሰላም ይዘውት እንደነበር የሚያረጋግጡ ማስረጃዎች (ለምሳሌ የግብር ደረሰኞች፣ የቀበሌ ማረጋገጫ)።",
@@ -100,7 +113,10 @@
           "label": "የይዞታ እውነታ (Fact of Possession)",
           "legalText": "ከሳሹ ንብረቱን በሰላም እና ቀጣይነት ባለው መልኩ ይዞት ነበር። (The Plaintiff was in peaceful and continuous possession of the property.)",
           "citation": "Civ. Code Art. 1140",
-          "autoEvidence": ["TaxLandRentReceipts", "KebeleConfirmation"]
+          "autoEvidence": [
+            "TaxLandRentReceipts",
+            "KebeleConfirmation"
+          ]
         },
         {
           "id": "prop_fact_usurpation_act",
@@ -133,7 +149,14 @@
       "documentTitle": "የድንበር መጣስ እንዲወገድ የክስ ማመልከቻ (Statement of Claim for Removal of Boundary Encroachment)",
       "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1204 እና 1211 (Art. 1204 & 1211 of the Civil Code)",
       "meta": {
-        "keywords": ["boundary dispute", "encroachment", "neighbor dispute", "demolition", "የድንበር ክርክር", "መጣስ"],
+        "keywords": [
+          "boundary dispute",
+          "encroachment",
+          "neighbor dispute",
+          "demolition",
+          "የድንበር ክርክር",
+          "መጣስ"
+        ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
       "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ጎረቤት በህጋዊ የድንበር መስመርዎ ላይ ግንባታ ሲፈጽም (ለምሳሌ አጥር ወይም የቤት ክፍል)፣ ያንን ግንባታ እንዲያፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የቦታውን ህጋዊ ድንበር የሚያሳይ የሳይት ፕላን (SitePlan) እና ጥሰቱን የሚያረጋግጥ የባለሙያ (ሰርቬየር) ሪፖርት (SurveyorsReport)።",
@@ -147,14 +170,19 @@
           "label": "የድንበር መስመሮች (Boundary Lines)",
           "legalText": "በከሳሽ እና በተከሳሽ ይዞታዎች መካከል ያለው ህጋዊ ድንበር በኦፊሴላዊው የቦታ ፕላን ይገለጻል። (The legal boundary between the Plaintiff's and Defendant's plots is defined by the official Site Plan.)",
           "citation": "",
-          "autoEvidence": ["SitePlan"]
+          "autoEvidence": [
+            "SitePlan"
+          ]
         },
         {
           "id": "prop_fact_encroachment_act",
           "label": "መጣሱ (The Encroachment)",
           "legalText": "ተከሳሹ የድንበር መስመሩን በ [distance] ሜትር የሚያልፍ ግድግዳ/ግንባታ ሰርቷል። (The Defendant has constructed a wall/structure that crosses the boundary line by [distance].)",
           "citation": "",
-          "autoEvidence": ["SurveyorsReport", "PhotosVideoEvidence"]
+          "autoEvidence": [
+            "SurveyorsReport",
+            "PhotosVideoEvidence"
+          ]
         }
       ],
       "reliefs": [
@@ -180,7 +208,16 @@
       "documentTitle": "ያልተለመደ ችግር እንዲቆም የክስ ማመልከቻ (Nuisance) (Statement of Claim for Cessation of Abnormal Inconvenience (Nuisance))",
       "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1225 (Art. 1225 of the Civil Code)",
       "meta": {
-        "keywords": ["nuisance", "abnormal inconvenience", "noise", "smell", "neighbor dispute", "ችግር", "ጩኸት", "ሽታ"],
+        "keywords": [
+          "nuisance",
+          "abnormal inconvenience",
+          "noise",
+          "smell",
+          "neighbor dispute",
+          "ችግር",
+          "ጩኸት",
+          "ሽታ"
+        ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
       "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ጎረቤት ወይም በአቅራቢያዎ የሚገኝ ሰው በሚያደርገው ተግባር (ለምሳሌ ከልክ ያለፈ ጩኸት፣ መጥፎ ሽታ፣ ንዝረት) ሰላምዎ ሲደፈርስ እና ችግሩ ከአካባቢው መደበኛ ሁኔታ ያለፈ ሲሆን፣ ያንን ተግባር እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nችግሩ በሚከሰትበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nከውል ውጭ ተጠያቂነትን የሚመለከት በመሆኑ፣ የ5 ዓመት የይርጋ ጊዜ ገደብ አለው (አንቀጽ 1851)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የችግሩን ሁኔታ የሚያሳይ ማስረጃ (PhotosVideoEvidence)፣ የምስክሮች ቃል (WitnessAffidavitsNuisance) እና ችግሩ እንዲቆም በጽሑፍ ማስጠንቀቂያ መስጠትዎን የሚያሳይ ማስረጃ።",
@@ -201,7 +238,10 @@
           "label": "ችግሩ (The Disturbance)",
           "legalText": "በተከሳሹ የሚፈጠረው ችግር ያልተለመደ እና ከአካባቢው ከሚጠበቀው ደረጃ ይበልጣል። (The inconvenience caused by the Defendant is abnormal and exceeds the level normally expected of the neighborhood.)",
           "citation": "",
-          "autoEvidence": ["WitnessAffidavitsNuisance", "PhotosVideoEvidence"]
+          "autoEvidence": [
+            "WitnessAffidavitsNuisance",
+            "PhotosVideoEvidence"
+          ]
         },
         {
           "id": "prop_fact_notice_to_stop",

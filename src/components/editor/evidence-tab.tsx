@@ -33,9 +33,9 @@ const ManualEvidenceCard: React.FC<{
     <Card key={item.id} className="bg-muted/30">
       <CardHeader className="flex-row items-center justify-between p-4">
         <CardTitle className="text-base">
-          {item.type === 'Document' && 'Document (ሰነድ)'}
-          {item.type === 'Witness' && 'Witness (የሰው ምስክር)'}
-          {item.type === 'CourtOrder' && 'Court Order (የትዕዛዝ)'}
+          {item.type === 'Document' && 'ሰነድ (Document)'}
+          {item.type === 'Witness' && 'የሰው ምስክር (Witness)'}
+          {item.type === 'CourtOrder' && 'የትዕዛዝ (Court Order)'}
           <span className="font-normal text-muted-foreground text-sm ml-2">(Manual)</span>
         </CardTitle>
         <Button
@@ -50,55 +50,58 @@ const ManualEvidenceCard: React.FC<{
       <CardContent className="space-y-4 px-4 pb-4">
         {item.type === 'Document' && (
           <>
-            <div className="space-y-2">
-              <Label>Description (ገለጻ)</Label>
-              <Input
-                placeholder={'e.g., Police report about the incident'}
-                value={item.description}
-                onChange={(e) =>
-                  dispatch({
-                    type: 'UPDATE_EVIDENCE',
-                    payload: { id: item.id, field: 'description', value: e.target.value },
-                  })
-                }
-              />
-            </div>
-            <div className="space-y-2">
-              <Label>Issuer (አውጪ)</Label>
-              <Select
-                value={item.issuer}
-                onValueChange={(value) =>
-                  dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value } })
-                }
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select issuer" />
-                </SelectTrigger>
-                <SelectContent>
-                  {DOCUMENT_ISSUERS.map((issuer) => (
-                    <SelectItem key={issuer} value={issuer}>
-                      {issuer}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {item.issuer === 'ሌላ' && (
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label>ገለጻ (Description)</Label>
                 <Input
-                  className="mt-2"
-                  placeholder="Please specify other issuer"
-                  value={item.issuerOther || ''}
+                  placeholder={'e.g., Police report about the incident'}
+                  value={item.description}
                   onChange={(e) =>
                     dispatch({
                       type: 'UPDATE_EVIDENCE',
-                      payload: { id: item.id, field: 'issuerOther', value: e.target.value },
+                      payload: { id: item.id, field: 'description', value: e.target.value },
                     })
                   }
                 />
-              )}
+              </div>
+              <div className="space-y-2">
+                <Label>አውጪ (Issuer)</Label>
+                <Select
+                  value={item.issuer}
+                  onValueChange={(value) =>
+                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value } })
+                  }
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select issuer" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {DOCUMENT_ISSUERS.map((issuer) => (
+                      <SelectItem key={issuer} value={issuer}>
+                        {issuer}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                {item.issuer === 'ሌላ' && (
+                  <Input
+                    className="mt-2"
+                    placeholder="Please specify other issuer"
+                    value={item.issuerOther || ''}
+                    onChange={(e) =>
+                      dispatch({
+                        type: 'UPDATE_EVIDENCE',
+                        payload: { id: item.id, field: 'issuerOther', value: e.target.value },
+                      })
+                    }
+                  />
+                )}
+              </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+
+            <div className="grid grid-cols-4 gap-4">
                <div className="space-y-2">
-                <Label>Reference No. (ቁጥር)</Label>
+                <Label>ቁጥር (Ref. No.)</Label>
                 <Input
                   placeholder="e.g., AA/Pol/123/24"
                   value={item.refNumber}
@@ -108,7 +111,7 @@ const ManualEvidenceCard: React.FC<{
                 />
               </div>
               <div className="space-y-2">
-                <Label>Issue Date (የተሰጠበት ቀን)</Label>
+                <Label>የተሰጠበት ቀን (Issue Date)</Label>
                 <Input
                   placeholder="e.g., 22/05/2024"
                   value={item.issueDate}
@@ -117,9 +120,8 @@ const ManualEvidenceCard: React.FC<{
                   }
                 />
               </div>
-            </div>
-             <div className="space-y-2">
-                <Label>Page Count (የገጽ ብዛት)</Label>
+               <div className="space-y-2">
+                <Label>የገጽ ብዛት (Pages)</Label>
                 <Input
                   type="number"
                   placeholder="e.g., 5"
@@ -129,8 +131,43 @@ const ManualEvidenceCard: React.FC<{
                   }
                 />
               </div>
+              <div className="space-y-2">
+                <Label>ኦርጅናሉ ያለበት (Location)</Label>
+                <Select
+                  value={item.originalLocation}
+                  onValueChange={(value) =>
+                    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value } })
+                  }
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select location" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {EVIDENCE_LOCATIONS.map((loc) => (
+                      <SelectItem key={loc} value={loc}>
+                        {loc}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                {item.originalLocation === 'ሌላ' && (
+                  <Input
+                    className="mt-2"
+                    placeholder="Please specify other location"
+                    value={item.originalLocationOther || ''}
+                    onChange={(e) =>
+                      dispatch({
+                        type: 'UPDATE_EVIDENCE',
+                        payload: { id: item.id, field: 'originalLocationOther', value: e.target.value },
+                      })
+                    }
+                  />
+                )}
+            </div>
+            </div>
+            
             <div className="space-y-2">
-              <Label>Document Type (የሰነዱ አይነት)</Label>
+              <Label>የሰነዱ አይነት (Document Type)</Label>
               <RadioGroup
                 value={item.documentType}
                 onValueChange={(value) =>
@@ -140,46 +177,13 @@ const ManualEvidenceCard: React.FC<{
               >
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="Original" id={`orig-${item.id}`} />
-                  <Label htmlFor={`orig-${item.id}`}>Original (ኦርጅናል)</Label>
+                  <Label htmlFor={`orig-${item.id}`}>ኦርጅናል (Original)</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="Copy" id={`copy-${item.id}`} />
-                  <Label htmlFor={`copy-${item.id}`}>Copy (ኮፒ)</Label>
+                  <Label htmlFor={`copy-${item.id}`}>ኮፒ (Copy)</Label>
                 </div>
               </RadioGroup>
-            </div>
-            <div className="space-y-2">
-              <Label>Location of Original (ኦርጅናሉ ያለበት)</Label>
-              <Select
-                value={item.originalLocation}
-                onValueChange={(value) =>
-                  dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value } })
-                }
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select location" />
-                </SelectTrigger>
-                <SelectContent>
-                  {EVIDENCE_LOCATIONS.map((loc) => (
-                    <SelectItem key={loc} value={loc}>
-                      {loc}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              {item.originalLocation === 'ሌላ' && (
-                <Input
-                  className="mt-2"
-                  placeholder="Please specify other location"
-                  value={item.originalLocationOther || ''}
-                  onChange={(e) =>
-                    dispatch({
-                      type: 'UPDATE_EVIDENCE',
-                      payload: { id: item.id, field: 'originalLocationOther', value: e.target.value },
-                    })
-                  }
-                />
-              )}
             </div>
           </>
         )}
@@ -207,7 +211,7 @@ const ManualEvidenceCard: React.FC<{
                 </Select>
               </div>
               <div className="space-y-2 col-span-3">
-                <Label>Witness Full Name (የምስክር ሙሉ ስም)</Label>
+                <Label>የምስክር ሙሉ ስም (Witness Full Name)</Label>
                 <Input
                   placeholder="e.g., Ato Kebede Alemayehu"
                   value={item.name}
@@ -218,7 +222,7 @@ const ManualEvidenceCard: React.FC<{
               </div>
             </div>
             <div className="space-y-2">
-              <Label className="text-xs">City/Region (ከተማ/ክልል)</Label>
+              <Label className="text-xs">ከተማ/ክልል (City/Region)</Label>
               <Select
                 value={item.city}
                 onValueChange={(value) =>
@@ -239,7 +243,7 @@ const ManualEvidenceCard: React.FC<{
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label className="text-xs">Subcity (ክፍለ ከተማ)</Label>
+                <Label className="text-xs">ክፍለ ከተማ (Subcity)</Label>
                 <Select
                   value={item.subcity}
                   onValueChange={(value) =>
@@ -259,7 +263,7 @@ const ManualEvidenceCard: React.FC<{
                 </Select>
               </div>
               <div className="space-y-2">
-                <Label className="text-xs">Woreda (ወረዳ)</Label>
+                <Label className="text-xs">ወረዳ (Woreda)</Label>
                 <Input
                   placeholder="e.g., 03"
                   value={item.woreda}
@@ -270,7 +274,7 @@ const ManualEvidenceCard: React.FC<{
               </div>
             </div>
             <div className="space-y-2">
-              <Label className="text-xs">House No. (የቤት ቁጥር)</Label>
+              <Label className="text-xs">የቤት ቁጥር (House No.)</Label>
               <Input
                 placeholder="e.g., 1234"
                 value={item.houseNo}
@@ -283,7 +287,7 @@ const ManualEvidenceCard: React.FC<{
         )}
         {item.type === 'CourtOrder' && (
           <div className="space-y-2">
-            <Label>Details of Court Order (የትዕዛዙ ዝርዝር)</Label>
+            <Label>የትዕዛዙ ዝርዝር (Details of Court Order)</Label>
             <Input
               placeholder="e.g., Order for temporary injunction on property"
               value={item.description}
@@ -430,7 +434,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-primary">
             <File className="h-5 w-5" />
-            <span>Manual Documents (ሰነዶች)</span>
+            <span>ሰነዶች (Manual Documents)</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -451,7 +455,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-primary">
             <Users className="h-5 w-5" />
-            <span>Manual Witnesses (የሰው ምስክሮች)</span>
+            <span>የሰው ምስክሮች (Manual Witnesses)</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -472,7 +476,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-primary">
             <Gavel className="h-5 w-5" />
-            <span>Manual Court Orders (የትዕዛዝ)</span>
+            <span>የትዕዛዝ (Manual Court Orders)</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">

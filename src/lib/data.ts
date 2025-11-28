@@ -1,6 +1,6 @@
 
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning } from 'lucide-react';
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning, FileMinus, FilePlus, UserMinus } from 'lucide-react';
 import { differenceInDays, parseISO } from 'date-fns';
 
 
@@ -155,7 +155,7 @@ export const DOCUMENT_ISSUERS = [
   "Addis Ababa City Land Development and Management Bureau (የአ/አ ከተማ የመሬት ልማት እና ማኔጅመንት ቢሮ)",
   "Ministry of Urban and Infrastructure (የከተማ እና መሠረተ ልማት ሚኒስቴር)",
   "Ethiopian Roads Administration (የኢትዮጵያ መንገዶች አስተዳደር)",
-  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክስ ሚኒስቴር)",
+  "Ministry of Transport and Logistics (የትራንስፖርት እና ሎጂስቲክס ሚኒስቴር)",
   "Ethiopian Electric Power (የኢትዮጵያ ኤሌክትሪክ ኃይል)",
 
   // --- Social & Health ---
@@ -265,8 +265,8 @@ export const TEMPLATES: Template[] = [
         { id: 'ip_patent_infringement', label: 'የፓተንት ጥሰት (Patent Infringement)', icon: FileWarning },
         { id: 'ip_copyright_infringement', label: 'የቅጂ መብት ጥሰት (Copyright Infringement)', icon: FileWarning },
         { id: 'ip_moral_rights_violation', label: 'የሞራል መብቶች ጥሰት (Moral Rights Violation)', icon: BadgeCheck },
-        { id: 'ip_app_interlocutory_injunction', label: 'ጊዜያዊ እገዳ (Interlocutory Injunction)', icon: Shield },
-        { id: 'ip_app_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ (Seizure of Evidence)', icon: ShieldAlert },
+        { id: 'app_ip_interlocutory_injunction', label: 'ጊዜያዊ እገዳ (Interlocutory Injunction)', icon: Shield },
+        { id: 'app_ip_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ (Seizure of Evidence)', icon: ShieldAlert },
     ]
   },
   {
@@ -322,6 +322,7 @@ export const TEMPLATES: Template[] = [
       { id: 'comm_restitution_nonpayment', label: 'በንግድ መሣሪያ ላይ ክፍያ (Payment on Instrument)', icon: Banknote },
       { id: 'comm_preventive_restructuring', label: 'የዕዳ መልሶ ማዋቀር (Debt Restructuring)', icon: Shield },
       { id: 'comm_dissolution_by_court', label: 'የፍርድ ቤት መፍረስ (Judicial Dissolution)', icon: FileX2 },
+      { id: 'comm_appoint_auditors', label: 'ኦዲተር እንዲሾም መጠየቅ (Appoint Auditors)', icon: BookUser },
     ]
   },
   {
@@ -332,6 +333,8 @@ export const TEMPLATES: Template[] = [
         { id: 'crim_defence_justification_self_defence', label: 'ራስን መከላከል (Self-Defence)', icon: Shield },
         { id: 'crim_defence_excuse_insanity', label: 'የአእምሮ ሕመም (Insanity)', icon: Brain },
         { id: 'crim_defence_justification_necessity', label: 'በግዴታ (Necessity)', icon: ShieldAlert },
+        { id: 'crim_defence_mitigation_plea', label: 'የቅጣት ማቅለያ ክርክር (Penalty Mitigation)', icon: UserMinus },
+        { id: 'crim_objection_preliminary', label: 'የመጀመሪያ ደረጃ መቃወሚያ (Preliminary Objection)', icon: FileMinus },
     ]
   },
   {

@@ -189,8 +189,64 @@
         }
       ],
       "calculations": {}
+    },
+    "comm_appoint_auditors": {
+      "documentTitle": "የውጭ ኦዲተሮች እንዲሾሙ የሚጠይቅ አቤቱታ (Petition for Appointment of Auditors)",
+      "jurisdictionText": "የንግድ ሕግ ቁጥር 175 (Commercial Code Art. 175)",
+      "meta": {
+        "keywords": [
+          "auditor",
+          "appointment",
+          "shareholder",
+          "mismanagement",
+          "ኦዲተር",
+          "ሹመት",
+          "የአክሲዮን ማህበር"
+        ],
+        "jurisdictionType": "Federal High Court (Commercial Bench)"
+      },
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ቢያንስ አንድ አስረኛውን የካፒታል ድርሻ የሚወክሉ የአንድ የንግድ ድርጅት አባላት፣ የድርጅቱን ሂሳቦች እና አስተዳደር ለመመርመር በቂ ምክንያት ሲኖራቸው ፍርድ ቤቱ ኦዲተሮችን እንዲሾምላቸው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ማህበሩ ዋና መሥሪያ ቤት በሚገኝበት ቦታ ስልጣን ባለው የፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የካፒታል ድርሻ፡** አመልካቾች ቢያንስ 1/10ኛውን የድርጅቱን ካፒታል መያዝ አለባቸው።\n*   **ከባድ ምክንያት፡** ኦዲት እንዲደረግ የሚያስገድድ ከባድ ምክንያት መኖሩን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የአመልካቾችን የባለቤትነት ድርሻ የሚያሳይ ማስረጃ (MemorandumAndArticles) እና ጥርጣሬውን የሚደግፍ ማንኛውም ማስረጃ።",
+      "partyTitles": {
+        "applicant": "አመልካች (ባለአክሲዮኖች) (Petitioners (Shareholders))",
+        "respondent": "ተጠሪ (የንግድ ማህበሩ) (Respondent (The Company))"
+      },
+      "facts": [
+        {
+          "id": "comm_fact_shareholder_standing",
+          "label": "የአመልካቾች ሁኔታ (Petitioner's Standing)",
+          "legalText": "አመልካቾች በጋራ ቢያንስ አንድ አስረኛውን የተጠሪ ድርጅት ካፒታል ይይዛሉ። (The Petitioners collectively hold at least one-tenth of the capital of the Respondent company.)",
+          "citation": "Commercial Code Art. 175(1)",
+          "autoEvidence": [
+            "MemorandumAndArticles"
+          ]
+        },
+        {
+          "id": "comm_fact_serious_grounds_suspicion",
+          "label": "የምርመራ ምክንያቶች (Grounds for Investigation)",
+          "legalText": "የድርጅቱ አስተዳዳሪዎች ወይም ተቆጣጣሪዎች በንግድ ሥራ አመራር ላይ ከባድ ስህተት እንደሠሩ ወይም ሕግ እንደጣሱ የሚጠቁሙ ከባድ ምክንያቶች አሉ። (There are serious grounds for suspecting that the managers or directors of the company have committed grave errors in management or have violated the law.)",
+          "citation": "Commercial Code Art. 175(1)",
+          "autoEvidence": [
+            "ShareholdersResolution"
+          ]
+        },
+        {
+          "id": "comm_fact_internal_request_failed",
+          "label": "የምርመራ ምክንያቶች (Grounds for Investigation)",
+          "legalText": "አመልካቾች ለጠቅላላ ጉባኤው ኦዲተሮች እንዲሾሙ ጠይቀው ነበር ነገር ግን ጥያቄው ውድቅ ተደርጓል ወይም ምላሽ አላገኘም። (The petitioners requested the appointment of auditors to the general meeting, but the request was rejected or ignored.)",
+          "citation": "",
+          "autoEvidence": []
+        }
+      ],
+      "reliefs": [
+        {
+          "id": "comm_relief_appoint_auditor",
+          "text": "የድርጅቱን የሂሳብ መዝገቦች እና አስተዳደር የሚመረምሩ አንድ ወይም ከዚያ በላይ ኦዲተሮች እንዲሾሙ። (To order the appointment of one or more auditors to investigate the company's books and management.)",
+          "isDefault": true,
+          "isDynamic": false,
+          "isCustom": false
+        }
+      ],
+      "calculations": {}
     }
   }
 }
-
-    

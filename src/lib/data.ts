@@ -96,7 +96,7 @@ export const COURT_HIERARCHY = {
 };
 
 export const REGIONS_AND_CITIES = [
-  "የአዲስ አበባ ከተማ አስተዳደር",
+  "አዲስ አበባ",
   "የአፋር ክልል",
   "የአማራ ክልል",
   "የቤኒሻንጉል ጉሙዝ ክልል",

@@ -33,7 +33,7 @@ const formatPartyList = (parties: Party[]) => {
             return (
               <li key={index} className="mb-2">
                  <div className="grid grid-cols-1 text-left">
-                    <span className="font-bold text-base whitespace-nowrap">{stripEnglish(party.honorific)} {party.name}</span>
+                    <span className="font-bold text-base whitespace-nowrap">{party.honorific} {party.name}</span>
                     <div></div>
                 </div>
                 <div className="text-sm pl-6">
@@ -111,7 +111,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         documentEvidence.push({ description: fullDescription });
 
     } else if (e.type === 'Witness') {
-        const label = `${stripEnglish(e.honorific)} ${e.name}` || 'Unnamed Witness';
+        const label = `${e.honorific} ${e.name}` || 'Unnamed Witness';
         let subcity = e.subcity === 'ሌላ' ? e.subcityOther : e.subcity;
         if(subcity && subcity !== 'ሌላ') {
             subcity += ' ክፍለ ከተማ';
@@ -121,7 +121,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         const details = `አድራሻ: ${e.city}, ${subcity}${woreda}${houseNo}`;
         witnessEvidence.push({ label, details });
     } else if (e.type === 'CourtOrder') {
-        const label = e.description || stripEnglish(e.type);
+        const label = e.description || e.type;
         const details = e.description;
         courtOrderEvidence.push({ label, details });
     }
@@ -138,7 +138,7 @@ export default function PageTwo({ state }: PageTwoProps) {
     <div className="a4-page">
        <div className="header-block">
         <div className="text-right mb-1">
-          <div>
+          <div className="mt-2">
             <span className="green-box">ቀን: {meta.date || '___________'}</span>
           </div>
           <div className="mt-2">
@@ -148,13 +148,13 @@ export default function PageTwo({ state }: PageTwoProps) {
           </div>
         </div>
         <div>
-          <span className="black-box text-lg">ለ: {stripEnglish(meta.courtLevel) || '___________'}</span>
+          <span className="black-box text-lg">ለ: {meta.courtLevel || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="green-box">{stripEnglish(meta.bench) || '___________'}</span>
+          <span className="green-box">{meta.bench || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="black-box">{stripEnglish(meta.city) || '___________'}</span>
+          <span className="black-box">{meta.city || '___________'}</span>
         </div>
       </div>
 
@@ -198,9 +198,9 @@ export default function PageTwo({ state }: PageTwoProps) {
             <ol className="ml-8 list-decimal" style={{ lineHeight: 1.8 }}>
               {witnessEvidence.map((e, i) => (
                 <li key={`wit-${i}`} className="mb-3 text-justify">
-                  <strong>{stripEnglish(e.label)}</strong>
+                  <strong>{e.label}</strong>
                   <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">
-                    {stripEnglish(e.details)}
+                    {e.details}
                   </p>
                 </li>
               ))}
@@ -215,9 +215,9 @@ export default function PageTwo({ state }: PageTwoProps) {
               {courtOrderEvidence.map((e, i) => (
                 <li key={`co-${i}`} className="mb-3 text-justify">
                   {e.details ? (
-                    <span dangerouslySetInnerHTML={{ __html: stripEnglish(e.details) }} />
+                    <span dangerouslySetInnerHTML={{ __html: e.details }} />
                   ) : (
-                    <strong>{stripEnglish(e.label)}</strong>
+                    <strong>{e.label}</strong>
                   )}
                 </li>
               ))}
@@ -245,3 +245,4 @@ export default function PageTwo({ state }: PageTwoProps) {
     </div>
   );
 }
+

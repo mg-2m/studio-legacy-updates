@@ -102,7 +102,7 @@ export default function PageOne({ state }: PageOneProps) {
             return (
               <li key={index} className="mb-2">
                 <div className="grid grid-cols-[auto_1fr] text-left">
-                    <span className="font-bold text-base whitespace-nowrap">{stripEnglish(party.honorific)} {party.name}</span>
+                    <span className="font-bold text-base whitespace-nowrap">{party.honorific} {party.name}</span>
                     <div></div>
                 </div>
                 <div className="text-sm pl-6">
@@ -122,23 +122,23 @@ export default function PageOne({ state }: PageOneProps) {
     <div className="a4-page">
       <div className="header-block">
         <div className="text-right mb-2">
-            <div className="mt-2">
-                <span className="green-box">ቀን: {meta.date || '___________'}</span>
-            </div>
-            <div className="mt-2">
-                <div className="inline-block border-2 border-black px-2 py-0.5 font-bold">
-                መዝገብ ቁጥር: {meta.fileNumber || '___________'}
-                </div>
-            </div>
+          <div className="mt-2">
+              <span className="green-box">ቀን: {meta.date || '___________'}</span>
+          </div>
+          <div className="mt-2">
+              <div className="inline-block border-2 border-black px-2 py-0.5 font-bold">
+              መዝገብ ቁጥር: {meta.fileNumber || '___________'}
+              </div>
+          </div>
         </div>
         <div>
-          <span className="black-box text-lg">ለ: {stripEnglish(meta.courtLevel) || '___________'}</span>
+          <span className="black-box text-lg">ለ: {meta.courtLevel || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="green-box">{stripEnglish(meta.bench) || '___________'}</span>
+          <span className="green-box">{meta.bench || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="black-box">{stripEnglish(meta.city) || '___________'}</span>
+          <span className="black-box">{meta.city || '___________'}</span>
         </div>
       </div>
 
@@ -169,9 +169,9 @@ export default function PageOne({ state }: PageOneProps) {
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ:</h4>
         <ul className="list-none p-0 leading-relaxed">
-          <li>➤ ይህ {stripEnglish(meta.courtLevel)} በ {jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
+          <li>➤ ይህ {meta.courtLevel} በ {jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ አመልካች ጉዳዩን የምከታተለው፡ {repMap[meta.representation]}</li>
-          <li>➤ መጥሪያውን፡ {summonsMap[meta.summonsDelivery]}</li>
+          <li>➤ {summonsMap[meta.summonsDelivery]}</li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
         </ul>
       </div>

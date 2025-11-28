@@ -76,43 +76,42 @@ export default function PageTwo({ state }: PageTwoProps) {
 
   // Process Manual Evidence
   evidence.forEach((e: ManualEvidence) => {
-    let details = '';
-    let label = '';
-
     if (e.type === 'Document') {
-        label = e.description || stripEnglish(e.type);
+        const label = e.description || stripEnglish(e.type);
         const issuer = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
         
-        const issueDate = e.issueDate || 'N/A';
-        
         let detailsParts = [];
-        if (e.description) detailsParts.push(e.description);
+        
+        const typePrefix = e.documentType === 'Original' ? 'ኦርጅናሉ' : (e.documentType === 'Copy' ? 'ኮፒው' : '');
+
+        if (e.originalLocation) {
+            const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
+            if (typePrefix) {
+                detailsParts.push(`${typePrefix} ${location} የሚገኝ`);
+            }
+        }
+        
         if (e.refNumber) detailsParts.push(`ቁጥር: ${e.refNumber}`);
         if (e.issueDate) detailsParts.push(`የተሰጠበት ቀን: ${e.issueDate}`);
         if (issuer) detailsParts.push(`አውጪ: ${issuer}`);
         if (e.pageCount) detailsParts.push(`ገጽ: ${e.pageCount}`);
 
-        if (e.originalLocation) {
-            const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
-            detailsParts.push(`ኦርጅናሉ ${location} የሚገኝ`);
-        }
-        
-        details = detailsParts.join(', ');
+        const details = detailsParts.join(', ');
         documentEvidence.push({ label, details });
 
     } else if (e.type === 'Witness') {
-        label = `${stripEnglish(e.honorific)} ${e.name}` || 'Unnamed Witness';
+        const label = `${stripEnglish(e.honorific)} ${e.name}` || 'Unnamed Witness';
         let subcity = e.subcity === 'ሌላ' ? e.subcityOther : e.subcity;
         if(subcity && subcity !== 'ሌላ') {
             subcity += ' ክፍለ ከተማ';
         }
         const woreda = e.woreda ? `, ወረዳ ${e.woreda}` : '';
         const houseNo = e.houseNo ? `, የቤት ቁጥር ${e.houseNo}` : '';
-        details = `አድራሻ: ${e.city}, ${subcity}${woreda}${houseNo}`;
+        const details = `አድራሻ: ${e.city}, ${subcity}${woreda}${houseNo}`;
         witnessEvidence.push({ label, details });
     } else if (e.type === 'CourtOrder') {
-        label = e.description || stripEnglish(e.type);
-        details = e.description;
+        const label = e.description || stripEnglish(e.type);
+        const details = e.description;
         courtOrderEvidence.push({ label, details });
     }
   });
@@ -173,9 +172,7 @@ export default function PageTwo({ state }: PageTwoProps) {
               {documentEvidence.map((e, i) => (
                 <li key={`doc-${i}`} className="mb-3 text-justify">
                   <strong>{stripEnglish(e.label)}</strong>
-                  <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">
-                    {stripEnglish(e.details)}
-                  </p>
+                  {e.details && <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">{stripEnglish(e.details)}</p>}
                 </li>
               ))}
             </ol>
@@ -205,9 +202,7 @@ export default function PageTwo({ state }: PageTwoProps) {
               {courtOrderEvidence.map((e, i) => (
                 <li key={`co-${i}`} className="mb-3 text-justify">
                   <strong>{stripEnglish(e.label)}</strong>
-                  <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">
-                    {stripEnglish(e.details)}
-                  </p>
+                  {e.details && <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">{stripEnglish(e.details)}</p>}
                 </li>
               ))}
             </ol>
@@ -216,14 +211,14 @@ export default function PageTwo({ state }: PageTwoProps) {
       </div>
 
       <div className="mt-12 pt-5 border-t-2 border-black">
-        <div className="black-box mb-4">{stripEnglish("ማረጋገጫ")}</div>
+        <div className="black-box mb-4">ማረጋገጫ</div>
         <p className="text-justify leading-relaxed">
           ከላይ የተዘረዘረው ማስረጃ ሁሉ እውነት መሆኑን ተምሪ ነኝ። መረጃዎቹ በፍርድ ቤት ስሙ ውስጥ ስሚ በተጠየቀ ጊዜ ዋናውን ማስረጃ ቀርቦ አረጋግጣለሁ።
         </p>
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>
-            <strong className="text-sm">{stripEnglish("የአመልካች ፊርማ")}</strong>
+            <strong className="text-sm">የአመልካች ፊርማ</strong>
           </div>
         </div>
       </div>

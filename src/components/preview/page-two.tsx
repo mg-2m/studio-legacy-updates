@@ -1,7 +1,7 @@
 
 "use client";
 
-import type { AppState, ManualEvidence } from '@/lib/types';
+import type { AppState, ManualEvidence, Party } from '@/lib/types';
 import { EVIDENCE_REGISTRY } from '@/lib/data';
 
 interface PageTwoProps {
@@ -16,8 +16,47 @@ const stripEnglish = (text: string) => {
 }
 
 
+const formatPartyList = (parties: Party[]) => {
+    if (parties.length === 0) {
+      return <div className="font-bold text-base">________________</div>;
+    }
+    return (
+      <ol className="list-decimal list-inside">
+        {parties.map((party, index) => {
+            let subcity = party.address.subcity === 'ሌላ' ? party.address.subcityOther : party.address.subcity;
+            if(subcity && subcity !== 'ሌላ') {
+                subcity += ' ክፍለ ከተማ';
+            }
+            const woreda = party.address.woreda ? `, ወረዳ ${party.address.woreda}` : '';
+
+            return (
+              <li key={index} className="mb-2">
+                 <div className="grid grid-cols-[auto_1fr] text-left">
+                    <span className="font-bold text-base whitespace-nowrap">{stripEnglish(party.honorific)} {party.name}</span>
+                    <div></div>
+                </div>
+                <div className="text-sm pl-6">
+                  አድራሻ፡ {party.address.city}, {subcity}{woreda}
+                </div>
+              </li>
+            )
+        })}
+      </ol>
+    );
+  };
+
+
 export default function PageTwo({ state }: PageTwoProps) {
-  const { metadata: meta, smartEvidence, evidence } = state;
+  const { metadata: meta, applicants, respondents, partyTitles, smartEvidence, evidence } = state;
+
+  const getPluralizedTitle = (title: string, count: number): string => {
+    if (count <= 1) return stripEnglish(title).toUpperCase();
+    return `${stripEnglish(title)}ዎች`.toUpperCase();
+  };
+
+  const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
+  const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
+
 
   const allEvidence: { label: string; details: string; type: string }[] = [];
 
@@ -28,7 +67,7 @@ export default function PageTwo({ state }: PageTwoProps) {
     if (registryItem) {
       allEvidence.push({
         label: registryItem.label,
-        details: smartEv.credentialId ? `${registryItem.credentialLabel}: ${smartEv.credentialId}` : 'No details provided',
+        details: smartEv.credentialId ? `${stripEnglish(registryItem.credentialLabel)}: ${smartEv.credentialId}` : 'No details provided',
         type: 'Auto-Linked'
       });
     }
@@ -44,16 +83,16 @@ export default function PageTwo({ state }: PageTwoProps) {
         const issuer = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
         const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
         const issueDate = e.issueDate || 'N/A';
-        details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issued: ${issueDate}, Issuer: ${issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${location || 'N/A'})`;
+        details = `${e.description} (ቁጥር: ${e.refNumber || 'N/A'}, የተሰጠበት ቀን: ${issueDate}, አውጪ: ${issuer || 'N/A'}, ገጽ: ${e.pageCount || 'N/A'}, አይነት: ${e.documentType}, ኦርጅናሉ ያለበት: ${location || 'N/A'})`;
     } else if (e.type === 'Witness') {
-        label = `${e.honorific} ${e.name}` || 'Unnamed Witness';
+        label = `${stripEnglish(e.honorific)} ${e.name}` || 'Unnamed Witness';
         let subcity = e.subcity === 'ሌላ' ? e.subcityOther : e.subcity;
         if(subcity && subcity !== 'ሌላ') {
             subcity += ' ክፍለ ከተማ';
         }
         const woreda = e.woreda ? `, ወረዳ ${e.woreda}` : '';
         const houseNo = e.houseNo ? `, የቤት ቁጥር ${e.houseNo}` : '';
-        details = `Address: ${e.city}, ${subcity}${woreda}${houseNo}`;
+        details = `አድራሻ: ${e.city}, ${subcity}${woreda}${houseNo}`;
     } else if (e.type === 'CourtOrder') {
         label = e.description || e.type;
         details = e.description;
@@ -74,15 +113,44 @@ export default function PageTwo({ state }: PageTwoProps) {
 
   return (
     <div className="a4-page">
-      <div className="border-b-2 border-black pb-2 mb-5">
-        <div className="text-sm font-bold mb-1">{stripEnglish(meta.courtLevel)}</div>
-        <div className="text-xs">File No: {meta.fileNumber} | Date: {meta.date}</div>
+       <div className="header-block">
+        <div className="text-right mb-1">
+          <span className="green-box">ቀን: {meta.date || '___________'}</span>
+        </div>
+        <div>
+          <span className="black-box text-lg">ለ: {stripEnglish(meta.courtLevel) || '___________'}</span>
+        </div>
+        <div className="mt-1">
+          <span className="green-box">{stripEnglish(meta.bench) || '___________'}</span>
+        </div>
+        <div className="mt-1">
+          <span className="black-box">{stripEnglish(meta.city) || '___________'}</span>
+        </div>
+        <div className="mt-2 inline-block border-2 border-black px-2 py-0.5 font-bold">
+          መዝገብ ቁጥር: {meta.fileNumber || '___________'}
+        </div>
       </div>
 
-      <div style={{ borderTop: '4px double black' }} className="my-5"></div>
+      <div className="mb-5">
+        <div className="grid grid-cols-3 items-start">
+            <div className="purple-box flex-shrink-0 col-span-1">{applicantTitle}</div>
+            <div className="text-left col-span-2">
+                {formatPartyList(applicants)}
+            </div>
+        </div>
+      </div>
 
-      <div className="text-center mb-5">
-        <div className="black-box text-lg">የማስረጃ ዝርዝር</div>
+      <div className="mb-5">
+        <div className="grid grid-cols-3 items-start">
+            <div className="purple-box flex-shrink-0 col-span-1">{respondentTitle}</div>
+            <div className="text-left col-span-2">
+                {formatPartyList(respondents)}
+            </div>
+        </div>
+      </div>
+
+      <div className="text-center my-8">
+        <h2 className="font-bold italic underline">በ/ፍ/ብ/ስ/ስ/ህ/ቁ፦222/223 መሰረት ከከሳሽ የቀረበ የማስረጃ ዝርዝር</h2>
       </div>
 
       <ol className="ml-5 list-decimal" style={{ lineHeight: 1.8 }}>

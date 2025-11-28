@@ -101,7 +101,10 @@ export default function PageOne({ state }: PageOneProps) {
 
             return (
               <li key={index} className="mb-2">
-                <span className="font-bold text-base">{stripEnglish(party.honorific)} {party.name}</span>
+                <div className="grid grid-cols-[auto_1fr] text-left">
+                    <span className="font-bold text-base whitespace-nowrap">{stripEnglish(party.honorific)} {party.name}</span>
+                    <div></div>
+                </div>
                 <div className="text-sm pl-6">
                   አድራሻ፡ {party.address.city}, {subcity}{woreda}
                 </div>
@@ -206,6 +209,7 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
+
 
 
 

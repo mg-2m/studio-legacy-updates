@@ -121,8 +121,8 @@ export const AA_SUBCITIES = [
 export const HONORIFICS = ["አቶ", "ወ/ሮ", "ወ/ሪት"];
 
 export const EVIDENCE_LOCATIONS = [
-  "ከአመልካች ጋር",
-  "ከተከሳሽ ጋር",
+  "በአመልካች እጅ",
+  "በተከሳሽ እጅ",
   "ፍርድ ቤት ውስጥ",
   "ጠፍቷል",
   "የማይመለከተው",
@@ -172,12 +172,18 @@ export const DOCUMENT_ISSUERS = [
   "ሌላ",
 ];
 
+const stripEnglish = (text: string) => {
+    if (!text) return '';
+    const match = text.match(/^(.*?)\s*\(/);
+    return match ? match[1].trim() : text;
+}
+
 export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.entries(allEntities).reduce((acc: EvidenceRegistry, [key, entity]: [string, any]) => {
     acc[key] = {
         id: key,
-        label: entity.title,
+        label: stripEnglish(entity.title),
         type: 'Document', // Defaulting to document, can be refined
-        credentialLabel: entity.credentialLabel || `${entity.title} Reference`,
+        credentialLabel: entity.credentialLabel || `${stripEnglish(entity.title)} Reference`,
         credentialPlaceholder: entity.credentialPlaceholder || `e.g., ${key.substring(0, 3).toUpperCase()}-123`
     };
     return acc;
@@ -358,7 +364,6 @@ export const TEMPLATES: Template[] = [
 const processFacts = (facts: any): Fact[] => {
     if (!facts) return [];
     
-    // This is the NEW, ROBUST logic.
     // If it's the old nested structure, flatten it and add labels.
     if (typeof facts === 'object' && !Array.isArray(facts)) {
          return Object.values(facts).flatMap((group: any) => 
@@ -370,7 +375,6 @@ const processFacts = (facts: any): Fact[] => {
     }
 
     // If it's ALREADY a flat array (new structure), ensure every fact has a label.
-    // This was the missing piece.
     if (Array.isArray(facts)) {
         let lastLabel = 'Facts'; // Default label if the first fact has no label
         return (facts as Fact[]).map(fact => {
@@ -386,18 +390,38 @@ const processFacts = (facts: any): Fact[] => {
     return [];
 };
 
+
 export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(allTemplates).reduce((acc, [key, value] : [string, any]) => {
   if (!value) {
     console.error(`Template data for key "${key}" is missing or invalid. Skipping.`);
     return acc;
   }
   
-  // Create a deep copy to avoid mutating the original `allTemplates` object
   const newTemplateData = JSON.parse(JSON.stringify(value));
-
-  // Process facts for the copied data
-  newTemplateData.facts = processFacts(newTemplateData.facts);
   
+  newTemplateData.facts = processFacts(newTemplateData.facts);
+
+  newTemplateData.documentTitle = stripEnglish(newTemplateData.documentTitle);
+  newTemplateData.jurisdictionText = stripEnglish(newTemplateData.jurisdictionText);
+  
+  if (newTemplateData.partyTitles) {
+      newTemplateData.partyTitles.applicant = stripEnglish(newTemplateData.partyTitles.applicant);
+      newTemplateData.partyTitles.respondent = stripEnglish(newTemplateData.partyTitles.respondent);
+  }
+
+  if (newTemplateData.facts) {
+    newTemplateData.facts.forEach((fact: Fact) => {
+      fact.legalText = stripEnglish(fact.legalText);
+      fact.label = stripEnglish(fact.label);
+    });
+  }
+
+  if (newTemplateData.reliefs) {
+    newTemplateData.reliefs.forEach((relief: Relief) => {
+      relief.text = stripEnglish(relief.text);
+    });
+  }
+
   acc[key] = newTemplateData;
   return acc;
 }, {} as { [key: string]: TemplateData });
@@ -454,6 +478,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: initialTemplateId,
   selectedSubTemplate: initialSubTemplateId,
 };
-
-
-

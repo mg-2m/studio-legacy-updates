@@ -8,6 +8,14 @@ interface PageTwoProps {
   state: AppState;
 }
 
+// Function to strip english parenthetical text
+const stripEnglish = (text: string) => {
+    if (!text) return '';
+    const match = text.match(/^(.*?)\s*\(/);
+    return match ? match[1].trim() : text;
+}
+
+
 export default function PageTwo({ state }: PageTwoProps) {
   const { metadata: meta, smartEvidence, evidence } = state;
 
@@ -33,8 +41,8 @@ export default function PageTwo({ state }: PageTwoProps) {
 
     if (e.type === 'Document') {
         label = e.description || e.type;
-        const issuer = e.issuer === 'Other (ሌላ)' ? e.issuerOther : e.issuer;
-        const location = e.originalLocation === 'Other (ሌላ)' ? e.originalLocationOther : e.originalLocation;
+        const issuer = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
+        const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
         const issueDate = e.issueDate || 'N/A';
         details = `${e.description} (Ref: ${e.refNumber || 'N/A'}, Issued: ${issueDate}, Issuer: ${issuer || 'N/A'}, Pages: ${e.pageCount || 'N/A'}, Type: ${e.documentType}, Location: ${location || 'N/A'})`;
     } else if (e.type === 'Witness') {
@@ -54,7 +62,7 @@ export default function PageTwo({ state }: PageTwoProps) {
     allEvidence.push({
       label: label,
       details: details,
-      type: `Manual (${e.type})`
+      type: e.type
     });
   });
 
@@ -67,21 +75,20 @@ export default function PageTwo({ state }: PageTwoProps) {
   return (
     <div className="a4-page">
       <div className="border-b-2 border-black pb-2 mb-5">
-        <div className="text-sm font-bold mb-1">{meta.courtLevel}</div>
+        <div className="text-sm font-bold mb-1">{stripEnglish(meta.courtLevel)}</div>
         <div className="text-xs">File No: {meta.fileNumber} | Date: {meta.date}</div>
       </div>
 
       <div style={{ borderTop: '4px double black' }} className="my-5"></div>
 
       <div className="text-center mb-5">
-        <div className="black-box text-lg">የማስረጃ ዝርዝር (EVIDENCE LIST)</div>
+        <div className="black-box text-lg">የማስረጃ ዝርዝር</div>
       </div>
 
       <ol className="ml-5 list-decimal" style={{ lineHeight: 1.8 }}>
         {allEvidence.map((e, i) => (
           <li key={i} className="mb-3 text-justify">
             <strong>{e.label}</strong>
-            <span className="text-xs text-gray-500 ml-2 font-sans italic">[{e.type}]</span>
             <p className="text-sm text-gray-800 pl-4 border-l-2 border-gray-200 ml-2 mt-1">
               {e.details}
             </p>
@@ -90,14 +97,14 @@ export default function PageTwo({ state }: PageTwoProps) {
       </ol>
 
       <div className="mt-12 pt-5 border-t-2 border-black">
-        <div className="black-box mb-4">ማረጋገጫ (VERIFICATION)</div>
+        <div className="black-box mb-4">ማረጋገጫ</div>
         <p className="text-justify leading-relaxed">
           ከላይ የተዘረዘረው ማስረጃ ሁሉ እውነት መሆኑን ተምሪ ነኝ። መረጃዎቹ በፍርድ ቤት ስሙ ውስጥ ስሚ በተጠየቀ ጊዜ ዋናውን ማስረጃ ቀርቦ አረጋግጣለሁ።
         </p>
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>
-            <strong className="text-sm">የአመልካች ፊርማ (Applicant's Signature)</strong>
+            <strong className="text-sm">የአመልካች ፊርማ</strong>
           </div>
         </div>
       </div>

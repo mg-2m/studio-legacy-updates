@@ -20,18 +20,15 @@ interface PartyFormProps {
   role: 'applicants' | 'respondents';
   party: Party;
   dispatch: React.Dispatch<any>;
+  title: string;
 }
 
-export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
+export default function PartyForm({ role, party, dispatch, title }: PartyFormProps) {
     return (
         <div className="mb-4">
-          <div className="flex items-center justify-end">
-            <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_PARTY', payload: { role, id: party.id }})}>
-              <X className="h-4 w-4" />
-            </Button>
-          </div>
           <div className="space-y-4 p-0">
-            <div className="grid grid-cols-[auto_150px_auto_1fr] items-center gap-x-4">
+            <div className="grid grid-cols-[auto_auto_100px_auto_1fr_auto] items-center gap-x-4">
+                <Label className="font-semibold">{title}</Label>
                 <Label className="whitespace-nowrap">ማዕረግ</Label>
                  <Select value={party.honorific} onValueChange={(value) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'honorific', value } })}>
                     <SelectTrigger><SelectValue /></SelectTrigger>
@@ -39,6 +36,9 @@ export default function PartyForm({ role, party, dispatch }: PartyFormProps) {
                  </Select>
                 <Label className="whitespace-nowrap">ሙሉ ስም</Label>
                 <Input value={party.name} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'name', value: e.target.value } })} />
+                <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_PARTY', payload: { role, id: party.id }})}>
+                    <X className="h-4 w-4" />
+                </Button>
             </div>
 
             <div className="space-y-3 pt-2">

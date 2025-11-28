@@ -33,7 +33,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
     <div className="w-full space-y-4">
       <Card className="bg-background">
         <CardHeader>
-            <CardTitle className="text-base text-primary">የፍ/ቤት እና የክስ ራስጌ (Court & Header)</CardTitle>
+            <CardTitle className="text-base text-primary">የፍ/ቤት እና የክስ ራስጌ</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
            <div className="grid grid-cols-2 gap-8">
@@ -117,29 +117,22 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       </Card>
       
       <Card className="bg-background">
-         <CardHeader>
-            <CardTitle className="text-base text-primary">{partyTitles.applicant}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} />)}
+        <CardContent className="p-4 space-y-2">
+          {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} title={partyTitles.applicant} />)}
           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
-            <Plus className="mr-2 h-4 w-4" /> Add Applicant
+            <Plus className="mr-2 h-4 w-4" /> {partyTitles.applicant} ጨምር
           </Button>
         </CardContent>
       </Card>
       
       <Card className="bg-background">
-        <CardHeader>
-            <CardTitle className="text-base text-primary">{partyTitles.respondent}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} />)}
+        <CardContent className="p-4 space-y-2">
+          {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} title={partyTitles.respondent}/>)}
            <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>
-            <Plus className="mr-2 h-4 w-4" /> Add Respondent
+            <Plus className="mr-2 h-4 w-4" /> {partyTitles.respondent} ጨምር
           </Button>
         </CardContent>
       </Card>
     </div>
   );
 }
-

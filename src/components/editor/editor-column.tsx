@@ -12,6 +12,7 @@ import { ScrollArea } from '../ui/scroll-area';
 import { TEMPLATE_DATA, TEMPLATES } from '@/lib/data';
 import { ChevronRight, Lightbulb } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
+import { SidebarTrigger } from '../ui/sidebar';
 
 // A simple markdown-to-React component
 const SimpleMarkdown: React.FC<{ content: string }> = ({ content }) => {
@@ -54,13 +55,14 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
     <section 
       className="no-print relative flex flex-col bg-card border-r w-full h-full"
     >
-      <div className="flex h-14 items-center p-2 border-b">
+      <div className="flex h-14 items-center gap-2 p-2 border-b">
+        <SidebarTrigger />
         {selectedTemplate && selectedSubTemplate && Icon && (
           <div className="ml-2 flex items-center gap-2 text-primary font-semibold">
             <Icon className="size-5" />
-            <span className="text-base text-muted-foreground">{selectedTemplate.label.split('(')[0]}</span>
+            <span className="text-base text-muted-foreground">{selectedTemplate.label}</span>
             <ChevronRight className="size-4 text-muted-foreground" />
-            <h1 className="text-base">{selectedSubTemplate.label.split('(')[0]}</h1>
+            <h1 className="text-base">{selectedSubTemplate.label}</h1>
           </div>
         )}
       </div>
@@ -80,7 +82,7 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
             {templateData?.templateDescription && (
               <Alert variant="default" className="bg-yellow-50 border-yellow-200 text-yellow-900 dark:bg-yellow-950/50 dark:border-yellow-800 dark:text-yellow-300">
                 <Lightbulb className="h-5 w-5 !text-yellow-500" />
-                <AlertTitle className="font-bold">Template Guidance (የአብነት መመሪያ)</AlertTitle>
+                <AlertTitle className="font-bold">የአብነት መመሪያ</AlertTitle>
                 <AlertDescription>
                   <SimpleMarkdown content={templateData.templateDescription} />
                 </AlertDescription>

@@ -14,7 +14,7 @@ interface PreviewColumnProps {
 
 export default function PreviewColumn({ state }: PreviewColumnProps) {
   return (
-    <section id="preview-col" className="flex-1 bg-muted/50 flex flex-col overflow-hidden">
+    <section id="preview-col" className="flex flex-1 flex-col bg-muted/50 overflow-hidden">
       <div className="no-print sticky top-0 z-10 flex h-14 items-center gap-2 border-b bg-background/80 p-2 backdrop-blur-sm">
         <SidebarTrigger />
         <EditorSidebarTrigger />

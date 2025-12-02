@@ -27,7 +27,8 @@ interface EvidenceTabProps {
 const ManualEvidenceCard: React.FC<{
   item: ManualEvidence;
   dispatch: React.Dispatch<any>;
-}> = ({ item, dispatch }) => {
+  isFirstItem?: boolean;
+}> = ({ item, dispatch, isFirstItem = false }) => {
 
   return (
     <Card key={item.id} className="bg-muted/30">
@@ -36,25 +37,27 @@ const ManualEvidenceCard: React.FC<{
             {item.type === 'Document' && <File className="h-5 w-5 text-primary" />}
             {item.type === 'Witness' && <Users className="h-5 w-5 text-primary" />}
             {item.type === 'CourtOrder' && <Gavel className="h-5 w-5 text-primary" />}
-            <CardTitle className="text-base">
+             <CardTitle className="text-base">
               {item.type === 'Document' && 'የሰነድ ማስረጃ'}
               {item.type === 'Witness' && 'የሰው ምስክር'}
               {item.type === 'CourtOrder' && 'የትዕዛዝ'}
             </CardTitle>
         </div>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-7 w-7 text-destructive"
-          onClick={() => dispatch({ type: 'REMOVE_EVIDENCE', payload: { id: item.id } })}
-        >
-          <X className="h-4 w-4" />
-        </Button>
+        {!isFirstItem && (
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-7 w-7 text-destructive"
+            onClick={() => dispatch({ type: 'REMOVE_EVIDENCE', payload: { id: item.id } })}
+          >
+            <X className="h-4 w-4" />
+          </Button>
+        )}
       </CardHeader>
       <CardContent className="space-y-4 px-4 pb-4">
         {item.type === 'Document' && (
           <div className="space-y-4">
-             <div className="grid grid-cols-[auto_1fr_auto_1fr] items-center gap-x-4">
+            <div className="grid grid-cols-[auto_1fr_auto_1.5fr] items-center gap-x-4">
                 <Label>ገለጻ</Label>
                 <Input
                   className="h-9"
@@ -364,6 +367,71 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 </CardContent>
               </Card>
             ))}
+
+            {manualDocuments.length === 0 && (
+                <ManualEvidenceCard
+                    item={{
+                        id: 'temp_doc', type: 'Document', description: '', issuer: '', refNumber: '',
+                        issueDate: '', pageCount: '', documentType: 'Copy', originalLocation: '', isManual: true
+                    }}
+                    dispatch={dispatch}
+                    isFirstItem={true}
+                />
+            )}
+            {manualDocuments.map((item) => (
+              <ManualEvidenceCard key={item.id} item={item} dispatch={dispatch} />
+            ))}
+             <Button
+                variant="outline"
+                className="w-full border-dashed"
+                onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Document' } })}
+              >
+                <Plus className="mr-2 h-4 w-4" /> Add Another Document
+              </Button>
+            
+            <Separator />
+            
+            {manualWitnesses.length === 0 && (
+                 <ManualEvidenceCard
+                    item={{
+                        id: 'temp_witness', type: 'Witness', honorific: HONORIFICS[0], name: '', city: REGIONS_AND_CITIES[0],
+                        subcity: AA_SUBCITIES[0], woreda: '', houseNo: '', isManual: true
+                    }}
+                    dispatch={dispatch}
+                    isFirstItem={true}
+                />
+            )}
+            {manualWitnesses.map((item) => (
+              <ManualEvidenceCard key={item.id} item={item} dispatch={dispatch} />
+            ))}
+             <Button
+                variant="outline"
+                className="w-full border-dashed"
+                onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Witness' } })}
+              >
+                <Plus className="mr-2 h-4 w-4" /> Add Another Witness
+              </Button>
+            
+            <Separator />
+
+            {manualCourtOrders.length === 0 && (
+                <ManualEvidenceCard
+                    item={{ id: 'temp_order', type: 'CourtOrder', description: '', isManual: true }}
+                    dispatch={dispatch}
+                    isFirstItem={true}
+                />
+            )}
+            {manualCourtOrders.map((item) => (
+              <ManualEvidenceCard key={item.id} item={item} dispatch={dispatch} />
+            ))}
+             <Button
+                variant="outline"
+                className="w-full border-dashed"
+                onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'CourtOrder' } })}
+              >
+                <Plus className="mr-2 h-4 w-4" /> Add Another Court Order
+              </Button>
+
           </div>
 
           {activeUserAddedEvidence.length === 0 && aiSuggestedEvidence.length === 0 && evidence.length === 0 && (
@@ -371,72 +439,6 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
           )}
         </CardContent>
       </Card>
-
-      {/* Manual Evidence Sections */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-primary">
-            <File className="h-5 w-5" />
-            <span>ሰነዶች</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {manualDocuments.map((item) => (
-            <ManualEvidenceCard key={item.id} item={item} dispatch={dispatch} />
-          ))}
-          <Button
-            variant="outline"
-            className="w-full border-dashed"
-            onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Document' } })}
-          >
-            <Plus className="mr-2 h-4 w-4" /> Add Document
-          </Button>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-primary">
-            <Users className="h-5 w-5" />
-            <span>የሰው ምስክሮች</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {manualWitnesses.map((item) => (
-            <ManualEvidenceCard key={item.id} item={item} dispatch={dispatch} />
-          ))}
-          <Button
-            variant="outline"
-            className="w-full border-dashed"
-            onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Witness' } })}
-          >
-            <Plus className="mr-2 h-4 w-4" /> Add Witness
-          </Button>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-primary">
-            <Gavel className="h-5 w-5" />
-            <span>የትዕዛዝ</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          {manualCourtOrders.map((item) => (
-            <ManualEvidenceCard key={item.id} item={item} dispatch={dispatch} />
-          ))}
-          <Button
-            variant="outline"
-            className="w-full border-dashed"
-            onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'CourtOrder' } })}
-          >
-            <Plus className="mr-2 h-4 w-4" /> Add Court Order
-          </Button>
-        </CardContent>
-      </Card>
     </div>
   );
 }
-
-    

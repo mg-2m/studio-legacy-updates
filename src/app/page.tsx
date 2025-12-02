@@ -349,6 +349,28 @@ function appReducer(state: AppState, action: Action): AppState {
       return { ...state, evidence: state.evidence.filter(e => e.id !== action.payload.id) };
     case 'UPDATE_EVIDENCE': {
       const { id, field, value } = action.payload;
+       // Handle the 'temp' ID case for the first static item
+        if (id.startsWith('temp_')) {
+            const type = id.split('_')[1] as 'doc' | 'witness' | 'order';
+            const newId = Date.now().toString();
+            let newEvidence: ManualEvidence;
+
+            switch(type) {
+                case 'doc':
+                    newEvidence = { id: newId, type: 'Document', description: '', issuer: '', refNumber: '', issueDate: '', pageCount: '', documentType: 'Copy', originalLocation: '', isManual: true, [field]: value };
+                    break;
+                case 'witness':
+                    newEvidence = { id: newId, type: 'Witness', honorific: HONORIFICS[0], name: '', city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[0], woreda: '', houseNo: '', isManual: true, [field]: value };
+                    break;
+                case 'order':
+                    newEvidence = { id: newId, type: 'CourtOrder', description: '', isManual: true, [field]: value };
+                    break;
+                default: return state;
+            }
+             // Since we're replacing a temp item, we just add the new one.
+             // The old temp item doesn't exist in the state array.
+            return { ...state, evidence: [...state.evidence, newEvidence] };
+        }
       return { ...state, evidence: state.evidence.map(e => e.id === id ? { ...e, [field]: value } : e) };
     }
     case 'SET_SELECTED_SUB_TEMPLATE': {

@@ -14,7 +14,7 @@ interface PreviewColumnProps {
 
 export default function PreviewColumn({ state }: PreviewColumnProps) {
   return (
-    <section id="preview-col" className="flex flex-1 flex-col bg-muted/50 overflow-hidden">
+    <section className="flex flex-1 flex-col overflow-hidden bg-muted/50">
       {/* HEADER: This part has a fixed height and will NOT scroll. */}
       <div className="no-print z-10 flex h-14 flex-shrink-0 items-center gap-2 border-b bg-background/80 p-2 backdrop-blur-sm">
         <SidebarTrigger />
@@ -24,7 +24,7 @@ export default function PreviewColumn({ state }: PreviewColumnProps) {
         </div>
       </div>
       
-      {/* SCROLLABLE CONTENT: This ScrollArea will take up the remaining vertical space and enable scrolling for its content. */}
+      {/* SCROLLABLE CONTENT: This ScrollArea will take up the remaining vertical space. */}
       <ScrollArea className="flex-1">
           <div className="p-5 flex flex-col items-center">
             <PageOne state={state} />

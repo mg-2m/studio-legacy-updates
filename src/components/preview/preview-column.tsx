@@ -14,7 +14,7 @@ interface PreviewColumnProps {
 
 export default function PreviewColumn({ state }: PreviewColumnProps) {
   return (
-    <section className="flex flex-1 flex-col overflow-hidden bg-muted/50">
+    <section className="flex flex-1 flex-col bg-muted/50 h-screen">
       {/* HEADER: This part has a fixed height and will NOT scroll. */}
       <div className="no-print z-10 flex h-14 flex-shrink-0 items-center gap-2 border-b bg-background/80 p-2 backdrop-blur-sm">
         <SidebarTrigger />

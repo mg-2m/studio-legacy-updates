@@ -7,6 +7,8 @@ import AppSidebar from '@/components/app-sidebar';
 import EditorColumn from '@/components/editor/editor-column';
 import PreviewColumn from '@/components/preview/preview-column';
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
+import { EditorSidebarProvider, EditorSidebar, EditorSidebarInset } from '@/components/ui/editor-sidebar';
+
 
 interface MainLayoutProps {
   state: AppState;
@@ -19,13 +21,19 @@ export default function MainLayout({ state, dispatch }: MainLayoutProps) {
       <div className="flex h-screen w-full bg-background overflow-hidden">
         <AppSidebar selectedTemplate={state.selectedTemplate} selectedSubTemplate={state.selectedSubTemplate} dispatch={dispatch} />
         <SidebarInset>
-          <main className="flex flex-1 overflow-hidden">
-            <EditorColumn
-              state={state}
-              dispatch={dispatch}
-            />
-            <PreviewColumn state={state} />
-          </main>
+          <EditorSidebarProvider>
+            <main className="flex flex-1 overflow-hidden">
+                <EditorSidebar>
+                    <EditorColumn
+                        state={state}
+                        dispatch={dispatch}
+                    />
+                </EditorSidebar>
+                <EditorSidebarInset>
+                    <PreviewColumn state={state} />
+                </EditorSidebarInset>
+            </main>
+          </EditorSidebarProvider>
         </SidebarInset>
       </div>
     </SidebarProvider>

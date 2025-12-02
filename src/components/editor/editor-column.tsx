@@ -10,6 +10,7 @@ import ReliefTab from './relief-tab';
 import type { AppState } from '@/lib/types';
 import { ScrollArea } from '../ui/scroll-area';
 import { SidebarTrigger } from '../ui/sidebar';
+import { EditorSidebarTrigger } from '../ui/editor-sidebar';
 import { TEMPLATE_DATA, TEMPLATES } from '@/lib/data';
 import { ChevronRight, Lightbulb } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
@@ -53,7 +54,7 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
 
   return (
     <section 
-      className="no-print relative flex flex-col bg-card border-r w-[45%] min-w-[450px]"
+      className="no-print relative flex flex-col bg-card border-r w-full h-full"
     >
       <div className="flex h-14 items-center p-2 border-b">
         <SidebarTrigger />
@@ -65,6 +66,9 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
             <h1 className="text-base">{selectedSubTemplate.label.split('(')[0]}</h1>
           </div>
         )}
+        <div className="ml-auto">
+            <EditorSidebarTrigger />
+        </div>
       </div>
 
       <Tabs defaultValue="details" className="flex flex-col flex-1 overflow-hidden">

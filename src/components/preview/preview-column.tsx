@@ -14,7 +14,7 @@ interface PreviewColumnProps {
 
 export default function PreviewColumn({ state }: PreviewColumnProps) {
   return (
-    <section id="preview-col" className="flex flex-1 flex-col bg-muted/50 overflow-hidden">
+    <section id="preview-col" className="flex flex-1 flex-col bg-muted/50">
       <div className="no-print sticky top-0 z-10 flex h-14 items-center gap-2 border-b bg-background/80 p-2 backdrop-blur-sm">
         <SidebarTrigger />
         <EditorSidebarTrigger />
@@ -22,12 +22,14 @@ export default function PreviewColumn({ state }: PreviewColumnProps) {
           {/* Other preview header controls can go here */}
         </div>
       </div>
-      <ScrollArea className="flex-1">
-        <div className="p-5 flex flex-col items-center">
-          <PageOne state={state} />
-          <PageTwo state={state} />
-        </div>
-      </ScrollArea>
+      <div className="relative flex-1 overflow-hidden">
+        <ScrollArea className="absolute inset-0 h-full w-full">
+            <div className="p-5 flex flex-col items-center">
+            <PageOne state={state} />
+            <PageTwo state={state} />
+            </div>
+        </ScrollArea>
+      </div>
     </section>
   );
 }

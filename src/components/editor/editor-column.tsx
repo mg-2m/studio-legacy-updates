@@ -12,7 +12,6 @@ import { ScrollArea } from '../ui/scroll-area';
 import { TEMPLATE_DATA, TEMPLATES } from '@/lib/data';
 import { ChevronRight, Lightbulb } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
-import { SidebarTrigger } from '../ui/sidebar';
 
 // A simple markdown-to-React component
 const SimpleMarkdown: React.FC<{ content: string }> = ({ content }) => {
@@ -56,7 +55,6 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
       className="no-print relative flex flex-col bg-card border-r w-full h-full"
     >
       <div className="flex h-14 items-center gap-2 p-2 border-b">
-        <SidebarTrigger />
         {selectedTemplate && selectedSubTemplate && Icon && (
           <div className="ml-2 flex items-center gap-2 text-primary font-semibold">
             <Icon className="size-5" />

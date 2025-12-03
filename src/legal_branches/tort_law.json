@@ -17,7 +17,7 @@
         ],
         "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላ ሰው ቸልተኝነት ወይም ጥፋት ምክንያት በአካልዎ ወይም በንብረትዎ ላይ ለደረሰ ጉዳት የካሳ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሚጠየቀው የካሳ መጠን የፍርድ ቤቱን የገንዘብ ዳኝነት ሥልጣን ይወስናል። ጉዳዩ ንብረቱ በሚገኝበት ወይም አደጋው በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ ከውል ውጭ ለሚደርስ ጉዳት የካሳ ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ **ሁለት (2) ዓመት** ነው። ይህ ጊዜ መቆጠር የሚጀምረው ተጎጂው ወገን በደረሰው ጉዳት እና ጉዳቱን ያደረሰውን ሰው ማንነት ካወቀበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ የሚያስፈልግ ማስረጃ:** የጥፋቱን መኖር የሚያሳይ ማስረጃ (PoliceAccidentReport) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ (MedicalExpenseReceipts, PropertyValuationReport)።\n    *   **ተጨማሪ ማስረጃ:** የምስክሮች ቃል (WitnessStatements)፣ የጉዳቱን ሁኔታ የሚያሳዩ ፎቶዎች።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላ ሰው ቸልተኝነት ወይም ጥፋት ምክንያት በአካልዎ ወይም በንብረትዎ ላይ ለደረሰ ጉዳት የካሳ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሚጠየቀው የካሳ መጠን የፍርድ ቤቱን የገንዘብ ዳኝነት ሥልጣን ይወስናል። ጉዳዩ ንብረቱ በሚገኝበት ወይም አደጋው በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ ከውል ውጭ ለሚደርስ ጉዳት የካሳ ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ **ሁለት (2) ዓመት** ነው። ይህ ጊዜ መቆጠር የሚጀምረው ተጎጂው ወገን በደረሰው ጉዳት እና ጉዳቱን ያደረሰውን ሰው ማንነት ካወቀበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* **የግድ የሚያስፈልግ ማስረጃ:** የጥፋቱን መኖር የሚያሳይ ማስረጃ (PoliceAccidentReport) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ (MedicalExpenseReceipts, PropertyValuationReport)።\n* **ተጨማሪ ማስረጃ:** የምስክሮች ቃል (WitnessStatements)፣ የጉዳቱን ሁኔታ የሚያሳዩ ፎቶዎች።",
       "partyTitles": {
         "applicant": "Plaintiff (ከሳሽ)",
         "respondent": "Defendant (ተከሳሽ)"
@@ -32,7 +32,11 @@
             "PoliceAccidentReport",
             "WitnessStatements"
           ],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የቸልተኝነት ድርጊት" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የቸልተኝነት ድርጊት"
+          }
         },
         {
           "id": "tort_fact_traffic_violation",
@@ -42,7 +46,11 @@
           "autoEvidence": [
             "PoliceAccidentReport"
           ],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም በላይ،", "summary_keyword": "የትራፊክ ህግ ጥሰት" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "የትራፊክ ህግ ጥሰት"
+          }
         },
         {
           "id": "tort_fact_liability_for_another_person",
@@ -53,7 +61,11 @@
             "WitnessStatements",
             "PoliceAccidentReport"
           ],
-          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የተወካይ ተጠያቂነት" }
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የተወካይ ተጠያቂነት"
+          }
         },
         {
           "id": "tort_fact_bodily_injury_damage",
@@ -64,7 +76,11 @@
             "MedicalExpenseReceipts",
             "DoctorAssessment"
           ],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የአካል ጉዳት" }
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
+            "summary_keyword": "የአካል ጉዳት"
+          }
         },
         {
           "id": "tort_fact_property_damage_loss",
@@ -75,7 +91,11 @@
             "PropertyValuationReport",
             "PoliceAccidentReport"
           ],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የንብረት ጉዳት" }
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የንብረት ጉዳት"
+          }
         },
         {
           "id": "tort_fact_moral_damage_pain",
@@ -86,7 +106,11 @@
             "DoctorAssessment",
             "WitnessStatements"
           ],
-          "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "የሞራል ጉዳት" }
+          "rhetoric": {
+            "intro": "በተጨማሪም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የሞራል ጉዳት"
+          }
         },
         {
           "id": "tort_fact_direct_causation",
@@ -97,7 +121,11 @@
             "PoliceAccidentReport",
             "DoctorAssessment"
           ],
-          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ቀጥተኛ ግንኙነት" }
+          "rhetoric": {
+            "intro": "በመጨረሻም،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "ቀጥተኛ ግንኙነት"
+          }
         },
         {
           "id": "tort_fact_mitigation_of_damages",
@@ -108,7 +136,11 @@
             "MedicalExpenseReceipts",
             "PropertyValuationReport"
           ],
-          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመጨረሻም،", "summary_keyword": "ጉዳት መቀነስ" }
+          "rhetoric": {
+            "intro": "በመጨረሻም،",
+            "transition": "በመጨረሻም،",
+            "summary_keyword": "ጉዳት መቀነስ"
+          }
         }
       ],
       "reliefs": [
@@ -158,7 +190,7 @@
         ],
         "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ህንጻ በግንባታ ጉድለት ወይም በጥገና እጦት ምክንያት ጉዳት ሲያደርስ፣ የህንጻውን ባለቤት ጥፋት ማረጋገጥ ሳያስፈልግ ካሳ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ጉዳቱ በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ የይርጋ ጊዜ ገደቡ **ሁለት (2) ዓመት** ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የጉዳቱን መንስኤ (የህንጻ መፍረስ) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ። የባለሙያ ሪፖርት ክሱን በእጅጉ ያጠናክረዋል።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ህንጻ በግንባታ ጉድለት ወይም በጥገና እጦት ምክንያት ጉዳት ሲያደርስ፣ የህንጻውን ባለቤት ጥፋት ማረጋገጥ ሳያስፈልግ ካሳ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ጉዳቱ በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ የይርጋ ጊዜ ገደቡ **ሁለት (2) ዓመት** ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* **ማስረጃ (Required Evidence):** የጉዳቱን መንስኤ (የህንጻ መፍረስ) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ። የባለሙያ ሪፖርት ክሱን በእጅጉ ያጠናክረዋል።",
       "partyTitles": {
         "applicant": "Plaintiff (ከሳሽ)",
         "respondent": "Owner of the Building (የህንፃው ባለቤት)"
@@ -170,7 +202,11 @@
           "legalText": "The Respondent is the owner of the building or structure from which the damage originated.",
           "citation": "Civil Code Art. 2068",
           "autoEvidence": [],
-           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የባለቤትነት ሁኔታ" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የባለቤትነት ሁኔታ"
+          }
         },
         {
           "id": "tort_fact_damage_caused_by_ruin",
@@ -181,7 +217,11 @@
             "WitnessStatements",
             "PropertyValuationReport"
           ],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "በህንጻ ጉድለት የደረሰ ጉዳት" }
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "በህንጻ ጉድለት የደረሰ ጉዳት"
+          }
         },
         {
           "id": "tort_fact_bodily_injury_building",
@@ -192,7 +232,11 @@
             "MedicalExpenseReceipts",
             "DoctorAssessment"
           ],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የአካል ጉዳት" }
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የአካል ጉዳት"
+          }
         },
         {
           "id": "tort_fact_property_damage_building",
@@ -202,7 +246,11 @@
           "autoEvidence": [
             "PropertyValuationReport"
           ],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የንብረት ጉዳት" }
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የንብረት ጉዳት"
+          }
         }
       ],
       "reliefs": [

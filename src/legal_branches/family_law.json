@@ -20,21 +20,36 @@
           "citation": "RFC Art. 1",
           "autoEvidence": [
             "CertificateofMarriage"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የጋብቻ መኖር"
+          }
         },
         {
           "id": "fam_fact_irretrievable_breakdown",
           "label": "የመፍረስ ምክንያቶች (Grounds for Dissolution)",
           "legalText": "የጋብቻውን መቀጠል የማይቻል የሚያደርጉ የማይታረቁ ልዩነቶች አሉ። (There are irreconcilable differences making the continuation of the marriage impossible.)",
           "citation": "RFC Art. 76",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የማይታረቅ ልዩነት"
+          }
         },
         {
           "id": "fam_fact_period_of_separation",
           "label": "የመፍረስ ምክንያቶች (Grounds for Dissolution)",
           "legalText": "ተዋዋይ ወገኖች ከ [separationMonths] ወራት በላይ ለብቻቸው ኖረዋል። (The parties have lived separately for a period exceeding [separationMonths] months.)",
           "citation": "RFC Art. 81",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የረጅም ጊዜ መለያየት"
+          }
         },
         {
           "id": "fam_fact_children_existence",
@@ -43,7 +58,12 @@
           "citation": "RFC Art. 113",
           "autoEvidence": [
             "BirthCertificate"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ልጆች መኖር"
+          }
         }
       ],
       "reliefs": [
@@ -94,7 +114,12 @@
           "citation": "RFC Art. 77",
           "autoEvidence": [
             "CertificateofMarriage"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የጋራ ስምምነት"
+          }
         },
         {
           "id": "fam_fact_agreement_doc",
@@ -103,7 +128,12 @@
           "citation": "RFC Art. 82",
           "autoEvidence": [
             "ListofCommonProperty"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "አጠቃላይ ስምምነት"
+          }
         }
       ],
       "reliefs": [
@@ -134,7 +164,12 @@
           "label": "የወሲብ ግንኙነት (Sexual Relations)",
           "legalText": "እናት እና ተከሳሽ በሕጋዊ የእርግዝና ወቅት የወሲብ ግንኙነት ነበራቸው። (The mother and the Defendant had sexual relations during the legal period of conception.)",
           "citation": "RFC Art. 143",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የወሲብ ግንኙነት"
+          }
         },
         {
           "id": "fam_fact_possession_status",
@@ -143,7 +178,12 @@
           "citation": "RFC Art. 136",
           "autoEvidence": [
             "WitnessStatements"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የልጅነት ይዞታ"
+          }
         }
       ],
       "reliefs": [
@@ -162,7 +202,7 @@
       ],
       "calculations": {}
     },
-    "app_temporary_maintenance": {
+    "fam_temporary_maintenance": {
       "documentTitle": "ጊዜያዊ የቀለብ ትዕዛዝ ማመልከቻ (Application for Order of Provisional Maintenance)",
       "jurisdictionText": "Art. 83(2) of the Revised Family Code & Art. 154 Civil Procedure Code.",
       "meta": {
@@ -180,7 +220,12 @@
           "label": "አስቸኳይነት እና ፍላጎት (Urgency & Need)",
           "legalText": "በተዋዋይ ወገኖች መካከል የፍቺ ዋና ክስ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው። (A main suit for divorce is currently pending between the parties.)",
           "citation": "RFC Art. 83",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "በሂደት ላይ ያለ ክስ"
+          }
         },
         {
           "id": "fam_fact_immediate_need",
@@ -189,27 +234,37 @@
           "citation": "RFC Art. 106",
           "autoEvidence": [
             "ProofofIncome"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የገቢ እጦት"
+          }
         },
         {
           "id": "fam_fact_ability_to_pay",
           "label": "አስቸኳይነት እና ፍላጎት (Urgency & Need)",
           "legalText": "ተጠሪው ጊዜያዊ ድጋፍ ለመስጠት በቂ ገቢ አለው። (The Respondent has sufficient income to provide provisional support.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "የመክፈል ችሎታ"
+          }
         }
       ],
       "reliefs": [
         {
           "id": "fam_relief_prov_maintenance",
-          "text": "ተጠሪው የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በወር [amount] ብር እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order the Respondent to pay [amount] ETB monthly until final judgment.)",
+          "text": "ተጠריው የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በወር [amount] ብር እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order the Respondent to pay [amount] ETB monthly until final judgment.)",
           "isDefault": true,
           "isDynamic": false
         }
       ],
       "calculations": {}
     },
-    "app_property_preservation": {
+    "fam_property_preservation": {
       "documentTitle": "የጋራ ንብረትን ለማያያዝ እና ለመጠበቅ ማመልከቻ (Application for Attachment and Preservation of Common Property)",
       "jurisdictionText": "Art. 154 Civil Procedure Code & Art. 83 Revised Family Code.",
       "meta": {
@@ -227,7 +282,12 @@
           "label": "የመበታተን አደጋ (Risk of Dissipation)",
           "legalText": "ተጠሪው የጋራ የጋብቻ ንብረቶችን ለመሸጥ፣ ለማስተላለፍ ወይም ለመደበቅ እየሞከረ ነው የሚል ምክንያታዊ ስጋት አለ። (There is a reasonable apprehension that the Respondent is attempting to sell, transfer, or hide common marital assets.)",
           "citation": "CPC Art. 154",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ንብረትን የማሸሽ ስጋት"
+          }
         },
         {
           "id": "fam_fact_common_ownership",
@@ -236,7 +296,12 @@
           "citation": "RFC Art. 62",
           "autoEvidence": [
             "ListofCommonProperty"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የጋራ ንብረት መኖር"
+          }
         }
       ],
       "reliefs": [
@@ -255,7 +320,7 @@
       ],
       "calculations": {}
     },
-    "app_protective_order": {
+    "fam_protective_order": {
       "documentTitle": "አስቸኳይ የመከላከያ ትዕዛዝ ማመልከቻ (Application for Urgent Protective Order)",
       "jurisdictionText": "Art. 154 Civil Procedure Code (Inherent Power) & Criminal Code References.",
       "meta": {
@@ -275,14 +340,24 @@
           "citation": "",
           "autoEvidence": [
             "PoliceReportDomesticViolence"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የአካል ጥቃት ስጋት"
+          }
         },
         {
           "id": "fam_fact_balance_convenience",
           "label": "ደህንነት እና ጉዳት (Safety & Harm)",
           "legalText": "ትዕዛዙ ካልተሰጠ በአመልካቹ ላይ የሚደርሰው ጉዳት በተጠሪው ላይ ከሚደርሰው ማንኛውም ችግር ይበልጣል። (The harm to the Applicant if the order is not granted outweighs any inconvenience to the Respondent.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የጉዳት ሚዛን"
+          }
         }
       ],
       "reliefs": [
@@ -321,14 +396,24 @@
           "citation": "Civil Procedure Code Art. 182",
           "autoEvidence": [
             "CopyofDivorceJudgment"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የቀድሞ የፍቺ ፍርድ"
+          }
         },
         {
           "id": "fam_fact_custody_settled",
           "label": "የሥነ-ሥርዓት ታሪክ (Procedural History)",
           "legalText": "የልጅ የማሳደግ እና የጥገና ጉዳዮች ቀደም ሲል ተወስነዋል። (Issues regarding child custody and maintenance have already been adjudicated.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የልጆች ጉዳይ መወሰን"
+          }
         },
         {
           "id": "fam_fact_existence_common_property",
@@ -338,14 +423,24 @@
           "autoEvidence": [
             "ListofCommonProperty",
             "TitleDeedsLibrec"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "የጋራ ንብረት መኖር"
+          }
         },
         {
           "id": "fam_fact_property_possession",
           "label": "የንብረት መለያ (Identification of Property)",
           "legalText": "ንብረቱ በአሁኑ ጊዜ በተጠሪው/አመልካቹ ብቸኛ ይዞታ/ቁጥጥር ሥር ነው። (The property is currently in the sole possession/control of the Respondent/Applicant.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "የንብረት ይዞታ"
+          }
         },
         {
           "id": "fam_fact_personal_property_claim",
@@ -355,21 +450,36 @@
           "autoEvidence": [
             "ProofofInheritanceDonation",
             "Pre-maritalOwnershipDocuments"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "የግል ንብረት ጥያቄ"
+          }
         },
         {
           "id": "fam_fact_dispute_valuation",
           "label": "ግምገማ እና ክርክር (Valuation & Dispute)",
           "legalText": "ተዋዋይ ወገኖች በንብረቶቹ ዋጋ ወይም ክፍፍል ሁኔታ ላይ መስማማት አልቻሉም። (The parties are unable to agree on the value or mode of partition of the assets.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "በግምገማ ላይ አለመስማማት"
+          }
         },
         {
           "id": "fam_fact_expert_need",
           "label": "ግምገማ እና ክርክር (Valuation & Dispute)",
           "legalText": "የንብረቶቹ ውስብስብነት (ለምሳሌ የንግድ ድርሻዎች፣ ሪል እስቴት) ሙያዊ ግምገማ ይጠይቃል። (The complexity of the assets (e.g., business shares, real estate) requires professional valuation.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "የባለሙያ ግምገማ አስፈላጊነት"
+          }
         }
       ],
       "reliefs": [
@@ -402,3 +512,5 @@
     }
   }
 }
+
+    

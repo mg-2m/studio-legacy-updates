@@ -17,7 +17,7 @@
         ],
         "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላ ሰው ቸልተኝነት ወይም ጥፋት ምክንያት በአካልዎ ወይም በንብረትዎ ላይ ለደረሰ ጉዳት የካሳ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሚጠየቀው የካሳ መጠን የፍርድ ቤቱን የገንዘብ ዳኝነት ሥልጣን ይወስናል። ጉዳዩ ንብረቱ በሚገኝበት ወይም አደጋው በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ ከውል ውጭ ለሚደርስ ጉዳት የካሳ ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ **ሁለት (2) ዓመት** ነው። ይህ ጊዜ መቆጠር የሚጀምረው ተጎጂው ወገን በደረሰው ጉዳት እና ጉዳቱን ያደረሰውን ሰው ማንነት ካወቀበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* **የግድ የሚያስፈልግ ማስረጃ:** የጥፋቱን መኖር የሚያሳይ ማስረጃ (PoliceAccidentReport) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ (MedicalExpenseReceipts, PropertyValuationReport)።\n* **ተጨማሪ ማስረጃ:** የምስክሮች ቃል (WitnessStatements)፣ የጉዳቱን ሁኔታ የሚያሳዩ ፎቶዎች።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላ ሰው ቸልተኝነት ወይም ጥፋት ምክንያት በአካልዎ ወይም በንብረትዎ ላይ ለደረሰ ጉዳት የካሳ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሚጠየቀው የካሳ መጠን የፍርድ ቤቱን የገንዘብ ዳኝነት ሥልጣን ይወስናል። ጉዳዩ ንብረቱ በሚገኝበት ወይም አደጋው በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ ከውል ውጭ ለሚደርስ ጉዳት የካሳ ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ **ሁለት (2) ዓመት** ነው። ይህ ጊዜ መቆጠር የሚጀምረው ተጎጂው ወገን በደረሰው ጉዳት እና ጉዳቱን ያደረሰውን ሰው ማንነት ካወቀበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየግድ የሚያስፈልግ ማስረጃ፡ የጥፋቱን መኖር የሚያሳይ ማስረጃ (PoliceAccidentReport) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ (MedicalExpenseReceipts, PropertyValuationReport)።\nተጨማሪ ማስረጃ፡ የምስክሮች ቃል (WitnessStatements)፣ የጉዳቱን ሁኔታ የሚያሳዩ ፎቶዎች።",
       "partyTitles": {
         "applicant": "Plaintiff (ከሳሽ)",
         "respondent": "Defendant (ተከሳሽ)"
@@ -25,8 +25,8 @@
       "facts": [
         {
           "id": "tort_fact_fault_negligence_omission",
-          "label": "The Causal Event & Negligence",
-          "legalText": "The Defendant committed a negligent act or omission that violated the general duty of care (Art. 2028).",
+          "label": "የጥፋት ድርጊት እና ቸልተኝነት",
+          "legalText": "ተከሳሹ አጠቃላይ የጥንቃቄ ግዴታን የሚጥስ የቸልተኝነት ድርጊት ፈጽሟል (አንቀጽ 2028)። (The Defendant committed a negligent act or omission that violated the general duty of care (Art. 2028).)",
           "citation": "Civil Code Art. 2028",
           "autoEvidence": [
             "PoliceAccidentReport",
@@ -40,8 +40,8 @@
         },
         {
           "id": "tort_fact_traffic_violation",
-          "label": "The Causal Event & Negligence",
-          "legalText": "The fault arose from a specific breach of traffic laws or other legal/regulatory duty of caution.",
+          "label": "የጥፋት ድርጊት እና ቸልተኝነት",
+          "legalText": "ጥፋቱ የተከሰተው የትራፊክ ሕጎችን ወይም ሌላ የሕግ/ደንብ የጥንቃቄ ግዴታን በመጣስ ነው። (The fault arose from a specific breach of traffic laws or other legal/regulatory duty of caution.)",
           "citation": "Civil Code Art. 2029",
           "autoEvidence": [
             "PoliceAccidentReport"
@@ -54,8 +54,8 @@
         },
         {
           "id": "tort_fact_liability_for_another_person",
-          "label": "The Causal Event & Negligence",
-          "legalText": "The Defendant is liable for the act of a minor, apprentice, or employee under their supervision or control (Art. 2085 et seq.).",
+          "label": "የጥፋት ድርጊት እና ቸልተኝነት",
+          "legalText": "ተከሳሹ በእሱ ቁጥጥር ስር ላለ ለአካለ መጠን ያልደረሰ፣ ተለማማጅ ወይም ሰራተኛ ድርጊት ተጠያቂ ነው (አንቀጽ 2085 እና ተከታዮቹ)። (The Defendant is liable for the act of a minor, apprentice, or employee under their supervision or control (Art. 2085 et seq.).)",
           "citation": "Civil Code Art. 2085",
           "autoEvidence": [
             "WitnessStatements",
@@ -69,8 +69,8 @@
         },
         {
           "id": "tort_fact_bodily_injury_damage",
-          "label": "The Damage Sustained",
-          "legalText": "The Plaintiff sustained bodily injury and incurred expenses for treatment, hospitalization, and rehabilitation.",
+          "label": "የደረሰው ጉዳት",
+          "legalText": "ከሳሽ የአካል ጉዳት ደርሶበታል እና ለህክምና፣ ለሆስፒታል እና ለማገገሚያ ወጪዎች አድርጓል። (The Plaintiff sustained bodily injury and incurred expenses for treatment, hospitalization, and rehabilitation.)",
           "citation": "Civil Code Art. 2035",
           "autoEvidence": [
             "MedicalExpenseReceipts",
@@ -84,8 +84,8 @@
         },
         {
           "id": "tort_fact_property_damage_loss",
-          "label": "The Damage Sustained",
-          "legalText": "The Plaintiff's property (e.g., vehicle, structure) was damaged or destroyed, requiring repair or replacement.",
+          "label": "የደረሰው ጉዳት",
+          "legalText": "የከሳሽ ንብረት (ለምሳሌ፣ ተሽከርካሪ፣ ህንፃ) ተጎድቷል ወይም ወድሟል፣ ይህም ጥገና ወይም ምትክ ያስፈልገዋል። (The Plaintiff's property (e.g., vehicle, structure) was damaged or destroyed, requiring repair or replacement.)",
           "citation": "Civil Code Art. 2035",
           "autoEvidence": [
             "PropertyValuationReport",
@@ -99,8 +99,8 @@
         },
         {
           "id": "tort_fact_moral_damage_pain",
-          "label": "The Damage Sustained",
-          "legalText": "The Plaintiff suffered moral damage, including pain and suffering, emotional distress, and loss of amenity.",
+          "label": "የደረሰው ጉዳት",
+          "legalText": "ከሳሽ ህመም እና ስቃይ፣ የስሜት ጭንቀት እና የኑሮ መደሰት ማጣትን ጨምሮ የሞራል ጉዳት ደርሶበታል። (The Plaintiff suffered moral damage, including pain and suffering, emotional distress, and loss of amenity.)",
           "citation": "Civil Code Art. 2036",
           "autoEvidence": [
             "DoctorAssessment",
@@ -114,8 +114,8 @@
         },
         {
           "id": "tort_fact_direct_causation",
-          "label": "Causation & Foreseeability",
-          "legalText": "There is a direct and certain causal link between the Defendant's fault and the damage sustained by the Plaintiff (Art. 2034).",
+          "label": "ምክንያታዊነት እና አስቀድሞ መገመት",
+          "legalText": "በተከሳሹ ጥፋት እና በከሳሽ በደረሰው ጉዳት መካከል ቀጥተኛ እና እርግጠኛ የሆነ የምክንያት ግንኙነት አለ (አንቀጽ 2034)። (There is a direct and certain causal link between the Defendant's fault and the damage sustained by the Plaintiff (Art. 2034).)",
           "citation": "Civil Code Art. 2034",
           "autoEvidence": [
             "PoliceAccidentReport",
@@ -129,8 +129,8 @@
         },
         {
           "id": "tort_fact_mitigation_of_damages",
-          "label": "Causation & Foreseeability",
-          "legalText": "The Plaintiff has taken reasonable steps to mitigate and reduce the extent of the damages sustained.",
+          "label": "ምክንያታዊነት እና አስቀድሞ መገመት",
+          "legalText": "ከሳሽ የደረሰውን ጉዳት መጠን ለመቀነስ እና ለማቃለል ምክንያታዊ እርምጃዎችን ወስዷል። (The Plaintiff has taken reasonable steps to mitigate and reduce the extent of the damages sustained.)",
           "citation": "Civil Code Art. 2043",
           "autoEvidence": [
             "MedicalExpenseReceipts",
@@ -190,7 +190,7 @@
         ],
         "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ህንጻ በግንባታ ጉድለት ወይም በጥገና እጦት ምክንያት ጉዳት ሲያደርስ፣ የህንጻውን ባለቤት ጥፋት ማረጋገጥ ሳያስፈልግ ካሳ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ጉዳቱ በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ የይርጋ ጊዜ ገደቡ **ሁለት (2) ዓመት** ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* **ማስረጃ (Required Evidence):** የጉዳቱን መንስኤ (የህንጻ መፍረስ) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ። የባለሙያ ሪፖርት ክሱን በእጅጉ ያጠናክረዋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ህንጻ በግንባታ ጉድለት ወይም በጥገና እጦት ምክንያት ጉዳት ሲያደርስ፣ የህንጻውን ባለቤት ጥፋት ማረጋገጥ ሳያስፈልግ ካሳ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ጉዳቱ በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ የይርጋ ጊዜ ገደቡ **ሁለት (2) ዓመት** ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ (Required Evidence): የጉዳቱን መንስኤ (የህንጻ መፍረስ) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ። የባለሙያ ሪፖርት ክሱን በእጅጉ ያጠናክረዋል።",
       "partyTitles": {
         "applicant": "Plaintiff (ከሳሽ)",
         "respondent": "Owner of the Building (የህንፃው ባለቤት)"
@@ -198,8 +198,8 @@
       "facts": [
         {
           "id": "tort_fact_building_owner_status",
-          "label": "Basis for Strict Liability",
-          "legalText": "The Respondent is the owner of the building or structure from which the damage originated.",
+          "label": "ጥብቅ ተጠያቂነት መሠረት",
+          "legalText": "ተከሳሹ ጉዳቱ የመነጨበት ህንፃ ወይም ግንባታ ባለቤት ነው። (The Respondent is the owner of the building or structure from which the damage originated.)",
           "citation": "Civil Code Art. 2068",
           "autoEvidence": [],
           "rhetoric": {
@@ -210,8 +210,8 @@
         },
         {
           "id": "tort_fact_damage_caused_by_ruin",
-          "label": "Basis for Strict Liability",
-          "legalText": "The damage was caused by the total or partial ruin of the building, which was due to lack of repair or a defect in construction.",
+          "label": "ጥብቅ ተጠያቂነት መሠረት",
+          "legalText": "ጉዳቱ የተከሰተው በህንፃው ሙሉ በሙሉ ወይም በከፊል መውደም ምክንያት ሲሆን ይህም በጥገና እጦት ወይም በግንባታ ጉድለት ምክንያት ነው። (The damage was caused by the total or partial ruin of the building, which was due to lack of repair or a defect in construction.)",
           "citation": "Civil Code Art. 2068",
           "autoEvidence": [
             "WitnessStatements",
@@ -225,8 +225,8 @@
         },
         {
           "id": "tort_fact_bodily_injury_building",
-          "label": "Damage & Causation",
-          "legalText": "The Plaintiff sustained bodily injury as a direct result of the building's ruin.",
+          "label": "ጉዳት እና ምክንያታዊነት",
+          "legalText": "ከሳሽ በህንጻው መውደም ምክንያት ቀጥተኛ የአካል ጉዳት ደርሶበታል። (The Plaintiff sustained bodily injury as a direct result of the building's ruin.)",
           "citation": "Civil Code Art. 2068 & 2035",
           "autoEvidence": [
             "MedicalExpenseReceipts",
@@ -240,8 +240,8 @@
         },
         {
           "id": "tort_fact_property_damage_building",
-          "label": "Damage & Causation",
-          "legalText": "The Plaintiff's property was damaged as a direct result of the building's ruin.",
+          "label": "ጉዳት እና ምክንያታዊነት",
+          "legalText": "የከሳሽ ንብረት በህንጻው መውደም ምክንያት ቀጥተኛ ጉዳት ደርሶበታል። (The Plaintiff's property was damaged as a direct result of the building's ruin.)",
           "citation": "Civil Code Art. 2068 & 2035",
           "autoEvidence": [
             "PropertyValuationReport"

@@ -21,7 +21,8 @@
           "citation": "Proclamation 501/2006 Art. 11",
           "autoEvidence": [
             "CertificateOfRegistrationEIPO"
-          ]
+          ],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የንግድ ምልክት ባለቤትነት" }
         },
         {
           "id": "ip_fact_unauthorized_use",
@@ -32,7 +33,8 @@
             "ProductSampleSpecimen",
             "MarketSurveyAffidavit",
             "CeaseAndDesistLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያለፈቃድ አጠቃቀም" }
         },
         {
           "id": "ip_fact_consumer_confusion",
@@ -41,7 +43,8 @@
           "citation": "Proclamation 501/2006 Art. 18",
           "autoEvidence": [
             "MarketSurveyAffidavit"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በተጨማሪም،", "summary_keyword": "የሸማቾች ግራ መጋባት" }
         }
       ],
       "reliefs": [
@@ -89,7 +92,8 @@
           "citation": "Proclamation 501/2006 Art. 7",
           "autoEvidence": [
             "CertificateOfRegistrationEIPO"
-          ]
+          ],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የቀድሞ ምዝገባ" }
         },
         {
           "id": "ip_fact_similarity_and_confusion",
@@ -98,14 +102,16 @@
           "citation": "Proclamation 501/2006 Art. 7(1)(a)",
           "autoEvidence": [
             "MarketSurveyAffidavit"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የምልክት ተመሳሳይነት" }
         },
         {
           "id": "ip_fact_bad_faith_application",
           "label": "የመቃወሚያ ምክንያቶች (Grounds for Opposition)",
           "legalText": "ማመልከቻው የቀረበው በተቃዋሚው መልካም ስም ላይ ያለአግባብ ለመጠቀም በማሰብ ነው። (The application was filed in bad faith to trade on the goodwill of the Opponent.)",
           "citation": "Proclamation 501/2006 Art. 7(1)(f)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "መጥፎ እምነት" }
         }
       ],
       "reliefs": [
@@ -147,7 +153,8 @@
           "autoEvidence": [
             "CertificateOfRegistrationEIPO",
             "TechnicalExpertReport"
-          ]
+          ],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የፓተንት ባለቤትነት" }
         },
         {
           "id": "ip_fact_unauthorized_manufacture",
@@ -157,7 +164,8 @@
           "autoEvidence": [
             "ProductSampleSpecimen",
             "TechnicalExpertReport"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያለፈቃድ ማምረት" }
         },
         {
           "id": "ip_fact_commercial_loss",
@@ -166,7 +174,8 @@
           "citation": "",
           "autoEvidence": [
             "AuditReport"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የንግድ ኪሳራ" }
         }
       ],
       "reliefs": [
@@ -215,7 +224,8 @@
           "citation": "Proclamation 410/2004 Art. 38",
           "autoEvidence": [
             "ProductSampleSpecimen"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የመጀመሪያ ሥራ" }
         },
         {
           "id": "ip_fact_unauthorized_reproduction",
@@ -225,7 +235,8 @@
           "autoEvidence": [
             "ProductSampleSpecimen",
             "CeaseAndDesistLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያለፈቃድ ማባዛት" }
         },
         {
           "id": "ip_fact_commercial_scale",
@@ -234,7 +245,8 @@
           "citation": "Proclamation 410/2004 Art. 38",
           "autoEvidence": [
             "AuditReport"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በተጨማሪም،", "summary_keyword": "የንግድ ደረጃ ጥሰት" }
         }
       ],
       "reliefs": [
@@ -308,7 +320,8 @@
           "citation": "Proclamation 410/2004 Art. 8(1)(a)",
           "autoEvidence": [
             "ProductSampleSpecimen"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የስም አለመጥቀስ" }
         },
         {
           "id": "ip_fact_distortion_or_mutilation",
@@ -317,7 +330,8 @@
           "citation": "Proclamation 410/2004 Art. 8(1)(b)",
           "autoEvidence": [
             "ProductSampleSpecimen"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የሥራ መበላሸት" }
         }
       ],
       "reliefs": [
@@ -359,21 +373,24 @@
           "autoEvidence": [
             "CertificateOfRegistrationEIPO",
             "ProductSampleSpecimen"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ጠንካራ ክስ" }
         },
         {
           "id": "app_ip_fact_irreparable_harm",
           "label": "አስቸኳይነት እና ጉዳት (Urgency & Harm)",
           "legalText": "የቀጠለው ጥሰት በአመልካቹ የገበያ ድርሻ እና ስም ላይ ሊጠገን የማይችል ጉዳት ያስከትላል። (The continued infringement will cause irreparable harm to the Applicant's market share and reputation.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የማይተካ ጉዳት" }
         },
         {
           "id": "app_ip_fact_balance_convenience",
           "label": "አስቸኳይነት እና ጉዳት (Urgency & Harm)",
           "legalText": "የምቾት ሚዛን እገዳውን ለመስጠት ይደግፋል (ማለትም ከማቆም ይልቅ ለማቆም አነስተኛ ጉዳት)። (The balance of convenience favors granting the injunction (i.e., less harm to stop than to continue).)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የጉዳት ሚዛን" }
         }
       ],
       "reliefs": [
@@ -405,14 +422,16 @@
           "label": "የማስረጃ ጥበቃ (Preservation of Evidence)",
           "legalText": "ተከሳሹ ወሳኝ የጥሰት ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ሂሳቦችን) ያጠፋል ወይም ይደብቃል የሚል ከባድ ስጋት አለ። (There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).)",
           "citation": "CPC Art. 154",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የማስረጃ መጥፋት ስጋት" }
         },
         {
           "id": "app_ip_fact_specific_evidence_location",
           "label": "የማስረጃ ጥበቃ (Preservation of Evidence)",
           "legalText": "አመልካቹ ስለ ማስረጃው ቦታ እና ተፈጥሮ የተወሰነ እውቀት አለው። (The Applicant has specific knowledge of the location and nature of the evidence.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የማስረጃ ቦታ እውቀት" }
         }
       ],
       "reliefs": [

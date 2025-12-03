@@ -19,79 +19,83 @@
           "label": "የዲሲፕሊን እርምጃ (The Disciplinary Measure)",
           "legalText": "ከሥራ መባረር። (Dismissal from Service.)",
           "citation": "Proc. 1064/2017 Art. 81(1)(b)",
-          "autoEvidence": [
-            "DismissalLetter"
-          ],
-          "mutexGroup": "penalty_type"
+          "autoEvidence": ["DismissalLetter"],
+          "mutexGroup": "penalty_type",
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ከሥራ መባረር" }
         },
         {
           "id": "pub_serv_fact_measure_demotion",
           "label": "የዲሲፕሊን እርምጃ (The Disciplinary Measure)",
           "legalText": "የሥራ መደብ/ደረጃ ዝቅ ማድረግ። (Downgrading of job position/grade.)",
           "citation": "Proc. 1064/2017 Art. 81(1)(b)",
-          "autoEvidence": [
-            "DismissalLetter"
-          ],
-          "mutexGroup": "penalty_type"
+          "autoEvidence": ["DismissalLetter"],
+          "mutexGroup": "penalty_type",
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የደረጃ ዝቅ ማድረግ" }
         },
         {
           "id": "pub_serv_fact_measure_fine",
           "label": "የዲሲፕሊን እርምጃ (The Disciplinary Measure)",
           "legalText": "ከአንድ ወር ደመወዝ በላይ የሆነ ቅጣት መጣ። (Imposition of a fine exceeding one month's salary.)",
           "citation": "Proc. 1064/2017 Art. 81(1)(b)",
-          "autoEvidence": [
-            "DismissalLetter"
-          ],
-          "mutexGroup": "penalty_type"
+          "autoEvidence": ["DismissalLetter"],
+          "mutexGroup": "penalty_type",
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የገንዘብ ቅጣት" }
         },
         {
           "id": "pub_serv_fact_no_right_to_be_heard",
           "label": "የሥነ-ሥርዓት ጥሰቶች (Procedural Violations)",
           "legalText": "ተቋሙ ይግባኝ ባዩ መከላከያ እንዲያቀርብ እድል ሳይሰጥ እርምጃውን ወስዷል። (The Institution took the measure without giving the Appellant a chance to present a defense.)",
           "citation": "Proc. 1064/2017 Art. 69",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የመሰማት መብት ጥሰት" }
         },
         {
           "id": "pub_serv_fact_limitation_period_1yr",
           "label": "የሥነ-ሥርዓት ጥሰቶች (Procedural Violations)",
           "legalText": "ጥብቅ እርምጃው ጥፋቱ ከታወቀ ከ1 ዓመት በላይ ባለፈ ጊዜ ተወስዷል፣ ይህም በይርጋ እንዲታገድ ያደርገዋል። (The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.)",
           "citation": "Proc. 1064/2017 Art. 76(2)",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የአንድ አመት ይርጋ" }
         },
         {
           "id": "pub_serv_fact_limitation_period_6mo",
           "label": "የሥነ-ሥርዓት ጥሰቶች (Procedural Violations)",
-          "legalText": "ቀላል እርምጃው ጥፋቱ ከታወቀ ከ6 ወራት በላይ ባለፈ ጊዜ ተወስዷል፣ ይህም በይርጋ እንዲታገድ ያደርገዋል። (The simple measure was taken more than 6 months after the offense was known, barring it by limitation.)",
+          "legalText": "ቀላል እርምጃው ጥፋቱ ከታወቀ ከ6 ወራት በላይ ባለፈ ጊዜ ተወስዷል، ይህም በይርጋ እንዲታገድ ያደርገዋል። (The simple measure was taken more than 6 months after the offense was known, barring it by limitation.)",
           "citation": "Proc. 1064/2017 Art. 76(1)",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የስድስት ወር ይርጋ" }
         },
         {
           "id": "pub_serv_fact_improper_committee",
           "label": "የሥነ-ሥርዓት ጥሰቶች (Procedural Violations)",
           "legalText": "የዲሲፕሊን ኮሚቴው በደንብ 77/2002 መሠረት አልተቋቋመም (ለምሳሌ የሠራተኛ ተወካይ የለም)። (The Disciplinary Committee was not constituted according to Regulation 77/2002 (e.g., no staff representative).)",
           "citation": "Regulation 77/2002",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የተሳሳተ ኮሚቴ" }
         },
         {
           "id": "pub_serv_fact_not_an_offense",
           "label": "ዋና መከላከያዎች (Substantive Defenses)",
           "legalText": "የተጠረጠረው ድርጊት በሕጉ መሠረት የዲሲፕሊን ጥፋት አይደለም። (The alleged act does not constitute a disciplinary offense under the law.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በመጨረሻም،", "transition": "በተጨማሪም،", "summary_keyword": "ጥፋት አለመሆን" }
         },
         {
           "id": "pub_serv_fact_disproportionate_penalty",
           "label": "ዋና መከላከያዎች (Substantive Defenses)",
           "legalText": "ቅጣቱ ለተፈጸመው ጥፋት ተመጣጣኝ አይደለም። (The penalty is disproportionate to the offense committed.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "ያልተመጣጠነ ቅጣት" }
         },
         {
           "id": "pub_serv_fact_double_jeopardy",
           "label": "ዋና መከላከያዎች (Substantive Defenses)",
           "legalText": "ይግባኝ ባዩ በተመሳሳይ በተጠረጠረ ጥፋት ቀደም ሲል ተቀጥቷል። (The appellant was already punished for the same alleged offense.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "ድጋሚ ቅጣት" }
         }
       ],
       "reliefs": [
@@ -137,39 +141,40 @@
           "label": "ምክንያቶች፡ ብቃት ማነስ (አፈጻጸም) (Grounds: Inefficiency (Performance))",
           "legalText": "ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁለት ተከታታይ \"የማያረካ\" ግምገማዎችን አላገኘም። (Termination for performance was unlawful as the Appellant did not receive two consecutive \"unsatisfactory\" evaluations.)",
           "citation": "Proc. 1064/2017 Art. 84(1)",
-          "autoEvidence": [
-            "PerformanceReview"
-          ]
+          "autoEvidence": ["PerformanceReview"],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያልተሟላ ግምገማ" }
         },
         {
           "id": "pub_serv_fact_inefficiency_no_training",
           "label": "ምክንያቶች፡ ብቃት ማነስ (አፈጻጸም) (Grounds: Inefficiency (Performance))",
           "legalText": "ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ለማሻሻል አስፈላጊውን ሥልጠና እና ድጋፍ ስላልተሰጠው። (Termination for performance was unlawful as the Appellant was not provided with necessary training and support to improve.)",
           "citation": "Proc. 1064/2017 Art. 84(1)",
-          "autoEvidence": [
-            "PerformanceReview"
-          ]
+          "autoEvidence": ["PerformanceReview"],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የስልጠና እጦት" }
         },
         {
           "id": "pub_serv_fact_illness_before_leave_exhausted",
           "label": "ምክንያቶች፡ ሕመም / ሕክምና (Grounds: Illness / Medical)",
           "legalText": "በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁሉንም ያለውን የሕመም ፈቃድ (8 ወር ሙሉ ደመወዝ፣ 4 ወር ግማሽ ደመወዝ) ከማብቃቱ በፊት የተከሰተ በመሆኑ ነው። (Termination due to illness was unlawful as it occurred before the Appellant had exhausted all available sick leave (8 months on full pay, 4 months on half pay).)",
           "citation": "Proc. 1064/2017 Art. 83(1)",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያለጊዜው የህመም ስንብት" }
         },
         {
           "id": "pub_serv_fact_illness_no_medical_board",
           "label": "ምክንያቶች፡ ሕመም / ሕክምና (Grounds: Illness / Medical)",
           "legalText": "በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ቋሚ የአካል ጉዳትን ለማወጅ የሕክምና ቦርድ የምስክር ወረቀት ስላልቀረበ። (Termination due to illness was unlawful as no Medical Board certificate was produced to declare permanent disability.)",
           "citation": "Proc. 1064/2017 Art. 83(2)",
-          "autoEvidence": ["MedicalBoardCertificate"]
+          "autoEvidence": ["MedicalBoardCertificate"],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያለህክምና ቦርድ ውሳኔ" }
         },
         {
           "id": "pub_serv_fact_redundancy_no_offer",
           "label": "ምክንያቶች፡ ከአቅም በላይ / ቅነሳ (Grounds: Force Majeure / Redundancy)",
           "legalText": "በሥራ መደብ መጥፋት (ቅነሳ) ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ከስንብት በፊት ተመሳሳይ ክፍት የሥራ ቦታ ስላልተሰጠው። (Termination due to abolition of position (redundancy) was unlawful as the Appellant was not offered a similar vacant position before termination.)",
           "citation": "Proc. 1064/2017 Art. 85(2)",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያለአማራጭ ስራ ቅነሳ" }
         }
       ],
       "reliefs": [
@@ -208,30 +213,32 @@
           "label": "የውስጥ መፍትሔዎችን ማሟጠጥ (ግዴታ) (Exhaustion of Remedies (Mandatory))",
           "legalText": "በ [date] ለተቋሙ የቅሬታ አያያዝ ኮሚቴ ቅሬታ ቀርቧል፣ ነገር ግን ውሳኔው አጥጋቢ አልነበረም ወይም በጊዜ አልተሰጠም። (A complaint was submitted to the institutional Grievance Handling Committee on [date], but the decision was unsatisfactory or not rendered in time.)",
           "citation": "Proc. 1064/2017 Art. 81(1)(e)",
-          "autoEvidence": [
-            "GrievanceSubmission"
-          ]
+          "autoEvidence": ["GrievanceSubmission"],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የውስጥ ቅሬታ ማቅረብ" }
         },
         {
           "id": "pub_serv_fact_promotion_denied",
           "label": "ቅሬታው (The Grievance)",
-          "legalText": "ይግባኝ ባዩ ከተመረጠው እጩ ከፍ ያለ ነጥብ ቢያስመዘግብም፣ የብቃት መርህን በመጣስ በሕገ-ወጥ መንገድ ዕድገት ተከልክሏል። (The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.)",
+          "legalText": "ይግባኝ ባዩ ከተመረጠው እጩ ከፍ ያለ ነጥብ ቢያስመዘግብም، የብቃት መርህን በመጣስ በሕገ-ወጥ መንገድ ዕድገት ተከልክሏል። (The Appellant was unlawfully denied a promotion despite scoring higher points than the selected candidate, in violation of the merit principle.)",
           "citation": "Proc. 1064/2017 Art. 13",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የተከለከለ እድገት" }
         },
         {
           "id": "pub_serv_fact_salary_increment_denied",
           "label": "ቅሬታው (The Grievance)",
           "legalText": "ይግባኝ ባዩ ሁሉንም የአፈጻጸም መስፈርቶች ቢያሟላም በሕገ-ወጥ መንገድ ወቅታዊ የደመወዝ ጭማሪ ተከልክሏል። (The Appellant was unlawfully denied a periodic salary increment despite meeting all performance requirements.)",
           "citation": "Proc. 1064/2017 Art. 81(1)(c)",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "የተከለከለ የደሞዝ ጭማሪ" }
         },
         {
           "id": "pub_serv_fact_acting_allowance_denied",
           "label": "ቅሬታው (The Grievance)",
           "legalText": "ይግባኝ ባዩ በከፍተኛ የሥራ መደብ በተጠባባቂነት አገልግሏል ነገር ግን ለዚያ ጊዜ በሕገ-ወጥ መንገድ የተጠባባቂ አበል ተከልክሏል። (The Appellant served in a higher position in an acting capacity but was unlawfully denied the acting allowance for that period.)",
           "citation": "Relevant Regulations",
-          "autoEvidence": []
+          "autoEvidence": [],
+           "rhetoric": { "intro": "በመጨረሻም،", "transition": "በተጨማሪም،", "summary_keyword": "የተከለከለ የተጠባባቂ አበል" }
         }
       ],
       "reliefs": [
@@ -261,5 +268,3 @@
     }
   }
 }
-
-    

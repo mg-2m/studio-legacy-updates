@@ -15,7 +15,7 @@
         ],
         "jurisdictionType": "Court of the person's domicile"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው በቋሚ የአእምሮ ሕመም ወይም በሌላ ምክንያት ጉዳዩን በራሱ መምራት በማይችልበት ጊዜ፣ በፍርድ ቤት ትዕዛዝ ከሕግ አንጻር ქმედუუნაროდ እንዲታወጅ እና ጉዳዩን የሚመራለት አስተዳዳሪ (Curator) እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው እግድ እንዲጣልበት የተጠየቀው ሰው በሚኖርበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም። ሰውየው ქმედუუნಾರოდ እስከሆነ ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የሕክምና ማስረጃ:** ግለሰቡ ጉዳዩን መምራት እንደማይችል የሚያረጋግጥ ከታወቀ የሕክምና ተቋም የተሰጠ የሕክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate) ማቅረብ ክሱን በእጅጉ ያጠናክራል።\n*   **ጥቅም ያለው ወገን፡** አመልካቹ የቅርብ ዘመድ፣ የትዳር አጋር ወይም ሌላ ሕጋዊ ጥቅም ያለው ወገን መሆን አለበት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው በቋሚ የአእምሮ ሕመም ወይም በሌላ ምክንያት ጉዳዩን በራሱ መምራት በማይችልበት ጊዜ፣ በፍርድ ቤት ትዕዛዝ ከሕግ አንጻር ქმედუუნაროდ እንዲታወጅ እና ጉዳዩን የሚመራለት አስተዳዳሪ (Curator) እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው እግድ እንዲጣልበት የተጠየቀው ሰው በሚኖርበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም። ሰውየው ქმედუუნაროდ እስከሆነ ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የሕክምና ማስረጃ:** ግለሰቡ ጉዳዩን መምራት እንደማይችል የሚያረጋግጥ ከታወቀ የሕክምና ተቋም የተሰጠ የሕክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate) ማቅረብ ክሱን በእጅጉ ያጠናክራል።\n*   **ጥቅም ያለው ወገን፡** አመልካቹ የቅርብ ዘመድ፣ የትዳር አጋር ወይም ሌላ ሕጋዊ ጥቅም ያለው ወገን መሆን አለበት።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (ዘመድ/ጥቅም ያለው ወገን) (Petitioner (Relative/Interested Party))",
         "respondent": "እግድ እንዲጣልበት የተጠየቀው ሰው (Interdicted Person (Respondent))"
@@ -28,21 +28,24 @@
           "citation": "Civ. Code Art. 339",
           "autoEvidence": [
             "MedicalBoardCertificate"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የችሎታ ማጣት" }
         },
         {
           "id": "status_fact_risk_of_loss",
           "label": "የችሎታ ማጣት (Incapacity)",
           "legalText": "የተጠሪው የችሎታ ማጣት ንብረቱን/መብቶቹን ለፈጣን ኪሳራ ወይም ብክነት ያጋልጣል። (The Respondent's incapacity exposes their property/rights to imminent loss or dissipation.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የንብረት መጥፋት ስጋት" }
         },
         {
           "id": "status_fact_relationship_claim",
           "label": "አስፈላጊነት (Necessity)",
           "legalText": "አቤቱታ አቅራቢው የተጠሪው የቅርብ ዘመድ ሲሆን ጉዳዮቹን ለመጠበቅ ሕጋዊ ጥቅም አለው። (The Petitioner is a close relative of the Respondent and has a legal interest in protecting their affairs.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ሕጋዊ ጥቅም" }
         }
       ],
       "reliefs": [
@@ -71,7 +74,7 @@
         "keywords": ["name change", "vital events", "VERA", "የስም ለውጥ", "ወሳኝ ኩነት"],
         "jurisdictionType": "Addis Ababa City First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው የመጀመሪያ ስሙን በሕጋዊ መንገድ ለመለወጥ ሲፈልግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአዋጅ 760/2012 አንቀጽ 13(2) መሰረት፣ ይህ ጉዳይ የሚታየው **በአዲስ አበባ ከተማ የመጀመሪያ ደረጃ ፍርድ ቤት** ወይም በክልሎች አቻ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ከባድ ምክንያት፡** ስሙን ለመለወጥ የሚያስገድድ በቂ እና ከባድ ምክንያት መኖሩን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የአሁኑን ስም የሚያሳይ መታወቂያ (IdentityCard)፣ የልደት የምስክር ወረቀት (BirthCertificate) እና ምክንያቱን የሚደግፍ ማንኛውም ማስረጃ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው የመጀመሪያ ስሙን በሕጋዊ መንገድ ለመለወጥ ሲፈልግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአዋጅ 760/2012 አንቀጽ 13(2) መሰረት، ይህ ጉዳይ የሚታየው **በአዲስ አበባ ከተማ የመጀመሪያ ደረጃ ፍርድ ቤት** ወይም በክልሎች አቻ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ከባድ ምክንያት፡** ስሙን ለመለወጥ የሚያስገድድ በቂ እና ከባድ ምክንያት መኖሩን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የአሁኑን ስም የሚያሳይ መታወቂያ (IdentityCard)، የልደት የምስክር ወረቀት (BirthCertificate) እና ምክንያቱን የሚደግፍ ማንኛውም ማስረጃ።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (Vital Events Registration Agency)"
@@ -82,7 +85,8 @@
           "label": "የለውጡ ምክንያት (Reason for Change)",
           "legalText": "አመልካቹ የአሁኑን ስሙን '[currentName]' ወደ '[newName]' ለመቀየር ይፈልጋል። ለዚህም በቂ ምክንያት አለው፤ ይህም '[reason]' ነው። (The Petitioner wishes to change their current name '[currentName]' to '[newName]' for a good cause, namely '[reason]'.)",
           "citation": "Proc. 760/2012 Art. 13",
-          "autoEvidence": ["IdentityCard", "BirthCertificate"]
+          "autoEvidence": ["IdentityCard", "BirthCertificate"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የስም ለውጥ ምክንያት" }
         }
       ],
       "reliefs": [
@@ -103,7 +107,7 @@
         "keywords": ["birth date correction", "civil record", "VERA", "የልደት ቀን ማስተካከያ"],
         "jurisdictionType": "First Instance Court of the applicant's domicile"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ በልደት የምስክር ወረቀት ወይም መታወቂያ ላይ የተመዘገበ የልደት ቀን በስህተት ሲጻፍ፣ ፍርድ ቤቱ እንዲያስተካክለው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ስህተት ያለበት ሰነድ (BirthCertificate) እና ትክክለኛውን ቀን የሚያረጋግጥ ሌላ ደጋፊ ሰነድ (ለምሳሌ የትምህርት ቤት ሰርተፍኬት)።\n*   **የአስተዳደር ጥያቄ፡** ፍርድ ቤት ከመሄድዎ በፊት ስህተቱን እንዲያስተካክል ለሚመለከተው አስተዳደራዊ አካል (ወሳኝ ኩነት) መጠየቅና እምቢታ ማግኘት ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ በልደት የምስክር ወረቀት ወይም መታወቂያ ላይ የተመዘገበ የልደት ቀን በስህተት ሲጻፍ، ፍርድ ቤቱ እንዲያስተካክለው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ስህተት ያለበት ሰነድ (BirthCertificate) እና ትክክለኛውን ቀን የሚያረጋግጥ ሌላ ደጋፊ ሰነድ (ለምሳሌ የትምህርት ቤት ሰርተፍኬት)።\n*   **የአስተዳደር ጥያቄ፡** ፍርድ ቤት ከመሄድዎ በፊት ስህተቱን እንዲያስተካክል ለሚመለከተው አስተዳደራዊ አካል (ወሳኝ ኩነት) መጠየቅና እምቢታ ማግኘት ያስፈልጋል።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (Vital Events Registration Agency)"
@@ -114,14 +118,16 @@
           "label": "ስህተቱ (The Error)",
           "legalText": "የአመልካቹ የልደት የምስክር ወረቀት የልደት ቀኑን '[incorrectDate]' በማለት በስህተት ይገልጻል፤ ትክክለኛው ግን '[correctDate]' ነው። (The Petitioner's Birth Certificate contains an error, stating the date of birth is '[incorrectDate]' instead of '[correctDate]'.)",
           "citation": "",
-          "autoEvidence": ["BirthCertificate", "IdentityCard"]
+          "autoEvidence": ["BirthCertificate", "IdentityCard"],
+           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የተሳሳተ የልደት ቀን" }
         },
         {
           "id": "status_fact_birth_date_proof",
           "label": "ስህተቱ (The Error)",
           "legalText": "ትክክለኛው ቀን በተያያዘው [secondaryDocument] ተረጋግጧል። (The correct date is proven by the attached [secondaryDocument].)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ትክክለኛው ቀን ማረጋገጫ" }
         }
       ],
       "reliefs": [
@@ -142,7 +148,7 @@
         "keywords": ["double record", "duplicate certificate", "civil record", "VERA", "የተደጋገመ መዝገብ"],
         "jurisdictionType": "First Instance Court of the applicant's domicile"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ለአንድ ሰው በስህተት ሁለት የተለያዩ ስሞች ወይም መረጃዎች ያሉት ሁለት የልደት የምስክር ወረቀት ሲኖር፣ አንዱ እንዲሰረዝና ትክክለኛው ብቻ እንዲቀር ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ሁለቱም የምስክር ወረቀቶች እና የትኛው ትክክል እንደሆነ የሚያስረዳ ማስረጃ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ለአንድ ሰው በስህተት ሁለት የተለያዩ ስሞች ወይም መረጃዎች ያሉት ሁለት የልደት የምስክር ወረቀት ሲኖር، አንዱ እንዲሰረዝና ትክክለኛው ብቻ እንዲቀር ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ሁለቱም የምስክር ወረቀቶች እና የትኛው ትክክል እንደሆነ የሚያስረዳ ማስረጃ።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (Vital Events Registration Agency)"
@@ -153,14 +159,16 @@
           "label": "የተደጋገመው መዝገብ (The Double Record)",
           "legalText": "ለአመልካች ሁለት የተለያዩ የልደት የምስክር ወረቀቶች በስህተት ተሰጥተዋል፤ አንዱ በስም '[nameOne]' እና ሌላው በስም '[nameTwo]'። (Two different birth certificates have been erroneously issued for the petitioner, one under the name '[nameOne]' and the other under '[nameTwo]'.)",
           "citation": "",
-          "autoEvidence": ["BirthCertificate"]
+          "autoEvidence": ["BirthCertificate"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የተደጋገመ መዝገብ" }
         },
         {
           "id": "status_fact_correct_record_identified",
           "label": "የተደጋገመው መዝገብ (The Double Record)",
           "legalText": "ትክክለኛው እና ጥቅም ላይ መዋል ያለበት መዝገብ በስም '[correctName]' የተመዘገበው ነው። (The correct and exclusively used record is the one registered under the name '[correctName]'.)",
           "citation": "",
-          "autoEvidence": ["IdentityCard"]
+          "autoEvidence": ["IdentityCard"],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ትክክለኛ መዝገብ" }
         }
       ],
       "reliefs": [
@@ -181,7 +189,7 @@
         "keywords": ["ethiopian origin id", "yellow card", "descent", "immigration", "የትውልደ ኢትዮጵያዊ", "ቢጫ ካርድ"],
         "jurisdictionType": "Administrative (Immigration and Citizenship Service)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ የኢትዮጵያዊነት ዜግነታቸውን የቀየሩ ነገር ግን ትውልዳቸው ኢትዮጵያዊ የሆኑ ሰዎች፣ በኢትዮጵያ ውስጥ የተለያዩ መብቶችን የሚያጎናጽፋቸውን የትውልደ ኢትዮጵያዊ መታወቂያ (ቢጫ ካርድ) እንዲሰጣቸው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ በፍርድ ቤት ሳይሆን **በኢሚግሬሽን እና ዜግነት አገልግሎት** ጽ/ቤት የሚፈጸም አስተዳደራዊ ሂደት ነው። ነገር ግን አገልግሎቱ ያለ በቂ ምክንያት እምቢ ሲል ጉዳዩን ወደ ፍርድ ቤት መውሰድ ይቻላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ትውልደ ኢትዮጵያዊ መሆንዎን የሚያረጋግጥ ማስረጃ (የድሮ ፓስፖርት፣ የወላጅ የልደት ሰርተፍኬት) እና የአሁኑ የውጭ ዜግነት ፓስፖርት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ የኢትዮጵያዊነት ዜግነታቸውን የቀየሩ ነገር ግን ትውልዳቸው ኢትዮጵያዊ የሆኑ ሰዎች، በኢትዮጵያ ውስጥ የተለያዩ መብቶችን የሚያጎናጽፋቸውን የትውልደ ኢትዮጵያዊ መታወቂያ (ቢጫ ካርድ) እንዲሰጣቸው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ በፍርድ ቤት ሳይሆን **በኢሚግሬሽን እና ዜግነት አገልግሎት** ጽ/ቤት የሚፈጸም አስተዳደራዊ ሂደት ነው። ነገር ግን አገልግሎቱ ያለ በቂ ምክንያት እምቢ ሲል ጉዳዩን ወደ ፍርድ ቤት መውሰድ ይቻላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ትውልደ ኢትዮጵያዊ መሆንዎን የሚያረጋግጥ ማስረጃ (የድሮ ፓስፖርት، የወላጅ የልደት ሰርተፍኬት) እና የአሁኑ የውጭ ዜግነት ፓስፖርት።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "የኢሚግሬሽን እና ዜግነት አገልግሎት (Immigration and Citizenship Service)"
@@ -192,14 +200,16 @@
           "label": "የትውልድ ሁኔታ (Origin Status)",
           "legalText": "አመልካቹ በአዋጅ ቁጥር 270/2002 እንደተገለጸው ትውልደ ኢትዮጵያዊ ነው። ይህንንም የሚያረጋግጥ '[proofDocument]' ማስረጃ አለው። (The applicant is of Ethiopian origin as defined by Proclamation 270/2002, proven by '[proofDocument]'.)",
           "citation": "Proc. 270/2002 Art. 2(1)",
-          "autoEvidence": ["BirthCertificate", "IdentityCard"]
+          "autoEvidence": ["BirthCertificate", "IdentityCard"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ትውልደ ኢትዮጵያዊነት" }
         },
         {
           "id": "status_fact_foreign_nationality",
           "label": "የትውልድ ሁኔታ (Origin Status)",
           "legalText": "አመልካቹ በአሁኑ ጊዜ የ [countryName] ዜጋ ነው። (The applicant is currently a citizen of [countryName].)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የውጭ ዜግነት" }
         }
       ],
       "reliefs": [
@@ -237,14 +247,16 @@
           "label": "የመጥፋት እውነታ (Fact of Absence)",
           "legalText": "[personName] የተባለው ሰው ጠፍቶ ከአምስት ዓመታት በላይ ወሬው አልተሰማም። (The named person, [personName], has disappeared and not been heard from for more than five years.)",
           "citation": "Civ. Code Art. 158",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የረጅም ጊዜ መጥፋት" }
         },
         {
           "id": "status_fact_domicile_proof",
           "label": "የመጥፋት እውነታ (Fact of Absence)",
           "legalText": "የሰውየው የመጨረሻ የታወቀ መኖሪያ [lastAddress] ነበር። (The person's last known domicile was [lastAddress].)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የመጨረሻ መኖሪያ" }
         },
         {
           "id": "status_fact_public_notice_given",
@@ -253,7 +265,8 @@
           "citation": "",
           "autoEvidence": [
             "PublicNoticeOfAbsence"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በተጨማሪ،", "summary_keyword": "የጋዜጣ ማስታወቂያ" }
         }
       ],
       "reliefs": [
@@ -276,7 +289,7 @@
     },
     "app_status_provisional_curator": {
       "documentTitle": "ጊዜያዊ አስተዳዳሪ/ጠባቂ እንዲሾምለት ማመልከቻ (Application for Appointment of Provisional Curator/Administrator)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (እግድ) እና የፍትሐ ብሔር ሕግ አንቀጽ 154/343 (Art. 154 CPC &amp; Civ. Code Art. 154/343)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (እግድ) እና የፍትሐ ብሔር ሕግ አንቀጽ 154/343 (Art. 154 CPC & Civ. Code Art. 154/343)",
       "meta": {
         "keywords": [
           "provisional curator",
@@ -287,7 +300,7 @@
         ],
         "jurisdictionType": "Court handling the main case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ዋናው የእግድ ወይም የመጥፋት አቤቱታ በፍርድ ቤት እየታየ ባለበት ወቅት፣ የሚመለከተው ሰው ጉዳዩን መምራት ባለመቻሉ ንብረቱ ለአደጋ እንዳይጋለጥ ጊዜያዊ አስተዳዳሪ እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው አቤቱታ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት፡** የንብረቱ ለአደጋ መጋለጥ አስቸኳይ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የእግድ ወይም የመጥፋት አቤቱታ በፍርድ ቤት እየታየ ባለበት ወቅት፣ የሚመለከተው ሰው ጉዳዩን መምራት ባለመቻሉ ንብረቱ ለአደጋ እንዳይጋለጥ ጊዜያዊ አስተዳዳሪ እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው አቤቱታ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት፡** የንብረቱ ለአደጋ መጋለጥ አስቸኳይ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -298,14 +311,16 @@
           "label": "አስቸኳይነት (Urgency)",
           "legalText": "ሰውየው ወዲያውኑ እርምጃ መውሰድ ባለመቻሉ ንብረቱ ያለአግባብ ጥቅም ላይ ሊውል ወይም ሊጠፋ ይችላል። (Due to the immediate inability of the person to act, their property is at risk of misuse or loss.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "አስቸኳይ አስፈላጊነት" }
         },
         {
           "id": "app_status_fact_petition_pending",
           "label": "አስቸኳይነት (Urgency)",
           "legalText": "ዋናው የእግድ/የመጥፋት አቤቱታ ቀርቦ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው። (A main petition for Interdiction/Absence has been filed and is currently pending.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "በሂደት ላይ ያለ አቤቱታ" }
         }
       ],
       "reliefs": [
@@ -332,7 +347,7 @@
         ],
         "jurisdictionType": "Court that ordered the interdiction"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ቀደም ሲል በፍርድ ቤት ትዕዛዝ ქმედუუნಾರოდ የተባለ ሰው፣ የችግሩ መንስኤ ሲወገድ (ለምሳሌ ከህመም ሲያገግም)፣ እግዱ እንዲነሳለት እና ሙሉ ሕጋዊ ችሎታው እንዲመለስለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nእግዱን ያዘዘው ፍርድ ቤት ራሱ እግዱን የማንሳት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የእግዱ መንስኤ መወገዱን የሚያረጋግጥ የህክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ቀደም ሲል በፍርድ ቤት ትዕዛዝ ქმედუუნაროდ የተባለ ሰው፣ የችግሩ መንስኤ ሲወገድ (ለምሳሌ ከህመም ሲያገግም)፣ እግዱ እንዲነሳለት እና ሙሉ ሕጋዊ ችሎታው እንዲመለስለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nእግዱን ያዘዘው ፍርድ ቤት ራሱ እግዱን የማንሳት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የእግዱ መንስኤ መወገዱን የሚያረጋግጥ የህክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate)።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "ተጠሪ (Respondent)"
@@ -345,7 +360,8 @@
           "citation": "Civ. Code Art. 358",
           "autoEvidence": [
             "MedicalBoardCertificate"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የእግድ ምክንያት መወገድ" }
         }
       ],
       "reliefs": [

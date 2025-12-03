@@ -15,7 +15,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ አንድ ተከሳሽ የፈጸመው ድርጊት በራሱ ወይም በሶስተኛ ወገን ላይ የተቃጣን ሕገ-ወጥ ጥቃት ለመመከት የተደረገ በመሆኑ ሕጋዊ ነው ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** ጥቃቱ ሕገ-ወጥ፣ የቅርብ እና እርምጃው የተመጣጠነ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የጥቃቱን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የፖሊስ ሪፖርት)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ አንድ ተከሳሽ የፈጸመው ድርጊት በራሱ ወይም በሶስተኛ ወገን ላይ የተቃጣን ሕገ-ወጥ ጥቃት ለመመከት የተደረገ በመሆኑ ሕጋዊ ነው ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   ዋና የሕግ መመዘኛ (Core Legal Test): ጥቃቱ ሕገ-ወጥ፣ የቅርብ እና እርምጃው የተመጣጠነ መሆኑን ማሳየት።\n*   ማስረጃ (Required Evidence): የጥቃቱን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የፖሊስ ሪፖርት)።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -23,45 +23,61 @@
       "facts": [
         {
           "id": "crim_fact_imminent_unlawful_attack",
-          "label": "The Nature of the Attack (የጥቃቱ ባሕሪ)",
+          "label": "የጥቃቱ ባሕሪ (The Nature of the Attack)",
           "legalText": "The Defendant was facing an actual, imminent, and unlawful attack upon their life, limb, or property. (ተከሳሹ በሕይወቱ، በአካሉ ወይም በንብረቱ ላይ ሊደርስ ያለ ትክክለኛ፣ የቅርብ እና ሕገ-ወጥ ጥቃት ገጥሞት ነበር።)",
           "citation": "Crim. Code Art. 79(1)",
           "autoEvidence": [
             "ProofOfImminentDanger"
           ],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ሕገ-ወጥ ጥቃት" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ሕገ-ወጥ ጥቃት"
+          }
         },
         {
           "id": "crim_fact_defence_of_third_party",
-          "label": "The Nature of the Attack (የጥቃቱ ባሕሪ)",
+          "label": "የጥቃቱ ባሕሪ (The Nature of the Attack)",
           "legalText": "The Defendant acted to defend a third party who was also facing an imminent, unlawful attack. (ተከሳሹ ጥቃት ሊደርስበት ያለን ሌላ ሰው ለመከላከል እርምጃ ወስዷል።)",
           "citation": "Crim. Code Art. 79(2)",
           "autoEvidence": [
             "ProofOfImminentDanger",
             "WitnessStatements"
           ],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም በላይ،", "summary_keyword": "ሶስተኛ ወገንን መከላከል" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "ሶስተኛ ወገንን መከላከል"
+          }
         },
         {
           "id": "crim_fact_no_other_means",
-          "label": "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
+          "label": "ምጥጥን እና አስፈላጊነት (Proportionality and Necessity)",
           "legalText": "The act of defence was necessary because there was no other possible means of preventing the attack. (ጥቃቱን ለመከላከል ሌላ አማራጭ መንገድ ስላልነበረው የመከላከል ተግባሩ አስፈላጊ ነበር።)",
           "citation": "Crim. Code Art. 80(1)",
           "autoEvidence": [
             "WitnessStatements"
           ],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የአማራጭ መንገድ አለመኖር" }
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የአማራጭ መንገድ አለመኖር"
+          }
         },
         {
           "id": "crim_fact_proportionality",
-          "label": "Proportionality and Necessity (ምጥጥን እና አስፈላጊነት)",
+          "label": "ምጥጥን እና አስፈላጊነት (Proportionality and Necessity)",
           "legalText": "The means used for defence were proportional to the gravity of the attack and the threatened harm. (ለመከላከል ጥቅም ላይ የዋለው ዘዴ ከጥቃቱ ክብደት እና ከሚሰጋው ጉዳት ጋር የተመጣጣኝ ነበር።)",
           "citation": "Crim. Code Art. 80(2)",
           "autoEvidence": [
             "ProofOfImminentDanger",
             "WitnessStatements"
           ],
-          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የተመጣጠነ እርምጃ" }
+          "rhetoric": {
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም ባሻገር،",
+            "summary_keyword": "የተመጣጠነ እርምጃ"
+          }
         }
       ],
       "reliefs": [
@@ -89,7 +105,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ወንጀሉን በፈጸመበት ወቅት በነበረበት ከባድ የአእምሮ ሕመም ወይም የአእምሮ ዝግመት ምክንያት የድርጊቱን የወንጀልነት ባህሪ ለመረዳት ወይም ድርጊቱን ለመቆጣጠር ባለመቻሉ ተጠያቂ አይደለም ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** በድርጊቱ ጊዜ የነበረ ከባድ የአእምሮ ሕመም እና የድርጊቱን ባህሪ ለመረዳት አለመቻል።\n*   **ማስረጃ (Required Evidence):** ከተረጋገጠ የሕክምና ተቋም የተሰጠ የአእምሮ ሁኔታ ምርመራ ሪፖርት (MedicalCertificateMentalState) ወሳኝ ነው።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ወንጀሉን በፈጸመበት ወቅት በነበረበት ከባድ የአእምሮ ሕመም ወይም የአእምሮ ዝግመት ምክንያት የድርጊቱን የወንጀልነት ባህሪ ለመረዳት ወይም ድርጊቱን ለመቆጣጠር ባለመቻሉ ተጠያቂ አይደለም ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   ዋና የሕግ መመዘኛ (Core Legal Test): በድርጊቱ ጊዜ የነበረ ከባድ የአእምሮ ሕመም እና የድርጊቱን ባህሪ ለመረዳት አለመቻል።\n*   ማስረጃ (Required Evidence): ከተረጋገጠ የሕክምና ተቋም የተሰጠ የአእምሮ ሁኔታ ምርመራ ሪፖርት (MedicalCertificateMentalState) ወሳኝ ነው።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -97,44 +113,60 @@
       "facts": [
         {
           "id": "crim_fact_insane_incapable_understanding",
-          "label": "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
+          "label": "በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ (Mental State at the Time of Offence)",
           "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of understanding the criminal nature of the act. (በድርጊቱ ጊዜ ተከሳሹ የድርጊቱን የወንጀልነት ባህሪ ለመረዳት በማይችል ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
           "citation": "Crim. Code Art. 50(1)",
           "autoEvidence": [
             "MedicalCertificateMentalState"
           ],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የአእምሮ ሕመም" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የአእምሮ ሕመም"
+          }
         },
         {
           "id": "crim_fact_insane_incapable_control",
-          "label": "Mental State at the Time of Offence (በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ)",
+          "label": "በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ (Mental State at the Time of Offence)",
           "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of controlling their conduct. (በድርጊቱ ጊዜ ተከሳሹ አካሄዱን መቆጣጠር በማይችልበት ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
           "citation": "Crim. Code Art. 50(1)",
           "autoEvidence": [
             "MedicalCertificateMentalState"
           ],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ራስን መቆጣጠር አለመቻል" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "ራስን መቆጣጠር አለመቻል"
+          }
         },
         {
           "id": "crim_fact_intoxication_non_culpable",
-          "label": "Intoxication (በስካር ሁኔታ)",
+          "label": "በስካር ሁኔታ (Intoxication)",
           "legalText": "The Defendant was in a state of involuntary or non-culpable intoxication (e.g., administered by force or error) that led to the lack of culpability. (ተከሳሹ በግዴታ ወይም በስህተት በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ሲሆን ይህም ተጠያቂ እንዳይሆን አድርጎታል።)",
           "citation": "Crim. Code Art. 54",
           "autoEvidence": [
             "WitnessStatementsIntoxication",
             "MedicalCertificateMentalState"
           ],
-          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "በተጨማሪም،", "summary_keyword": "ያለፍላጎት ስካር" }
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "ያለፍላጎት ስካር"
+          }
         },
         {
           "id": "crim_fact_intoxication_culpable_negligence",
-          "label": "Intoxication (በስካር ሁኔታ)",
+          "label": "በስካር ሁኔታ (Intoxication)",
           "legalText": "The Defendant was in a state of culpable intoxication, but the offense committed was only foreseeable as a light offense (for mitigation). (ተከሳሹ በግዴታ በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ቢሆንም የተፈፀመው ወንጀል በቀላል ደረጃ የሚገመት ነበር (ለቅጣት ማቅለያ)።)",
           "citation": "Crim. Code Art. 54(3)",
           "autoEvidence": [
             "WitnessStatementsIntoxication"
           ],
-          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "በተጨማሪም،", "summary_keyword": "ቸልተኛ ስካር" }
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "ቸልተኛ ስካር"
+          }
         }
       ],
       "reliefs": [
@@ -162,7 +194,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር، ተከሳሹ ወንጀሉን የፈጸመው ከራሱ ወይም ከሌላ ሰው ላይ ሊደርስ የነበረን የበለጠ ጉዳት ለመከላከል ሲል እንደሆነ እና ድርጊቱ አስፈላጊ እንደነበር ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ዋና የሕግ መመዘኛ (Core Legal Test):** አደጋው በጣም አስጊ እና ሊቀር የማይችል መሆኑን እና የተጠበቀው ጥቅም ከተጣሰው ጥቅም የበለጠ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የአደጋውን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የቦታው ሁኔታ)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር، ተከሳሹ ወንጀሉን የፈጸመው ከራሱ ወይም ከሌላ ሰው ላይ ሊደርስ የነበረን የበለጠ ጉዳት ለመከላከል ሲል እንደሆነ እና ድርጊቱ አስፈላጊ እንደነበር ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   ዋና የሕግ መመዘኛ (Core Legal Test): አደጋው በጣም አስጊ እና ሊቀር የማይችል መሆኑን እና የተጠበቀው ጥቅም ከተጣሰው ጥቅም የበለጠ መሆኑን ማሳየት።\n*   ማስረጃ (Required Evidence): የአደጋውን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የቦታው ሁኔታ)።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -170,43 +202,59 @@
       "facts": [
         {
           "id": "crim_fact_imminent_threat_necessity",
-          "label": "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
+          "label": "አደጋው እና የጉዳት ምርጫ (The Threat and Choice of Harm)",
           "legalText": "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ، በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
           "citation": "Crim. Code Art. 81(1)",
           "autoEvidence": [
             "ProofOfImminentDanger"
           ],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የቅርብ አደጋ" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የቅርብ አደጋ"
+          }
         },
         {
           "id": "crim_fact_interest_protected_greater",
-          "label": "The Threat and Choice of Harm (አደጋው እና የጉዳት ምርጫ)",
+          "label": "አደጋው እና የጉዳት ምርጫ (The Threat and Choice of Harm)",
           "legalText": "The interest protected by the act (the interest saved) was evidently of a greater or equal value than the interest infringed (the harm caused). (በድርጊቱ የተጠበቀው ጥቅም (የተረፈው) ከተጎዳው ጥቅም (ከተፈጠረው ጉዳት) የበለጠ ወይም እኩል ዋጋ ነበረው።)",
           "citation": "Crim. Code Art. 81(1)",
           "autoEvidence": [
             "WitnessStatements"
           ],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የበለጠ ጥቅም" }
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "የበለጠ ጥቅም"
+          }
         },
         {
           "id": "crim_fact_order_of_superior",
-          "label": "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
+          "label": "ኦፊሴላዊ ትዕዛዝ / ፈቃድ (Official Order / Consent)",
           "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል፣ እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
           "citation": "Crim. Code Art. 82",
           "autoEvidence": [
             "OfficialOrderDocument"
           ],
-          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ኦፊሴላዊ ትዕዛዝ" }
+          "rhetoric": {
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም ባሻገር،",
+            "summary_keyword": "ኦፊሴላዊ ትዕዛዝ"
+          }
         },
         {
           "id": "crim_fact_victim_consent_valid",
-          "label": "Official Order / Consent (ኦፊሴላዊ ትዕዛዝ / ፈቃድ)",
+          "label": "ኦፊሴላዊ ትዕዛዝ / ፈቃድ (Official Order / Consent)",
           "legalText": "The victim freely and clearly consented to the minor bodily injury or damage to property, where such consent is valid under the law. (ተጎጂው በሕግ ተቀባይነት ባለው መንገድ ለደረሰበት ቀላል የአካል ጉዳት ወይም የንብረት ጉዳት በነጻ ፈቃዱን ሰጥቷል።)",
           "citation": "Crim. Code Art. 83",
           "autoEvidence": [
             "VictimConsentForm"
           ],
-          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የተጎጂ ፈቃድ" }
+          "rhetoric": {
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም ባሻገር،",
+            "summary_keyword": "የተጎጂ ፈቃድ"
+          }
         }
       ],
       "reliefs": [
@@ -241,7 +289,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ጥፋተኛ ሆኖ ከተገኘ በኋላ፣ ፍርድ ቤቱ ቅጣቱን ሲወስን የተለያዩ የቅጣት ማቅለያ ሁኔታዎችን ከግምት ውስጥ እንዲያስገባ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበትና የጥፋተኝነት ውሳኔ በተሰጠበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ክርክር የሚቀርበው የጥፋተኝነት ውሳኔ ከተሰጠ በኋላ በቅጣት ውሳኔ ችሎት (sentencing hearing) ወቅት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የማቅለያ ሁኔታዎችን የሚያረጋግጡ ማናቸውም ማስረጃዎች (ለምሳሌ፣ የተጎጂውን ይቅርታ የሚያሳይ ሰነድ፣ የካሳ ክፍያ ደረሰኝ፣ የተከሳሹን መልካም ስነምግባር የሚያሳይ ማስረጃ)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ጥፋተኛ ሆኖ ከተገኘ በኋላ፣ ፍርድ ቤቱ ቅጣቱን ሲወስን የተለያዩ የቅጣት ማቅለያ ሁኔታዎችን ከግምት ውስጥ እንዲያስገባ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበትና የጥፋተኝነት ውሳኔ በተሰጠበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ክርክር የሚቀርበው የጥፋተኝነት ውሳኔ ከተሰጠ በኋላ በቅጣት ውሳኔ ችሎት (sentencing hearing) ወቅት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   ማስረጃ (Required Evidence): የማቅለያ ሁኔታዎችን የሚያረጋግጡ ማናቸውም ማስረጃዎች (ለምሳሌ፣ የተጎጂውን ይቅርታ የሚያሳይ ሰነድ፣ የካሳ ክፍያ ደረሰኝ፣ የተከሳሹን መልካም ስነምግባር የሚያሳይ ማስረጃ)።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -249,47 +297,67 @@
       "facts": [
         {
           "id": "crim_mitigation_honorable_motive",
-          "label": "General Mitigating Circumstances (አጠቃላይ የቅጣት ማቅለያ ሁኔታዎች)",
+          "label": "አጠቃላይ የቅጣት ማቅለያ ሁኔታዎች (General Mitigating Circumstances)",
           "legalText": "The Defendant acted from honorable motives or in response to a grave and unjust provocation. (ተከሳሹ ድርጊቱን የፈጸመው ከክቡር ዓላማ በመነሳት ወይም ለከባድ እና ኢ-ፍትሃዊ ቁጣ ምላሽ ለመስጠት ነው።)",
           "citation": "Crim. Code Art. 88(1)(a)",
           "autoEvidence": [],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ክቡር ዓላማ" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ክቡር ዓላማ"
+          }
         },
         {
           "id": "crim_mitigation_distress",
-          "label": "General Mitigating Circumstances (አጠቃላይ የቅጣት ማቅለያ ሁኔታዎች)",
+          "label": "አጠቃላይ የቅጣት ማቅለያ ሁኔታዎች (General Mitigating Circumstances)",
           "legalText": "The Defendant was in a state of profound distress, destitution, or desperation at the time of the offense. (ተከሳሹ ወንጀሉን በፈጸመበት ጊዜ በከፍተኛ ጭንቀት፣ ችግር ወይም ተስፋ መቁረጥ ውስጥ ነበር።)",
           "citation": "Crim. Code Art. 88(1)(b)",
           "autoEvidence": [],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም በላይ،", "summary_keyword": "ከፍተኛ ጭንቀት" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "ከፍተኛ ጭንቀት"
+          }
         },
         {
           "id": "crim_mitigation_repentance",
-          "label": "Post-Offense Conduct (ከወንጀሉ በኋላ ያለ ባህሪ)",
+          "label": "ከወንጀሉ በኋላ ያለ ባህሪ (Post-Offense Conduct)",
           "legalText": "The Defendant has shown sincere repentance, particularly by making reparation for the damage caused. (ተከሳሹ በተለይም የፈጠረውን ጉዳት በመጠገን ልባዊ ጸጸቱን አሳይቷል።)",
           "citation": "Crim. Code Art. 88(1)(d)",
           "autoEvidence": [
             "PaymentReceipt"
           ],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "ልባዊ ጸጸት" }
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "ልባዊ ጸጸት"
+          }
         },
         {
           "id": "crim_mitigation_youth",
-          "label": "Personal Circumstances (የግል ሁኔታዎች)",
+          "label": "የግል ሁኔታዎች (Personal Circumstances)",
           "legalText": "The Defendant is a young person whose criminal responsibility is mitigated on account of their age. (ተከሳሹ በእድሜው ምክንያት የወንጀል ተጠያቂነቱ የተቀነሰ ወጣት ነው።)",
           "citation": "Crim. Code Art. 52",
           "autoEvidence": [
             "BirthCertificate"
           ],
-          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የወጣትነት ዕድሜ" }
+          "rhetoric": {
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "የወጣትነት ዕድሜ"
+          }
         },
         {
           "id": "crim_mitigation_clean_record",
-          "label": "Personal Circumstances (የግል ሁኔታዎች)",
+          "label": "የግል ሁኔታዎች (Personal Circumstances)",
           "legalText": "The Defendant has a clean prior criminal record and has displayed good conduct before and after the offense. (ተከሳሹ ከዚህ ቀደም የወንጀል ሪከርድ የሌለው ሲሆን ከወንጀሉ በፊት እና በኋላ መልካም ስነምግባር አሳይቷል።)",
           "citation": "",
           "autoEvidence": [],
-          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ንጹህ መዝገብ" }
+          "rhetoric": {
+            "intro": "በመጨረሻም،",
+            "transition": "ከዚህም ባሻገር،",
+            "summary_keyword": "ንጹህ መዝገብ"
+          }
         }
       ],
       "reliefs": [
@@ -317,7 +385,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ መቃወሚያ፣ ዐቃቤ ሕግ ያቀረበው የወንጀል ክስ በፍሬ ነገር ደረጃ ከመታየቱ በፊት በሕግ አግባብ ውድቅ መሆን አለበት ብሎ ለመከራከር ያገለግላል። ይህም በይርጋ፣ በዳኝነት ስልጣን እጦት ወይም በሌሎች የሥነ-ሥርዓት ጉድለቶች ላይ የተመሰረተ ሊሆን ይችላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nመቃወሚያው የሚቀርበው የወንጀል ክስ በቀረበበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበወንጀለኛ መቅጫ ሥነ ሥርዓት ሕግ አንቀጽ 130(2) መሰረት፣ የመጀመሪያ ደረጃ መቃወሚያዎች ክሱ ከተነበበ በኋላ ወዲያውኑ መቅረብ አለባቸው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የመቃወሚያውን ምክንያት የሚደግፍ ማንኛውም ማስረጃ (ለምሳሌ፣ ክሱ በይርጋ እንደታገደ ለማሳየት የቀን ማስረጃ፣ ወይም በሌላ ፍርድ ቤት ቀደም ሲል ውሳኔ እንደተሰጠበት ለማሳየት የፍርድ ቅጂ)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ መቃወሚያ፣ ዐቃቤ ሕግ ያቀረበው የወንጀል ክስ በፍሬ ነገር ደረጃ ከመታየቱ በፊት በሕግ አግባብ ውድቅ መሆን አለበት ብሎ ለመከራከር ያገለግላል። ይህም በይርጋ፣ በዳኝነት ስልጣን እጦት ወይም በሌሎች የሥነ-ሥርዓት ጉድለቶች ላይ የተመሰረተ ሊሆን ይችላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nመቃወሚያው የሚቀርበው የወንጀል ክስ በቀረበበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበወንጀለኛ መቅጫ ሥነ ሥርዓት ሕግ አንቀጽ 130(2) መሰረት፣ የመጀመሪያ ደረጃ መቃወሚያዎች ክሱ ከተነበበ በኋላ ወዲያውኑ መቅረብ አለባቸው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   ማስረጃ (Required Evidence): የመቃወሚያውን ምክንያት የሚደግፍ ማንኛውም ማስረጃ (ለምሳሌ፣ ክሱ በይርጋ እንደታገደ ለማሳየት የቀን ማስረጃ፣ ወይም በሌላ ፍርድ ቤት ቀደም ሲል ውሳኔ እንደተሰጠበት ለማሳየት የፍርድ ቅጂ)።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -325,37 +393,53 @@
       "facts": [
         {
           "id": "crim_objection_limitation",
-          "label": "Grounds for Objection (የመቃወሚያ ምክንያቶች)",
+          "label": "የመቃወሚያ ምክንያቶች (Grounds for Objection)",
           "legalText": "The right to prosecute the offense is barred by the period of limitation as prescribed by the Criminal Code. (ወንጀሉን ለመክሰስ ያለው መብት በወንጀል ሕጉ በተደነገገው የይርጋ ጊዜ ገደብ ታግዷል።)",
           "citation": "Crim. Proc. Code Art. 131(1)(d)",
           "autoEvidence": [],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የይርጋ ጊዜ ገደብ" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የይርጋ ጊዜ ገደብ"
+          }
         },
         {
           "id": "crim_objection_double_jeopardy",
-          "label": "Grounds for Objection (የመቃወሚያ ምክንያቶች)",
+          "label": "የመቃወሚያ ምክንያቶች (Grounds for Objection)",
           "legalText": "The Defendant has already been tried and acquitted or convicted for the same offense (res judicata / double jeopardy). (ተከሳሹ ቀደም ሲል በተመሳሳይ ወንጀል ተከሶ በነጻ ተሰናብቷል ወይም ጥፋተኛ ሆኖ ተፈርዶበታል።)",
           "citation": "Crim. Proc. Code Art. 131(1)(f)",
           "autoEvidence": [
             "CopyofDivorceJudgment"
           ],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "ከዚህም በላይ،", "summary_keyword": "ድጋሚ ክስ" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "ድጋሚ ክስ"
+          }
         },
         {
           "id": "crim_objection_no_jurisdiction",
-          "label": "Grounds for Objection (የመቃወሚያ ምክንያቶች)",
+          "label": "የመቃወሚያ ምክንያቶች (Grounds for Objection)",
           "legalText": "This Honorable Court lacks material or local jurisdiction to hear the charge. (ይህ የተከበረ ፍርድ ቤት ክሱን ለማየት የፍሬ ነገር ወይም የአካባቢ የዳኝነት ስልጣን የለውም።)",
           "citation": "Crim. Proc. Code Art. 131(1)(b)",
           "autoEvidence": [],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የዳኝነት ስልጣን እጦት" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የዳኝነት ስልጣን እጦት"
+          }
         },
         {
           "id": "crim_objection_charge_defective",
-          "label": "Grounds for Objection (የመቃወሚያ ምክንያቶች)",
+          "label": "የመቃወሚያ ምክንያቶች (Grounds for Objection)",
           "legalText": "The charge as framed is defective; it does not state an offense known to law or is vague and uncertain. (ክሱ እንደተቀረጸው ጉድለት ያለበት ነው፤ በሕግ የሚታወቅ ወንጀልን አይገልጽም ወይም ግልጽ ያልሆነ እና እርግጠኛ ያልሆነ ነው።)",
           "citation": "Crim. Proc. Code Art. 131(1)(a)",
           "autoEvidence": [],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ጉድለት ያለበት ክስ" }
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "ከዚህም ባሻገር،",
+            "summary_keyword": "ጉድለት ያለበት ክስ"
+          }
         }
       ],
       "reliefs": [
@@ -371,3 +455,5 @@
     }
   }
 }
+
+    

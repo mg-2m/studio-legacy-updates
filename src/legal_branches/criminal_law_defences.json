@@ -28,7 +28,8 @@
           "citation": "Crim. Code Art. 79(1)",
           "autoEvidence": [
             "ProofOfImminentDanger"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ሕገ-ወጥ ጥቃት" }
         },
         {
           "id": "crim_fact_defence_of_third_party",
@@ -38,7 +39,8 @@
           "autoEvidence": [
             "ProofOfImminentDanger",
             "WitnessStatements"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም በላይ،", "summary_keyword": "ሶስተኛ ወገንን መከላከል" }
         },
         {
           "id": "crim_fact_no_other_means",
@@ -47,7 +49,8 @@
           "citation": "Crim. Code Art. 80(1)",
           "autoEvidence": [
             "WitnessStatements"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የአማራጭ መንገድ አለመኖር" }
         },
         {
           "id": "crim_fact_proportionality",
@@ -57,7 +60,8 @@
           "autoEvidence": [
             "ProofOfImminentDanger",
             "WitnessStatements"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የተመጣጠነ እርምጃ" }
         }
       ],
       "reliefs": [
@@ -98,7 +102,8 @@
           "citation": "Crim. Code Art. 50(1)",
           "autoEvidence": [
             "MedicalCertificateMentalState"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የአእምሮ ሕመም" }
         },
         {
           "id": "crim_fact_insane_incapable_control",
@@ -107,7 +112,8 @@
           "citation": "Crim. Code Art. 50(1)",
           "autoEvidence": [
             "MedicalCertificateMentalState"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ራስን መቆጣጠር አለመቻል" }
         },
         {
           "id": "crim_fact_intoxication_non_culpable",
@@ -117,7 +123,8 @@
           "autoEvidence": [
             "WitnessStatementsIntoxication",
             "MedicalCertificateMentalState"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "በተጨማሪም،", "summary_keyword": "ያለፍላጎት ስካር" }
         },
         {
           "id": "crim_fact_intoxication_culpable_negligence",
@@ -126,7 +133,8 @@
           "citation": "Crim. Code Art. 54(3)",
           "autoEvidence": [
             "WitnessStatementsIntoxication"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "በተጨማሪም،", "summary_keyword": "ቸልተኛ ስካር" }
         }
       ],
       "reliefs": [
@@ -167,7 +175,8 @@
           "citation": "Crim. Code Art. 81(1)",
           "autoEvidence": [
             "ProofOfImminentDanger"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የቅርብ አደጋ" }
         },
         {
           "id": "crim_fact_interest_protected_greater",
@@ -176,7 +185,8 @@
           "citation": "Crim. Code Art. 81(1)",
           "autoEvidence": [
             "WitnessStatements"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የበለጠ ጥቅም" }
         },
         {
           "id": "crim_fact_order_of_superior",
@@ -185,7 +195,8 @@
           "citation": "Crim. Code Art. 82",
           "autoEvidence": [
             "OfficialOrderDocument"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ኦፊሴላዊ ትዕዛዝ" }
         },
         {
           "id": "crim_fact_victim_consent_valid",
@@ -194,7 +205,8 @@
           "citation": "Crim. Code Art. 83",
           "autoEvidence": [
             "VictimConsentForm"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የተጎጂ ፈቃድ" }
         }
       ],
       "reliefs": [
@@ -240,14 +252,16 @@
           "label": "General Mitigating Circumstances (አጠቃላይ የቅጣት ማቅለያ ሁኔታዎች)",
           "legalText": "The Defendant acted from honorable motives or in response to a grave and unjust provocation. (ተከሳሹ ድርጊቱን የፈጸመው ከክቡር ዓላማ በመነሳት ወይም ለከባድ እና ኢ-ፍትሃዊ ቁጣ ምላሽ ለመስጠት ነው።)",
           "citation": "Crim. Code Art. 88(1)(a)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ክቡር ዓላማ" }
         },
         {
           "id": "crim_mitigation_distress",
           "label": "General Mitigating Circumstances (አጠቃላይ የቅጣት ማቅለያ ሁኔታዎች)",
           "legalText": "The Defendant was in a state of profound distress, destitution, or desperation at the time of the offense. (ተከሳሹ ወንጀሉን በፈጸመበት ጊዜ በከፍተኛ ጭንቀት፣ ችግር ወይም ተስፋ መቁረጥ ውስጥ ነበር።)",
           "citation": "Crim. Code Art. 88(1)(b)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም በላይ،", "summary_keyword": "ከፍተኛ ጭንቀት" }
         },
         {
           "id": "crim_mitigation_repentance",
@@ -256,7 +270,8 @@
           "citation": "Crim. Code Art. 88(1)(d)",
           "autoEvidence": [
             "PaymentReceipt"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "ልባዊ ጸጸት" }
         },
         {
           "id": "crim_mitigation_youth",
@@ -265,14 +280,16 @@
           "citation": "Crim. Code Art. 52",
           "autoEvidence": [
             "BirthCertificate"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የወጣትነት ዕድሜ" }
         },
         {
           "id": "crim_mitigation_clean_record",
           "label": "Personal Circumstances (የግል ሁኔታዎች)",
           "legalText": "The Defendant has a clean prior criminal record and has displayed good conduct before and after the offense. (ተከሳሹ ከዚህ ቀደም የወንጀል ሪከርድ የሌለው ሲሆን ከወንጀሉ በፊት እና በኋላ መልካም ስነምግባር አሳይቷል።)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ንጹህ መዝገብ" }
         }
       ],
       "reliefs": [
@@ -311,7 +328,8 @@
           "label": "Grounds for Objection (የመቃወሚያ ምክንያቶች)",
           "legalText": "The right to prosecute the offense is barred by the period of limitation as prescribed by the Criminal Code. (ወንጀሉን ለመክሰስ ያለው መብት በወንጀል ሕጉ በተደነገገው የይርጋ ጊዜ ገደብ ታግዷል።)",
           "citation": "Crim. Proc. Code Art. 131(1)(d)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የይርጋ ጊዜ ገደብ" }
         },
         {
           "id": "crim_objection_double_jeopardy",
@@ -320,21 +338,24 @@
           "citation": "Crim. Proc. Code Art. 131(1)(f)",
           "autoEvidence": [
             "CopyofDivorceJudgment"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "ከዚህም በላይ،", "summary_keyword": "ድጋሚ ክስ" }
         },
         {
           "id": "crim_objection_no_jurisdiction",
           "label": "Grounds for Objection (የመቃወሚያ ምክንያቶች)",
           "legalText": "This Honorable Court lacks material or local jurisdiction to hear the charge. (ይህ የተከበረ ፍርድ ቤት ክሱን ለማየት የፍሬ ነገር ወይም የአካባቢ የዳኝነት ስልጣን የለውም።)",
           "citation": "Crim. Proc. Code Art. 131(1)(b)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የዳኝነት ስልጣን እጦት" }
         },
         {
           "id": "crim_objection_charge_defective",
           "label": "Grounds for Objection (የመቃወሚያ ምክንያቶች)",
           "legalText": "The charge as framed is defective; it does not state an offense known to law or is vague and uncertain. (ክሱ እንደተቀረጸው ጉድለት ያለበት ነው፤ በሕግ የሚታወቅ ወንጀልን አይገልጽም ወይም ግልጽ ያልሆነ እና እርግጠኛ ያልሆነ ነው።)",
           "citation": "Crim. Proc. Code Art. 131(1)(a)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ጉድለት ያለበት ክስ" }
         }
       ],
       "reliefs": [

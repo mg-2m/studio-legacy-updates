@@ -1,3 +1,4 @@
+
 {
   "templates": {
     "civ_proc_amendment_of_pleading": {
@@ -18,28 +19,32 @@
           "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
           "legalText": "ማሻሻያው በወገኖች መካከል እውነተኛውን የክርክር ጥያቄ ለመወሰን እና የፍትሕ ዓላማን ለማሳካት አስፈላጊ ነው። (The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice.)",
           "citation": "C.P.C. Art. 94(2)",
-          "autoEvidence": ["OriginalPleadingCopy", "DraftAmendment"]
+          "autoEvidence": ["OriginalPleadingCopy", "DraftAmendment"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የፍትሕ አስፈላጊነት" }
         },
         {
           "id": "civ_proc_fact_amendment_no_prejudice",
           "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
           "legalText": "ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒውን ወገን በወጪ ሊካስ የማይችል ጉዳት አያስከትልም። (The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs.)",
           "citation": "C.P.C. Art. 94(1)",
-          "autoEvidence": ["OriginalPleadingCopy"]
+          "autoEvidence": ["OriginalPleadingCopy"],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ጉዳት አለማስከተል" }
         },
         {
           "id": "civ_proc_fact_amendment_due_to_clerical_error",
           "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
           "legalText": "ማሻሻያው በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአጻጻፍ፣ የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው። (The amendment is necessary to correct a clerical, computational, or drafting error in the original pleading.)",
           "citation": "C.P.C. Art. 94(1)",
-          "autoEvidence": ["DraftAmendment"]
+          "autoEvidence": ["DraftAmendment"],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ስህተት ማረም" }
         },
         {
           "id": "civ_proc_fact_amendment_before_judgment",
           "label": "ሥነ ሥርዓት ጊዜ (Procedural Timing)",
           "legalText": "የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት ቀርቧል። (The application for amendment is being made before the court has delivered its final judgment.)",
           "citation": "C.P.C. Art. 94(1)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመጨረሻም،", "summary_keyword": "ወቅታዊ ጥያቄ" }
         }
       ],
       "reliefs": [
@@ -71,21 +76,24 @@
           "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
           "legalText": "ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል። (The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment.)",
           "citation": "C.P.C. Art. 40(1)",
-          "autoEvidence": ["IntervenerStatement"]
+          "autoEvidence": ["IntervenerStatement"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ቀጥተኛ ሕጋዊ ጥቅም" }
         },
         {
           "id": "civ_proc_fact_common_question_of_law_or_fact",
           "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
           "legalText": "ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል። (The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise.)",
           "citation": "C.P.C. Art. 40(1)",
-          "autoEvidence": ["IntervenerStatement"]
+          "autoEvidence": ["IntervenerStatement"],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የጋራ ጥያቄ" }
         },
         {
           "id": "civ_proc_fact_prevent_multiplicity_of_suits",
           "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
           "legalText": "ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል። (Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የክርክር መደራረብን ማስቀረት" }
         }
       ],
       "reliefs": [
@@ -118,7 +126,8 @@
           "legalText": "ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው። (The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant.)",
           "citation": "C.P.C. Art. 41(1)(a)",
           "autoEvidence": ["ThirdPartyNotice"],
-          "mutexGroup": "indemnity_contribution"
+          "mutexGroup": "indemnity_contribution",
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የካሳ መብት" }
         },
         {
           "id": "civ_proc_fact_right_to_contribution",
@@ -126,7 +135,8 @@
           "legalText": "ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው። (The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim.)",
           "citation": "C.P.C. Art. 41(1)(a)",
           "autoEvidence": ["ThirdPartyNotice"],
-          "mutexGroup": "indemnity_contribution"
+          "mutexGroup": "indemnity_contribution",
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም በላይ،", "summary_keyword": "የአስተዋጽኦ መብት" }
         },
         {
           "id": "civ_proc_fact_same_issue_arising",
@@ -134,7 +144,8 @@
           "legalText": "በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው። (The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant.)",
           "citation": "C.P.C. Art. 41(1)(b)",
           "autoEvidence": ["ThirdPartyNotice"],
-          "mutexGroup": "indemnity_contribution"
+          "mutexGroup": "indemnity_contribution",
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ተመሳሳይ ጥያቄ" }
         }
       ],
       "reliefs": [
@@ -166,28 +177,32 @@
           "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
           "legalText": "ፍርዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
           "citation": "C.P.C. Art. 78(1)(a)",
-          "autoEvidence": ["ObjectionGroundsMemo"]
+          "autoEvidence": ["ObjectionGroundsMemo"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያልደረሰ መጥሪያ" }
         },
         {
           "id": "civ_proc_fact_sufficient_cause_for_default",
           "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
           "legalText": "ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ። (The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause.)",
           "citation": "C.P.C. Art. 78(1)(b)",
-          "autoEvidence": ["ObjectionGroundsMemo"]
+          "autoEvidence": ["ObjectionGroundsMemo"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "በቂ ምክንያት" }
         },
         {
           "id": "civ_proc_fact_absence_of_jurisdiction",
           "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
           "legalText": "ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው። (The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree.)",
           "citation": "C.P.C. Art. 5(2)",
-          "autoEvidence": ["ObjectionGroundsMemo"]
+          "autoEvidence": ["ObjectionGroundsMemo"],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የዳኝነት ስልጣን እጦት" }
         },
         {
           "id": "civ_proc_fact_objection_timely_filed",
           "label": "ሥነ ሥርዓት ጊዜ (Procedural Timing)",
           "legalText": "ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ፍርዱ ከታወቀ 15 ቀናት) ቀርቧል። (The objection is filed within the period prescribed by law (15 days from knowledge of the decree).)",
           "citation": "C.P.C. Art. 79",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ወቅታዊ ተቃውሞ" }
         }
       ],
       "reliefs": [
@@ -219,28 +234,32 @@
           "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
           "legalText": "አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል። (The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed.)",
           "citation": "C.P.C. Art. 6(1)(a)",
-          "autoEvidence": ["ReviewApplicationMemo"]
+          "autoEvidence": ["ReviewApplicationMemo"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "አዲስ ማስረጃ" }
         },
         {
           "id": "civ_proc_fact_mistake_or_error_on_face",
           "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
           "legalText": "በመዝገቡ ገጽታ ላይ ግልጽ የሆነ ስህተት ወይም የሕግ ስሕተት አለ (ለምሳሌ የሂሳብ ስህተት ወይም ግልጽ የሕግ ስህተት)። (There is a mistake or error apparent on the face of the record (e.g., miscalculation or clear legal misinterpretation) that does not require lengthy argument.)",
           "citation": "C.P.C. Art. 6(1)(b)",
-          "autoEvidence": ["ReviewApplicationMemo"]
+          "autoEvidence": ["ReviewApplicationMemo"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ግልጽ ስህተት" }
         },
         {
           "id": "civ_proc_fact_other_sufficient_reason",
           "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
           "legalText": "ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ בቂ ምክንያት አለ። (There is any other sufficient reason analogous to the specified grounds justifying a review.)",
           "citation": "C.P.C. Art. 6(1)(c)",
-          "autoEvidence": ["ReviewApplicationMemo"]
+          "autoEvidence": ["ReviewApplicationMemo"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ሌላ በቂ ምክንያት" }
         },
         {
           "id": "civ_proc_fact_no_previous_appeal",
           "label": "ሥነ ሥርዓት ገደቦች (Procedural Constraints)",
           "legalText": "አመልካቹ ዳግም እንዲታይለት ለሚጠይቀው ፍርድ ከዚህ በፊት ይግባኝ አላቀረበም። (The Applicant has not previously filed an appeal against the judgment being sought for review.)",
           "citation": "C.P.C. Art. 6(1)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ይግባኝ አለመኖር" }
         }
       ],
       "reliefs": [
@@ -278,21 +297,24 @@
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ ላይ ተሰማርቷል። (The Respondent is currently engaged in active construction on the disputed land.)",
           "citation": "",
-          "autoEvidence": ["PhotosVideoEvidence"]
+          "autoEvidence": ["PhotosVideoEvidence"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "በሂደት ላይ ያለ ግንባታ" }
         },
         {
           "id": "app_fact_irreparable_harm",
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "ግንባታው ከተጠናቀቀ ማፍረሱ አስቸጋሪ ስለሚሆን የአመልካች መብቶች በቋሚነት ይጎዳሉ። (If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የማይተካ ጉዳት" }
         },
         {
           "id": "app_fact_prima_facie",
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "አመልካቹ ጠንካራ የባለቤትነት መብት እንዳለው አሳይቷል። (The Applicant has demonstrated a strong prima facie case of ownership.)",
           "citation": "",
-          "autoEvidence": ["TitleDeed"]
+          "autoEvidence": ["TitleDeed"],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ጠንካራ ክስ" }
         }
       ],
       "reliefs": [
@@ -330,14 +352,16 @@
           "label": "ማብራሪያ (Clarification)",
           "legalText": "ስለ መሬቱ አካላዊ ገጽታዎች/ድንበሮች የሚቀርቡት የቃል ምስክርነቶች እና ሰነዶች እርስ በርሳቸው የሚጋጩ ናቸው። (The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የሚጋጩ ማስረጃዎች" }
         },
         {
           "id": "app_fact_necessity_to_view",
           "label": "ማብራሪያ (Clarification)",
           "legalText": "ፍርድ ቤቱ (ወይም ሬጅስትራሩ) ቦታውን በአካል ሳይመለከት ፍትሃዊ ውሳኔ ሊሰጥ አይችልም። (A just decision cannot be rendered without the Court (or its registrar) physically viewing the site.)",
           "citation": "CPC Art. 136",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በመሆኑም،", "summary_keyword": "የምርመራ አስፈላጊነት" }
         }
       ],
       "reliefs": [
@@ -365,7 +389,7 @@
         ],
         "jurisdictionType": "Court Handling the Main Case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት، ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው، ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው، ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -376,14 +400,16 @@
           "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
           "legalText": "ተጠሪው የአመልካችን ብቸኛ መውጫ ወደ ህዝብ መንገድ ሙሉ በሙሉ ዘግቷል። (The Respondent has completely blocked the Applicant's only access to the public road.)",
           "citation": "",
-          "autoEvidence": ["PhotosVideoEvidence"]
+          "autoEvidence": ["PhotosVideoEvidence"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ሙሉ እገዳ" }
         },
         {
           "id": "app_fact_imminent_damage",
           "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
           "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል፣ ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል። (The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የማይተካ ጉዳት" }
         }
       ],
       "reliefs": [

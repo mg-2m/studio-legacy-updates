@@ -13,53 +13,46 @@
         "applicant": "ከሳሽ (አበዳሪ) (Plaintiff (Creditor))",
         "respondent": "ተከሳሽ (ተበዳሪ) (Defendant (Debtor))"
       },
-      "facts": {
-        "group_1": {
-          "title": "የውል መመስረት (Formation of Contract)",
-          "facets": [
-            {
-              "id": "con_fact_loan_agreement",
-              "legalText": "በ [Date] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል። (On [Date], the Plaintiff and Defendant entered into a written loan agreement.)",
-              "citation": "Civ. Code Art. 2471",
-              "autoEvidence": [
-                "WrittenContract",
-                "AdmissionofDebt"
-              ]
-            },
-            {
-              "id": "con_fact_disbursement",
-              "legalText": "ከሳሽ [Amount] ብር ለተከሳሽ ሰጥቷል። (The Plaintiff disbursed the sum of [Amount] ETB to the Defendant.)",
-              "citation": "",
-              "autoEvidence": [
-                "PaymentReceipt"
-              ]
-            }
-          ]
+      "facts": [
+        {
+          "id": "con_fact_loan_agreement",
+          "label": "የውል መመስረት (Formation of Contract)",
+          "legalText": "በ [Date] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል። (On [Date], the Plaintiff and Defendant entered into a written loan agreement.)",
+          "citation": "Civ. Code Art. 2471",
+          "autoEvidence": ["WrittenContract", "AdmissionofDebt"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የብድር ስምምነት" }
         },
-        "group_2": {
-          "title": "ውል ማፍረስ (Default)",
-          "facets": [
-            {
-              "id": "con_fact_payment_due",
-              "legalText": "የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል። (The repayment period agreed upon expired on [Date].)",
-              "citation": "Civ. Code Art. 1857"
-            },
-            {
-              "id": "con_fact_failure_to_pay",
-              "legalText": "ዕዳው ቢደርስም ተከሳሹ ክፍያ አልፈጸመም። (Despite the maturity of the debt, the Defendant failed to effect payment.)",
-              "citation": ""
-            },
-            {
-              "id": "con_fact_notice_given",
-              "legalText": "ከሳሽ በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል። (The Plaintiff served a formal notice of default on [Date].)",
-              "citation": "Civ. Code Art. 1772",
-              "autoEvidence": [
-                "NoticeofDefault"
-              ]
-            }
-          ]
+        {
+          "id": "con_fact_disbursement",
+          "label": "የውል መመስረት (Formation of Contract)",
+          "legalText": "ከሳሽ [Amount] ብር ለተከሳሽ ሰጥቷል። (The Plaintiff disbursed the sum of [Amount] ETB to the Defendant.)",
+          "citation": "",
+          "autoEvidence": ["PaymentReceipt"],
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "ገንዘብ መሰጠት" }
+        },
+        {
+          "id": "con_fact_payment_due",
+          "label": "ውል ማፍረስ (Default)",
+          "legalText": "የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል። (The repayment period agreed upon expired on [Date].)",
+          "citation": "Civ. Code Art. 1857",
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የመክፈያ ጊዜ ማብቃት" }
+        },
+        {
+          "id": "con_fact_failure_to_pay",
+          "label": "ውል ማፍረስ (Default)",
+          "legalText": "ዕዳው ቢደርስም ተከሳሹ ክፍያ አልፈጸመም። (Despite the maturity of the debt, the Defendant failed to effect payment.)",
+          "citation": "",
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "ክፍያ አለመፈጸም" }
+        },
+        {
+          "id": "con_fact_notice_given",
+          "label": "ውል ማፍረስ (Default)",
+          "legalText": "ከሳሽ በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል። (The Plaintiff served a formal notice of default on [Date].)",
+          "citation": "Civ. Code Art. 1772",
+          "autoEvidence": ["NoticeofDefault"],
+          "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ማስታወቂያ መሰጠት" }
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "con_relief_principal_amount",
@@ -110,41 +103,37 @@
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የውል ግዴታ (Contractual Obligation)",
-          "facets": [
-            {
-              "id": "con_fact_valid_contract",
-              "legalText": "በ [Subject Matter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ። (A valid contract exists between the parties regarding [Subject Matter].)",
-              "citation": "Civ. Code Art. 1678",
-              "autoEvidence": [
-                "WrittenContract"
-              ]
-            },
-            {
-              "id": "con_fact_plaintiff_performance",
-              "legalText": "ከሳሽ በውሉ መሠረት ግዴታዎቹን ሙሉ በሙሉ ፈጽሟል። (The Plaintiff has fully performed their obligations under the contract.)",
-              "citation": ""
-            }
-          ]
+      "facts": [
+        {
+          "id": "con_fact_valid_contract",
+          "label": "የውል ግዴታ (Contractual Obligation)",
+          "legalText": "በ [Subject Matter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ። (A valid contract exists between the parties regarding [Subject Matter].)",
+          "citation": "Civ. Code Art. 1678",
+          "autoEvidence": ["WrittenContract"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ሕጋዊ ውል" }
         },
-        "group_2": {
-          "title": "የውል ጥሰት (Breach)",
-          "facets": [
-            {
-              "id": "con_fact_non_performance",
-              "legalText": "ተከሳሹ ያለ ሕጋዊ ምክንያት [Specific Obligation] አልፈጸመም። (The Defendant has failed to perform [Specific Obligation] without lawful cause.)",
-              "citation": "Civ. Code Art. 1771"
-            },
-            {
-              "id": "con_fact_special_interest",
-              "legalText": "የተወሰነ አፈጻጸም ለከሳሽ ልዩ ፍላጎት ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም። (Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant.)",
-              "citation": "Civ. Code Art. 1776"
-            }
-          ]
+        {
+          "id": "con_fact_plaintiff_performance",
+          "label": "የውል ግዴታ (Contractual Obligation)",
+          "legalText": "ከሳሽ በውሉ መሠረት ግዴታዎቹን ሙሉ በሙሉ ፈጽሟል። (The Plaintiff has fully performed their obligations under the contract.)",
+          "citation": "",
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "የከሳሽ ግዴታ መወጣት" }
+        },
+        {
+          "id": "con_fact_non_performance",
+          "label": "የውል ጥሰት (Breach)",
+          "legalText": "ተከሳሹ ያለ ሕጋዊ ምክንያት [Specific Obligation] አልፈጸመም። (The Defendant has failed to perform [Specific Obligation] without lawful cause.)",
+          "citation": "Civ. Code Art. 1771",
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የተከሳሽ ግዴታ አለመወጣት" }
+        },
+        {
+          "id": "con_fact_special_interest",
+          "label": "የውል ጥሰት (Breach)",
+          "legalText": "የተወሰነ አፈጻጸም ለከሳሽ ልዩ ፍላጎት ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም። (Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant.)",
+          "citation": "Civ. Code Art. 1776",
+          "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ልዩ ጥቅም" }
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "con_relief_enforce_performance",
@@ -172,31 +161,23 @@
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የጥሰት ትንተና (Breach Analysis)",
-          "facets": [
-            {
-              "id": "con_fact_fundamental_breach",
-              "legalText": "የተከሳሹ አለመፈጸም የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው። (The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract.)",
-              "citation": "Civ. Code Art. 1785"
-            }
-          ]
+      "facts": [
+        {
+          "id": "con_fact_fundamental_breach",
+          "label": "የጥሰት ትንተና (Breach Analysis)",
+          "legalText": "የተከሳሹ አለመፈጸም የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው። (The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract.)",
+          "citation": "Civ. Code Art. 1785",
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "መሠረታዊ ጥሰት" }
         },
-        "group_2": {
-          "title": "ካሳ (Restitution)",
-          "facets": [
-            {
-              "id": "con_fact_payments_made",
-              "legalText": "ከሳሽ ለተከሳሽ [Amount] ከፍሏል። (The Plaintiff has already paid [Amount] to the Defendant.)",
-              "citation": "",
-              "autoEvidence": [
-                "PaymentReceipt"
-              ]
-            }
-          ]
+        {
+          "id": "con_fact_payments_made",
+          "label": "ካሳ (Restitution)",
+          "legalText": "ከሳሽ ለተከሳሽ [Amount] ከፍሏል። (The Plaintiff has already paid [Amount] to the Defendant.)",
+          "citation": "",
+          "autoEvidence": ["PaymentReceipt"],
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "የተከፈለ ገንዘብ" }
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "con_relief_judicial_cancellation",
@@ -213,7 +194,7 @@
         }
       ]
     },
-    "app_attachment_before_judgment": {
+    "con_attachment_before_judgment": {
       "documentTitle": "ከፍርድ በፊት የንብረት እግድ ማመልከቻ (Application for Attachment of Property Before Judgment)",
       "jurisdictionText": "Art. 151 & 152 of the Civil Procedure Code.",
       "meta": {
@@ -225,23 +206,22 @@
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
       },
-      "facts": {
-        "group_1": {
-          "title": "የፍትሕ መደናቀፍ (Obstruction of Justice)",
-          "facets": [
-            {
-              "id": "con_fact_intent_to_obstruct",
-              "legalText": "ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው። (The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree.)",
-              "citation": "CPC Art. 151"
-            },
-            {
-              "id": "con_fact_prima_facie_case",
-              "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ ክስ ያለው ሲሆን በዋናው ክስ ላይ ሊሳካለት ይችላል። (The Applicant has a strong prima facie case and is likely to succeed in the main suit.)",
-              "citation": ""
-            }
-          ]
+      "facts": [
+        {
+          "id": "con_fact_intent_to_obstruct",
+          "label": "የፍትሕ መደናቀፍ (Obstruction of Justice)",
+          "legalText": "ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው። (The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree.)",
+          "citation": "CPC Art. 151",
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የማደናቀፍ ዓላማ" }
+        },
+        {
+          "id": "con_fact_prima_facie_case",
+          "label": "የፍትሕ መደናቀፍ (Obstruction of Justice)",
+          "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ ክስ ያለው ሲሆን በዋናው ክስ ላይ ሊሳካለት ይችላል። (The Applicant has a strong prima facie case and is likely to succeed in the main suit.)",
+          "citation": "",
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "ጠንካራ ክስ" }
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "con_relief_attach_property",
@@ -257,7 +237,7 @@
         }
       ]
     },
-    "app_judgment_on_admission": {
+    "con_judgment_on_admission": {
       "documentTitle": "በእምነት ላይ ለሚሰጥ ፍርድ ማመልከቻ (Application for Judgment on Admissions)",
       "jurisdictionText": "Art. 242 of the Civil Procedure Code.",
        "meta": {
@@ -269,18 +249,15 @@
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
       },
-      "facts": {
-        "group_1": {
-          "title": "እምነት (Admission)",
-          "facets": [
-            {
-              "id": "con_fact_clear_admission",
-              "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል። (In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt.)",
-              "citation": "CPC Art. 242"
-            }
-          ]
+      "facts": [
+        {
+          "id": "con_fact_clear_admission",
+          "label": "እምነት (Admission)",
+          "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል። (In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt.)",
+          "citation": "CPC Art. 242",
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ግልጽ እምነት" }
         }
-      },
+      ],
       "reliefs": [
         {
           "id": "con_relief_immediate_judgment",
@@ -292,5 +269,3 @@
     }
   }
 }
-
-    

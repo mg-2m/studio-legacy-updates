@@ -14,13 +14,14 @@ const formatSingleFactText = (text: string, values: { [key: string]: any }): str
   if (!values) return text;
 
   let formattedText = text;
-  for (const key in values) {
-    const placeholder = `\\[${key}\\]`;
-    const value = values[key];
+  // Regex to find all {{placeholders}}
+  const regex = /\{\{([\w\s]+)\}\}/g;
+  
+  formattedText = formattedText.replace(regex, (match, key) => {
+    const value = values[key.trim()];
     // Replace placeholder with a bold, underlined value, or a default if empty
-    const replacement = `<strong><u>${value || '______'}</u></strong>`;
-    formattedText = formattedText.replace(new RegExp(placeholder, 'g'), replacement);
-  }
+    return `<strong><u>${value || '______'}</u></strong>`;
+  });
   return formattedText;
 };
 
@@ -115,12 +116,24 @@ export default function PageOne({ state }: PageOneProps) {
             return `<strong><u>${value || '______'}</u></strong>`;
         });
     }
+    // Also replace non-dynamic placeholders for reliefs
+    text = text.replace(/\[(.*?)\]/g, (match, key) => {
+        return `<strong><u>${key}</u></strong>`;
+    });
+
+
     return text;
   };
 
 
   const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
+    
+    // Simple pluralization for Amharic by adding 'ዎች'
+    if (title.endsWith(')') || title.endsWith(') ')) {
+        const parts = title.split('(');
+        return `${parts[0]}ዎች (${parts[1]}`.toUpperCase();
+    }
     return `${title}ዎች`.toUpperCase();
   };
 
@@ -136,6 +149,8 @@ export default function PageOne({ state }: PageOneProps) {
                 subcity += ' ክፍለ ከተማ';
             }
             const woreda = party.address.woreda ? `, ወረዳ ${party.address.woreda}` : '';
+            const houseNo = party.address.houseNo ? `, የቤት ቁ. ${party.address.houseNo}` : '';
+
 
             return (
               <li key={index} className="mb-2">
@@ -144,7 +159,7 @@ export default function PageOne({ state }: PageOneProps) {
                     <div></div>
                 </div>
                 <div className="text-sm pl-6">
-                  አድራሻ፡ {party.address.city}, {subcity}{woreda}
+                  አድራሻ፡ {party.address.city}, {subcity}{woreda}{houseNo}
                 </div>
               </li>
             )
@@ -158,7 +173,8 @@ export default function PageOne({ state }: PageOneProps) {
   
   const finalNarrative = composeNarrative(selectedFacts);
 
-  const reliefSummary = selectedFacts.length > 0 ? selectedFacts.map(f => f.rhetoric?.summary_keyword).filter(Boolean).join('፣ ') : '';
+  // Implement Rule 13.2: Dynamic Summarization
+  const reliefSummary = selectedFacts.length > 0 ? selectedFacts.map(f => f.rhetoric?.summary_keyword).filter(Boolean).join('፣ ') : 'የቀረቡት ምክንያቶች';
 
 
   return (
@@ -212,8 +228,8 @@ export default function PageOne({ state }: PageOneProps) {
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ:</h4>
         <ul className="list-none p-0 leading-relaxed">
-          <li>➤ ይህ {meta.courtLevel} በ {jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
-          <li>➤ አመልካች ጉዳዩን የምከታተለው፡ {repMap[meta.representation]}</li>
+          <li>➤ ይህ የተከበረ ፍርድ ቤት በ{jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
+          <li>➤ {applicants.length > 1 ? "አመልካቾች" : "አመልካች"} ጉዳዩን የምንከታተለው፡ {repMap[meta.representation]}</li>
           <li>➤ {summonsMap[meta.summonsDelivery]}</li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
         </ul>
@@ -228,7 +244,7 @@ export default function PageOne({ state }: PageOneProps) {
         <div className="black-box mb-2">ዳኝነት</div>
         <div className="border-l-2 border-black pl-4">
           <p>
-            ስለዚህ ከላይ በተዘረዘሩት የፍሬ ነገር ምክንያቶች <strong>({reliefSummary})</strong> የተከበረው ፍርድ ቤት እንዲወስንልኝ የምጠይቀው፡
+            ስለዚህ ከላይ በተዘረዘሩት የፍሬ ነገር ምክንያቶች <strong>({reliefSummary})</strong> የተከበረው ፍርድ ቤት እንዲወስንልን የምንጠይቀው፡
           </p>
           <ol className="list-decimal ml-5">
              {selectedReliefs
@@ -244,10 +260,11 @@ export default function PageOne({ state }: PageOneProps) {
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>
-            <strong>የአመልካች ፊርማ</strong>
+            <strong>{applicants.length > 1 ? "የአመልካቾች ፊርማ" : "የአመልካች ፊርማ"}</strong>
           </div>
         </div>
       </div>
     </div>
   );
 }
+

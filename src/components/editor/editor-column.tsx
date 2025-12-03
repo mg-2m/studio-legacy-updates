@@ -18,22 +18,36 @@ import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
 const StrategyCard: React.FC<{ content: string }> = ({ content }) => {
   if (!content) return null;
 
-  const sections = content.split('### ').filter(s => s.trim() !== '');
+  // This regex is designed to split by '### ' but also handle potential markdown variations.
+  const sections = content.split(/[\r\n]+###\s+/).filter(s => s.trim() !== '');
+  
+  // The first part might not have '###', handle it as the guide.
+  const firstSection = sections[0].startsWith('Guide') ? sections.shift() : `Guide\n${sections.shift()}`;
+
+  const processedSections = sections.map(section => {
+      const [title, ...bodyLines] = section.split('\n');
+      const body = bodyLines.join('\n').trim();
+      return { title: title.trim(), body };
+  });
+
+  if (firstSection) {
+    const [title, ...bodyLines] = firstSection.split('\n');
+    processedSections.unshift({ title: title.replace('###', '').trim(), body: bodyLines.join('\n').trim() });
+  }
 
   return (
     <Alert variant="default" className="bg-yellow-50 border-yellow-200 text-yellow-900 dark:bg-yellow-950/50 dark:border-yellow-800 dark:text-yellow-300">
       <Lightbulb className="h-5 w-5 !text-yellow-500" />
-      <AlertTitle className="font-bold">የአብነት መመሪያ</AlertTitle>
+      <AlertTitle className="font-bold">የአብነት መመሪያ (Template Guide)</AlertTitle>
       <AlertDescription>
-        <div className="prose prose-sm dark:prose-invert text-yellow-900 dark:text-yellow-300">
-          {sections.map((section, index) => {
-            const [title, ...bodyLines] = section.split('\n');
-            const body = bodyLines.join('\n').trim();
+        <div className="prose prose-sm dark:prose-invert text-yellow-900 dark:text-yellow-300 max-w-none">
+          {processedSections.map((section, index) => {
+            if (!section.body) return null;
             return (
-              <div key={index} className="mb-3">
-                <h3 className="font-bold text-base my-1">{title.trim()}</h3>
-                <ul className="list-disc pl-5">
-                  {body.split('\n').map((line, i) => {
+              <div key={index} className="mb-3 last:mb-0">
+                <h3 className="font-bold text-base my-1">{section.title}</h3>
+                <ul className="list-disc pl-5 mt-1">
+                  {section.body.split('\n').map((line, i) => {
                     const cleanLine = line.replace(/^\*\s*/, '').trim();
                     if (cleanLine) return <li key={i}>{cleanLine}</li>;
                     return null;

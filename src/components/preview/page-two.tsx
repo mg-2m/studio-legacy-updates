@@ -11,6 +11,12 @@ interface PageTwoProps {
 
 const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
+    
+    // Simple pluralization for Amharic by adding 'ዎች'
+    if (title.endsWith(')') || title.endsWith(') ')) {
+        const parts = title.split('(');
+        return `${parts[0]}ዎች (${parts[1]}`.toUpperCase();
+    }
     return `${title}ዎች`.toUpperCase();
 };
 
@@ -27,6 +33,7 @@ const formatPartyList = (parties: Party[]) => {
                 subcity += ' ክፍለ ከተማ';
             }
             const woreda = party.address.woreda ? `, ወረዳ ${party.address.woreda}` : '';
+            const houseNo = party.address.houseNo ? `, የቤት ቁ. ${party.address.houseNo}` : '';
 
             return (
               <li key={index} className="mb-2">
@@ -35,7 +42,7 @@ const formatPartyList = (parties: Party[]) => {
                     <div></div>
                 </div>
                 <div className="text-sm pl-6">
-                  አድራሻ፡ {party.address.city}, {subcity}{woreda}
+                  አድራሻ፡ {party.address.city}, {subcity}{woreda}{houseNo}
                 </div>
               </li>
             )
@@ -75,7 +82,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         if (e.refNumber) detailsParts.push(`ቁጥር: ${e.refNumber}`);
         if (e.issueDate) detailsParts.push(`የተሰጠበት ቀን: ${e.issueDate}`);
         if (e.issuer) {
-            const issuerText = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
+            const issuerText = e.issuer === 'ሌላ' ? (e as any).issuerOther : e.issuer;
             if (issuerText) detailsParts.push(`አውጪ: ${issuerText}`);
         }
         if (e.pageCount) detailsParts.push(`ገጽ: ${e.pageCount}`);
@@ -94,7 +101,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         fullDescription += `፣ ${attachedType} ተያይዙዋል`;
 
         if (e.originalLocation && e.originalLocation !== 'የማይመለከተው') {
-            const location = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
+            const location = e.originalLocation === 'ሌላ' ? (e as any).originalLocationOther : e.originalLocation;
             if (location) fullDescription += `፣ ኦርጅናሉ ${location} የሚገኝ።`;
         } else {
              fullDescription += "።";
@@ -227,7 +234,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>
-            <strong className="text-sm">የአመልካች ፊርማ</strong>
+            <strong className="text-sm">{applicants.length > 1 ? "የአመልካቾች ፊርማ" : "የአመልካች ፊርማ"}</strong>
           </div>
         </div>
       </div>

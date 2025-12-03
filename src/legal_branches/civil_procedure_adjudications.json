@@ -8,7 +8,7 @@
         "keywords": ["amendment", "pleading", "correction", "ፍሬ ነገር ማሻሻያ", "ክስ ማሻሻል"],
         "jurisdictionType": "Court seized of the original case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክር ሂደት ላይ ያለን የክስ ወይም የመከላከያ መልስ ፍሬ ነገር ለማሻሻል፣ ስህተት ለማረም ወይም አዲስ ነገር ለማካተት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 94(1) መሠረት፣ ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት በማንኛውም የክርክር ደረጃ ላይ ሊፈቀድ ይችላል። ዋናው ጥያቄ የሚገዛበት የይርጋ ጊዜ ገደብ በማሻሻያው ላይም ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት፡** ማሻሻያው በወገኖች መካከል ያለውን እውነተኛ የክርክር ነጥብ ለመወሰን አስፈላጊ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** ሊሻሻል የሚገባው የክስ ወይም የመከላከያ መልስ ቅጂ (OriginalPleadingCopy) እና የታቀደው ማሻሻያ ረቂቅ (DraftAmendment)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክር ሂደት ላይ ያለን የክስ ወይም የመከላከያ መልስ ፍሬ ነገር ለማሻሻል፣ ስህተት ለማረም ወይም አዲስ ነገር ለማካተት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 94(1) መሠረት፣ ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት በማንኛውም የክርክር ደረጃ ላይ ሊፈቀድ ይችላል። ዋናው ጥያቄ የሚገዛበት የይርጋ ጊዜ ገደብ በማሻሻያው ላይም ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- አስፈላጊነት፡ ማሻሻያው በወገኖች መካከል ያለውን እውነተኛ የክርክር ነጥብ ለመወሰን አስፈላጊ መሆኑን ማሳየት።\n- ማስረጃ፡ ሊሻሻል የሚገባው የክስ ወይም የመከላከያ መልስ ቅጂ (OriginalPleadingCopy) እና የታቀደው ማሻሻያ ረቂቅ (DraftAmendment)።",
       "partyTitles": {
         "applicant": "ማሻሻያ ጠያቂ (ወገን) (Applicant/Party Seeking Amendment)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
@@ -60,12 +60,12 @@
     },
     "civ_proc_intervention_by_third_party": {
       "documentTitle": "በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ (Application for Leave to Intervene in a Pending Suit)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.፣ አንቀጽ 40 (Civil Procedure Code of 1965, Art. 40)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ 40 (Civil Procedure Code of 1965, Art. 40)",
       "meta": {
         "keywords": ["intervention", "third party", "joinder", "ጣልቃ ገብ", "ሶስተኛ ወገን"],
         "jurisdictionType": "Court seized of the original case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ በሁለት ወገኖች መካከል እየታየ ባለ ክርክር ውስጥ መብቱ ወይም ጥቅሙ ሊነካ የሚችል ሶስተኛ ወገን፣ በክርክሩ ውስጥ ገብቶ እንዲሳተፍ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 40(2) መሠረት، ጣልቃ ገብቶ ለመከራከር ጥያቄ ማቅረብ የሚቻለው ክሱ ከመዘጋቱ በፊት በማንኛውም ጊዜ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ሕጋዊ ጥቅም፡** ጣልቃ ገቢው በክርክሩ ውጤት ላይ ቀጥተኛ ሕጋዊ ጥቅም እንዳለው ማሳየት አለበት።\n*   **ማስረጃ (Required Evidence):** ጣልቃ ገቢው የሚያቀርበውን የክስ ወይም የመከላከያ መልስ (IntervenerStatement) ማያያዝ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ በሁለት ወገኖች መካከል እየታየ ባለ ክርክር ውስጥ መብቱ ወይም ጥቅሙ ሊነካ የሚችል ሶስተኛ ወገን፣ በክርክሩ ውስጥ ገብቶ እንዲሳተፍ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 40(2) መሠረት، ጣልቃ ገብቶ ለመከራከር ጥያቄ ማቅረብ የሚቻለው ክሱ ከመዘጋቱ በፊት በማንኛውም ጊዜ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ሕጋዊ ጥቅም፡ ጣልቃ ገቢው በክርክሩ ውጤት ላይ ቀጥተኛ ሕጋዊ ጥቅም እንዳለው ማሳየት አለበት።\n- ማስረጃ፡ ጣልቃ ገቢው የሚያቀርበውን የክስ ወይም የመከላከያ መልስ (IntervenerStatement) ማያያዝ።",
       "partyTitles": {
         "applicant": "ጣልቃ ገቢ (Intervener)",
         "respondent": "የመጀመሪያ ተከራካሪ ወገኖች (Original Parties)"
@@ -114,7 +114,7 @@
         "keywords": ["third party joinder", "indemnity", "contribution", "ማካተት", "ሶስተኛ ወገን"],
         "jurisdictionType": "Court seized of the original case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ، ተከሳሽ በሆነ ሰው ላይ ክስ ሲቀርብበት፣ ለዚያ ክስ ተጠያቂ ሊሆን የሚችል ሌላ ሶስተኛ ወገን ካለ፣ ያንን ሶስተኛ ወገን በክርክሩ ውስጥ እንዲካተት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን በሚያቀርብበት ጊዜ ወይም ከዚያ በፊት መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የኃላፊነት ጥያቄ፡** ተከሳሹ በሶስተኛው ወገን ላይ የካሳ ወይም የመተካት መብት እንዳለው ማሳየት።\n*   **ማስረጃ (Required Evidence):** ለሶስተኛው ወገን ሊቀርብ የታሰበው የክስ ማስታወቂያ ረቂቅ (ThirdPartyNotice)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ، ተከሳሽ በሆነ ሰው ላይ ክስ ሲቀርብበት፣ ለዚያ ክስ ተጠያቂ ሊሆን የሚችል ሌላ ሶስተኛ ወገን ካለ፣ ያንን ሶስተኛ ወገን በክርክሩ ውስጥ እንዲካተት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን በሚያቀርብበት ጊዜ ወይም ከዚያ በፊት መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የኃላፊነት ጥያቄ፡ ተከሳሹ በሶስተኛው ወገን ላይ የካሳ ወይም የመተካት መብት እንዳለው ማሳየት።\n- ማስረጃ፡ ለሶስተኛው ወገን ሊቀርብ የታሰበው የክስ ማስታወቂያ ረቂቅ (ThirdPartyNotice)።",
       "partyTitles": {
         "applicant": "ማካተት የሚፈልግ ተከሳሽ (Defendant Seeking Joinder)",
         "respondent": "በክሱ እንዲካተት የተፈለገው ሶስተኛ ወገን (Third Party to be Joined)"
@@ -166,7 +166,7 @@
         "keywords": ["default judgment", "ex parte", "set aside", "objection", "በሌሉበት የተሰጠ ፍርድ", "ተቃውሞ"],
         "jurisdictionType": "Court which passed the ex-parte decree"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ አንድ ወገን ችሎት ሳይቀርብ በሌለበት የተሰጠበትን ፍርድ ለመቃወም እና ክርክሩ እንደ አዲስ እንዲታይለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበሌሉበት ውሳኔ የሰጠው ፍርድ ቤት ራሱ ይህንኑ ተቃውሞ የማየት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nተቃውሞው መቅረብ ያለበት ተቃዋሚው ስለ ፍርዱ ካወቀበት ቀን ጀምሮ ባሉት አስራ አምስት (15) ቀናት ውስጥ ነው (አንቀጽ 79)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **በቂ ምክንያት፡** ችሎት ላይ መቅረብ ያልተቻለበት በቂ እና ከአቅም በላይ የሆነ ምክንያት መኖሩን ማሳየት።\n*   **ማስረጃ (Required Evidence):** መጥሪያ ያልደረሰ መሆኑን ወይም ለመቅረብ ያልተቻለበትን ምክንያት የሚያረጋግጥ ማስረጃ (ለምሳሌ የህመም ማስረጃ)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ አንድ ወገን ችሎት ሳይቀርብ በሌለበት የተሰጠበትን ፍርድ ለመቃወም እና ክርክሩ እንደ አዲስ እንዲታይለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበሌሉበት ውሳኔ የሰጠው ፍርድ ቤት ራሱ ይህንኑ ተቃውሞ የማየት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nተቃውሞው መቅረብ ያለበት ተቃዋሚው ስለ ፍርዱ ካወቀበት ቀን ጀምሮ ባሉት አስራ አምስት (15) ቀናት ውስጥ ነው (አንቀጽ 79)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- በቂ ምክንያት፡ ችሎት ላይ መቅረብ ያልተቻለበት በቂ እና ከአቅም በላይ የሆነ ምክንያት መኖሩን ማሳየት።\n- ማስረጃ፡ መጥሪያ ያልደረሰ መሆኑን ወይም ለመቅረብ ያልተቻለበትን ምክንያት የሚያረጋግጥ ማስረጃ (ለምሳሌ የህመም ማስረጃ)።",
       "partyTitles": {
         "applicant": "ተቃዋሚ / በሌሉበት የተፈረደበት ወገን (Objector / Defaulting Party)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
@@ -178,7 +178,7 @@
           "legalText": "ፍርዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
           "citation": "C.P.C. Art. 78(1)(a)",
           "autoEvidence": ["ObjectionGroundsMemo"],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያልደረሰ መጥሪያ" }
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ያልደረሰ መጥሪያ" }
         },
         {
           "id": "civ_proc_fact_sufficient_cause_for_default",
@@ -186,7 +186,7 @@
           "legalText": "ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ። (The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause.)",
           "citation": "C.P.C. Art. 78(1)(b)",
           "autoEvidence": ["ObjectionGroundsMemo"],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "በቂ ምክንያት" }
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "በቂ ምክንያት" }
         },
         {
           "id": "civ_proc_fact_absence_of_jurisdiction",
@@ -223,7 +223,7 @@
         "keywords": ["review of judgment", "new evidence", "error on record", "የፍርድ ዳግም ክለሳ", "አዲስ ማስረጃ"],
         "jurisdictionType": "Court which passed the original decree"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ ይግባኝ የማይባልበት የመጨረሻ ፍርድ ከተሰጠ በኋላ፣ አዲስና ወሳኝ ማስረጃ ሲገኝ ወይም በፍርዱ ላይ ግልጽ የሆነ የሕግ ወይም የፍሬ ነገር ስህተት ሲኖር ፍርዱ እንደገና እንዲታይ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nፍርዱን የሰጠው ፍርድ ቤት ራሱ የማመልከቻውን ተቀባይነት የማየት ስልጣን አለው (አንቀጽ 6(2))።\n\n### የጊዜ ገደብ (Period of Limitation)\nአዲስ ማስረጃ በመገኘቱ ምክንያት ከሆነ، ማስረጃው ከተገኘበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 6(3))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ይግባኝ አለመኖር፡** በፍርዱ ላይ ይግባኝ ያልተባለ መሆን አለበት።\n*   **አዲስ ማስረጃ፡** የቀረበው ማስረጃ ከፍርዱ በኋላ የተገኘ እና በክርክሩ ወቅት በትጋት ፈልጎ ማግኘት የማይቻል የነበረ መሆኑን ማሳየት።\n*   **ማስረጃ (Required Evidence):** አዲሱን ማስረጃ እና ለምን ወሳኝ እንደሆነ የሚያብራራ ማስታወሻ (ReviewApplicationMemo)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ ይግባኝ የማይባልበት የመጨረሻ ፍርድ ከተሰጠ በኋላ፣ አዲስና ወሳኝ ማስረጃ ሲገኝ ወይም በፍርዱ ላይ ግልጽ የሆነ የሕግ ወይም የፍሬ ነገር ስህተት ሲኖር ፍርዱ እንደገና እንዲታይ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nፍርዱን የሰጠው ፍርድ ቤት ራሱ የማመልከቻውን ተቀባይነት የማየት ስልጣን አለው (አንቀጽ 6(2))።\n\n### የጊዜ ገደብ (Period of Limitation)\nአዲስ ማስረጃ በመገኘቱ ምክንያት ከሆነ، ማስረጃው ከተገኘበት ቀን ጀምሮ ባሉት 90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 6(3))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ይግባኝ አለመኖር፡ በፍርዱ ላይ ይግባኝ ያልተባለ መሆን አለበት።\n- አዲስ ማስረጃ፡ የቀረበው ማስረጃ ከፍርዱ በኋላ የተገኘ እና በክርክሩ ወቅት በትጋት ፈልጎ ማግኘት የማይቻል የነበረ መሆኑን ማሳየት።\n- ማስረጃ፡ አዲሱን ማስረጃ እና ለምን ወሳኝ እንደሆነ የሚያብራራ ማስታወሻ (ReviewApplicationMemo)።",
       "partyTitles": {
         "applicant": "ዳግም እንዲታይለት ጠያቂ (Applicant for Review)",
         "respondent": "ተቃራኒ ወገን (Opposing Party)"
@@ -235,7 +235,7 @@
           "legalText": "አመልካቹ ውሳኔው በተሰጠበት ጊዜ በእውቀቱ ያልነበረ ወይም ሊያቀርበው ያልቻለውን አዲስ እና አስፈላጊ ማስረጃ አግኝቷል። (The Applicant has discovered new and important matter or evidence that was not within their knowledge or could not be produced at the time the decree was passed.)",
           "citation": "C.P.C. Art. 6(1)(a)",
           "autoEvidence": ["ReviewApplicationMemo"],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "አዲስ ማስረጃ" }
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም፣", "summary_keyword": "አዲስ ማስረጃ" }
         },
         {
           "id": "civ_proc_fact_mistake_or_error_on_face",
@@ -286,7 +286,7 @@
         ],
         "jurisdictionType": "Court Handling the Main Case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ክርክር ባለበት መሬት ላይ ተቃራኒ ወገን ግንባታ እየሰራ ከሆነ، ዋናው ክስ እስኪያልቅ ድረስ ግንባታው እንዲቆም (እንዲታገድ) ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ወቅት ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የማይተካ ጉዳት (Irreparable Harm):** ግንባታው ከቀጠለ ሊጠገን የማይችል ጉዳት እንደሚደርስ ማሳየት።\n*   **ጠንካራ ክስ (Prima Facie Case):** በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ክርክር ባለበት መሬት ላይ ተቃራኒ ወገን ግንባታ እየሰራ ከሆነ፣ ዋናው ክስ እስኪያልቅ ድረስ ግንባታው እንዲቆም (እንዲታገድ) ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ወቅት ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የማይተካ ጉዳት (Irreparable Harm): ግንባታው ከቀጠለ ሊጠገን የማይችል ጉዳት እንደሚደርስ ማሳየት።\n- ጠንካራ ክስ (Prima Facie Case): በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -298,7 +298,7 @@
           "legalText": "ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ ላይ ተሰማርቷል። (The Respondent is currently engaged in active construction on the disputed land.)",
           "citation": "",
           "autoEvidence": ["PhotosVideoEvidence"],
-          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "በሂደት ላይ ያለ ግንባታ" }
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "በሂደት ላይ ያለ ግንባታ" }
         },
         {
           "id": "app_fact_irreparable_harm",
@@ -341,7 +341,7 @@
         ],
         "jurisdictionType": "Court Handling the Main Case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክሩ ውስጥ ያሉ ወገኖች ስለ ንብረቱ አካላዊ ገጽታ (ለምሳሌ ስለ ድንበር ወይም ስለ ይዞታ) የሚሰጡት ቃል ወይም ሰነድ ሲጋጭ، ፍርድ ቤቱ እውነታውን ለማረጋገጥ ቦታው ድረስ ሄዶ እንዲመለከት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት፡** ፍርድ ቤቱ ቦታውን በአካል ሳያይ ፍትሃዊ ውሳኔ መስጠት እንደማይቻል ማሳመን ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክሩ ውስጥ ያሉ ወገኖች ስለ ንብረቱ አካላዊ ገጽታ (ለምሳሌ ስለ ድንበር ወይም ስለ ይዞታ) የሚሰጡት ቃል ወይም ሰነድ ሲጋጭ، ፍርድ ቤቱ እውነታውን ለማረጋገጥ ቦታው ድረስ ሄዶ እንዲመለከት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- አስፈላጊነት፡ ፍርድ ቤቱ ቦታውን በአካል ሳያይ ፍትሃዊ ውሳኔ መስጠት እንደማይቻል ማሳመን ያስፈልጋል።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -389,7 +389,7 @@
         ],
         "jurisdictionType": "Court Handling the Main Case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው، ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው، ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- አስቸኳይነት (Urgency): መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -409,7 +409,7 @@
           "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል፣ ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል። (The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.)",
           "citation": "",
           "autoEvidence": [],
-          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የማይተካ ጉዳት" }
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ሊጠገን የማይችል ጉዳት" }
         }
       ],
       "reliefs": [

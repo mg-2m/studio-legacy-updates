@@ -28,7 +28,8 @@
           "citation": "Commercial Code Art. 735",
           "autoEvidence": [
             "NotarizedCheque"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የሰነድ መሰጠት" }
         },
         {
           "id": "comm_fact_instrument_presentation",
@@ -37,7 +38,8 @@
           "citation": "Commercial Code Art. 767",
           "autoEvidence": [
             "ProtestCertificate"
-          ]
+          ],
+           "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የክፍያ አለመፈጸም" }
         }
       ],
       "reliefs": [
@@ -86,7 +88,8 @@
           "citation": "Commercial Code Art. 1171",
           "autoEvidence": [
             "BalanceSheetAndAudit"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የገንዘብ ችግር" }
         },
         {
           "id": "comm_fact_business_is_viable",
@@ -96,14 +99,16 @@
           "autoEvidence": [
             "BalanceSheetAndAudit",
             "ShareholdersResolution"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የመዳን ተስፋ" }
         },
         {
           "id": "comm_fact_plan_details",
           "label": "የእቅዱ ዝርዝሮች (Plan Details)",
           "legalText": "አመልካቹ ዕዳዎችን ለማስተዳደር፣ ንግዱን ለማሻሻል እና ቀጣይነትን ለማረጋገጥ የሚያስችል ዝርዝር የማገገሚያ እቅድ አዘጋጅቷል። (The Applicant has prepared a detailed restructuring plan to manage debts, reform the business, and ensure continued viability.)",
           "citation": "Commercial Code Art. 1173",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመሆኑም،", "summary_keyword": "የማገገሚያ እቅድ" }
         }
       ],
       "reliefs": [
@@ -151,7 +156,8 @@
           "citation": "Commercial Code Art. 176(a)",
           "autoEvidence": [
             "ShareholdersResolution"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ከባድ አለመግባባት" }
         },
         {
           "id": "comm_fact_deadlock",
@@ -160,7 +166,8 @@
           "citation": "Commercial Code Art. 176(b)",
           "autoEvidence": [
             "ShareholdersResolution"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የአስተዳደር መቆለፍ" }
         },
         {
           "id": "comm_fact_applicant_standing",
@@ -169,7 +176,8 @@
           "citation": "",
           "autoEvidence": [
             "MemorandumAndArticles"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመሆኑም،", "summary_keyword": "ሕጋዊ ጥቅም" }
         }
       ],
       "reliefs": [
@@ -218,7 +226,8 @@
           "citation": "Commercial Code Art. 175(1)",
           "autoEvidence": [
             "MemorandumAndArticles"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የካፒታል ድርሻ" }
         },
         {
           "id": "comm_fact_serious_grounds_suspicion",
@@ -227,14 +236,16 @@
           "citation": "Commercial Code Art. 175(1)",
           "autoEvidence": [
             "ShareholdersResolution"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የከባድ ስህተት ጥርጣሬ" }
         },
         {
           "id": "comm_fact_internal_request_failed",
           "label": "የምርመራ ምክንያቶች (Grounds for Investigation)",
           "legalText": "አመልካቾች ለጠቅላላ ጉባኤው ኦዲተሮች እንዲሾሙ ጠይቀው ነበር ነገር ግን ጥያቄው ውድቅ ተደርጓል ወይም ምላሽ አላገኘም። (The petitioners requested the appointment of auditors to the general meeting, but the request was rejected or ignored.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመሆኑም،", "summary_keyword": "የውስጥ ጥያቄ አለመሳካት" }
         }
       ],
       "reliefs": [

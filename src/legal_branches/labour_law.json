@@ -21,7 +21,8 @@
           "citation": "አንቀጽ 9, አዋጅ 1156/2019 (Art. 9 of Proc. 1156/2019)",
           "autoEvidence": [
             "EmploymentContract"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የቅጥር ውል" }
         },
         {
           "id": "labour_fact_definite_contract_ended",
@@ -30,7 +31,8 @@
           "citation": "አንቀጽ 10, 11, አዋጅ 1156/2019 (Art. 10, 11 of Proc. 1156/2019)",
           "autoEvidence": [
             "EmploymentContract"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የተለወጠ ውል" }
         },
         {
           "id": "labour_fact_no_prior_notice",
@@ -39,7 +41,8 @@
           "citation": "የአንቀጽ 35(1) ጥሰት, አዋጅ 1156/2019 (Violation of Art. 35(1) of Proc. 1156/2019)",
           "autoEvidence": [
             "TerminationLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ያለማስታወቂያ ስንብት" }
         },
         {
           "id": "labour_fact_insufficient_notice",
@@ -48,7 +51,8 @@
           "citation": "የአንቀጽ 35(2) ጥሰት, አዋጅ 1156/2019 (Violation of Art. 35(2) of Proc. 1156/2019)",
           "autoEvidence": [
             "TerminationLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "በቂ ያልሆነ ማስታወቂያ" }
         },
         {
           "id": "labour_fact_union_membership_termination",
@@ -57,7 +61,8 @@
           "citation": "አንቀጽ 26(2)(a), አዋጅ 1156/2019 (Art. 26(2)(a) of Proc. 1156/2019)",
           "autoEvidence": [
             "TerminationLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "በማህበር አባልነት ምክንያት ስንብት" }
         },
         {
           "id": "labour_fact_maternity_termination",
@@ -66,7 +71,8 @@
           "citation": "አንቀጽ 26(2)(d), አዋጅ 1156/2019 (Art. 26(2)(d) of Proc. 1156/2019)",
           "autoEvidence": [
             "TerminationLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "በእርግዝና ምክንያት ስንብት" }
         },
         {
           "id": "labour_fact_whistleblower_termination",
@@ -75,7 +81,8 @@
           "citation": "አንቀጽ 26(2)(b), አዋጅ 1156/2019 (Art. 26(2)(b) of Proc. 1156/2019)",
           "autoEvidence": [
             "TerminationLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "በቅሬታ ምክንያት ስንብት" }
         },
         {
           "id": "labour_fact_discriminatory_termination",
@@ -84,7 +91,8 @@
           "citation": "አንቀጽ 26(2)(c), አዋጅ 1156/2019 (Art. 26(2)(c) of Proc. 1156/2019)",
           "autoEvidence": [
             "TerminationLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "በአድልዎ ምክንያት ስንብት" }
         },
         {
           "id": "labour_fact_no_valid_reason",
@@ -93,14 +101,16 @@
           "citation": "የአንቀጽ 27 ጥሰት, አዋጅ 1156/2019 (Violation of Art. 27 of Proc. 1156/2019)",
           "autoEvidence": [
             "TerminationLetter"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "ያለምክንያት ስንብት" }
         },
         {
           "id": "labour_fact_constructive_dismissal",
           "label": "የስንብት ድርጊት፡ ገንቢ ስንብት (The Act of Termination: Constructive Dismissal)",
           "legalText": "ሠራተኛው በአሠሪው ሕገ-ወጥ ወይም አስነዋሪ ድርጊቶች (ለምሳሌ ወሲባዊ ትንኮሳ፣ ጥቃት፣ ለደህንነት አስጊ) ምክንያት ሥራውን ለመልቀቅ ተገድዷል፣ ይህም በአሠሪው እንደ ስንብት ይቆጠራል። (Employee was forced to resign due to the employer's unlawful or abusive actions (e.g., sexual harassment, assault, danger to safety), which constitutes termination by the employer.)",
           "citation": "አንቀጽ 32, አዋጅ 1156/2019 (Art. 32 of Proc. 1156/2019)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "ገንቢ ስንብት" }
         }
       ],
       "reliefs": [
@@ -183,7 +193,8 @@
           "autoEvidence": [
             "UnpaidWageWitness",
             "PayrollSlip"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ያልተከፈለ ደመወዝ" }
         },
         {
           "id": "labour_fact_unlawful_deduction",
@@ -192,7 +203,8 @@
           "citation": "አንቀጽ 59 (የቅናሽ ክልከላ) (Art. 59 (Prohibition of deductions))",
           "autoEvidence": [
             "PayrollSlip"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ህገ-ወጥ ቅናሽ" }
         },
         {
           "id": "labour_fact_unpaid_overtime",
@@ -202,21 +214,24 @@
           "autoEvidence": [
             "AttendanceSheet",
             "UnpaidWageWitness"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "ከዚህም በላይ،", "summary_keyword": "ያልተከፈለ የትርፍ ሰዓት" }
         },
         {
           "id": "labour_fact_unpaid_annual_leave",
           "label": "የሕግ ጥቅማጥቅሞች (Statutory Benefits)",
           "legalText": "ሠራተኛው ዓመታዊ ፈቃድ እንዲወስድ አልተፈቀደለትም እና ሥራው ሲቋረጥ ላላገለገለበት ፈቃድ ካሳ አልተከፈለውም። (Employee was not permitted to take annual leave and was not compensated for the accrued, unused leave upon termination of employment.)",
           "citation": "አንቀጽ 77 & 79 (ወደ ገንዘብ መቀየር የሚቻለው ሲቋረጥ ብቻ) (Art. 77 & 79 (Conversion to cash only upon termination))",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "ከዚህም በላይ،", "summary_keyword": "ያልተከፈለ ዓመታዊ ፈቃድ" }
         },
         {
           "id": "labour_fact_unpaid_holiday_work",
           "label": "የሕግ ጥቅማጥቅሞች (Statutory Benefits)",
           "legalText": "ሠራተኛው በሕዝባዊ በዓላት ላይ ሠርቷል ነገር ግን ከመደበኛ የሰዓት ደመወዙ በሁለት እጥፍ ካሳ አልተከፈለውም። (Employee worked on public holidays but was not compensated at a rate of two times their ordinary hourly rate.)",
           "citation": "አንቀጽ 73 (Art. 73)",
-          "autoEvidence": ["AttendanceSheet"]
+          "autoEvidence": ["AttendanceSheet"],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያልተከፈለ የበዓል ክፍያ" }
         }
       ],
       "reliefs": [
@@ -269,42 +284,48 @@
           "label": "ክስተቱ (The Incident)",
           "legalText": "ጉዳቱ የደረሰው ሠራተኛው በተለመደው የሥራ ሰዓት እና በተሰየመው የሥራ ቦታ ላይ ግዴታውን በሚወጣበት ጊዜ ነው። (The injury occurred during the performance of the employee's duties within the regular working hours and at the designated workplace.)",
           "citation": "አንቀጽ 95(1)(a) (Art. 95(1)(a))",
-          "autoEvidence": ["AccidentReport", "WitnessStatements"]
+          "autoEvidence": ["AccidentReport", "WitnessStatements"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "በሥራ ቦታ ላይ የደረሰ ጉዳት" }
         },
         {
           "id": "labour_fact_injury_commuting",
           "label": "ክስተቱ (The Incident)",
           "legalText": "ጉዳቱ የደረሰው ሠራተኛው በአሠሪው በተሰጠው መጓጓዣ በቀጥታ በመኖሪያ ቤቱ እና በሥራ ቦታው መካከል ሲጓዝ ነው። (The injury occurred while the employee was commuting directly between their residence and the workplace, using transport provided by the employer.)",
           "citation": "አንቀጽ 95(1)(c) (Art. 95(1)(c))",
-          "autoEvidence": ["AccidentReport"]
+          "autoEvidence": ["AccidentReport"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "በትራንስፖርት ላይ የደረሰ ጉዳት" }
         },
         {
           "id": "labour_fact_injury_on_order",
           "label": "ክስተቱ (The Incident)",
           "legalText": "ጉዳቱ የደረሰው ሠራተኛው በአሠሪው የተሰጠውን የተወሰነ ትዕዛዝ ሲፈጽም ከመደበኛው የሥራ ቦታ ውጭ ነው። (The injury occurred outside the regular workplace while the employee was carrying out a specific order given by the employer.)",
           "citation": "አንቀጽ 95(1)(b) (Art. 95(1)(b))",
-          "autoEvidence": ["AccidentReport"]
+          "autoEvidence": ["AccidentReport"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "በትዕዛዝ ላይ የደረሰ ጉዳት" }
         },
         {
           "id": "labour_fact_occupational_disease",
           "label": "ክስተቱ (The Incident)",
           "legalText": "ሠራተኛው በሥራ አካባቢ ውስጥ ላሉ አደጋዎች በመጋለጡ ምክንያት የሙያ በሽታ ተይዟል። (The employee has contracted an occupational disease as a direct result of exposure to hazards in the work environment.)",
           "citation": "አንቀጽ 98 (Art. 98)",
-          "autoEvidence": ["MedicalBoardCertificate"]
+          "autoEvidence": ["MedicalBoardCertificate"],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የሙያ በሽታ" }
         },
         {
           "id": "labour_fact_permanent_partial_disability",
           "label": "ጉዳቱ (The Damage)",
           "legalText": "በጉዳቱ ምክንያት ቋሚ ከፊል የአካል ጉዳት ደርሷል፣ ይህም በሕክምና ቦርድ የምስክር ወረቀት የተረጋገጠ ነው። (A permanent partial disability has been sustained as a result of the injury, confirmed by a medical board certificate.)",
           "citation": "አንቀጽ 109 & 110 (Art. 109 & 110)",
-          "autoEvidence": ["MedicalBoardCertificate"]
+          "autoEvidence": ["MedicalBoardCertificate"],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ቋሚ ከፊል ጉዳት" }
         },
         {
           "id": "labour_fact_temporary_total_disability",
           "label": "ጉዳቱ (The Damage)",
-          "legalText": "ጊዜያዊ አጠቃላይ የአካል ጉዳት ደርሶበታል፣ ይህም ሠራተኛው ለተወሰነ ጊዜ መሥራት እንዳይችል አድርጎታል። (A temporary total disability was sustained, rendering the employee unable to work for a specific period.)",
+          "legalText": "ጊዜያዊ አጠቃላይ የአካል ጉዳት ደርሶበታል، ይህም ሠራተኛው ለተወሰነ ጊዜ መሥራት እንዳይችል አድርጎታል። (A temporary total disability was sustained, rendering the employee unable to work for a specific period.)",
           "citation": "አንቀጽ 106 (Art. 106)",
-          "autoEvidence": ["MedicalBoardCertificate", "DoctorAssessment"]
+          "autoEvidence": ["MedicalBoardCertificate", "DoctorAssessment"],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ጊዜያዊ አጠቃላይ ጉዳት" }
         }
       ],
       "reliefs": [
@@ -341,5 +362,3 @@
     }
   }
 }
-
-    

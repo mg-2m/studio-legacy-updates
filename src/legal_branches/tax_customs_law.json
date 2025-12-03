@@ -15,7 +15,7 @@
         ],
         "jurisdictionType": "Administrative (Ministry of Revenue)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ከገቢዎች ሚኒስቴር የተላከልዎ የግብር ግምት ላይ ስህተት አለ ብለው ሲያምኑ፣ ለገቢዎች ሚኒስቴር ራሱ መቃወሚያዎን በይፋ ለማቅረብ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መቃወሚያ የሚቀርበው ለፍርድ ቤት ሳይሆን፣ ግምቱን ላወጣው የገቢዎች ሚኒስቴር ቅርንጫፍ ጽ/ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየግብር ግምት ማስታወቂያው ከደረሰዎት ቀን ጀምሮ ባሉት ሃያ አንድ (21) ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 54(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** መቃወሚያዎን የሚደግፉ ማናቸውም የሂሳብ መዝገቦች (AccountingRecords)፣ ደረሰኞች፣ ወይም የውጭ ኦዲት ሪፖርቶች (ExternalAuditReport)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ከገቢዎች ሚኒስቴር የተላከልዎ የግብር ግምት ላይ ስህተት አለ ብለው ሲያምኑ፣ ለገቢዎች ሚኒስቴር ራሱ መቃወሚያዎን በይፋ ለማቅረብ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መቃወሚያ የሚቀርበው ለፍርድ ቤት ሳይሆን፣ ግምቱን ላወጣው የገቢዎች ሚኒስቴር ቅርንጫፍ ጽ/ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየግብር ግምት ማስታወቂያው ከደረሰዎት ቀን ጀምሮ ባሉት ሃያ አንድ (21) ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 54(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **ማስረጃ (Required Evidence):** መቃወሚያዎን የሚደግፉ ማናቸውም የሂሳብ መዝገቦች (AccountingRecords)፣ ደረሰኞች፣ ወይም የውጭ ኦዲት ሪፖርቶች (ExternalAuditReport)።",
       "partyTitles": {
         "applicant": "አመልካች (ግብር ከፋይ) (Applicant (Taxpayer))",
         "respondent": "መልስ ሰጪ (የገቢዎች ሚኒስቴር ቅርንጫፍ) (Respondent (Ministry of Revenue Branch Office))"
@@ -23,7 +23,7 @@
       "facts": [
         {
           "id": "tax_fact_assessment_received",
-          "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ) (Procedural Compliance (Time Limit))",
+          "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ)",
           "legalText": "የግብር ግምት ማስታወቂያው በ [assessmentDate] ደርሶኛል። (The Tax Assessment Notice was received on [assessmentDate].)",
           "citation": "FTAP Art. 54",
           "autoEvidence": [
@@ -37,7 +37,7 @@
         },
         {
           "id": "tax_fact_objection_timely",
-          "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ) (Procedural Compliance (Time Limit))",
+          "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ)",
           "legalText": "ይህ መቃወሚያ ማስታወቂያው ከደረሰኝ በ21 ቀናት ውስጥ ቀርቧል። (This Objection is filed within the required 21 days of receipt.)",
           "citation": "FTAP Art. 54(1)",
           "autoEvidence": [],
@@ -49,7 +49,7 @@
         },
         {
           "id": "tax_fact_erroneous_income_calc",
-          "label": "የስህተት ምክንያቶች (Grounds for Error)",
+          "label": "የስህተት ምክንያቶች",
           "legalText": "ገቢዎች ሚኒስቴር [specificDeductionOrExemption]ን ከግምት ባለማስገባቱ በስሌት ላይ ስህተት ሰርቷል። (The MoR erred by failing to recognize [specificDeductionOrExemption].)",
           "autoEvidence": [
             "AccountingRecords",
@@ -63,7 +63,7 @@
         },
         {
           "id": "tax_fact_estimated_basis_wrong",
-          "label": "የስህተት ምክንያቶች (Grounds for Error)",
+          "label": "የስህተት ምክንያቶች",
           "legalText": "ግምቱ በግምት ላይ የተመሰረተ ሲሆን፣ ትክክለኛው ጠቅላላ ገቢ በተያያዙት መዝገቦች ተረጋግጧል። (The assessment was based on an estimate, and the actual gross income is proven by the attached records.)",
           "autoEvidence": [
             "AccountingRecords"
@@ -107,7 +107,7 @@
         ],
         "jurisdictionType": "Administrative Tribunal (FTAC)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገቢዎች ሚኒስቴር በመቃወሚያዎ ላይ የሰጠውን ውሳኔ ለመቃወም እና ጉዳዩ በገለልተኛ የግብር ይግባኝ ኮሚሽን እንዲታይ ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ይግባኝ የሚቀርበው ለፌደራል የግብር ይግባኝ ኮሚሽን ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየገቢዎች ሚኒስቴር የመቃወሚያ ውሳኔ ከደረሰዎት ቀን ጀምሮ ባሉት ሰላሳ (30) ቀናት ውስጥ ይግባኙ መቅረብ አለበት (አንቀጽ 88(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የ50% ቅድመ ክፍያ፡** ይግባኝ ከማቅረብዎ በፊት፣ ከተከራከሩበት የግብር መጠን ውስጥ 50% (ቅጣቶችን እና ወለድን ሳይጨምር) መክፈል ግዴታ ነው (አንቀጽ 88(3))።\n*   **ማስረጃ (Required Evidence):** የገቢዎች ሚኒስቴር የሰጠው ውሳኔ እና የ50% ክፍያ ደረሰኝ (PaymentReceiptsTaxCustoms)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገቢዎች ሚኒስቴር በመቃወሚያዎ ላይ የሰጠውን ውሳኔ ለመቃወም እና ጉዳዩ በገለልተኛ የግብር ይግባኝ ኮሚሽን እንዲታይ ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ይግባኝ የሚቀርበው ለፌደራል የግብር ይግባኝ ኮሚሽን ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየገቢዎች ሚኒስቴር የመቃወሚያ ውሳኔ ከደረሰዎት ቀን ጀምሮ ባሉት ሰላሳ (30) ቀናት ውስጥ ይግባኙ መቅረብ አለበት (አንቀጽ 88(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የ50% ቅድመ ክፍያ፡** ይግባኝ ከማቅረብዎ በፊት፣ ከተከራከሩበት የግብር መጠን ውስጥ 50% (ቅጣቶችን እና ወለድን ሳይጨምር) መክፈል ግዴታ ነው (አንቀጽ 88(3))።\n- **ማስረጃ (Required Evidence):** የገቢዎች ሚኒስቴር የሰጠው ውሳኔ እና የ50% ክፍያ ደረሰኝ (PaymentReceiptsTaxCustoms)።",
       "partyTitles": {
         "applicant": "ይግባኝ ባይ (ግብር ከፋይ) (Appellant (Taxpayer))",
         "respondent": "መልስ ሰጪ (የገቢዎች ሚኒስቴር) (Respondent (Ministry of Revenue))"
@@ -115,7 +115,7 @@
       "facts": [
         {
           "id": "tax_fact_objection_rejected",
-          "label": "ቅድመ ሁኔታዎች (Prerequisites)",
+          "label": "ቅድመ ሁኔታዎች",
           "legalText": "ገቢዎች ሚኒስቴር በ [rejectionDate] የግብር ከፋዩን መቃወሚያ ውድቅ የሚያደርግ ውሳኔ ሰጥቷል። (The MoR issued a decision rejecting the Taxpayer's Objection on [rejectionDate].)",
           "autoEvidence": [
             "NoticeOfObjectionInitial"
@@ -128,7 +128,7 @@
         },
         {
           "id": "tax_fact_50_percent_deposit",
-          "label": "ቅድመ ሁኔታዎች (Prerequisites)",
+          "label": "ቅድመ ሁኔታዎች",
           "legalText": "ግብር ከፋዩ ከተከራከረበት የግብር መጠን 50% (ቅጣቶችን/ወለድን ሳይጨምር) አስቀምጧል። (The Taxpayer has deposited 50% of the disputed tax amount (excluding penalties/interest).)",
           "citation": "FTAP Art. 88(3)",
           "autoEvidence": [
@@ -142,7 +142,7 @@
         },
         {
           "id": "tax_fact_mof_error",
-          "label": "የይግባኝ ምክንያቶች (Grounds for Appeal)",
+          "label": "የይግባኝ ምክንያቶች",
           "legalText": "የገቢዎች ሚኒስቴር የውስጥ ግምገማ ውሳኔ ስህተት ነው ምክንያቱም [specificReason]። (The MoR's internal review decision is erroneous because [specificReason].)",
           "autoEvidence": [],
           "rhetoric": {
@@ -185,7 +185,7 @@
         ],
         "jurisdictionType": "Administrative (Customs Commission)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ከልክ በላይ የተከፈለ የጉምሩክ ቀረጥ እንዲመለስልዎ ለጉምሩክ ኮሚሽን ለማመልከት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ መጀመሪያ የሚቀርበው ለጉምሩክ ኮሚሽን ራሱ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበጉምሩክ አዋጅ 859/2014 አንቀጽ 155(1) መሰረት፣ የተመላሽ ገንዘብ ጥያቄ ቀረጡ ከተከፈለበት ቀን ጀምሮ በአንድ (1) ዓመት ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ከልክ በላይ እንደከፈሉ የሚያሳይ ማስረጃ (ለምሳሌ፣ የተሳሳተ ግምት) እና የክፍያ ደረሰኞች።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ከልክ በላይ የተከፈለ የጉምሩክ ቀረጥ እንዲመለስልዎ ለጉምሩክ ኮሚሽን ለማመልከት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ መጀመሪያ የሚቀርበው ለጉምሩክ ኮሚሽን ራሱ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበጉምሩክ አዋጅ 859/2014 አንቀጽ 155(1) መሰረት፣ የተመላሽ ገንዘብ ጥያቄ ቀረጡ ከተከፈለበት ቀን ጀምሮ በአንድ (1) ዓመት ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **ማስረጃ (Required Evidence):** ከልክ በላይ እንደከፈሉ የሚያሳይ ማስረጃ (ለምሳሌ፣ የተሳሳተ ግምት) እና የክፍያ ደረሰኞች።",
       "partyTitles": {
         "applicant": "አመልካች (አስመጪ/ላኪ) (Applicant (Importer/Exporter))",
         "respondent": "መልስ ሰጪ (ጉምሩክ ኮሚሽን) (Respondent (Customs Commission))"
@@ -193,7 +193,7 @@
       "facts": [
         {
           "id": "customs_fact_duty_paid",
-          "label": "ከመጠን በላይ ክፍያ (Overpayment)",
+          "label": "ከመጠን በላይ ክፍያ",
           "legalText": "አመልካቹ በዲክላሬሽን ቁጥር [declarationNumber] ለገቡ/ለወጡ ዕቃዎች [paidAmount] የጉምሩክ ቀረጥ ከፍሏል። (The Applicant paid Customs Duty of [paidAmount] for goods imported/exported under Declaration No. [declarationNumber].)",
           "autoEvidence": [
             "PaymentReceiptsTaxCustoms"
@@ -206,7 +206,7 @@
         },
         {
           "id": "customs_fact_grounds_for_refund",
-          "label": "ከመጠን በላይ ክፍያ (Overpayment)",
+          "label": "ከመጠን በላይ ክፍያ",
           "legalText": "ቀረጡ ተመላሽ ሊደረግ የሚገባው [reasonForRefund] ስለሆነ ነው። (The duty was refundable because [reasonForRefund].)",
           "autoEvidence": [
             "ImportExportDeclarationSAD",
@@ -220,7 +220,7 @@
         },
         {
           "id": "customs_fact_refusal_to_pay",
-          "label": "የኮሚሽኑ እምቢተኝነት (Commission Refusal)",
+          "label": "የኮሚሽኑ እምቢተኝነት",
           "legalText": "ጉምሩክ ኮሚሽኑ የተመላሽ ገንዘብ ማመልከቻውን ለማስተናገድ ፈቃደኛ አልሆነም ወይም አልቻለም። (The Customs Commission has refused or failed to process the refund application.)",
           "autoEvidence": [],
           "rhetoric": {
@@ -255,7 +255,7 @@
         ],
         "jurisdictionType": "Court/Tribunal handling the appeal"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ የግብር ይግባኝዎ እየታየ ባለበት ወቅት፣ የገቢዎች ሚኒስቴር አከራካሪ የሆነውን የግብር እዳ ለመሰብሰብ የአፈጻጸም እርምጃ (ለምሳሌ የባንክ ሂሳብ ማገድ) ሲጀምር፣ ያንን እርምጃ ለጊዜው ለማስቆም ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የግብር ይግባኝ በሚታይበት አካል (የግብር ይግባኝ ኮሚሽን ወይም ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የማይተካ ጉዳት (Irreparable Harm):** ክፍያውን አሁን መፈጸም ድርጅትዎን ለኪሳራ የሚዳርግ እና ሊጠገን የማይችል ጉዳት እንደሚያደርስ ማሳየት።\n*   **ጠንካራ ክስ (Prima Facie Case):** በይግባኝዎ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ የግብር ይግባኝዎ እየታየ ባለበት ወቅት፣ የገቢዎች ሚኒስቴር አከራካሪ የሆነውን የግብር እዳ ለመሰብሰብ የአፈጻጸም እርምጃ (ለምሳሌ የባንክ ሂሳብ ማገድ) ሲጀምር፣ ያንን እርምጃ ለጊዜው ለማስቆም ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የግብር ይግባኝ በሚታይበት አካል (የግብር ይግባኝ ኮሚሽን ወይም ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የማይተካ ጉዳት (Irreparable Harm):** ክፍያውን አሁን መፈጸም ድርጅትዎን ለኪሳራ የሚዳርግ እና ሊጠገን የማይችል ጉዳት እንደሚያደርስ ማሳየት。\n- **ጠንካራ ክስ (Prima Facie Case):** በይግባኝዎ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "መልስ ሰጪ (Respondent)"
@@ -263,7 +263,7 @@
       "facts": [
         {
           "id": "app_tax_fact_execution_pending",
-          "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
+          "label": "የእገዳ ምክንያቶች",
           "legalText": "ገቢዎች ሚኒስቴር አከራካሪውን ግብር ለመሰብሰብ የአፈጻጸም ሂደቶችን (ለምሳሌ፣ የባንክ ሂሳቦችን ማገድ) ጀምሯል። (The MoR has begun execution procedures (e.g., freezing bank accounts) to collect the disputed tax.)",
           "autoEvidence": [],
           "rhetoric": {
@@ -274,7 +274,7 @@
         },
         {
           "id": "app_tax_fact_irreparable_harm",
-          "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
+          "label": "የእገዳ ምክንያቶች",
           "legalText": "ሙሉውን ገንዘብ አሁን መክፈል ድርጅቱን ለኪሳራ የሚዳርግ ሲሆን በንግዱ ላይ ሊጠገን የማይችል ጉዳት ያስከትላል። (Forcing payment of the full amount now would render the company insolvent, causing irreparable harm to the business.)",
           "autoEvidence": [],
           "rhetoric": {
@@ -285,7 +285,7 @@
         },
         {
           "id": "app_tax_fact_prima_facie",
-          "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
+          "label": "የእገዳ ምክንያቶች",
           "legalText": "ግብር ከፋዩ በይግባኝ ላይ የማሸነፍ ከፍተኛ ዕድል አለው። (The Taxpayer has a strong likelihood of success on appeal.)",
           "autoEvidence": [],
           "rhetoric": {
@@ -320,7 +320,7 @@
         ],
         "jurisdictionType": "Court/Tribunal handling the appeal"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ በፍርድ ቤት ወይም በኮሚሽን እየታየ ያለን የግብር ክርክር፣ ጊዜ እና ወጪን ለመቆጠብ በስምምነት ወይም በሽምግልና እንዲፈታ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙን እየሰማ ላለው ፍርድ ቤት ወይም ኮሚሽን ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የስምምነት ፍላጎት፡** ሁለቱም ወገኖች (ግብር ከፋዩ እና ገቢዎች ሚኒስቴር) ጉዳዩን በስምምነት ለመፍታት ፍላጎት እንዳላቸው ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ በፍርድ ቤት ወይም በኮሚሽን እየታየ ያለን የግብር ክርክር፣ ጊዜ እና ወጪን ለመቆጠብ በስምምነት ወይም በሽምግልና እንዲፈታ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙን እየሰማ ላለው ፍርድ ቤት ወይም ኮሚሽን ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የስምምነት ፍላጎት፡** ሁለቱም ወገኖች (ግብር ከፋዩ እና ገቢዎች ሚኒስቴር) ጉዳዩን በስምምነት ለመፍታት ፍላጎት እንዳላቸው ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "መልስ ሰጪ (Respondent)"
@@ -328,7 +328,7 @@
       "facts": [
         {
           "id": "app_tax_fact_willingness_to_settle",
-          "label": "የADR ምክንያቶች (Grounds for ADR)",
+          "label": "የADR ምክንያቶች",
           "legalText": "ግብር ከፋዩም ሆነ ገቢዎች ሚኒስቴር ክርክሩን በጋራ ስምምነት ለመፍታት ፈቃደኛ መሆናቸውን አሳይተዋል። (Both the Taxpayer and the MoR have indicated a willingness to resolve the dispute through mutual agreement.)",
           "autoEvidence": [],
           "rhetoric": {
@@ -339,7 +339,7 @@
         },
         {
           "id": "app_tax_fact_complex_facts",
-          "label": "የADR ምክንያቶች (Grounds for ADR)",
+          "label": "የADR ምክንያቶች",
           "legalText": "ክርክሩ በፍርድ ቤት ክርክር ሳይሆን በባለሙያ ድርድር በተሻለ ሁኔታ ሊፈቱ የሚችሉ ውስብስብ የፍሬ ነገር ጉዳዮችን ያካትታል። (The dispute involves complex factual issues that would be better resolved through expert negotiation than court litigation.)",
           "autoEvidence": [],
           "rhetoric": {

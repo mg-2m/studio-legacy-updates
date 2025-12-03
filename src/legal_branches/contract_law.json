@@ -8,7 +8,7 @@
         "keywords": ["debt recovery", "loan agreement", "non-payment", "የዕዳ ማስመለስ", "የብድር ክስ"],
         "jurisdictionType": "Federal/Regional First Instance"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰው ወይም ድርጅት የሰጡትን ብድር ወይም ዕዳ ለመመለስ ፈቃደኛ ሳይሆን ሲቀር ክስ ለመመስረት ያገለግላል። ይህም የጽሑፍ ስምምነት፣ የዕዳ ማስታወሻ ወይም ሌላ የዕዳ ማረጋገጫ ሲኖርዎት ተፈጻሚ ይሆናል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየክሱ የገንዘብ መጠን ከፍርድ ቤቱ የዳኝነት ወሰን ጋር መጣጣም አለበት። በአጠቃላይ በፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት ወይም በክልል ፍርድ ቤቶች እንደ የገንዘብ መጠኑ ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በጽሑፍ ለተደገፈ የውል ዕዳ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው። ይህ ጊዜ መቆጠር የሚጀምረው እዳው መከፈል ከነበረበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** \n    *   **የግድ የሚያስፈልግ ማስረጃ:** የጽሑፍ የብድር ስምምነት ወይም የዕዳ ማመኛ ሰነድ (WrittenContract, AdmissionofDebt)።\n    *   **ተጨማሪ ማስረጃ:** ገንዘቡ መተላለፉን የሚያሳይ የባንክ መረጃ ወይም ደረሰኝ (PaymentReceipt)፤ ክፍያ እንዲፈጸም የተላከ የማስጠንቀቂያ ደብዳቤ (NoticeofDefault)።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰው ወይም ድርጅት የሰጡትን ብድር ወይም ዕዳ ለመመለስ ፈቃደኛ ሳይሆን ሲቀር ክስ ለመመስረት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየክሱ የገንዘብ መጠን ከፍርድ ቤቱ የዳኝነት ወሰን ጋር መጣጣም አለበት።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በጽሑፍ ለተደገፈ የውል ዕዳ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* የጽሑፍ የብድር ስምምነት ወይም የዕዳ ማመኛ ሰነድ (WrittenContract, AdmissionofDebt)።\n* ገንዘቡ መተላለፉን የሚያሳይ የባንክ መረጃ ወይም ደረሰኝ (PaymentReceipt)።\n* ክፍያ እንዲፈጸም የተላከ የማስጠንቀቂያ ደብዳቤ (NoticeofDefault)።",
       "partyTitles": {
         "applicant": "ከሳሽ (አበዳሪ) (Plaintiff (Creditor))",
         "respondent": "ተከሳሽ (ተበዳሪ) (Defendant (Debtor))"
@@ -98,7 +98,7 @@
         "keywords": ["specific performance", "enforcement", "contract breach", "ውል ይፈጸምልኝ", "ውል ማስከበር"],
         "jurisdictionType": "Federal/Regional First Instance"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ተዋዋይ ወገን በውሉ መሠረት የገባውን ግዴታ ለመፈጸም ፈቃደኛ ሳይሆን ሲቀር፣ ፍርድ ቤቱ ግዴታውን እንዲፈጽም እንዲያስገድደው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nውሉን ለማስፈጸም ስልጣን ያለው ፍርድ ቤት ብዙውን ጊዜ ውሉ የተፈጸመበት ወይም ግዴታው መፈጸም የነበረበት ቦታ የሚገኝ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ልዩ ጥቅም፡** ውሉ እንዲፈጸም መጠየቅዎ ለእርስዎ ልዩ ጥቅም ያለው መሆኑን ማሳየት አለብዎት (ለምሳሌ፣ የሚሸጥልዎት ንብረት ልዩ እና በቀላሉ በገበያ የማይገኝ ሲሆን)።\n*   **ማስረጃ (Required Evidence):** የጽሑፍ ውል (WrittenContract)።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ተዋዋይ ወገን በውሉ መሠረት የገባውን ግዴታ ለመፈጸም ፈቃደኛ ሳይሆን ሲቀር፣ ፍርድ ቤቱ ግዴታውን እንዲፈጽም እንዲያስገድደው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nውሉን ለማስፈጸም ስልጣን ያለው ፍርድ ቤት ብዙውን ጊዜ ውሉ የተፈጸመበት ወይም ግዴታው መፈጸም የነበረበት ቦታ የሚገኝ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* ውሉ እንዲፈጸም መጠየቅዎ ለእርስዎ ልዩ ጥቅም ያለው መሆኑን ማሳየት አለብዎት።\n* የጽሑፍ ውል (WrittenContract) ማስረጃ ማቅረብ ያስፈልጋል።",
       "partyTitles": {
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
@@ -156,7 +156,7 @@
         "keywords": ["contract termination", "cancellation", "breach of contract", "የውል ስረዛ", "ውል ማፍረስ"],
         "jurisdictionType": "Federal/Regional First Instance"
       },
-       "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሌላኛው ወገን የፈጸመው የውል ጥሰት በጣም መሠረታዊ እና ከባድ ከመሆኑ የተነሳ የውሉ መቀጠል ትርጉም የለሽ ሲሆን ውሉ በፍርድ ቤት እንዲሰረዝ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nክሱ መቅረብ ያለበት ውሉ በተፈጸመበት ቦታ ወይም ጥሰቱ በተከሰተበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **መሠረታዊ ጥሰት (Fundamental Breach):** የተፈጸመው ጥሰት የውሉን ዋና ዓላማ የሚያናጋ መሆኑን ማሳየት ያስፈልጋል።\n*   **ማስጠንቀቂያ፡** ውሉ ከመሰረዙ በፊት ለተዋዋይ ወገን ክፍያ እንዲፈጽም ወይም ግዴታውን እንዲወጣ ማስጠንቀቂያ (NoticeofDefault) መስጠት አስፈላጊ ሊሆን ይችላል (Civ. Code Art. 1772)።\n*   **ማስረጃ (Required Evidence):** የጽሑፍ ውል (WrittenContract)፣ የተፈጸመውን ጥሰት የሚያሳይ ማስረጃ።\n",
+       "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሌላኛው ወገን የፈጸመው የውል ጥሰት በጣም መሠረታዊ እና ከባድ ከመሆኑ የተነሳ የውሉ መቀጠል ትርጉም የለሽ ሲሆን ውሉ በፍርድ ቤት እንዲሰረዝ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nክሱ መቅረብ ያለበት ውሉ በተፈጸመበት ቦታ ወይም ጥሰቱ በተከሰተበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* የተፈጸመው ጥሰት የውሉን ዋና ዓላማ የሚያናጋ መሆኑን ማሳየት ያስፈልጋል።\n* ውሉ ከመሰረዙ በፊት ለተዋዋይ ወገን ማስጠንቀቂያ (NoticeofDefault) መስጠት አስፈላጊ ሊሆን ይችላል።\n* የጽሑፍ ውል (WrittenContract) ማስረጃ ማቅረብ ያስፈልጋል።",
       "partyTitles": {
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
@@ -201,7 +201,7 @@
         "keywords": ["attachment", "injunction", "pre-judgment", "asset freeze", "የንብረት እግድ", "ጊዜያዊ"],
         "jurisdictionType": "Federal/Regional First Instance"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ዋናው ክስ እየታየ ባለበት ወቅት ተከሳሹ የፍርድ አፈጻጸምን ለማደናቀፍ ንብረቱን ሊሸጥ ወይም ሊያሸሽ ይችላል የሚል በቂ ስጋት ሲኖር፣ ፍርድ ቤቱ በንብረቱ ላይ የእግድ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ደረጃ ላይ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ጠንካራ ክስ (Prima Facie Case):** በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት አለብዎት።\n*   **የማሸሽ ስጋት (Risk of Dissipation):** ተከሳሹ ንብረቱን ለማሸሽ እየሞከረ መሆኑን የሚያሳይ ተጨባጭ ማስረጃ ወይም ስጋት መኖሩን ማሳየት ያስፈልጋል።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ዋናው ክስ እየታየ ባለበት ወቅት ተከሳሹ የፍርድ አፈጻጸምን ለማደናቀፍ ንብረቱን ሊሸጥ ወይም ሊያሸሽ ይችላል የሚል በቂ ስጋት ሲኖር፣ ፍርድ ቤቱ በንብረቱ ላይ የእግድ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ደረጃ ላይ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት አለብዎት።\n* ተከሳሹ ንብረቱን ለማሸሽ እየሞከረ መሆኑን የሚያሳይ ተጨባጭ ማስረጃ ወይም ስጋት መኖሩን ማሳየት ያስፈልጋል።",
       "partyTitles": {
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
@@ -244,7 +244,7 @@
         "keywords": ["judgment on admission", "summary judgment", "pleading", "በእምነት ላይ ፍርድ", "አፋጣኝ ውሳኔ"],
         "jurisdictionType": "Federal/Regional First Instance"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ ተከሳሹ በመከላከያ መልሱ ላይ የክሱን ዋና ዋና ነጥቦች (ለምሳሌ የእዳውን መኖር) በግልጽ ሲያምን، ክርክሩን ሳያራዝሙ በታመነው ነጥብ ላይ ብቻ ፍርድ ቤቱ አፋጣኝ ውሳኔ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን ካቀረበ በኋላ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ግልጽ እምነት (Clear Admission):** የተከሳሹ የመከላከያ መልስ ምንም ዓይነት ማስተባበያ የሌለው ግልጽ የሆነ እምነት መያዝ አለበት።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ ተከሳሹ በመከላከያ መልሱ ላይ የክሱን ዋና ዋና ነጥቦች (ለምሳሌ የእዳውን መኖር) በግልጽ ሲያምን، ክርክሩን ሳያራዝሙ በታመነው ነጥብ ላይ ብቻ ፍርድ ቤቱ አፋጣኝ ውሳኔ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን ካቀረበ በኋላ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n* የተከሳሹ የመከላከያ መልስ ምንም ዓይነት ማስተባበያ የሌለው ግልጽ የሆነ እምነት መያዝ አለበት።",
       "partyTitles": {
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"

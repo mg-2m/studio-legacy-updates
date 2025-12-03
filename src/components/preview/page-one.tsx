@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import type { AppState, Party, Relief, Fact } from '@/lib/types';
@@ -10,7 +9,7 @@ interface PageOneProps {
 }
 
 // Function to format a single fact text by replacing placeholders
-const formatSingleFactText = (text: string, values: { [key: string]: any }): string => {
+const formatFactPlaceholders = (text: string, values: { [key: string]: any }): string => {
   if (!values) return text;
 
   let formattedText = text;
@@ -26,15 +25,15 @@ const formatSingleFactText = (text: string, values: { [key: string]: any }): str
 };
 
 
-// The NEW Narrative Engine Logic
+// The NEW Narrative Engine Logic - v2.0
 const composeNarrative = (facts: Fact[]): string => {
   if (facts.length === 0) {
-    return `<li class="text-gray-500 italic">Select facts from the editor...</li>`;
+    return `<li class="text-gray-500 italic">Select facts from the editor to build the narrative...</li>`;
   }
 
-  // Group facts by their label (the group title)
+  // Group facts by their label (the group title from the backend)
   const groupedFacts: { [key: string]: Fact[] } = facts.reduce((acc, fact) => {
-    const key = fact.label || 'Ungrouped';
+    const key = fact.label || 'Ungrouped Facts';
     if (!acc[key]) {
       acc[key] = [];
     }
@@ -42,15 +41,19 @@ const composeNarrative = (facts: Fact[]): string => {
     return acc;
   }, {} as { [key: string]: Fact[] });
 
-  // Build the narrative from grouped facts
-  const narrativeParts = Object.values(groupedFacts).map(group => {
+  // Build the narrative from the grouped facts
+  const narrativeParts = Object.values(groupedFacts).map(factGroup => {
     let paragraph = '';
-    group.forEach((fact, index) => {
-      let sentence = formatSingleFactText(fact.legalText, fact.values);
+    factGroup.forEach((fact, index) => {
+      // 1. Format the core legal text with its dynamic values
+      let sentence = formatFactPlaceholders(fact.legalText, fact.values);
+      
+      // 2. Add citation
       if (fact.citation) {
         sentence += ` <span class="text-xs font-bold ml-1">[${fact.citation}]</span>`;
       }
       
+      // 3. Prepend the correct rhetorical connector
       let connector = '';
       if (index === 0) {
         // Use the intro for the first fact of the group
@@ -60,12 +63,13 @@ const composeNarrative = (facts: Fact[]): string => {
         connector = fact.rhetoric?.transition || '';
       }
       
+      // 4. Append the connected sentence to the paragraph
       paragraph += `${connector} ${sentence} `;
     });
     return paragraph.trim();
   });
 
-  // Each paragraph group becomes a list item
+  // Each paragraph group becomes a numbered list item
   return narrativeParts.map(p => `<li class="mb-2 text-justify">${p}</li>`).join('');
 };
 
@@ -74,7 +78,6 @@ export default function PageOne({ state }: PageOneProps) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
   const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
   
-  // Guard against missing template data during transition
   if (!currentTemplateData) {
     return <div className="a4-page">Loading...</div>;
   }
@@ -98,17 +101,13 @@ export default function PageOne({ state }: PageOneProps) {
     let text = relief.text;
 
     if (relief.isDynamic && calculations) {
-        // Collect all values from all calculators
         const allCalcValues = Object.values(calculations).reduce((acc, curr) => ({ ...acc, ...curr }), {});
-
-        // Replace placeholders in the text
         text = text.replace(/\{\{\s*(\w+)\s*\}\}/g, (match, placeholder) => {
             const value = allCalcValues[placeholder as keyof typeof allCalcValues];
             if (typeof value === 'number') {
                 return `<strong><u>${value.toFixed(2)}</u></strong>`;
             }
              if (typeof value === 'string' && value.includes('-')) {
-                // assume it's a date
                  try {
                     return `<strong><u>${new Date(value).toLocaleDateString('en-GB')}</u></strong>`;
                 } catch(e) { /* ignore */ }
@@ -116,7 +115,6 @@ export default function PageOne({ state }: PageOneProps) {
             return `<strong><u>${value || '______'}</u></strong>`;
         });
     }
-    // Also replace non-dynamic placeholders for reliefs
     text = text.replace(/\[(.*?)\]/g, (match, key) => {
         return `<strong><u>${key}</u></strong>`;
     });
@@ -128,9 +126,7 @@ export default function PageOne({ state }: PageOneProps) {
 
   const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
-    
-    // Simple pluralization for Amharic by adding 'ዎች'
-    if (title.endsWith(')') || title.endsWith(') ')) {
+    if (title.endsWith(')')) {
         const parts = title.split('(');
         return `${parts[0]}ዎች (${parts[1]}`.toUpperCase();
     }
@@ -173,8 +169,12 @@ export default function PageOne({ state }: PageOneProps) {
   
   const finalNarrative = composeNarrative(selectedFacts);
 
-  // Implement Rule 13.2: Dynamic Summarization
-  const reliefSummary = selectedFacts.length > 0 ? selectedFacts.map(f => f.rhetoric?.summary_keyword).filter(Boolean).join('፣ ') : 'የቀረቡት ምክንያቶች';
+  const reliefSummary = selectedFacts.length > 0 
+    ? selectedFacts
+        .map(f => f.rhetoric?.summary_keyword)
+        .filter(Boolean) // Filter out any undefined keywords
+        .join('፣ ') // Join with the correct Amharic comma
+    : 'የቀረቡት ምክንያቶች';
 
 
   return (
@@ -267,4 +267,3 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
-

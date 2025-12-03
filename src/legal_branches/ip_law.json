@@ -8,7 +8,7 @@
         "keywords": ["trademark", "infringement", "counterfeit", "የንግድ ምልክት", "ጥሰት", "ሐሰተኛ"],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ የተመዘገበ የንግድ ምልክት በሌላ ወገን ያለፈቃድ ጥቅም ላይ ሲውል እና በገበያ ላይ ግራ መጋባትን ሲፈጥር ክስ ለመመስረት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ምልክት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይታያሉ።\n\n### የጊዜ ገደብ (Period of Limitation)\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የንግድ ምልክት ምዝገባ ሰርተፍኬት (CertificateOfRegistrationEIPO) እና ጥሰቱን የሚያሳይ ናሙና (ለምሳሌ፣ የሐሰት ምርት) ማቅረብ ክሱን በእጅጉ ያጠናክራል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ የተመዘገበ የንግድ ምልክት በሌላ ወገን ያለፈቃድ ጥቅም ላይ ሲውል እና በገበያ ላይ ግራ መጋባትን ሲፈጥር ክስ ለመመስረት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ምልክት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይታያሉ።\n\n### የጊዜ ገደብ (Period of Limitation)\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የንግድ ምልክት ምዝገባ ሰርተፍኬት (CertificateOfRegistrationEIPO)።\n- ጥሰቱን የሚያሳይ ናሙና (ለምሳሌ፣ የሐሰት ምርት)።",
       "partyTitles": {
         "applicant": "ከሳሽ (የንግድ ምልክት ባለቤት) (Plaintiff - Trademark Owner)",
         "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
@@ -79,7 +79,7 @@
         "keywords": ["trademark", "opposition", "EIPO", "application", "የንግድ ምልክት", "መቃወሚያ", "ምዝገባ"],
         "jurisdictionType": "Administrative (EIPO)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሶስተኛ ወገን ያቀረበው የንግድ ምልክት ማመልከቻ ከእርስዎ ቀደምት መብቶች ጋር ሲጋጭ ለመቃወም ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ በፍርድ ቤት ሳይሆን **በኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት (EIPO)** አስተዳደራዊ ችሎት ፊት የሚቀርብ ሂደት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተቃውሞ ማመልከቻው የንግድ ምልክቱ በጋዜጣ ከታተመበት ቀን ጀምሮ ባሉት **90 ቀናት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የእርስዎ ቀደምት የንግድ ምልክት ምዝገባ ሰርተፍኬት እና በምልክቶቹ መካከል ግራ መጋባት ሊኖር እንደሚችል የሚያሳይ ማስረጃ ማቅረብ ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሶስተኛ ወገን ያቀረበው የንግድ ምልክት ማመልከቻ ከእርስዎ ቀደምት መብቶች ጋር ሲጋጭ ለመቃወም ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ በፍርድ ቤት ሳይሆን **በኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት (EIPO)** አስተዳደራዊ ችሎት ፊት የሚቀርብ ሂደት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተቃውሞ ማመልከቻው የንግድ ምልክቱ በጋዜጣ ከታተመበት ቀን ጀምሮ ባሉት **90 ቀናት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የእርስዎ ቀደምት የንግድ ምልክት ምዝገባ ሰርተፍኬት።\n- በምልክቶቹ መካከል ግራ መጋባት ሊኖር እንደሚችል የሚያሳይ ማስረጃ።",
       "partyTitles": {
         "applicant": "ተቃዋሚ (Opponent)",
         "respondent": "አመልካች (Applicant)"
@@ -139,7 +139,7 @@
         "keywords": ["patent", "infringement", "invention", "EIPO", "ፓተንት", "የፈጠራ ባለቤትነት", "ጥሰት"],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህንን አብነት ይጠቀሙ አንድ ሰው የፈጠራ ባለቤትነት መብትዎን ያለእርስዎ ፈቃድ ሲሰራ፣ ሲጠቀም ወይም ሲሸጥ።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየፓተንት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ (Period of Limitation)\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት **አምስት (5) ዓመታት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የፓተንት ምዝገባ ሰርተፍኬት (CertificateOfRegistrationEIPO) እና የጥሰቱን መጠን የሚያሳይ የባለሙያ ሪፖርት (TechnicalExpertReport) ማቅረብ ክሱን ያጠናክራል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህንን አብነት ይጠቀሙ አንድ ሰው የፈጠራ ባለቤትነት መብትዎን ያለእርስዎ ፈቃድ ሲሰራ፣ ሲጠቀም ወይም ሲሸጥ።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየፓተንት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ (Period of Limitation)\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት **አምስት (5) ዓመታት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የፓተንት ምዝገባ ሰርተፍኬት (CertificateOfRegistrationEIPO)።\n- የጥሰቱን መጠን የሚያሳይ የባለሙያ ሪፖርት (TechnicalExpertReport)።",
       "partyTitles": {
         "applicant": "ከሳሽ (የፓተንት ባለቤት) (Plaintiff - Patent Holder)",
         "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
@@ -211,7 +211,7 @@
         "keywords": ["copyright", "piracy", "infringement", "author", "የቅጂ መብት", "የባህር ላይ ወንበዴነት"],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፤ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየቅጂ መብት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ (Period of Limitation)\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት **ሁለት (2) ዓመታት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የስራው ደራሲ መሆንዎን እና ጥሰቱ መፈጸሙን ማሳየት ያስፈልጋል። ለምሳሌ፣ የተሰረቀውን ስራ ቅጂ (ProductSampleSpecimen) ማቅረብ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፤ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየቅጂ መብት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ (Period of Limitation)\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት **ሁለት (2) ዓመታት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የስራው ደራሲ መሆንዎን ማሳየት።\n- ጥሰቱ መፈጸሙን ማሳየት (ለምሳሌ፣ የተሰረቀውን ስራ ቅጂ (ProductSampleSpecimen) ማቅረብ)።",
       "partyTitles": {
         "applicant": "ከሳሽ (ደራሲ/ፈጣሪ) (Plaintiff - Author/Creator)",
         "respondent": "ተከሳሽ (ወንበዴ/አባዥ) (Defendant - Pirate/Reproducer)"
@@ -307,7 +307,7 @@
         "keywords": ["moral rights", "authorship", "integrity", "copyright", "የሞራል መብት", "ደራሲነት"],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ስራ ያለእርስዎ እውቅና ሲቀርብ (የደራሲነት መብት ጥሰት) ወይም ስራዎ መልካም ስምዎን በሚጎዳ መልኩ ሲቀየር ወይም ሲበላሽ (የስራውን ሙሉነት የመጠበቅ መብት ጥሰት) ሲከሰት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሞራል መብቶች ከቅጂ መብት ጋር የተያያዙ በመሆናቸው በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ (Period of Limitation)\nየሞራል መብቶች ከኢኮኖሚያዊ መብቶች ጋር አብረው የሚቆዩ ሲሆን የህይወት ዘመን ጥበቃ አላቸው። ክስ ለማቅረብ ያለው ገደብ ጥሰቱን ካወቁበት ቀን ጀምሮ 2 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የመጀመሪያውን ስራ እና የተጣሰውን/የተበላሸውን ስራ ቅጂ ጎን ለጎን ማቅረብ ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ስራ ያለእርስዎ እውቅና ሲቀርብ (የደራሲነት መብት ጥሰት) ወይም ስራዎ መልካም ስምዎን በሚጎዳ መልኩ ሲቀየር ወይም ሲበላሽ (የስራውን ሙሉነት የመጠበቅ መብት ጥሰት) ሲከሰት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሞራል መብቶች ከቅጂ መብት ጋር የተያያዙ በመሆናቸው በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ (Period of Limitation)\nየሞራል መብቶች ከኢኮኖሚያዊ መብቶች ጋር አብረው የሚቆዩ ሲሆን የህይወት ዘመን ጥበቃ አላቸው። ክስ ለማቅረብ ያለው ገደብ ጥሰቱን ካወቁበት ቀን ጀምሮ 2 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የመጀመሪያውን ስራ እና የተጣሰውን/የተበላሸውን ስራ ቅጂ ጎን ለ ጎን ማቅረብ።",
       "partyTitles": {
         "applicant": "ከሳሽ (ደራሲ) (Plaintiff - Author)",
         "respondent": "ተከሳሽ (ጥሰት ፈፃሚ) (Defendant - Infringer)"
@@ -359,7 +359,7 @@
         "keywords": ["injunction", "temporary", "restrain", "IP", "interlocutory", "ጊዜያዊ", "እገዳ"],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ከዋናው ክስዎ ጋር የሚቀርብ አስቸኳይ ማመልከቻ ነው። ዋናው የፍርድ ቤት ጉዳይ በሚታይበት ጊዜ ቀጣይ ጥሰትን ወዲያውኑ ለማስቆም እና በገበያዎ ወይም በዝናዎ ላይ ተጨማሪ ጉዳት እንዳይደርስ ለመከላከል ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው የIP ክስ በሚታይበት ፍርድ ቤት (ብዙውን ጊዜ ፌዴራል ከፍተኛ ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፣ ነገር ግን ጉዳቱ እንደታወቀ ወዲያውኑ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** ጥሰቱ አሁንም በመካሄድ ላይ መሆኑን እና አስቸኳይ እርምጃ ካልተወሰደ ሊጠገን የማይችል ጉዳት እንደሚያስከትል ማሳየት አለብዎት።\n*   **ዋና ክስ (Main Claim):** ይህ ማመልከቻ ከዋናው የጥሰት ክስ ጋር በአንድነት መቅረብ አለበት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ከዋናው ክስዎ ጋር የሚቀርብ አስቸኳይ ማመልከቻ ነው። ዋናው የፍርድ ቤት ጉዳይ በሚታይበት ጊዜ ቀጣይ ጥሰትን ወዲያውኑ ለማስቆም እና በገበያዎ ወይም በዝናዎ ላይ ተጨማሪ ጉዳት እንዳይደርስ ለመከላከል ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው የIP ክስ በሚታይበት ፍርድ ቤት (ብዙውን ጊዜ ፌዴራል ከፍተኛ ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፣ ነገር ግን ጉዳቱ እንደታወቀ ወዲያውኑ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ጥሰቱ አሁንም በመካሄድ ላይ መሆኑን እና አስቸኳይ እርምጃ ካልተወሰደ ሊጠገን የማይችል ጉዳት እንደሚያስከትል ማሳየት።\n- ይህ ማመልከቻ ከዋናው የጥሰት ክስ ጋር በአንድነት መቅረብ አለበት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -411,7 +411,7 @@
         "keywords": ["anton piller", "seizure", "evidence preservation", "ex parte", "ማስረጃ መያዣ"],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ በጣም አስቸኳይ እና ልዩ የሆነ 'የፍተሻ እና የመያዝ' ትእዛዝ ነው። አጥፊው ስለ ክሱ ከተነገረው ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ኮምፒተሮችን፣ ሰነዶችን) ያጠፋል ብሎ ለማመን በጣም ጠንካራ ምክንያት ሲኖር ጥቅም ላይ ይውላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው የIP ክስ በሚታይበት ፍርድ ቤት (ብዙውን ጊዜ ፌዴራል ከፍተኛ ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. ይህ አስቸኳይ ማመልከቻ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ከፍተኛ ስጋት (Extreme Risk):** ተከሳሹ ማስረጃዎችን እንደሚያጠፋ የሚያሳይ በጣም ጠንካራ እና ተጨባጭ ስጋት መኖሩን ማሳየት አለብዎት።\n*   **ጠንካራ ክስ (Strong Case):** የጥሰት ክስዎ በጣም ጠንካራ መሆኑን ለፍርድ ቤቱ ማሳመን አለብዎት።\n*   **Ex Parte:** ይህ ማመልከቻ ለሌላኛው ወገን ሳይነገር ነው የሚቀርበው።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ በጣም አስቸኳይ እና ልዩ የሆነ 'የፍተሻ እና የመያዝ' ትእዛዝ ነው። አጥፊው ስለ ክሱ ከተነገረው ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ኮምፒተሮችን፣ ሰነዶችን) ያጠፋል ብሎ ለማመን በጣም ጠንካራ ምክንያት ሲኖር ጥቅም ላይ ይውላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው የIP ክስ በሚታይበት ፍርድ ቤት (ብዙውን ጊዜ ፌዴራል ከፍተኛ ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. ይህ አስቸኳይ ማመልከቻ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ተከሳሹ ማስረጃዎችን እንደሚያጠፋ የሚያሳይ በጣም ጠንካራ እና ተጨባጭ ስጋት መኖሩን ማሳየት።\n- የጥሰት ክስዎ በጣም ጠንካራ መሆኑን ለፍርድ ቤቱ ማሳመን።\n- ይህ ማመልከቻ ለሌላኛው ወገን ሳይነገር ነው የሚቀርበው።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"

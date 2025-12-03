@@ -1,3 +1,4 @@
+
 {
   "templates": {
     "tax_objection_admin_review": {
@@ -27,14 +28,24 @@
           "citation": "FTAP Art. 54",
           "autoEvidence": [
             "TaxAssessmentNotice"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የግምት ደረሰኝ"
+          }
         },
         {
           "id": "tax_fact_objection_timely",
           "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ) (Procedural Compliance (Time Limit))",
           "legalText": "ይህ መቃወሚያ ማስታወቂያው ከደረሰኝ በ21 ቀናት ውስጥ ቀርቧል። (This Objection is filed within the required 21 days of receipt.)",
           "citation": "FTAP Art. 54(1)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "ወቅታዊ መቃወሚያ"
+          }
         },
         {
           "id": "tax_fact_erroneous_income_calc",
@@ -43,7 +54,12 @@
           "autoEvidence": [
             "AccountingRecords",
             "ExternalAuditReport"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "የስሌት ስህተት"
+          }
         },
         {
           "id": "tax_fact_estimated_basis_wrong",
@@ -51,7 +67,12 @@
           "legalText": "ግምቱ በግምት ላይ የተመሰረተ ሲሆን፣ ትክክለኛው ጠቅላላ ገቢ በተያያዙት መዝገቦች ተረጋግጧል። (The assessment was based on an estimate, and the actual gross income is proven by the attached records.)",
           "autoEvidence": [
             "AccountingRecords"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በተጨማሪም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የተሳሳተ ግምት"
+          }
         }
       ],
       "reliefs": [
@@ -98,7 +119,12 @@
           "legalText": "ገቢዎች ሚኒስቴር በ [rejectionDate] የግብር ከፋዩን መቃወሚያ ውድቅ የሚያደርግ ውሳኔ ሰጥቷል። (The MoR issued a decision rejecting the Taxpayer's Objection on [rejectionDate].)",
           "autoEvidence": [
             "NoticeOfObjectionInitial"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የተቃውሞ ውድቅ"
+          }
         },
         {
           "id": "tax_fact_50_percent_deposit",
@@ -107,13 +133,23 @@
           "citation": "FTAP Art. 88(3)",
           "autoEvidence": [
             "PaymentReceiptsTaxCustoms"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "50% ቅድመ ክፍያ"
+          }
         },
         {
           "id": "tax_fact_mof_error",
           "label": "የይግባኝ ምክንያቶች (Grounds for Appeal)",
           "legalText": "የገቢዎች ሚኒስቴር የውስጥ ግምገማ ውሳኔ ስህተት ነው ምክንያቱም [specificReason]። (The MoR's internal review decision is erroneous because [specificReason].)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጨረሻም،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "የውሳኔ ስህተት"
+          }
         }
       ],
       "reliefs": [
@@ -161,7 +197,12 @@
           "legalText": "አመልካቹ በዲክላሬሽን ቁጥር [declarationNumber] ለገቡ/ለወጡ ዕቃዎች [paidAmount] የጉምሩክ ቀረጥ ከፍሏል። (The Applicant paid Customs Duty of [paidAmount] for goods imported/exported under Declaration No. [declarationNumber].)",
           "autoEvidence": [
             "PaymentReceiptsTaxCustoms"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የተከፈለ ቀረጥ"
+          }
         },
         {
           "id": "customs_fact_grounds_for_refund",
@@ -170,13 +211,23 @@
           "autoEvidence": [
             "ImportExportDeclarationSAD",
             "PaymentReceiptsTaxCustoms"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "የተመላሽ ምክንያት"
+          }
         },
         {
           "id": "customs_fact_refusal_to_pay",
           "label": "የኮሚሽኑ እምቢተኝነት (Commission Refusal)",
           "legalText": "ጉምሩክ ኮሚሽኑ የተመላሽ ገንዘብ ማመልከቻውን ለማስተናገድ ፈቃደኛ አልሆነም ወይም አልቻለም። (The Customs Commission has refused or failed to process the refund application.)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጨረሻም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የኮሚሽኑ እምቢተኝነት"
+          }
         }
       ],
       "reliefs": [
@@ -214,19 +265,34 @@
           "id": "app_tax_fact_execution_pending",
           "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
           "legalText": "ገቢዎች ሚኒስቴር አከራካሪውን ግብር ለመሰብሰብ የአፈጻጸም ሂደቶችን (ለምሳሌ፣ የባንክ ሂሳቦችን ማገድ) ጀምሯል። (The MoR has begun execution procedures (e.g., freezing bank accounts) to collect the disputed tax.)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "በሂደት ላይ ያለ አፈጻጸም"
+          }
         },
         {
           "id": "app_tax_fact_irreparable_harm",
           "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
           "legalText": "ሙሉውን ገንዘብ አሁን መክፈል ድርጅቱን ለኪሳራ የሚዳርግ ሲሆን በንግዱ ላይ ሊጠገን የማይችል ጉዳት ያስከትላል። (Forcing payment of the full amount now would render the company insolvent, causing irreparable harm to the business.)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የማይተካ ጉዳት"
+          }
         },
         {
           "id": "app_tax_fact_prima_facie",
           "label": "የእገዳ ምክንያቶች (Grounds for Stay)",
           "legalText": "ግብር ከፋዩ በይግባኝ ላይ የማሸነፍ ከፍተኛ ዕድል አለው። (The Taxpayer has a strong likelihood of success on appeal.)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጨረሻም،",
+            "transition": "ከዚህም በላይ،",
+            "summary_keyword": "የማሸነፍ ዕድል"
+          }
         }
       ],
       "reliefs": [
@@ -264,13 +330,23 @@
           "id": "app_tax_fact_willingness_to_settle",
           "label": "የADR ምክንያቶች (Grounds for ADR)",
           "legalText": "ግብር ከፋዩም ሆነ ገቢዎች ሚኒስቴር ክርክሩን በጋራ ስምምነት ለመፍታት ፈቃደኛ መሆናቸውን አሳይተዋል። (Both the Taxpayer and the MoR have indicated a willingness to resolve the dispute through mutual agreement.)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "የስምምነት ፈቃደኝነት"
+          }
         },
         {
           "id": "app_tax_fact_complex_facts",
           "label": "የADR ምክንያቶች (Grounds for ADR)",
           "legalText": "ክርክሩ በፍርድ ቤት ክርክር ሳይሆን በባለሙያ ድርድር በተሻለ ሁኔታ ሊፈቱ የሚችሉ ውስብስብ የፍሬ ነገር ጉዳዮችን ያካትታል። (The dispute involves complex factual issues that would be better resolved through expert negotiation than court litigation.)",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም،",
+            "transition": "በተጨማሪም،",
+            "summary_keyword": "ውስብስብ ፍሬ ነገሮች"
+          }
         }
       ],
       "reliefs": [

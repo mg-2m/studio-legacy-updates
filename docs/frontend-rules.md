@@ -10,7 +10,7 @@ Here is the **Corrected and Expanded** Frontend Protocol. It preserves your exac
 
 **Effective Date:** Immediately
 **Status:** **NON-NEGOTIABLE**
-**Structure:** 12 Immutable Rules (Enhanced)
+**Structure:** 13 Immutable Rules (Enhanced)
 
 ---
 
@@ -68,4 +68,13 @@ Here is the **Corrected and Expanded** Frontend Protocol. It preserves your exac
 * **12.2. Stateful Calculation:** The application state must store the calculator's inputs.
 * **12.3. Interactive Preview:** The Preview text must dynamically replace placeholders like `{{principal}}` in `dynamic` reliefs with the live calculated result from the corresponding calculator. The UI should optionally show a "Math Breakdown" tooltip to explain the result.
 
+---
+
+### **Pillar XIII: The Narrative Engine (Rhetorical Composition)**
+* **13.1. Narrative Synthesis (Standard Tier):** The UI MUST NOT simply concatenate `legalText` from facts. It must use the `rhetoric` object from the backend JSON to compose a cohesive paragraph.
+    *   It MUST use the `rhetoric.intro` phrase for the first fact in a group.
+    *   It MUST use `rhetoric.transition` phrases to connect subsequent facts.
+    *   It MUST handle grammatical agreement for number (singular/plural) based on the count of applicants/respondents.
+* **13.2. Dynamic Summarization:** The "Reliefs" section in the preview should begin with a summary sentence constructed from the `rhetoric.summary_keyword` values of all selected facts.
+* **13.3. AI Augmentation (Premium Tier):** As a privileged feature, the UI may offer a button to "Enhance with AI." If triggered, this will send the structured facts to a Genkit flow (`composeLegalNarrative`) and replace the standard narrative with the AI-generated version.
     

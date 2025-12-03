@@ -35,6 +35,10 @@ A "Fact" is not a sentence; it is a logic block.
       * *Good (Fact A):* "Defendant failed to pay rent for the period of [Period]."
       * *Good (Fact B):* "Defendant caused damage to the property beyond reasonable wear and tear."
   * **2.2. Mutually Exclusive Logic (`mutexGroup`):** Facts that contradict each other MUST be grouped logically by assigning them the same `mutexGroup` ID string. This prevents users from selecting legally contradictory facts (e.g., a marriage was 'civil' vs 'customary').
+  * **2.3. The Rhetorical Layer (`rhetoric` object):** To enable a persuasive, human-like narrative, each fact MUST contain a `rhetoric` object. This provides the building blocks for the frontend narrative engine.
+      *   `"intro"`: An Amharic phrase to introduce the fact group (e.g., "በመጀመሪያ ደረጃ፣").
+      *   `"transition"`: An Amharic phrase to connect this fact to the previous one (e.g., "በተጨማሪም፣", "ከዚህም ባሻገር፣").
+      *   `"summary_keyword"`: A short Amharic noun phrase describing the fact's essence, used for final summarization (e.g., "የማይታረቅ ልዩነት").
 
 ### 3\. Smart Evidence Topology (`_base.json`)
 
@@ -120,7 +124,12 @@ All `*.json` files must strictly adhere to this extended schema structure.
               "legalText": "The petitioners concluded a valid civil marriage on [Date] at [Place of Marriage]. (አቤቱታ አቅራቢዎች በ[Date] በ[Place of Marriage] ሕጋዊ የክብር መዝገብ ጋብቻ ፈፅመዋል።)",
               "citation": "Rev. Family Code Art. 1",
               "autoEvidence": ["proof_of_marriage"],
-              "mutexGroup": "marriage_type" 
+              "mutexGroup": "marriage_type",
+              "rhetoric": {
+                 "intro": "በመጀመሪያ ደረጃ፣",
+                 "transition": "በተጨማሪም፣",
+                 "summary_keyword": "የጋብቻ መኖር"
+              }
             }
           ]
         }
@@ -167,6 +176,7 @@ Before committing any `.json` file, the Research & Documentation Wing MUST verif
 7.  **[ ] Calculator Logic:** If money is involved, is the `calculations` object present and accurate?
 8.  **[ ] Mutex Logic:** Are contradictory facts assigned a `mutexGroup` ID?
 9.  **[ ] Dynamic Reliefs:** Are reliefs dependent on a calculator marked with `isDynamic: true`?
+10. **[ ] Rhetorical Layer:** Does every fact contain the `rhetoric` object with `intro`, `transition`, and `summary_keyword`?
 
 -----
 

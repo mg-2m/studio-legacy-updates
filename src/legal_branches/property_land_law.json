@@ -1,4 +1,3 @@
-
 {
   "meta": {
     "branchName": "የንብረት እና የመሬት ሕግ (Property & Land Law)",
@@ -30,18 +29,28 @@
         {
           "id": "prop_fact_ownership_proof",
           "label": "የባለቤትነት ማረጋገጫ (Proof of Title)",
-          "legalText": "ከሳሹ በ {{property_location}} የሚገኘው የማይንቀሳቀስ ንብረት ህጋዊ ባለቤት/ባለይዞታ ነው። (The Plaintiff is the legal owner/holder of the immovable property situated at {{property_location}}.)",
+          "legalText": "ከሳሹ በ [property_location] የሚገኘው የማይንቀሳቀስ ንብረት ህጋዊ ባለቤት/ባለይዞታ ነው። (The Plaintiff is the legal owner/holder of the immovable property situated at [property_location].)",
           "citation": "Civ. Code Art. 1204",
           "autoEvidence": [
             "TitleDeed"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የባለቤትነት መብት"
+          }
         },
         {
           "id": "prop_fact_chain_of_custody",
           "label": "የባለቤትነት ማረጋገጫ (Proof of Title)",
-          "legalText": "ከሳሹ ንብረቱን በ {{acquisition_method}} በ {{date_of_acquisition}} አግኝቷል። (The Plaintiff acquired the property through {{acquisition_method}} on {{date_of_acquisition}}.)",
+          "legalText": "ከሳሹ ንብረቱን በ [acquisition_method] በ [date_of_acquisition] አግኝቷል። (The Plaintiff acquired the property through [acquisition_method] on [date_of_acquisition].)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የንብረት ግኝት"
+          }
         },
         {
           "id": "prop_fact_defendant_possession",
@@ -50,7 +59,12 @@
           "citation": "Civ. Code Art. 1206",
           "autoEvidence": [
             "KebeleConfirmation"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ያለአግባብ መያዝ"
+          }
         },
         {
           "id": "prop_fact_refusal_vacate",
@@ -59,7 +73,12 @@
           "citation": "",
           "autoEvidence": [
             "NoticeofDefault"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "ለመልቀቅ ፈቃደኛ አለመሆን"
+          }
         }
       ],
       "reliefs": [
@@ -114,14 +133,24 @@
           "autoEvidence": [
             "TaxLandRentReceipts",
             "KebeleConfirmation"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ሰላማዊ ይዞታ"
+          }
         },
         {
           "id": "prop_fact_usurpation_act",
           "label": "ሕገ-ወጥ ጣልቃ ገብነት (መንጠቅ) (Illicit Interference (Usurpation))",
-          "legalText": "ተከሳሹ በ {{date_of_usurpation}} በጉልበት/በማጭበርበር ይዞታውን ወስዷል፣ እና ይህ ክስ ከዚያን ጊዜ ጀምሮ በሁለት ዓመት ጊዜ ውስጥ የቀረበ ነው። (The Defendant took possession by force/fraud on {{date_of_usurpation}}, and this claim is filed within two years thereof.)",
+          "legalText": "ተከሳሹ በ [date_of_usurpation] በጉልበት/በማጭበርበር ይዞታውን ወስዷል፣ እና ይህ ክስ ከዚያን ጊዜ ጀምሮ በሁለት ዓመት ጊዜ ውስጥ የቀረበ ነው። (The Defendant took possession by force/fraud on [date_of_usurpation], and this claim is filed within two years thereof.)",
           "citation": "Civ. Code Art. 1148 & 1149(2)",
-          "autoEvidence": ["PhotosVideoEvidence", "WitnessAffidavitsNuisance"]
+          "autoEvidence": ["PhotosVideoEvidence", "WitnessAffidavitsNuisance"],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "ሕገ-ወጥ መንጠቅ"
+          }
         }
       ],
       "reliefs": [
@@ -162,17 +191,27 @@
           "citation": "",
           "autoEvidence": [
             "SitePlan"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ህጋዊ ድንበር"
+          }
         },
         {
           "id": "prop_fact_encroachment_act",
           "label": "መጣሱ (The Encroachment)",
-          "legalText": "ተከሳሹ የድንበር መስመሩን በ {{encroachment_distance}} ሜትር የሚያልፍ ግድግዳ/ግንባታ ሰርቷል። (The Defendant has constructed a wall/structure that crosses the boundary line by {{encroachment_distance}}.)",
+          "legalText": "ተከሳሹ የድንበር መስመሩን በ [encroachment_distance] ሜትር የሚያልፍ ግድግዳ/ግንባታ ሰርቷል። (The Defendant has constructed a wall/structure that crosses the boundary line by [encroachment_distance].)",
           "citation": "",
           "autoEvidence": [
             "SurveyorsReport",
             "PhotosVideoEvidence"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "የድንበር መጣስ"
+          }
         }
       ],
       "reliefs": [
@@ -217,21 +256,36 @@
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ ላይ ተሰማርቷል። (The Respondent is currently engaged in active construction on the disputed land.)",
           "citation": "",
-          "autoEvidence": ["PhotosVideoEvidence"]
+          "autoEvidence": ["PhotosVideoEvidence"],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የቀጠለ ግንባታ"
+          }
         },
         {
           "id": "prop_fact_irreparable_harm",
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "ግንባታው ከተጠናቀቀ ማፍረሱ አስቸጋሪ ስለሚሆን የአመልካች መብቶች በቋሚነት ይጎዳሉ። (If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "የማይተካ ጉዳት"
+          }
         },
         {
           "id": "prop_fact_prima_facie",
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "አመልካቹ ጠንካራ የባለቤትነት መብት እንዳለው አሳይቷል። (The Applicant has demonstrated a strong prima facie case of ownership.)",
           "citation": "",
-          "autoEvidence": ["TitleDeed"]
+          "autoEvidence": ["TitleDeed"],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ጠንካራ ክስ"
+          }
         }
       ],
       "reliefs": [
@@ -269,14 +323,24 @@
           "label": "ማብራሪያ (Clarification)",
           "legalText": "ስለ መሬቱ አካላዊ ገጽታዎች/ድንበሮች የሚቀርቡት የቃል ምስክርነቶች እና ሰነዶች እርስ በርሳቸው የሚጋጩ ናቸው። (The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የሚጋጩ ማስረጃዎች"
+          }
         },
         {
           "id": "prop_fact_necessity_to_view",
           "label": "ማብራሪያ (Clarification)",
           "legalText": "ፍርድ ቤቱ (ወይም ሬጅስትራሩ) ቦታውን በአካል ሳይመለከት ፍትሃዊ ውሳኔ ሊሰጥ አይችልም። (A just decision cannot be rendered without the Court (or its registrar) physically viewing the site.)",
           "citation": "CPC Art. 136",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "በመሆኑም፣",
+            "summary_keyword": "የምርመራ አስፈላጊነት"
+          }
         }
       ],
       "reliefs": [
@@ -315,9 +379,14 @@
         {
           "id": "prop_fact_nature_inconvenience",
           "label": "ችግሩ (The Disturbance)",
-          "legalText": "የተከሳሽ ድርጊቶች ከ {{source_of_nuisance}} የሚመነጭ {{nuisance_type}} ያካትታሉ። (The Defendant's actions involve {{nuisance_type}} originating from {{source_of_nuisance}}.)",
+          "legalText": "የተከሳሽ ድርጊቶች ከ [source_of_nuisance] የሚመነጭ [nuisance_type] ያካትታሉ። (The Defendant's actions involve [nuisance_type] originating from [source_of_nuisance].)",
           "citation": "Civ. Code Art. 1225",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ያልተለመደ ችግር"
+          }
         },
         {
           "id": "prop_fact_abnormal_degree",
@@ -327,14 +396,24 @@
           "autoEvidence": [
             "WitnessAffidavitsNuisance",
             "PhotosVideoEvidence"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "ከደረጃ ያለፈ ችግር"
+          }
         },
         {
           "id": "prop_fact_notice_to_stop",
           "label": "ማወቅ እና እምቢተኝነት (Knowledge and Refusal)",
           "legalText": "ተከሳሹ ስለ ችግሩ በይፋ እንዲያውቅ ተደርጎ ነበር ነገር ግን የማስተካከያ እርምጃዎችን አልወሰደም። (The Defendant was formally notified of the inconvenience but failed to take corrective measures.)",
           "citation": "",
-          "autoEvidence": ["NoticeofDefault"]
+          "autoEvidence": ["NoticeofDefault"],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የማስተካከያ እጦት"
+          }
         }
       ],
       "reliefs": [
@@ -384,21 +463,36 @@
           "autoEvidence": [
             "SurveyorsReport",
             "SitePlan"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "የተዘጋ ይዞታ"
+          }
         },
         {
           "id": "prop_fact_no_other_means",
           "label": "የተዘጋ ይዞታ ሁኔታ (አስፈላጊነት) (Enclave Status (Necessity))",
           "legalText": "ለመዳረሻ ምንም ሌሎች ተግባራዊ ወይም አነስተኛ ጉዳት የሚያስከትሉ መንገዶች የሉም። (There are no other practical or less onerous routes available for access.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም ባሻገር፣",
+            "summary_keyword": "አማራጭ መንገድ አለመኖር"
+          }
         },
         {
           "id": "prop_fact_least_onerous",
           "label": "የተጠየቀው መንገድ (Requested Route)",
           "legalText": "በተጠሪው መሬት ላይ የተጠየቀው የመተላለፊያ መብት ለአገልጋይ ይዞታ (ተጠሪ) አነስተኛ ጉዳት የሚያስከትል መንገድ ነው። (The requested right of way across the Respondent's land is the route least detrimental to the Servient Tenement (Respondent).)",
           "citation": "Civ. Code Art. 1334",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በተጨማሪም፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "አነስተኛ ጉዳት ያለው መንገድ"
+          }
         }
       ],
       "reliefs": [
@@ -433,7 +527,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰው ይዞታዎን ሳይነጥቅ ነገር ግን ሰላማዊ ይዞታዎን በሚረብሹ ድርጊቶች (ለምሳሌ አጥር ማፍረስ፣ መተላለፊያ መዝጋት) ሲያስቸግርዎት፣ እነዚያን የረብሻ ድርጊቶች እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nረብሻው ከተጀመረበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ረብሻውን የሚያሳይ ማስረጃ (ፎቶ፣ ቪዲዮ) እና የምስክሮች ቃል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰው ይዞታዎን ሳይነጥቅ ነገር ግን ሰላማዊ ይዞታዎን በሚረብሹ ድርጊቶች (ለምሳሌ አጥር ማፍረስ፣ መተላለፊያ መዝጋት) ሲያስቸግርዎት، እነዚያን የረብሻ ድርጊቶች እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nረብሻው ከተጀመረበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ረብሻውን የሚያሳይ ማስረጃ (ፎቶ፣ ቪዲዮ) እና የምስክሮች ቃል።",
       "partyTitles": {
         "applicant": "ከሳሽ (ባለይዞታ) (Plaintiff (Possessor))",
         "respondent": "ተከሳሽ (ረባሽ) (Defendant (Disturber))"
@@ -444,7 +538,12 @@
           "label": "የይዞታ እውነታ (Fact of Possession)",
           "legalText": "ከሳሹ ንብረቱን/መብቱን በሰላም እና ቀጣይነት ባለው መልኩ ይዞት ነበር። (The Plaintiff was in peaceful and continuous possession of the property/right.)",
           "citation": "Civ. Code Art. 1140",
-          "autoEvidence": ["TaxLandRentReceipts", "KebeleConfirmation"]
+          "autoEvidence": ["TaxLandRentReceipts", "KebeleConfirmation"],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ሰላማዊ ይዞታ"
+          }
         },
         {
           "id": "prop_fact_disturbance_act",
@@ -454,7 +553,12 @@
           "autoEvidence": [
             "WitnessAffidavitsNuisance",
             "PhotosVideoEvidence"
-          ]
+          ],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "የይዞታ መረበሽ"
+          }
         }
       ],
       "reliefs": [
@@ -500,14 +604,24 @@
           "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
           "legalText": "ተጠሪው የአመልካችን ብቸኛ መውጫ ወደ ህዝብ መንገድ ሙሉ በሙሉ ዘግቷል። (The Respondent has completely blocked the Applicant's only access to the public road.)",
           "citation": "",
-          "autoEvidence": ["PhotosVideoEvidence"]
+          "autoEvidence": ["PhotosVideoEvidence"],
+          "rhetoric": {
+            "intro": "በመጀመሪያ ደረጃ፣",
+            "transition": "በተጨማሪም፣",
+            "summary_keyword": "ሙሉ እገዳ"
+          }
         },
         {
           "id": "prop_fact_imminent_damage",
           "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
-          "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል፣ ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል። (The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.)",
+          "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል، ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል። (The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.)",
           "citation": "",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": {
+            "intro": "በመቀጠልም፣",
+            "transition": "ከዚህም በላይ፣",
+            "summary_keyword": "ሊጠገን የማይችል ጉዳት"
+          }
         }
       ],
       "reliefs": [

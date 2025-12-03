@@ -28,7 +28,8 @@
           "citation": "Proc. 1183/2020 Art. 48(1)",
           "autoEvidence": [
             "FinalAdminDecision"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የመጨረሻ ውሳኔ" }
         },
         {
           "id": "admin_fact_exhausted_remedies",
@@ -37,7 +38,8 @@
           "citation": "Proc. 1183/2020 Art. 48(2)",
           "autoEvidence": [
             "InternalRemedyExhaustion"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የውስጥ መፍትሔዎችን ማሟጠጥ" }
         },
         {
           "id": "admin_fact_petition_is_timely",
@@ -46,14 +48,16 @@
           "citation": "Proc. 1183/2020 Art. 51(1)",
           "autoEvidence": [
             "DecisionNotificationProof"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ወቅታዊ አቤቱታ" }
         },
         {
           "id": "admin_fact_procedural_violation_hearing",
           "label": "የውሳኔው መሻር ምክንያቶች (Grounds for Annulment)",
           "legalText": "ውሳኔው የተሰጠው አቤቱታ አቅራቢው ተገቢውን የመሰማት እድል ሳይሰጠው (አንቀጽ ፴፬) ወይም አግባብነት ያላቸውን ማስረጃዎች ከግምት ሳያስገባ ነው። (The decision was made without affording the Petitioner an adequate opportunity for a proper hearing (Art. 34) or without considering relevant evidence.)",
           "citation": "Proc. 1183/2020 Art. 34",
-          "autoEvidence": []
+          "autoEvidence": [],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "የሥነ-ሥርዓት ጥሰት" }
         },
         {
           "id": "admin_fact_substantive_error_of_law",
@@ -62,7 +66,8 @@
           "citation": "Proc. 1183/2020 Art. 52(1)(a)",
           "autoEvidence": [
             "FinalAdminDecision"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የሕግ ስህተት" }
         },
         {
           "id": "admin_fact_failure_to_state_reason",
@@ -71,7 +76,8 @@
           "citation": "Proc. 1183/2020 Art. 37",
           "autoEvidence": [
             "FinalAdminDecision"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ምክንያት አልባ ውሳኔ" }
         },
         {
           "id": "admin_fact_abuse_of_discretion",
@@ -80,7 +86,8 @@
           "citation": "Proc. 1183/2020 Art. 39",
           "autoEvidence": [
             "FinalAdminDecision"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመሆኑም،", "summary_keyword": "የሥልጣን አላግባብ መጠቀም" }
         }
       ],
       "reliefs": [
@@ -131,11 +138,12 @@
         {
           "id": "admin_fact_directive_unlawful_delegation",
           "label": "የመመሪያ ስልጣን እና ተገዢነት (Directive Authority and Compliance)",
-          "legalText": "መመሪያው በሕግ ተገቢው የውክልና ሥልጣን ሳይሰጥ የወጣ ነው፣ ወይም ከወከለው አዋጅ ወሰን በላይ አልፏል። (The Directive was issued without proper delegation of power by law, or it exceeds the scope of the delegating Proclamation.)",
+          "legalText": "መመሪያው በሕግ ተገቢው የውክልና ሥልጣን ሳይሰጥ የወጣ ነው، ወይም ከወከለው አዋጅ ወሰን በላይ አልፏል። (The Directive was issued without proper delegation of power by law, or it exceeds the scope of the delegating Proclamation.)",
           "citation": "Proc. 1183/2020 Art. 49(2)(a)",
           "autoEvidence": [
             "AgencyDirectiveCopy"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ሕገ-ወጥ ውክልና" }
         },
         {
           "id": "admin_fact_directive_violates_constitution",
@@ -144,7 +152,8 @@
           "citation": "Proc. 1183/2020 Art. 49(2)(a)",
           "autoEvidence": [
             "AgencyDirectiveCopy"
-          ]
+          ],
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የሕግ ጥሰት" }
         },
         {
           "id": "admin_fact_directive_procedural_flaw",
@@ -153,7 +162,8 @@
           "citation": "Proc. 1183/2020 Art. 7-12",
           "autoEvidence": [
             "AgencyDirectiveCopy"
-          ]
+          ],
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የሥነ-ሥርዓት ጉድለት" }
         },
         {
           "id": "admin_fact_directive_affects_rights",
@@ -162,7 +172,8 @@
           "citation": "Proc. 1183/2020 Art. 48(1)",
           "autoEvidence": [
             "AgencyDirectiveCopy"
-          ]
+          ],
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመሆኑም،", "summary_keyword": "የጥቅም መጎዳት" }
         }
       ],
       "reliefs": [

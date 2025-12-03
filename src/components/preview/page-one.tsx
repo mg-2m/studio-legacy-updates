@@ -4,34 +4,29 @@
 import type { AppState, Party, Relief, Fact } from '@/lib/types';
 import { TEMPLATE_DATA } from '@/lib/data';
 
-interface PageOneProps {
-  state: AppState;
-}
-
 // Function to format a single fact text by replacing placeholders
 const formatFactPlaceholders = (text: string, values: { [key: string]: any }): string => {
   if (!values) return text;
 
   let formattedText = text;
-  // Regex to find all {{placeholders}}
+  // This regex finds {{placeholder}} and replaces it.
   const regex = /\{\{([\w\s]+)\}\}/g;
   
   formattedText = formattedText.replace(regex, (match, key) => {
     const value = values[key.trim()];
-    // Replace placeholder with a bold, underlined value, or a default if empty
     return `<strong><u>${value || '______'}</u></strong>`;
   });
   return formattedText;
 };
 
 
-// The NEW Narrative Engine Logic - v2.0
+// The CORRECT Narrative Engine Logic - v3.0
 const composeNarrative = (facts: Fact[]): string => {
   if (facts.length === 0) {
     return `<li class="text-gray-500 italic">Select facts from the editor to build the narrative...</li>`;
   }
 
-  // Group facts by their label (the group title from the backend)
+  // 1. Group facts by their label (the group title from the backend)
   const groupedFacts: { [key: string]: Fact[] } = facts.reduce((acc, fact) => {
     const key = fact.label || 'Ungrouped Facts';
     if (!acc[key]) {
@@ -41,19 +36,19 @@ const composeNarrative = (facts: Fact[]): string => {
     return acc;
   }, {} as { [key: string]: Fact[] });
 
-  // Build the narrative from the grouped facts
+  // 2. Build the narrative from the grouped facts
   const narrativeParts = Object.values(groupedFacts).map(factGroup => {
     let paragraph = '';
     factGroup.forEach((fact, index) => {
-      // 1. Format the core legal text with its dynamic values
+      // Format the core legal text with its dynamic values
       let sentence = formatFactPlaceholders(fact.legalText, fact.values);
       
-      // 2. Add citation
+      // Add citation
       if (fact.citation) {
         sentence += ` <span class="text-xs font-bold ml-1">[${fact.citation}]</span>`;
       }
       
-      // 3. Prepend the correct rhetorical connector
+      // Prepend the correct rhetorical connector
       let connector = '';
       if (index === 0) {
         // Use the intro for the first fact of the group
@@ -63,18 +58,18 @@ const composeNarrative = (facts: Fact[]): string => {
         connector = fact.rhetoric?.transition || '';
       }
       
-      // 4. Append the connected sentence to the paragraph
+      // Append the connected sentence to the paragraph, ensuring proper spacing
       paragraph += `${connector} ${sentence} `;
     });
     return paragraph.trim();
   });
 
-  // Each paragraph group becomes a numbered list item
+  // 3. Each paragraph group becomes a numbered list item
   return narrativeParts.map(p => `<li class="mb-2 text-justify">${p}</li>`).join('');
 };
 
 
-export default function PageOne({ state }: PageOneProps) {
+export default function PageOne({ state }: AppState) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
   const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
   
@@ -115,6 +110,7 @@ export default function PageOne({ state }: PageOneProps) {
             return `<strong><u>${value || '______'}</u></strong>`;
         });
     }
+    // This is for simple non-calculated placeholders in reliefs
     text = text.replace(/\[(.*?)\]/g, (match, key) => {
         return `<strong><u>${key}</u></strong>`;
     });
@@ -169,6 +165,7 @@ export default function PageOne({ state }: PageOneProps) {
   
   const finalNarrative = composeNarrative(selectedFacts);
 
+  // Correct implementation of Dynamic Summarization
   const reliefSummary = selectedFacts.length > 0 
     ? selectedFacts
         .map(f => f.rhetoric?.summary_keyword)
@@ -267,3 +264,5 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
+
+    

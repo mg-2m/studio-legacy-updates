@@ -6,8 +6,6 @@ import { TEMPLATE_DATA } from '@/lib/data';
 
 // Function to format a single fact text by replacing placeholders
 const formatFactPlaceholders = (text: string, values: { [key: string]: any }): string => {
-  if (!values) return text;
-
   let formattedText = text;
   // This regex finds {{placeholder}} and replaces it.
   const regex = /\{\{([\w\s]+)\}\}/g;
@@ -69,7 +67,7 @@ const composeNarrative = (facts: Fact[]): string => {
 };
 
 
-export default function PageOne({ state }: AppState) {
+export default function PageOne({ state }: { state: AppState }) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
   const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
   
@@ -264,5 +262,3 @@ export default function PageOne({ state }: AppState) {
     </div>
   );
 }
-
-    

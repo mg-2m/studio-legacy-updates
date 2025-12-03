@@ -9,20 +9,65 @@ interface PageOneProps {
   state: AppState;
 }
 
-// Function to format the fact text by replacing placeholders
-const formatFactText = (fact: Fact): string => {
-  let { legalText, values } = fact;
-  if (!values) return legalText;
+// Function to format a single fact text by replacing placeholders
+const formatSingleFactText = (text: string, values: { [key: string]: any }): string => {
+  if (!values) return text;
 
+  let formattedText = text;
   for (const key in values) {
     const placeholder = `\\[${key}\\]`;
     const value = values[key];
     // Replace placeholder with a bold, underlined value, or a default if empty
     const replacement = `<strong><u>${value || '______'}</u></strong>`;
-    legalText = legalText.replace(new RegExp(placeholder, 'g'), replacement);
+    formattedText = formattedText.replace(new RegExp(placeholder, 'g'), replacement);
   }
-  return legalText;
+  return formattedText;
 };
+
+
+// The NEW Narrative Engine Logic
+const composeNarrative = (facts: Fact[]): string => {
+  if (facts.length === 0) {
+    return `<li class="text-gray-500 italic">Select facts from the editor...</li>`;
+  }
+
+  // Group facts by their label (the group title)
+  const groupedFacts: { [key: string]: Fact[] } = facts.reduce((acc, fact) => {
+    const key = fact.label || 'Ungrouped';
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(fact);
+    return acc;
+  }, {} as { [key: string]: Fact[] });
+
+  // Build the narrative from grouped facts
+  const narrativeParts = Object.values(groupedFacts).map(group => {
+    let paragraph = '';
+    group.forEach((fact, index) => {
+      let sentence = formatSingleFactText(fact.legalText, fact.values);
+      if (fact.citation) {
+        sentence += ` <span class="text-xs font-bold ml-1">[${fact.citation}]</span>`;
+      }
+      
+      let connector = '';
+      if (index === 0) {
+        // Use the intro for the first fact of the group
+        connector = fact.rhetoric?.intro || '';
+      } else {
+        // Use the transition for subsequent facts
+        connector = fact.rhetoric?.transition || '';
+      }
+      
+      paragraph += `${connector} ${sentence} `;
+    });
+    return paragraph.trim();
+  });
+
+  // Each paragraph group becomes a list item
+  return narrativeParts.map(p => `<li class="mb-2 text-justify">${p}</li>`).join('');
+};
+
 
 export default function PageOne({ state }: PageOneProps) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
@@ -111,6 +156,11 @@ export default function PageOne({ state }: PageOneProps) {
   const applicantTitle = getPluralizedTitle(partyTitles.applicant, applicants.length);
   const respondentTitle = getPluralizedTitle(partyTitles.respondent, respondents.length);
   
+  const finalNarrative = composeNarrative(selectedFacts);
+
+  const reliefSummary = selectedFacts.length > 0 ? selectedFacts.map(f => f.rhetoric?.summary_keyword).filter(Boolean).join('፣ ') : '';
+
+
   return (
     <div className="a4-page">
       <div className="header-block">
@@ -171,20 +221,15 @@ export default function PageOne({ state }: PageOneProps) {
 
       <div className="mb-5">
         <div className="black-box mb-2">የክሱ ፍሬ ነገሮች</div>
-        <ol className="ml-5 list-decimal">
-          {selectedFacts.length > 0 ? selectedFacts.map((f, i) => (
-            <li key={i} className="mb-2 text-justify">
-              <span className="bg-yellow-100 px-1" dangerouslySetInnerHTML={{ __html: formatFactText(f) }} />
-              {f.citation && <span className="text-xs font-bold ml-1">[{f.citation}]</span>}
-            </li>
-          )) : <li className="text-gray-500 italic">Select facts from the editor...</li>}
-        </ol>
+        <ol className="ml-5 list-decimal" dangerouslySetInnerHTML={{ __html: finalNarrative }} />
       </div>
 
       <div className="mb-5">
         <div className="black-box mb-2">ዳኝነት</div>
         <div className="border-l-2 border-black pl-4">
-          <p>ስለዚህ የተከበረው ፍርድ ቤት እንዲወስንልኝ የምጠይቀው፡</p>
+          <p>
+            ስለዚህ ከላይ በተዘረዘሩት የፍሬ ነገር ምክንያቶች <strong>({reliefSummary})</strong> የተከበረው ፍርድ ቤት እንዲወስንልኝ የምጠይቀው፡
+          </p>
           <ol className="list-decimal ml-5">
              {selectedReliefs
                 .filter(item => !(item.id === 'relief_child_support' && !maintenance.active))
@@ -206,5 +251,3 @@ export default function PageOne({ state }: PageOneProps) {
     </div>
   );
 }
-
-    

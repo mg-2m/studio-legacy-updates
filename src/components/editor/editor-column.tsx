@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import React from 'react';
@@ -13,31 +14,39 @@ import { TEMPLATE_DATA, TEMPLATES } from '@/lib/data';
 import { ChevronRight, Lightbulb } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from '../ui/alert';
 
-// A simple markdown-to-React component
-const SimpleMarkdown: React.FC<{ content: string }> = ({ content }) => {
-    if (!content) return null;
+// NEW Strategy Card component to render markdown
+const StrategyCard: React.FC<{ content: string }> = ({ content }) => {
+  if (!content) return null;
 
-    // Split by lines to handle paragraphs and bullet points
-    const lines = content.split('\n').filter(line => line.trim() !== '');
+  const sections = content.split('### ').filter(s => s.trim() !== '');
 
-    return (
+  return (
+    <Alert variant="default" className="bg-yellow-50 border-yellow-200 text-yellow-900 dark:bg-yellow-950/50 dark:border-yellow-800 dark:text-yellow-300">
+      <Lightbulb className="h-5 w-5 !text-yellow-500" />
+      <AlertTitle className="font-bold">የአብነት መመሪያ</AlertTitle>
+      <AlertDescription>
         <div className="prose prose-sm dark:prose-invert text-yellow-900 dark:text-yellow-300">
-            {lines.map((line, index) => {
-                if (line.startsWith('### ')) {
-                    return <h3 key={index} className="font-bold text-base my-2">{line.substring(4)}</h3>;
-                }
-                if (line.startsWith('**') && line.endsWith('**')) {
-                    return <strong key={index} className="block my-1">{line.substring(2, line.length - 2)}</strong>;
-                }
-                if (line.startsWith('*   ')) {
-                    return <li key={index} className="ml-4 list-disc">{line.substring(4)}</li>;
-                }
-                return <p key={index} className="my-1">{line}</p>;
-            })}
+          {sections.map((section, index) => {
+            const [title, ...bodyLines] = section.split('\n');
+            const body = bodyLines.join('\n').trim();
+            return (
+              <div key={index} className="mb-3">
+                <h3 className="font-bold text-base my-1">{title.trim()}</h3>
+                <ul className="list-disc pl-5">
+                  {body.split('\n').map((line, i) => {
+                    const cleanLine = line.replace(/^\*\s*/, '').trim();
+                    if (cleanLine) return <li key={i}>{cleanLine}</li>;
+                    return null;
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </div>
-    );
+      </AlertDescription>
+    </Alert>
+  );
 };
-
 
 interface EditorColumnProps {
   state: AppState;
@@ -78,13 +87,7 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
         <ScrollArea className="flex-1">
           <div className="p-4 space-y-4">
             {templateData?.templateDescription && (
-              <Alert variant="default" className="bg-yellow-50 border-yellow-200 text-yellow-900 dark:bg-yellow-950/50 dark:border-yellow-800 dark:text-yellow-300">
-                <Lightbulb className="h-5 w-5 !text-yellow-500" />
-                <AlertTitle className="font-bold">የአብነት መመሪያ</AlertTitle>
-                <AlertDescription>
-                  <SimpleMarkdown content={templateData.templateDescription} />
-                </AlertDescription>
-              </Alert>
+              <StrategyCard content={templateData.templateDescription} />
             )}
             <TabsContent value="details" className="m-0">
               <HeaderPartiesTab state={state} dispatch={dispatch} />

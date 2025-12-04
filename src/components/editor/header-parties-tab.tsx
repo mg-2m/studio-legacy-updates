@@ -18,6 +18,7 @@ import { COURT_HIERARCHY, REGIONS_AND_CITIES, BENCH_TYPES } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import PartyForm from './party-form';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import SubjectOfClaim from './subject-of-claim';
 
 interface HeaderPartiesTabProps {
   state: AppState;
@@ -98,6 +99,26 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       </Card>
       
       <Card>
+        <CardContent className="p-4 space-y-2">
+          {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} title={partyTitles.applicant} />)}
+          <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
+            <Plus className="mr-2 h-4 w-4" /> {partyTitles.applicant} ጨምር
+          </Button>
+        </CardContent>
+      </Card>
+      
+      <Card>
+        <CardContent className="p-4 space-y-2">
+          {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} title={partyTitles.respondent}/>)}
+           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>
+            <Plus className="mr-2 h-4 w-4" /> {partyTitles.respondent} ጨምር
+          </Button>
+        </CardContent>
+      </Card>
+
+      <SubjectOfClaim state={state} dispatch={dispatch} />
+
+      <Card>
         <CardContent className="space-y-6 p-4">
           <div className="space-y-2">
             <Label>ውክልና</Label>
@@ -123,24 +144,6 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 <div className="flex items-center space-x-2"><RadioGroupItem value="post" id="sum-post" /><Label htmlFor="sum-post">በፖስታ</Label></div>
             </RadioGroup>
           </div>
-        </CardContent>
-      </Card>
-      
-      <Card>
-        <CardContent className="p-4 space-y-2">
-          {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} title={partyTitles.applicant} />)}
-          <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
-            <Plus className="mr-2 h-4 w-4" /> {partyTitles.applicant} ጨምር
-          </Button>
-        </CardContent>
-      </Card>
-      
-      <Card>
-        <CardContent className="p-4 space-y-2">
-          {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} title={partyTitles.respondent}/>)}
-           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>
-            <Plus className="mr-2 h-4 w-4" /> {partyTitles.respondent} ጨምር
-          </Button>
         </CardContent>
       </Card>
     </div>

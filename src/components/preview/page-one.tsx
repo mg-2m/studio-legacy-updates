@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import type { AppState, Party, Relief, Fact } from '@/lib/types';
@@ -160,12 +161,13 @@ export default function PageOne({ state }: { state: AppState }) {
     : 'የቀረቡት ምክንያቶች';
   
   const renderSubjectOfClaim = () => {
-    const purpose = currentTemplateData.meta?.purpose;
+    const purpose = meta.claimPurpose || currentTemplateData.meta?.purpose;
     const allCalcValues = Object.values(calculations).reduce((acc, curr) => ({ ...acc, ...curr }), {});
     
-    let valueText = '(በብር ****** ግምት የቀረበ ክስ ነው)';
+    let valueText = meta.claimAmount || '(በብር ****** ግምት የቀረበ ክስ ነው)';
     
-    if (Object.keys(allCalcValues).length > 0) {
+    // If no manual amount, check calculators
+    if (!meta.claimAmount && Object.keys(allCalcValues).length > 0) {
         const primaryOutputKey = Object.keys(allCalcValues).find(k => k.toLowerCase().includes('amount') || k.toLowerCase().includes('pay') || k.toLowerCase().includes('principal'));
         const primaryValue = primaryOutputKey ? allCalcValues[primaryOutputKey] as number : Object.values(allCalcValues)[0] as number;
         

@@ -24,6 +24,8 @@ export interface Metadata {
   jurisdictionLaw: string;
   representation: 'self' | 'lawyer' | 'both';
   summonsDelivery: 'self' | 'police' | 'post';
+  claimPurpose: string;
+  claimAmount: string;
 }
 
 export interface Maintenance {

@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import React, { useReducer, useEffect, useCallback } from 'react';
@@ -8,7 +9,7 @@ import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
 import { differenceInDays, parseISO } from 'date-fns';
-
+import { toWords } from 'number-to-words';
 
 import MainLayout from '@/components/main-layout';
 
@@ -114,8 +115,10 @@ function appReducer(state: AppState, action: Action): AppState {
         const { factId, mutexGroup } = action.payload;
         if (!state.selectedSubTemplate) return state;
         
-        // This is a temporary fix. The `facts` should not be an array of arrays.
-        const allFactsForTemplate: Fact[] = (TEMPLATE_DATA[state.selectedSubTemplate]?.facts || []).flat();
+        const templateData = TEMPLATE_DATA[state.selectedSubTemplate];
+        if (!templateData) return state;
+
+        const allFactsForTemplate: Fact[] = templateData.facts || [];
 
         const factToAdd = allFactsForTemplate.find(f => f.id === factId);
         
@@ -412,21 +415,16 @@ function appReducer(state: AppState, action: Action): AppState {
         
         // Reset state relevant to the template
         return {
-            ...state,
+            ...INITIAL_STATE,
             selectedTemplate: templateId,
             selectedSubTemplate: subTemplateId,
             partyTitles: templateData.partyTitles,
-            selectedFacts: [],
             selectedReliefs: templateData.reliefs.filter(r => r.isDefault),
-            smartEvidence: {},
-            maintenance: { // Reset maintenance as it's specific to divorce
-                active: false,
-                income: 0,
-                children: 1,
-                result: 0,
-                context: '',
-            },
             calculations: newCalculations,
+            metadata: {
+                ...INITIAL_STATE.metadata,
+                claimPurpose: templateData.meta?.purpose || '',
+            }
         };
     }
 

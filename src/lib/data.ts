@@ -477,7 +477,9 @@ export const INITIAL_STATE: AppState = {
     date: new Date().toLocaleDateString('en-GB') + ' ዓ/ም',
     jurisdictionLaw: '1234/2012',
     representation: 'self',
-    summonsDelivery: 'self'
+    summonsDelivery: 'self',
+    claimPurpose: '',
+    claimAmount: '',
   },
   applicants: [{ id: '1', name: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '', woreda: '', houseNo: '' } }],
   respondents: [],

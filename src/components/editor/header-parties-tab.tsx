@@ -51,14 +51,6 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
               </Select>
             </div>
-            
-            <div className="grid grid-cols-[120px_1fr] items-center gap-4">
-              <Label>የችሎት አይነት</Label>
-              <Select value={metadata.benchType} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'benchType', value } })}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
-                  <SelectContent>{BENCH_TYPES.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
-              </Select>
-            </div>
 
             <div className="grid grid-cols-[120px_1fr] items-center gap-4">
               <Label>የችሎት አካባቢ</Label>
@@ -75,7 +67,14 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 </Select>
                )}
             </div>
-
+            
+            <div className="grid grid-cols-[120px_1fr] items-center gap-4">
+              <Label>የችሎት አይነት</Label>
+              <Select value={metadata.benchType} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'benchType', value } })}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>{BENCH_TYPES.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
+              </Select>
+            </div>
 
             <div className="grid grid-cols-[120px_1fr] items-center gap-4">
               <Label>ከተማ</Label>

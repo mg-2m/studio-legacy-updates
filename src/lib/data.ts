@@ -200,8 +200,6 @@ export const TEMPLATES: Template[] = [
       { id: 'contract_debt_recovery', label: 'የብድር/እዳ ክስ', icon: Banknote },
       { id: 'contract_specific_performance', label: 'ውል ይፈጸምልኝ ክስ', icon: Gavel },
       { id: 'contract_termination_claim', label: 'የውል ማፍረስ ክስ', icon: FileX2 },
-      { id: 'app_attachment_before_judgment', label: 'ከፍርድ በፊት እግድ', icon: Shield },
-      { id: 'app_judgment_on_admission', label: 'በእምነት ላይ ፍርድ', icon: BookUser },
     ]
   },
   { 
@@ -213,9 +211,6 @@ export const TEMPLATES: Template[] = [
       { id: 'family_divorce_agreement', label: 'የፍቺ ስምምነት', icon: Handshake },
       { id: 'family_paternity_claim', label: 'የአባትነት ክስ', icon: FileText },
       { id: 'family_post_judgment_partition', label: 'ከፍቺ በኋላ የንብረት ክፍፍል', icon: Building2 },
-      { id: 'app_temporary_maintenance', label: 'ጊዜያዊ ቀለብ ጥያቄ', icon: Receipt },
-      { id: 'app_property_preservation', label: 'የንብረት እግድ ጥያቄ', icon: Home },
-      { id: 'app_protective_order', label: 'የጥበቃ ትዕዛዝ ጥያቄ', icon: ShieldAlert },
     ]
   },
   { 
@@ -246,8 +241,6 @@ export const TEMPLATES: Template[] = [
       { id: 'succession_heirship_declaration', label: 'የወራሽነት ማረጋገጫ', icon: FileText },
       { id: 'succession_probate_will', label: 'የኑዛዜ ማጽደቅ', icon: Gavel },
       { id: 'succession_partition_estate', label: 'የውርስ ንብረት ክፍፍል', icon: Building2 },
-      { id: 'succ_app_appoint_liquidator', label: 'ዋና ከፋይ ሹመት', icon: BookUser },
-      { id: 'succ_app_seal_estate', label: 'የንብረት ማሸግ', icon: Shield }
     ]
   },
   {
@@ -273,8 +266,6 @@ export const TEMPLATES: Template[] = [
         { id: 'ip_patent_infringement', label: 'የፓተንት ጥሰት', icon: FileWarning },
         { id: 'ip_copyright_infringement', label: 'የቅጂ መብት ጥሰት', icon: FileWarning },
         { id: 'ip_moral_rights_violation', label: 'የሞራል መብቶች ጥሰት', icon: BadgeCheck },
-        { id: 'app_ip_interlocutory_injunction', label: 'ጊዜያዊ እገዳ', icon: Shield },
-        { id: 'app_ip_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ', icon: ShieldAlert },
     ]
   },
   {
@@ -300,8 +291,6 @@ export const TEMPLATES: Template[] = [
         { id: 'tax_objection_admin_review', label: 'የግብር መቃወሚያ', icon: FileText },
         { id: 'tax_appeal_ftac', label: 'የግብር ይግባኝ', icon: Gavel },
         { id: 'customs_claim_for_refund', label: 'የጉምሩክ ተመላሽ ጥያቄ', icon: Receipt },
-        { id: 'app_tax_stay_of_execution', label: 'የአፈጻጸም እግዳ', icon: Shield },
-        { id: 'app_tax_adr_request', label: 'የአማራጭ መፍትሄ ጥያቄ', icon: Handshake },
     ]
   },
   {
@@ -355,6 +344,19 @@ export const TEMPLATES: Template[] = [
       { id: 'civ_proc_joinder_of_third_party', label: 'የሶስተኛ ወገን ማካተት', icon: Users },
       { id: 'civ_proc_judgment_objection_default', label: 'የሌሉበት ፍርድ መቃወሚያ', icon: ShieldAlert },
       { id: 'civ_proc_review_of_judgment', label: 'የፍርድ ዳግም ክለሳ', icon: FileX2 },
+      { id: 'app_attachment_before_judgment', label: 'ከፍርድ በፊት እግድ', icon: Shield },
+      { id: 'app_judgment_on_admission', label: 'በእምነት ላይ ፍርድ', icon: BookUser },
+      { id: 'app_temporary_maintenance', label: 'ጊዜያዊ ቀለብ ጥያቄ', icon: Receipt },
+      { id: 'app_property_preservation', label: 'የንብረት እግድ ጥያቄ', icon: Home },
+      { id: 'app_protective_order', label: 'የጥበቃ ትዕዛዝ ጥያቄ', icon: ShieldAlert },
+      { id: 'succ_app_appoint_liquidator', label: 'ዋና ከፋይ ሹመት', icon: BookUser },
+      { id: 'succ_app_seal_estate', label: 'የንብረት ማሸግ', icon: Shield },
+      { id: 'app_ip_interlocutory_injunction', label: 'ጊዜያዊ እገዳ', icon: Shield },
+      { id: 'app_ip_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ', icon: ShieldAlert },
+      { id: 'app_status_provisional_curator', label: 'ጊዜያዊ ጠባቂ መሾም', icon: BookUser },
+      { id: 'app_status_lift_interdiction', label: 'የእገዳ ማንሳት', icon: Gavel },
+      { id: 'app_tax_stay_of_execution', label: 'የአፈጻጸም እግዳ', icon: Shield },
+      { id: 'app_tax_adr_request', label: 'የአማራጭ መፍትሄ ጥያቄ', icon: Handshake },
       { id: 'app_stay_construction', label: 'ግንባታን የማገድ ትዕዛዝ', icon: Shield },
       { id: 'app_local_inspection', label: 'የአካባቢ ምርመራ ትዕዛዝ', icon: Map },
       { id: 'app_servitude_temporary_passage', label: 'ጊዜያዊ የመተላለፊያ ትዕዛዝ', icon: Map },

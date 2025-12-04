@@ -75,13 +75,22 @@ const parseSentence = (template: string, data: any, dispatch: React.Dispatch<any
             if (fieldKey === 'subcity') options = AA_SUBCITIES;
             if (fieldKey === 'honorific') options = HONORIFICS;
 
+            if (fieldKey === 'documentType') {
+                 return (
+                    <RadioGroup key={`${id}-${index}`} value={data?.documentType || 'ኮፒ'} onValueChange={(v) => updateField('documentType', v)} className="inline-flex gap-3 mx-2 align-middle">
+                        <div className="flex items-center space-x-1"><RadioGroupItem value="ኮፒ" id={`copy-${id}-${index}`} /><Label htmlFor={`copy-${id}-${index}`}>ኮፒ</Label></div>
+                        <div className="flex items-center space-x-1"><RadioGroupItem value="ኦርጅናል" id={`orig-${id}-${index}`} /><Label htmlFor={`orig-${id}-${index}`}>ኦርጅናል</Label></div>
+                    </RadioGroup>
+                 )
+            }
+
 
             return (
                 <EmbeddedInput
                     key={`${id}-${index}`}
                     id={`${id}-${fieldKey}`}
                     value={(data && data[fieldKey]) || ''}
-                    placeholder={`e.g., ${fieldKey}`}
+                    placeholder={`e.g., ${EVIDENCE_REGISTRY[evidenceKey]?.credentialPlaceholder || fieldKey}`}
                     onChange={(value) => updateField(fieldKey, value)}
                     options={options}
                     fieldKey={fieldKey}
@@ -170,6 +179,11 @@ const ManualEvidenceCard: React.FC<{
     </Card>
   );
 };
+
+interface EvidenceTabProps {
+  state: AppState;
+  dispatch: React.Dispatch<any>;
+}
 
 export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
   const { smartEvidence, evidence } = state;

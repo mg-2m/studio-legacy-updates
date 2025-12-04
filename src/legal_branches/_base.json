@@ -5,7 +5,7 @@
       "description": "The primary agreement signed by both parties. Essential for contracts involving immovable property or administrative bodies.",
       "credentialLabel": "የውል ቀን እና ቁጥር",
       "credentialPlaceholder": "e.g., 12/05/2022, Ref: 456/AB",
-      "sentenceTemplate": "በ [date] የተፈረመ የውል ስምምነት ቁጥር [ref] ያለው።"
+      "sentenceTemplate": "በ [date] የተፈረመ የውል ስምምነት ቁጥር [ref] ያለው፣ [documentType] ሲሆን ዋናው [originalLocation] እጅ የሚገኝ።"
     },
     "NoticeofDefault": {
       "title": "የውል ማፍረሻ ማስታወቂያ (Notice of Default)",

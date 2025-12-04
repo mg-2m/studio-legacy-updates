@@ -62,7 +62,11 @@ export default function PageTwo({ state }: PageTwoProps) {
 
   const parseTemplate = (template: string, data: any): string => {
     return template.replace(/\[(.*?)\]/g, (match, key) => {
-        return `<strong>${data[key.trim()] || '_____'}</strong>`;
+        const value = data[key.trim()];
+        if (key.trim() === 'documentType') {
+            return `<strong>${value || 'ኮፒ'}</strong>`;
+        }
+        return `<strong>${value || '_____'}</strong>`;
     });
   }
 

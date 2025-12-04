@@ -113,7 +113,10 @@ function appReducer(state: AppState, action: Action): AppState {
     case 'TOGGLE_FACT': {
         const { factId, mutexGroup } = action.payload;
         if (!state.selectedSubTemplate) return state;
-        const allFactsForTemplate = TEMPLATE_DATA[state.selectedSubTemplate]?.facts || [];
+        
+        // This is a temporary fix. The `facts` should not be an array of arrays.
+        const allFactsForTemplate: Fact[] = (TEMPLATE_DATA[state.selectedSubTemplate]?.facts || []).flat();
+
         const factToAdd = allFactsForTemplate.find(f => f.id === factId);
         
         if (!factToAdd) return state;

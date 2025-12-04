@@ -51,24 +51,21 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
               </Select>
             </div>
 
-            {metadata.courtLevel === 'ሌላ' || metadata.bench === 'ሌላ' ? (
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                    <Label>የፍ/ቤት ስም</Label>
-                    <Input 
-                        value={metadata.bench === 'ሌላ' ? '' : metadata.bench}
-                        onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: e.target.value }})}
-                        placeholder="የፍርድ ቤቱን ሙሉ ስም ያስገቡ"
-                    />
-                </div>
-            ) : (
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                <Label>ችሎት</Label>
+            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+              <Label>ችሎት</Label>
+               {metadata.bench === 'ሌላ' ? (
+                 <Input 
+                    value={metadata.benchOther || ''}
+                    onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'benchOther', value: e.target.value }})}
+                    placeholder="የችሎቱን ስም ያስገቡ"
+                />
+               ) : (
                 <Select value={metadata.bench} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value } })}>
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>{benches.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
                 </Select>
-                </div>
-            )}
+               )}
+            </div>
 
 
             <div className="grid grid-cols-[auto_1fr] items-center gap-4">

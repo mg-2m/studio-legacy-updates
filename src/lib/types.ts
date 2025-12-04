@@ -16,6 +16,7 @@ export interface Party {
 export interface Metadata {
   courtLevel: string;
   bench: string;
+  benchOther?: string;
   city: string;
   fileNumber: string;
   date: string;
@@ -156,6 +157,9 @@ export interface TemplateData {
   calculations?: {
     [key: string]: CalculationConfig;
   };
+  meta?: {
+      purpose?: string;
+  }
 }
 
 

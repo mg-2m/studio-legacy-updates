@@ -193,6 +193,8 @@ export default function PageOne({ state }: { state: AppState }) {
         </div>
     );
   };
+  
+  const displayBench = meta.bench === 'ሌላ' ? (meta.benchOther || '___________') : meta.bench;
 
   return (
     <div className="a4-page">
@@ -211,7 +213,7 @@ export default function PageOne({ state }: { state: AppState }) {
           <span className="black-box text-lg">ለ: {meta.courtLevel || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="green-box">{meta.bench || '___________'}</span>
+          <span className="green-box">{displayBench}</span>
         </div>
         <div className="mt-1">
           <span className="black-box">{meta.city || '___________'}</span>

@@ -25,7 +25,8 @@ interface HeaderPartiesTabProps {
 
 export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabProps) {
   const { metadata, applicants, respondents, partyTitles } = state;
-  
+  const benches = COURT_HIERARCHY[metadata.courtLevel as keyof typeof COURT_HIERARCHY] || [];
+
   return (
     <div className="w-full space-y-4">
       <Card>
@@ -40,12 +41,9 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 value={metadata.courtLevel} 
                 onValueChange={(value) => {
                   dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevel', value } });
-                  if (value !== 'ሌላ') {
-                    const newDefaultBench = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY][0];
-                    dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
-                  } else {
-                     dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: 'ሌላ' } });
-                  }
+                  const newBenches = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY] || [];
+                  const newDefaultBench = newBenches.length > 0 ? newBenches[0] : 'ሌላ';
+                  dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
                 }}
               >
                 <SelectTrigger><SelectValue /></SelectTrigger>
@@ -53,7 +51,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
               </Select>
             </div>
 
-            {metadata.courtLevel === 'ሌላ' ? (
+            {metadata.courtLevel === 'ሌላ' || metadata.bench === 'ሌላ' ? (
                 <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                     <Label>የፍ/ቤት ስም</Label>
                     <Input 
@@ -67,7 +65,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 <Label>ችሎት</Label>
                 <Select value={metadata.bench} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value } })}>
                     <SelectTrigger><SelectValue /></SelectTrigger>
-                    <SelectContent>{(COURT_HIERARCHY[metadata.courtLevel as keyof typeof COURT_HIERARCHY] || []).map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
+                    <SelectContent>{benches.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
                 </Select>
                 </div>
             )}

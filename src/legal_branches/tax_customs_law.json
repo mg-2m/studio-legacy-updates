@@ -15,7 +15,7 @@
         ],
         "jurisdictionType": "Administrative (Ministry of Revenue)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ከገቢዎች ሚኒስቴር የተላከልዎ የግብር ግምት ላይ ስህተት አለ ብለው ሲያምኑ፣ ለገቢዎች ሚኒስቴር ራሱ መቃወሚያዎን በይፋ ለማቅረብ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መቃወሚያ የሚቀርበው ለፍርድ ቤት ሳይሆን፣ ግምቱን ላወጣው የገቢዎች ሚኒስቴር ቅርንጫፍ ጽ/ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየግብር ግምት ማስታወቂያው ከደረሰዎት ቀን ጀምሮ ባሉት ሃያ አንድ (21) ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 54(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **ማስረጃ (Required Evidence):** መቃወሚያዎን የሚደግፉ ማናቸውም የሂሳብ መዝገቦች (AccountingRecords)፣ ደረሰኞች፣ ወይም የውጭ ኦዲት ሪፖርቶች (ExternalAuditReport)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ከገቢዎች ሚኒስቴር የተላከልዎ የግብር ግምት ላይ ስህተት አለ ብለው ሲያምኑ፣ ለገቢዎች ሚኒስቴር ራሱ መቃወሚያዎን በይፋ ለማቅረብ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መቃወሚያ የሚቀርበው ለፍርድ ቤት ሳይሆን፣ ግምቱን ላወጣው የገቢዎች ሚኒስቴር ቅርንጫፍ ጽ/ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየግብር ግምት ማስታወቂያው ከደረሰዎት ቀን ጀምሮ ባሉት ሃያ አንድ (21) ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 54(1))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence): መቃወሚያዎን የሚደግፉ ማናቸውም የሂሳብ መዝገቦች (AccountingRecords)፣ ደረሰኞች፣ ወይም የውጭ ኦዲት ሪፖርቶች (ExternalAuditReport)።",
       "partyTitles": {
         "applicant": "አመልካች (ግብር ከፋይ) (Applicant (Taxpayer))",
         "respondent": "መልስ ሰጪ (የገቢዎች ሚኒስቴር ቅርንጫፍ) (Respondent (Ministry of Revenue Branch Office))"
@@ -107,7 +107,7 @@
         ],
         "jurisdictionType": "Administrative Tribunal (FTAC)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገቢዎች ሚኒስቴር በመቃወሚያዎ ላይ የሰጠውን ውሳኔ ለመቃወም እና ጉዳዩ በገለልተኛ የግብር ይግባኝ ኮሚሽን እንዲታይ ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ይግባኝ የሚቀርበው ለፌደራል የግብር ይግባኝ ኮሚሽን ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየገቢዎች ሚኒስቴር የመቃወሚያ ውሳኔ ከደረሰዎት ቀን ጀምሮ ባሉት ሰላሳ (30) ቀናት ውስጥ ይግባኙ መቅረብ አለበት (አንቀጽ 88(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የ50% ቅድመ ክፍያ፡** ይግባኝ ከማቅረብዎ በፊት፣ ከተከራከሩበት የግብር መጠን ውስጥ 50% (ቅጣቶችን እና ወለድን ሳይጨምር) መክፈል ግዴታ ነው (አንቀጽ 88(3))።\n- **ማስረጃ (Required Evidence):** የገቢዎች ሚኒስቴር የሰጠው ውሳኔ እና የ50% ክፍያ ደረሰኝ (PaymentReceiptsTaxCustoms)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገቢዎች ሚኒስቴር በመቃወሚያዎ ላይ የሰጠውን ውሳኔ ለመቃወም እና ጉዳዩ በገለልተኛ የግብር ይግባኝ ኮሚሽን እንዲታይ ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ይግባኝ የሚቀርበው ለፌደራል የግብር ይግባኝ ኮሚሽን ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየገቢዎች ሚኒስቴር የመቃወሚያ ውሳኔ ከደረሰዎት ቀን ጀምሮ ባሉት ሰላሳ (30) ቀናት ውስጥ ይግባኙ መቅረብ አለበት (አንቀጽ 88(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የ50% ቅድመ ክፍያ፡ ይግባኝ ከማቅረብዎ በፊት፣ ከተከራከሩበት የግብር መጠን ውስጥ 50% (ቅጣቶችን እና ወለድን ሳይጨምር) መክፈል ግዴታ ነው (አንቀጽ 88(3))።\n- ማስረጃ (Required Evidence): የገቢዎች ሚኒስቴር የሰጠው ውሳኔ እና የ50% ክፍያ ደረሰኝ (PaymentReceiptsTaxCustoms)።",
       "partyTitles": {
         "applicant": "ይግባኝ ባይ (ግብር ከፋይ) (Appellant (Taxpayer))",
         "respondent": "መልስ ሰጪ (የገቢዎች ሚኒስቴር) (Respondent (Ministry of Revenue))"
@@ -185,7 +185,7 @@
         ],
         "jurisdictionType": "Administrative (Customs Commission)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ከልክ በላይ የተከፈለ የጉምሩክ ቀረጥ እንዲመለስልዎ ለጉምሩክ ኮሚሽን ለማመልከት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ መጀመሪያ የሚቀርበው ለጉምሩክ ኮሚሽን ራሱ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበጉምሩክ አዋጅ 859/2014 አንቀጽ 155(1) መሰረት፣ የተመላሽ ገንዘብ ጥያቄ ቀረጡ ከተከፈለበት ቀን ጀምሮ በአንድ (1) ዓመት ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **ማስረጃ (Required Evidence):** ከልክ በላይ እንደከፈሉ የሚያሳይ ማስረጃ (ለምሳሌ፣ የተሳሳተ ግምት) እና የክፍያ ደረሰኞች።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ከልክ በላይ የተከፈለ የጉምሩክ ቀረጥ እንዲመለስልዎ ለጉምሩክ ኮሚሽን ለማመልከት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ መጀመሪያ የሚቀርበው ለጉምሩክ ኮሚሽን ራሱ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበጉምሩክ አዋጅ 859/2014 አንቀጽ 155(1) መሰረት፣ የተመላሽ ገንዘብ ጥያቄ ቀረጡ ከተከፈለበት ቀን ጀምሮ በአንድ (1) ዓመት ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence): ከልክ በላይ እንደከፈሉ የሚያሳይ ማስረጃ (ለምሳሌ፣ የተሳሳተ ግምት) እና የክፍያ ደረሰኞች።",
       "partyTitles": {
         "applicant": "አመልካች (አስመጪ/ላኪ) (Applicant (Importer/Exporter))",
         "respondent": "መልስ ሰጪ (ጉምሩክ ኮሚሽን) (Respondent (Customs Commission))"
@@ -255,7 +255,7 @@
         ],
         "jurisdictionType": "Court/Tribunal handling the appeal"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ የግብር ይግባኝዎ እየታየ ባለበት ወቅት፣ የገቢዎች ሚኒስቴር አከራካሪ የሆነውን የግብር እዳ ለመሰብሰብ የአፈጻጸም እርምጃ (ለምሳሌ የባንክ ሂሳብ ማገድ) ሲጀምር፣ ያንን እርምጃ ለጊዜው ለማስቆም ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የግብር ይግባኝ በሚታይበት አካል (የግብር ይግባኝ ኮሚሽን ወይም ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የማይተካ ጉዳት (Irreparable Harm):** ክፍያውን አሁን መፈጸም ድርጅትዎን ለኪሳራ የሚዳርግ እና ሊጠገን የማይችል ጉዳት እንደሚያደርስ ማሳየት。\n- **ጠንካራ ክስ (Prima Facie Case):** በይግባኝዎ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ የግብር ይግባኝዎ እየታየ ባለበት ወቅት፣ የገቢዎች ሚኒስቴር አከራካሪ የሆነውን የግብር እዳ ለመሰብሰብ የአፈጻጸም እርምጃ (ለምሳሌ የባንክ ሂሳብ ማገድ) ሲጀምር፣ ያንን እርምጃ ለጊዜው ለማስቆም ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የግብር ይግባኝ በሚታይበት አካል (የግብር ይግባኝ ኮሚሽን ወይም ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የማይተካ ጉዳት (Irreparable Harm): ክፍያውን አሁን መፈጸም ድርጅትዎን ለኪሳራ የሚዳርግ እና ሊጠገን የማይችል ጉዳት እንደሚያደርስ ማሳየት።\n- ጠንካራ ክስ (Prima Facie Case): በይግባኝዎ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "መልስ ሰጪ (Respondent)"
@@ -320,7 +320,7 @@
         ],
         "jurisdictionType": "Court/Tribunal handling the appeal"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ በፍርድ ቤት ወይም በኮሚሽን እየታየ ያለን የግብር ክርክር፣ ጊዜ እና ወጪን ለመቆጠብ በስምምነት ወይም በሽምግልና እንዲፈታ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙን እየሰማ ላለው ፍርድ ቤት ወይም ኮሚሽን ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የስምምነት ፍላጎት፡** ሁለቱም ወገኖች (ግብር ከፋዩ እና ገቢዎች ሚኒስቴር) ጉዳዩን በስምምነት ለመፍታት ፍላጎት እንዳላቸው ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ፣ በፍርድ ቤት ወይም በኮሚሽን እየታየ ያለን የግብር ክርክር፣ ጊዜ እና ወጪን ለመቆጠብ በስምምነት ወይም በሽምግልና እንዲፈታ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙን እየሰማ ላለው ፍርድ ቤት ወይም ኮሚሽን ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የስምምነት ፍላጎት፡ ሁለቱም ወገኖች (ግብር ከፋዩ እና ገቢዎች ሚኒስቴር) ጉዳዩን በስምምነት ለመፍታት ፍላጎት እንዳላቸው ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "መልስ ሰጪ (Respondent)"

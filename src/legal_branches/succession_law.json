@@ -8,7 +8,7 @@
                 "keywords": ["inheritance", "intestate", "heirship", "declaration", "ወራሽነት", "ውርስ"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሟች ኑዛዜ ሳይተው ሲቀር፣ ሕጋዊ ወራሾቹ እነማን እንደሆኑ በፍርድ ቤት ለማረጋገጥ ያገለግላል። ይህም ወራሾቹ የሟቹን ንብረት በሕጋዊ መንገድ እንዲቆጣጠሩ እና እንዲያስተዳድሩ ያስችላቸዋል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው ሟቹ የመጨረሻ የመኖሪያ አድራሻ በነበረበት አካባቢ በሚገኘው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየወራሽነት ጥያቄ በማንኛውም ጊዜ ሊቀርብ ይችላል፣ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):**\n*   **የግድ የሚያስፈልግ ማስረጃ:** የሟቹ የሞት ማረጋገጫ ወረቀት (DeathCertificate)።\n*   **ተጨማሪ ማስረጃ:** የወራሾቹን ዝምድና የሚያረጋግጡ ሦስት ምስክሮች (WitnessAffidavitsSuccession) እና የቤተሰብ ግንኙነት የሚያሳይ የቀበሌ መታወቂያ (KebeleFamilyID)።",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሟች ኑዛዜ ሳይተው ሲቀር፣ ሕጋዊ ወራሾቹ እነማን እንደሆኑ በፍርድ ቤት ለማረጋገጥ ያገለግላል። ይህም ወራሾቹ የሟቹን ንብረት በሕጋዊ መንገድ እንዲቆጣጠሩ እና እንዲያስተዳድሩ ያስችላቸዋል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው ሟቹ የመጨረሻ የመኖሪያ አድራሻ በነበረበት አካባቢ በሚገኘው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየወራሽነት ጥያቄ በማንኛውም ጊዜ ሊቀርብ ይችላል፣ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የግድ የሚያስፈልግ ማስረጃ:** የሟቹ የሞት ማረጋገጫ ወረቀት (DeathCertificate)።\n- **ተጨማሪ ማስረጃ:** የወራሾቹን ዝምድና የሚያረጋግጡ ሦስት ምስክሮች (WitnessAffidavitsSuccession) እና የቤተሰብ ግንኙነት የሚያሳይ የቀበሌ መታወቂያ (KebeleFamilyID)።",
             "partyTitles": {
                 "applicant": "አመልካች / ፍላጎት ያላቸው ወገኖች (Applicant / Interested Parties)",
                 "respondent": "የሕዝብ ማስታወቂያ (Public Notice)"
@@ -20,7 +20,7 @@
                     "legalText": "ሟቹ፣ [deceasedName]፣ በ [deathDate] በ [deathPlace] ከዚህ ዓለም በሞት ተለይቷል። (The Deceased, [deceasedName], passed away on [deathDate] at [deathPlace].)",
                     "citation": "Civ. Code Art. 826",
                     "autoEvidence": [ "DeathCertificate" ],
-                    "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የሟች ማንነት" }
+                    "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የሟች ማንነት" }
                 },
                 {
                     "id": "succession_fact_relationship_descendant",
@@ -72,7 +72,7 @@
                 "keywords": ["will", "probate", "testament", "ኑዛዜ", "ማጽደቅ"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሟቹ ሕጋዊ ኑዛዜ ትቶ ሲሄድ፣ ኑዛዜው የሟቹ የመጨረሻ ፍላጎት መሆኑን በፍርድ ቤት ለማረጋገጥ እና ለማጽደቅ ያገለግላል። ይህም በኑዛዜው የተጠቀሱት ፈጻሚዎች ወይም ተጠቃሚዎች ንብረቱን በኑዛዜው መሠረት እንዲያስተዳድሩ ያስችላቸዋል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው ሟቹ የመጨረሻ የመኖሪያ አድራሻ በነበረበት አካባቢ በሚገኘው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nኑዛዜን ለማስከበር ምንም የጊዜ ገደብ የለም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):**\n*   **የግድ የሚያስፈልግ ማስረጃ:** ዋናው የኑዛዜ ሰነድ (WillTestament) እና የሟቹ የሞት ማረጋገጫ ወረቀት (DeathCertificate)።\n*   **ተጨማሪ ማስረጃ:** ኑዛዜው በሕዝብ ፊት የተደረገ ከሆነ፣ የምስክሮች መግለጫ።",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሟቹ ሕጋዊ ኑዛዜ ትቶ ሲሄድ، ኑዛዜው የሟቹ የመጨረሻ ፍላጎት መሆኑን በፍርድ ቤት ለማረጋገጥ እና ለማጽደቅ ያገለግላል። ይህም በኑዛዜው የተጠቀሱት ፈጻሚዎች ወይም ተጠቃሚዎች ንብረቱን በኑዛዜው መሠረት እንዲያስተዳድሩ ያስችላቸዋል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው ሟቹ የመጨረሻ የመኖሪያ አድራሻ በነበረበት አካባቢ በሚገኘው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nኑዛዜን ለማስከበር ምንም የጊዜ ገደብ የለም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የግድ የሚያስፈልግ ማስረጃ:** ዋናው የኑዛዜ ሰነድ (WillTestament) እና የሟቹ የሞት ማረጋገጫ ወረቀት (DeathCertificate)።\n- **ተጨማሪ ማስረጃ:** ኑዛዜው በሕዝብ ፊት የተደረገ ከሆነ፣ የምስክሮች መግለጫ።",
             "partyTitles": {
                 "applicant": "አመልካች (ፈጻሚ/ተጠቃሚ) (Petitioner (Executor/Beneficiary))",
                 "respondent": "የለም (N/A)"
@@ -130,7 +130,7 @@
                 "keywords": ["partition", "estate", "division", "ክፍፍል", "ውርስ", "ንብረት"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ወራሾቹ በሕግ ከታወቁ በኋላ፣ የውርስ ንብረቱን እንዴት እንደሚከፋፈሉ መስማማት ሳይችሉ ሲቀሩ ጥቅም ላይ ይውላል። ክሱ ንብረቱ በፍርድ ቤት በኩል እንዲከፋፈል ለመጠየቅ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክስ መታየት ያለበት ውርስ ንብረቶቹ በሚገኙበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው። ንብረቶቹ በተለያዩ ቦታዎች የሚገኙ ከሆነ፣ የሟቹ የመጨረሻ መኖሪያ በነበረበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በ**መዝገብ ቁጥር ፩፰፮፫፳፱** (ቅጽ ፳፫) በሰጠው ውሳኔ፣ የ10 ዓመት የይርጋ ጊዜ እንደማይሠራ በማረጋገጥ፣ የ**3 ዓመት** የይርጋ ጊዜ እንደሚኖር አስቀምጧል። ይህም ጊዜ መቆጠር የሚጀምረው አንድ ወራሽ ንብረቱን እንደግል ንብረቱ አድርጎ በሌሎች ወራሾች ላይ መብቱን የሚፃረር ድርጊት ከፈጸመበት ጊዜ ጀምሮ ነው። (Per Cassation File No. 186329 (Vol. 23), the claim for partition of property post-divorce is subject to a **3-year** period of limitation, which starts to run from when a co-heir manifests an unequivocal intention to treat the property as their own private property, thereby adversely possessing against other co-heirs.)\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):**\n*   **የግድ የሚያስፈልግ ማስረጃ:** ወራሽ መሆንዎን የሚያረጋግጥ የፍርድ ቤት ውሳኔ ወይም የወራሽነት ሰርተፍኬት (CertificateofHeirship)።\n*   **ተጨማሪ ማስረጃ:** የሟቹ እዳዎች መከፈላቸውን የሚያረጋግጥ ሰነድ (CertificateofLiquidation)።",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ወራሾቹ በሕግ ከታወቁ በኋላ፣ የውርስ ንብረቱን እንዴት እንደሚከፋፈሉ መስማማት ሳይችሉ ሲቀሩ ጥቅም ላይ ይውላል። ክሱ ንብረቱ በፍርድ ቤት በኩል እንዲከፋፈል ለመጠየቅ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክስ መታየት ያለበት ውርስ ንብረቶቹ በሚገኙበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው። ንብረቶቹ በተለያዩ ቦታዎች የሚገኙ ከሆነ፣ የሟቹ የመጨረሻ መኖሪያ በነበረበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በ**መዝገብ ቁጥር ፩፰፮፫፳፱** (ቅጽ ፳፫) በሰጠው ውሳኔ، የ10 ዓመት የይርጋ ጊዜ እንደማይሠራ በማረጋገጥ، የ**3 ዓመት** የይርጋ ጊዜ እንደሚኖር አስቀምጧል። ይህም ጊዜ መቆጠር የሚጀምረው አንድ ወራሽ ንብረቱን እንደግል ንብረቱ አድርጎ በሌሎች ወራሾች ላይ መብቱን የሚፃረር ድርጊት ከፈጸመበት ጊዜ ጀምሮ ነው። (Per Cassation File No. 186329 (Vol. 23), the claim for partition of property post-divorce is subject to a **3-year** period of limitation, which starts to run from when a co-heir manifests an unequivocal intention to treat the property as their own private property, thereby adversely possessing against other co-heirs.)\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የግድ የሚያስፈልግ ማስረጃ:** ወራሽ መሆንዎን የሚያረጋግጥ የፍርድ ቤት ውሳኔ ወይም የወራሽነት ሰርተፍኬት (CertificateofHeirship)።\n- **ተጨማሪ ማስረጃ:** የሟቹ እዳዎች መከፈላቸውን የሚያረጋግጥ ሰነድ (CertificateofLiquidation)።",
             "partyTitles": {
                 "applicant": "ከሳሽ (ወራሽ) (Plaintiff (Heir))",
                 "respondent": "ተከሳሽ (አብሮ ወራሽ) (Defendant (Co-Heir))"
@@ -142,12 +142,12 @@
                     "legalText": "ተዋዋይ ወገኖች በሕጋዊ መንገድ እንደ አብሮ ወራሾች ታውጇል። (The parties have been legally declared as co-heirs.)",
                     "citation": "Civ. Code Art. 1060",
                     "autoEvidence": [ "CertificateofHeirship" ],
-                    "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የጋራ ወራሽነት" }
+                    "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የጋራ ወራሽነት" }
                 },
                 {
                     "id": "succession_fact_liquidation_complete",
                     "label": "የንብረት ሁኔታ (Estate Status)",
-                    "legalText": "የንብረቱ እዳዎች ተከፍለዋል፣ እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው። (The debts of the estate have been paid, and the assets are ready for division.)",
+                    "legalText": "የንብረቱ እዳዎች ተከፍለዋል، እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው። (The debts of the estate have been paid, and the assets are ready for division.)",
                     "citation": "",
                     "autoEvidence": [ "CertificateofLiquidation" ],
                     "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የእዳ ክፍያ" }
@@ -186,7 +186,7 @@
                 "keywords": ["liquidator", "estate", "appointment", "አጣሪ", "ሹመት"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የሟቹ ንብረት ውስብስብ ሲሆን ወይም ወራሾቹ ንብረቱን ለማስተዳደር መስማማት ሳይችሉ ሲቀሩ፣ ፍርድ ቤቱ ገለልተኛ የሆነ አጣሪ እንዲሾም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ የሚቀርበው ውርሱን ለሚመለከተው ዋናው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት (Necessity):** የንብረቱ ውስብስብነት ወይም በወራሾች መካከል ያለው አለመግባባት መኖሩን ማሳየት ያስፈልጋል።\n*   **ማስረጃ (Required Evidence):** የንብረቱን ዝርዝር (InventoryofEstate) እና የእዳዎችን ሁኔታ የሚያሳይ ሰነድ።",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የሟቹ ንብረት ውስብስብ ሲሆን ወይም ወራሾቹ ንብረቱን ለማስተዳደር መስማማት ሳይችሉ ሲቀሩ፣ ፍርድ ቤቱ ገለልተኛ የሆነ አጣሪ እንዲሾም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ የሚቀርበው ውርሱን ለሚመለከተው ዋናው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **አስፈላጊነት (Necessity):** የንብረቱ ውስብስብነት ወይም በወራሾች መካከል ያለው አለመግባባት መኖሩን ማሳየት ያስፈልጋል።\n- **ማስረጃ (Required Evidence):** የንብረቱን ዝርዝር (InventoryofEstate) እና የእዳዎችን ሁኔታ የሚያሳይ ሰነድ።",
             "partyTitles": {
                 "applicant": "አመልካች (Applicant)",
                 "respondent": "የለም (N/A)"
@@ -227,7 +227,7 @@
                 "keywords": ["seal", "estate", "preserve", "ማሸግ", "ንብረት"],
                 "jurisdictionType": "Federal/Regional First Instance"
             },
-            "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ የውርስ ንብረት (በተለይ ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች) እንዳይሰወሩ ወይም እንዳይጠፉ ለመከላከል ፍርድ ቤቱ ንብረቱን እንዲያሽግ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ የሚቀርበው ውርሱን ለሚመለከተው ዋናው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ ስለሆነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** ንብረቱ ሊጠፋ ወይም ሊሰወር እንደሚችል የሚያሳይ ጠንካራ ስጋት መኖሩን ማሳየት ያስፈልጋል።\n*   **ማስረጃ (Required Evidence):** የአደጋውን አስቸኳይነት የሚያሳይ የምስክር ወረቀት ወይም ሌላ ማስረጃ።",
+            "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ የውርስ ንብረት (በተለይ ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች) እንዳይሰወሩ ወይም እንዳይጠፉ ለመከላከል ፍርድ ቤቱ ንብረቱን እንዲያሽግ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ የሚቀርበው ውርሱን ለሚመለከተው ዋናው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ ስለሆነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **አስቸኳይነት (Urgency):** ንብረቱ ሊጠፋ ወይም ሊሰወር እንደሚችል የሚያሳይ ጠንካራ ስጋት መኖሩን ማሳየት ያስፈልጋል።\n- **ማስረጃ (Required Evidence):** የአደጋውን አስቸኳይነት የሚያሳይ የምስክር ወረቀት ወይም ሌላ ማስረጃ።",
             "partyTitles": {
                 "applicant": "አመልካች (Applicant)",
                 "respondent": "የለም (N/A)"
@@ -263,3 +263,5 @@
         }
     }
 }
+
+    

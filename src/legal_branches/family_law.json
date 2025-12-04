@@ -106,7 +106,7 @@
         "keywords": ["divorce by agreement", "mutual consent", "feta besememenet", "የፍቺ ስምምነት"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ባልና ሚስት በጋራ በመስማማት ፍቺ ለመፈጸም ሲፈልጉ እና በንብረት ክፍፍል፣ በልጆች አስተዳደግ እና በቀለብ ጉዳዮች ላይ ስምምነት ላይ ሲደርሱ ያንን ስምምነት ለፍርድ ቤት አቅርበው ለማጽደቅ እና ጋብቻውን ለማፍረስ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ባልና ሚስቱ መጨረሻ ላይ አብረው በኖሩበት ቦታ ወይም የአንደኛው ወገን መኖሪያ በሆነበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የተሟላ ስምምነት፡ በሁሉም ጉዳዮች (ንብረት፣ ቀለብ፣ የልጆች አስተዳደግ) ላይ የተደረሰበት የጽሑፍ ስምምነት መኖር አለበት።\n- ማስረጃ (Required Evidence): የጋብቻ ምስክር ወረቀት እና በሁለቱም ወገኖች የተፈረመ የፍቺ ስምምነት ሰነድ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ባልና ሚስት በጋራ በመስማማት ፍቺ ለመፈጸም ሲፈልጉ እና በንብረት ክፍፍል፣ በልጆች አስተዳደግ እና በቀለብ ጉዳዮች ላይ ስምምነት ላይ ሲደርሱ ያንን ስምምነት ለፍርድ ቤት አቅርበው ለማጽደቅ እና ጋብቻውን ለማፍረስ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ባልና ሚስቱ መጨረሻ ላይ አብረው በኖሩበት ቦታ ወይም የአንደኛው ወገን መኖሪያ በሆነበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የተሟላ ስምምነት፡ በሁሉም ጉዳዮች (ንብረት፣ ቀለብ፣ የልጆች አስተዳደግ) ላይ የተደረሰበት የጽሑፍ ስምምነት መኖር አለበት።\n\n### ማስረጃ (Required Evidence)\n- የጋብቻ ምስክር ወረቀት።\n- በሁለቱም ወገኖች የተፈረመ የፍቺ ስምምነት ሰነድ።",
       "partyTitles": {
         "applicant": "የመጀመሪያ አቤቱታ አቅራቢ (First Petitioner)",
         "respondent": "ሁለተኛ አቤቱታ አቅራቢ (Second Petitioner)"
@@ -159,7 +159,7 @@
         "keywords": ["paternity", "fatherhood", "child support", "parentage", "አባትነት", "የልጅ ቀለብ"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ልጅ ከአባትየው መወለዱን በፍርድ ቤት ለማረጋገጥ እና የአባትነት መብቶችና ግዴታዎች (ለምሳሌ ቀለብ) እንዲከበሩ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበተሻሻለው የቤተሰብ ሕግ አንቀጽ 142(2) መሰረት፣ የአባትነት ክስ የሚታየው እናት፣ ልጅ ወይም የተጠረጠረው አባት በሚኖሩበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nልጁ 18 ዓመት እስኪሞላው ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence): የእናትና የተጠረጠረው አባት ግንኙነት እንደነበራቸው የሚያሳይ ማስረጃ (ምስክር) ወይም ልጁን እንደ ልጁ አድርጎ እንደያዘው የሚያሳይ ማስረጃ (ምስክር)። የህክምና ቦርድ የDNA ምርመራ ውጤት (MedicalBoardCertificate) በጣም ወሳኝ ማስረጃ ነው።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ልጅ ከአባትየው መወለዱን በፍርድ ቤት ለማረጋገጥ እና የአባትነት መብቶችና ግዴታዎች (ለምሳሌ ቀለብ) እንዲከበሩ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበተሻሻለው የቤተሰብ ሕግ አንቀጽ 142(2) መሰረት፣ የአባትነት ክስ የሚታየው እናት፣ ልጅ ወይም የተጠረጠረው አባት በሚኖሩበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nልጁ 18 ዓመት እስኪሞላው ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የእናትና የተጠረጠረው አባት ግንኙነት እንደነበራቸው የሚያሳይ ማስረጃ (ምስክር) ወይም ልጁን እንደ ልጁ አድርጎ እንደያዘው የሚያሳይ ማስረጃ (ምስክር)።\n- የህክምና ቦርድ የDNA ምርመራ ውጤት (MedicalBoardCertificate) በጣም ወሳኝ ማስረጃ ነው።",
       "partyTitles": {
         "applicant": "ከሳሽ (ልጅ/አሳዳጊ) (Plaintiff (Child/Guardian))",
         "respondent": "ተከሳሽ (የተጠረጠረ አባት) (Defendant (Alleged Father))"
@@ -217,7 +217,7 @@
         "keywords": ["temporary maintenance", "alimony", "child support", "interim", "ጊዜያዊ ቀለብ"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ክስ በፍርድ ቤት እየታየ ባለበት ወቅት، እራሳቸውን ወይም ልጆቻቸውን ለመደገፍ ገቢ የሌላቸው ወገኖች، ሌላኛው ወገን ለጊዜው ቀለብ እንዲከፍል ለማስገደድ የሚያቀርቡት አስቸኳይ ማመልከቻ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- በሂደት ላይ ያለ ክስ፡ ዋናው የፍቺ ክስ መከፈቱን ማረጋገጥ።\n- ማስረጃ (Required Evidence): የአመልካች ገቢ አለመኖር እና የተከሳሽ የመክፈል አቅም ማሳየት ያስፈልጋል (ProofofIncome)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ክስ በፍርድ ቤት እየታየ ባለበት ወቅት، እራሳቸውን ወይም ልጆቻቸውን ለመደገፍ ገቢ የሌላቸው ወገኖች، ሌላኛው ወገን ለጊዜው ቀለብ እንዲከፍል ለማስገደድ የሚያቀርቡት አስቸኳይ ማመልከቻ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- በሂደት ላይ ያለ ክስ፡ ዋናው የፍቺ ክስ መከፈቱን ማረጋገጥ።\n\n### ማስረጃ (Required Evidence)\n- የአመልካች ገቢ አለመኖር እና የተከሳሽ የመክፈል አቅም ማሳየት ያስፈልጋል (ProofofIncome)።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -280,7 +280,7 @@
         "keywords": ["injunction", "property", "attachment", "marital property", "የንብረት እግድ", "የጋራ ንብረት"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ክስ በሚታይበት ወቅት፣ አንደኛው ወገን የጋራ ንብረትን ሊሸጥ፣ ሊያስተላልፍ ወይም ሊደብቅ ይችላል የሚል ስጋት ሲኖር፣ ፍርድ ቤቱ ንብረቱ ላይ የእግድ ትዕዛዝ እንዲሰጥ ለመጠየቅ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ስጋት መኖሩን ማሳየት፡ ሌላኛው ወገን ንብረቱን ለማሸሽ እየሞከረ መሆኑን የሚያሳይ ተጨባጭ ስጋት መኖሩን ማሳየት።\n- ማስረጃ (Required Evidence): የጋራ ንብረት ዝርዝር (ListofCommonProperty)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ክስ በሚታይበት ወቅት፣ አንደኛው ወገን የጋራ ንብረትን ሊሸጥ፣ ሊያስተላልፍ ወይም ሊደብቅ ይችላል የሚል ስጋት ሲኖር፣ ፍርድ ቤቱ ንብረቱ ላይ የእግድ ትዕዛዝ እንዲሰጥ ለመጠየቅ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ስጋት መኖሩን ማሳየት፡ ሌላኛው ወገን ንብረቱን ለማሸሽ እየሞከረ መሆኑን የሚያሳይ ተጨባጭ ስጋት መኖሩን ማሳየት።\n\n### ማስረጃ (Required Evidence)\n- የጋራ ንብረት ዝርዝር (ListofCommonProperty)።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -338,7 +338,7 @@
         "keywords": ["protective order", "domestic violence", "restraining order", "የጥበቃ ትዕዛዝ", "የቤት ውስጥ ጥቃት"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላኛው የትዳር አጋር አካላዊ ወይም ሥነ-ልቦናዊ ጥቃት የሚደርስበት ወገን፣ ጥቃቱ እንዲቆም እና አጥፊው እንዲርቅ ፍርድ ቤት አስቸኳይ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ አስቸኳይ በመሆኑ በአቅራቢያ በሚገኝ ማንኛውም የመጀመሪያ ደረጃ ፍርድ ቤት ሊቀርብ ይችላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፣ ነገር ግን ጥቃቱ እንደተፈጸመ ወዲያውኑ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence): የፖሊስ ሪፖርት (PoliceReportDomesticViolence) ወይም የህክምና ማስረጃ ካለ ክሱን በእጅጉ ያጠናክረዋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላኛው የትዳር አጋር አካላዊ ወይም ሥነ-ልቦናዊ ጥቃት የሚደርስበት ወገን፣ ጥቃቱ እንዲቆም እና አጥፊው እንዲርቅ ፍርድ ቤት አስቸኳይ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ አስቸኳይ በመሆኑ በአቅራቢያ በሚገኝ ማንኛውም የመጀመሪያ ደረጃ ፍርድ ቤት ሊቀርብ ይችላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፣ ነገር ግን ጥቃቱ እንደተፈጸመ ወዲያውኑ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የፖሊስ ሪፖርት (PoliceReportDomesticViolence) ወይም የህክምና ማስረጃ ካለ ክሱን በእጅጉ ያጠናክረዋል።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -396,7 +396,7 @@
         "keywords": ["property partition", "liquidation", "marital assets", "የንብረት ክፍፍል", "ፍቺ"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ፍርድ ከተሰጠ በኋላ، በፍቺው ወቅት ያልተከፋፈለውን የጋራ ንብረት በፍርድ ቤት በኩል እንዲገመት፣ እንዲጣራ እና እንዲከፋፈል ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በታየበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በ**መዝገብ ቁጥር ፳፩፬፸፰ (ቅጽ ፰)** በሰጠው ውሳኔ መሠረት፣ ከፍቺ በኋላ የንብረት ክፍፍል ጥያቄ የ10 ዓመት የይርጋ ጊዜ ገደብ አለው። ይህ ጊዜ መቆጠር የሚጀምረው ፍቺው ከተፈጸመበት ቀን ጀምሮ ነው። (Per Cassation File No. 21478 (Vol. 8), the claim for partition of property post-divorce is subject to a 10-year period of limitation, which starts to run from the date the divorce is finalized.)\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የፍቺ ፍርድ መኖር፡ የፍቺ ውሳኔ የተሰጠ መሆኑን ማረጋገጥ።\n- ማስረጃ (Required Evidence): የፍቺ ፍርድ ቅጂ (CopyofDivorceJudgment) እና የጋራ ንብረቱን ዝርዝር (ListofCommonProperty)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ፍርድ ከተሰጠ በኋላ، በፍቺው ወቅት ያልተከፋፈለውን የጋራ ንብረት በፍርድ ቤት በኩል እንዲገመት፣ እንዲጣራ እና እንዲከፋፈል ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በታየበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በመዝገብ ቁጥር ፳፩፬፸፰ (ቅጽ ፰) በሰጠው ውሳኔ መሠረት፣ ከፍቺ በኋላ የንብረት ክፍፍል ጥያቄ የ10 ዓመት የይርጋ ጊዜ ገደብ አለው። ይህ ጊዜ መቆጠር የሚጀምረው ፍቺው ከተፈጸመበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የፍቺ ፍርድ መኖር፡ የፍቺ ውሳኔ የተሰጠ መሆኑን ማረጋገጥ።\n\n### ማስረጃ (Required Evidence)\n- የፍቺ ፍርድ ቅጂ (CopyofDivorceJudgment) እና የጋራ ንብረቱን ዝርዝር (ListofCommonProperty)።",
       "partyTitles": {
         "applicant": "የፍርድ ባለቤት (አመልካች) (Decree Holder (Applicant))",
         "respondent": "የፍርድ ባለዕዳ (ተጠሪ) (Judgment Debtor (Respondent))"

@@ -3,11 +3,13 @@
 
 import type { AppState, Party, Relief, Fact } from '@/lib/types';
 import { TEMPLATE_DATA } from '@/lib/data';
+import { toWords } from 'number-to-words';
+
 
 const formatFactPlaceholders = (text: string, values: { [key: string]: any }): string => {
   let formattedText = text;
-  const regex = /\{\{([\w\s]+)\}\}/g;
-  
+  const regex = /\[(.*?)\]/g;
+
   formattedText = formattedText.replace(regex, (match, key) => {
     const value = values[key.trim()];
     return `<strong><u>${value || '______'}</u></strong>`;
@@ -164,12 +166,17 @@ export default function PageOne({ state }: { state: AppState }) {
     let valueText = '(በብር ****** ግምት የቀረበ ክስ ነው)';
     
     if (Object.keys(allCalcValues).length > 0) {
-        const primaryOutputKey = Object.keys(allCalcValues).find(k => k.toLowerCase().includes('amount') || k.toLowerCase().includes('pay'));
+        const primaryOutputKey = Object.keys(allCalcValues).find(k => k.toLowerCase().includes('amount') || k.toLowerCase().includes('pay') || k.toLowerCase().includes('principal'));
         const primaryValue = primaryOutputKey ? allCalcValues[primaryOutputKey] as number : Object.values(allCalcValues)[0] as number;
         
         if(primaryValue && typeof primaryValue === 'number' && primaryValue > 0) {
-            const amountInWords = "በቃላት ያልተደገፈ"; // Placeholder
-            valueText = `ብር ${primaryValue.toFixed(2)} (${amountInWords} ብር)`;
+            try {
+              const amountInWords = toWords(primaryValue);
+              valueText = `ብር ${primaryValue.toFixed(2)} (${amountInWords} ብር)`;
+            } catch (e) {
+                console.error("Failed to convert number to words:", e);
+                valueText = `ብር ${primaryValue.toFixed(2)} (በቃላት ያልተደገፈ ብር)`;
+            }
         }
     }
     

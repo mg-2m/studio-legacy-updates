@@ -57,7 +57,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                     <Label>የፍ/ቤት ስም</Label>
                     <Input 
-                        value={metadata.bench}
+                        value={metadata.bench === 'ሌላ' ? '' : metadata.bench}
                         onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: e.target.value }})}
                         placeholder="የፍርድ ቤቱን ሙሉ ስም ያስገቡ"
                     />

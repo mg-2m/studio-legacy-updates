@@ -8,7 +8,7 @@
         "keywords": ["civil service", "discipline", "appeal", "tribunal", "demotion", "dismissal", "የመንግስት ሰራተኛ", "ይግባኝ", "ቅጣት"],
         "jurisdictionType": "Administrative Tribunal"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ በተቋሙ የተወሰነበትን ከባድ የዲሲፕሊን ቅጣት (ከሥራ መባረር፣ የደረጃ ዝቅ ማድረግ፣ ከአንድ ወር ደመወዝ በላይ መቀጮ) ለመቃወም ለአስተዳደር ፍርድ ቤት ይግባኝ ሲያቀርብ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይግባኙ ውሳኔው ከደረሰበት ቀን ጀምሮ በ90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ከባድ የዲሲፕሊን እርምጃ፡ ይግባኝ ለማለት የሚቻለው የተወሰደው እርምጃ ከባድ ሲሆን ብቻ ነው።\n\n### ማስረጃ (Required Evidence)\n- የቅጣቱን ውሳኔ የያዘ ደብዳቤ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ በተቋሙ የተወሰነበትን ከባድ የዲሲፕሊን ቅጣት (ከሥራ መባረር፣ የደረጃ ዝቅ ማድረግ፣ ከአንድ ወር ደመወዝ በላይ መቀጮ) ለመቃወም ለአስተዳደር ፍርድ ቤት ይግባኝ ሲያቀርብ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይግባኙ ውሳኔው ከደረሰበት ቀን ጀምሮ በ90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nከባድ የዲሲፕሊን እርምጃ፡ ይግባኝ ለማለት የሚቻለው የተወሰደው እርምጃ ከባድ ሲሆን ብቻ ነው።\n\n### ማስረጃ (Required Evidence)\nየቅጣቱን ውሳኔ የያዘ ደብዳቤ።",
       "partyTitles": {
         "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ (Civil Servant / Appellant)",
         "respondent": "መስሪያ ቤት/መልስ ሰጪ (Institution / Office)"
@@ -130,7 +130,7 @@
         "keywords": ["civil service", "administrative termination", "inefficiency", "redundancy", "illness", "የመንግስት ሰራተኛ", "ስንብት"],
         "jurisdictionType": "Administrative Tribunal"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ በአፈጻጸም፣ በህመም ወይም በመዋቅር ለውጥ ምክንያት ከሥራ ሲሰናበት ውሳኔው ህገ-ወጥ ነው ብሎ ሲያምን ይግባኝ ለማቅረብ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይግባኙ ውሳኔው ከደረሰበት ቀን ጀምሮ በ90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የመጨረሻ ውሳኔ፡ ተቋሙ የመጨረሻ የስንብት ውሳኔ መስጠቱን ማረጋገጥ።\n\n### ማስረጃ (Required Evidence)\n- የስንብት ደብዳቤ፣ የአፈጻጸም ግምገማ ውጤቶች፣ ወይም የህክምና ቦርድ መረጃ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ በአፈጻጸም፣ በህመም ወይም በመዋቅር ለውጥ ምክንያት ከሥራ ሲሰናበት ውሳኔው ህገ-ወጥ ነው ብሎ ሲያምን ይግባኝ ለማቅረብ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይግባኙ ውሳኔው ከደረሰበት ቀን ጀምሮ በ90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየመጨረሻ ውሳኔ፡ ተቋሙ የመጨረሻ የስንብት ውሳኔ መስጠቱን ማረጋገጥ።\n\n### ማስረጃ (Required Evidence)\nየስንብት ደብዳቤ፣ የአፈጻጸም ግምገማ ውጤቶች፣ ወይም የህክምና ቦርድ መረጃ።",
       "partyTitles": {
         "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ (Civil Servant / Appellant)",
         "respondent": "መስሪያ ቤት/መልስ ሰጪ (Institution / Office)"
@@ -202,7 +202,7 @@
         "keywords": ["civil service", "benefits", "promotion", "salary", "grievance", "የመንግስት ሰራተኛ", "ጥቅማጥቅም", "ቅሬታ"],
         "jurisdictionType": "Administrative Tribunal"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ ከደመወዝ፣ ከዕድገት፣ ወይም ከሌሎች ጥቅማጥቅሞች ጋር በተያያዘ የደረሰበትን በደል ለመቃወም ለአስተዳደር ፍርድ ቤት ይግባኝ ሲያቀርብ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበውስጥ ቅሬታ አቅራቢ ኮሚቴ ውሳኔ ቅር የተሰኘ ሰራተኛ፣ ውሳኔው ከደረሰው ቀን ጀምሮ በ90 ቀናት ውስጥ ይግባኝ ማቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የውስጥ መፍትሔዎችን ማሟጠጥ፡ ይግባኝ ከማቅረቡ በፊት ለተቋሙ የቅሬታ ሰሚ ኮሚቴ ቅሬታ አቅርቦ የመጨረሻ ውሳኔ ማግኘት ግዴታ ነው (አንቀጽ 81(1)(e))።\n\n### ማስረጃ (Required Evidence)\n- ለቅሬታ ሰሚ ኮሚቴ የቀረበው ማመልከቻ እና የተሰጠው ውሳኔ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ሰራተኛ ከደመወዝ፣ ከዕድገት፣ ወይም ከሌሎች ጥቅማጥቅሞች ጋር በተያያዘ የደረሰበትን በደል ለመቃወም ለአስተዳደር ፍርድ ቤት ይግባኝ ሲያቀርብ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበውስጥ ቅሬታ አቅራቢ ኮሚቴ ውሳኔ ቅር የተሰኘ ሰራተኛ፣ ውሳኔው ከደረሰው ቀን ጀምሮ በ90 ቀናት ውስጥ ይግባኝ ማቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየውስጥ መፍትሔዎችን ማሟጠጥ፡ ይግባኝ ከማቅረቡ በፊት ለተቋሙ የቅሬታ ሰሚ ኮሚቴ ቅሬታ አቅርቦ የመጨረሻ ውሳኔ ማግኘት ግዴታ ነው (አንቀጽ 81(1)(e))።\n\n### ማስረጃ (Required Evidence)\nለቅሬታ ሰሚ ኮሚቴ የቀረበው ማመልከቻ እና የተሰጠው ውሳኔ።",
       "partyTitles": {
         "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ (Civil Servant / Appellant)",
         "respondent": "መስሪያ ቤት/መልስ ሰጪ (Institution / Office)"

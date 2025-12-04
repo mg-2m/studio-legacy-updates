@@ -9,7 +9,7 @@ import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
 import { differenceInDays, parseISO } from 'date-fns';
-import { toWords } from 'number-to-words';
+
 
 import MainLayout from '@/components/main-layout';
 
@@ -372,7 +372,7 @@ function appReducer(state: AppState, action: Action): AppState {
                     newEvidence = { id: newId, type: 'Document', description: '', issuer: '', refNumber: '', issueDate: '', pageCount: '', documentType: 'Copy', originalLocation: '', isManual: true, [field]: value };
                     break;
                 case 'witness':
-                    newEvidence = { id: newId, type: 'Witness', honorific: HONORIFICS[0], name: '', city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[0], woreda: '', houseNo: '', isManual: true, [field]: value };
+                    newEvidence = { id: newId, type: 'Witness', honorific: HONORIFICS[0], name: '', city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[0], subcityOther: '', woreda: '', houseNo: '', isManual: true, [field]: value };
                     break;
                 case 'order':
                     newEvidence = { id: newId, type: 'CourtOrder', description: '', isManual: true, [field]: value };

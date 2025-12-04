@@ -30,6 +30,10 @@ const ManualEvidenceCard: React.FC<{
   isFirstItem?: boolean;
 }> = ({ item, dispatch, isFirstItem = false }) => {
 
+  const updateField = (field: string, value: any) => {
+    dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field, value } });
+  };
+
   return (
     <Card key={item.id} className="bg-muted/30">
       <CardHeader className="flex-row items-center justify-between p-4">
@@ -56,131 +60,34 @@ const ManualEvidenceCard: React.FC<{
       </CardHeader>
       <CardContent className="space-y-4 px-4 pb-4">
         {item.type === 'Document' && (
-          <div className="space-y-4">
-            <div className="grid grid-cols-[auto_1fr_auto_1.5fr] items-center gap-x-4">
-                <Label>ገለጻ</Label>
-                <Input
-                  className="h-9"
-                  placeholder={'e.g., Police report about the incident'}
-                  value={item.description}
-                  onChange={(e) =>
-                    dispatch({
-                      type: 'UPDATE_EVIDENCE',
-                      payload: { id: item.id, field: 'description', value: e.target.value },
-                    })
-                  }
-                />
-                 <Label>አውጪ</Label>
-                <div className="flex items-center gap-2">
-                  <Input
-                    className="h-9 flex-1"
-                    placeholder="Enter issuer name..."
-                    value={item.issuer}
-                    onChange={(e) =>
-                      dispatch({
-                        type: 'UPDATE_EVIDENCE',
-                        payload: { id: item.id, field: 'issuer', value: e.target.value },
-                      })
-                    }
-                  />
-                  <Select
-                    onValueChange={(value) =>
-                        dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issuer', value } })
-                    }
-                  >
-                    <SelectTrigger className="h-9 w-auto">
-                        <SelectValue placeholder="ይምረጡ" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {DOCUMENT_ISSUERS.map((issuer) => (
-                        <SelectItem key={issuer} value={issuer}>
-                          {issuer}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-            </div>
-            
-            <div className="grid grid-cols-12 items-center gap-x-4">
-                <Label className="col-span-1">ቁጥር</Label>
-                <div className="col-span-2">
-                  <Input
-                    className="h-9"
-                    value={item.refNumber}
-                    onChange={(e) =>
-                      dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'refNumber', value: e.target.value } })
-                    }
-                  />
-                </div>
-                <Label className="col-span-1 text-right">የተሰጠበት ቀን</Label>
-                <div className="col-span-2">
-                  <Input
-                    className="h-9"
-                    value={item.issueDate}
-                    onChange={(e) =>
-                      dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'issueDate', value: e.target.value } })
-                    }
-                  />
-                </div>
-                <Label className="col-span-1 text-right">የገጽ ብዛት</Label>
-                <div className="col-span-1">
-                  <Input
-                    className="h-9"
-                    type="number"
-                    value={item.pageCount}
-                    onChange={(e) =>
-                      dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'pageCount', value: e.target.value } })
-                    }
-                  />
-                </div>
-                 <Label className="col-span-1 text-right">ኦርጅናሉ ያለበት</Label>
-                <div className="col-span-3 flex items-center gap-2">
-                    <Input
-                        className="h-9 flex-1"
-                        value={item.originalLocation}
-                        onChange={(e) =>
-                            dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value: e.target.value } })
-                        }
-                    />
-                    <Select
-                      onValueChange={(value) =>
-                        dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'originalLocation', value } })
-                      }
-                    >
-                      <SelectTrigger className="h-9 w-auto">
-                        <SelectValue placeholder="ይምረጡ"/>
-                      </SelectTrigger>
-                      <SelectContent>
-                        {EVIDENCE_LOCATIONS.map((loc) => (
-                          <SelectItem key={loc} value={loc}>
-                            {loc}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                </div>
-            </div>
-            
-            <div className="space-y-2 pt-2">
-              <Label>የሰነዱ አይነት</Label>
-              <RadioGroup
-                value={item.documentType}
-                onValueChange={(value) =>
-                  dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'documentType', value } })
-                }
-                className="flex space-x-4"
-              >
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Original" id={`orig-${item.id}`} />
-                  <Label htmlFor={`orig-${item.id}`}>ኦርጅናል</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Copy" id={`copy-${item.id}`} />
-                  <Label htmlFor={`copy-${item.id}`}>ኮፒ</Label>
-                </div>
-              </RadioGroup>
-            </div>
+          <div className="space-y-3 leading-relaxed text-sm">
+            <p>
+                <Input className="inline-block w-64 h-8" placeholder="የሰነዱ ገለጻ (ለምሳሌ፦ የህክምና ማስረጃ)" value={item.description} onChange={(e) => updateField('description', e.target.value)} />
+                የተሰጠው ከ
+                <Input className="inline-block w-48 h-8 mx-1" placeholder="አውጪ ተቋም ስም" value={item.issuer} onChange={(e) => updateField('issuer', e.target.value)} />
+                <Select onValueChange={(value) => updateField('issuer', value)}>
+                    <SelectTrigger className="inline-flex w-auto h-8"><SelectValue placeholder="ወይም ይምረጡ" /></SelectTrigger>
+                    <SelectContent>{DOCUMENT_ISSUERS.map(i => <SelectItem key={i} value={i}>{i}</SelectItem>)}</SelectContent>
+                </Select>
+                 ሲሆን፣ ማስረጃው ቁጥር 
+                <Input className="inline-block w-24 h-8 mx-1" placeholder="የማጣቀሻ ቁ." value={item.refNumber} onChange={(e) => updateField('refNumber', e.target.value)} />
+                 እና ቀን 
+                <Input className="inline-block w-32 h-8 mx-1" placeholder="የተሰጠበት ቀን" value={item.issueDate} onChange={(e) => updateField('issueDate', e.target.value)} />
+                 ያለው ነው። ሰነዱ 
+                <Input className="inline-block w-16 h-8 mx-1" type="number" placeholder="ገጾች" value={item.pageCount} onChange={(e) => updateField('pageCount', e.target.value)} />
+                 ገጾች ያሉት ሲሆን፣ 
+                <RadioGroup value={item.documentType} onValueChange={(value) => updateField('documentType', value)} className="inline-flex gap-3 mx-2 align-middle">
+                    <div className="flex items-center space-x-1"><RadioGroupItem value="Copy" id={`copy-${item.id}`} /><Label htmlFor={`copy-${item.id}`}>ኮፒ</Label></div>
+                    <div className="flex items-center space-x-1"><RadioGroupItem value="Original" id={`orig-${item.id}`} /><Label htmlFor={`orig-${item.id}`}>ኦርጅናል</Label></div>
+                </RadioGroup>
+                 ነው። ዋናው ቅጂ 
+                <Input className="inline-block w-32 h-8 mx-1" placeholder="ያለበት ወገን" value={item.originalLocation} onChange={(e) => updateField('originalLocation', e.target.value)} />
+                 <Select onValueChange={(value) => updateField('originalLocation', value)}>
+                    <SelectTrigger className="inline-flex w-auto h-8"><SelectValue placeholder="ወይም ይምረጡ" /></SelectTrigger>
+                    <SelectContent>{EVIDENCE_LOCATIONS.map(l => <SelectItem key={l} value={l}>{l}</SelectItem>)}</SelectContent>
+                </Select>
+                 እጅ ይገኛል።
+            </p>
           </div>
         )}
         {item.type === 'Witness' && (
@@ -263,13 +170,17 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
   const manualWitnesses = evidence.filter((e) => e.type === 'Witness');
   const manualCourtOrders = evidence.filter((e) => e.type === 'CourtOrder');
 
+  const updateSmartCredential = (registryId: string, credentialValue: string) => {
+      dispatch({ type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL', payload: { registryId, credentialValue } });
+  }
+
   return (
     <div className="space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-primary">
             <Link className="h-5 w-5" />
-            <span>Required Evidence (Auto-Linked)</span>
+            <span>በራስ-ሰር የተገናኙ ማስረጃዎች</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -283,25 +194,23 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                   </div>
                 </CardHeader>
                 <CardContent className="px-4 pb-4">
-                  <div className="space-y-2">
-                    <Label>{item.credentialLabel}</Label>
-                    <Input
-                      placeholder={item.credentialPlaceholder}
-                      value={smartEvidence[item.regId]?.credentialId || ''}
-                      onChange={(e) =>
-                        dispatch({
-                          type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL',
-                          payload: { registryId: item.regId, credentialValue: e.target.value },
-                        })
-                      }
-                    />
+                  <div className="text-sm">
+                    <p>
+                        {item.credentialLabel}: 
+                        <Input
+                          className="inline-block w-64 h-8 mx-1"
+                          placeholder={item.credentialPlaceholder}
+                          value={smartEvidence[item.regId]?.credentialId || ''}
+                          onChange={(e) => updateSmartCredential(item.regId, e.target.value)}
+                        />
+                    </p>
                   </div>
                 </CardContent>
               </Card>
             ))
           ) : (
             <div className="text-center text-sm text-muted-foreground p-4 border border-dashed rounded-lg">
-              No facts selected that require specific evidence.
+              ከፍሬነገሮች ጋር የሚገናኝ ማስረጃ አልተመረጠም።
             </div>
           )}
         </CardContent>
@@ -311,13 +220,13 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-accent">
             <BrainCircuit className="h-5 w-5" />
-            <span>AI Suggested & Manual Evidence</span>
+            <span>በAI የቀረቡ እና በእጅ የሚገቡ ማስረጃዎች</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {aiSuggestedEvidence.length > 0 && (
             <div className="space-y-2">
-              <Label className="font-bold">Suggestions from AI Assistant</Label>
+              <Label className="font-bold">በAI ረዳት የቀረቡ ጥቆማዎች</Label>
               <div className="flex flex-wrap gap-2">
                 {aiSuggestedEvidence.map((item) => (
                   <Button
@@ -351,18 +260,16 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                   </Button>
                 </CardHeader>
                 <CardContent className="px-4 pb-4">
-                  <div className="space-y-2">
-                    <Label>{item.credentialLabel}</Label>
-                    <Input
-                      placeholder={item.credentialPlaceholder}
-                      value={smartEvidence[item.regId]?.credentialId || ''}
-                      onChange={(e) =>
-                        dispatch({
-                          type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL',
-                          payload: { registryId: item.regId, credentialValue: e.target.value },
-                        })
-                      }
-                    />
+                  <div className="text-sm">
+                    <p>
+                        {item.credentialLabel}: 
+                        <Input
+                          className="inline-block w-64 h-8 mx-1"
+                          placeholder={item.credentialPlaceholder}
+                          value={smartEvidence[item.regId]?.credentialId || ''}
+                          onChange={(e) => updateSmartCredential(item.regId, e.target.value)}
+                        />
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -386,7 +293,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 className="w-full border-dashed"
                 onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Document' } })}
               >
-                <Plus className="mr-2 h-4 w-4" /> Add Another Document
+                <Plus className="mr-2 h-4 w-4" /> ሌላ ሰነድ ጨምር
               </Button>
             
             <Separator />
@@ -409,7 +316,7 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 className="w-full border-dashed"
                 onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'Witness' } })}
               >
-                <Plus className="mr-2 h-4 w-4" /> Add Another Witness
+                <Plus className="mr-2 h-4 w-4" /> ሌላ ምስክር ጨምር
               </Button>
             
             <Separator />
@@ -429,13 +336,13 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                 className="w-full border-dashed"
                 onClick={() => dispatch({ type: 'ADD_EVIDENCE', payload: { type: 'CourtOrder' } })}
               >
-                <Plus className="mr-2 h-4 w-4" /> Add Another Court Order
+                <Plus className="mr-2 h-4 w-4" /> ሌላ ትዕዛዝ ጨምር
               </Button>
 
           </div>
 
           {activeUserAddedEvidence.length === 0 && aiSuggestedEvidence.length === 0 && evidence.length === 0 && (
-            <div className="text-center text-sm text-muted-foreground p-4">No suggestions or manual evidence added yet.</div>
+            <div className="text-center text-sm text-muted-foreground p-4">ምንም ጥቆማዎች ወይም በእጅ የገባ ማስረጃ የለም።</div>
           )}
         </CardContent>
       </Card>

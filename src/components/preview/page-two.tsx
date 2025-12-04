@@ -40,7 +40,7 @@ const formatPartyList = (parties: Party[]) => {
                     <div></div>
                 </div>
                 <div className="text-sm pl-6">
-                  አድራሻ፡ {party.address.city}, {subcity}{woreda}{houseNo}
+                  አድራሻ፡ {party.address.city}, {subcity || ''}{woreda}{houseNo}
                 </div>
               </li>
             )
@@ -65,7 +65,7 @@ export default function PageTwo({ state }: PageTwoProps) {
     if (!smartEv.active) return;
     const registryItem = EVIDENCE_REGISTRY[regId];
     if (registryItem) {
-        const description = `${registryItem.label} ${registryItem.credentialLabel}: ${smartEv.credentialId || '_____'}`;
+        const description = `${registryItem.label} ${registryItem.credentialLabel}: <strong>${smartEv.credentialId || '_____'}</strong>`;
         documentEvidence.push({ description });
     }
   });
@@ -76,7 +76,11 @@ export default function PageTwo({ state }: PageTwoProps) {
         const issuerText = e.issuer === 'ሌላ' ? (e as any).issuerOther : e.issuer;
         const locationText = e.originalLocation === 'ሌላ' ? (e as any).originalLocationOther : e.originalLocation;
         
-        let fullDescription = `${e.description || 'የሰነድ ማስረጃ'} ከ${issuerText || '_____'} የተሰጠ፣ ቁጥር ${e.refNumber || '_____'}፣ ቀን ${e.issueDate || '_____'}፣ ${e.pageCount || '___'} ገጽ ያለው ${e.documentType === 'Copy' ? 'ፎቶ ኮፒ' : 'ኦርጅናል'} ሲሆን ዋናው ${locationText || '_____'} እጅ የሚገኝ።`;
+        let fullDescription = `
+            ${e.description || 'የሰነድ ማስረጃ'} ከ <strong>${issuerText || '_____'}</strong> የተሰጠ፣ 
+            ቁጥር <strong>${e.refNumber || '_____'}</strong>፣ ቀን <strong>${e.issueDate || '_____'}</strong>፣ 
+            <strong>${e.pageCount || '___'}</strong> ገጽ ያለው ${e.documentType === 'Copy' ? 'ፎቶ ኮፒ' : 'ኦርጅናል'} 
+            ሲሆን ዋናው <strong>${locationText || '_____'}</strong> እጅ የሚገኝ።`;
 
         documentEvidence.push({ description: fullDescription });
 
@@ -121,7 +125,7 @@ export default function PageTwo({ state }: PageTwoProps) {
           <span className="black-box text-lg">ለ: {meta.courtLevel || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="green-box">{meta.bench || '___________'}</span>
+            <span className="green-box">{meta.bench === 'ሌላ' ? (meta.benchOther || '___________') : meta.bench} - {meta.benchType}</span>
         </div>
         <div className="mt-1">
           <span className="black-box">{meta.city || '___________'}</span>

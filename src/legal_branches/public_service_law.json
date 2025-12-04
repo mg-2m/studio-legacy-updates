@@ -52,7 +52,7 @@
         {
           "id": "pub_serv_fact_limitation_period_1yr",
           "label": "የሥነ-ሥርዓት ጥሰቶች (Procedural Violations)",
-          "legalText": "ጥብቅ እርምጃው ጥፋቱ ከታወቀ ከ1 ዓመት በላይ ባለፈ ጊዜ ተወስዷል፣ ይህም በይርጋ እንዲታገድ ያደርገዋል። (The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.)",
+          "legalText": "ጥብቅ እርምጃው ጥፋቱ ከታወቀ ከ1 ዓመት በላይ ባለፈ ጊዜ ተወስዷል، ይህም በይርጋ እንዲታገድ ያደርገዋል። (The rigorous measure was taken more than 1 year after the offense was known, barring it by limitation.)",
           "citation": "Proc. 1064/2017 Art. 76(2)",
           "autoEvidence": [],
            "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የአንድ አመት ይርጋ" }

@@ -30,9 +30,8 @@ export default function SubjectOfClaim({ state, dispatch }: SubjectOfClaimProps)
   }, [templateData, dispatch]);
 
   const handleAmountChange = (value: string) => {
-    // A simple regex to extract only numbers from the input
     const numericValue = value.replace(/[^0-9.]/g, '');
-    dispatch({ type: 'UPDATE_METADATA', payload: { key: 'claimAmount', value: `ብር ${numericValue} (በብር ****** ግምት የቀረበ ክስ ነው)` } });
+    dispatch({ type: 'UPDATE_METADATA', payload: { key: 'claimAmount', value: numericValue } });
   }
 
   return (
@@ -68,7 +67,7 @@ export default function SubjectOfClaim({ state, dispatch }: SubjectOfClaimProps)
             <Input
               id="claim-amount"
               placeholder="ለምሳሌ፦ 50,000"
-              value={(metadata.claimAmount || '').replace(/[^0-9.]/g, '')} // Show only the number for editing
+              value={metadata.claimAmount || ''}
               onChange={(e) => handleAmountChange(e.target.value)}
             />
           )}

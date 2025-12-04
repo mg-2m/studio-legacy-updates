@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import type { AppState, Party, Relief, Fact } from '@/lib/types';
@@ -164,10 +163,20 @@ export default function PageOne({ state }: { state: AppState }) {
     const purpose = meta.claimPurpose || currentTemplateData.meta?.purpose;
     const allCalcValues = Object.values(calculations).reduce((acc, curr) => ({ ...acc, ...curr }), {});
     
-    let valueText = meta.claimAmount || '(በብር ****** ግምት የቀረበ ክስ ነው)';
-    
-    // If no manual amount, check calculators
-    if (!meta.claimAmount && Object.keys(allCalcValues).length > 0) {
+    let valueText = '(በብር ****** ግምት የቀረበ ክስ ነው)';
+
+    if (meta.claimAmount) {
+        const numericAmount = parseFloat(meta.claimAmount);
+        if (!isNaN(numericAmount)) {
+             try {
+                const amountInWords = toWords(numericAmount);
+                valueText = `ብር ${numericAmount.toFixed(2)} (${amountInWords} ብር)`;
+            } catch (e) {
+                console.error("Failed to convert number to words:", e);
+                valueText = `ብር ${numericAmount.toFixed(2)} (በቃላት ያልተደገፈ ብር)`;
+            }
+        }
+    } else if (Object.keys(allCalcValues).length > 0) {
         const primaryOutputKey = Object.keys(allCalcValues).find(k => k.toLowerCase().includes('amount') || k.toLowerCase().includes('pay') || k.toLowerCase().includes('principal'));
         const primaryValue = primaryOutputKey ? allCalcValues[primaryOutputKey] as number : Object.values(allCalcValues)[0] as number;
         

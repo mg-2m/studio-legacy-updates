@@ -28,7 +28,7 @@
                     "legalText": "አመልካቾች የሟቹ ልጆች/ዘሮች ናቸው። (The Applicants are the children/descendants of the deceased.)",
                     "citation": "Civ. Code Art. 842",
                     "autoEvidence": [],
-                    "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የልጅነት ግንኙነት" }
+                    "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የልጅነት ግንኙነት" }
                 },
                 {
                     "id": "succession_fact_no_will",
@@ -36,7 +36,7 @@
                     "legalText": "ሟቹ ኑዛዜ አልተወም، ይህም ያለ ኑዛዜ ውርስን አስፈላጊ ያደርገዋል። (The Deceased left no will, necessitating an intestate succession.)",
                     "citation": "Civ. Code Art. 829",
                     "autoEvidence": [],
-                     "rhetoric": { "intro": "በተጨማሪም፣", "transition": "ከዚህም በላይ،", "summary_keyword": "ኑዛዜ አለመኖር" }
+                     "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ኑዛዜ አለመኖር" }
                 },
                 {
                     "id": "succession_fact_witness_testimony",
@@ -84,7 +84,7 @@
                     "legalText": "ሟቹ በ [willDate] የተጻፈ ሕጋዊ ኑዛዜ ትቷል። (The Deceased left a valid will dated [willDate].)",
                     "citation": "Civ. Code Art. 912",
                     "autoEvidence": [ "WillTestament" ],
-                    "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ሕጋዊ ኑዛዜ" }
+                    "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ሕጋዊ ኑዛዜ" }
                 },
                 {
                     "id": "succession_fact_formality_public",
@@ -102,7 +102,7 @@
                     "citation": "Civ. Code Art. 885",
                     "autoEvidence": [],
                     "mutexGroup": "will_type",
-                    "rhetoric": { "intro": "በአማራጭ፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "በእጅ የተጻፈ ኑዛዜ" }
+                    "rhetoric": { "intro": "በአማራጭ፣", "transition": "ከዚህም ባሻገር،", "summary_keyword": "በእጅ የተጻፈ ኑዛዜ" }
                 }
             ],
             "reliefs": [
@@ -147,7 +147,7 @@
                 {
                     "id": "succession_fact_liquidation_complete",
                     "label": "የንብረት ሁኔታ (Estate Status)",
-                    "legalText": "የንብረቱ እዳዎች ተከፍለዋል، እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው። (The debts of the estate have been paid, and the assets are ready for division.)",
+                    "legalText": "የንብረቱ እዳዎች ተከፍለዋል፣ እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው። (The debts of the estate have been paid, and the assets are ready for division.)",
                     "citation": "",
                     "autoEvidence": [ "CertificateofLiquidation" ],
                     "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የእዳ ክፍያ" }
@@ -179,7 +179,7 @@
             ],
             "calculations": {}
         },
-        "succ_app_appoint_liquidator": {
+        "app_appoint_liquidator": {
             "documentTitle": "የአጣሪ ሹመት ማመልከቻ (Application for Appointment of Liquidator)",
             "jurisdictionText": "Art. 950 of the Civil Code.",
             "meta": {
@@ -220,7 +220,7 @@
             ],
             "calculations": {}
         },
-        "succ_app_seal_estate": {
+        "app_seal_estate": {
             "documentTitle": "የማሸጊያ ማመልከቻ (Application for Affixing of Seals)",
             "jurisdictionText": "Art. 946 of the Civil Code & Civil Procedure Code.",
             "meta": {
@@ -239,7 +239,7 @@
                     "legalText": "ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች ሊወገዱ ወይም ሊደበቁ የሚችሉበት አስቸኳይ አደጋ አለ። (There is an imminent risk that movables or documents may be removed or hidden.)",
                     "citation": "Civ. Code Art. 946",
                     "autoEvidence": [],
-                    "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የማሸሽ ስጋት" }
+                    "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የማሸሽ ስጋት" }
                 },
                 {
                     "id": "succession_fact_minor_heirs",
@@ -263,5 +263,3 @@
         }
     }
 }
-
-    

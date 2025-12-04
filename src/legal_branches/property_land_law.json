@@ -15,7 +15,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የንብረትዎ ህጋዊ ባለቤት መሆንዎን ነገር ግን ንብረቱ በሌላ ሰው እጅ ያለአግባብ ተይዞ ሲገኝ፣ የባለቤትነት መብትዎን በፍርድ ቤት ለማረጋገጥ እና ንብረቱ እንዲመለስልዎ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክስ መታየት ያለበት ንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት، የማይንቀሳቀስ ንብረትን በተመለከተ የባለቤትነት ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የባለቤትነት ማረጋገጫ ካርታ (TitleDeed) እና ንብረቱን እንዴት እንዳገኙ የሚያሳይ ሰነድ (ለምሳሌ የሽያጭ ውል)።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ አብነት የንብረትዎ ህጋዊ ባለቤት መሆንዎን ነገር ግን ንብረቱ በሌላ ሰው እጅ ያለአግባብ ተይዞ ሲገኝ፣ የባለቤትነት መብትዎን በፍርድ ቤት ለማረጋገጥ እና ንብረቱ እንዲመለስልዎ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ይህ ክስ መታየት ያለበት ንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\n- በፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት، የማይንቀሳቀስ ንብረትን በተመለከተ የባለቤትነት ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የባለቤትነት ማረጋገጫ ካርታ (TitleDeed) እና ንብረቱን እንዴት እንዳገኙ የሚያሳይ ሰነድ (ለምሳሌ የሽያጭ ውል)።",
       "partyTitles": {
         "applicant": "ከሳሽ (ባለቤት) (Plaintiff (Owner))",
         "respondent": "ተከሳሽ (ያለአግባብ የያዘ) (Defendant (Unlawful Holder))"
@@ -98,7 +98,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ይዞታዎ በጉልበት ወይም በማታለል ሲነጠቅ፣ የባለቤትነት ጥያቄ ውስጥ ሳይገባ ይዞታው ብቻ በፍጥነት እንዲመለስልዎ ለመጠየቅ ያገለግላል። ዋናው ዓላማው ሰላምን ማስጠበቅ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nይዞታው ከተነጠቀበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ንብረቱን በሰላም ይዘውት እንደነበር የሚያረጋግጡ ማስረጃዎች (ለምሳሌ የግብር ደረሰኞች، የቀበሌ ማረጋገጫ)።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ አብነት ይዞታዎ በጉልበት ወይም በማታለል ሲነጠቅ፣ የባለቤትነት ጥያቄ ውስጥ ሳይገባ ይዞታው ብቻ በፍጥነት እንዲመለስልዎ ለመጠየቅ ያገለግላል። ዋናው ዓላማው ሰላምን ማስጠበቅ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n- ይዞታው ከተነጠቀበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ንብረቱን በሰላም ይዘውት እንደነበር የሚያረጋግጡ ማስረጃዎች (ለምሳሌ የግብር ደረሰኞች፣ የቀበሌ ማረጋገጫ)።",
       "partyTitles": {
         "applicant": "ከሳሽ (ይዞታው የተነጠቀ) (Plaintiff (Dispossessed))",
         "respondent": "ተከሳሽ (ነጣቂ) (Defendant (Usurper))"
@@ -157,7 +157,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ጎረቤት በህጋዊ የድንበር መስመርዎ ላይ ግንባታ ሲፈጽም (ለምሳሌ አጥር ወይም የቤት ክፍል)፣ ያንን ግንባታ እንዲያፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የቦታውን ህጋዊ ድንበር የሚያሳይ የሳይት ፕላን (SitePlan) እና ጥሰቱን የሚያረጋግጥ የባለሙያ (ሰርቬየር) ሪፖርት (SurveyorsReport)።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ አብነት የእርስዎ ጎረቤት በህጋዊ የድንበር መስመርዎ ላይ ግንባታ ሲፈጽም (ለምሳሌ አጥር ወይም የቤት ክፍል)፣ ያንን ግንባታ እንዲያፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n- በአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የቦታውን ህጋዊ ድንበር የሚያሳይ የሳይት ፕላን (SitePlan) እና ጥሰቱን የሚያረጋግጥ የባለሙያ (ሰርቬየር) ሪፖርት (SurveyorsReport)።",
       "partyTitles": {
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (ጎረቤት) (Defendant (Neighbor))"
@@ -216,14 +216,14 @@
         ],
         "jurisdictionType": "Court Handling the Main Case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ክርክር ባለበት መሬት ላይ ተቃራኒ ወገን ግንባታ እየሰራ ከሆነ፣ ዋናው ክስ እስኪያልቅ ድረስ ግንባታው እንዲቆም (እንዲታገድ) ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ወቅት ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የማይተካ ጉዳት (Irreparable Harm):** ግንባታው ከቀጠለ ሊጠገን የማይችል ጉዳት እንደሚደርስ ማሳየት።\n*   **ጠንካራ ክስ (Prima Facie Case):** በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ አስቸኳይ ማመልከቻ፣ ክርክር ባለበት መሬት ላይ ተቃራኒ ወገን ግንባታ እየሰራ ከሆነ، ዋናው ክስ እስኪያልቅ ድረስ ግንባታው እንዲቆም (እንዲታገድ) ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ማመልከቻው ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n- አስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ወቅት ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የማይተካ ጉዳት (Irreparable Harm): ግንባታው ከቀጠለ ሊጠገን የማይችል ጉዳት እንደሚደርስ ማሳየት።\n- ጠንካራ ክስ (Prima Facie Case): በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
       },
       "facts": [
         {
-          "id": "prop_fact_ongoing_construction",
+          "id": "app_fact_ongoing_construction",
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ ላይ ተሰማርቷል። (The Respondent is currently engaged in active construction on the disputed land.)",
           "citation": "",
@@ -231,7 +231,7 @@
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "በሂደት ላይ ያለ ግንባታ" }
         },
         {
-          "id": "prop_fact_irreparable_harm",
+          "id": "app_fact_irreparable_harm",
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "ግንባታው ከተጠናቀቀ ማፍረሱ አስቸጋሪ ስለሚሆን የአመልካች መብቶች በቋሚነት ይጎዳሉ። (If the construction is completed, demolition will be difficult and the Applicant's rights will be permanently prejudiced.)",
           "citation": "",
@@ -239,7 +239,7 @@
           "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የማይተካ ጉዳት" }
         },
         {
-          "id": "prop_fact_prima_facie",
+          "id": "app_fact_prima_facie",
           "label": "የማይተካ ጉዳት (Irreparable Injury)",
           "legalText": "አመልካቹ ጠንካራ የባለቤትነት መብት እንዳለው አሳይቷል። (The Applicant has demonstrated a strong prima facie case of ownership.)",
           "citation": "",
@@ -249,7 +249,7 @@
       ],
       "reliefs": [
         {
-          "id": "prop_relief_suspend_works",
+          "id": "app_relief_suspend_works",
           "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በተከራካሪው ይዞታ ላይ ያሉ ሁሉም የግንባታ ስራዎች ወዲያውኑ እንዲቆሙ ትዕዛዝ እንዲሰጥ። (Order the immediate suspension of all construction activities on the disputed plot pending final judgment.)",
           "isDefault": true,
           "isDynamic": false,
@@ -271,14 +271,14 @@
         ],
         "jurisdictionType": "Court Handling the Main Case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ በክርክሩ ውስጥ ያሉ ወገኖች ስለ ንብረቱ አካላዊ ገጽታ (ለምሳሌ ስለ ድንበር ወይም ስለ ይዞታ) የሚሰጡት ቃል ወይም ሰነድ ሲጋጭ، ፍርድ ቤቱ እውነታውን ለማረጋገጥ ቦታው ድረስ ሄዶ እንዲመለከት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት፡** ፍርድ ቤቱ ቦታውን በአካል ሳያይ ፍትሃዊ ውሳኔ መስጠት እንደማይቻል ማሳመን ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ ማመልከቻ በክርክሩ ውስጥ ያሉ ወገኖች ስለ ንብረቱ አካላዊ ገጽታ (ለምሳሌ ስለ ድንበር ወይም ስለ ይዞታ) የሚሰጡት ቃል ወይም ሰነድ ሲጋጭ، ፍርድ ቤቱ እውነታውን ለማረጋገጥ ቦታው ድረስ ሄዶ እንዲመለከት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ዋናው ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n- የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- አስፈላጊነት፡ ፍርድ ቤቱ ቦታውን በአካል ሳያይ ፍትሃዊ ውሳኔ መስጠት እንደማይቻል ማሳመን ያስፈልጋል።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
       },
       "facts": [
         {
-          "id": "prop_fact_physical_dispute",
+          "id": "app_fact_physical_dispute",
           "label": "ማብራሪያ (Clarification)",
           "legalText": "ስለ መሬቱ አካላዊ ገጽታዎች/ድንበሮች የሚቀርቡት የቃል ምስክርነቶች እና ሰነዶች እርስ በርሳቸው የሚጋጩ ናቸው። (The oral testimonies and documents regarding the physical features/boundaries of the land are contradictory.)",
           "citation": "",
@@ -286,7 +286,7 @@
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የሚጋጩ ማስረጃዎች" }
         },
         {
-          "id": "prop_fact_necessity_to_view",
+          "id": "app_fact_necessity_to_view",
           "label": "ማብራሪያ (Clarification)",
           "legalText": "ፍርድ ቤቱ (ወይም ሬጅስትራሩ) ቦታውን በአካል ሳይመለከት ፍትሃዊ ውሳኔ ሊሰጥ አይችልም። (A just decision cannot be rendered without the Court (or its registrar) physically viewing the site.)",
           "citation": "CPC Art. 136",
@@ -296,7 +296,7 @@
       ],
       "reliefs": [
         {
-          "id": "prop_relief_order_visit",
+          "id": "app_relief_order_visit",
           "text": "ድንበሮችን/ይዞታን ለማረጋገጥ የንብረቱ አካባቢያዊ ምርመራ እንዲደረግ ትዕዛዝ እንዲሰጥ። (Order a local inspection of the property to verify boundaries/possession.)",
           "isDefault": true,
           "isDynamic": false,
@@ -321,7 +321,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ጎረቤት ወይም በአቅራቢያዎ የሚገኝ ሰው በሚያደርገው ተግባር (ለምሳሌ ከልክ ያለፈ ጩኸት، መጥፎ ሽታ، ንዝረት) ሰላምዎ ሲደፈርስ እና ችግሩ ከአካባቢው መደበኛ ሁኔታ ያለፈ ሲሆን، ያንን ተግባር እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nችግሩ በሚከሰትበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nከውል ውጭ ተጠያቂነትን የሚመለከት በመሆኑ، የ5 ዓመት የይርጋ ጊዜ ገደብ አለው (አንቀጽ 1851)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የችግሩን ሁኔታ የሚያሳይ ማስረጃ (PhotosVideoEvidence)، የምስክሮች ቃል (WitnessAffidavitsNuisance) እና ችግሩ እንዲቆም በጽሑፍ ማስጠንቀቂያ መስጠትዎን የሚያሳይ ማስረጃ።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ አብነት የእርስዎ ጎረቤት ወይም በአቅራቢያዎ የሚገኝ ሰው በሚያደርገው ተግባር (ለምሳሌ ከልክ ያለፈ ጩኸት፣ መጥፎ ሽታ፣ ንዝረት) ሰላምዎ ሲደፈርስ እና ችግሩ ከአካባቢው መደበኛ ሁኔታ ያለፈ ሲሆን، ያንን ተግባር እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ችግሩ በሚከሰትበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n- ከውል ውጭ ተጠያቂነትን የሚመለከት በመሆኑ، የ5 ዓመት የይርጋ ጊዜ ገደብ አለው (አንቀጽ 1851)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የችግሩን ሁኔታ የሚያሳይ ማስረጃ (PhotosVideoEvidence)፣ የምስክሮች ቃል (WitnessAffidavitsNuisance) እና ችግሩ እንዲቆም በጽሑፍ ማስጠንቀቂያ መስጠትዎን የሚያሳይ ማስረጃ።",
       "partyTitles": {
         "applicant": "ከሳሽ (የተጎዳ ወገን) (Plaintiff (Injured Party))",
         "respondent": "ተከሳሽ (የችግሩ ምንጭ) (Defendant (Source of Nuisance))"
@@ -388,7 +388,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የእርስዎ ይዞታ ወደ ህዝብ መንገድ መውጫ የሌለው (የተዘጋ) ሲሆን፣ በጎረቤትዎ ይዞታ በኩል የመተላለፊያ መብት እንዲሰጥዎ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይዞታዎቹ በሚገኙበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየመተላለፊያ መብት በማንኛውም ጊዜ ሊጠየቅ ይችላል፤ የተወሰነ የይርጋ ጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስፈላጊነት (Necessity):** የእርስዎ ይዞታ በእርግጥ ሌላ አማራጭ መውጫ እንደሌለው በባለሙያ (ሰርቬየር) ማስረጃ ማረጋገጥ።\n*   **ማስረጃ (Required Evidence):** የይዞታዎን እና የጎረቤትዎን ይዞታ የሚያሳይ የሳይት ፕላን (SitePlan) እና የሰርቬየር ሪፖርት (SurveyorsReport)።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ አብነት የእርስዎ ይዞታ ወደ ህዝብ መንገድ መውጫ የሌለው (የተዘጋ) ሲሆን، በጎረቤትዎ ይዞታ በኩል የመተላለፊያ መብት እንዲሰጥዎ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ይዞታዎቹ በሚገኙበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n- የመተላለፊያ መብት በማንኛውም ጊዜ ሊጠየቅ ይችላል፤ የተወሰነ የይርጋ ጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- አስፈላጊነት (Necessity): የእርስዎ ይዞታ በእርግጥ ሌላ አማራጭ መውጫ እንደሌለው በባለሙያ (ሰርቬየር) ማስረጃ ማረጋገጥ።\n- ማስረጃ (Required Evidence): የይዞታዎን እና የጎረቤትዎን ይዞታ የሚያሳይ የሳይት ፕላን (SitePlan) እና የሰርቬየር ሪፖርት (SurveyorsReport)።",
       "partyTitles": {
         "applicant": "ዋና ይዞታ (አመልካች) (Dominant Tenement (Applicant))",
         "respondent": "አገልጋይ ይዞታ (ተጠሪ) (Servient Tenement (Respondent))"
@@ -454,7 +454,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰው ይዞታዎን ሳይነጥቅ ነገር ግን ሰላማዊ ይዞታዎን በሚረብሹ ድርጊቶች (ለምሳሌ አጥር ማፍረስ، መተላለፊያ መዝጋት) ሲያስቸግርዎት، እነዚያን የረብሻ ድርጊቶች እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nረብሻው ከተጀመረበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** ረብሻውን የሚያሳይ ማስረጃ (ፎቶ، ቪዲዮ) እና የምስክሮች ቃል።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ አብነት አንድ ሰው ይዞታዎን ሳይነጥቅ ነገር ግን ሰላማዊ ይዞታዎን በሚረብሹ ድርጊቶች (ለምሳሌ አጥር ማፍረስ، መተላለፊያ መዝጋት) ሲያስቸግርዎት، እነዚያን የረብሻ ድርጊቶች እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n- ረብሻው ከተጀመረበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ረብሻውን የሚያሳይ ማስረጃ (ፎቶ፣ ቪዲዮ) እና የምስክሮች ቃል።",
       "partyTitles": {
         "applicant": "ከሳሽ (ባለይዞታ) (Plaintiff (Possessor))",
         "respondent": "ተከሳሽ (ረባሽ) (Defendant (Disturber))"
@@ -520,14 +520,14 @@
         ],
         "jurisdictionType": "Court Handling the Main Case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት، ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው، ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **አስቸኳይነት (Urgency):** መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\n- ይህ አስቸኳይ ማመልከቻ፣ ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው، ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\n- ዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\n- አስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- አስቸኳይነት (Urgency): መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
       },
       "facts": [
         {
-          "id": "prop_fact_complete_blockade",
+          "id": "app_fact_complete_blockade",
           "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
           "legalText": "ተጠሪው የአመልካችን ብቸኛ መውጫ ወደ ህዝብ መንገድ ሙሉ በሙሉ ዘግቷል። (The Respondent has completely blocked the Applicant's only access to the public road.)",
           "citation": "",
@@ -535,9 +535,9 @@
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ሙሉ እገዳ" }
         },
         {
-          "id": "prop_fact_imminent_damage",
+          "id": "app_fact_imminent_damage",
           "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት (Urgency & Extreme Need)",
-          "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል፣ ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል። (The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.)",
+          "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል، ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል። (The blockade threatens the Applicant's ability to live/operate their business, causing imminent and irreparable financial damage.)",
           "citation": "",
           "autoEvidence": [],
           "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ሊጠገን የማይችል ጉዳት" }
@@ -545,7 +545,7 @@
       ],
       "reliefs": [
         {
-          "id": "prop_relief_grant_temporary_access",
+          "id": "app_relief_grant_temporary_access",
           "text": "ዋናው የመተላለፊያ መብት ክስ ላይ የመጨረሻ ውሳኔ እስከሚሰጥ ድረስ ተጠሪው ለአመልካች ጊዜያዊ መተላለፊያ እንዲሰጥ ትዕዛዝ እንዲሰጥ። (Order the Respondent to grant temporary passage to the Applicant pending the final decision on the main servitude claim.)",
           "isDefault": true,
           "isDynamic": false,
@@ -556,5 +556,3 @@
     }
   }
 }
-
-    

@@ -204,7 +204,7 @@
         {
           "id": "status_fact_double_record_exists",
           "label": "የተደጋገመው መዝገብ (The Double Record)",
-          "legalText": "ለአመልካች ሁለት የተለያዩ የልደት የምስክር ወረቀቶች በስህተት ተሰጥተዋል፤ አንዱ በስም '[nameOne]' እና ሌላው በስም '[nameTwo]'። (Two different birth certificates have been erroneously issued for the petitioner, one under the name '[nameOne]' and the other under '[nameTwo]'.)",
+          "legalText": "ለአመልካች ሁለት የተለያዩ የልደት የምስክር ወረቀቶች በስህተት ተሰጥተዋል፤ አንዱ በስም '[nameOne]' እና ሌላው በስም '[nameTwo]'። (Two different birth certificates have been erroneously issued for the petitioner, one under the name '[nameOne]' and the other under the name '[nameTwo]'.)",
           "citation": "",
           "autoEvidence": [
             "BirthCertificate"
@@ -326,7 +326,7 @@
           "citation": "Civ. Code Art. 158",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ،",
+            "intro": "በመጀመሪያ ደረጃ፣",
             "transition": "በተጨማሪም،",
             "summary_keyword": "የረጅም ጊዜ መጥፋት"
           }
@@ -402,7 +402,7 @@
           "citation": "",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ،",
+            "intro": "በመጀመሪያ ደረጃ፣",
             "transition": "በተጨማሪም،",
             "summary_keyword": "አስቸኳይ አስፈላጊነት"
           }

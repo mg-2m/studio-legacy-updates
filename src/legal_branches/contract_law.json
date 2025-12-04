@@ -194,7 +194,7 @@
         }
       ]
     },
-    "con_attachment_before_judgment": {
+    "app_attachment_before_judgment": {
       "documentTitle": "ከፍርድ በፊት የንብረት እግድ ማመልከቻ (Application for Attachment of Property Before Judgment)",
       "jurisdictionText": "Art. 151 & 152 of the Civil Procedure Code.",
       "meta": {
@@ -208,14 +208,14 @@
       },
       "facts": [
         {
-          "id": "con_fact_intent_to_obstruct",
+          "id": "app_fact_intent_to_obstruct",
           "label": "የፍትሕ መደናቀፍ (Obstruction of Justice)",
           "legalText": "ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው። (The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree.)",
           "citation": "CPC Art. 151",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የማደናቀፍ ዓላማ" }
         },
         {
-          "id": "con_fact_prima_facie_case",
+          "id": "app_fact_prima_facie_case",
           "label": "የፍትሕ መደናቀፍ (Obstruction of Justice)",
           "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ ክስ ያለው ሲሆን በዋናው ክስ ላይ ሊሳካለት ይችላል። (The Applicant has a strong prima facie case and is likely to succeed in the main suit.)",
           "citation": "",
@@ -224,20 +224,20 @@
       ],
       "reliefs": [
         {
-          "id": "con_relief_attach_property",
+          "id": "app_relief_attach_property",
           "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት [Specify Property] እንዲታገድ ትዕዛዝ እንዲሰጥ። (Order the attachment of the Defendant's property [Specify Property] pending final judgment.)",
           "isDefault": true,
           "isDynamic": false
         },
         {
-          "id": "con_relief_security_bond",
+          "id": "app_relief_security_bond",
           "text": "በአማራጭ፣ ተከሳሹ ለተጠየቀው ገንዘብ ዋስትና እንዲያቀርብ ትዕዛዝ እንዲሰጥ። (Alternatively, order the Defendant to furnish security for the amount claimed.)",
           "isDefault": false,
           "isDynamic": false
         }
       ]
     },
-    "con_judgment_on_admission": {
+    "app_judgment_on_admission": {
       "documentTitle": "በእምነት ላይ ለሚሰጥ ፍርድ ማመልከቻ (Application for Judgment on Admissions)",
       "jurisdictionText": "Art. 242 of the Civil Procedure Code.",
        "meta": {
@@ -251,7 +251,7 @@
       },
       "facts": [
         {
-          "id": "con_fact_clear_admission",
+          "id": "app_fact_clear_admission",
           "label": "እምነት (Admission)",
           "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል። (In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt.)",
           "citation": "CPC Art. 242",
@@ -260,7 +260,7 @@
       ],
       "reliefs": [
         {
-          "id": "con_relief_immediate_judgment",
+          "id": "app_relief_immediate_judgment",
           "text": "በተጠየቀው የይገባኛል ጥያቄ ክፍል ላይ ለከሳሽ ወዲያውኑ ፍርድ እንዲሰጥ። (Enter immediate judgment for the Plaintiff on the admitted portion of the claim.)",
           "isDefault": true,
           "isDynamic": false

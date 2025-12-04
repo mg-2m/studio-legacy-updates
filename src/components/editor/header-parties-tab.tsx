@@ -121,7 +121,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
       <Card>
         <CardContent className="space-y-6 p-4">
           <div className="space-y-2">
-            <Label>ውክልና</Label>
+            <Label>ውክልና (ጉዳዩን የሚከታተለው ማን ነው?)</Label>
             <RadioGroup 
                 value={metadata.representation} 
                 onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'representation', value } })}

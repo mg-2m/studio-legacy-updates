@@ -34,7 +34,7 @@
         {
           "id": "admin_fact_exhausted_remedies",
           "label": "የዳኝነት ቅድመ ሁኔታዎች (Jurisdictional Prerequisites)",
-          "legalText": "አቤቱታ አቅራቢው በተቋሙ ውስጥ ያሉትን ሁሉንም የውስጥ የቅሬታ መፍትሔ መንገዶች አሟጧል፣ ወይም ተቋሙ በሕግ በተቀመጠው ጊዜ ውስጥ በቅሬታው ላይ ውሳኔ አልሰጠም። (The Petitioner has exhausted all available administrative remedies within the Agency, or the Agency failed to render a decision on the complaint within the legal timeframe.)",
+          "legalText": "አቤቱታ አቅራቢው በተቋሙ ውስጥ ያሉትን ሁሉንም የውስጥ የቅሬታ መፍትሔ መንገዶች አሟጧል، ወይም ተቋሙ በሕግ በተቀመጠው ጊዜ ውስጥ በቅሬታው ላይ ውሳኔ አልሰጠም። (The Petitioner has exhausted all available administrative remedies within the Agency, or the Agency failed to render a decision on the complaint within the legal timeframe.)",
           "citation": "Proc. 1183/2020 Art. 48(2)",
           "autoEvidence": [
             "InternalRemedyExhaustion"
@@ -62,7 +62,7 @@
         {
           "id": "admin_fact_substantive_error_of_law",
           "label": "የውሳኔው መሻር ምክንያቶች (Grounds for Annulment)",
-          "legalText": "ውሳኔው መሠረታዊ የሕግ ስህተት ላይ የተመሰረተ ነው፤ ማለትም የሚመለከተውን አዋጅ፣ ደንብ ወይም መመሪያ በተሳሳተ መንገድ ተርጉሟል ወይም ተግብሯል። (The decision is based on a fundamental error of law, misinterpreting or misapplying the governing Proclamation, Regulation, or Directive.)",
+          "legalText": "ውሳኔው መሠረታዊ የሕግ ስህተት ላይ የተመሰረተ ነው፤ ማለትም የሚመለከተውን አዋጅ، ደንብ ወይም መመሪያ በተሳሳተ መንገድ ተርጉሟል ወይም ተግብሯል። (The decision is based on a fundamental error of law, misinterpreting or misapplying the governing Proclamation, Regulation, or Directive.)",
           "citation": "Proc. 1183/2020 Art. 52(1)(a)",
           "autoEvidence": [
             "FinalAdminDecision"
@@ -129,7 +129,7 @@
         ],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ተቋም ያወጣው መመሪያ ከሕገ-መንግስቱ ወይም ከበላይ ሕጎች ጋር ሲቃረን ወይም ተቋሙ ሥልጣኑን አልፎ ሲያወጣው፣ መመሪያው ሕጋዊ አይደለም ብሎ ለመከራከር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአስተዳደር ሥነ-ሥርዓት አዋጅ 1183/2020 አንቀጽ 49 መሰረት، ይህን አይነት ጉዳይ የማየት ስልጣን ያለው **የፌዴራል ከፍተኛ ፍርድ ቤት** ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ዓይነቱ ክስ በአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ይኖረዋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የጥቅም መጎዳት፡ መመሪያው መብትዎን ወይም ጥቅምዎን በቀጥታ የሚነካ መሆኑን ማሳየት አለብዎት።\n- ማስረጃ፡ እንዲሻር የሚፈልጉትን መመሪያ ቅጂ ማያያዝ ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ የመንግስት ተቋም ያወጣው መመሪያ ከሕገ-መንግስቱ ወይም ከበላይ ሕጎች ጋር ሲቃረን ወይም ተቋሙ ሥልጣኑን አልፎ ሲያወጣው، መመሪያው ሕጋዊ አይደለም ብሎ ለመከራከር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአስተዳደር ሥነ-ሥርዓት አዋጅ 1183/2020 አንቀጽ 49 መሰረት، ይህን አይነት ጉዳይ የማየት ስልጣን ያለው **የፌዴራል ከፍተኛ ፍርድ ቤት** ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ዓይነቱ ክስ በአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ይኖረዋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የጥቅም መጎዳት፡ መመሪያው መብትዎን ወይም ጥቅምዎን በቀጥታ የሚነካ መሆኑን ማሳየት አለብዎት።\n- ማስረጃ፡ እንዲሻር የሚፈልጉትን መመሪያ ቅጂ ማያያዝ ያስፈልጋል።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "መልስ ሰጪ ተቋም (Respondent Agency)"

@@ -17,6 +17,7 @@ export interface Metadata {
   courtLevel: string;
   bench: string;
   benchOther?: string;
+  benchType: string;
   city: string;
   fileNumber: string;
   date: string;

@@ -213,7 +213,7 @@ export default function PageOne({ state }: { state: AppState }) {
           <span className="black-box text-lg">ለ: {meta.courtLevel || '___________'}</span>
         </div>
         <div className="mt-1">
-          <span className="green-box">{displayBench}</span>
+          <span className="green-box">{meta.benchType} - {displayBench}</span>
         </div>
         <div className="mt-1">
           <span className="black-box">{meta.city || '___________'}</span>

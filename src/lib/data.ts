@@ -74,36 +74,41 @@ export const AA_SUBCITIES = [
   "የካ", "ለሚ ኩራ", "ኮልፌ ቀራኒዮ", "ሌላ"
 ];
 
+export const BENCH_TYPES = [
+    "ፍትሐብሔር ችሎት",
+    "ቤተሰብ ችሎት",
+    "ወንጀል ችሎት",
+    "የንግድ ችሎት",
+    "የሠራተኛ ግንኙነት ችሎት",
+    "የታክስ ችሎት",
+    "ይግባኝ ሰሚ ችሎት",
+    "ሰበር ሰሚ ችሎት",
+    "ሌላ"
+];
+
+
 export const COURT_HIERARCHY = {
   "የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት": [
-    "ልደታ ምድብ 1ኛ ችሎት", 
-    "ልደታ ምድብ 2ኛ ችሎት",
+    "ልደታ ምድብ", 
     "ቦሌ ምድብ",
     "ቂርቆስ ምድብ",
     "አራዳ ምድብ",
     "የካ ምድብ", 
     "አቃቂ ቃሊቲ ምድብ",
-    "ልደታ ምድብ 1ኛ የሠራተኛ ግንኙነት ችሎት",
-    "ልደታ ምድብ የታክስ ችሎት",
     "ሌላ"
   ],
   "የፌዴራል ከፍተኛ ፍርድ ቤት": [
-    "ልደታ ምድብ 1ኛ ፍትሐብሔር ችሎት",
-    "ልደታ ምድብ 2ኛ ፍትሐብሔር ችሎት",
-    "ልደታ ምድብ 1ኛ ወንጀል ችሎት",
+    "ልደታ ምድብ",
     "ቦሌ ምድብ",
-    "ልደታ ምድብ የንግድ ችሎት",
-    "ልደታ ምድብ የሠራተኛ ችሎት",
     "ሌላ"
   ],
   "የፌዴራል ጠቅላይ ፍርድ ቤት": [
-    "1ኛ ሰበር ሰሚ ችሎት", 
-    "2ኛ ሰበር ሰሚ ችሎት",
-    "3ኛ ሰበር ሰሚ ችሎት",
-    "1ኛ ይግባኝ ሰሚ ችሎት",
+    "1ኛ", 
+    "2ኛ",
+    "3ኛ",
     "ሌላ"
   ],
-  "የአዲስ አበባ ከተማ አስተዳደር የመጀመሪያ ደረጃ ፍርድ ቤት": AA_SUBCITIES.map(sc => `${sc} ምድብ`),
+  "የአዲስ አበባ ከተማ አስተዳደር የመጀመሪያ ደረጃ ፍርድ ቤት": AA_SUBCITIES,
   "የአዲስ አበባ ከተማ አስተዳደር ይግባኝ ሰሚ ፍርድ ቤት": ["ይግባኝ ሰሚ ችሎት", "ሌላ"],
   "የአዲስ አበባ ከተማ አስተዳደር ሰበር ሰሚ ችሎት": ["ሰበር ሰሚ ችሎት", "ሌላ"],
   "ሌላ": ["ሌላ"],
@@ -460,11 +465,13 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(all
 
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
 const defaultBench = COURT_HIERARCHY[defaultCourtLevel as keyof typeof COURT_HIERARCHY][0];
+const defaultBenchType = BENCH_TYPES[0];
 
 export const INITIAL_STATE: AppState = {
   metadata: {
     courtLevel: defaultCourtLevel,
     bench: defaultBench,
+    benchType: defaultBenchType,
     city: REGIONS_AND_CITIES[0],
     fileNumber: '',
     date: new Date().toLocaleDateString('en-GB') + ' ዓ/ም',

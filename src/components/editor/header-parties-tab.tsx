@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { Plus } from 'lucide-react';
@@ -13,7 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { COURT_HIERARCHY, REGIONS_AND_CITIES } from '@/lib/data';
+import { COURT_HIERARCHY, REGIONS_AND_CITIES, BENCH_TYPES } from '@/lib/data';
 import type { AppState } from '@/lib/types';
 import PartyForm from './party-form';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
@@ -35,7 +36,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         </CardHeader>
         <CardContent className="space-y-4 p-4 pt-0">
           <div className="space-y-4">
-             <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+             <div className="grid grid-cols-[120px_1fr] items-center gap-4">
               <Label>የፍ/ቤት ደረጃ</Label>
               <Select 
                 value={metadata.courtLevel} 
@@ -50,9 +51,17 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
               </Select>
             </div>
+            
+            <div className="grid grid-cols-[120px_1fr] items-center gap-4">
+              <Label>የችሎት አይነት</Label>
+              <Select value={metadata.benchType} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'benchType', value } })}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>{BENCH_TYPES.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
+              </Select>
+            </div>
 
-            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-              <Label>ችሎት</Label>
+            <div className="grid grid-cols-[120px_1fr] items-center gap-4">
+              <Label>የችሎት አካባቢ</Label>
                {metadata.bench === 'ሌላ' ? (
                  <Input 
                     value={metadata.benchOther || ''}
@@ -68,7 +77,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
             </div>
 
 
-            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+            <div className="grid grid-cols-[120px_1fr] items-center gap-4">
               <Label>ከተማ</Label>
               <Select value={metadata.city} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'city', value } })}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
@@ -76,11 +85,11 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
               </Select>
             </div>
             <div className="space-y-2">
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                <div className="grid grid-cols-[120px_1fr] items-center gap-4">
                     <Label>ቀን</Label>
                     <Input value={metadata.date} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'date', value: e.target.value } })} />
                 </div>
-                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                <div className="grid grid-cols-[120px_1fr] items-center gap-4">
                     <Label>የመዝገብ ቁጥር</Label>
                     <Input value={metadata.fileNumber} onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'fileNumber', value: e.target.value } })} />
                 </div>

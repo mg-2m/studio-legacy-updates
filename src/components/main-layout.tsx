@@ -22,7 +22,7 @@ export default function MainLayout({ state, dispatch }: MainLayoutProps) {
         <AppSidebar selectedTemplate={state.selectedTemplate} selectedSubTemplate={state.selectedSubTemplate} dispatch={dispatch} />
         <SidebarInset>
           <EditorSidebarProvider>
-            <main className="flex flex-1">
+            <main className="flex flex-1 h-screen overflow-hidden">
                 <EditorSidebar>
                     <EditorColumn
                         state={state}

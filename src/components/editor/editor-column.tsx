@@ -75,6 +75,7 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
 
   return (
     <section 
+      id="editor-col"
       className="no-print relative flex flex-col bg-card border-r w-full h-full overflow-hidden"
     >
       <div className="flex h-14 shrink-0 items-center gap-2 p-2 border-b">

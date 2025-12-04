@@ -15,7 +15,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ አንድ ተከሳሽ የፈጸመው ድርጊት በራሱ ወይም በሶስተኛ ወገን ላይ የተቃጣን ሕገ-ወጥ ጥቃት ለመመከት የተደረገ በመሆኑ ሕጋዊ ነው ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   ዋና የሕግ መመዘኛ (Core Legal Test): ጥቃቱ ሕገ-ወጥ፣ የቅርብ እና እርምጃው የተመጣጠነ መሆኑን ማሳየት።\n*   ማስረጃ (Required Evidence): የጥቃቱን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የፖሊስ ሪፖርት)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ አንድ ተከሳሽ የፈጸመው ድርጊት በራሱ ወይም በሶስተኛ ወገን ላይ የተቃጣን ሕገ-ወጥ ጥቃት ለመመከት የተደረገ በመሆኑ ሕጋዊ ነው ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Core Legal Test\nጥቃቱ ሕገ-ወጥ፣ የቅርብ እና እርምጃው የተመጣጠነ መሆኑን ማሳየት።\n### Required Evidence\nየጥቃቱን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የፖሊስ ሪፖርት)።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -105,7 +105,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ወንጀሉን በፈጸመበት ወቅት በነበረበት ከባድ የአእምሮ ሕመም ወይም የአእምሮ ዝግመት ምክንያት የድርጊቱን የወንጀልነት ባህሪ ለመረዳት ወይም ድርጊቱን ለመቆጣጠር ባለመቻሉ ተጠያቂ አይደለም ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ዋና የሕግ መመዘኛ (Core Legal Test): በድርጊቱ ጊዜ የነበረ ከባድ የአእምሮ ሕመም እና የድርጊቱን ባህሪ ለመረዳት አለመቻል።\n- ማስረጃ (Required Evidence): ከተረጋገጠ የሕክምና ተቋም የተሰጠ የአእምሮ ሁኔታ ምርመራ ሪፖርት (MedicalCertificateMentalState) ወሳኝ ነው።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ወንጀሉን በፈጸመበት ወቅት በነበረበት ከባድ የአእምሮ ሕመም ወይም የአእምሮ ዝግመት ምክንያት የድርጊቱን የወንጀልነት ባህሪ ለመረዳት ወይም ድርጊቱን ለመቆጣጠር ባለመቻሉ ተጠያቂ አይደለም ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Core Legal Test\nበድርጊቱ ጊዜ የነበረ ከባድ የአእምሮ ሕመም እና የድርጊቱን ባህሪ ለመረዳት አለመቻል።\n### Required Evidence\nከተረጋገጠ የሕክምና ተቋም የተሰጠ የአእምሮ ሁኔታ ምርመራ ሪፖርት (MedicalCertificateMentalState) ወሳኝ ነው።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -194,7 +194,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር، ተከሳሹ ወንጀሉን የፈጸመው ከራሱ ወይም ከሌላ ሰው ላይ ሊደርስ የነበረን የበለጠ ጉዳት ለመከላከል ሲል እንደሆነ እና ድርጊቱ አስፈላጊ እንደነበር ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ዋና የሕግ መመዘኛ (Core Legal Test): አደጋው በጣም አስጊ እና ሊቀር የማይችል መሆኑን እና የተጠበቀው ጥቅም ከተጣሰው ጥቅም የበለጠ መሆኑን ማሳየት።\n- ማስረጃ (Required Evidence): የአደጋውን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የቦታው ሁኔታ)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር، ተከሳሹ ወንጀሉን የፈጸመው ከራሱ ወይም ከሌላ ሰው ላይ ሊደርስ የነበረን የበለጠ ጉዳት ለመከላከል ሲል እንደሆነ እና ድርጊቱ አስፈላጊ እንደነበር ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Core Legal Test\nአደጋው በጣም አስጊ እና ሊቀር የማይችል መሆኑን እና የተጠበቀው ጥቅም ከተጣሰው ጥቅም የበለጠ መሆኑን ማሳየት።\n### Required Evidence\nየአደጋውን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የቦታው ሁኔታ)።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -231,7 +231,7 @@
         {
           "id": "crim_fact_order_of_superior",
           "label": "ኦፊሴላዊ ትዕዛዝ / ፈቃድ",
-          "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል፣ እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
+          "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል، እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
           "citation": "Crim. Code Art. 82",
           "autoEvidence": [
             "OfficialOrderDocument"
@@ -289,7 +289,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ጥፋተኛ ሆኖ ከተገኘ በኋላ፣ ፍርድ ቤቱ ቅጣቱን ሲወስን የተለያዩ የቅጣት ማቅለያ ሁኔታዎችን ከግምት ውስጥ እንዲያስገባ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበትና የጥፋተኝነት ውሳኔ በተሰጠበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ክርክር የሚቀርበው የጥፋተኝነት ውሳኔ ከተሰጠ በኋላ በቅጣት ውሳኔ ችሎት (sentencing hearing) ወቅት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence): የማቅለያ ሁኔታዎችን የሚያረጋግጡ ማናቸውም ማስረጃዎች (ለምሳሌ፣ የተጎጂውን ይቅርታ የሚያሳይ ሰነድ፣ የካሳ ክፍያ ደረሰኝ፣ የተከሳሹን መልካም ስነምግባር የሚያሳይ ማስረጃ)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ጥፋተኛ ሆኖ ከተገኘ በኋላ፣ ፍርድ ቤቱ ቅጣቱን ሲወስን የተለያዩ የቅጣት ማቅለያ ሁኔታዎችን ከግምት ውስጥ እንዲያስገባ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበትና የጥፋተኝነት ውሳኔ በተሰጠበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ክርክር የሚቀርበው የጥፋተኝነት ውሳኔ ከተሰጠ በኋላ በቅጣት ውሳኔ ችሎት (sentencing hearing) ወቅት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Required Evidence\nየማቅለያ ሁኔታዎችን የሚያረጋግጡ ማናቸውም ማስረጃዎች (ለምሳሌ፣ የተጎጂውን ይቅርታ የሚያሳይ ሰነድ፣ የካሳ ክፍያ ደረሰኝ፣ የተከሳሹን መልካም ስነምግባር የሚያሳይ ማስረጃ)።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
@@ -385,7 +385,7 @@
         ],
         "jurisdictionType": "Court seized of the criminal case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ መቃወሚያ፣ ዐቃቤ ሕግ ያቀረበው የወንጀል ክስ በፍሬ ነገር ደረጃ ከመታየቱ በፊት በሕግ አግባብ ውድቅ መሆን አለበት ብሎ ለመከራከር ያገለግላል። ይህም በይርጋ፣ በዳኝነት ስልጣን እጦት ወይም በሌሎች የሥነ-ሥርዓት ጉድለቶች ላይ የተመሰረተ ሊሆን ይችላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nመቃወሚያው የሚቀርበው የወንጀል ክስ በቀረበበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበወንጀለኛ መቅጫ ሥነ ሥርዓት ሕግ አንቀጽ 130(2) መሰረት፣ የመጀመሪያ ደረጃ መቃወሚያዎች ክሱ ከተነበበ በኋላ ወዲያውኑ መቅረብ አለባቸው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence): የመቃወሚያውን ምክንያት የሚደግፍ ማንኛውም ማስረጃ (ለምሳሌ፣ ክሱ በይርጋ እንደታገደ ለማሳየት የቀን ማስረጃ፣ ወይም በሌላ ፍርድ ቤት ቀደም ሲል ውሳኔ እንደተሰጠበት ለማሳየት የፍርድ ቅጂ)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ መቃወሚያ፣ ዐቃቤ ሕግ ያቀረበው የወንጀል ክስ በፍሬ ነገር ደረጃ ከመታየቱ በፊት በሕግ አግባብ ውድቅ መሆን አለበት ብሎ ለመከራከር ያገለግላል። ይህም በይርጋ፣ በዳኝነት ስልጣን እጦት ወይም በሌሎች የሥነ-ሥርዓት ጉድለቶች ላይ የተመሰረተ ሊሆን ይችላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nመቃወሚያው የሚቀርበው የወንጀል ክስ በቀረበበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበወንጀለኛ መቅጫ ሥነ ሥርዓት ሕግ አንቀጽ 130(2) መሰረት፣ የመጀመሪያ ደረጃ መቃወሚያዎች ክሱ ከተነበበ በኋላ ወዲያውኑ መቅረብ አለባቸው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Required Evidence\nየመቃወሚያውን ምክንያት የሚደግፍ ማንኛውም ማስረጃ (ለምሳሌ፣ ክሱ በይርጋ እንደታገደ ለማሳየት የቀን ማስረጃ፣ ወይም በሌላ ፍርድ ቤት ቀደም ሲል ውሳኔ እንደተሰጠበት ለማሳየት የፍርድ ቅጂ)።",
       "partyTitles": {
         "applicant": "Defendant (ተከሳሽ)",
         "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"

@@ -32,18 +32,19 @@ All user-facing English text must be removed from the final rendered output and 
 - In-line citations within facts.
 - All labels and placeholder text within the evidence sections, including both auto-linked and manual evidence forms.
 
-### 2.2. Requirement (B): Pre-constructed Evidence Formatting
-The evidence section on the preview page (`page-two.tsx`) must be refactored to present evidence in a grammatically correct, full-sentence format, as a lawyer would draft it. The system should automatically construct these sentences, leaving only specific credentials for the user to fill in.
+### 2.2. Requirement (B): The WYSIWYG "Prophetic Editor" Mandate
+To ensure clarity, grammatical correctness, and an intuitive user experience, the editor UI must, wherever possible, mirror the final rendered output. This "What You See Is What You Get" approach serves as a core principle for the platform's design.
 
-- **Example (Target State):**
-  > ሀ. የሰነድ ማስረጃዎች
-  > 1.  በተማሪ ኤልያስ ሰይድ ጥርስ ላይ የደረሰውን ጉዳት የሚያስረዳልን ከ **[ቲጂ ኤች የጥርስ ህክምና ክሊኒክ]** የተሰጠ የህክምና ማስረጃ በእንግዚዘኛ የተፃፈ ከነትርጉሙ **[2 (ሁለት)]** ገጽ ፎቶ ኮፒ ዋናው በ **[ከሳሽ]** እጅ የሚገኝ፣
-- **Implementation:** This requires a new, more descriptive schema in `_base.json` for each evidence type, including template sentences with placeholders that the frontend can parse and render.
+*   **Rule 2.2.1: Sentence-Based UI Construction:** For complex data entry sections like Evidence, Facts, and Reliefs, the UI shall be constructed using pre-defined, grammatically correct Amharic sentence templates sourced from the backend (`_base.json`, `*.json`).
+*   **Rule 2.2.2: Embedded Inputs:** Standard input fields (`Input`, `Select`) must be embedded directly within these sentence templates at the appropriate placeholder locations. This transforms the editor into an interactive, fill-in-the-blanks version of the final document.
+*   **Rule 2.2.3: Contextual Placeholders:** All embedded input fields must use watermarked placeholders (e.g., "የህክምና ማስረጃ") to guide the user with clear examples of the required information.
+*   **Rule 2.2.4: Unobtrusive Pre-defined Options:** When providing pre-defined choices (e.g., a list of document issuers), the UI should favor compact, "key-like" tags or minimal dropdown triggers that do not clutter the "one-line railway" flow of the sentence.
+*   **Rule 2.2.5: Universal Application:** This WYSIWYG logic must be applied consistently across all data types within a section, including auto-generated, AI-suggested, and manual entries, to create a unified and predictable user experience.
 
 ### 2.3. Files to Update
 - `src/components/preview/page-one.tsx` and `src/components/preview/page-two.tsx`: To update rendering logic.
-- `src/components/editor/evidence-tab.tsx`: To adjust input fields to the new schema.
-- `src/legal_branches/_base.json`: To introduce the new, descriptive evidence schema.
+- `src/components/editor/evidence-tab.tsx`, `facts-tab.tsx`, `relief-tab.tsx`: To implement the WYSIWYG interface.
+- `src/legal_branches/_base.json`: To introduce new sentence templates and descriptive schemas.
 - All `src/legal_branches/*.json` files: To ensure `jurisdictionText` and `citation` fields are pure Amharic.
 
 ---

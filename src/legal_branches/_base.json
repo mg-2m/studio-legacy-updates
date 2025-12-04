@@ -3,536 +3,625 @@
     "WrittenContract": {
       "title": "የጽሑፍ ውል (Written Contract)",
       "description": "The primary agreement signed by both parties. Essential for contracts involving immovable property or administrative bodies.",
-      "credentialLabel": "Contract Date & Ref No.",
-      "credentialPlaceholder": "e.g., 12/05/2022, Ref: 456/AB"
+      "credentialLabel": "የውል ቀን እና ቁጥር",
+      "credentialPlaceholder": "e.g., 12/05/2022, Ref: 456/AB",
+      "sentenceTemplate": "በ [date] የተፈረመ የውል ስምምነት ቁጥር [ref] ያለው።"
     },
     "NoticeofDefault": {
       "title": "የውል ማፍረሻ ማስታወቂያ (Notice of Default)",
       "description": "A registered letter or legal notice sent to the defaulting party demanding performance, essential for claiming damages.",
-      "credentialLabel": "Notice Date & Delivery Method",
-      "credentialPlaceholder": "e.g., 25/08/2023, via Registered Post"
+      "credentialLabel": "የማስታወቂያ ቀን እና አሰጣጥ ዘዴ",
+      "credentialPlaceholder": "e.g., 25/08/2023, via Registered Post",
+      "sentenceTemplate": "በ [date] በ [method] የተሰጠ የውል ማፍረሻ ማስታወቂያ።"
     },
     "PaymentReceipt": {
       "title": "የክፍያ ደረሰኝ (Payment Receipt)",
       "description": "Documentary proof of money transferred (loan disbursement) or payments made (performance).",
-      "credentialLabel": "Receipt No. & Date",
-      "credentialPlaceholder": "e.g., No. 9876, 15/01/2023"
+      "credentialLabel": "ደረሰኝ ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., No. 9876, 15/01/2023",
+      "sentenceTemplate": "ቁጥር [ref] የሆነ የክፍያ ደረሰኝ በ [date] የተሰጠ።"
     },
     "DeliveryNote": {
       "title": "የዕቃ ማቅረቢያ ሰነድ (Delivery Note)",
       "description": "Proof that goods were actually delivered to and received by the buyer.",
-      "credentialLabel": "Note No. & Date of Delivery",
-      "credentialPlaceholder": "e.g., DN-1122, 20/02/2023"
+      "credentialLabel": "የማቅረቢያ ሰነድ ቁ. እና ቀን",
+      "credentialPlaceholder": "e.g., DN-1122, 20/02/2023",
+      "sentenceTemplate": "የዕቃ ማቅረቢያ ሰነድ ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "AdmissionofDebt": {
       "title": "የዕዳ እምነት ሰነድ (Admission of Debt)",
       "description": "A specific written document where the debtor acknowledges the sum owed.",
-      "credentialLabel": "Document Date & Signatory",
-      "credentialPlaceholder": "e.g., 05/03/2024, Signed by Ato Kassahun"
+      "credentialLabel": "የሰነድ ቀን እና ፈራሚ",
+      "credentialPlaceholder": "e.g., 05/03/2024, Signed by Ato Kassahun",
+      "sentenceTemplate": "በ [signatory] በ [date] የተፈረመ የዕዳ እምነት ሰነድ።"
     },
     "AuditReport": {
       "title": "የኦዲት ሪፖርት (Audit Report)",
       "description": "A financial report detailing outstanding balances, often required in complex B2B disputes.",
-      "credentialLabel": "Report Date & Auditor Name",
-      "credentialPlaceholder": "e.g., 30/06/2023, ABC Auditors"
+      "credentialLabel": "ሪፖርት ቀን እና ኦዲተር ስም",
+      "credentialPlaceholder": "e.g., 30/06/2023, ABC Auditors",
+      "sentenceTemplate": "በ [auditorName] የተዘጋጀ የ [date] ኦዲት ሪፖርት።"
     },
     "TitleDeed": {
       "title": "የባለቤትነት ማረጋገጫ ካርታ (Title Deed)",
       "description": "The primary certificate of holding rights/ownership for urban houses and land.",
-      "credentialLabel": "Title Deed (Carta) Number",
-      "credentialPlaceholder": "e.g., AA-12345/2010"
+      "credentialLabel": "የካርታ ቁጥር",
+      "credentialPlaceholder": "e.g., AA-12345/2010",
+      "sentenceTemplate": "የባለቤትነት ማረጋገጫ ካርታ ቁጥር [ref] ያለው።"
     },
     "SitePlan": {
       "title": "የቦታ ፕላን (Site Plan)",
       "description": "Official technical map showing the coordinates, boundaries, and area of the plot.",
-      "credentialLabel": "Plan Number & Issuing Office",
-      "credentialPlaceholder": "e.g., SP-6789, Bole Sub-city Land Office"
+      "credentialLabel": "የፕላን ቁጥር እና የወጣበት ቢሮ",
+      "credentialPlaceholder": "e.g., SP-6789, Bole Sub-city Land Office",
+      "sentenceTemplate": "ከ [issuingOffice] የወጣ የቦታ ፕላን ቁጥር [ref] ያለው።"
     },
     "LeaseAgreement": {
       "title": "የኪራይ ስምምነት (Lease Agreement)",
       "description": "Contract between the citizen and the City Administration defining the lease period and rights.",
-      "credentialLabel": "Lease Agreement Reference No.",
-      "credentialPlaceholder": "e.g., LA-987/2015"
+      "credentialLabel": "የኪራይ ውል ቁጥር",
+      "credentialPlaceholder": "e.g., LA-987/2015",
+      "sentenceTemplate": "የኪራይ ስምምነት ውል ቁጥር [ref] ያለው።"
     },
     "ConstructionPermit": {
       "title": "የግንባታ ፈቃድ (Construction Permit)",
       "description": "Official authorization to build, proving legality of the structure.",
-      "credentialLabel": "Permit Number & Date",
-      "credentialPlaceholder": "e.g., CP-5432, 10/10/2021"
+      "credentialLabel": "የፈቃድ ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., CP-5432, 10/10/2021",
+      "sentenceTemplate": "የግንባታ ፈቃድ ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "TaxLandRentReceipts": {
       "title": "የግብር/የሊዝ ክፍያ ደረሰኝ (Tax/Land Rent Receipts)",
       "description": "Proof of continuous payment of obligations, used to evidence continuous possession.",
-      "credentialLabel": "Last Receipt No. & Date",
-      "credentialPlaceholder": "e.g., TR-12345, Fiscal Year 2015"
+      "credentialLabel": "የመጨረሻ ደረሰኝ ቁ. እና ቀን",
+      "credentialPlaceholder": "e.g., TR-12345, Fiscal Year 2015",
+      "sentenceTemplate": "የመጨረሻ የግብር/ሊዝ ክፍያ ደረሰኝ ቁጥር [ref] በ [date] የተከፈለ።"
     },
     "SurveyorsReport": {
       "title": "የሰርቬየር ሪፖርት (Surveyor's Report)",
       "description": "Technical report verifying boundary encroachments.",
-      "credentialLabel": "Report Date & Surveyor Name",
-      "credentialPlaceholder": "e.g., 01/04/2024, XYZ Surveyors"
+      "credentialLabel": "የሪፖርት ቀን እና የሰርቬየር ስም",
+      "credentialPlaceholder": "e.g., 01/04/2024, XYZ Surveyors",
+      "sentenceTemplate": "በ [surveyorName] የተዘጋጀ የ [date] የሰርቬየር ሪፖርት።"
     },
     "KebeleConfirmation": {
       "title": "የቀበሌ ማረጋገጫ (Kebele Confirmation)",
       "description": "Letter from the local administration confirming who lives in/occupies the property.",
-      "credentialLabel": "Letter Reference No. & Date",
-      "credentialPlaceholder": "e.g., Woreda 03, Ref: 556/16"
+      "credentialLabel": "የደብዳቤ ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., Woreda 03, Ref: 556/16",
+      "sentenceTemplate": "ከቀበሌ/ወረዳ ጽ/ቤት የተሰጠ ማረጋገጫ ደብዳቤ ቁጥር [ref] ያለው።"
     },
     "WitnessAffidavitsNuisance": {
       "title": "የምስክርነት ቃል (Nuisance) (Witness Affidavits)",
       "description": "Sworn statements detailing the time, duration, and severity of the disturbance (e.g., noise, smell, vibration).",
-      "credentialLabel": "Witness Name & Date of Statement",
-      "credentialPlaceholder": "e.g., W/ro Abeba, 15/05/2024"
+      "credentialLabel": "የምስክር ስም እና የቃል ቀን",
+      "credentialPlaceholder": "e.g., W/ro Abeba, 15/05/2024",
+      "sentenceTemplate": "በ [witnessName] በ [date] የተሰጠ የምስክርነት ቃል።"
     },
     "PhotosVideoEvidence": {
       "title": "ፎቶ/ቪዲዮ ማስረጃ (Photos/Video Evidence)",
       "description": "Visual proof of the nuisance source (e.g., pollution, excessive height of a structure).",
-      "credentialLabel": "Date Taken & Description",
-      "credentialPlaceholder": "e.g., 20/05/2024, Video of factory smoke"
+      "credentialLabel": "የተነሳበት ቀን እና ገለጻ",
+      "credentialPlaceholder": "e.g., 20/05/2024, Video of factory smoke",
+      "sentenceTemplate": "በ [date] የተነሳ ፎቶ/ቪዲዮ ማስረጃ።"
     },
     "PriorAgreementServitude": {
       "title": "የቀድሞ ስምምነት (Servitude) (Prior Agreement)",
       "description": "If the servitude was created by contract, the written agreement is required.",
-      "credentialLabel": "Agreement Date & Parties",
-      "credentialPlaceholder": "e.g., 11/11/2005, between Ato A & Ato B"
+      "credentialLabel": "የስምምነት ቀን እና ተዋዋዮች",
+      "credentialPlaceholder": "e.g., 11/11/2005, between Ato A & Ato B",
+      "sentenceTemplate": "በ [parties] መካከል በ [date] የተደረገ የቀድሞ ስምምነት።"
     },
     "EmploymentContract": {
       "title": "የቅጥር ውል (Employment Contract)",
       "description": "A contract of employment.",
-      "credentialLabel": "Contract Date",
-      "credentialPlaceholder": "e.g., 01/01/2020"
+      "credentialLabel": "የውል ቀን",
+      "credentialPlaceholder": "e.g., 01/01/2020",
+      "sentenceTemplate": "በ [date] የተደረገ የቅጥር ውል።"
     },
     "TerminationLetter": {
       "title": "የስንብት ደብዳቤ (Termination Letter)",
       "description": "A letter terminating employment.",
-      "credentialLabel": "Letter Date",
-      "credentialPlaceholder": "e.g., 30/06/2024"
+      "credentialLabel": "የደብዳቤ ቀን",
+      "credentialPlaceholder": "e.g., 30/06/2024",
+      "sentenceTemplate": "በ [date] የተሰጠ የስንብት ደብዳቤ።"
     },
     "PayrollSlip": {
       "title": "የደመወዝ ወረቀት (Payroll Slip)",
       "description": "A document detailing an employee's salary.",
-      "credentialLabel": "Month/Year of Slip",
-      "credentialPlaceholder": "e.g., June 2024"
+      "credentialLabel": "የወር/ዓመት",
+      "credentialPlaceholder": "e.g., June 2024",
+      "sentenceTemplate": "የ [monthYear] የደመወዝ ወረቀት።"
     },
     "DisciplinaryRecord": {
       "title": "የዲሲፕሊን መዝገብ (Disciplinary Record)",
       "description": "An employee's disciplinary record.",
-      "credentialLabel": "Last Warning Date",
-      "credentialPlaceholder": "e.g., 15/04/2024"
+      "credentialLabel": "የመጨረሻ ማስጠንቀቂያ ቀን",
+      "credentialPlaceholder": "e.g., 15/04/2024",
+      "sentenceTemplate": "የሰራተኛው የዲሲፕሊን መዝገብ።"
     },
     "AttendanceSheet": {
       "title": "የ ಹಾజሪ መዝገብ (Attendance Sheet)",
       "description": "An employee's attendance sheet.",
-      "credentialLabel": "Month/Year",
-      "credentialPlaceholder": "e.g., May 2024"
+      "credentialLabel": "የወር/ዓመት",
+      "credentialPlaceholder": "e.g., May 2024",
+      "sentenceTemplate": "የ [monthYear] የ ಹಾజሪ መዝገብ።"
     },
     "AccidentReport": {
       "title": "የአደጋ ሪፖርት (Accident Report)",
       "description": "A report of an accident.",
-      "credentialLabel": "Report Number & Date",
-      "credentialPlaceholder": "e.g., AR-987, 05/05/2024"
+      "credentialLabel": "የሪፖርት ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., AR-987, 05/05/2024",
+      "sentenceTemplate": "የአደጋ ሪፖርት ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "MedicalBill": {
       "title": "የሕክምና ደረሰኝ (Medical Bill)",
       "description": "A bill for medical expenses.",
-      "credentialLabel": "Total Amount & Hospital Name",
-      "credentialPlaceholder": "e.g., 5000 ETB, St. Paul's Hospital"
+      "credentialLabel": "ጠቅላላ መጠን እና ሆስፒታል ስም",
+      "credentialPlaceholder": "e.g., 5000 ETB, St. Paul's Hospital",
+      "sentenceTemplate": "ከ [hospital] በ [date] የተሰጠ የ [amount] ብር የሕክምና ደረሰኝ።"
     },
     "DismissalLetter": {
       "title": "የስንብት ደብዳቤ (Dismissal Letter)",
       "description": "A letter of dismissal from service.",
-      "credentialLabel": "Date of Dismissal Letter",
-      "credentialPlaceholder": "e.g., 01/07/2024"
+      "credentialLabel": "የስንብት ደብዳቤ ቀን",
+      "credentialPlaceholder": "e.g., 01/07/2024",
+      "sentenceTemplate": "በ [date] የተሰጠ የስንብት ደብዳቤ።"
     },
     "GrievanceSubmission": {
       "title": "የቅሬታ ማቅረቢያ (Grievance Submission)",
       "description": "A document proving a grievance was submitted.",
-      "credentialLabel": "Submission Date & Ref No.",
-      "credentialPlaceholder": "e.g., 10/06/2024, Ref: HR/G-12"
+      "credentialLabel": "የማቅረቢያ ቀን እና ቁጥር",
+      "credentialPlaceholder": "e.g., 10/06/2024, Ref: HR/G-12",
+      "sentenceTemplate": "የቅሬታ ማቅረቢያ ቁጥር [ref] በ [date] የቀረበ።"
     },
     "PerformanceReview": {
       "title": "የአፈጻጸም ግምገማ (Performance Review)",
       "description": "An employee's performance review.",
-      "credentialLabel": "Evaluation Period",
-      "credentialPlaceholder": "e.g., 2023-2024 Fiscal Year"
+      "credentialLabel": "የግምገማ ጊዜ",
+      "credentialPlaceholder": "e.g., 2023-2024 Fiscal Year",
+      "sentenceTemplate": "የ [period] የአፈጻጸም ግምገማ።"
     },
     "WarningLetter": {
       "title": "የማስጠንቀቂያ ደብዳቤ (Warning Letter)",
       "description": "A warning letter issued to an employee.",
-      "credentialLabel": "Date of Warning",
-      "credentialPlaceholder": "e.g., 20/05/2024"
+      "credentialLabel": "የማስጠንቀቂያ ቀን",
+      "credentialPlaceholder": "e.g., 20/05/2024",
+      "sentenceTemplate": "በ [date] የተሰጠ የማስጠንቀቂያ ደብዳቤ።"
     },
     "UnpaidWageWitness": {
       "title": "ያልተከፈለ ደመወዝ ምስክር (Unpaid Wage Witness)",
       "description": "A witness for unpaid wages.",
-      "credentialLabel": "Witness Full Name & Address",
-      "credentialPlaceholder": "e.g., Ato Chala, Addis Ababa"
+      "credentialLabel": "የምስክር ሙሉ ስም እና አድራሻ",
+      "credentialPlaceholder": "e.g., Ato Chala, Addis Ababa",
+      "sentenceTemplate": "ስለ ያልተከፈለ ደመወዝ የሚመሰክር ምስክር።"
     },
     "CertificateofMarriage": {
       "title": "የጋብቻ ምስክር ወረቀት (Certificate of Marriage)",
       "description": "Official certificate issued by VERA or religious/customary authority proving the existence of the marriage.",
-      "credentialLabel": "Certificate Number & Date",
-      "credentialPlaceholder": "e.g., VERA-MC-123, 10/01/2018"
+      "credentialLabel": "የምስክር ወረቀት ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., VERA-MC-123, 10/01/2018",
+      "sentenceTemplate": "የጋብቻ ምስክር ወረቀት ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "BirthCertificate": {
       "title": "የልደት የምስክር ወረቀት (Birth Certificate)",
       "description": "Official birth records for all children involved in the dispute, proving age and parentage.",
-      "credentialLabel": "Child's Name & Certificate No.",
-      "credentialPlaceholder": "e.g., Yonas K., BC-456"
+      "credentialLabel": "የልጅ ስም እና የምስክር ወረቀት ቁ.",
+      "credentialPlaceholder": "e.g., Yonas K., BC-456",
+      "sentenceTemplate": "የልደት የምስክር ወረቀት ቁጥር [ref] ለ [childName] የተሰጠ።"
     },
     "ProofofIncome": {
       "title": "የገቢ ማረጋገጫ (Proof of Income)",
       "description": "Pay slips, bank statements, or tax records used to calculate maintenance (alimony) capabilities.",
-      "credentialLabel": "Document Type & Period",
-      "credentialPlaceholder": "e.g., Payslip for June 2024"
+      "credentialLabel": "የሰነድ አይነት እና ጊዜ",
+      "credentialPlaceholder": "e.g., Payslip for June 2024",
+      "sentenceTemplate": "የ [period] የገቢ ማረጋገጫ።"
     },
     "FamilyArbitratorsReport": {
       "title": "የቤተሰብ ሽማግሌዎች ሪፖርት (Family Arbitrators' Report)",
       "description": "(If applicable) A record of the attempt at reconciliation by family elders/arbitrators, often required before formal litigation.",
-      "credentialLabel": "Report Date",
-      "credentialPlaceholder": "e.g., 15/04/2024"
+      "credentialLabel": "የሪፖርት ቀን",
+      "credentialPlaceholder": "e.g., 15/04/2024",
+      "sentenceTemplate": "በ [date] የተዘጋጀ የቤተሰብ ሽማግሌዎች ሪፖርት።"
     },
     "ListofCommonProperty": {
       "title": "የጋራ ንብረት ዝርዝር (List of Common Property)",
       "description": "An inventory document detailing assets acquired during the marriage (movable and immovable).",
-      "credentialLabel": "Date of Inventory",
-      "credentialPlaceholder": "e.g., 01/07/2024"
+      "credentialLabel": "የዝርዝር ቀን",
+      "credentialPlaceholder": "e.g., 01/07/2024",
+      "sentenceTemplate": "በ [date] የተዘጋጀ የጋራ ንብረት ዝርዝር።"
     },
     "PoliceReportDomesticViolence": {
       "title": "የፖሊስ ሪፖርት (የቤት ውስጥ ጥቃት) (Police Report (Domestic Violence))",
       "description": "Official record of physical or emotional abuse, used as grounds for immediate dissolution or restraining orders.",
-      "credentialLabel": "Police File No. & Date",
-      "credentialPlaceholder": "e.g., Bole PS, File 789/24"
+      "credentialLabel": "የፖሊስ መዝገብ ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., Bole PS, File 789/24",
+      "sentenceTemplate": "የፖሊስ ሪፖርት ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "SchoolFeeReceipts": {
       "title": "የትምህርት ቤት ክፍያ ደረሰኝ (School Fee Receipts)",
       "description": "Documentary proof of educational expenses for children, used to quantify maintenance claims.",
-      "credentialLabel": "School Name & Term",
-      "credentialPlaceholder": "e.g., ABC School, 2nd Term 2024"
+      "credentialLabel": "የት/ቤት ስም እና ጊዜ",
+      "credentialPlaceholder": "e.g., ABC School, 2nd Term 2024",
+      "sentenceTemplate": "ከ [schoolName] ለ [term] የተሰጠ የትምህርት ቤት ክፍያ ደረሰኝ።"
     },
     "MedicalBoardCertificate": {
       "title": "የሕክምና ቦርድ ምስክር ወረቀት (Medical Board Certificate)",
       "description": "Evidence regarding paternity (DNA) or medical incapacity of a spouse.",
-      "credentialLabel": "Certificate No. & Date",
-      "credentialPlaceholder": "e.g., MBC-001, 12/03/2024"
+      "credentialLabel": "የምስክር ወረቀት ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., MBC-001, 12/03/2024",
+      "sentenceTemplate": "የሕክምና ቦርድ ምስክር ወረቀት ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "WitnessStatements": {
       "title": "የምስክሮች ቃል (Witness Statements)",
       "description": "Affidavits from witnesses.",
-      "credentialLabel": "Witness Name & Date",
-      "credentialPlaceholder": "e.g., W/ro Aster, 18/06/2024"
+      "credentialLabel": "የምስክር ስም እና ቀን",
+      "credentialPlaceholder": "e.g., W/ro Aster, 18/06/2024",
+      "sentenceTemplate": "በ [witnessName] በ [date] የተሰጠ የምስክርነት ቃል።"
     },
     "CopyofDivorceJudgment": {
       "title": "የፍቺ ፍርድ ቅጂ (Copy of Divorce Judgment)",
       "description": "The prior court ruling confirming the marriage is dissolved.",
-      "credentialLabel": "File No. & Date of Judgment",
-      "credentialPlaceholder": "e.g., File 12345, 01/02/2024"
+      "credentialLabel": "የመዝገብ ቁጥር እና የፍርድ ቀን",
+      "credentialPlaceholder": "e.g., File 12345, 01/02/2024",
+      "sentenceTemplate": "የፍቺ ፍርድ ቅጂ ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "ProofofInheritanceDonation": {
       "title": "የውርስ/ስጦታ ማረጋገጫ (Proof of Inheritance/Donation)",
       "description": "Documents proving property was acquired via inheritance or donation.",
-      "credentialLabel": "Document Type & Date",
-      "credentialPlaceholder": "e.g., Will, 10/10/2010"
+      "credentialLabel": "የሰነድ አይነት እና ቀን",
+      "credentialPlaceholder": "e.g., Will, 10/10/2010",
+      "sentenceTemplate": "በ [date] የተሰጠ የውርስ/ስጦታ ማረጋገጫ።"
     },
     "Pre-maritalOwnershipDocuments": {
       "title": "ከጋብቻ በፊት የነበረ የባለቤትነት ሰነድ (Pre-marital Ownership Documents)",
       "description": "Documents proving ownership of property before marriage.",
-      "credentialLabel": "Property Description & Date",
-      "credentialPlaceholder": "e.g., Condo Title Deed, 05/05/2017"
+      "credentialLabel": "የንብረት ገለጻ እና ቀን",
+      "credentialPlaceholder": "e.g., Condo Title Deed, 05/05/2017",
+      "sentenceTemplate": "ከጋብቻ በፊት የነበረ የባለቤትነት ሰነድ።"
     },
     "JudgmentofDivorce": {
       "title": "የፍቺ ፍርድ (Judgment of Divorce)",
       "description": "The prior court ruling confirming the marriage is dissolved and allowing the property phase to commence.",
-      "credentialLabel": "File No. & Date of Judgment",
-      "credentialPlaceholder": "e.g., File 12345, 01/02/2024"
+      "credentialLabel": "የመዝገብ ቁጥር እና የፍርድ ቀን",
+      "credentialPlaceholder": "e.g., File 12345, 01/02/2024",
+      "sentenceTemplate": "የፍቺ ፍርድ ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "PropertyValuationReport": {
       "title": "የንብረት ግምት ሪፖርት (Property Valuation Report)",
       "description": "(Optional/Later Stage) A report by a certified engineer or auditor estimating the value of the assets.",
-      "credentialLabel": "Valuator Name & Date",
-      "credentialPlaceholder": "e.g., Ethio-Valuators, 15/07/2024"
+      "credentialLabel": "የገማች ስም እና ቀን",
+      "credentialPlaceholder": "e.g., Ethio-Valuators, 15/07/2024",
+      "sentenceTemplate": "በ [valuatorName] የተዘጋጀ የ [date] የንብረት ግምት ሪፖርት።"
     },
     "TitleDeedsLibrec": {
       "title": "የባለቤትነት ማረጋገጫ (Title Deeds / Librec)",
       "description": "Official ownership certificates for immovable property (houses, land).",
-      "credentialLabel": "Title Deed (Carta) Number",
-      "credentialPlaceholder": "e.g., AA-12345/2010"
+      "credentialLabel": "የካርታ ቁጥር",
+      "credentialPlaceholder": "e.g., AA-12345/2010",
+      "sentenceTemplate": "የባለቤትነት ማረጋገጫ ካርታ ቁጥር [ref] ያለው።"
     },
     "DeathCertificate": {
       "title": "የሞት የምስክር ወረቀት (Death Certificate)",
       "description": "Official certificate from VERA or municipality confirming the date and place of death.",
-      "credentialLabel": "Deceased Name & Certificate No.",
-      "credentialPlaceholder": "e.g., Ato Alemu, DC-789"
+      "credentialLabel": "የሟች ስም እና የምስክር ወረቀት ቁ.",
+      "credentialPlaceholder": "e.g., Ato Alemu, DC-789",
+      "sentenceTemplate": "የሞት የምስክር ወረቀት ቁጥር [ref] ለ [deceasedName] የተሰጠ።"
     },
     "WillTestament": {
       "title": "ኑዛዜ (Will / Testament)",
       "description": "A Public, Holographic, or Oral will documenting the deceased's wishes.",
-      "credentialLabel": "Date of Will",
-      "credentialPlaceholder": "e.g., 01/01/2022"
+      "credentialLabel": "የኑዛዜ ቀን",
+      "credentialPlaceholder": "e.g., 01/01/2022",
+      "sentenceTemplate": "በ [date] የተደረገ ኑዛዜ።"
     },
     "KebeleFamilyID": {
       "title": "የቀበሌ መታወቂያ / የቤተሰብ ወረቀት (Kebele ID / Family Certificate)",
       "description": "Official document proving the relationship between the claimant and the deceased (e.g., listing children).",
-      "credentialLabel": "ID Number",
-      "credentialPlaceholder": "e.g., 123456789"
+      "credentialLabel": "የመታወቂያ ቁጥር",
+      "credentialPlaceholder": "e.g., 123456789",
+      "sentenceTemplate": "የቀበሌ መታወቂያ / የቤተሰብ ወረቀት።"
     },
     "InventoryofEstate": {
       "title": "የውርስ ንብረት ዝርዝር (Inventory of Estate)",
       "description": "A detailed list of assets (houses, cars, bank accounts) left by the deceased.",
-      "credentialLabel": "Date of Inventory",
-      "credentialPlaceholder": "e.g., 20/07/2024"
+      "credentialLabel": "የዝርዝር ቀን",
+      "credentialPlaceholder": "e.g., 20/07/2024",
+      "sentenceTemplate": "በ [date] የተዘጋጀ የውርስ ንብረት ዝርዝር።"
     },
     "WitnessAffidavitsSuccession": {
       "title": "የውርስ ምስክሮች ቃል (Witness Affidavits - Succession)",
       "description": "Sworn statements by individuals (usually 3) confirming who the rightful heirs are.",
-      "credentialLabel": "Witness Name & Date",
-      "credentialPlaceholder": "e.g., Ato Belay, 25/07/2024"
+      "credentialLabel": "የምስክር ስም እና ቀን",
+      "credentialPlaceholder": "e.g., Ato Belay, 25/07/2024",
+      "sentenceTemplate": "በ [witnessName] በ [date] የተሰጠ የውርስ ምስክርነት ቃል።"
     },
     "CertificateofLiquidation": {
       "title": "የዕዳ ነጻነት ማረጋገጫ (Certificate of Liquidation)",
       "description": "Document showing debts have been paid (required before final partition).",
-      "credentialLabel": "Certificate Date",
-      "credentialPlaceholder": "e.g., 30/07/2024"
+      "credentialLabel": "የምስክር ወረቀት ቀን",
+      "credentialPlaceholder": "e.g., 30/07/2024",
+      "sentenceTemplate": "በ [date] የተሰጠ የዕዳ ነጻነት ማረጋገጫ።"
     },
     "CertificateOfRegistrationEIPO": {
       "title": "የምዝገባ ምስክር ወረቀት (EIPO) (Certificate of Registration)",
       "description": "Official document proving ownership of a Patent, Trademark, or registered Copyright.",
-      "credentialLabel": "Registration Number & Date",
-      "credentialPlaceholder": "e.g., TM/12345/2022"
+      "credentialLabel": "የምዝገባ ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., TM/12345/2022",
+      "sentenceTemplate": "ከኢ.አ.ን.ጽ/ቤት የተሰጠ የምዝገባ ምስክር ወረቀት ቁጥር [ref]።"
     },
     "ProductSampleSpecimen": {
       "title": "የምርት ናሙና (Product Sample/Specimen)",
       "description": "The physical product bearing the trademark or the technical documentation of the invention.",
-      "credentialLabel": "Description of Sample",
-      "credentialPlaceholder": "e.g., T-shirt with infringing logo"
+      "credentialLabel": "የናሙና ገለጻ",
+      "credentialPlaceholder": "e.g., T-shirt with infringing logo",
+      "sentenceTemplate": "የምርት ናሙና።"
     },
     "CeaseAndDesistLetter": {
       "title": "የማቆሚያ እና የማስጠንቀቂያ ደብዳቤ (Cease and Desist Letter)",
       "description": "Formal notice sent to the infringer demanding they stop the unlawful activity.",
-      "credentialLabel": "Date Sent & Recipient",
-      "credentialPlaceholder": "e.g., 01/06/2024, XYZ Company"
+      "credentialLabel": "የተላከበት ቀን እና ተቀባይ",
+      "credentialPlaceholder": "e.g., 01/06/2024, XYZ Company",
+      "sentenceTemplate": "በ [date] ለ [recipient] የተላከ የማቆሚያ እና የማስጠንቀቂያ ደብዳቤ።"
     },
     "MarketSurveyAffidavit": {
       "title": "የገበያ ጥናት/የምስክርነት ቃል (Market Survey/Affidavit)",
       "description": "Proof demonstrating consumer confusion in the marketplace (for Trademark cases).",
-      "credentialLabel": "Date of Survey & Conducted By",
-      "credentialPlaceholder": "e.g., July 2024, ABC Research"
+      "credentialLabel": "የጥናት ቀን እና አከናዋኝ",
+      "credentialPlaceholder": "e.g., July 2024, ABC Research",
+      "sentenceTemplate": "በ [surveyor] የተዘጋጀ የገበያ ጥናት።"
     },
     "CustomsInspectionReport": {
       "title": "የጉምሩክ ምርመራ ሪፖርት (Customs Inspection Report)",
       "description": "Official report confirming the seizure of counterfeit goods at the border.",
-      "credentialLabel": "Report No. & Date",
-      "credentialPlaceholder": "e.g., CUS/Bole/555/24"
+      "credentialLabel": "የሪፖርት ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., CUS/Bole/555/24",
+      "sentenceTemplate": "የጉምሩክ ምርመራ ሪፖርት ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "TechnicalExpertReport": {
       "title": "የቴክኒክ ባለሙያ ሪፖርት (Technical Expert Report)",
       "description": "Report comparing the registered patent claims to the alleged infringing product.",
-      "credentialLabel": "Expert Name & Date",
-      "credentialPlaceholder": "e.g., Dr. Eleni, 15/07/2024"
+      "credentialLabel": "የባለሙያ ስም እና ቀን",
+      "credentialPlaceholder": "e.g., Dr. Eleni, 15/07/2024",
+      "sentenceTemplate": "በ [expertName] የተዘጋጀ የ [date] የቴክኒክ ባለሙያ ሪፖርት።"
     },
     "IdentityCard": {
       "title": "የመታወቂያ ወረቀት (Identity Card)",
       "description": "The primary document reflecting the current (incorrect) status information.",
-      "credentialLabel": "ID Number",
-      "credentialPlaceholder": "e.g., 123456789"
+      "credentialLabel": "የመታወቂያ ቁጥር",
+      "credentialPlaceholder": "e.g., 123456789",
+      "sentenceTemplate": "የመታወቂያ ወረቀት ቁጥር [ref] ያለው።"
     },
     "BirthMarriageCertificateVERA": {
       "title": "የልደት/ጋብቻ ምስክር ወረቀት (VERA) (Birth/Marriage Certificate)",
       "description": "Official civil status document requiring correction.",
-      "credentialLabel": "Certificate Number",
-      "credentialPlaceholder": "e.g., BC-123-2010"
+      "credentialLabel": "የምስክር ወረቀት ቁጥር",
+      "credentialPlaceholder": "e.g., BC-123-2010",
+      "sentenceTemplate": "ከወሳኝ ኩነት የተሰጠ የልደት/ጋብቻ ምስክር ወረቀት ቁጥር [ref]።"
     },
     "PublicNoticeOfAbsence": {
       "title": "የመጥፋት የሕዝብ ማስታወቂያ (Public Notice of Absence)",
       "description": "Proof that the petition for absence was published in a newspaper (Civ. Code Art. 159).",
-      "credentialLabel": "Newspaper Name & Publication Date",
-      "credentialPlaceholder": "e.g., Addis Zemen, 10/01/2024"
+      "credentialLabel": "የጋዜጣ ስም እና የታተመበት ቀን",
+      "credentialPlaceholder": "e.g., Addis Zemen, 10/01/2024",
+      "sentenceTemplate": "በ [newspaperName] ጋዜጣ በ [date] የታተመ የመጥፋት ማስታወቂያ።"
     },
     "GenealogicalAffidavit": {
       "title": "የዘር ሐረግ ማረጋገጫ (Genealogical Affidavit)",
       "description": "Document proving the relationship to the deceased (required for Heirship Certification).",
-      "credentialLabel": "Date of Affidavit",
-      "credentialPlaceholder": "e.g., 05/08/2024"
+      "credentialLabel": "የቃል ቀን",
+      "credentialPlaceholder": "e.g., 05/08/2024",
+      "sentenceTemplate": "በ [date] የተሰጠ የዘር ሐረግ ማረጋገጫ።"
     },
     "TaxAssessmentNotice": {
       "title": "የግብር ግምት ማስታወቂያ (Tax Assessment Notice)",
       "description": "The official letter from the MoR detailing the tax liability, penalties, and interest.",
-      "credentialLabel": "Notice Reference No.",
-      "credentialPlaceholder": "e.g., MoR/AA/LT/123/16"
+      "credentialLabel": "የማስታወቂያ ቁጥር",
+      "credentialPlaceholder": "e.g., MoR/AA/LT/123/16",
+      "sentenceTemplate": "የግብር ግምት ማስታወቂያ ቁጥር [ref] ያለው።"
     },
     "NoticeOfObjectionInitial": {
       "title": "የመጀመሪያ የግብር መቃወሚያ (Notice of Objection - Initial)",
       "description": "The formal letter submitted by the taxpayer to the MoR/CC challenging the initial assessment.",
-      "credentialLabel": "Date Submitted",
-      "credentialPlaceholder": "e.g., 25/03/2024"
+      "credentialLabel": "የቀረበበት ቀን",
+      "credentialPlaceholder": "e.g., 25/03/2024",
+      "sentenceTemplate": "በ [date] የቀረበ የመጀመሪያ የግብር መቃወሚያ።"
     },
     "AccountingRecords": {
       "title": "የሂሳብ መዝገቦች (Accounting Records)",
       "description": "Mandatory documentation (especially for Category A) to substantiate gross income and deductions.",
-      "credentialLabel": "Fiscal Year",
-      "credentialPlaceholder": "e.g., 2015 E.C. (2022/23 G.C.)"
+      "credentialLabel": "የበጀት ዓመት",
+      "credentialPlaceholder": "e.g., 2015 E.C. (2022/23 G.C.)",
+      "sentenceTemplate": "የ [fiscalYear] የበጀት ዓመት የሂሳብ መዝገቦች።"
     },
     "ImportExportDeclarationSAD": {
       "title": "የጉምሩክ መግለጫ (Import/Export Declaration)",
       "description": "Official customs document detailing the imported goods, value, and applicable duties.",
-      "credentialLabel": "Declaration (SAD) Number",
-      "credentialPlaceholder": "e.g., IM/4567/2024"
+      "credentialLabel": "የመግለጫ ቁጥር",
+      "credentialPlaceholder": "e.g., IM/4567/2024",
+      "sentenceTemplate": "የጉምሩክ መግለጫ ቁጥር [ref] ያለው።"
     },
     "PaymentReceiptsTaxCustoms": {
       "title": "የግብር/ጉምሩክ ክፍያ ደረሰኝ (Payment Receipts - Tax/Customs)",
       "description": "Proof of compliance, necessary for clearance or to meet the 50% deposit requirement.",
-      "credentialLabel": "Receipt No. & Date",
-      "credentialPlaceholder": "e.g., TIN-12345, 10/04/2024"
+      "credentialLabel": "ደረሰኝ ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., TIN-12345, 10/04/2024",
+      "sentenceTemplate": "የግብር/ጉምሩክ ክፍያ ደረሰኝ ቁጥር [ref] በ [date] የተከፈለ።"
     },
     "ExternalAuditReport": {
       "title": "የውጭ ኦዲት ሪፖርት (External Audit Report)",
       "description": "Report from a certified external auditor contradicting the MoR's findings.",
-      "credentialLabel": "Auditor Name & Report Date",
-      "credentialPlaceholder": "e.g., XYZ Auditors, 30/06/2024"
+      "credentialLabel": "የኦዲተር ስም እና የሪፖርት ቀን",
+      "credentialPlaceholder": "e.g., XYZ Auditors, 30/06/2024",
+      "sentenceTemplate": "በ [auditorName] የተዘጋጀ የ [date] የውጭ ኦዲት ሪፖርት።"
     },
     "PoliceAccidentReport": {
       "title": "የፖሊስ የአደጋ ሪፖርት (Police Accident Report)",
       "description": "Official documentation by police detailing the time, location, parties, and preliminary findings of a traffic or civil incident.",
-      "credentialLabel": "Police File No. & Date",
-      "credentialPlaceholder": "e.g., Bole Traffic, File 123/24"
+      "credentialLabel": "የፖሊስ መዝገብ ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., Bole Traffic, File 123/24",
+      "sentenceTemplate": "የፖሊስ የአደጋ ሪፖርት ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "MedicalExpenseReceipts": {
       "title": "የህክምና ወጪ ደረሰኞች (Medical Expense Receipts)",
       "description": "Receipts, invoices, and payment confirmations for all medical, hospital, and rehabilitation services.",
-      "credentialLabel": "Total Amount & Hospital",
-      "credentialPlaceholder": "e.g., 25,000 ETB, Black Lion Hospital"
+      "credentialLabel": "ጠቅላላ መጠን እና ሆስፒታል",
+      "credentialPlaceholder": "e.g., 25,000 ETB, Black Lion Hospital",
+      "sentenceTemplate": "ከ [hospital] የተሰጠ የ [amount] ብር የህክምና ወጪ ደረሰኝ።"
     },
     "DoctorAssessment": {
       "title": "የዶክተር ግምገማ (Doctor's Assessment)",
       "description": "A physician's certificate detailing the nature, extent, and duration of the injury, and prognosis for recovery or permanent disability.",
-      "credentialLabel": "Doctor's Name & Date",
-      "credentialPlaceholder": "e.g., Dr. Genet, 15/08/2024"
+      "credentialLabel": "የዶክተር ስም እና ቀን",
+      "credentialPlaceholder": "e.g., Dr. Genet, 15/08/2024",
+      "sentenceTemplate": "በ [doctorName] የተዘጋጀ የ [date] የዶክተር ግምገማ።"
     },
     "FinalAdminDecision": {
       "title": "የመጨረሻ የአስተዳደር ውሳኔ (Final Administrative Decision)",
       "description": "The written, final decision issued by the administrative agency, signed by the competent official. This decision must be exhausted before court appeal (Art. 48(1)).",
-      "credentialLabel": "Decision Reference No. & Date",
-      "credentialPlaceholder": "e.g., MoT/HR/55/2024, 01/08/2024"
+      "credentialLabel": "የውሳኔ ቁጥር እና ቀን",
+      "credentialPlaceholder": "e.g., MoT/HR/55/2024, 01/08/2024",
+      "sentenceTemplate": "የመጨረሻ የአስተዳደር ውሳኔ ቁጥር [ref] በ [date] የተሰጠ።"
     },
     "DecisionNotificationProof": {
       "title": "የውሳኔ ማስታወቂያ ማረጋገጫ (Decision Notification Proof)",
       "description": "Evidence (e.g., date stamp, certified mail receipt) showing the exact date the petitioner was notified of the final administrative decision. Crucial for the 30-day appeal limit (Art. 51(1)).",
-      "credentialLabel": "Date of Receipt",
-      "credentialPlaceholder": "e.g., 05/08/2024"
+      "credentialLabel": "የደረሰኝ ቀን",
+      "credentialPlaceholder": "e.g., 05/08/2024",
+      "sentenceTemplate": "የውሳኔ ማስታወቂያ ማረጋገጫ።"
     },
     "InternalRemedyExhaustion": {
       "title": "የውስጥ መፍትሔዎችን የመጠቀም ማረጋገጫ (Internal Remedy Exhaustion)",
       "description": "Documentation showing the petitioner first raised the complaint to the agency's internal complaint body and received a final decision (Art. 48(2)).",
-      "credentialLabel": "Grievance Committee Decision Date",
-      "credentialPlaceholder": "e.g., 15/07/2024"
+      "credentialLabel": "የቅሬታ ኮሚቴ ውሳኔ ቀን",
+      "credentialPlaceholder": "e.g., 15/07/2024",
+      "sentenceTemplate": "የውስጥ መፍትሔዎችን ስለመጠቀም የቀረበ ማረጋገጫ።"
     },
     "AgencyDirectiveCopy": {
       "title": "የተቃውሞ መመሪያ ቅጂ (Copy of Challenged Directive)",
       "description": "A copy of the specific Directive issued by the Agency that is being challenged for judicial review (Art. 48(1)).",
-      "credentialLabel": "Directive Number & Title",
-      "credentialPlaceholder": "e.g., Directive 45/2023, 'Land Use'"
+      "credentialLabel": "የመመሪያ ቁጥር እና ርዕስ",
+      "credentialPlaceholder": "e.g., Directive 45/2023, 'Land Use'",
+      "sentenceTemplate": "የተቃውሞ መመሪያ ቅጂ ቁጥር [ref]።"
     },
     "ShareholdersResolution": {
       "title": "የባለአክሲዮኖች ውሳኔ (Shareholders' Resolution)",
       "description": "Certified minutes from a General Meeting or Board meeting authorizing the legal action or confirming the internal decision (e.g., dissolution, capital increase).",
-      "credentialLabel": "Date of Meeting",
-      "credentialPlaceholder": "e.g., 20/08/2024"
+      "credentialLabel": "የስብሰባ ቀን",
+      "credentialPlaceholder": "e.g., 20/08/2024",
+      "sentenceTemplate": "በ [date] የተደረገ የባለአክሲዮኖች ውሳኔ።"
     },
     "MemorandumAndArticles": {
       "title": "መመስረቻ ጽሑፍ እና መተዳደሪያ ደንብ (Memorandum & Articles of Association)",
       "description": "The registered founding documents (Memorandum/Articles) of the business organization, showing capital structure, purpose, and management rules.",
-      "credentialLabel": "Registration Number",
-      "credentialPlaceholder": "e.g., MoT/Reg/00123/2010"
+      "credentialLabel": "የምዝገባ ቁጥር",
+      "credentialPlaceholder": "e.g., MoT/Reg/00123/2010",
+      "sentenceTemplate": "የድርጅቱ መመስረቻ ጽሑፍ እና መተዳደሪያ ደንብ።"
     },
     "NotarizedCheque": {
       "title": "በኖታሪ የተረጋገጠ ቼክ (Notarized Cheque)",
       "description": "The original negotiable instrument (cheque, bill of exchange, or promissory note) legally validated for recourse or payment claim.",
-      "credentialLabel": "Cheque Number & Amount",
-      "credentialPlaceholder": "e.g., 123456, 100,000 ETB"
+      "credentialLabel": "የቼክ ቁጥር እና መጠን",
+      "credentialPlaceholder": "e.g., 123456, 100,000 ETB",
+      "sentenceTemplate": "በኖታሪ የተረጋገጠ ቼክ ቁጥር [ref] የ [amount] ብር።"
     },
     "ProtestCertificate": {
       "title": "የክፍያ እምቢታ ማረጋገጫ (Certificate of Protest)",
       "description": "Official document from a notary or court certifying that the instrument was duly presented for payment and payment was refused (required for recourse).",
-      "credentialLabel": "Certificate Date & Notary Office",
-      "credentialPlaceholder": "e.g., 25/08/2024, DARS Notary"
+      "credentialLabel": "የምስክር ወረቀት ቀን እና የኖታሪ ቢሮ",
+      "credentialPlaceholder": "e.g., 25/08/2024, DARS Notary",
+      "sentenceTemplate": "ከ [notaryOffice] የተሰጠ የክፍያ እምቢታ ማረጋገጫ።"
     },
     "BalanceSheetAndAudit": {
       "title": "ኦዲት የተደረገ የሂሳብ መግለጫ (Audited Financial Statements)",
       "description": "The last three years of audited balance sheets and income statements, crucial for insolvency or business valuation proceedings.",
-      "credentialLabel": "Latest Fiscal Year End",
-      "credentialPlaceholder": "e.g., June 30, 2023"
+      "credentialLabel": "የመጨረሻው የበጀት ዓመት",
+      "credentialPlaceholder": "e.g., June 30, 2023",
+      "sentenceTemplate": "የ [fiscalYear] ኦዲት የተደረገ የሂሳብ መግለጫ።"
     },
     "ListofCreditors": {
       "title": "የአበዳሪዎች ዝርዝር (List of Creditors)",
       "description": "A detailed, certified list of all creditors, their claims, and security status (required for restructuring or bankruptcy applications).",
-      "credentialLabel": "Date of List Compilation",
-      "credentialPlaceholder": "e.g., 01/09/2024"
+      "credentialLabel": "የዝርዝር ዝግጅት ቀን",
+      "credentialPlaceholder": "e.g., 01/09/2024",
+      "sentenceTemplate": "በ [date] የተዘጋጀ የአበዳሪዎች ዝርዝር።"
     },
     "MedicalCertificateMentalState": {
       "title": "የአእምሮ ሁኔታ የህክምና ማስረጃ (Medical Certificate of Mental State)",
       "description": "A certified psychiatric or psychological evaluation confirming a severe mental disease or deficiency at the time of the alleged offense.",
-      "credentialLabel": "Doctor's Name & Date of Evaluation",
-      "credentialPlaceholder": "e.g., Dr. Solomon, 10/09/2024"
+      "credentialLabel": "የዶክተር ስም እና የግምገማ ቀን",
+      "credentialPlaceholder": "e.g., Dr. Solomon, 10/09/2024",
+      "sentenceTemplate": "በ [doctorName] የተዘጋጀ የአእምሮ ሁኔታ የህክምና ማስረጃ።"
     },
     "ProofOfImminentDanger": {
       "title": "የቅርብ አደጋ ማስረጃ (Proof of Imminent Danger)",
       "description": "Witness statements, scene photos, or police reports demonstrating an immediate and unavoidable threat to life or property.",
-      "credentialLabel": "Type of Proof & Date",
-      "credentialPlaceholder": "e.g., Witness Statement, 05/09/2024"
+      "credentialLabel": "የማስረጃ አይነት እና ቀን",
+      "credentialPlaceholder": "e.g., Witness Statement, 05/09/2024",
+      "sentenceTemplate": "የቅርብ አደጋን የሚያሳይ ማስረጃ።"
     },
     "OfficialOrderDocument": {
       "title": "ኦፊሴላዊ ትዕዛዝ (Official Order Document)",
       "description": "Written documentation proving the alleged criminal act was carried out under the legal order or command of a superior public authority.",
-      "credentialLabel": "Order Reference & Issuing Authority",
-      "credentialPlaceholder": "e.g., Ref 123/A, Federal Police"
+      "credentialLabel": "የትዕዛዝ ቁጥር እና አውጪ ባለስልጣን",
+      "credentialPlaceholder": "e.g., Ref 123/A, Federal Police",
+      "sentenceTemplate": "ኦፊሴላዊ ትዕዛዝ ቁጥር [ref] ከ [authority] የተሰጠ።"
     },
     "VictimConsentForm": {
       "title": "የተጎጂው የጽሑፍ ፈቃድ (Victim's Written Consent)",
       "description": "A signed document showing the victim consented to the act, applicable only where consent is legally valid (e.g., minor bodily harm, property damage).",
-      "credentialLabel": "Date of Signature",
-      "credentialPlaceholder": "e.g., 01/09/2024"
+      "credentialLabel": "የተፈረመበት ቀን",
+      "credentialPlaceholder": "e.g., 01/09/2024",
+      "sentenceTemplate": "በ [date] የተፈረመ የተጎጂው የጽሑፍ ፈቃድ።"
     },
     "WitnessStatementsIntoxication": {
       "title": "ስለ ስካር ሁኔታ የምስክርነት ቃል (Witness Statements on Intoxication)",
       "description": "Statements confirming the defendant's involuntary or non-culpable state of intoxication at the time of the alleged offense.",
-      "credentialLabel": "Witness Name & Date",
-      "credentialPlaceholder": "e.g., Ato Fikru, 12/09/2024"
+      "credentialLabel": "የምስክር ስም እና ቀን",
+      "credentialPlaceholder": "e.g., Ato Fikru, 12/09/2024",
+      "sentenceTemplate": "ስለ ስካር ሁኔታ በ [witnessName] የተሰጠ የምስክርነት ቃል።"
     },
     "OriginalPleadingCopy": {
       "title": "የመጀመሪያ ክስ ቅጂ (Original Pleading Copy)",
       "description": "A certified copy of the original statement of claim or statement of defence that is subject to the proposed amendment.",
-      "credentialLabel": "Date of Filing",
-      "credentialPlaceholder": "e.g., 01/01/2024"
+      "credentialLabel": "የቀረበበት ቀን",
+      "credentialPlaceholder": "e.g., 01/01/2024",
+      "sentenceTemplate": "የመጀመሪያ ክስ ቅጂ።"
     },
     "DraftAmendment": {
       "title": "የታቀደው ማሻሻያ ረቂቅ (Draft of Amendment)",
       "description": "The full, written text of the changes, additions, or deletions sought to be included in the original pleading.",
-      "credentialLabel": "Date of Draft",
-      "credentialPlaceholder": "e.g., 15/09/2024"
+      "credentialLabel": "የረቂቅ ቀን",
+      "credentialPlaceholder": "e.g., 15/09/2024",
+      "sentenceTemplate": "የታቀደው ማሻሻያ ረቂቅ።"
     },
     "IntervenerStatement": {
       "title": "ጣልቃ ገቢው ክስ/መቃወሚያ (Intervener's Statement)",
       "description": "A full statement outlining the intervener's legal interest in the subject matter of the existing suit and their claims or defenses.",
-      "credentialLabel": "Date of Statement",
-      "credentialPlaceholder": "e.g., 20/09/2024"
+      "credentialLabel": "የመግለጫ ቀን",
+      "credentialPlaceholder": "e.g., 20/09/2024",
+      "sentenceTemplate": "የጣልቃ ገቢው ክስ/መቃወሚያ።"
     },
     "ThirdPartyNotice": {
       "title": "ለሶስተኛ ወገን የጥሪ ማስታወቂያ ረቂቅ (Draft Third-Party Notice)",
       "description": "The specific notice or claim that the Defendant intends to serve on the third party, detailing the basis for indemnity or contribution.",
-      "credentialLabel": "Date of Notice Draft",
-      "credentialPlaceholder": "e.g., 22/09/2024"
+      "credentialLabel": "የማስታወቂያ ረቂቅ ቀን",
+      "credentialPlaceholder": "e.g., 22/09/2024",
+      "sentenceTemplate": "ለሶስተኛ ወገን የጥሪ ማስታወቂያ ረቂቅ።"
     },
     "ObjectionGroundsMemo": {
       "title": "የተቃውሞ ምክንያቶች ማስታወሻ (Objection Grounds Memo)",
       "description": "A detailed legal memorandum specifying the factual or legal errors upon which the judgment objection is based (e.g., lack of service, fraud).",
-      "credentialLabel": "Date of Memo",
-      "credentialPlaceholder": "e.g., 25/09/2024"
+      "credentialLabel": "የማስታወሻ ቀን",
+      "credentialPlaceholder": "e.g., 25/09/2024",
+      "sentenceTemplate": "የተቃውሞ ምክንያቶች ማስታወሻ።"
     },
     "ReviewApplicationMemo": {
       "title": "የፍርድ ዳግም የማየት ማስታወሻ (Review Application Memo)",
       "description": "A memorandum specifying the new, crucial evidence discovered or the error on the face of the record required for a review of judgment.",
-      "credentialLabel": "Date of Application",
-      "credentialPlaceholder": "e.g., 30/09/2024"
+      "credentialLabel": "የማመልከቻ ቀን",
+      "credentialPlaceholder": "e.g., 30/09/2024",
+      "sentenceTemplate": "የፍርድ ዳግም የማየት ማስታወሻ።"
     }
   }
 }

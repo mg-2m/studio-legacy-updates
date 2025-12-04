@@ -33,7 +33,7 @@ type Action =
   | { type: 'SET_AI_SUGGESTIONS'; payload: { evidenceIds: string[] } }
   | { type: 'ADD_SMART_EVIDENCE'; payload: { registryId: string } }
   | { type: 'DEACTIVATE_SMART_EVIDENCE'; payload: { registryId: string } }
-  | { type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL'; payload: { registryId: string; credentialValue: string } }
+  | { type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL'; payload: { registryId: string; credentialValue: string; field: string; } }
   | { type: 'SET_SELECTED_SUB_TEMPLATE'; payload: { templateId: string; subTemplateId: string } }
   | { type: 'TOGGLE_RELIEF'; payload: { reliefId: string } }
   | { type: 'ADD_CUSTOM_RELIEF' }
@@ -283,9 +283,9 @@ function appReducer(state: AppState, action: Action): AppState {
     }
 
     case 'UPDATE_SMART_EVIDENCE_CREDENTIAL': {
-      const { registryId, credentialValue } = action.payload;
+      const { registryId, credentialValue, field } = action.payload;
        if(state.smartEvidence[registryId]) {
-         return { ...state, smartEvidence: { ...state.smartEvidence, [registryId]: { ...state.smartEvidence[registryId], credentialId: credentialValue } } };
+         return { ...state, smartEvidence: { ...state.smartEvidence, [registryId]: { ...state.smartEvidence[registryId], [field]: credentialValue } } };
        }
        return state;
     }
@@ -319,12 +319,12 @@ function appReducer(state: AppState, action: Action): AppState {
                     id: newId,
                     type: 'Document',
                     description: '',
-                    issuer: '',
+                    issuer: DOCUMENT_ISSUERS[0],
                     refNumber: '',
                     issueDate: '',
                     pageCount: '',
                     documentType: 'Copy',
-                    originalLocation: '',
+                    originalLocation: EVIDENCE_LOCATIONS[0],
                     isManual: true,
                 };
                 break;
@@ -369,7 +369,7 @@ function appReducer(state: AppState, action: Action): AppState {
 
             switch(type) {
                 case 'doc':
-                    newEvidence = { id: newId, type: 'Document', description: '', issuer: '', refNumber: '', issueDate: '', pageCount: '', documentType: 'Copy', originalLocation: '', isManual: true, [field]: value };
+                    newEvidence = { id: newId, type: 'Document', description: '', issuer: DOCUMENT_ISSUERS[0], refNumber: '', issueDate: '', pageCount: '', documentType: 'Copy', originalLocation: EVIDENCE_LOCATIONS[0], isManual: true, [field]: value };
                     break;
                 case 'witness':
                     newEvidence = { id: newId, type: 'Witness', honorific: HONORIFICS[0], name: '', city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[0], subcityOther: '', woreda: '', houseNo: '', isManual: true, [field]: value };
@@ -565,5 +565,3 @@ export default function Home() {
     <MainLayout state={state} dispatch={dispatch} />
   );
 }
-
-    

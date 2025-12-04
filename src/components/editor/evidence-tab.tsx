@@ -19,10 +19,78 @@ import {
   SelectValue,
 } from '../ui/select';
 
-interface EvidenceTabProps {
-  state: AppState;
-  dispatch: React.Dispatch<any>;
+interface EmbeddedInputProps {
+  id: string;
+  value: string;
+  placeholder: string;
+  onChange: (value: string) => void;
+  options?: readonly string[];
+  fieldKey: string;
 }
+
+const EmbeddedInput: React.FC<EmbeddedInputProps> = ({ id, value, placeholder, onChange, options, fieldKey }) => {
+  return (
+    <span className="inline-flex items-center gap-1 mx-1">
+      <Input
+        id={id}
+        className="inline-block w-48 h-8 px-2 py-1 text-sm bg-white dark:bg-gray-800 border-dashed border-primary/50 focus:border-solid"
+        placeholder={placeholder}
+        value={value || ''}
+        onChange={(e) => onChange(e.target.value)}
+      />
+      {options && (
+        <Select onValueChange={onChange} value={value}>
+          <SelectTrigger className="inline-flex w-auto h-8 p-1 text-xs">
+             <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            {options.map(i => <SelectItem key={i} value={i}>{i}</SelectItem>)}
+          </SelectContent>
+        </Select>
+      )}
+    </span>
+  );
+};
+
+
+const parseSentence = (template: string, data: any, dispatch: React.Dispatch<any>, id: string, type: 'manual' | 'smart', evidenceKey: string) => {
+    const parts = template.split(/(\[.*?\])/g).filter(part => part);
+
+    const updateField = (field: string, value: any) => {
+        if (type === 'manual') {
+            dispatch({ type: 'UPDATE_EVIDENCE', payload: { id, field, value } });
+        } else {
+            dispatch({ type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL', payload: { registryId: evidenceKey, credentialValue: value, field } });
+        }
+    };
+
+    return parts.map((part, index) => {
+        const match = part.match(/\[(.*?)\]/);
+        if (match) {
+            const fieldKey = match[1];
+            let options: readonly string[] | undefined = undefined;
+            if (fieldKey === 'issuer') options = DOCUMENT_ISSUERS;
+            if (fieldKey === 'originalLocation') options = EVIDENCE_LOCATIONS;
+            if (fieldKey === 'city') options = REGIONS_AND_CITIES;
+            if (fieldKey === 'subcity') options = AA_SUBCITIES;
+            if (fieldKey === 'honorific') options = HONORIFICS;
+
+
+            return (
+                <EmbeddedInput
+                    key={`${id}-${index}`}
+                    id={`${id}-${fieldKey}`}
+                    value={(data && data[fieldKey]) || ''}
+                    placeholder={`e.g., ${fieldKey}`}
+                    onChange={(value) => updateField(fieldKey, value)}
+                    options={options}
+                    fieldKey={fieldKey}
+                />
+            );
+        }
+        return <span key={`${id}-${index}`}>{part}</span>;
+    });
+};
 
 const ManualEvidenceCard: React.FC<{
   item: ManualEvidence;
@@ -33,6 +101,40 @@ const ManualEvidenceCard: React.FC<{
   const updateField = (field: string, value: any) => {
     dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field, value } });
   };
+  
+  const renderDocument = (item: any) => (
+    <p>
+      <EmbeddedInput id={`${item.id}-description`} placeholder="የሰነዱ ገለጻ" value={item.description} onChange={(v) => updateField('description', v)} fieldKey="description" />
+      ከ <EmbeddedInput id={`${item.id}-issuer`} placeholder="አውጪ ተቋም" value={item.issuer} onChange={(v) => updateField('issuer', v)} options={DOCUMENT_ISSUERS} fieldKey="issuer" />
+      የተሰጠ፣ ቁጥር <EmbeddedInput id={`${item.id}-refNumber`} placeholder="ቁ." value={item.refNumber} onChange={(v) => updateField('refNumber', v)} fieldKey="refNumber" />
+      ፣ ቀን <EmbeddedInput id={`${item.id}-issueDate`} placeholder="ቀን" value={item.issueDate} onChange={(v) => updateField('issueDate', v)} fieldKey="issueDate" />
+      ፣ <EmbeddedInput id={`${item.id}-pageCount`} placeholder="ገጽ" value={item.pageCount} onChange={(v) => updateField('pageCount', v)} fieldKey="pageCount" /> ገጽ ያለው
+      <RadioGroup value={item.documentType} onValueChange={(v) => updateField('documentType', v)} className="inline-flex gap-3 mx-2 align-middle">
+        <div className="flex items-center space-x-1"><RadioGroupItem value="Copy" id={`copy-${item.id}`} /><Label htmlFor={`copy-${item.id}`}>ኮፒ</Label></div>
+        <div className="flex items-center space-x-1"><RadioGroupItem value="Original" id={`orig-${item.id}`} /><Label htmlFor={`orig-${item.id}`}>ኦርጅናል</Label></div>
+      </RadioGroup>
+      ሲሆን ዋናው <EmbeddedInput id={`${item.id}-originalLocation`} placeholder="ያለበት ወገን" value={item.originalLocation} onChange={(v) => updateField('originalLocation', v)} options={EVIDENCE_LOCATIONS} fieldKey="originalLocation" /> እጅ የሚገኝ።
+    </p>
+  );
+
+  const renderWitness = (item: any) => (
+     <p>
+        <EmbeddedInput id={`${item.id}-honorific`} placeholder="ማዕረግ" value={item.honorific} onChange={(v) => updateField('honorific', v)} options={HONORIFICS} fieldKey="honorific" />
+        <EmbeddedInput id={`${item.id}-name`} placeholder="ሙሉ ስም" value={item.name} onChange={(v) => updateField('name', v)} fieldKey="name" />
+        አድራሻቸው <EmbeddedInput id={`${item.id}-city`} placeholder="ከተማ" value={item.city} onChange={(v) => updateField('city', v)} options={REGIONS_AND_CITIES} fieldKey="city" />
+        ፣ <EmbeddedInput id={`${item.id}-subcity`} placeholder="ክ/ከተማ" value={item.subcity} onChange={(v) => updateField('subcity', v)} options={AA_SUBCITIES} fieldKey="subcity" />
+        {item.subcity === 'ሌላ' && <EmbeddedInput id={`${item.id}-subcityOther`} placeholder="ሌላ ክ/ከተማ" value={item.subcityOther} onChange={(v) => updateField('subcityOther', v)} fieldKey="subcityOther"/>}
+        ፣ ወረዳ <EmbeddedInput id={`${item.id}-woreda`} placeholder="ወረዳ" value={item.woreda} onChange={(v) => updateField('woreda', v)} fieldKey="woreda" />
+        ፣ የቤት ቁጥር <EmbeddedInput id={`${item.id}-houseNo`} placeholder="ቤት/ቁ" value={item.houseNo} onChange={(v) => updateField('houseNo', v)} fieldKey="houseNo" /> የሆኑ ምስክር።
+     </p>
+  );
+  
+  const renderCourtOrder = (item: any) => (
+      <p>
+        <EmbeddedInput id={`${item.id}-description`} placeholder="የትዕዛዙ ዝርዝር" value={item.description} onChange={(v) => updateField('description', v)} fieldKey="description" />
+      </p>
+  );
+
 
   return (
     <Card key={item.id} className="bg-muted/30">
@@ -59,97 +161,11 @@ const ManualEvidenceCard: React.FC<{
         )}
       </CardHeader>
       <CardContent className="space-y-4 px-4 pb-4">
-        {item.type === 'Document' && (
-          <div className="space-y-3 leading-relaxed text-sm">
-            <p>
-                <Input className="inline-block w-64 h-8" placeholder="የሰነዱ ገለጻ (ለምሳሌ፦ የህክምና ማስረጃ)" value={item.description} onChange={(e) => updateField('description', e.target.value)} />
-                የተሰጠው ከ
-                <Input className="inline-block w-48 h-8 mx-1" placeholder="አውጪ ተቋም ስም" value={item.issuer} onChange={(e) => updateField('issuer', e.target.value)} />
-                <Select onValueChange={(value) => updateField('issuer', value)}>
-                    <SelectTrigger className="inline-flex w-auto h-8"><SelectValue placeholder="ወይም ይምረጡ" /></SelectTrigger>
-                    <SelectContent>{DOCUMENT_ISSUERS.map(i => <SelectItem key={i} value={i}>{i}</SelectItem>)}</SelectContent>
-                </Select>
-                 ሲሆን፣ ማስረጃው ቁጥር 
-                <Input className="inline-block w-24 h-8 mx-1" placeholder="የማጣቀሻ ቁ." value={item.refNumber} onChange={(e) => updateField('refNumber', e.target.value)} />
-                 እና ቀን 
-                <Input className="inline-block w-32 h-8 mx-1" placeholder="የተሰጠበት ቀን" value={item.issueDate} onChange={(e) => updateField('issueDate', e.target.value)} />
-                 ያለው ነው። ሰነዱ 
-                <Input className="inline-block w-16 h-8 mx-1" type="number" placeholder="ገጾች" value={item.pageCount} onChange={(e) => updateField('pageCount', e.target.value)} />
-                 ገጾች ያሉት ሲሆን፣ 
-                <RadioGroup value={item.documentType} onValueChange={(value) => updateField('documentType', value)} className="inline-flex gap-3 mx-2 align-middle">
-                    <div className="flex items-center space-x-1"><RadioGroupItem value="Copy" id={`copy-${item.id}`} /><Label htmlFor={`copy-${item.id}`}>ኮፒ</Label></div>
-                    <div className="flex items-center space-x-1"><RadioGroupItem value="Original" id={`orig-${item.id}`} /><Label htmlFor={`orig-${item.id}`}>ኦርጅናል</Label></div>
-                </RadioGroup>
-                 ነው። ዋናው ቅጂ 
-                <Input className="inline-block w-32 h-8 mx-1" placeholder="ያለበት ወገን" value={item.originalLocation} onChange={(e) => updateField('originalLocation', e.target.value)} />
-                 <Select onValueChange={(value) => updateField('originalLocation', value)}>
-                    <SelectTrigger className="inline-flex w-auto h-8"><SelectValue placeholder="ወይም ይምረጡ" /></SelectTrigger>
-                    <SelectContent>{EVIDENCE_LOCATIONS.map(l => <SelectItem key={l} value={l}>{l}</SelectItem>)}</SelectContent>
-                </Select>
-                 እጅ ይገኛል።
-            </p>
-          </div>
-        )}
-        {item.type === 'Witness' && (
-            <div className="space-y-4">
-                <div className="grid grid-cols-[auto_auto_100px_auto_1fr_auto] items-center gap-x-4">
-                    <Label className="font-semibold">{item.type === 'Witness' && 'የሰው ምስክር'}</Label>
-                    <Label className="whitespace-nowrap">ማዕረግ</Label>
-                    <Select value={item.honorific} onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'honorific', value } })}>
-                        <SelectTrigger><SelectValue /></SelectTrigger>
-                        <SelectContent>{HONORIFICS.map(h => <SelectItem key={h} value={h}>{h}</SelectItem>)}</SelectContent>
-                    </Select>
-                    <Label className="whitespace-nowrap">ሙሉ ስም</Label>
-                    <Input value={item.name} onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'name', value: e.target.value } })} />
-                </div>
-
-                <div className="space-y-3 pt-2">
-                     <div className="grid grid-cols-[auto_auto_1.5fr_auto_1fr_auto_0.5fr_auto_0.5fr] items-center gap-x-2 gap-y-3">
-                        <Label className="font-semibold text-sm">አድራሻ</Label>
-                        <Label className="text-xs">ከተማ/ክልል</Label>
-                        <Select value={item.city} onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'city', value } })}>
-                        <SelectTrigger><SelectValue /></SelectTrigger>
-                        <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
-                        </Select>
-                        
-                        <Label className="text-xs">ክ/ከተማ</Label>
-                        <Select 
-                            value={item.subcity} 
-                            onValueChange={(value) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'subcity', value } })}
-                        >
-                            <SelectTrigger><SelectValue /></SelectTrigger>
-                            <SelectContent>{AA_SUBCITIES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}</SelectContent>
-                        </Select>
-                        
-                        <Label className="text-xs">ወረዳ</Label>
-                        <Input className="h-9" value={item.woreda} onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'woreda', value: e.target.value } })} />
-                        
-                        <Label className="text-xs">ቤት/ቁ</Label>
-                        <Input className="h-9" value={item.houseNo} onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'houseNo', value: e.target.value } })} />
-                    </div>
-                    {item.subcity === 'ሌላ' && (
-                        <div className="grid grid-cols-[auto_1fr] items-center gap-x-4 pt-1">
-                            <Label className="text-xs">ሌላ ክ/ከተማ</Label>
-                            <Input
-                                value={item.subcityOther || ''}
-                                onChange={(e) => dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'subcityOther', value: e.target.value }})}
-                            />
-                        </div>
-                    )}
-                </div>
-            </div>
-        )}
-        {item.type === 'CourtOrder' && (
-          <div className="space-y-2">
-            <Label>የትዕዛዙ ዝርዝር</Label>
-            <Input
-              value={item.description}
-              onChange={(e) =>
-                dispatch({ type: 'UPDATE_EVIDENCE', payload: { id: item.id, field: 'description', value: e.target.value } })
-              }
-            />
-          </div>
-        )}
+        <div className="text-sm leading-relaxed">
+            {item.type === 'Document' && renderDocument(item)}
+            {item.type === 'Witness' && renderWitness(item)}
+            {item.type === 'CourtOrder' && renderCourtOrder(item)}
+        </div>
       </CardContent>
     </Card>
   );
@@ -170,8 +186,8 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
   const manualWitnesses = evidence.filter((e) => e.type === 'Witness');
   const manualCourtOrders = evidence.filter((e) => e.type === 'CourtOrder');
 
-  const updateSmartCredential = (registryId: string, credentialValue: string) => {
-      dispatch({ type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL', payload: { registryId, credentialValue } });
+  const updateSmartCredential = (registryId: string, credentialValue: string, field: string) => {
+      dispatch({ type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL', payload: { registryId, credentialValue, field } });
   }
 
   return (
@@ -194,16 +210,20 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                   </div>
                 </CardHeader>
                 <CardContent className="px-4 pb-4">
-                  <div className="text-sm">
-                    <p>
-                        {item.credentialLabel}: 
-                        <Input
-                          className="inline-block w-64 h-8 mx-1"
-                          placeholder={item.credentialPlaceholder}
-                          value={smartEvidence[item.regId]?.credentialId || ''}
-                          onChange={(e) => updateSmartCredential(item.regId, e.target.value)}
-                        />
-                    </p>
+                  <div className="text-sm leading-relaxed">
+                    {item.sentenceTemplate ? (
+                        parseSentence(item.sentenceTemplate, smartEvidence[item.regId], dispatch, item.regId, 'smart', item.regId)
+                    ) : (
+                        <p>
+                            {item.credentialLabel}: 
+                            <Input
+                            className="inline-block w-64 h-8 mx-1"
+                            placeholder={item.credentialPlaceholder}
+                            value={smartEvidence[item.regId]?.credentialId || ''}
+                            onChange={(e) => updateSmartCredential(item.regId, e.target.value, 'credentialId')}
+                            />
+                        </p>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -260,16 +280,20 @@ export default function EvidenceTab({ state, dispatch }: EvidenceTabProps) {
                   </Button>
                 </CardHeader>
                 <CardContent className="px-4 pb-4">
-                  <div className="text-sm">
-                    <p>
-                        {item.credentialLabel}: 
-                        <Input
-                          className="inline-block w-64 h-8 mx-1"
-                          placeholder={item.credentialPlaceholder}
-                          value={smartEvidence[item.regId]?.credentialId || ''}
-                          onChange={(e) => updateSmartCredential(item.regId, e.target.value)}
-                        />
-                    </p>
+                  <div className="text-sm leading-relaxed">
+                     {item.sentenceTemplate ? (
+                        parseSentence(item.sentenceTemplate, smartEvidence[item.regId], dispatch, item.regId, 'smart', item.regId)
+                    ) : (
+                        <p>
+                            {item.credentialLabel}: 
+                            <Input
+                            className="inline-block w-64 h-8 mx-1"
+                            placeholder={item.credentialPlaceholder}
+                            value={smartEvidence[item.regId]?.credentialId || ''}
+                            onChange={(e) => updateSmartCredential(item.regId, e.target.value, 'credentialId')}
+                            />
+                        </p>
+                    )}
                   </div>
                 </CardContent>
               </Card>

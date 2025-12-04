@@ -199,7 +199,8 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.entries(allEntities).r
         label: stripEnglish(entity.title),
         type: 'Document', // Defaulting to document, can be refined
         credentialLabel: entity.credentialLabel || `${stripEnglish(entity.title)} ማጣቀሻ`,
-        credentialPlaceholder: entity.credentialPlaceholder || `ለምሳሌ፦ ${key.substring(0, 3).toUpperCase()}-123`
+        credentialPlaceholder: entity.credentialPlaceholder || `ለምሳሌ፦ ${key.substring(0, 3).toUpperCase()}-123`,
+        sentenceTemplate: entity.sentenceTemplate || `${stripEnglish(entity.title)} ማስረጃ`
     };
     return acc;
 }, {});

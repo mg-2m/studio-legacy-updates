@@ -13,7 +13,7 @@ const getPluralizedTitle = (title: string, count: number): string => {
     
     if (title.endsWith(')')) {
         const parts = title.split('(');
-        return `${parts[0]}ዎች (${parts[1]}`.toUpperCase();
+        return `${parts[0]}ዎች (${parts[1]}`;
     }
     return `${title}ዎች`.toUpperCase();
 };
@@ -60,21 +60,27 @@ export default function PageTwo({ state }: PageTwoProps) {
   const witnessEvidence: { label: string; details: string }[] = [];
   const courtOrderEvidence: { label: string; details: string }[] = [];
 
+  const parseTemplate = (template: string, data: any): string => {
+    return template.replace(/\[(.*?)\]/g, (match, key) => {
+        return `<strong>${data[key.trim()] || '_____'}</strong>`;
+    });
+  }
+
   // Process Smart Evidence
   Object.entries(smartEvidence).forEach(([regId, smartEv]) => {
     if (!smartEv.active) return;
     const registryItem = EVIDENCE_REGISTRY[regId];
-    if (registryItem) {
-        const description = `${registryItem.label} ${registryItem.credentialLabel}: <strong>${smartEv.credentialId || '_____'}</strong>`;
-        documentEvidence.push({ description });
+    if (registryItem && registryItem.sentenceTemplate) {
+        const filledSentence = parseTemplate(registryItem.sentenceTemplate, smartEv);
+        documentEvidence.push({ description: filledSentence });
     }
   });
 
   // Process Manual Evidence
   evidence.forEach((e: ManualEvidence) => {
     if (e.type === 'Document') {
-        const issuerText = e.issuer === 'ሌላ' ? (e as any).issuerOther : e.issuer;
-        const locationText = e.originalLocation === 'ሌላ' ? (e as any).originalLocationOther : e.originalLocation;
+        const issuerText = e.issuer === 'ሌላ' ? e.issuerOther : e.issuer;
+        const locationText = e.originalLocation === 'ሌላ' ? e.originalLocationOther : e.originalLocation;
         
         let fullDescription = `
             ${e.description || 'የሰነድ ማስረጃ'} ከ <strong>${issuerText || '_____'}</strong> የተሰጠ፣ 

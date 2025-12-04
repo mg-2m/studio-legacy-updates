@@ -17,7 +17,7 @@
         ],
         "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላ ሰው ቸልተኝነት ወይም ጥፋት ምክንያት በአካልዎ ወይም በንብረትዎ ላይ ለደረሰ ጉዳት የካሳ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሚጠየቀው የካሳ መጠን የፍርድ ቤቱን የገንዘብ ዳኝነት ሥልጣን ይወስናል። ጉዳዩ ንብረቱ በሚገኝበት ወይም አደጋው በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ ከውል ውጭ ለሚደርስ ጉዳት የካሳ ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ **ሁለት (2) ዓመት** ነው። ይህ ጊዜ መቆጠር የሚጀምረው ተጎጂው ወገን በደረሰው ጉዳት እና ጉዳቱን ያደረሰውን ሰው ማንነት ካወቀበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየግድ የሚያስፈልግ ማስረጃ፡ የጥፋቱን መኖር የሚያሳይ ማስረጃ (PoliceAccidentReport) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ (MedicalExpenseReceipts, PropertyValuationReport)።\nተጨማሪ ማስረጃ፡ የምስክሮች ቃል (WitnessStatements)፣ የጉዳቱን ሁኔታ የሚያሳዩ ፎቶዎች።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላ ሰው ቸልተኝነት ወይም ጥፋት ምክንያት በአካልዎ ወይም በንብረትዎ ላይ ለደረሰ ጉዳት የካሳ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየሚጠየቀው የካሳ መጠን የፍርድ ቤቱን የገንዘብ ዳኝነት ሥልጣን ይወስናል። ጉዳዩ ንብረቱ በሚገኝበት ወይም አደጋው በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ ከውል ውጭ ለሚደርስ ጉዳት የካሳ ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ **ሁለት (2) ዓመት** ነው። ይህ ጊዜ መቆጠር የሚጀምረው ተጎጂው ወገን በደረሰው ጉዳት እና ጉዳቱን ያደረሰውን ሰው ማንነት ካወቀበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **የግድ የሚያስፈልግ ማስረጃ፡** የጥፋቱን መኖር የሚያሳይ ማስረጃ (PoliceAccidentReport) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ (MedicalExpenseReceipts, PropertyValuationReport)።\n- **ተጨማሪ ማስረጃ፡** የምስክሮች ቃል (WitnessStatements)፣ የጉዳቱን ሁኔታ የሚያሳዩ ፎቶዎች።",
       "partyTitles": {
         "applicant": "Plaintiff (ከሳሽ)",
         "respondent": "Defendant (ተከሳሽ)"
@@ -158,7 +158,7 @@
         ],
         "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ህንጻ በግንባታ ጉድለት ወይም በጥገና እጦት ምክንያት ጉዳት ሲያደርስ፣ የህንጻውን ባለቤት ጥፋት ማረጋገጥ ሳያስፈልግ ካሳ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ጉዳቱ በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ የይርጋ ጊዜ ገደቡ **ሁለት (2) ዓመት** ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ (Required Evidence): የጉዳቱን መንስኤ (የህንጻ መፍረስ) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ። የባለሙያ ሪፖርት ክሱን በእጅጉ ያጠናክረዋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ህንጻ በግንባታ ጉድለት ወይም በጥገና እጦት ምክንያት ጉዳት ሲያደርስ፣ የህንጻውን ባለቤት ጥፋት ማረጋገጥ ሳያስፈልግ ካሳ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ጉዳቱ በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ የይርጋ ጊዜ ገደቡ **ሁለት (2) ዓመት** ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- **ማስረጃ (Required Evidence):** የጉዳቱን መንስኤ (የህንጻ መፍረስ) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ። የባለሙያ ሪፖርት ክሱን በእጅጉ ያጠናክረዋል።",
       "partyTitles": {
         "applicant": "Plaintiff (ከሳሽ)",
         "respondent": "Owner of the Building (የህንፃው ባለቤት)"

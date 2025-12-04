@@ -40,21 +40,39 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                 value={metadata.courtLevel} 
                 onValueChange={(value) => {
                   dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevel', value } });
-                  const newDefaultBench = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY][0];
-                  dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
+                  if (value !== 'ሌላ') {
+                    const newDefaultBench = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY][0];
+                    dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
+                  } else {
+                     dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: 'ሌላ' } });
+                  }
                 }}
               >
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
               </Select>
             </div>
-            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-              <Label>ችሎት</Label>
-              <Select value={metadata.bench} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value } })}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
-                  <SelectContent>{(COURT_HIERARCHY[metadata.courtLevel as keyof typeof COURT_HIERARCHY] || []).map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
-              </Select>
-            </div>
+
+            {metadata.courtLevel === 'ሌላ' ? (
+                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                    <Label>የፍ/ቤት ስም</Label>
+                    <Input 
+                        value={metadata.bench}
+                        onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: e.target.value }})}
+                        placeholder="የፍርድ ቤቱን ሙሉ ስም ያስገቡ"
+                    />
+                </div>
+            ) : (
+                <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+                <Label>ችሎት</Label>
+                <Select value={metadata.bench} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value } })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>{(COURT_HIERARCHY[metadata.courtLevel as keyof typeof COURT_HIERARCHY] || []).map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
+                </Select>
+                </div>
+            )}
+
+
             <div className="grid grid-cols-[auto_1fr] items-center gap-4">
               <Label>ከተማ</Label>
               <Select value={metadata.city} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'city', value } })}>
@@ -109,7 +127,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         <CardContent className="p-4 space-y-2">
           {applicants.map(p => <PartyForm key={p.id} role="applicants" party={p} dispatch={dispatch} title={partyTitles.applicant} />)}
           <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'applicants' } })}>
-            <Plus className="mr-2 h-4 w-4" /> አመልካች ጨምር
+            <Plus className="mr-2 h-4 w-4" /> {partyTitles.applicant} ጨምር
           </Button>
         </CardContent>
       </Card>
@@ -118,7 +136,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
         <CardContent className="p-4 space-y-2">
           {respondents.map(p => <PartyForm key={p.id} role="respondents" party={p} dispatch={dispatch} title={partyTitles.respondent}/>)}
            <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_PARTY', payload: { role: 'respondents' } })}>
-            <Plus className="mr-2 h-4 w-4" /> ተከሳሽ ጨምር
+            <Plus className="mr-2 h-4 w-4" /> {partyTitles.respondent} ጨምር
           </Button>
         </CardContent>
       </Card>

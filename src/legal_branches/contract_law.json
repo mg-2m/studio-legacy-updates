@@ -2,30 +2,31 @@
 {
   "templates": {
     "contract_debt_recovery": {
-      "documentTitle": "የብድር/ዕዳ ማስመለሻ ክስ (Statement of Claim for Recovery of Loan/Debt)",
-      "jurisdictionText": "Art. 216 et seq. of the Civil Procedure Code & Civil Code Art. 2471.",
+      "documentTitle": "የብድር/ዕዳ ማስመለሻ ክስ",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ቁጥር ፪፻፲፮ እና ተከታዮቹ እና የፍትሐ ብሔር ሕግ ቁጥር ፪ሺ፬፻፸፩",
       "meta": {
         "keywords": ["debt recovery", "loan agreement", "non-payment", "የዕዳ ማስመለስ", "የብድር ክስ"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "jurisdictionType": "Federal/Regional First Instance",
+        "purpose": "ለተሰጠ የብድር ዕዳ"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሰው ወይም ድርጅት የሰጡትን ብድር ወይም ዕዳ ለመመለስ ፈቃደኛ ሳይሆን ሲቀር ክስ ለመመስረት ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየክሱ የገንዘብ መጠን ከፍርድ ቤቱ የዳኝነት ወሰን ጋር መጣጣም አለበት።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በጽሑፍ ለተደገፈ የውል ዕዳ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የጽሑፍ የብድር ስምምነት ወይም የዕዳ ማመኛ ሰነድ (WrittenContract, AdmissionofDebt)።\n- ገንዘቡ መተላለፉን የሚያሳይ የባንክ መረጃ ወይም ደረሰኝ (PaymentReceipt)።\n- ክፍያ እንዲፈጸም የተላከ የማስጠንቀቂያ ደብዳቤ (NoticeofDefault)።",
+      "templateDescription": "### መመሪያ\nይህ አብነት አንድ ሰው ወይም ድርጅት የሰጡትን ብድር ወይም ዕዳ ለመመለስ ፈቃደኛ ሳይሆን ሲቀር ክስ ለመመስረት ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየክሱ የገንዘብ መጠን ከፍርድ ቤቱ የዳኝነት ወሰን ጋር መጣጣም አለበት።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በጽሑፍ ለተደገፈ የውል ዕዳ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች\nየጽሑፍ የብድር ስምምነት ወይም የዕዳ ማመኛ ሰነድ።\nገንዘቡ መተላለፉን የሚያሳይ የባንክ መረጃ ወይም ደረሰኝ።\nክፍያ እንዲፈጸም የተላከ የማስጠንቀቂያ ደብዳቤ።",
       "partyTitles": {
-        "applicant": "ከሳሽ (አበዳሪ) (Plaintiff (Creditor))",
-        "respondent": "ተከሳሽ (ተበዳሪ) (Defendant (Debtor))"
+        "applicant": "ከሳሽ (አበዳሪ)",
+        "respondent": "ተከሳሽ (ተበዳሪ)"
       },
       "facts": [
         {
           "id": "con_fact_loan_agreement",
           "label": "የውል መመስረት",
-          "legalText": "በ [Date] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል። (On [Date], the Plaintiff and Defendant entered into a written loan agreement.)",
-          "citation": "Civ. Code Art. 2471",
+          "legalText": "በ {{Date}} ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል።",
+          "citation": "የፍትሐ ብሔር ሕግ ፪፬፻፸፩",
           "autoEvidence": ["WrittenContract", "AdmissionofDebt"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የብድር ስምምነት" }
         },
         {
           "id": "con_fact_disbursement",
           "label": "የውል መመስረት",
-          "legalText": "ከሳሽ [Amount] ብር ለተከሳሽ ሰጥቷል። (The Plaintiff disbursed the sum of [Amount] ETB to the Defendant.)",
+          "legalText": "ከሳሽ {{Amount}} ብር ለተከሳሽ ሰጥቷል።",
           "citation": "",
           "autoEvidence": ["PaymentReceipt"],
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "ገንዘብ መሰጠት" }
@@ -33,22 +34,22 @@
         {
           "id": "con_fact_payment_due",
           "label": "ውል ማፍረስ",
-          "legalText": "የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል። (The repayment period agreed upon expired on [Date].)",
-          "citation": "Civ. Code Art. 1857",
+          "legalText": "የተስማሙበት የመክፈያ ጊዜ በ {{Date}} አብቅቷል።",
+          "citation": "የፍትሐ ብሔር ሕግ ፩፰፻፶፯",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የመክፈያ ጊዜ ማብቃት" }
         },
         {
           "id": "con_fact_failure_to_pay",
           "label": "ውል ማፍረስ",
-          "legalText": "ዕዳው ቢደርስም ተከሳሹ ክፍያ አልፈጸመም። (Despite the maturity of the debt, the Defendant failed to effect payment.)",
+          "legalText": "ዕዳው ቢደርስም ተከሳሹ ክፍያ አልፈጸመም።",
           "citation": "",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "ክፍያ አለመፈጸም" }
         },
         {
           "id": "con_fact_notice_given",
           "label": "ውል ማፍረስ",
-          "legalText": "ከሳሽ በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል። (The Plaintiff served a formal notice of default on [Date].)",
-          "citation": "Civ. Code Art. 1772",
+          "legalText": "ከሳሽ በ {{Date}} መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
+          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፸፪",
           "autoEvidence": ["NoticeofDefault"],
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ማስታወቂያ መሰጠት" }
         }
@@ -56,123 +57,125 @@
       "reliefs": [
         {
           "id": "con_relief_principal_amount",
-          "text": "ተከሳሹ ዋናውን ገንዘብ {{principal}} ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ። (Judgment ordering the Defendant to pay the principal sum of {{principal}} ETB.)",
+          "text": "ተከሳሹ ዋናውን ገንዘብ {{principal}} ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ።",
           "isDefault": true,
           "isDynamic": true
         },
         {
           "id": "con_relief_legal_interest",
-          "text": "ከውል ማፍረሻ ቀን ({{defaultDate}}) ጀምሮ የተሰላውን የሕግ ወለድ ({{interestRate}}%) ማለትም {{interestAmount}} ብር እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order payment of legal interest ({{interestRate}}%) calculated from the date of default ({{defaultDate}}), amounting to {{interestAmount}} ETB.)",
-          "citation": "Civ. Code Art. 1751",
+          "text": "ከውል ማፍረሻ ቀን {{defaultDate}} ጀምሮ የተሰላውን የሕግ ወለድ {{interestRate}}% ማለትም {{interestAmount}} ብር እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፶፩",
           "isDefault": true,
           "isDynamic": true
         },
         {
           "id": "con_relief_contractual_interest",
-          "text": "በ [Percentage] የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ። (Order payment of contractual interest agreed at [Percentage] (max 12%).)",
-          "citation": "Civ. Code Art. 2479",
+          "text": "በ {{Percentage}} የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
+          "citation": "የፍትሐ ብሔር ሕግ ፪፬፻፸፱",
           "isDefault": false,
           "isDynamic": false
         }
       ],
       "calculations": {
         "debt_calculator": {
-          "title": "የዕዳ ማስያ (Debt Calculator)",
-          "description": "Calculate principal and interest for the claim.",
+          "title": "የዕዳ ማስያ",
+          "description": "የሚጠየቀውን ዋና ገንዘብ እና ወለድ ያስሉ።",
           "inputs": [
-            { "id": "principal", "label": "Principal Amount (የብር መጠን)", "type": "number", "defaultValue": 10000 },
-            { "id": "interestRate", "label": "Annual Interest Rate (%) (ዓመታዊ ወለድ %)", "type": "number", "defaultValue": 9 },
-            { "id": "defaultDate", "label": "Date of Default (የክፍያ ጊዜ ያለፈበት ቀን)", "type": "date", "defaultValue": "2023-01-01" }
+            { "id": "principal", "label": "የብር መጠን", "type": "number", "defaultValue": 10000 },
+            { "id": "interestRate", "label": "ዓመታዊ ወለድ %", "type": "number", "defaultValue": 9 },
+            { "id": "defaultDate", "label": "የክፍያ ጊዜ ያለፈበት ቀን", "type": "date", "defaultValue": "2023-01-01" }
           ],
           "outputs": [
-            { "id": "interestAmount", "label": "Total Interest Due (ጠቅላላ ወለድ)" }
+            { "id": "interestAmount", "label": "ጠቅላላ ወለድ" }
           ],
           "formula": "(principal * (interestRate / 100) / 365) * (differenceInDays(new Date(), defaultDate))"
         }
       }
     },
     "contract_specific_performance": {
-      "documentTitle": "ውል ይፈጸምልኝ ክስ (Statement of Claim for Specific Performance of Contract)",
-      "jurisdictionText": "Art. 1776 of the Civil Code & Civil Procedure Code.",
+      "documentTitle": "ውል ይፈጸምልኝ ክስ",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ ፩፯፻፸፮",
        "meta": {
         "keywords": ["specific performance", "enforcement", "contract breach", "ውል ይፈጸምልኝ", "ውል ማስከበር"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "jurisdictionType": "Federal/Regional First Instance",
+        "purpose": "የውል ግዴታን ለማስፈጸም"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ተዋዋይ ወገን በውሉ መሠረት የገባውን ግዴታ ለመፈጸም ፈቃደኛ ሳይሆን ሲቀር፣ ፍርድ ቤቱ ግዴታውን እንዲፈጽም እንዲያስገድደው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nውሉን ለማስፈጸም ስልጣን ያለው ፍርድ ቤት ብዙውን ጊዜ ውሉ የተፈጸመበት ወይም ግዴታው መፈጸም የነበረበት ቦታ የሚገኝ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ውሉ እንዲፈጸም መጠየቅዎ ለእርስዎ ልዩ ጥቅም ያለው መሆኑን ማሳየት አለብዎት።\n- የጽሑፍ ውል (WrittenContract) ማስረጃ ማቅረብ ያስፈልጋል።",
+      "templateDescription": "### መመሪያ\nይህ አብነት አንድ ተዋዋይ ወገን በውሉ መሠረት የገባውን ግዴታ ለመፈጸም ፈቃደኛ ሳይሆን ሲቀር፣ ፍርድ ቤቱ ግዴታውን እንዲፈጽም እንዲያስገድደው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nውሉን ለማስፈጸም ስልጣን ያለው ፍርድ ቤት ብዙውን ጊዜ ውሉ የተፈጸመበት ወይም ግዴታው መፈጸም የነበረበት ቦታ የሚገኝ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች\nውሉ እንዲፈጸም መጠየቅዎ ለእርስዎ ልዩ ጥቅም ያለው መሆኑን ማሳየት አለብዎት።\nየጽሑፍ ውል ማስረጃ ማቅረብ ያስፈልጋል።",
       "partyTitles": {
-        "applicant": "ከሳሽ (Plaintiff)",
-        "respondent": "ተከሳሽ (Defendant)"
+        "applicant": "ከሳሽ",
+        "respondent": "ተከሳሽ"
       },
       "facts": [
         {
           "id": "con_fact_valid_contract",
           "label": "የውል ግዴታ",
-          "legalText": "በ [Subject Matter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ። (A valid contract exists between the parties regarding [Subject Matter].)",
-          "citation": "Civ. Code Art. 1678",
+          "legalText": "በ {{Subject Matter}} ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ።",
+          "citation": "የፍትሐ ብሔር ሕግ ፩፮፻፸፰",
           "autoEvidence": ["WrittenContract"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ሕጋዊ ውል" }
         },
         {
           "id": "con_fact_plaintiff_performance",
           "label": "የውል ግዴታ",
-          "legalText": "ከሳሽ በውሉ መሠረት ግዴታዎቹን ሙሉ በሙሉ ፈጽሟል። (The Plaintiff has fully performed their obligations under the contract.)",
+          "legalText": "ከሳሽ በውሉ መሠረት ግዴታዎቹን ሙሉ በሙሉ ፈጽሟል።",
           "citation": "",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "የከሳሽ ግዴታ መወጣት" }
         },
         {
           "id": "con_fact_non_performance",
           "label": "የውል ጥሰት",
-          "legalText": "ተከሳሹ ያለ ሕጋዊ ምክንያት [Specific Obligation] አልፈጸመም። (The Defendant has failed to perform [Specific Obligation] without lawful cause.)",
-          "citation": "Civ. Code Art. 1771",
+          "legalText": "ተከሳሹ ያለ ሕጋዊ ምክንያት {{Specific Obligation}} አልፈጸመም።",
+          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፸፩",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የተከሳሽ ግዴታ አለመወጣት" }
         },
         {
           "id": "con_fact_special_interest",
           "label": "የውል ጥሰት",
-          "legalText": "የተወሰነ አፈጻጸም ለከሳሽ ልዩ ፍላጎት ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም። (Specific performance is of special interest to the Plaintiff and does not affect the personal liberty of the Defendant.)",
-          "citation": "Civ. Code Art. 1776",
+          "legalText": "የተወሰነ አፈጻጸም ለከሳሽ ልዩ ፍላጎት ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም።",
+          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፸፮",
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ልዩ ጥቅም" }
         }
       ],
       "reliefs": [
         {
           "id": "con_relief_enforce_performance",
-          "text": "ተከሳሹ [Action, e.g., transferring title] በማድረግ ውሉን በተለይ እንዲፈጽም ትዕዛዝ እንዲሰጥ። (Order the Defendant to specifically perform the contract by [Action, e.g., transferring title].)",
+          "text": "ተከሳሹ {{Action, e.g., transferring title}} በማድረግ ውሉን በተለይ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
           "isDefault": true,
           "isDynamic": false
         },
         {
           "id": "con_relief_alt_damages",
-          "text": "በአማራጭ፣ አፈጻጸም የማይቻል ከሆነ የካሳ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ። (Alternatively, if performance is impossible, order payment of damages.)",
+          "text": "በአማራጭ፣ አፈጻጸም የማይቻል ከሆነ የካሳ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ።",
           "isDefault": false,
           "isDynamic": false
         }
       ]
     },
     "contract_termination_claim": {
-      "documentTitle": "የውል ስረዛ ክስ (Statement of Claim for Judicial Cancellation of Contract)",
-      "jurisdictionText": "Art. 1784 & 1785 of the Civil Code.",
+      "documentTitle": "የውል ስረዛ ክስ",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ ፩፯፻፹፬ እና ፩፯፻፹፭",
       "meta": {
         "keywords": ["contract termination", "cancellation", "breach of contract", "የውል ስረዛ", "ውል ማፍረስ"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "jurisdictionType": "Federal/Regional First Instance",
+        "purpose": "የውል ስረዛን ለማረጋገጥ"
       },
-       "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሌላኛው ወገን የፈጸመው የውል ጥሰት በጣም መሠረታዊ እና ከባድ ከመሆኑ የተነሳ የውሉ መቀጠል ትርጉም የለሽ ሲሆን ውሉ በፍርድ ቤት እንዲሰረዝ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nክሱ መቅረብ ያለበት ውሉ በተፈጸመበት ቦታ ወይም ጥሰቱ በተከሰተበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የተፈጸመው ጥሰት የውሉን ዋና ዓላማ የሚያናጋ መሆኑን ማሳየት ያስፈልጋል።\n- ውሉ ከመሰረዙ በፊት ለተዋዋይ ወገን ማስጠንቀቂያ (NoticeofDefault) መስጠት አስፈላጊ ሊሆን ይችላል።\n- የጽሑፍ ውል (WrittenContract) ማስረጃ ማቅረብ ያስፈልጋል።",
+       "templateDescription": "### መመሪያ\nይህ አብነት ሌላኛው ወገን የፈጸመው የውል ጥሰት በጣም መሠረታዊ እና ከባድ ከመሆኑ የተነሳ የውሉ መቀጠል ትርጉም የለሽ ሲሆን ውሉ በፍርድ ቤት እንዲሰረዝ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nክሱ መቅረብ ያለበት ውሉ በተፈጸመበት ቦታ ወይም ጥሰቱ በተከሰተበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች\nየተፈጸመው ጥሰት የውሉን ዋና ዓላማ የሚያናጋ መሆኑን ማሳየት ያስፈልጋል።\nውሉ ከመሰረዙ በፊት ለተዋዋይ ወገን ማስጠንቀቂያ መስጠት አስፈላጊ ሊሆን ይችላል።\nየጽሑፍ ውል ማስረጃ ማቅረብ ያስፈልጋል።",
       "partyTitles": {
-        "applicant": "ከሳሽ (Plaintiff)",
-        "respondent": "ተከሳሽ (Defendant)"
+        "applicant": "ከሳሽ",
+        "respondent": "ተከሳሽ"
       },
       "facts": [
         {
           "id": "con_fact_fundamental_breach",
           "label": "የጥሰት ትንተና",
-          "legalText": "የተከሳሹ አለመፈጸም የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው። (The Defendant's non-performance constitutes a fundamental breach affecting the essence of the contract.)",
-          "citation": "Civ. Code Art. 1785",
+          "legalText": "የተከሳሹ አለመፈጸም የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው።",
+          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፹፭",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "መሠረታዊ ጥሰት" }
         },
         {
           "id": "con_fact_payments_made",
           "label": "ካሳ",
-          "legalText": "ከሳሽ ለተከሳሽ [Amount] ከፍሏል። (The Plaintiff has already paid [Amount] to the Defendant.)",
+          "legalText": "ከሳሽ ለተከሳሽ {{Amount}} ከፍሏል።",
           "citation": "",
           "autoEvidence": ["PaymentReceipt"],
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "የተከፈለ ገንዘብ" }
@@ -181,43 +184,44 @@
       "reliefs": [
         {
           "id": "con_relief_judicial_cancellation",
-          "text": "ውሉ መሰረዙን/መቋረጡን የሚገልጽ ፍርድ እንዲሰጥ። (Judgment declaring the contract cancelled/terminated.)",
+          "text": "ውሉ መሰረዙን/መቋረጡን የሚገልጽ ፍርድ እንዲሰጥ።",
           "isDefault": true,
           "isDynamic": false
         },
         {
           "id": "con_relief_reinstatement",
-          "text": "ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ። (Order the parties to be reinstated to their former position (Restitution).)",
-          "citation": "Civ. Code Art. 1815",
+          "text": "ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።",
+          "citation": "የፍትሐ ብሔር ሕግ ፩፰፻፲፭",
           "isDefault": true,
           "isDynamic": false
         }
       ]
     },
     "app_attachment_before_judgment": {
-      "documentTitle": "ከፍርድ በፊት የንብረት እግድ ማመልከቻ (Application for Attachment of Property Before Judgment)",
-      "jurisdictionText": "Art. 151 & 152 of the Civil Procedure Code.",
+      "documentTitle": "ከፍርድ በፊት የንብረት እግድ ማመልከቻ",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ ፩፻፶፩ እና ፩፻፶፪",
       "meta": {
         "keywords": ["attachment", "injunction", "pre-judgment", "asset freeze", "የንብረት እግድ", "ጊዜያዊ"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "jurisdictionType": "Federal/Regional First Instance",
+        "purpose": "ከፍርድ በፊት እግድ ለመጠየቅ"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ፣ ዋናው ክስ እየታየ ባለበት ወቅት ተከሳሹ የፍርድ አፈጻጸምን ለማደናቀፍ ንብረቱን ሊሸጥ ወይም ሊያሸሽ ይችላል የሚል በቂ ስጋት ሲኖር፣ ፍርድ ቤቱ በንብረቱ ላይ የእግድ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ደረጃ ላይ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት አለብዎት።\n- ተከሳሹ ንብረቱን ለማሸሽ እየሞከረ መሆኑን የሚያሳይ ተጨባጭ ማስረጃ ወይም ስጋት መኖሩን ማሳየት ያስፈልጋል።",
+      "templateDescription": "### መመሪያ\nይህ አስቸኳይ ማመልከቻ፣ ዋናው ክስ እየታየ ባለበት ወቅት ተከሳሹ የፍርድ አፈጻጸምን ለማደናቀፍ ንብረቱን ሊሸጥ ወይም ሊያሸሽ ይችላል የሚል በቂ ስጋት ሲኖር፣ ፍርድ ቤቱ በንብረቱ ላይ የእግድ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ደረጃ ላይ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች\nበዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት አለብዎት።\nተከሳሹ ንብረቱን ለማሸሽ እየሞከረ መሆኑን የሚያሳይ ተጨባጭ ማስረጃ ወይም ስጋት መኖሩን ማሳየት ያስፈልጋል።",
       "partyTitles": {
-        "applicant": "ከሳሽ (Plaintiff)",
-        "respondent": "ተከሳሽ (Defendant)"
+        "applicant": "ከሳሽ",
+        "respondent": "ተከሳሽ"
       },
       "facts": [
         {
           "id": "app_fact_intent_to_obstruct",
           "label": "የፍትሕ መደናቀፍ",
-          "legalText": "ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው። (The Defendant is about to dispose of their property or remove it from the court's jurisdiction with intent to obstruct the execution of the decree.)",
-          "citation": "CPC Art. 151",
+          "legalText": "ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው።",
+          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፩፻፶፩",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የማደናቀፍ ዓላማ" }
         },
         {
           "id": "app_fact_prima_facie_case",
           "label": "የፍትሕ መደናቀፍ",
-          "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ ክስ ያለው ሲሆን በዋናው ክስ ላይ ሊሳካለት ይችላል። (The Applicant has a strong prima facie case and is likely to succeed in the main suit.)",
+          "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ ክስ ያለው ሲሆን በዋናው ክስ ላይ ሊሳካለት ይችላል።",
           "citation": "",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "ጠንካራ ክስ" }
         }
@@ -225,43 +229,44 @@
       "reliefs": [
         {
           "id": "app_relief_attach_property",
-          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት [Specify Property] እንዲታገድ ትዕዛዝ እንዲሰጥ። (Order the attachment of the Defendant's property [Specify Property] pending final judgment.)",
+          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት {{Specify Property}} እንዲታገድ ትዕዛዝ እንዲሰጥ።",
           "isDefault": true,
           "isDynamic": false
         },
         {
           "id": "app_relief_security_bond",
-          "text": "በአማራጭ፣ ተከሳሹ ለተጠየቀው ገንዘብ ዋስትና እንዲያቀርብ ትዕዛዝ እንዲሰጥ። (Alternatively, order the Defendant to furnish security for the amount claimed.)",
+          "text": "በአማራጭ፣ ተከሳሹ ለተጠየቀው ገንዘብ ዋስትና እንዲያቀርብ ትዕዛዝ እንዲሰጥ።",
           "isDefault": false,
           "isDynamic": false
         }
       ]
     },
     "app_judgment_on_admission": {
-      "documentTitle": "በእምነት ላይ ለሚሰጥ ፍርድ ማመልከቻ (Application for Judgment on Admissions)",
-      "jurisdictionText": "Art. 242 of the Civil Procedure Code.",
+      "documentTitle": "በእምነት ላይ ለሚሰጥ ፍርድ ማመልከቻ",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ ፪፻፵፪",
        "meta": {
         "keywords": ["judgment on admission", "summary judgment", "pleading", "በእምነት ላይ ፍርድ", "አፋጣኝ ውሳኔ"],
-        "jurisdictionType": "Federal/Regional First Instance"
+        "jurisdictionType": "Federal/Regional First Instance",
+        "purpose": "በእምነት ላይ ፍርድ ለመጠየቅ"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ ማመልከቻ ተከሳሹ በመከላከያ መልሱ ላይ የክሱን ዋና ዋና ነጥቦች (ለምሳሌ የእዳውን መኖር) በግልጽ ሲያምን፣ ክርክሩን ሳያራዝሙ በታመነው ነጥብ ላይ ብቻ ፍርድ ቤቱ አፋጣኝ ውሳኔ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nተከሳሹ የመከላከያ መልሱን ካቀረበ በኋላ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የተከሳሹ የመከላከያ መልስ ምንም ዓይነት ማስተባበያ የሌለው ግልጽ የሆነ እምነት መያዝ አለበት።",
+      "templateDescription": "### መመሪያ\nይህ ማመልከቻ ተከሳሹ በመከላከያ መልሱ ላይ የክሱን ዋና ዋና ነጥቦች (ለምሳሌ የእዳውን መኖር) በግልጽ ሲያምን፣ ክርክሩን ሳያራዝሙ በታመነው ነጥብ ላይ ብቻ ፍርድ ቤቱ አፋጣኝ ውሳኔ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nተከሳሹ የመከላከያ መልሱን ካቀረበ በኋላ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች\nየተከሳሹ የመከላከያ መልስ ምንም ዓይነት ማስተባበያ የሌለው ግልጽ የሆነ እምነት መያዝ አለበት።",
       "partyTitles": {
-        "applicant": "ከሳሽ (Plaintiff)",
-        "respondent": "ተከሳሽ (Defendant)"
+        "applicant": "ከሳሽ",
+        "respondent": "ተከሳሽ"
       },
       "facts": [
         {
           "id": "app_fact_clear_admission",
           "label": "እምነት",
-          "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል። (In their Statement of Defense, the Respondent has clearly admitted the existence of the contract and the debt.)",
-          "citation": "CPC Art. 242",
+          "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል።",
+          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፪፻፵፪",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ግልጽ እምነት" }
         }
       ],
       "reliefs": [
         {
           "id": "app_relief_immediate_judgment",
-          "text": "በተጠየቀው የይገባኛል ጥያቄ ክፍል ላይ ለከሳሽ ወዲያውኑ ፍርድ እንዲሰጥ። (Enter immediate judgment for the Plaintiff on the admitted portion of the claim.)",
+          "text": "በተጠየቀው የይገባኛል ጥያቄ ክፍል ላይ ለከሳሽ ወዲያውኑ ፍርድ እንዲሰጥ።",
           "isDefault": true,
           "isDynamic": false
         }
@@ -269,5 +274,3 @@
     }
   }
 }
-
-    

@@ -66,9 +66,10 @@ export default function PartyForm({ role, party, dispatch, title }: PartyFormPro
                      <Input className="h-9" value={party.address.houseNo} onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.houseNo', value: e.target.value } })} />
                 </div>
                 {party.address.subcity === 'ሌላ' && (
-                    <div className="grid grid-cols-[auto_1fr] items-center gap-x-4 pt-1">
-                         <Label className="text-xs">ሌላ ክ/ከተማ</Label>
+                    <div className="grid grid-cols-[100px_1fr] items-center gap-x-4 pt-1 pl-8">
+                         <Label className="text-xs">ሌላ ክ/ከተማ ስም</Label>
                          <Input
+                            className="h-9"
                             value={party.address.subcityOther || ''}
                             onChange={(e) => dispatch({ type: 'UPDATE_PARTY', payload: { role, id: party.id, field: 'address.subcityOther', value: e.target.value }})}
                         />

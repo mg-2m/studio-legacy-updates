@@ -79,6 +79,7 @@ export const COURT_HIERARCHY = {
     "አቃቂ ቃሊቲ ምድብ",
     "ልደታ ምድብ 1ኛ የሠራተኛ ግንኙነት ችሎት",
     "ልደታ ምድብ የታክስ ችሎት",
+    "ሌላ"
   ],
   "የፌዴራል ከፍተኛ ፍርድ ቤት": [
     "ልደታ ምድብ 1ኛ ፍትሐብሔር ችሎት",
@@ -87,13 +88,22 @@ export const COURT_HIERARCHY = {
     "ቦሌ ምድብ",
     "ልደታ ምድብ የንግድ ችሎት",
     "ልደታ ምድብ የሠራተኛ ችሎት",
+    "ሌላ"
   ],
   "የፌዴራል ጠቅላይ ፍርድ ቤት": [
     "1ኛ ሰበር ሰሚ ችሎት", 
     "2ኛ ሰበር ሰሚ ችሎት",
     "3ኛ ሰበር ሰሚ ችሎት",
-    "1ኛ ይግባኝ ሰሚ ችሎት"
-  ]
+    "1ኛ ይግባኝ ሰሚ ችሎት",
+    "ሌላ"
+  ],
+  "የአዲስ አበባ ከተማ አስተዳደር ፍርድ ቤቶች": [
+    "የመጀመሪያ ደረጃ ፍርድ ቤት",
+    "ይግባኝ ሰሚ ፍርድ ቤት",
+    "ሰበር ሰሚ ችሎት",
+    "ሌላ"
+  ],
+  "ሌላ": ["ሌላ"],
 };
 
 export const REGIONS_AND_CITIES = [
@@ -111,6 +121,7 @@ export const REGIONS_AND_CITIES = [
   "የደቡብ ኢትዮጵያ ክልል",
   "የደቡብ ምዕራብ ኢትዮጵያ ህዝቦች ክልል",
   "የትግራይ ክልል",
+  "ሌላ"
 ];
 
 export const AA_SUBCITIES = [
@@ -185,8 +196,8 @@ export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.entries(allEntities).r
         id: key,
         label: stripEnglish(entity.title),
         type: 'Document', // Defaulting to document, can be refined
-        credentialLabel: entity.credentialLabel || `${stripEnglish(entity.title)} Reference`,
-        credentialPlaceholder: entity.credentialPlaceholder || `e.g., ${key.substring(0, 3).toUpperCase()}-123`
+        credentialLabel: entity.credentialLabel || `${stripEnglish(entity.title)} ማጣቀሻ`,
+        credentialPlaceholder: entity.credentialPlaceholder || `ለምሳሌ፦ ${key.substring(0, 3).toUpperCase()}-123`
     };
     return acc;
 }, {});
@@ -404,7 +415,10 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(all
   newTemplateData.facts = processFacts(newTemplateData.facts);
 
   newTemplateData.documentTitle = stripEnglish(newTemplateData.documentTitle);
-  newTemplateData.jurisdictionText = stripEnglish(newTemplateData.jurisdictionText);
+  
+  if (newTemplateData.jurisdictionText) {
+    newTemplateData.jurisdictionText = stripEnglish(newTemplateData.jurisdictionText);
+  }
   
   if (newTemplateData.partyTitles) {
       newTemplateData.partyTitles.applicant = stripEnglish(newTemplateData.partyTitles.applicant);
@@ -479,5 +493,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
-
-    

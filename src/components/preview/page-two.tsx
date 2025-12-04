@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import type { AppState, ManualEvidence, Party } from '@/lib/types';
@@ -12,8 +11,7 @@ interface PageTwoProps {
 const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
     
-    // Simple pluralization for Amharic by adding 'ዎች'
-    if (title.endsWith(')') || title.endsWith(') ')) {
+    if (title.endsWith(')')) {
         const parts = title.split('(');
         return `${parts[0]}ዎች (${parts[1]}`.toUpperCase();
     }
@@ -67,61 +65,33 @@ export default function PageTwo({ state }: PageTwoProps) {
     if (!smartEv.active) return;
     const registryItem = EVIDENCE_REGISTRY[regId];
     if (registryItem) {
-        documentEvidence.push({
-            description: `${registryItem.label}${smartEv.credentialId ? `፣ ${registryItem.credentialLabel}: ${smartEv.credentialId}` : ''}`
-        });
+        const description = `${registryItem.label} ${registryItem.credentialLabel}: ${smartEv.credentialId || '_____'}`;
+        documentEvidence.push({ description });
     }
   });
 
   // Process Manual Evidence
   evidence.forEach((e: ManualEvidence) => {
     if (e.type === 'Document') {
-        let fullDescription = e.description || 'የሰነድ ማስረጃ';
+        const issuerText = e.issuer === 'ሌላ' ? (e as any).issuerOther : e.issuer;
+        const locationText = e.originalLocation === 'ሌላ' ? (e as any).originalLocationOther : e.originalLocation;
         
-        let detailsParts = [];
-        if (e.refNumber) detailsParts.push(`ቁጥር: ${e.refNumber}`);
-        if (e.issueDate) detailsParts.push(`የተሰጠበት ቀን: ${e.issueDate}`);
-        if (e.issuer) {
-            const issuerText = e.issuer === 'ሌላ' ? (e as any).issuerOther : e.issuer;
-            if (issuerText) detailsParts.push(`አውጪ: ${issuerText}`);
-        }
-        if (e.pageCount) detailsParts.push(`ገጽ: ${e.pageCount}`);
-
-        if (detailsParts.length > 0) {
-            fullDescription += `፣ ${detailsParts.join('፣ ')}`;
-        }
-        
-        const docTypeMap = {
-            'Original': 'ኦርጅናል',
-            'Copy': 'ኮፒ'
-        };
-
-        const attachedType = docTypeMap[e.documentType] || e.documentType;
-
-        fullDescription += `፣ ${attachedType} ተያይዙዋል`;
-
-        if (e.originalLocation && e.originalLocation !== 'የማይመለከተው') {
-            const location = e.originalLocation === 'ሌላ' ? (e as any).originalLocationOther : e.originalLocation;
-            if (location) fullDescription += `፣ ኦርጅናሉ ${location} የሚገኝ።`;
-        } else {
-             fullDescription += "።";
-        }
-
+        let fullDescription = `${e.description || 'የሰነድ ማስረጃ'} ከ${issuerText || '_____'} የተሰጠ፣ ቁጥር ${e.refNumber || '_____'}፣ ቀን ${e.issueDate || '_____'}፣ ${e.pageCount || '___'} ገጽ ያለው ${e.documentType === 'Copy' ? 'ፎቶ ኮፒ' : 'ኦርጅናል'} ሲሆን ዋናው ${locationText || '_____'} እጅ የሚገኝ።`;
 
         documentEvidence.push({ description: fullDescription });
 
     } else if (e.type === 'Witness') {
-        const label = `${e.honorific} ${e.name}` || 'Unnamed Witness';
+        const label = `${e.honorific} ${e.name}` || 'ስም ያልተጠቀሰ ምስክር';
         let subcity = e.subcity === 'ሌላ' ? e.subcityOther : e.subcity;
         if(subcity && subcity !== 'ሌላ') {
             subcity += ' ክፍለ ከተማ';
         }
         const woreda = e.woreda ? `, ወረዳ ${e.woreda}` : '';
         const houseNo = e.houseNo ? `, የቤት ቁጥር ${e.houseNo}` : '';
-        const details = `አድራሻ: ${e.city}, ${subcity}${woreda}${houseNo}`;
+        const details = `አድራሻ: ${e.city}, ${subcity || ''}${woreda}${houseNo}`;
         witnessEvidence.push({ label, details });
     } else if (e.type === 'CourtOrder') {
-        const label = e.description || e.type;
+        const label = e.description || 'የትዕዛዝ ማስረጃ';
         const details = e.description;
         courtOrderEvidence.push({ label, details });
     }
@@ -177,7 +147,7 @@ export default function PageTwo({ state }: PageTwoProps) {
       </div>
 
       <div className="text-center my-8">
-        <h2 className="font-bold italic underline">በ/ፍ/ብ/ስ/ስ/ህ/ቁ፦222/223 መሰረት ከከሳሽ የቀረበ የማስረጃ ዝርዝር</h2>
+        <h2 className="font-bold italic underline">በ/ፍ/ብ/ስ/ስ/ህ/ቁ፦፪፻፳፪/፪፻፳፫ መሰረት ከከሳሽ የቀረበ የማስረጃ ዝርዝር</h2>
       </div>
 
       <div className="space-y-4">
@@ -210,7 +180,7 @@ export default function PageTwo({ state }: PageTwoProps) {
 
         {courtOrderEvidence.length > 0 && (
           <div>
-            <h3 className="font-bold">ሐ). በ/ፍ/ብ/ስ/ስ/ህ/ቁ፦145 መሰረት በፍርድ ቤት ትዕዛዝ የሚቀርብ የማስረጃ ዝርዝር</h3>
+            <h3 className="font-bold">ሐ). በፍ/ብ/ስ/ስ/ህ/ቁ፦፩፻፵፭ መሰረት በፍርድ ቤት ትዕዛዝ የሚቀርብ የማስረጃ ዝርዝር</h3>
             <ol className="ml-8 list-decimal" style={{ lineHeight: 1.8 }}>
               {courtOrderEvidence.map((e, i) => (
                 <li key={`co-${i}`} className="mb-3 text-justify">
@@ -229,7 +199,7 @@ export default function PageTwo({ state }: PageTwoProps) {
       <div className="mt-12 pt-5 border-t-2 border-black">
         <div className="black-box">ማረጋገጫ</div>
         <p className="text-justify leading-relaxed">
-          ከላይ የተዘረዘረው ማስረጃ ሁሉ እውነት መሆኑን ተምሪ ነኝ። መረጃዎቹ በፍርድ ቤት ስሙ ውስጥ ስሚ በተጠየቀ ጊዜ ዋናውን ማስረጃ ቀርቦ አረጋግጣለሁ።
+          ከላይ የተዘረዘረው ማስረጃ ሁሉ እውነት መሆኑን ተምሬአለሁ። መረጃዎቹ በፍርድ ቤት ስም በተጠራ ጊዜ ዋናውን ማስረጃ አቅርቤ አረጋግጣለሁ።
         </p>
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
@@ -245,5 +215,3 @@ export default function PageTwo({ state }: PageTwoProps) {
     </div>
   );
 }
-
-    

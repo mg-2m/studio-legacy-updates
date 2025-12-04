@@ -4,10 +4,8 @@
 import type { AppState, Party, Relief, Fact } from '@/lib/types';
 import { TEMPLATE_DATA } from '@/lib/data';
 
-// Function to format a single fact text by replacing placeholders
 const formatFactPlaceholders = (text: string, values: { [key: string]: any }): string => {
   let formattedText = text;
-  // This regex finds {{placeholder}} and replaces it.
   const regex = /\{\{([\w\s]+)\}\}/g;
   
   formattedText = formattedText.replace(regex, (match, key) => {
@@ -18,13 +16,11 @@ const formatFactPlaceholders = (text: string, values: { [key: string]: any }): s
 };
 
 
-// The CORRECT Narrative Engine Logic - v3.0
 const composeNarrative = (facts: Fact[]): string => {
   if (facts.length === 0) {
     return `<li class="text-gray-500 italic">Select facts from the editor to build the narrative...</li>`;
   }
 
-  // 1. Group facts by their label (the group title from the backend)
   const groupedFacts: { [key: string]: Fact[] } = facts.reduce((acc, fact) => {
     const key = fact.label || 'Ungrouped Facts';
     if (!acc[key]) {
@@ -34,42 +30,34 @@ const composeNarrative = (facts: Fact[]): string => {
     return acc;
   }, {} as { [key: string]: Fact[] });
 
-  // 2. Build the narrative from the grouped facts
   const narrativeParts = Object.values(groupedFacts).map(factGroup => {
     let paragraph = '';
     factGroup.forEach((fact, index) => {
-      // Format the core legal text with its dynamic values
       let sentence = formatFactPlaceholders(fact.legalText, fact.values);
       
-      // Add citation
       if (fact.citation) {
         sentence += ` <span class="text-xs font-bold ml-1">[${fact.citation}]</span>`;
       }
       
-      // Prepend the correct rhetorical connector
       let connector = '';
       if (index === 0) {
-        // Use the intro for the first fact of the group
         connector = fact.rhetoric?.intro || '';
       } else {
-        // Use the transition for subsequent facts
         connector = fact.rhetoric?.transition || '';
       }
       
-      // Append the connected sentence to the paragraph, ensuring proper spacing
       paragraph += `${connector} ${sentence} `;
     });
     return paragraph.trim();
   });
 
-  // 3. Each paragraph group becomes a numbered list item
   return narrativeParts.map(p => `<li class="mb-2 text-justify">${p}</li>`).join('');
 };
 
 
 export default function PageOne({ state }: { state: AppState }) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
-  const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate];
+  const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate!];
   
   if (!currentTemplateData) {
     return <div className="a4-page">Loading...</div>;
@@ -108,7 +96,6 @@ export default function PageOne({ state }: { state: AppState }) {
             return `<strong><u>${value || '______'}</u></strong>`;
         });
     }
-    // This is for simple non-calculated placeholders in reliefs
     text = text.replace(/\[(.*?)\]/g, (match, key) => {
         return `<strong><u>${key}</u></strong>`;
     });
@@ -163,14 +150,42 @@ export default function PageOne({ state }: { state: AppState }) {
   
   const finalNarrative = composeNarrative(selectedFacts);
 
-  // Correct implementation of Dynamic Summarization
   const reliefSummary = selectedFacts.length > 0 
     ? selectedFacts
         .map(f => f.rhetoric?.summary_keyword)
-        .filter(Boolean) // Filter out any undefined keywords
-        .join('፣ ') // Join with the correct Amharic comma
+        .filter(Boolean)
+        .join('፣ ')
     : 'የቀረቡት ምክንያቶች';
+  
+  const renderSubjectOfClaim = () => {
+    const purpose = currentTemplateData.meta?.purpose;
+    const allCalcValues = Object.values(calculations).reduce((acc, curr) => ({ ...acc, ...curr }), {});
+    
+    let valueText = '(በብር ****** ግምት የቀረበ ክስ ነው)';
+    
+    if (Object.keys(allCalcValues).length > 0) {
+        const primaryOutputKey = Object.keys(allCalcValues).find(k => k.toLowerCase().includes('amount') || k.toLowerCase().includes('pay'));
+        const primaryValue = primaryOutputKey ? allCalcValues[primaryOutputKey] as number : Object.values(allCalcValues)[0] as number;
+        
+        if(primaryValue && typeof primaryValue === 'number' && primaryValue > 0) {
+            const amountInWords = "በቃላት ያልተደገፈ"; // Placeholder
+            valueText = `ብር ${primaryValue.toFixed(2)} (${amountInWords} ብር)`;
+        }
+    }
+    
+    const pleader = applicants.length > 0 ? `በ${partyTitles.applicant}` : '';
 
+    if (!purpose) return null;
+
+    return (
+        <div className="text-center my-4">
+            <h3 className="font-bold underline">የክሱ ምክንያት፡-</h3>
+            <p className="text-justify">
+                {purpose} {valueText} ለማስከፈል {pleader} የቀረበ ክስ ነው።
+            </p>
+        </div>
+    );
+  };
 
   return (
     <div className="a4-page">
@@ -220,13 +235,16 @@ export default function PageOne({ state }: { state: AppState }) {
         </span>
       </div>
 
+      {renderSubjectOfClaim()}
+
+
       <div className="border-l-2 border-gray-300 pl-4 mb-5">
         <h4 className="m-0 mb-2 underline font-bold">መግቢያ:</h4>
         <ul className="list-none p-0 leading-relaxed">
           <li>➤ ይህ የተከበረ ፍርድ ቤት በ{jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ {applicants.length > 1 ? "አመልካቾች" : "አመልካች"} ጉዳዩን የምንከታተለው፡ {repMap[meta.representation]}</li>
           <li>➤ {summonsMap[meta.summonsDelivery]}</li>
-          <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
+          <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር ፪፻፳፫ መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
         </ul>
       </div>
 
@@ -251,7 +269,7 @@ export default function PageOne({ state }: { state: AppState }) {
 
       <div className="mt-12">
         <div className="black-box">ማረጋገጫ</div>
-        <p>ከላይ የቀረበው አቤቱታ እውነት መሆኑን በፍ/ብ/ሥ/ሥ/ሕግ ቁ. 92 መሰረት አረጋግጣለሁ፡፡</p>
+        <p>ከላይ የቀረበው አቤቱታ እውነት መሆኑን በፍ/ብ/ሥ/ሥ/ሕግ ቁ. ፺፪ መሰረት አረጋግጣለሁ፡፡</p>
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>

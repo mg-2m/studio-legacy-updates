@@ -97,7 +97,11 @@ function appReducer(state: AppState, action: Action): AppState {
           if (p.id === id) {
             if (field.includes('.')) {
               const [key1, key2] = field.split('.');
-              return { ...p, [key1]: { ...(p as any)[key1], [key2]: value } };
+              const updatedAddress = { ...(p as any)[key1], [key2]: value };
+              if (key2 === 'subcity' && value !== 'ሌላ') {
+                  updatedAddress.subcityOther = '';
+              }
+              return { ...p, [key1]: updatedAddress };
             }
             return { ...p, [field]: value };
           }

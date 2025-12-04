@@ -75,9 +75,9 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
 
   return (
     <section 
-      className="no-print relative flex flex-col bg-card border-r w-full h-full"
+      className="no-print relative flex flex-col bg-card border-r w-full h-full overflow-hidden"
     >
-      <div className="flex h-14 items-center gap-2 p-2 border-b">
+      <div className="flex h-14 shrink-0 items-center gap-2 p-2 border-b">
         {selectedTemplate && selectedSubTemplate && Icon && (
           <div className="ml-2 flex items-center gap-2 text-primary font-semibold">
             <Icon className="size-5" />

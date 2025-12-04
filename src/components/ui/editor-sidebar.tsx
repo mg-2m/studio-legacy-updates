@@ -50,7 +50,7 @@ export const EditorSidebar = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "transition-all duration-300 ease-in-out",
+        "transition-all duration-300 ease-in-out h-full",
         state === 'expanded' ? "w-[45%] min-w-[450px]" : "w-0 min-w-0",
         "overflow-hidden",
         className

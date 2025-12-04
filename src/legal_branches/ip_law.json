@@ -411,7 +411,7 @@
         "keywords": ["anton piller", "seizure", "evidence preservation", "ex parte", "ማስረጃ መያዣ"],
         "jurisdictionType": "Federal High Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ በጣም አስቸኳይ እና ልዩ የሆነ 'የፍተሻ እና የመያዝ' ትእዛዝ ነው። አጥፊው ስለ ክሱ ከተነገረው ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ኮምፒተሮችን፣ ሰነዶችን) ያጠፋል ብሎ ለማመን በጣም ጠንካራ ምክንያት ሲኖር ጥቅም ላይ ይውላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው የIP ክስ በሚታይበት ፍርድ ቤት (ብዙውን ጊዜ ፌዴራል ከፍተኛ ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. ይህ አስቸኳይ ማመልከቻ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ተከሳሹ ማስረጃዎችን እንደሚያጠፋ የሚያሳይ በጣም ጠንካራ እና ተጨባጭ ስጋት መኖሩን ማሳየት።\n- የጥሰት ክስዎ በጣም ጠንካራ መሆኑን ለፍርድ ቤቱ ማሳመን。\n- ይህ ማመልከቻ ለሌላኛው ወገን ሳይነገር ነው የሚቀርበው።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ በጣም አስቸኳይ እና ልዩ የሆነ 'የፍተሻ እና የመያዝ' ትእዛዝ ነው። አጥፊው ስለ ክሱ ከተነገረው ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ኮምፒተሮችን፣ ሰነዶችን) ያጠፋል ብሎ ለማመን በጣም ጠንካራ ምክንያት ሲኖር ጥቅም ላይ ይውላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nማመልከቻው ዋናው የIP ክስ በሚታይበት ፍርድ ቤት (ብዙውን ጊዜ ፌዴራል ከፍተኛ ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. ይህ አስቸኳይ ማመልከቻ ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ተከሳሹ ማስረጃዎችን እንደሚያጠፋ የሚያሳይ በጣም ጠንካራ እና ተጨባጭ ስጋት መኖሩን ማሳየት።\n- የጥሰት ክስዎ በጣም ጠንካራ መሆኑን ለፍርድ ቤቱ ማሳመን።\n- ይህ ማመልከቻ ለሌላኛው ወገን ሳይነገር ነው የሚቀርበው።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -420,7 +420,7 @@
         {
           "id": "app_ip_fact_concealment_risk",
           "label": "የማስረጃ ጥበቃ (Preservation of Evidence)",
-          "legalText": "ተከሳሹ ወሳኝ የጥሰት ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ሂሳቦችን) ያጠፋል ወይም ይደብቃል የሚል ከባድ ስጋት አለ። (There is a serious risk that the Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).)",
+          "legalText": "ተከሳሹ ወሳኝ የጥሰት ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ሂሳቦችን) ያጠፋል ወይም ይደብቃል የሚል ከባድ ስጋት አለ። (The Defendant will destroy or conceal crucial evidence of infringement (e.g., molds, accounts).)",
           "citation": "CPC Art. 154",
           "autoEvidence": [],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የማስረጃ መጥፋት ስጋት" }
@@ -447,3 +447,5 @@
     }
   }
 }
+
+    

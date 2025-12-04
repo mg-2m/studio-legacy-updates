@@ -15,7 +15,7 @@
         ],
         "jurisdictionType": "Court of the person's domicile"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው በቋሚ የአእምሮ ሕመም ወይም በሌላ ምክንያት ጉዳዩን በራሱ መምራት በማይችልበት ጊዜ، በፍርድ ቤት ትዕዛዝ ከሕግ አንጻር ქმედუუნაროდ እንዲታወጅ እና ጉዳዩን የሚመራለት አስተዳዳሪ (Curator) እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው እግድ እንዲጣልበት የተጠየቀው ሰው በሚኖርበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም። ሰውየው ქმედუუნაროდ እስከሆነ ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየሕክምና ማስረጃ፡ ግለሰቡ ጉዳዩን መምራት እንደማይችል የሚያረጋግጥ ከታወቀ የሕክምና ተቋም የተሰጠ የሕክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate) ማቅረብ ክሱን በእጅጉ ያጠናክራል።\nጥቅም ያለው ወገን፡ አመልካቹ የቅርብ ዘመድ፣ የትዳር አጋር ወይም ሌላ ሕጋዊ ጥቅም ያለው ወገን መሆን አለበት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው በቋሚ የአእምሮ ሕመም ወይም በሌላ ምክንያት ጉዳዩን በራሱ መምራት በማይችልበት ጊዜ، በፍርድ ቤት ትዕዛዝ ከሕግ አንጻር ქმედუუნაროდ እንዲታወጅ እና ጉዳዩን የሚመራለት አስተዳዳሪ (Curator) እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው እግድ እንዲጣልበት የተጠየቀው ሰው በሚኖርበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም። ሰውየው ქმედუუნაროდ እስከሆነ ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የሕክምና ማስረጃ፡ ግለሰቡ ጉዳዩን መምራት እንደማይችል የሚያረጋግጥ ከታወቀ የሕክምና ተቋም የተሰጠ የሕክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate) ማቅረብ ክሱን በእጅጉ ያጠናክራል።\n- ጥቅም ያለው ወገን፡ አመልካቹ የቅርብ ዘመድ፣ የትዳር አጋር ወይም ሌላ ሕጋዊ ጥቅም ያለው ወገን መሆን አለበት።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (ዘመድ/ጥቅም ያለው ወገን) (Petitioner (Relative/Interested Party))",
         "respondent": "እግድ እንዲጣልበት የተጠየቀው ሰው (Interdicted Person (Respondent))"
@@ -31,7 +31,7 @@
           ],
           "rhetoric": {
             "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "የችሎታ ማጣት"
           }
         },
@@ -92,7 +92,7 @@
         ],
         "jurisdictionType": "Addis Ababa City First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው የመጀመሪያ ስሙን በሕጋዊ መንገድ ለመለወጥ ሲፈልግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአዋጅ 760/2012 አንቀጽ 13(2) መሰረት، ይህ ጉዳይ የሚታየው **በአዲስ አበባ ከተማ የመጀመሪያ ደረጃ ፍርድ ቤት** ወይም በክልሎች አቻ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nከባድ ምክንያት፡ ስሙን ለመለወጥ የሚያስገድድ በቂ እና ከባድ ምክንያት መኖሩን ማሳየት።\nማስረጃ (Required Evidence)፡ የአሁኑን ስም የሚያሳይ መታወቂያ (IdentityCard)، የልደት የምስክር ወረቀት (BirthCertificate) እና ምክንያቱን የሚደግፍ ማንኛውም ማስረጃ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው የመጀመሪያ ስሙን በሕጋዊ መንገድ ለመለወጥ ሲፈልግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአዋጅ 760/2012 አንቀጽ 13(2) መሰረት، ይህ ጉዳይ የሚታየው **በአዲስ አበባ ከተማ የመጀመሪያ ደረጃ ፍርድ ቤት** ወይም በክልሎች አቻ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ከባድ ምክንያት፡ ስሙን ለመለወጥ የሚያስገድድ በቂ እና ከባድ ምክንያት መኖሩን ማሳየት።\n- ማስረጃ (Required Evidence)፡ የአሁኑን ስም የሚያሳይ መታወቂያ (IdentityCard)، የልደት የምስክር ወረቀት (BirthCertificate) እና ምክንያቱን የሚደግፍ ማንኛውም ማስረጃ።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (Vital Events Registration Agency)"
@@ -109,7 +109,7 @@
           ],
           "rhetoric": {
             "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "የስም ለውጥ ምክንያት"
           }
         }
@@ -137,7 +137,7 @@
         ],
         "jurisdictionType": "First Instance Court of the applicant's domicile"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ በልደት የምስክር ወረቀት ወይም መታወቂያ ላይ የተመዘገበ የልደት ቀን በስህተት ሲጻፍ، ፍርድ ቤቱ እንዲያስተካክለው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ (Required Evidence)፡ ስህተት ያለበት ሰነድ (BirthCertificate) እና ትክክለኛውን ቀን የሚያረጋግጥ ሌላ ደጋፊ ሰነድ (ለምሳሌ የትምህርት ቤት ሰርተፍኬት)።\nየአስተዳደር ጥያቄ፡ ፍርድ ቤት ከመሄድዎ በፊት ስህተቱን እንዲያስተካክል ለሚመለከተው አስተዳደራዊ አካል (ወሳኝ ኩነት) መጠየቅና እምቢታ ማግኘት ያስፈልጋል።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ በልደት የምስክር ወረቀት ወይም መታወቂያ ላይ የተመዘገበ የልደት ቀን በስህተት ሲጻፍ، ፍርድ ቤቱ እንዲያስተካክለው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence)፡ ስህተት ያለበት ሰነድ (BirthCertificate) እና ትክክለኛውን ቀን የሚያረጋግጥ ሌላ ደጋፊ ሰነድ (ለምሳሌ የትምህርት ቤት ሰርተፍኬት)።\n- የአስተዳደር ጥያቄ፡ ፍርድ ቤት ከመሄድዎ በፊት ስህተቱን እንዲያስተካክል ለሚመለከተው አስተዳደራዊ አካል (ወሳኝ ኩነት) መጠየቅና እምቢታ ማግኘት ያስፈልጋል።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (Vital Events Registration Agency)"
@@ -195,7 +195,7 @@
         ],
         "jurisdictionType": "First Instance Court of the applicant's domicile"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ለአንድ ሰው በስህተት ሁለት የተለያዩ ስሞች ወይም መረጃዎች ያሉት ሁለት የልደት የምስክር ወረቀት ሲኖር، አንዱ እንዲሰረዝና ትክክለኛው ብቻ እንዲቀር ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ (Required Evidence)፡ ሁለቱም የምስክር ወረቀቶች እና የትኛው ትክክል እንደሆነ የሚያስረዳ ማስረጃ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ለአንድ ሰው በስህተት ሁለት የተለያዩ ስሞች ወይም መረጃዎች ያሉት ሁለት የልደት የምስክር ወረቀት ሲኖር، አንዱ እንዲሰረዝና ትክክለኛው ብቻ እንዲቀር ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence)፡ ሁለቱም የምስክር ወረቀቶች እና የትኛው ትክክል እንደሆነ የሚያስረዳ ማስረጃ።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (Vital Events Registration Agency)"
@@ -212,7 +212,7 @@
           "rhetoric": {
             "intro": "በመጀመሪያ ደረጃ፣",
             "transition": "በተጨማሪም،",
-            "summary_keyword": "የተደጋገመ መዝገብ"
+            "summary_keyword": "የተደጋገመ መዝገب"
           }
         },
         {
@@ -255,7 +255,7 @@
         ],
         "jurisdictionType": "Administrative (Immigration and Citizenship Service)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ የኢትዮጵያዊነት ዜግነታቸውን የቀየሩ ነገር ግን ትውልዳቸው ኢትዮጵያዊ የሆኑ ሰዎች، በኢትዮጵያ ውስጥ የተለያዩ መብቶችን የሚያጎናጽፋቸውን የትውልደ ኢትዮጵያዊ መታወቂያ (ቢጫ ካርድ) እንዲሰጣቸው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ በፍርድ ቤት ሳይሆን **በኢሚግሬሽን እና ዜግነት አገልግሎት** ጽ/ቤት የሚፈጸም አስተዳደራዊ ሂደት ነው። ነገር ግን አገልግሎቱ ያለ በቂ ምክንያት እምቢ ሲል ጉዳዩን ወደ ፍርድ ቤት መውሰድ ይቻላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ (Required Evidence)፡ ትውልደ ኢትዮጵያዊ መሆንዎን የሚያረጋግጥ ማስረጃ (የድሮ ፓስፖርት، የወላጅ የልደት ሰርተፍኬት) እና የአሁኑ የውጭ ዜግነት ፓስፖርት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ የኢትዮጵያዊነት ዜግነታቸውን የቀየሩ ነገር ግን ትውልዳቸው ኢትዮጵያዊ የሆኑ ሰዎች، በኢትዮጵያ ውስጥ የተለያዩ መብቶችን የሚያጎናጽፋቸውን የትውልደ ኢትዮጵያዊ መታወቂያ (ቢጫ ካርድ) እንዲሰጣቸው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ በፍርድ ቤት ሳይሆን **በኢሚግሬሽን እና ዜግነት አገልግሎት** ጽ/ቤት የሚፈጸም አስተዳደራዊ ሂደት ነው። ነገር ግን አገልግሎቱ ያለ በቂ ምክንያት እምቢ ሲል ጉዳዩን ወደ ፍርድ ቤት መውሰድ ይቻላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence)፡ ትውልደ ኢትዮጵያዊ መሆንዎን የሚያረጋግጥ ማስረጃ (የድሮ ፓስፖርት، የወላጅ የልደት ሰርተፍኬት) እና የአሁኑ የውጭ ዜግነት ፓስፖርት።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "የኢሚግሬሽን እና ዜግነት አገልግሎት (Immigration and Citizenship Service)"
@@ -313,7 +313,7 @@
         ],
         "jurisdictionType": "Court of the person's last domicile"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው ለረጅም ጊዜ ሲጠፋና ወሬው ሳይሰማ ሲቀር، በፍርድ ቤት ውሳኔ እንደጠፋ እንዲቆጠር እና ንብረቱን የሚያስተዳድርለት ሰው እንዲሾም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው የጠፋው ሰው የመጨረሻ መኖሪያ በነበረበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየመጥፋት መግለጫ፡ ሰውየው ከጠፋና ወሬው ካልተሰማ ሁለት ዓመት ካለፈ በኋላ ሊጠየቅ ይችላል (አንቀጽ 154)።\nየሞት ግምት፡ ሰውየው ከጠፋ አምስት ዓመት ካለፈ በኋላ የሞት ግምት እንዲሰጥ ሊጠየቅ ይችላል (አንቀጽ 158)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየሕዝብ ማስታወቂያ፡ አቤቱታው ከመቅረቡ በፊት ስለጠፋው ሰው መረጃ የሚጠይቅ የጋዜጣ ማስታወቂያ ማውጣት ግዴታ ነው (አንቀጽ 159)።\nማስረጃ (Required Evidence)፡ የወጣው የጋዜጣ ማስታወቂያ (PublicNoticeOfAbsence)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው ለረጅም ጊዜ ሲጠፋና ወሬው ሳይሰማ ሲቀር، በፍርድ ቤት ውሳኔ እንደጠፋ እንዲቆጠር እና ንብረቱን የሚያስተዳድርለት ሰው እንዲሾም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው የጠፋው ሰው የመጨረሻ መኖሪያ በነበረበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\n- የመጥፋት መግለጫ፡ ሰውየው ከጠፋና ወሬው ካልተሰማ ሁለት ዓመት ካለፈ በኋላ ሊጠየቅ ይችላል (አንቀጽ 154)።\n- የሞት ግምት፡ ሰውየው ከጠፋ አምስት ዓመት ካለፈ በኋላ የሞት ግምት እንዲሰጥ ሊጠየቅ ይችላል (አንቀጽ 158)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የሕዝብ ማስታወቂያ፡ አቤቱታው ከመቅረቡ በፊት ስለጠፋው ሰው መረጃ የሚጠይቅ የጋዜጣ ማስታወቂያ ማውጣት ግዴታ ነው (አንቀጽ 159)።\n- ማስረጃ (Required Evidence)፡ የወጣው የጋዜጣ ማስታወቂያ (PublicNoticeOfAbsence)።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (ዘመድ/ጥቅም ያለው ወገን) (Petitioner (Relative/Interested Party))",
         "respondent": "የጠፋው ሰው (በስም ተጠሪ) (The Absent Person (Named Respondent))"
@@ -389,7 +389,7 @@
         ],
         "jurisdictionType": "Court handling the main case"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የእግድ ወይም የመጥፋት አቤቱታ በፍርድ ቤት እየታየ ባለበት ወቅት፣ የሚመለከተው ሰው ጉዳዩን መምራት ባለመቻሉ ንብረቱ ለአደጋ እንዳይጋለጥ ጊዜያዊ አስተዳዳሪ እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው አቤቱታ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nአስቸኳይነት፡ የንብረቱ ለአደጋ መጋለጥ አስቸኳይ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የእግድ ወይም የመጥፋት አቤቱታ በፍርድ ቤት እየታየ ባለበት ወቅት፣ የሚመለከተው ሰው ጉዳዩን መምራት ባለመቻሉ ንብረቱ ለአደጋ እንዳይጋለጥ ጊዜያዊ አስተዳዳሪ እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው አቤቱታ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- አስቸኳይነት፡ የንብረቱ ለአደጋ መጋለጥ አስቸኳይ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
@@ -444,7 +444,7 @@
         ],
         "jurisdictionType": "Court that ordered the interdiction"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ቀደም ሲል በፍርድ ቤት ትዕዛዝ ქმედუუნაროდ የተባለ ሰው، የችግሩ መንስኤ ሲወገድ (ለምሳሌ ከህመም ሲያገግም)፣ እግዱ እንዲነሳለት እና ሙሉ ሕጋዊ ችሎታው እንዲመለስለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nእግዱን ያዘዘው ፍርድ ቤት ራሱ እግዱን የማንሳት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ (Required Evidence)፡ የእግዱ መንስኤ መወገዱን የሚያረጋግጥ የህክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ቀደም ሲል በፍርድ ቤት ትዕዛዝ ქმედუუნაროდ የተባለ ሰው، የችግሩ መንስኤ ሲወገድ (ለምሳሌ ከህመም ሲያገግም)፣ እግዱ እንዲነሳለት እና ሙሉ ሕጋዊ ችሎታው እንዲመለስለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nእግዱን ያዘዘው ፍርድ ቤት ራሱ እግዱን የማንሳት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence)፡ የእግዱ መንስኤ መወገዱን የሚያረጋግጥ የህክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate)።",
       "partyTitles": {
         "applicant": "አቤቱታ አቅራቢ (Petitioner)",
         "respondent": "ተጠሪ (Respondent)"
@@ -478,5 +478,3 @@
     }
   }
 }
-
-    

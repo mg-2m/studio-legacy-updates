@@ -38,7 +38,7 @@ const StrategyCard: React.FC<{ content: string }> = ({ content }) => {
   return (
     <Alert variant="default" className="bg-yellow-50 border-yellow-200 text-yellow-900 dark:bg-yellow-950/50 dark:border-yellow-800 dark:text-yellow-300">
       <Lightbulb className="h-5 w-5 !text-yellow-500" />
-      <AlertTitle className="font-bold">የአብነት መመሪያ (Template Guide)</AlertTitle>
+      <AlertTitle className="font-bold">የአብነት መመሪያ</AlertTitle>
       <AlertDescription>
         <div className="prose prose-sm dark:prose-invert text-yellow-900 dark:text-yellow-300 max-w-none">
           {processedSections.map((section, index) => {
@@ -68,6 +68,7 @@ interface EditorColumnProps {
 }
 
 export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
+    if (!state.selectedSubTemplate) return null;
     const selectedTemplate = TEMPLATES.find(t => t.id === state.selectedTemplate);
     const selectedSubTemplate = selectedTemplate?.subTemplates.find(st => st.id === state.selectedSubTemplate);
     const templateData = TEMPLATE_DATA[state.selectedSubTemplate];

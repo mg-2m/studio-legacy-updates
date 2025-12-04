@@ -279,8 +279,6 @@ export const TEMPLATES: Template[] = [
         { id: 'status_double_record_correction', label: 'የተደጋገመ መዝገብ ማስተካከያ', icon: FileSignature },
         { id: 'status_ethiopian_descent_id', label: 'የትውልደ ኢትዮጵያዊ መታወቂያ', icon: FileSignature },
         { id: 'status_declaration_of_absence', label: 'የመጥፋት መግለጫ', icon: FileX2 },
-        { id: 'app_status_provisional_curator', label: 'ጊዜያዊ ጠባቂ መሾም', icon: BookUser },
-        { id: 'app_status_lift_interdiction', label: 'የእገዳ ማንሳት', icon: Gavel },
     ]
   },
   {
@@ -427,7 +425,7 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(all
   }
 
   if (newTemplateData.templateDescription) {
-    newTemplateData.templateDescription = newTemplateData.templateDescription.replace(/\s*\([^)]*\)/g, '');
+    newTemplateData.templateDescription = newTemplateData.templateDescription.replace(/\s*\([^)]*\)/g, '').replace(/###\s*(.*?)\s*\n/g, '### $1\n').replace(/-\s/g, '');
   }
   
   if (newTemplateData.calculations) {
@@ -451,25 +449,6 @@ export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(all
 
 const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
 const defaultBench = COURT_HIERARCHY[defaultCourtLevel as keyof typeof COURT_HIERARCHY][0];
-const initialTemplateId: string = TEMPLATES[0].id;
-const initialSubTemplateId: string = TEMPLATES[0].subTemplates[0].id;
-const initialTemplateData = TEMPLATE_DATA[initialSubTemplateId];
-
-const initialCalculations: { [key: string]: Calculation } = {};
-
-if (initialTemplateData && initialTemplateData.calculations) {
-    for (const calcKey in initialTemplateData.calculations) {
-        const calcConfig = initialTemplateData.calculations[calcKey];
-        initialCalculations[calcKey] = {};
-        calcConfig.inputs.forEach(input => {
-            initialCalculations[calcKey][input.id] = input.defaultValue;
-        });
-        calcConfig.outputs.forEach(output => {
-            initialCalculations[calcKey][output.id] = executeFormula(calcConfig.formula, initialCalculations[calcKey]);
-        });
-    }
-}
-
 
 export const INITIAL_STATE: AppState = {
   metadata: {
@@ -485,7 +464,7 @@ export const INITIAL_STATE: AppState = {
   applicants: [{ id: '1', name: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '', woreda: '', houseNo: '' } }],
   respondents: [],
   selectedFacts: [],
-  selectedReliefs: initialTemplateData ? initialTemplateData.reliefs.filter(r => r.isDefault) : [],
+  selectedReliefs: [],
   maintenance: { 
     active: false, 
     income: 0, 
@@ -493,12 +472,12 @@ export const INITIAL_STATE: AppState = {
     result: 0,
     context: '',
   },
-  calculations: initialCalculations,
+  calculations: {},
   evidence: [],
   smartEvidence: {},
-  partyTitles: initialTemplateData ? initialTemplateData.partyTitles : { applicant: 'አመልካች', respondent: 'ተከሳሽ' },
-  selectedTemplate: initialTemplateId,
-  selectedSubTemplate: initialSubTemplateId,
+  partyTitles: { applicant: 'አመልካች', respondent: 'ተከሳሽ' },
+  selectedTemplate: '',
+  selectedSubTemplate: null,
 };
 
     

@@ -108,6 +108,7 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'TOGGLE_FACT': {
         const { factId, mutexGroup } = action.payload;
+        if (!state.selectedSubTemplate) return state;
         const allFactsForTemplate = TEMPLATE_DATA[state.selectedSubTemplate]?.facts || [];
         const factToAdd = allFactsForTemplate.find(f => f.id === factId);
         
@@ -226,6 +227,7 @@ function appReducer(state: AppState, action: Action): AppState {
     
     case 'UPDATE_CALCULATION': {
         const { calcKey, field, value } = action.payload;
+        if (!state.selectedSubTemplate) return state;
         const currentTemplate = TEMPLATE_DATA[state.selectedSubTemplate];
         const calcConfig = currentTemplate?.calculations?.[calcKey];
         if (!calcConfig) return state;
@@ -423,6 +425,7 @@ function appReducer(state: AppState, action: Action): AppState {
 
     case 'TOGGLE_RELIEF': {
       const { reliefId } = action.payload;
+      if (!state.selectedSubTemplate) return state;
       const currentTemplate = TEMPLATE_DATA[state.selectedSubTemplate];
       if (!currentTemplate) return state;
 
@@ -508,6 +511,7 @@ export default function Home() {
 
 
   useEffect(() => {
+    if (!state.selectedSubTemplate) return;
     const timer = setTimeout(() => {
         if(selectedFacts.length > 0) {
             handleSuggestEvidence();
@@ -517,7 +521,7 @@ export default function Home() {
         }
     }, 500); // Debounce AI call
     return () => clearTimeout(timer);
-  }, [selectedFacts, handleSuggestEvidence]);
+  }, [selectedFacts, handleSuggestEvidence, state.selectedSubTemplate]);
 
   const { income, children, active } = state.maintenance;
 
@@ -540,11 +544,12 @@ export default function Home() {
   }, [active, income, children, toast]);
 
   useEffect(() => {
+    if (!state.selectedSubTemplate) return;
     const timer = setTimeout(() => {
       handleMaintenanceContext();
     }, 500); // Debounce AI call
     return () => clearTimeout(timer);
-  }, [handleMaintenanceContext]);
+  }, [handleMaintenanceContext, state.selectedSubTemplate]);
 
 
   if (!isClient) {

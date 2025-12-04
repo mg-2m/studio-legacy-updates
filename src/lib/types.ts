@@ -91,6 +91,11 @@ export interface Fact {
   isCustom?: boolean;
   values: { [key: string]: string | number | undefined };
   mutexGroup?: string;
+  rhetoric?: {
+    intro?: string;
+    transition?: string;
+    summary_keyword?: string;
+  };
 }
 
 export interface Relief {
@@ -179,5 +184,5 @@ export interface AppState {
   smartEvidence: SmartEvidence;
   partyTitles: PartyTitles;
   selectedTemplate: string;
-  selectedSubTemplate: string;
+  selectedSubTemplate: string | null;
 }

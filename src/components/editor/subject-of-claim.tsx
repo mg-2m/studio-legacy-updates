@@ -29,11 +29,6 @@ export default function SubjectOfClaim({ state, dispatch }: SubjectOfClaimProps)
     }
   }, [templateData, dispatch]);
 
-  const handleAmountChange = (value: string) => {
-    const numericValue = value.replace(/[^0-9.]/g, '');
-    dispatch({ type: 'UPDATE_METADATA', payload: { key: 'claimAmount', value: numericValue } });
-  }
-
   return (
     <Card>
       <CardHeader>
@@ -68,7 +63,7 @@ export default function SubjectOfClaim({ state, dispatch }: SubjectOfClaimProps)
               id="claim-amount"
               placeholder="ለምሳሌ፦ 50,000"
               value={metadata.claimAmount || ''}
-              onChange={(e) => handleAmountChange(e.target.value)}
+              onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'claimAmount', value: e.target.value } })}
             />
           )}
           <p className="text-xs text-muted-foreground">
@@ -79,3 +74,5 @@ export default function SubjectOfClaim({ state, dispatch }: SubjectOfClaimProps)
     </Card>
   );
 }
+
+    

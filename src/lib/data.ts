@@ -480,6 +480,7 @@ export const INITIAL_STATE: AppState = {
     summonsDelivery: 'self',
     claimPurpose: '',
     claimAmount: '',
+    isManualAmount: false,
   },
   applicants: [{ id: '1', name: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '', woreda: '', houseNo: '' } }],
   respondents: [],

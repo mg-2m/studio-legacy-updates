@@ -26,6 +26,7 @@ export interface Metadata {
   summonsDelivery: 'self' | 'police' | 'post';
   claimPurpose: string;
   claimAmount: string;
+  isManualAmount?: boolean;
 }
 
 export interface Maintenance {

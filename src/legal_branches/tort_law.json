@@ -32,11 +32,7 @@
             "PoliceAccidentReport",
             "WitnessStatements"
           ],
-          "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
-            "summary_keyword": "የቸልተኝነት ድርጊት"
-          }
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የቸልተኝነት ድርጊት" }
         },
         {
           "id": "tort_fact_traffic_violation",
@@ -46,11 +42,7 @@
           "autoEvidence": [
             "PoliceAccidentReport"
           ],
-          "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ،",
-            "transition": "ከዚህም በላይ،",
-            "summary_keyword": "የትራፊክ ህግ ጥሰት"
-          }
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም በላይ،", "summary_keyword": "የትራፊክ ህግ ጥሰት" }
         },
         {
           "id": "tort_fact_liability_for_another_person",
@@ -61,11 +53,7 @@
             "WitnessStatements",
             "PoliceAccidentReport"
           ],
-          "rhetoric": {
-            "intro": "በተጨማሪም፣",
-            "transition": "በተጨማሪም،",
-            "summary_keyword": "የተወካይ ተጠያቂነት"
-          }
+          "rhetoric": { "intro": "በተጨማሪም፣", "transition": "በተጨማሪም،", "summary_keyword": "የተወካይ ተጠያቂነት" }
         },
         {
           "id": "tort_fact_bodily_injury_damage",
@@ -76,11 +64,7 @@
             "MedicalExpenseReceipts",
             "DoctorAssessment"
           ],
-          "rhetoric": {
-            "intro": "በመቀጠልም،",
-            "transition": "ከዚህም ባሻገር،",
-            "summary_keyword": "የአካል ጉዳት"
-          }
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የአካል ጉዳት" }
         },
         {
           "id": "tort_fact_property_damage_loss",
@@ -91,11 +75,7 @@
             "PropertyValuationReport",
             "PoliceAccidentReport"
           ],
-          "rhetoric": {
-            "intro": "በመቀጠልም،",
-            "transition": "በተጨማሪም،",
-            "summary_keyword": "የንብረት ጉዳት"
-          }
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የንብረት ጉዳት" }
         },
         {
           "id": "tort_fact_moral_damage_pain",
@@ -106,11 +86,7 @@
             "DoctorAssessment",
             "WitnessStatements"
           ],
-          "rhetoric": {
-            "intro": "በተጨማሪም،",
-            "transition": "በተጨማሪም،",
-            "summary_keyword": "የሞራል ጉዳት"
-          }
+          "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "የሞራል ጉዳት" }
         },
         {
           "id": "tort_fact_direct_causation",
@@ -121,11 +97,7 @@
             "PoliceAccidentReport",
             "DoctorAssessment"
           ],
-          "rhetoric": {
-            "intro": "በመጨረሻም،",
-            "transition": "ከዚህም በላይ،",
-            "summary_keyword": "ቀጥተኛ ግንኙነት"
-          }
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ቀጥተኛ ግንኙነት" }
         },
         {
           "id": "tort_fact_mitigation_of_damages",
@@ -136,11 +108,7 @@
             "MedicalExpenseReceipts",
             "PropertyValuationReport"
           ],
-          "rhetoric": {
-            "intro": "በመጨረሻም،",
-            "transition": "በመጨረሻም،",
-            "summary_keyword": "ጉዳት መቀነስ"
-          }
+          "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመጨረሻም،", "summary_keyword": "ጉዳት መቀነስ" }
         }
       ],
       "reliefs": [
@@ -202,11 +170,7 @@
           "legalText": "ተከሳሹ ጉዳቱ የመነጨበት ህንፃ ወይም ግንባታ ባለቤት ነው። (The Respondent is the owner of the building or structure from which the damage originated.)",
           "citation": "Civil Code Art. 2068",
           "autoEvidence": [],
-          "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም،",
-            "summary_keyword": "የባለቤትነት ሁኔታ"
-          }
+          "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የባለቤትነት ሁኔታ" }
         },
         {
           "id": "tort_fact_damage_caused_by_ruin",
@@ -217,11 +181,7 @@
             "WitnessStatements",
             "PropertyValuationReport"
           ],
-          "rhetoric": {
-            "intro": "በመቀጠልም،",
-            "transition": "ከዚህም በላይ،",
-            "summary_keyword": "በህንጻ ጉድለት የደረሰ ጉዳት"
-          }
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "በህንጻ ጉድለት የደረሰ ጉዳት" }
         },
         {
           "id": "tort_fact_bodily_injury_building",
@@ -232,11 +192,7 @@
             "MedicalExpenseReceipts",
             "DoctorAssessment"
           ],
-          "rhetoric": {
-            "intro": "በመቀጠልም،",
-            "transition": "በተጨማሪም،",
-            "summary_keyword": "የአካል ጉዳት"
-          }
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የአካል ጉዳት" }
         },
         {
           "id": "tort_fact_property_damage_building",
@@ -246,11 +202,7 @@
           "autoEvidence": [
             "PropertyValuationReport"
           ],
-          "rhetoric": {
-            "intro": "በመቀጠልም،",
-            "transition": "በተጨማሪም،",
-            "summary_keyword": "የንብረት ጉዳት"
-          }
+          "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የንብረት ጉዳት" }
         }
       ],
       "reliefs": [

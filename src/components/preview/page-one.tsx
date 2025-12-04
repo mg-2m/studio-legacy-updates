@@ -263,7 +263,7 @@ export default function PageOne({ state }: { state: AppState }) {
         <ul className="list-none p-0 leading-relaxed">
           <li>➤ ይህ የተከበረ ፍርድ ቤት በ{jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ {applicants.length > 1 ? "አመልካቾች" : "አመልካች"} ጉዳዩን የምንከታተለው፡ {repMap[meta.representation]}</li>
-          <li>➤ {summonsMap[meta.summonsDelivery]}</li>
+          <li>➤ {summonsMap[meta.summonsDelivery]} (ሂደት አንዴት መሆን አለበት?)</li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር ፪፻፳፫ መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
         </ul>
       </div>

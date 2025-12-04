@@ -133,7 +133,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
             </RadioGroup>
           </div>
           <div className="space-y-2">
-            <Label>መጥሪያ አደራረስ</Label>
+            <Label>መጥሪያ አደራረስ (ሂደት አንዴት መሆን አለበት?)</Label>
             <RadioGroup 
                 value={metadata.summonsDelivery} 
                 onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'summonsDelivery', value } })}

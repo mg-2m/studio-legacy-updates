@@ -8,7 +8,7 @@
         "keywords": ["divorce", "dissolution", "marriage", "custody", "maintenance", "ፍቺ", "ጋብቻ", "ቀለብ"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በትዳር ውስጥ ያሉ ከባድ እና የማይታረቁ ችግሮች ሲያጋጥሙ ጋብቻው በፍርድ ቤት እንዲፈርስ፣ የልጆች አስተዳደግ እንዲወሰን እና የንብረት ክፍፍል እንዲካሄድ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበተሻሻለው የቤተሰብ ሕግ አንቀጽ 113(1) መሠረት፣ የፍቺ ጉዳዮች የሚታዩት ባልና ሚስቱ መጨረሻ ላይ አብረው በኖሩበት ቦታ ወይም የተከሳሽ መኖሪያ በሆነበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፍቺ ክስ በማንኛውም ጊዜ በትዳር ውስጥ እያሉ ሊቀርብ ይችላል። የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የጋብቻ ህጋዊነት ማረጋገጫ፡** ክስ ከማቅረብዎ በፊት ጋብቻው በሕግ ፊት ፀንቶ የተመዘገበ መሆኑን ማረጋገጥ ያስፈልጋል።\n\n### ማስረጃ (Required Evidence)\n*   **የግድ የሚያስፈልግ ማስረጃ:** የጋብቻ ምስክር ወረቀት (CertificateofMarriage)።\n*   **ተጨማሪ ማስረጃ:** የልጆች የልደት የምስክር ወረቀት (BirthCertificate)፣ የጋራ ንብረት ዝርዝር።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በትዳር ውስጥ ያሉ ከባድ እና የማይታረቁ ችግሮች ሲያጋጥሙ ጋብቻው በፍርድ ቤት እንዲፈርስ፣ የልጆች አስተዳደግ እንዲወሰን እና የንብረት ክፍፍል እንዲካሄድ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበተሻሻለው የቤተሰብ ሕግ አንቀጽ 113(1) መሠረት፣ የፍቺ ጉዳዮች የሚታዩት ባልና ሚስቱ መጨረሻ ላይ አብረው በኖሩበት ቦታ ወይም የተከሳሽ መኖሪያ በሆነበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፍቺ ክስ በማንኛውም ጊዜ በትዳር ውስጥ እያሉ ሊቀርብ ይችላል። የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የጋብቻ ህጋዊነት ማረጋገጫ፡ ክስ ከማቅረብዎ በፊት ጋብቻው በሕግ ፊት ፀንቶ የተመዘገበ መሆኑን ማረጋገጥ ያስፈልጋል።\n\n### ማስረጃ (Required Evidence)\n- የግድ የሚያስፈልግ ማስረጃ: የጋብቻ ምስክር ወረቀት (CertificateofMarriage)።\n- ተጨማሪ ማስረጃ: የልጆች የልደት የምስክር ወረቀት (BirthCertificate)، የጋራ ንብረት ዝርዝር።",
       "partyTitles": {
         "applicant": "ከሳሽ (Plaintiff)",
         "respondent": "ተከሳሽ (Defendant)"
@@ -24,7 +24,7 @@
           ],
           "rhetoric": {
             "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "የጋብቻ መኖር"
           }
         },
@@ -35,8 +35,8 @@
           "citation": "RFC Art. 76",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመቀጠልም፣",
-            "transition": "ከዚህም ባሻገር፣",
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
             "summary_keyword": "የማይታረቅ ልዩነት"
           }
         },
@@ -47,8 +47,8 @@
           "citation": "RFC Art. 81",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመቀጠልም፣",
-            "transition": "ከዚህም ባሻገር፣",
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
             "summary_keyword": "የረጅም ጊዜ መለያየት"
           }
         },
@@ -61,8 +61,8 @@
             "BirthCertificate"
           ],
           "rhetoric": {
-            "intro": "በተጨማሪም፣",
-            "transition": "በተጨማሪም፣",
+            "intro": "በተጨማሪም،",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "ልጆች መኖር"
           }
         }
@@ -72,25 +72,29 @@
           "id": "fam_relief_dissolution",
           "text": "በከሳሽ እና በተከሳሽ መካከል ያለውን ጋብቻ የሚፈርስ ፍርድ እንዲሰጥ። (Judgment dissolving the marriage between the Plaintiff and Defendant.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "fam_relief_custody",
           "text": "የአካለ መጠን ያልደረሱ ልጆችን ብቸኛ/የጋራ የማሳደግ መብት ለከሳሽ እንዲሰጥ ትዕዛዝ እንዲሰጥ። (Order granting sole/joint custody of the minor children to the Plaintiff.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "fam_relief_child_support",
           "text": "ተከሳሹ ወርሃዊ የልጅ ማሳደጊያ እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order for the Defendant to pay monthly child maintenance.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "fam_relief_property_partition",
           "text": "የጋራ የጋብቻ ንብረትን ለማፍሰስ እና ለመከፋፈል ትዕዛዝ እንዲሰጥ። (Order for the liquidation and partition of common marital property.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -102,7 +106,7 @@
         "keywords": ["divorce by agreement", "mutual consent", "feta besememenet", "የፍቺ ስምምነት"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ባልና ሚስት በጋራ በመስማማት ፍቺ ለመፈጸም ሲፈልጉ እና በንብረት ክፍፍል፣ በልጆች አስተዳደግ እና በቀለብ ጉዳዮች ላይ ስምምነት ላይ ሲደርሱ ያንን ስምምነት ለፍርድ ቤት አቅርበው ለማጽደቅ እና ጋብቻውን ለማፍረስ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ባልና ሚስቱ መጨረሻ ላይ አብረው በኖሩበት ቦታ ወይም የአንደኛው ወገን መኖሪያ በሆነበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የተሟላ ስምምነት፡** በሁሉም ጉዳዮች (ንብረት፣ ቀለብ፣ የልጆች አስተዳደግ) ላይ የተደረሰበት የጽሑፍ ስምምነት መኖር አለበት።\n*   **ማስረጃ (Required Evidence):** የጋብቻ ምስክር ወረቀት እና በሁለቱም ወገኖች የተፈረመ የፍቺ ስምምነት ሰነድ።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ባልና ሚስት በጋራ በመስማማት ፍቺ ለመፈጸም ሲፈልጉ እና በንብረት ክፍፍል፣ በልጆች አስተዳደግ እና በቀለብ ጉዳዮች ላይ ስምምነት ላይ ሲደርሱ ያንን ስምምነት ለፍርድ ቤት አቅርበው ለማጽደቅ እና ጋብቻውን ለማፍረስ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው ባልና ሚስቱ መጨረሻ ላይ አብረው በኖሩበት ቦታ ወይም የአንደኛው ወገን መኖሪያ በሆነበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የተሟላ ስምምነት፡ በሁሉም ጉዳዮች (ንብረት፣ ቀለብ፣ የልጆች አስተዳደግ) ላይ የተደረሰበት የጽሑፍ ስምምነት መኖር አለበት።\n- ማስረጃ (Required Evidence): የጋብቻ ምስክር ወረቀት እና በሁለቱም ወገኖች የተፈረመ የፍቺ ስምምነት ሰነድ።",
       "partyTitles": {
         "applicant": "የመጀመሪያ አቤቱታ አቅራቢ (First Petitioner)",
         "respondent": "ሁለተኛ አቤቱታ አቅራቢ (Second Petitioner)"
@@ -117,8 +121,8 @@
             "CertificateofMarriage"
           ],
           "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "የጋራ ስምምነት"
           }
         },
@@ -131,8 +135,8 @@
             "ListofCommonProperty"
           ],
           "rhetoric": {
-            "intro": "በመቀጠልም፣",
-            "transition": "ከዚህም ባሻገር፣",
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
             "summary_keyword": "አጠቃላይ ስምምነት"
           }
         }
@@ -142,7 +146,8 @@
           "id": "fam_relief_approve_agreement",
           "text": "የፍቺውን ስምምነት በማጽደቅ ጋብቻውን የሚፈርስ ትዕዛዝ እንዲሰጥ። (Order approving the divorce agreement and dissolving the marriage.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -154,7 +159,7 @@
         "keywords": ["paternity", "fatherhood", "child support", "parentage", "አባትነት", "የልጅ ቀለብ"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ልጅ ከአባትየው መወለዱን በፍርድ ቤት ለማረጋገጥ እና የአባትነት መብቶችና ግዴታዎች (ለምሳሌ ቀለብ) እንዲከበሩ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበተሻሻለው የቤተሰብ ሕግ አንቀጽ 142(2) መሰረት፣ የአባትነት ክስ የሚታየው እናት፣ ልጅ ወይም የተጠረጠረው አባት በሚኖሩበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nልጁ 18 ዓመት እስኪሞላው ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የእናትና የተጠረጠረው አባት ግንኙነት እንደነበራቸው የሚያሳይ ማስረጃ (ምስክር) ወይም ልጁን እንደ ልጁ አድርጎ እንደያዘው የሚያሳይ ማስረጃ (ምስክር)። የህክምና ቦርድ የDNA ምርመራ ውጤት (MedicalBoardCertificate) በጣም ወሳኝ ማስረጃ ነው።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ልጅ ከአባትየው መወለዱን በፍርድ ቤት ለማረጋገጥ እና የአባትነት መብቶችና ግዴታዎች (ለምሳሌ ቀለብ) እንዲከበሩ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበተሻሻለው የቤተሰብ ሕግ አንቀጽ 142(2) መሰረት፣ የአባትነት ክስ የሚታየው እናት፣ ልጅ ወይም የተጠረጠረው አባት በሚኖሩበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nልጁ 18 ዓመት እስኪሞላው ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence): የእናትና የተጠረጠረው አባት ግንኙነት እንደነበራቸው የሚያሳይ ማስረጃ (ምስክር) ወይም ልጁን እንደ ልጁ አድርጎ እንደያዘው የሚያሳይ ማስረጃ (ምስክር)። የህክምና ቦርድ የDNA ምርመራ ውጤት (MedicalBoardCertificate) በጣም ወሳኝ ማስረጃ ነው።",
       "partyTitles": {
         "applicant": "ከሳሽ (ልጅ/አሳዳጊ) (Plaintiff (Child/Guardian))",
         "respondent": "ተከሳሽ (የተጠረጠረ አባት) (Defendant (Alleged Father))"
@@ -167,8 +172,8 @@
           "citation": "RFC Art. 143",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "የወሲብ ግንኙነት"
           }
         },
@@ -181,8 +186,8 @@
             "WitnessStatements"
           ],
           "rhetoric": {
-            "intro": "በመቀጠልም፣",
-            "transition": "ከዚህም ባሻገር፣",
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
             "summary_keyword": "የልጅነት ይዞታ"
           }
         }
@@ -192,44 +197,46 @@
           "id": "fam_relief_declare_paternity",
           "text": "ተከሳሹ የልጁ ባዮሎጂያዊ አባት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ። (Judgment declaring the Defendant is the biological father of the child.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "fam_relief_reimbursement",
           "text": "ከትውልድ እና ከጥገና ጋር የተያያዙ ወጪዎችን ለመመለስ ትዕዛዝ እንዲሰጥ። (Order for reimbursement of expenses related to birth and maintenance.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
     },
-    "fam_temporary_maintenance": {
+    "app_temporary_maintenance": {
       "documentTitle": "ጊዜያዊ የቀለብ ትዕዛዝ ማመልከቻ (Application for Order of Provisional Maintenance)",
       "jurisdictionText": "Art. 83(2) of the Revised Family Code & Art. 154 Civil Procedure Code.",
       "meta": {
         "keywords": ["temporary maintenance", "alimony", "child support", "interim", "ጊዜያዊ ቀለብ"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ክስ በፍርድ ቤት እየታየ ባለበት ወቅት፣ እራሳቸውን ወይም ልጆቻቸውን ለመደገፍ ገቢ የሌላቸው ወገኖች፣ ሌላኛው ወገን ለጊዜው ቀለብ እንዲከፍል ለማስገደድ የሚያቀርቡት አስቸኳይ ማመልከቻ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **በሂደት ላይ ያለ ክስ፡** ዋናው የፍቺ ክስ መከፈቱን ማረጋገጥ።\n*   **ማስረጃ (Required Evidence):** የአመልካች ገቢ አለመኖር እና የተከሳሽ የመክፈል አቅም ማሳየት ያስፈልጋል (ProofofIncome)።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ክስ በፍርድ ቤት እየታየ ባለበት ወቅት، እራሳቸውን ወይም ልጆቻቸውን ለመደገፍ ገቢ የሌላቸው ወገኖች، ሌላኛው ወገን ለጊዜው ቀለብ እንዲከፍል ለማስገደድ የሚያቀርቡት አስቸኳይ ማመልከቻ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- በሂደት ላይ ያለ ክስ፡ ዋናው የፍቺ ክስ መከፈቱን ማረጋገጥ።\n- ማስረጃ (Required Evidence): የአመልካች ገቢ አለመኖር እና የተከሳሽ የመክፈል አቅም ማሳየት ያስፈልጋል (ProofofIncome)።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
       },
       "facts": [
         {
-          "id": "fam_fact_pendency_of_suit",
+          "id": "app_fact_pendency_of_suit",
           "label": "አስቸኳይነት እና ፍላጎት (Urgency & Need)",
           "legalText": "በተዋዋይ ወገኖች መካከል የፍቺ ዋና ክስ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው። (A main suit for divorce is currently pending between the parties.)",
           "citation": "RFC Art. 83",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "በሂደት ላይ ያለ ክስ"
           }
         },
         {
-          "id": "fam_fact_immediate_need",
+          "id": "app_fact_immediate_need",
           "label": "አስቸኳይነት እና ፍላጎት (Urgency & Need)",
           "legalText": "አመልካቹ በክርክሩ ወቅት እራሳቸውን/ልጆቻቸውን ለመደገፍ ነፃ ገቢ የላቸውም። (The Applicant has no independent income to support themselves/the children during the litigation.)",
           "citation": "RFC Art. 106",
@@ -237,61 +244,62 @@
             "ProofofIncome"
           ],
           "rhetoric": {
-            "intro": "በመቀጠልም፣",
-            "transition": "ከዚህም ባሻገር፣",
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
             "summary_keyword": "የገቢ እጦት"
           }
         },
         {
-          "id": "fam_fact_ability_to_pay",
+          "id": "app_fact_ability_to_pay",
           "label": "አስቸኳይነት እና ፍላጎት (Urgency & Need)",
           "legalText": "ተጠሪው ጊዜያዊ ድጋፍ ለመስጠት በቂ ገቢ አለው። (The Respondent has sufficient income to provide provisional support.)",
           "citation": "",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በተጨማሪም፣",
-            "transition": "ከዚህም በላይ፣",
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም በላይ،",
             "summary_keyword": "የመክፈል ችሎታ"
           }
         }
       ],
       "reliefs": [
         {
-          "id": "fam_relief_prov_maintenance",
-          "text": "ተጠריው የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በወር [amount] ብር እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order the Respondent to pay [amount] ETB monthly until final judgment.)",
+          "id": "app_relief_prov_maintenance",
+          "text": "ተጠሪው የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በወር [amount] ብር እንዲከፍል ትዕዛዝ እንዲሰጥ። (Order the Respondent to pay [amount] ETB monthly until final judgment.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
     },
-    "fam_property_preservation": {
+    "app_property_preservation": {
       "documentTitle": "የጋራ ንብረትን ለማያያዝ እና ለመጠበቅ ማመልከቻ (Application for Attachment and Preservation of Common Property)",
       "jurisdictionText": "Art. 154 Civil Procedure Code & Art. 83 Revised Family Code.",
       "meta": {
         "keywords": ["injunction", "property", "attachment", "marital property", "የንብረት እግድ", "የጋራ ንብረት"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ክስ በሚታይበት ወቅት፣ አንደኛው ወገን የጋራ ንብረትን ሊሸጥ፣ ሊያስተላልፍ ወይም ሊደብቅ ይችላል የሚል ስጋት ሲኖር፣ ፍርድ ቤቱ ንብረቱ ላይ የእግድ ትዕዛዝ እንዲሰጥ ለመጠየቅ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ስጋት መኖሩን ማሳየት፡** ሌላኛው ወገን ንብረቱን ለማሸሽ እየሞከረ መሆኑን የሚያሳይ ተጨባጭ ስጋት መኖሩን ማሳየት።\n*   **ማስረጃ (Required Evidence):** የጋራ ንብረት ዝርዝር (ListofCommonProperty)።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ክስ በሚታይበት ወቅት፣ አንደኛው ወገን የጋራ ንብረትን ሊሸጥ፣ ሊያስተላልፍ ወይም ሊደብቅ ይችላል የሚል ስጋት ሲኖር፣ ፍርድ ቤቱ ንብረቱ ላይ የእግድ ትዕዛዝ እንዲሰጥ ለመጠየቅ ይጠቅማል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ስጋት መኖሩን ማሳየት፡ ሌላኛው ወገን ንብረቱን ለማሸሽ እየሞከረ መሆኑን የሚያሳይ ተጨባጭ ስጋት መኖሩን ማሳየት።\n- ማስረጃ (Required Evidence): የጋራ ንብረት ዝርዝር (ListofCommonProperty)።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
       },
       "facts": [
         {
-          "id": "fam_fact_intent_to_defraud",
+          "id": "app_fact_intent_to_defraud",
           "label": "የመበታተን አደጋ (Risk of Dissipation)",
           "legalText": "ተጠሪው የጋራ የጋብቻ ንብረቶችን ለመሸጥ፣ ለማስተላለፍ ወይም ለመደበቅ እየሞከረ ነው የሚል ምክንያታዊ ስጋት አለ። (There is a reasonable apprehension that the Respondent is attempting to sell, transfer, or hide common marital assets.)",
           "citation": "CPC Art. 154",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "ንብረትን የማሸሽ ስጋት"
           }
         },
         {
-          "id": "fam_fact_common_ownership",
+          "id": "app_fact_common_ownership",
           "label": "የመበታተን አደጋ (Risk of Dissipation)",
           "legalText": "በጥያቄ ውስጥ ያለው ንብረት በጋብቻ ወቅት የተገኘ የጋራ ንብረት ነው። (The property in question is common property acquired during the marriage.)",
           "citation": "RFC Art. 62",
@@ -299,43 +307,45 @@
             "ListofCommonProperty"
           ],
           "rhetoric": {
-            "intro": "በመቀጠልም፣",
-            "transition": "ከዚህም ባሻገር፣",
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
             "summary_keyword": "የጋራ ንብረት መኖር"
           }
         }
       ],
       "reliefs": [
         {
-          "id": "fam_relief_injunction_transfer",
+          "id": "app_relief_injunction_transfer",
           "text": "ተጠሪው የተወሰኑ ንብረቶችን ከማስተላለፍ ወይም ከመሸጥ እንዲቆጠብ ትዕዛዝ እንዲሰጥ። (Order restraining the Respondent from transferring or selling specific assets.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
-          "id": "fam_relief_freeze_accounts",
+          "id": "app_relief_freeze_accounts",
           "text": "የመጨረሻው ክፍፍል እስከሚጠናቀቅ ድረስ የጋራ የባንክ ሂሳቦችን እንዲታገዱ ትዕዛዝ እንዲሰጥ። (Order freezing the joint bank accounts pending final partition.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
     },
-    "fam_protective_order": {
+    "app_protective_order": {
       "documentTitle": "አስቸኳይ የመከላከያ ትዕዛዝ ማመልከቻ (Application for Urgent Protective Order)",
       "jurisdictionText": "Art. 154 Civil Procedure Code (Inherent Power) & Criminal Code References.",
       "meta": {
         "keywords": ["protective order", "domestic violence", "restraining order", "የጥበቃ ትዕዛዝ", "የቤት ውስጥ ጥቃት"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላኛው የትዳር አጋር አካላዊ ወይም ሥነ-ልቦናዊ ጥቃት የሚደርስበት ወገን፣ ጥቃቱ እንዲቆም እና አጥፊው እንዲርቅ ፍርድ ቤት አስቸኳይ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ አስቸኳይ በመሆኑ በአቅራቢያ በሚገኝ ማንኛውም የመጀመሪያ ደረጃ ፍርድ ቤት ሊቀርብ ይችላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፣ ነገር ግን ጥቃቱ እንደተፈጸመ ወዲያውኑ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **ማስረጃ (Required Evidence):** የፖሊስ ሪፖርት (PoliceReportDomesticViolence) ወይም የህክምና ማስረጃ ካለ ክሱን በእጅጉ ያጠናክረዋል።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በሌላኛው የትዳር አጋር አካላዊ ወይም ሥነ-ልቦናዊ ጥቃት የሚደርስበት ወገን፣ ጥቃቱ እንዲቆም እና አጥፊው እንዲርቅ ፍርድ ቤት አስቸኳይ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ አስቸኳይ በመሆኑ በአቅራቢያ በሚገኝ ማንኛውም የመጀመሪያ ደረጃ ፍርድ ቤት ሊቀርብ ይችላል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፣ ነገር ግን ጥቃቱ እንደተፈጸመ ወዲያውኑ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- ማስረጃ (Required Evidence): የፖሊስ ሪፖርት (PoliceReportDomesticViolence) ወይም የህክምና ማስረጃ ካለ ክሱን በእጅጉ ያጠናክረዋል።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"
       },
       "facts": [
         {
-          "id": "fam_fact_imminent_danger",
+          "id": "app_fact_imminent_danger",
           "label": "ደህንነት እና ጉዳት (Safety & Harm)",
           "legalText": "አመልካቹ ከተጠሪው ወዲያውኑ አካላዊ አደጋ ይደርስበታል። (The Applicant faces immediate physical danger from the Respondent.)",
           "citation": "",
@@ -343,36 +353,38 @@
             "PoliceReportDomesticViolence"
           ],
           "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "የአካል ጥቃት ስጋት"
           }
         },
         {
-          "id": "fam_fact_balance_convenience",
+          "id": "app_fact_balance_convenience",
           "label": "ደህንነት እና ጉዳት (Safety & Harm)",
           "legalText": "ትዕዛዙ ካልተሰጠ በአመልካቹ ላይ የሚደርሰው ጉዳት በተጠሪው ላይ ከሚደርሰው ማንኛውም ችግር ይበልጣል። (The harm to the Applicant if the order is not granted outweighs any inconvenience to the Respondent.)",
           "citation": "",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመቀጠልም፣",
-            "transition": "ከዚህም ባሻገር፣",
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
             "summary_keyword": "የጉዳት ሚዛን"
           }
         }
       ],
       "reliefs": [
         {
-          "id": "fam_relief_vacate_home",
+          "id": "app_relief_vacate_home",
           "text": "ተጠሪው የጋብቻ ቤቱን ለጊዜው እንዲለቅ ትዕዛዝ እንዲሰጥ። (Order the Respondent to temporarily vacate the matrimonial home.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
-          "id": "fam_relief_restrain_contact",
+          "id": "app_relief_restrain_contact",
           "text": "ተጠሪው ከአመልካቹ [distance] ሜትር ርቀት ውስጥ እንዳይመጣ የሚከለክል ትዕዛዝ እንዲሰጥ። (Order restraining the Respondent from coming within [distance] meters of the Applicant.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
@@ -384,7 +396,7 @@
         "keywords": ["property partition", "liquidation", "marital assets", "የንብረት ክፍፍል", "ፍቺ"],
         "jurisdictionType": "Federal/Regional First Instance Court"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ፍርድ ከተሰጠ በኋላ፣ በፍቺው ወቅት ያልተከፋፈለውን የጋራ ንብረት በፍርድ ቤት በኩል እንዲገመት፣ እንዲጣራ እና እንዲከፋፈል ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በታየበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በ**መዝገብ ቁጥር ፳፩፬፸፰ (ቅጽ ፰)** በሰጠው ውሳኔ መሠረት፣ ከፍቺ በኋላ የንብረት ክፍፍል ጥያቄ የ10 ዓመት የይርጋ ጊዜ ገደብ አለው። ይህ ጊዜ መቆጠር የሚጀምረው ፍቺው ከተፈጸመበት ቀን ጀምሮ ነው። (Per Cassation File No. 21478 (Vol. 8), the claim for partition of property post-divorce is subject to a 10-year period of limitation, which starts to run from the date the divorce is finalized.)\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n*   **የፍቺ ፍርድ መኖር፡** የፍቺ ውሳኔ የተሰጠ መሆኑን ማረጋገጥ።\n*   **ማስረጃ (Required Evidence):** የፍቺ ፍርድ ቅጂ (CopyofDivorceJudgment) እና የጋራ ንብረቱን ዝርዝር (ListofCommonProperty)።\n",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የፍቺ ፍርድ ከተሰጠ በኋላ، በፍቺው ወቅት ያልተከፋፈለውን የጋራ ንብረት በፍርድ ቤት በኩል እንዲገመት፣ እንዲጣራ እና እንዲከፋፈል ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው የፍቺ ክስ በታየበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በ**መዝገብ ቁጥር ፳፩፬፸፰ (ቅጽ ፰)** በሰጠው ውሳኔ መሠረት፣ ከፍቺ በኋላ የንብረት ክፍፍል ጥያቄ የ10 ዓመት የይርጋ ጊዜ ገደብ አለው። ይህ ጊዜ መቆጠር የሚጀምረው ፍቺው ከተፈጸመበት ቀን ጀምሮ ነው። (Per Cassation File No. 21478 (Vol. 8), the claim for partition of property post-divorce is subject to a 10-year period of limitation, which starts to run from the date the divorce is finalized.)\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n- የፍቺ ፍርድ መኖር፡ የፍቺ ውሳኔ የተሰጠ መሆኑን ማረጋገጥ።\n- ማስረጃ (Required Evidence): የፍቺ ፍርድ ቅጂ (CopyofDivorceJudgment) እና የጋራ ንብረቱን ዝርዝር (ListofCommonProperty)።",
       "partyTitles": {
         "applicant": "የፍርድ ባለቤት (አመልካች) (Decree Holder (Applicant))",
         "respondent": "የፍርድ ባለዕዳ (ተጠሪ) (Judgment Debtor (Respondent))"
@@ -399,8 +411,8 @@
             "CopyofDivorceJudgment"
           ],
           "rhetoric": {
-            "intro": "በመጀመሪያ ደረጃ፣",
-            "transition": "በተጨማሪም፣",
+            "intro": "በመጀመሪያ ደረጃ،",
+            "transition": "በተጨማሪም،",
             "summary_keyword": "የቀድሞ የፍቺ ፍርድ"
           }
         },
@@ -411,8 +423,8 @@
           "citation": "",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በመቀጠልም፣",
-            "transition": "ከዚህም ባሻገር፣",
+            "intro": "በመቀጠልም،",
+            "transition": "ከዚህም ባሻገር،",
             "summary_keyword": "የልጆች ጉዳይ መወሰን"
           }
         },
@@ -426,8 +438,8 @@
             "TitleDeedsLibrec"
           ],
           "rhetoric": {
-            "intro": "በተጨማሪም፣",
-            "transition": "ከዚህም በላይ፣",
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም በላይ،",
             "summary_keyword": "የጋራ ንብረት መኖር"
           }
         },
@@ -438,8 +450,8 @@
           "citation": "",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በተጨማሪም፣",
-            "transition": "ከዚህም በላይ፣",
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም በላይ،",
             "summary_keyword": "የንብረት ይዞታ"
           }
         },
@@ -453,8 +465,8 @@
             "Pre-maritalOwnershipDocuments"
           ],
           "rhetoric": {
-            "intro": "በተጨማሪም፣",
-            "transition": "ከዚህም በላይ፣",
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም በላይ،",
             "summary_keyword": "የግል ንብረት ጥያቄ"
           }
         },
@@ -465,8 +477,8 @@
           "citation": "",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በተጨማሪም፣",
-            "transition": "ከዚህም በላይ፣",
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም በላይ،",
             "summary_keyword": "በግምገማ ላይ አለመስማማት"
           }
         },
@@ -477,8 +489,8 @@
           "citation": "",
           "autoEvidence": [],
           "rhetoric": {
-            "intro": "በተጨማሪም፣",
-            "transition": "ከዚህም በላይ፣",
+            "intro": "በተጨማሪም،",
+            "transition": "ከዚህም በላይ،",
             "summary_keyword": "የባለሙያ ግምገማ አስፈላጊነት"
           }
         }
@@ -488,28 +500,34 @@
           "id": "fam_relief_appoint_liquidator",
           "text": "የጋራ ንብረቱን ለመመዝገብ እና ለመገምገም በፍርድ ቤት የተረጋገጠ ባለሙያ/አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the appointment of a court-verified expert/liquidator to inventory and value the common property.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "fam_relief_withdraw_personal",
           "text": "ከክፍፍል በፊት የአመልካቹን የግል ንብረት [itemsToWithdraw] እንዲመለስ/እንዲወጣ ትዕዛዝ እንዲሰጥ። (Order the restitution/withdrawal of the Applicant's personal property [itemsToWithdraw] prior to partition.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "fam_relief_partition_equal",
           "text": "የቀረው የጋራ ንብረት በተዋዋይ ወገኖች መካከል በእኩል (50/50) እንዲከፋፈል ትዕዛዝ እንዲሰጥ። (Order the remaining common property be divided equally (50/50) between the parties.)",
           "isDefault": true,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         },
         {
           "id": "fam_relief_auction_sale",
           "text": "የማይከፋፈል ንብረትን በጨረታ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ። (Order the sale by auction of indivisible property and the division of the proceeds.)",
           "isDefault": false,
-          "isDynamic": false
+          "isDynamic": false,
+          "isCustom": false
         }
       ],
       "calculations": {}
     }
   }
 }
+
+    

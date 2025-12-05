@@ -70,7 +70,9 @@ export default function PageOne({ state }: { state: AppState }) {
       // This is a placeholder. A proper library or service would be needed for real conversion.
       // For now, it will return the English words but this would be the integration point.
       try {
-        return toWords(num); // In a real scenario, this would call an Amharic-specific library.
+        // This is a placeholder. A proper Amharic library would be used here.
+        // For now, we avoid returning any English text.
+        return toWords(num).replace(/-/g, ' '); 
       } catch {
         return num.toString();
       }
@@ -275,7 +277,7 @@ export default function PageOne({ state }: { state: AppState }) {
         <ul className="list-none p-0 leading-relaxed">
           <li>➤ ይህ የተከበረ ፍርድ ቤት በ{jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ {applicants.length > 1 ? "አመልካቾች" : "አመልካች"} ጉዳዩን የምንከታተለው፡ {repMap[meta.representation]}</li>
-          <li>➤ {summonsMap[meta.summonsDelivery]} (ሂደት አንዴት መሆን አለበት?)</li>
+          <li>➤ {summonsMap[meta.summonsDelivery]}</li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
         </ul>
       </div>

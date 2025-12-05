@@ -35,7 +35,7 @@
           "id": "con_fact_payment_due",
           "label": "ውል ማፍረስ",
           "legalText": "በፍትሐ ብሔር ሕግ 1857 መሰረት የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል።",
-          "citation": "የፍትሐ ብሔር ሕግ 1857",
+          "citation": "",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የመክፈያ ጊዜ ማብቃት" }
         },
         {
@@ -49,7 +49,7 @@
           "id": "con_fact_notice_given",
           "label": "ውል ማፍረስ",
           "legalText": "ከሳሽ በፍትሐ ብሔር ሕግ 1772 መሰረት በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
-          "citation": "የፍትሐ ብሔር ሕግ 1772",
+          "citation": "",
           "autoEvidence": ["NoticeofDefault"],
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ማስታወቂያ መሰጠት" }
         }
@@ -64,14 +64,12 @@
         {
           "id": "con_relief_legal_interest",
           "text": "ከውል ማፍረሻ ቀን {{defaultDate}} ጀምሮ የተሰላውን የሕግ ወለድ {{interestRate}} ከመቶ ማለትም {{interestAmount}} ብር እንዲከፍል እንዲታዘዝ።",
-          "citation": "የፍትሐ ብሔር ሕግ 1751",
           "isDefault": true,
           "isDynamic": true
         },
         {
           "id": "con_relief_contractual_interest",
           "text": "በ [Percentage] የተስማማውን የውል ወለድ (ቢበዛ 12 ከመቶ) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
-          "citation": "የፍትሐ ብሔር ሕግ 2479",
           "isDefault": false,
           "isDynamic": false
         },
@@ -116,7 +114,7 @@
           "id": "con_fact_valid_contract",
           "label": "የውል ግዴታ",
           "legalText": "በፍትሐ ብሔር ሕግ አንቀጽ 1678 መሰረት በ [SubjectMatter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል መኖሩ ይታወቃል።",
-          "citation": "የፍትሐ ብሔር ሕግ 1678",
+          "citation": "",
           "autoEvidence": ["WrittenContract"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ሕጋዊ ውል" }
         },
@@ -131,14 +129,14 @@
           "id": "con_fact_non_performance",
           "label": "የውል ጥሰት",
           "legalText": "ይሁን እንጂ ተከሳሹ በፍትሐ ብሔር ሕግ አንቀጽ 1771 መሰረት ያለ ሕጋዊ ምክንያት [SpecificObligation] አልፈጸመም።",
-          "citation": "የፍትሐ ብሔር ሕግ 1771",
+          "citation": "",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የተከሳሽ ግዴታ አለመወጣት" }
         },
         {
           "id": "con_fact_special_interest",
           "label": "የውል ጥሰት",
           "legalText": "በፍትሐ ብሔር ሕግ አንቀጽ 1776 መሰረት ግዴታው እንዲፈጸም መጠየቅ ለከሳሽ ልዩ ጥቅም ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም።",
-          "citation": "የፍትሐ ብሔር ሕግ 1776",
+          "citation": "",
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ልዩ ጥቅም" }
         }
       ],
@@ -181,7 +179,7 @@
           "id": "con_fact_fundamental_breach",
           "label": "የጥሰት ትንተና",
           "legalText": "የተከሳሹ አለመፈጸም በፍትሐ ብሔር ሕግ አንቀጽ 1785 መሰረት የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው።",
-          "citation": "የፍትሐ ብሔር ሕግ 1785",
+          "citation": "",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "መሠረታዊ ጥሰት" }
         },
         {
@@ -203,7 +201,7 @@
         {
           "id": "con_relief_reinstatement",
           "text": "በፍትሐ ብሔር ሕግ አንቀጽ 1815 መሰረት ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።",
-          "citation": "የፍትሐ ብሔር ሕግ 1815",
+          "citation": "",
           "isDefault": true,
           "isDynamic": false
         },
@@ -233,7 +231,7 @@
           "id": "app_fact_intent_to_obstruct",
           "label": "የፍትሕ መደናቀፍ",
           "legalText": "በፍትሐ ብሔር ሥነ ሥርዓት ሕግ 151 መሰረት ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው።",
-          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 151",
+          "citation": "",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የማደናቀፍ ዓላማ" }
         },
         {
@@ -283,7 +281,7 @@
           "id": "app_fact_clear_admission",
           "label": "እምነት",
           "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው በፍትሐ ብሔር ሥነ ሥርዓት ሕግ 242 መሰረት የውሉን እና የእዳውን መኖር በግልጽ አምኗል።",
-          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 242",
+          "citation": "",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ግልጽ እምነት" }
         }
       ],

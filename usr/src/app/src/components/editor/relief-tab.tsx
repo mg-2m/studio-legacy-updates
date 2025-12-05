@@ -147,6 +147,7 @@ const ReliefCalculator: React.FC<{
 
 export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
   const { maintenance, selectedReliefs, selectedSubTemplate } = state;
+  if (!selectedSubTemplate) return null;
   const customReliefs = selectedReliefs.filter(r => r.isCustom);
   const templateData = TEMPLATE_DATA[selectedSubTemplate];
   const standardReliefs = templateData?.reliefs || [];
@@ -156,7 +157,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
     <div className="space-y-6">
       <Alert className="bg-purple-50 border-purple-200 text-purple-800 dark:bg-purple-950 dark:border-purple-800 dark:text-purple-200">
         <Gavel className="h-4 w-4 !text-purple-500" />
-        <AlertTitle>የክስ ዳኝነት (Judgment / Relief)</AlertTitle>
+        <AlertTitle>የክስ ዳኝነት</AlertTitle>
         <AlertDescription>
          ፍርድ ቤቱ እንዲወስንልዎ የሚፈልጉትን ዳኝነት ከዚህ በታች ይምረጡ።
         </AlertDescription>

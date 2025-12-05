@@ -33,7 +33,7 @@ const parseSentenceWithInputs = (
         <Input
           key={`${fact.id}-${fieldKey}-${index}`}
           className="inline-block w-auto h-7 px-2 py-1 text-sm bg-white dark:bg-gray-800 border-dashed border-primary/50 focus:border-solid mx-1"
-          placeholder={fieldKey}
+          placeholder={fieldKey === 'Date' ? 'ቀን' : fieldKey === 'Amount' ? 'የብር መጠን' : fieldKey}
           value={(fact.values && fact.values[fieldKey]) || ''}
           onChange={(e) => dispatch({
             type: 'UPDATE_FACT_VALUE',
@@ -54,6 +54,7 @@ interface FactsTabProps {
 
 export default function FactsTab({ state, dispatch }: FactsTabProps) {
   const { maintenance, selectedFacts, selectedSubTemplate } = state;
+  if (!selectedSubTemplate) return null;
   const templateData = TEMPLATE_DATA[selectedSubTemplate];
 
   const templateFacts = templateData?.facts || [];
@@ -87,7 +88,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
     <div className="space-y-6">
       <Alert className="bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-950 dark:border-blue-800 dark:text-blue-200">
         <Info className="h-4 w-4 !text-blue-500" />
-        <AlertTitle>የክስ ፍሬነገር ምርጫ (Fact Selection)</AlertTitle>
+        <AlertTitle>የክስ ፍሬነገር ምርጫ</AlertTitle>
         <AlertDescription>
           ህጋዊ አንቀፆችን እና ተያያዥ ማስረጃዎችን በራስ-ሰር ለማስገባት ከዚህ በታች ያሉትን ምክንያቶች ይምረጡ።
         </AlertDescription>
@@ -104,7 +105,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                 />
                 <div className="grid gap-1.5 leading-none">
                 <label htmlFor="chk-custody" className="font-bold text-foreground cursor-pointer">
-                    የልጅ አስተዳደግ እና ቀለብ (Child Custody & Maintenance)
+                    የልጅ አስተዳደግ እና ቀለብ
                 </label>
                 <p className="text-sm text-green-700 dark:text-green-400">
                     ይህንን መምረጥ የቀለብ ማስያ ማሽን እንዲሰራ ያደርጋል።
@@ -119,9 +120,9 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                         <div>
                             <CardTitle className="text-accent flex items-center gap-2">
                                 <BrainCircuit className="w-5 h-5"/>
-                                የቀለብ ማስያ (Maintenance Calculator)
+                                የቀለብ ማስያ
                             </CardTitle>
-                            <CardDescription>Rule: (Income × 33%) ÷ Children</CardDescription>
+                            <CardDescription>(የገቢ × 33%) ÷ የልጆች ብዛት</CardDescription>
                         </div>
                     </div>
                 </CardHeader>
@@ -132,7 +133,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                         <Input
                         id="calc-income"
                         type="number"
-                        placeholder="e.g. 10000"
+                        placeholder="ለምሳሌ፦ 10000"
                         value={maintenance.income || ''}
                         onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'income', value: e.target.valueAsNumber } })}
                         />
@@ -193,9 +194,8 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                                         <RadioGroupItem value={fact.id} id={`fact-${fact.id}`} className="mt-1" />
                                         <div className="grid gap-1.5 leading-none flex-1">
                                             <label htmlFor={`fact-${fact.id}`} className="font-medium cursor-pointer leading-relaxed">
-                                                {selectedFact ? parseSentenceWithInputs(fact.legalText, selectedFact, dispatch) : fact.legalText.replace(/\[.*?\]/g, '...')}
+                                                {selectedFact ? parseSentenceWithInputs(fact.legalText, selectedFact, dispatch) : fact.legalText.replace(/\[(.*?)\]/g, (match, key) => `[${key === 'Date' ? 'ቀን' : key === 'Amount' ? 'የብር መጠን' : key}]`)}
                                             </label>
-                                            <p className="text-sm text-muted-foreground">{fact.citation}</p>
                                         </div>
                                     </div>
                                 );
@@ -216,9 +216,8 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                                     />
                                     <div className="grid gap-1.5 leading-none flex-1">
                                         <label htmlFor={`fact-${fact.id}`} className="font-medium cursor-pointer leading-relaxed">
-                                            {selectedFact ? parseSentenceWithInputs(fact.legalText, selectedFact, dispatch) : fact.legalText.replace(/\[.*?\]/g, '...')}
+                                            {selectedFact ? parseSentenceWithInputs(fact.legalText, selectedFact, dispatch) : fact.legalText.replace(/\[(.*?)\]/g, (match, key) => `[${key === 'Date' ? 'ቀን' : key === 'Amount' ? 'የብር መጠን' : key}]`)}
                                         </label>
-                                        <p className="text-sm text-muted-foreground">{fact.citation}</p>
                                     </div>
                                 </div>
                             );
@@ -232,7 +231,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
        {selectedFacts.filter(f => f.isCustom).map(fact => (
         <Card key={fact.id} className="bg-muted/30">
             <CardHeader className="flex-row items-center justify-between p-4">
-                <CardTitle className="text-base">Custom Fact</CardTitle>
+                <CardTitle className="text-base">ብጁ ፍሬነገር</CardTitle>
                  <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_CUSTOM_FACT', payload: { id: fact.id } })}>
                   <X className="h-4 w-4" />
                 </Button>
@@ -241,7 +240,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                 <Textarea 
                     value={fact.legalText === 'Enter custom fact...' ? '' : fact.legalText}
                     onChange={(e) => dispatch({ type: 'UPDATE_FACT_TEXT', payload: { id: fact.id, text: e.target.value } })}
-                    placeholder="Enter custom fact details here..."
+                    placeholder="ብጁ የክስ ፍሬነገርዎን እዚህ ያስገቡ..."
                     rows={4}
                 />
             </CardContent>
@@ -250,7 +249,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
 
       <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_CUSTOM_FACT' })}>
         <Plus className="mr-2 h-4 w-4" />
-        Add Custom Fact
+        ብጁ ፍሬነገር ጨምር
       </Button>
     </div>
   );

@@ -11,11 +11,6 @@ interface PageTwoProps {
 
 const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
-    
-    if (title.endsWith(')')) {
-        const parts = title.split('(');
-        return `${parts[0]}ዎች (${parts[1]}`;
-    }
     return `${title}ዎች`.toUpperCase();
 };
 
@@ -168,7 +163,7 @@ export default function PageTwo({ state }: PageTwoProps) {
       </div>
 
       <div className="text-center my-8">
-        <h2 className="font-bold italic underline">በ/ፍ/ብ/ስ/ስ/ህ/ቁ፦፪፻፳፪/፪፻፳፫ መሰረት ከከሳሽ የቀረበ የማስረጃ ዝርዝር</h2>
+        <h2 className="font-bold italic underline">በ/ፍ/ብ/ስ/ስ/ህ/ቁ 222/223 መሰረት ከከሳሽ የቀረበ የማስረጃ ዝርዝር</h2>
       </div>
 
       <div className="space-y-4">
@@ -201,7 +196,7 @@ export default function PageTwo({ state }: PageTwoProps) {
 
         {courtOrderEvidence.length > 0 && (
           <div>
-            <h3 className="font-bold">ሐ). በፍ/ብ/ስ/ስ/ህ/ቁ፦፩፻፵፭ መሰረት በፍርድ ቤት ትዕዛዝ የሚቀርብ የማስረጃ ዝርዝር</h3>
+            <h3 className="font-bold">ሐ). በፍ/ብ/ስ/ስ/ህ/ቁ 145 መሰረት በፍርድ ቤት ትዕዛዝ የሚቀርብ የማስረጃ ዝርዝር</h3>
             <ol className="ml-8 list-decimal" style={{ lineHeight: 1.8 }}>
               {courtOrderEvidence.map((e, i) => (
                 <li key={`co-${i}`} className="mb-3 text-justify">

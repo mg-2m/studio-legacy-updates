@@ -18,15 +18,15 @@
         {
           "id": "con_fact_loan_agreement",
           "label": "የውል መመስረት",
-          "legalText": "በ [Date] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል።",
-          "citation": "የፍትሐ ብሔር ሕግ 2471",
+          "legalText": "በ [Date] ከሳሽ እና ተከሳሽ በፍትሐ ብሔር ሕግ 2471 መሰረት የጽሑፍ የብድር ስምምነት ማድረጋቸው ይታወቃል።",
+          "citation": "",
           "autoEvidence": ["WrittenContract", "AdmissionofDebt"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የብድር ስምምነት" }
         },
         {
           "id": "con_fact_disbursement",
           "label": "የውል መመስረት",
-          "legalText": "ከሳሽ [Amount] ብር ለተከሳሽ ሰጥቷል።",
+          "legalText": "ከሳሽ [Amount] ብር ለተከሳሽ መስጠቱ ይታወቃል።",
           "citation": "",
           "autoEvidence": ["PaymentReceipt"],
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "ገንዘብ መሰጠት" }
@@ -34,8 +34,8 @@
         {
           "id": "con_fact_payment_due",
           "label": "ውል ማፍረስ",
-          "legalText": "የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል።",
-          "citation": "የፍትሐ ብሔር ሕግ 1857",
+          "legalText": "በፍትሐ ብሔር ሕግ 1857 መሰረት የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል።",
+          "citation": "",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የመክፈያ ጊዜ ማብቃት" }
         },
         {
@@ -48,8 +48,8 @@
         {
           "id": "con_fact_notice_given",
           "label": "ውል ማፍረስ",
-          "legalText": "ከሳሽ በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
-          "citation": "የፍትሐ ብሔር ሕግ 1772",
+          "legalText": "ከሳሽ በፍትሐ ብሔር ሕግ 1772 መሰረት በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
+          "citation": "",
           "autoEvidence": ["NoticeofDefault"],
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ማስታወቂያ መሰጠት" }
         }
@@ -57,22 +57,26 @@
       "reliefs": [
         {
           "id": "con_relief_principal_amount",
-          "text": "ተከሳሹ ዋናውን ገንዘብ {{principal}} ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ።",
+          "text": "ተከሳሹ ዋናውን ገንዘብ {{principal}} ብር እንዲከፍል እንዲወሰን።",
           "isDefault": true,
           "isDynamic": true
         },
         {
           "id": "con_relief_legal_interest",
-          "text": "ከውል ማፍረሻ ቀን {{defaultDate}} ጀምሮ የተሰላውን የሕግ ወለድ {{interestRate}}% ማለትም {{interestAmount}} ብር እንዲከፍል ትዕዛዝ እንዲሰጥ።",
-          "citation": "የፍትሐ ብሔር ሕግ 1751",
+          "text": "ከውል ማፍረሻ ቀን {{defaultDate}} ጀምሮ የተሰላውን የሕግ ወለድ {{interestRate}} ከመቶ ማለትም {{interestAmount}} ብር እንዲከፍል እንዲታዘዝ።",
           "isDefault": true,
           "isDynamic": true
         },
         {
           "id": "con_relief_contractual_interest",
-          "text": "በ [Percentage]% የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
-          "citation": "የፍትሐ ብሔር ሕግ 2479",
+          "text": "በ [Percentage] ከመቶ የተስማማውን የውል ወለድ (ቢበዛ 12 ከመቶ) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
           "isDefault": false,
+          "isDynamic": false
+        },
+        {
+          "id": "con_relief_costs",
+          "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+          "isDefault": true,
           "isDynamic": false
         }
       ],
@@ -82,7 +86,7 @@
           "description": "የሚጠየቀውን ዋና ገንዘብ እና ወለድ ያስሉ።",
           "inputs": [
             { "id": "principal", "label": "የብር መጠን", "type": "number", "defaultValue": 10000 },
-            { "id": "interestRate", "label": "ዓመታዊ ወለድ %", "type": "number", "defaultValue": 9 },
+            { "id": "interestRate", "label": "ዓመታዊ ወለድ", "type": "number", "defaultValue": 9 },
             { "id": "defaultDate", "label": "የክፍያ ጊዜ ያለፈበት ቀን", "type": "date", "defaultValue": "2023-01-01" }
           ],
           "outputs": [
@@ -109,8 +113,8 @@
         {
           "id": "con_fact_valid_contract",
           "label": "የውል ግዴታ",
-          "legalText": "በ [SubjectMatter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ።",
-          "citation": "የፍትሐ ብሔር ሕግ 1678",
+          "legalText": "በፍትሐ ብሔር ሕግ አንቀጽ 1678 መሰረት በ [SubjectMatter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል መኖሩ ይታወቃል።",
+          "citation": "",
           "autoEvidence": ["WrittenContract"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ሕጋዊ ውል" }
         },
@@ -124,29 +128,35 @@
         {
           "id": "con_fact_non_performance",
           "label": "የውል ጥሰት",
-          "legalText": "ተከሳሹ ያለ ሕጋዊ ምክንያት [SpecificObligation] አልፈጸመም።",
-          "citation": "የፍትሐ ብሔር ሕግ 1771",
+          "legalText": "ይሁን እንጂ ተከሳሹ በፍትሐ ብሔር ሕግ አንቀጽ 1771 መሰረት ያለ ሕጋዊ ምክንያት [SpecificObligation] አልፈጸመም።",
+          "citation": "",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የተከሳሽ ግዴታ አለመወጣት" }
         },
         {
           "id": "con_fact_special_interest",
           "label": "የውል ጥሰት",
-          "legalText": "የተወሰነ አፈጻጸም ለከሳሽ ልዩ ፍላጎት ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም።",
-          "citation": "የፍትሐ ብሔር ሕግ 1776",
+          "legalText": "በፍትሐ ብሔር ሕግ አንቀጽ 1776 መሰረት ግዴታው እንዲፈጸም መጠየቅ ለከሳሽ ልዩ ጥቅም ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም።",
+          "citation": "",
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ልዩ ጥቅም" }
         }
       ],
       "reliefs": [
         {
           "id": "con_relief_enforce_performance",
-          "text": "ተከሳሹ [Action] በማድረግ ውሉን በተለይ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
+          "text": "ተከሳሹ [Action] በማድረግ ውሉን በተለይ እንዲፈጽም እንዲወሰን።",
           "isDefault": true,
           "isDynamic": false
         },
         {
           "id": "con_relief_alt_damages",
-          "text": "በአማራጭ፣ አፈጻጸም የማይቻል ከሆነ የካሳ ክፍያ እንዲፈጸም ትዕዛዝ እንዲሰጥ።",
+          "text": "በአማራጭ፣ አፈጻጸም የማይቻል ከሆነ የካሳ ክፍያ እንዲፈጽም እንዲታዘዝ።",
           "isDefault": false,
+          "isDynamic": false
+        },
+        {
+          "id": "con_relief_costs",
+          "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+          "isDefault": true,
           "isDynamic": false
         }
       ]
@@ -168,14 +178,14 @@
         {
           "id": "con_fact_fundamental_breach",
           "label": "የጥሰት ትንተና",
-          "legalText": "የተከሳሹ አለመፈጸም የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው።",
-          "citation": "የፍትሐ ብሔር ሕግ 1785",
+          "legalText": "የተከሳሹ አለመፈጸም በፍትሐ ብሔር ሕግ አንቀጽ 1785 መሰረት የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው።",
+          "citation": "",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "መሠረታዊ ጥሰት" }
         },
         {
           "id": "con_fact_payments_made",
           "label": "ካሳ",
-          "legalText": "ከሳሽ ለተከሳሽ [Amount] ከፍሏል።",
+          "legalText": "ከሳሽ ለተከሳሽ [Amount] ብር ከፍሏል።",
           "citation": "",
           "autoEvidence": ["PaymentReceipt"],
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "የተከፈለ ገንዘብ" }
@@ -190,8 +200,14 @@
         },
         {
           "id": "con_relief_reinstatement",
-          "text": "ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።",
-          "citation": "የፍትሐ ብሔር ሕግ 1815",
+          "text": "በፍትሐ ብሔር ሕግ አንቀጽ 1815 መሰረት ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።",
+          "citation": "",
+          "isDefault": true,
+          "isDynamic": false
+        },
+        {
+          "id": "con_relief_costs",
+          "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
           "isDefault": true,
           "isDynamic": false
         }
@@ -214,8 +230,8 @@
         {
           "id": "app_fact_intent_to_obstruct",
           "label": "የፍትሕ መደናቀፍ",
-          "legalText": "ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው።",
-          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 151",
+          "legalText": "በፍትሐ ብሔር ሥነ ሥርዓት ሕግ 151 መሰረት ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው።",
+          "citation": "",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የማደናቀፍ ዓላማ" }
         },
         {
@@ -238,6 +254,12 @@
           "text": "በአማራጭ፣ ተከሳሹ ለተጠየቀው ገንዘብ ዋስትና እንዲያቀርብ ትዕዛዝ እንዲሰጥ።",
           "isDefault": false,
           "isDynamic": false
+        },
+        {
+          "id": "con_relief_costs",
+          "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+          "isDefault": true,
+          "isDynamic": false
         }
       ]
     },
@@ -258,8 +280,8 @@
         {
           "id": "app_fact_clear_admission",
           "label": "እምነት",
-          "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል።",
-          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 242",
+          "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው በፍትሐ ብሔር ሥነ ሥርዓት ሕግ 242 መሰረት የውሉን እና የእዳውን መኖር በግልጽ አምኗል።",
+          "citation": "",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ግልጽ እምነት" }
         }
       ],
@@ -267,6 +289,12 @@
         {
           "id": "app_relief_immediate_judgment",
           "text": "በተጠየቀው የይገባኛል ጥያቄ ክፍል ላይ ለከሳሽ ወዲያውኑ ፍርድ እንዲሰጥ።",
+          "isDefault": true,
+          "isDynamic": false
+        },
+        {
+          "id": "con_relief_costs",
+          "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
           "isDefault": true,
           "isDynamic": false
         }

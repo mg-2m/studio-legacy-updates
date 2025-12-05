@@ -26,12 +26,11 @@ The static document title in the preview must be supplemented with a dynamic "Su
 
 ## 2. Comprehensive Amharic Translation and Presentation
 
-### 2.1. Requirement (A): Full UI Translation
+### 2.1. Requirement (A): Full UI Translation and Amharic-Only Output
 All user-facing English text must be removed from the final rendered output and replaced with professional, legal-grade Amharic. This applies to:
-- Jurisdiction text (e.g., "Art. 1776 of the Civil Code").
-- In-line citations within facts.
-- All labels and placeholder text within the evidence sections, including both auto-linked and manual evidence forms.
+- Jurisdiction text, in-line citations, all labels, and placeholder text within evidence, facts, and relief sections.
 - **Rule 2.1.1: Modern Numeral Standard:** All numbers, especially legal article and proclamation numbers, must be rendered using modern Arabic numerals (e.g., "123", "2024") instead of traditional Geez numerals (e.g., "፻፳፫", "፪ሺ፳፬"). This ensures consistency and modern readability across the entire platform.
+- **Rule 2.1.2: Amharic-Only Output:** The final rendered document (the preview pane) MUST be 100% Amharic. No English words or non-standard symbols (e.g., '%') are permitted. Numbers must be spelled out in Amharic script (e.g., `(አስር ሺህ ብር)`).
 
 ### 2.2. Requirement (B): The WYSIWYG "Prophetic Editor" Mandate
 To ensure clarity, grammatical correctness, and an intuitive user experience, the editor UI must, wherever possible, mirror the final rendered output. This "What You See Is What You Get" approach serves as a core principle for the platform's design.
@@ -45,12 +44,16 @@ To ensure clarity, grammatical correctness, and an intuitive user experience, th
 *   **Rule 2.2.5: Universal Application:** This WYSIWYG logic must be applied consistently across all data types within a section, including auto-generated, AI-suggested, and manual entries, to create a unified and predictable user experience.
 *   **Rule 2.2.6: Gallery of Arguments:** The UI must present a comprehensive gallery of pre-constructed, alternative legal arguments for each core factual or legal point, allowing users to select the narrative that best fits their specific circumstances.
 *   **Rule 2.2.7: Maxim of Exhaustive Scenarios:** The backend data for each template must strive to anticipate and provide selectable options for all common real-world facts, scenarios, and circumstantial variations relevant to that legal matter, ensuring comprehensive case coverage.
+*   **Rule 2.2.8: Rhetorical Citation Blending:** Legal article citations within fact statements should not be rendered as bracketed annexes. Instead, they must be blended naturally into the lawyerly flow of the factual statement itself for better readability and professionalism.
 
-### 2.3. Files to Update
+### 2.3. Requirement (C): Standard Relief for Costs
+*   **Rule 2.3.1: Default Cost Relief:** Every template should include a standard, non-dynamic, selectable relief option for the payment of court costs and advocate fees, allowing the user to request this common judgment without manual entry.
+
+### 2.4. Files to Update
 - `src/components/preview/page-one.tsx` and `src/components/preview/page-two.tsx`: To update rendering logic.
 - `src/components/editor/evidence-tab.tsx`, `facts-tab.tsx`, `relief-tab.tsx`: To implement the WYSIWYG interface.
 - `src/legal_branches/_base.json`: To introduce new sentence templates and descriptive schemas.
-- All `src/legal_branches/*.json` files: To ensure `jurisdictionText` and `citation` fields are pure Amharic.
+- All `src/legal_branches/*.json` files: To ensure `jurisdictionText` and `citation` fields are pure Amharic and blended rhetorically.
 
 ---
 

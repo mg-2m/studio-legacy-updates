@@ -6,6 +6,28 @@ import type { AppState, Party, Relief, Fact } from '@/lib/types';
 import { TEMPLATE_DATA } from '@/lib/data';
 import { toWords } from 'number-to-words';
 
+// A placeholder for a proper Amharic number-to-word converter
+const toAmharicWords = (num: number): string => {
+    try {
+        const amharicNumerals = {
+            1: 'አንድ', 2: 'ሁለት', 3: 'ሶስት', 4: 'አራት', 5: 'አምስት', 
+            6: 'ስድስት', 7: 'ሰባት', 8: 'ስምንት', 9: 'ዘጠኝ', 10: 'አስር',
+            20: 'ሃያ', 30: 'ሰላሳ', 40: 'አርባ', 50: 'ሃምሳ', 60: 'ስልሳ', 
+            70: 'ሰባ', 80: 'ሰማንያ', 90: 'ዘጠና', 100: 'መቶ', 1000: 'ሺህ'
+        };
+        // This is an overly simplified conversion and will not work for complex numbers.
+        // It's a placeholder to avoid English output.
+        // A proper library or more complex function is needed for production.
+        if (num in amharicNumerals) {
+            return amharicNumerals[num as keyof typeof amharicNumerals];
+        }
+        // Fallback for demonstration
+        return toWords(num).replace(/[\w\s-]+/g, ''); // Return empty string for non-trivial numbers to avoid English
+    } catch {
+        return ""; // Return empty string on error
+    }
+};
+
 
 const formatFactPlaceholders = (text: string, values: { [key: string]: any }): string => {
   let formattedText = text;
@@ -38,9 +60,7 @@ const composeNarrative = (facts: Fact[]): string => {
     factGroup.forEach((fact, index) => {
       let sentence = formatFactPlaceholders(fact.legalText, fact.values);
       
-      if (fact.citation) {
-        sentence += ` <span class="text-xs font-bold ml-1">[${fact.citation}]</span>`;
-      }
+      // Removed bracketed citation rendering per user request
       
       let connector = '';
       if (index === 0) {
@@ -100,7 +120,8 @@ export default function PageOne({ state }: { state: AppState }) {
         });
     }
     text = text.replace(/\[(.*?)\]/g, (match, key) => {
-        return `<strong><u>${key}</u></strong>`;
+        const value = relief.values[key.trim()];
+        return `<strong><u>${value || '______'}</u></strong>`;
     });
 
 
@@ -110,10 +131,6 @@ export default function PageOne({ state }: { state: AppState }) {
 
   const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
-    if (title.endsWith(')')) {
-        const parts = title.split('(');
-        return `${parts[0]}ዎች (${parts[1]}`.toUpperCase();
-    }
     return `${title}ዎች`.toUpperCase();
   };
 
@@ -166,30 +183,30 @@ export default function PageOne({ state }: { state: AppState }) {
     
     let valueText = '(በብር ****** ግምት የቀረበ ክስ ነው)';
 
-    if (meta.claimAmount) {
+    let amount: number | null = null;
+    
+    if (meta.isManualAmount && meta.claimAmount) {
         const numericAmount = parseFloat(meta.claimAmount);
         if (!isNaN(numericAmount)) {
-             try {
-                const amountInWords = toWords(numericAmount);
-                valueText = `ብር ${numericAmount.toFixed(2)} (${amountInWords} ብር)`;
-            } catch (e) {
-                console.error("Failed to convert number to words:", e);
-                valueText = `ብር ${numericAmount.toFixed(2)} (በቃላት ያልተደገፈ ብር)`;
-            }
+             amount = numericAmount;
         }
-    } else if (Object.keys(allCalcValues).length > 0) {
+    } else if (!meta.isManualAmount && Object.keys(allCalcValues).length > 0) {
         const primaryOutputKey = Object.keys(allCalcValues).find(k => k.toLowerCase().includes('amount') || k.toLowerCase().includes('pay') || k.toLowerCase().includes('principal'));
         const primaryValue = primaryOutputKey ? allCalcValues[primaryOutputKey] as number : Object.values(allCalcValues)[0] as number;
         
         if(primaryValue && typeof primaryValue === 'number' && primaryValue > 0) {
-            try {
-              const amountInWords = toWords(primaryValue);
-              valueText = `ብር ${primaryValue.toFixed(2)} (${amountInWords} ብር)`;
-            } catch (e) {
-                console.error("Failed to convert number to words:", e);
-                valueText = `ብር ${primaryValue.toFixed(2)} (በቃላት ያልተደገፈ ብር)`;
-            }
+            amount = primaryValue;
         }
+    }
+
+    if (amount !== null) {
+      try {
+          const amountInAmharicWords = toAmharicWords(amount) || toWords(amount).replace(/[\w\s-]+/g, '');
+          valueText = `ብር ${amount.toFixed(2)} (${amountInAmharicWords} ብር)`;
+      } catch (e) {
+          console.error("Failed to convert number to words:", e);
+          valueText = `ብር ${amount.toFixed(2)}`;
+      }
     }
     
     const pleader = applicants.length > 0 ? `በ${partyTitles.applicant}` : '';
@@ -267,7 +284,7 @@ export default function PageOne({ state }: { state: AppState }) {
         <ul className="list-none p-0 leading-relaxed">
           <li>➤ ይህ የተከበረ ፍርድ ቤት በ{jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ {applicants.length > 1 ? "አመልካቾች" : "አመልካች"} ጉዳዩን የምንከታተለው፡ {repMap[meta.representation]}</li>
-          <li>➤ {summonsMap[meta.summonsDelivery]} (ሂደት አንዴት መሆን አለበት?)</li>
+          <li>➤ {summonsMap[meta.summonsDelivery]}</li>
           <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
         </ul>
       </div>

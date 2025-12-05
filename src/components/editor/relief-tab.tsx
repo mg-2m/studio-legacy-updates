@@ -100,7 +100,7 @@ const ReliefCalculator: React.FC<{
                                 <Input
                                     id={`calc-${calcKey}-${input.id}`}
                                     type="number"
-                                    placeholder={`e.g. ${input.defaultValue}`}
+                                    placeholder={`ለምሳሌ፦ ${input.defaultValue}`}
                                     value={calcState[input.id] as number || ''}
                                     onChange={(e) => handleInputChange(input.id, e.target.valueAsNumber)}
                                 />
@@ -115,7 +115,7 @@ const ReliefCalculator: React.FC<{
                                       )}
                                     >
                                       <CalendarIcon className="mr-2 h-4 w-4" />
-                                      {calcState[input.id] ? format(parseISO(calcState[input.id] as string), "PPP") : <span>Pick a date</span>}
+                                      {calcState[input.id] ? format(parseISO(calcState[input.id] as string), "PPP") : <span>ቀን ይምረጡ</span>}
                                     </Button>
                                   </PopoverTrigger>
                                   <PopoverContent className="w-auto p-0">
@@ -147,6 +147,7 @@ const ReliefCalculator: React.FC<{
 
 export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
   const { maintenance, selectedReliefs, selectedSubTemplate } = state;
+  if (!selectedSubTemplate) return null;
   const customReliefs = selectedReliefs.filter(r => r.isCustom);
   const templateData = TEMPLATE_DATA[selectedSubTemplate];
   const standardReliefs = templateData?.reliefs || [];
@@ -156,7 +157,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
     <div className="space-y-6">
       <Alert className="bg-purple-50 border-purple-200 text-purple-800 dark:bg-purple-950 dark:border-purple-800 dark:text-purple-200">
         <Gavel className="h-4 w-4 !text-purple-500" />
-        <AlertTitle>የክስ ዳኝነት (Judgment / Relief)</AlertTitle>
+        <AlertTitle>የክስ ዳኝነት</AlertTitle>
         <AlertDescription>
          ፍርድ ቤቱ እንዲወስንልዎ የሚፈልጉትን ዳኝነት ከዚህ በታች ይምረጡ።
         </AlertDescription>
@@ -201,7 +202,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
               />
               <div className="grid gap-1.5 leading-none flex-1">
                 <label htmlFor={`relief-${item.id}`} className="font-medium cursor-pointer leading-relaxed">
-                   {selectedRelief ? parseSentenceWithInputs(item.text, { ...selectedRelief, calculations: state.calculations }, dispatch) : item.text.replace(/(\[.*?\])|(\{\{.*?\}\})/g, '...')}
+                   {selectedRelief ? parseSentenceWithInputs(item.text, { ...selectedRelief, calculations: state.calculations }, dispatch) : item.text.replace(/(\[.*?\])|(\{\{.*?\}\})/g, (match, p1, p2) => p1 || '...')}
                 </label>
               </div>
             </div>
@@ -215,7 +216,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
         {customReliefs.map(relief => (
           <Card key={relief.id} className="bg-muted/30">
               <CardHeader className="flex-row items-center justify-between p-4">
-                  <CardTitle className="text-base">Custom Relief</CardTitle>
+                  <CardTitle className="text-base">ብጁ ዳኝነት</CardTitle>
                    <Button variant="ghost" size="icon" className="h-7 w-7 text-destructive" onClick={() => dispatch({ type: 'REMOVE_CUSTOM_RELIEF', payload: { id: relief.id } })}>
                     <X className="h-4 w-4" />
                   </Button>
@@ -224,7 +225,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
                   <Textarea 
                       value={relief.text === 'Enter custom relief...' ? '' : relief.text}
                       onChange={(e) => dispatch({ type: 'UPDATE_CUSTOM_RELIEF', payload: { id: relief.id, text: e.target.value } })}
-                      placeholder="Enter custom relief details here..."
+                      placeholder="ብጁ የዳኝነት ጥያቄዎን እዚህ ያስገቡ..."
                       rows={3}
                   />
               </CardContent>
@@ -234,7 +235,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
 
       <Button variant="outline" className="w-full border-dashed" onClick={() => dispatch({ type: 'ADD_CUSTOM_RELIEF' })}>
         <Plus className="mr-2 h-4 w-4" />
-        Add Custom Relief
+        ብጁ ዳኝነት ጨምር
       </Button>
 
     </div>

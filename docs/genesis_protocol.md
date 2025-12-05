@@ -30,23 +30,22 @@ This pillar governs the structure, content, and logic of all `.json` data files 
     -   `"transition"`: An Amharic phrase to connect subsequent facts (e.g., "በተጨማሪም፣").
     -   `"summary_keyword"`: A short Amharic noun phrase describing the fact's essence for summarization (e.g., "የማይታረቅ ልዩነት").
 
-### 1.3. The "Amharic First" Content Standard
-- **1.3.1. Legal Amharic:** All user-facing text (`documentTitle`, `legalText`, `label`, etc.) MUST use formal, legal-grade Amharic terminology found in the official Codes.
-- **1.3.2. Rhetorical Citation Blending:** Legal citations (`citation` field) MUST NOT be rendered as bracketed annexes in the UI. The `legalText` itself must be written to naturally incorporate the citation in a lawyerly flow (e.g., "...በፍትሐ ብሔር ሕግ 1772 መሰረት...").
-- **1.3.3. Amharic-Only Final Output:** The final rendered document must be 100% Amharic. No English words or symbols (e.g., "%") are permitted. Numerical values must be spelled out in Amharic script within parentheses.
-- **1.3.4. Modern Numerals:** All numbers in the backend data, especially for legal articles (`Art. 123`) and proclamations (`Proc. 1183/2020`), MUST use modern Arabic numerals.
+### 1.3. The "Cassation-Ready" Research Standard
+- **1.3.1. Statute of Limitations (`Period of Limitation`):** Every `templateDescription` MUST contain a section titled `### የጊዜ ገደብ (Period of Limitation)` citing the specific article that dictates the claim's expiration.
+- **1.3.2. Preconditions (`Prerequisites`):** Every `templateDescription` MUST contain a section titled `### ቅድመ ሁኔታዎች (Prerequisites)` detailing mandatory requirements before filing. This includes the exhaustion of internal remedies for administrative law cases.
+- **1.3.3. Cassation Binding Precedent:** If a legal principle is based on a binding Cassation Bench decision, the `jurisdictionText` or `citation` MUST reference the file number (መዝገብ ቁጥር) and volume (ቅጽ).
 
-### 1.4. The "Cassation-Ready" Research Standard
-- **1.4.1. Statute of Limitations (`Period of Limitation`):** Every `templateDescription` MUST contain a section titled `### የጊዜ ገደብ (Period of Limitation)` citing the specific article that dictates the claim's expiration.
-- **1.4.2. Preconditions (`Prerequisites`):** Every `templateDescription` MUST contain a section titled `### ቅድመ ሁኔታዎች (Prerequisites)` detailing mandatory requirements before filing. This includes the exhaustion of internal remedies for administrative law cases.
-- **1.4.3. Cassation Binding Precedent:** If a legal principle is based on a binding Cassation Bench decision, the `jurisdictionText` or `citation` MUST reference the file number (መዝገብ ቁጥር) and volume (ቅጽ).
+### 1.4. Dynamic "Subject of Claim" (`የክሱ ምክንያት`)
+- **1.4.1. The `purpose` Meta Field:** Every template's `meta` object must contain a `purpose` field in Amharic that describes the core reason for the claim (e.g., "ለተሰጠ የብድር ዕዳ").
+- **1.4.2. Structure:** The final rendered title will follow the structure: `የክሱ ምክንያት ፡- [Purpose] [Value] [Pleader].`
 
-### 1.5. Dynamic "Subject of Claim" (`የክሱ ምክንያት`)
-- **1.5.1. The `purpose` Meta Field:** Every template's `meta` object must contain a `purpose` field in Amharic that describes the core reason for the claim (e.g., "ለተሰጠ የብድር ዕዳ").
-- **1.5.2. Structure:** The final rendered title will follow the structure: `የክሱ ምክንያት ፡- [Purpose] [Value] [Pleader].`
+### 1.5. Smart Evidence & Data Topology
+- **1.5.1. Entity Standardization:** Evidence keys in `_base.json` must be generic enough for reuse but specific enough for clarity (e.g., `ProofOfMarriage` is better than `MarriageCertificate`).
+- **1.5.2. Credential Enforceability:** The `credentialPlaceholder` must guide the user to the exact data point required (e.g., "Registration No. & Date of Issue").
 
-### 1.6. Standard Relief for Costs
+### 1.6. Standard Reliefs and Default Selections
 - **1.6.1. Default Cost Relief:** Every template that involves a dispute SHOULD include a standard, non-dynamic, selectable relief option for the payment of court costs and advocate fees (`"ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን"`).
+- **1.6.2. Default Selection (`isDefault`):** Any relief marked with `isDefault: true` in the JSON must be automatically selected by the UI upon template load.
 
 ---
 
@@ -72,7 +71,14 @@ This pillar governs how the React components render the UI and handle user inter
 *(This implements the semi-autonomous "expert machine" concept)*
 - **2.4.1. Registrar Persona (Procedural Checks):** The UI can use a `proceduralChecks` object in the JSON to enforce preconditions. Before allowing a "Generate/Print" action, it can check if mandatory evidence is attached and display a warning if it is not.
 - **2.4.2. Judge Persona (Guidance):** The UI can use a `judicialGuidance` property in the JSON to provide contextual help via tooltips or alerts, explaining the legal significance of a particular fact or relief.
+- **2.4.3. Default Selection Feedback:** When default reliefs are auto-selected upon template load (per Rule 1.6.2), the UI MUST provide a brief visual cue (e.g., a highlight or flash) to inform the user that the system has assisted them.
 
-### 2.5. Search, Discovery, and Metadata
-- **2.5.1. Fuzzy Search:** The sidebar/header search MUST use the `meta.keywords` and `meta.aliases` from the backend to implement fuzzy search logic (e.g., searching for "Feta" finds "Divorce").
-- **2.5.2. Metadata Tooltips:** Hovering over a template choice in the UI should display a tooltip showing `meta.complexity` and `meta.jurisdictionType`.
+### 2.5. The "Amharic First" Content & Output Standard
+- **2.5.1. Legal Amharic:** All user-facing text (`documentTitle`, `legalText`, `label`, etc.) MUST use formal, legal-grade Amharic terminology found in the official Codes.
+- **2.5.2. Rhetorical Citation Blending:** Legal citations (`citation` field) MUST NOT be rendered as bracketed annexes in the UI. The `legalText` itself must be written to naturally incorporate the citation in a lawyerly flow (e.g., "...በፍትሐ ብሔር ሕግ 1772 መሰረት...").
+- **2.5.3. Amharic-Only Final Output:** The final rendered document must be 100% Amharic. No English words or symbols (e.g., "%") are permitted. Numerical values must be spelled out in Amharic script within parentheses.
+- **2.5.4. Modern Numerals:** All numbers in the backend data and rendered UI, especially for legal articles (`Art. 123`) and proclamations (`Proc. 1183/2020`), MUST use modern Arabic numerals.
+
+### 2.6. Search, Discovery, and Metadata
+- **2.6.1. Fuzzy Search:** The sidebar/header search MUST use the `meta.keywords` and `meta.aliases` from the backend to implement fuzzy search logic (e.g., searching for "Feta" finds "Divorce").
+- **2.6.2. Metadata Tooltips:** Hovering over a template choice in the UI should display a tooltip showing `meta.complexity` and `meta.jurisdictionType`.

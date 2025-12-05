@@ -6,7 +6,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { TEMPLATE_DATA } from '@/lib/data';
-import type { AppState, CalculationConfig } from '@/lib/types';
+import type { AppState, CalculationConfig, Relief } from '@/lib/types';
 import { Gavel, Info, Plus, X, BrainCircuit, Calendar as CalendarIcon } from 'lucide-react';
 import { Separator } from '../ui/separator';
 import { Button } from '../ui/button';
@@ -22,6 +22,49 @@ interface ReliefTabProps {
   state: AppState;
   dispatch: React.Dispatch<any>;
 }
+
+
+const parseSentenceWithInputs = (
+  text: string,
+  relief: Relief,
+  dispatch: React.Dispatch<any>
+) => {
+  const parts = text.split(/(\[.*?\])|(\{\{.*?\}\})/g).filter(part => part);
+
+  return parts.map((part, index) => {
+    const placeholderMatch = part.match(/\[(.*?)\]/);
+    const calculatorMatch = part.match(/\{\{(.*?)\}\}/);
+
+    if (placeholderMatch) {
+      const fieldKey = placeholderMatch[1];
+      return (
+        <Input
+          key={`${relief.id}-${fieldKey}-${index}`}
+          className="inline-block w-auto h-7 px-2 py-1 text-sm bg-white dark:bg-gray-800 border-dashed border-primary/50 focus:border-solid mx-1"
+          placeholder={fieldKey}
+          value={(relief.values && relief.values[fieldKey]) || ''}
+          onChange={(e) => dispatch({
+            type: 'UPDATE_RELIEF_VALUE',
+            payload: { reliefId: relief.id, field: fieldKey, value: e.target.value }
+          })}
+        />
+      );
+    }
+    
+    if (calculatorMatch) {
+      const fieldKey = calculatorMatch[1].trim();
+      const allCalcValues = Object.values(relief.calculations || {}).reduce((acc, curr) => ({ ...acc, ...curr }), {});
+      const value = allCalcValues[fieldKey];
+      return (
+         <span key={`${relief.id}-${fieldKey}-${index}`} className="font-bold text-accent mx-1">
+          {(typeof value === 'number' ? value.toFixed(2) : value) || '...'}
+        </span>
+      );
+    }
+
+    return <span key={`${relief.id}-text-${index}`}>{part}</span>;
+  });
+};
 
 
 const ReliefCalculator: React.FC<{
@@ -126,41 +169,40 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
 
       <div className="space-y-3">
         {standardReliefs.map(item => {
-          const isMaintenanceCheckbox = item.id === 'relief_child_support';
+          const isSelected = selectedReliefs.some(sr => sr.id === item.id);
+          const selectedRelief = selectedReliefs.find(sr => sr.id === item.id);
           
-          if (templateData?.id === 'family_divorce_dispute' && isMaintenanceCheckbox) {
+          if (templateData?.id === 'family_divorce_dispute' && item.id === 'relief_child_support') {
              return (
-                <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
+                <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 dark:has-[:checked]:bg-blue-950/30 transition-colors">
                   <Checkbox
                     id={`relief-${item.id}`}
                     checked={maintenance.active}
                     onCheckedChange={(checked) => dispatch({ type: 'TOGGLE_MAINTENANCE', payload: { checked: !!checked } })}
                     className="mt-1"
                   />
-                  <div className="grid gap-1.5 leading-none">
-                    <label htmlFor={`relief-${item.id}`} className="font-bold cursor-pointer">
-                      {item.text.split('(')[0]}
+                  <div className="grid gap-1.5 leading-none flex-1">
+                    <label htmlFor={`relief-${item.id}`} className="font-medium cursor-pointer leading-relaxed">
+                        {item.text}
                     </label>
-                    <p className="text-sm text-muted-foreground">{item.text}</p>
                   </div>
                 </div>
               );
           }
 
           return (
-            <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 transition-colors">
+            <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 dark:has-[:checked]:bg-blue-950/30 transition-colors">
               <Checkbox
                 id={`relief-${item.id}`}
-                checked={selectedReliefs.some(sr => sr.id === item.id)}
+                checked={isSelected}
                 onCheckedChange={() => dispatch({ type: 'TOGGLE_RELIEF', payload: { reliefId: item.id } })}
                 disabled={item.isDefault && !item.isDynamic}
                 className="mt-1"
               />
-              <div className="grid gap-1.5 leading-none">
-                <label htmlFor={`relief-${item.id}`} className="font-bold cursor-pointer">
-                  {item.text.split('(')[0]}
+              <div className="grid gap-1.5 leading-none flex-1">
+                <label htmlFor={`relief-${item.id}`} className="font-medium cursor-pointer leading-relaxed">
+                   {selectedRelief ? parseSentenceWithInputs(item.text, { ...selectedRelief, calculations: state.calculations }, dispatch) : item.text.replace(/(\[.*?\])|(\{\{.*?\}\})/g, '...')}
                 </label>
-                <p className="text-sm text-muted-foreground">{item.text}</p>
               </div>
             </div>
           );

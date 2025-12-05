@@ -18,7 +18,7 @@
         {
           "id": "con_fact_loan_agreement",
           "label": "የውል መመስረት",
-          "legalText": "በ {{Date}} ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል።",
+          "legalText": "በ [Date] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል።",
           "citation": "የፍትሐ ብሔር ሕግ 2471",
           "autoEvidence": ["WrittenContract", "AdmissionofDebt"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የብድር ስምምነት" }
@@ -26,7 +26,7 @@
         {
           "id": "con_fact_disbursement",
           "label": "የውል መመስረት",
-          "legalText": "ከሳሽ {{Amount}} ብር ለተከሳሽ ሰጥቷል።",
+          "legalText": "ከሳሽ [Amount] ብር ለተከሳሽ ሰጥቷል።",
           "citation": "",
           "autoEvidence": ["PaymentReceipt"],
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "ገንዘብ መሰጠት" }
@@ -34,7 +34,7 @@
         {
           "id": "con_fact_payment_due",
           "label": "ውል ማፍረስ",
-          "legalText": "የተስማሙበት የመክፈያ ጊዜ በ {{Date}} አብቅቷል።",
+          "legalText": "የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል።",
           "citation": "የፍትሐ ብሔር ሕግ 1857",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የመክፈያ ጊዜ ማብቃት" }
         },
@@ -48,7 +48,7 @@
         {
           "id": "con_fact_notice_given",
           "label": "ውል ማፍረስ",
-          "legalText": "ከሳሽ በ {{Date}} መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
+          "legalText": "ከሳሽ በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
           "citation": "የፍትሐ ብሔር ሕግ 1772",
           "autoEvidence": ["NoticeofDefault"],
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ማስታወቂያ መሰጠት" }
@@ -70,7 +70,7 @@
         },
         {
           "id": "con_relief_contractual_interest",
-          "text": "በ {{Percentage}} የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
+          "text": "በ [Percentage]% የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
           "citation": "የፍትሐ ብሔር ሕግ 2479",
           "isDefault": false,
           "isDynamic": false
@@ -109,7 +109,7 @@
         {
           "id": "con_fact_valid_contract",
           "label": "የውል ግዴታ",
-          "legalText": "በ {{Subject Matter}} ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ።",
+          "legalText": "በ [SubjectMatter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ።",
           "citation": "የፍትሐ ብሔር ሕግ 1678",
           "autoEvidence": ["WrittenContract"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ሕጋዊ ውል" }
@@ -124,7 +124,7 @@
         {
           "id": "con_fact_non_performance",
           "label": "የውል ጥሰት",
-          "legalText": "ተከሳሹ ያለ ሕጋዊ ምክንያት {{Specific Obligation}} አልፈጸመም።",
+          "legalText": "ተከሳሹ ያለ ሕጋዊ ምክንያት [SpecificObligation] አልፈጸመም።",
           "citation": "የፍትሐ ብሔር ሕግ 1771",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የተከሳሽ ግዴታ አለመወጣት" }
         },
@@ -139,7 +139,7 @@
       "reliefs": [
         {
           "id": "con_relief_enforce_performance",
-          "text": "ተከሳሹ {{Action, e.g., transferring title}} በማድረግ ውሉን በተለይ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
+          "text": "ተከሳሹ [Action] በማድረግ ውሉን በተለይ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
           "isDefault": true,
           "isDynamic": false
         },
@@ -175,7 +175,7 @@
         {
           "id": "con_fact_payments_made",
           "label": "ካሳ",
-          "legalText": "ከሳሽ ለተከሳሽ {{Amount}} ከፍሏል።",
+          "legalText": "ከሳሽ ለተከሳሽ [Amount] ከፍሏል።",
           "citation": "",
           "autoEvidence": ["PaymentReceipt"],
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "ከዚህም ባሻገር፣", "summary_keyword": "የተከፈለ ገንዘብ" }
@@ -229,7 +229,7 @@
       "reliefs": [
         {
           "id": "app_relief_attach_property",
-          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት {{Specify Property}} እንዲታገድ ትዕዛዝ እንዲሰጥ።",
+          "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ የተከሳሽን ንብረት [SpecifyProperty] እንዲታገድ ትዕዛዝ እንዲሰጥ።",
           "isDefault": true,
           "isDynamic": false
         },

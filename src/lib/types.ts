@@ -113,6 +113,10 @@ export interface Relief {
     isDefault: boolean;
     isDynamic?: boolean;
     isCustom?: boolean;
+    values: { [key: string]: string | number | undefined };
+    calculations?: {
+      [key: string]: Calculation;
+    };
 }
 
 export interface SubTemplate {

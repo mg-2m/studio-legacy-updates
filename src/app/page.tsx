@@ -3,7 +3,7 @@
 "use client";
 
 import React, { useReducer, useEffect, useCallback } from 'react';
-import type { AppState, Fact, Calculation, ManualEvidence } from '@/lib/types';
+import type { AppState, Fact, Calculation, ManualEvidence, Relief } from '@/lib/types';
 import { INITIAL_STATE, HONORIFICS, REGIONS_AND_CITIES, AA_SUBCITIES, EVIDENCE_LOCATIONS, DOCUMENT_ISSUERS, TEMPLATE_DATA, EVIDENCE_REGISTRY } from '@/lib/data';
 import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
@@ -36,6 +36,7 @@ type Action =
   | { type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL'; payload: { registryId: string; credentialValue: string; field: string; } }
   | { type: 'SET_SELECTED_SUB_TEMPLATE'; payload: { templateId: string; subTemplateId: string } }
   | { type: 'TOGGLE_RELIEF'; payload: { reliefId: string } }
+    | { type: 'UPDATE_RELIEF_VALUE'; payload: { reliefId: string; field: string; value: string } }
   | { type: 'ADD_CUSTOM_RELIEF' }
   | { type: 'UPDATE_CUSTOM_RELIEF'; payload: { id: string; text: string } }
   | { type: 'REMOVE_CUSTOM_RELIEF'; payload: { id: string } };
@@ -419,7 +420,7 @@ function appReducer(state: AppState, action: Action): AppState {
             selectedTemplate: templateId,
             selectedSubTemplate: subTemplateId,
             partyTitles: templateData.partyTitles,
-            selectedReliefs: templateData.reliefs.filter(r => r.isDefault),
+            selectedReliefs: templateData.reliefs.filter(r => r.isDefault).map(r => ({ ...r, values: {} })),
             calculations: newCalculations,
             metadata: {
                 ...INITIAL_STATE.metadata,
@@ -447,12 +448,25 @@ function appReducer(state: AppState, action: Action): AppState {
       if (isSelected) {
         return { ...state, selectedReliefs: state.selectedReliefs.filter(r => r.id !== reliefId) };
       } else {
-        return { ...state, selectedReliefs: [...state.selectedReliefs, reliefItem] };
+        return { ...state, selectedReliefs: [...state.selectedReliefs, { ...reliefItem, values: {} }] };
       }
     }
     
+    case 'UPDATE_RELIEF_VALUE': {
+      const { reliefId, field, value } = action.payload;
+      return {
+        ...state,
+        selectedReliefs: state.selectedReliefs.map(r => {
+          if (r.id === reliefId) {
+            return { ...r, values: { ...r.values, [field]: value } };
+          }
+          return r;
+        })
+      };
+    }
+
     case 'ADD_CUSTOM_RELIEF': {
-      const newRelief = { id: 'cr' + Date.now(), text: 'Enter custom relief...', isDefault: false, isDynamic: false, isCustom: true };
+      const newRelief = { id: 'cr' + Date.now(), text: 'Enter custom relief...', isDefault: false, isDynamic: false, isCustom: true, values: {} };
       return { ...state, selectedReliefs: [...state.selectedReliefs, newRelief] };
     }
 

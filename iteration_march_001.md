@@ -37,12 +37,14 @@ All user-facing English text must be removed from the final rendered output and 
 To ensure clarity, grammatical correctness, and an intuitive user experience, the editor UI must, wherever possible, mirror the final rendered output. This "What You See Is What You Get" approach serves as a core principle for the platform's design.
 
 *   **Rule 2.2.1: Sentence-Based UI Construction:** For complex data entry sections like Evidence, Facts, and Reliefs, the UI shall be constructed using pre-defined, grammatically correct Amharic sentence templates sourced from the backend (`_base.json`, `*.json`).
-    *   **Sub-rule 2.2.1.1: Comprehensive Templates:** Sentence templates must be fully descriptive and include all necessary variables (e.g., `documentType`, `originalLocation`) to ensure the auto-generated sentences are as complete and legally robust as manually crafted ones.
+*   **Sub-rule 2.2.1.1: Comprehensive Templates:** Sentence templates must be fully descriptive and include all necessary variables (e.g., `documentType`, `originalLocation`) to ensure the auto-generated sentences are as complete and legally robust as manually crafted ones.
 *   **Rule 2.2.2: Embedded Inputs:** Standard input fields (`Input`, `Select`) must be embedded directly within these sentence templates at the appropriate placeholder locations. This transforms the editor into an interactive, fill-in-the-blanks version of the final document.
 *   **Rule 2.2.3: Contextual Placeholders:** All embedded input fields must use watermarked placeholders to guide the user with clear examples of the required information.
-    *   **Sub-rule 2.2.3.1: Amharic First:** All watermarks and placeholder text must be in clear, guiding Amharic (e.g., "የሰነዱ ገለጻ") rather than English or technical jargon.
+*   **Sub-rule 2.2.3.1: Amharic First:** All watermarks and placeholder text must be in clear, guiding Amharic (e.g., "የሰነዱ ገለጻ") rather than English or technical jargon.
 *   **Rule 2.2.4: Unobtrusive Pre-defined Options:** When providing pre-defined choices (e.g., a list of document issuers), the UI should favor compact, "key-like" tags or minimal dropdown triggers that do not clutter the "one-line railway" flow of the sentence.
 *   **Rule 2.2.5: Universal Application:** This WYSIWYG logic must be applied consistently across all data types within a section, including auto-generated, AI-suggested, and manual entries, to create a unified and predictable user experience.
+*   **Rule 2.2.6: Gallery of Arguments:** The UI must present a comprehensive gallery of pre-constructed, alternative legal arguments for each core factual or legal point, allowing users to select the narrative that best fits their specific circumstances.
+*   **Rule 2.2.7: Maxim of Exhaustive Scenarios:** The backend data for each template must strive to anticipate and provide selectable options for all common real-world facts, scenarios, and circumstantial variations relevant to that legal matter, ensuring comprehensive case coverage.
 
 ### 2.3. Files to Update
 - `src/components/preview/page-one.tsx` and `src/components/preview/page-two.tsx`: To update rendering logic.

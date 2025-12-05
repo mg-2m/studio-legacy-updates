@@ -72,6 +72,7 @@ This pillar governs how the React components render the UI and handle user inter
 - **2.4.1. Registrar Persona (Procedural Checks):** The UI can use a `proceduralChecks` object in the JSON to enforce preconditions. Before allowing a "Generate/Print" action, it can check if mandatory evidence is attached and display a warning if it is not.
 - **2.4.2. Judge Persona (Guidance):** The UI can use a `judicialGuidance` property in the JSON to provide contextual help via tooltips or alerts, explaining the legal significance of a particular fact or relief.
 - **2.4.3. Default Selection Feedback:** When default reliefs are auto-selected upon template load (per Rule 1.6.2), the UI MUST provide a brief visual cue (e.g., a highlight or flash) to inform the user that the system has assisted them.
+- **2.4.4. AI Augmentation (Premium Tier):** As a privileged feature, the UI may offer a button to "Enhance with AI." If triggered, this will send the structured facts to a Genkit flow (`composeLegalNarrative`) and replace the standard narrative with the AI-generated version.
 
 ### 2.5. The "Amharic First" Content & Output Standard
 - **2.5.1. Legal Amharic:** All user-facing text (`documentTitle`, `legalText`, `label`, etc.) MUST use formal, legal-grade Amharic terminology found in the official Codes.

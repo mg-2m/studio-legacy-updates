@@ -74,6 +74,9 @@ export const AA_SUBCITIES = [
   "የካ", "ለሚ ኩራ", "ኮልፌ ቀራኒዮ", "ሌላ"
 ];
 
+const AA_FIRST_INSTANCE_BENCHES = AA_SUBCITIES.map(sc => sc === 'ሌላ' ? sc : `${sc} ምድብ`);
+
+
 export const BENCH_TYPES = [
     "ፍትሐብሔር ችሎት",
     "ቤተሰብ ችሎት",
@@ -107,7 +110,7 @@ export const COURT_HIERARCHY = {
     "ሰበር ሰሚ ችሎት",
     "ሌላ"
   ],
-  "የአዲስ አበባ ከተማ አስተዳደር የመጀመሪያ ደረጃ ፍርድ ቤት": AA_SUBCITIES,
+  "የአዲስ አበባ ከተማ አስተዳደር የመጀመሪያ ደረጃ ፍርድ ቤት": AA_FIRST_INSTANCE_BENCHES,
   "የአዲስ አበባ ከተማ አስተዳደር ይግባኝ ሰሚ ፍርድ ቤት": ["ይግባኝ ሰሚ ችሎት", "ሌላ"],
   "የአዲስ አበባ ከተማ አስተዳደር ሰበር ሰሚ ችሎት": ["ሰበር ሰሚ ችሎት", "ሌላ"],
   "ሌላ": ["ሌላ"],

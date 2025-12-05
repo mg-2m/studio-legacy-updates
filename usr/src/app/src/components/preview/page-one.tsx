@@ -6,6 +6,23 @@ import type { AppState, Party, Relief, Fact } from '@/lib/types';
 import { TEMPLATE_DATA } from '@/lib/data';
 import { toWords } from 'number-to-words';
 
+// A placeholder for a proper Amharic number-to-word converter
+const toAmharicWords = (num: number): string => {
+    try {
+        // Attempt to use a library if available, otherwise return an empty string
+        // This is a placeholder and should be replaced with a real Amharic library.
+        const englishWords = toWords(num);
+        // A very basic, non-production-ready translation for demonstration.
+        // This is NOT a real translation.
+        if (englishWords.includes("thousand")) {
+            return "ሺህ";
+        }
+        return "";
+    } catch {
+        return ""; // Return empty string on error to prevent English output
+    }
+};
+
 
 const formatFactPlaceholders = (text: string, values: { [key: string]: any }): string => {
   let formattedText = text;
@@ -38,7 +55,7 @@ const composeNarrative = (facts: Fact[]): string => {
     factGroup.forEach((fact, index) => {
       let sentence = formatFactPlaceholders(fact.legalText, fact.values);
       
-      // Removed bracketed citation rendering
+      // Removed bracketed citation rendering per user request
       
       let connector = '';
       if (index === 0) {
@@ -65,16 +82,6 @@ export default function PageOne({ state }: { state: AppState }) {
   }
   
   const { documentTitle, jurisdictionText } = currentTemplateData;
-
-  const toAmharicWords = (num: number): string => {
-      try {
-        // This is a placeholder. A proper Amharic library would be used here.
-        // For now, it will return an empty string to prevent English words.
-        return ""; 
-      } catch {
-        return ""; // Return empty string on error
-      }
-  }
 
 
   const summonsMap = {
@@ -108,7 +115,8 @@ export default function PageOne({ state }: { state: AppState }) {
         });
     }
     text = text.replace(/\[(.*?)\]/g, (match, key) => {
-        return `<strong><u>${relief.values[key.trim()] || '______'}</u></strong>`;
+        const value = relief.values[key.trim()];
+        return `<strong><u>${value || '______'}</u></strong>`;
     });
 
 
@@ -168,7 +176,7 @@ export default function PageOne({ state }: { state: AppState }) {
     const purpose = meta.claimPurpose || currentTemplateData.meta?.purpose;
     const allCalcValues = Object.values(calculations).reduce((acc, curr) => ({ ...acc, ...curr }), {});
     
-    let valueText = '(በብር ግምት የቀረበ ክስ ነው)';
+    let valueText = '(በብር ****** ግምት የቀረበ ክስ ነው)';
 
     let amount: number | null = null;
     

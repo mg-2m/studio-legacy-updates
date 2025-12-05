@@ -71,10 +71,11 @@ export default function PageOne({ state }: { state: AppState }) {
       // For now, it will return the English words but this would be the integration point.
       try {
         // This is a placeholder. A proper Amharic library would be used here.
-        // For now, we avoid returning any English text.
-        return toWords(num).replace(/-/g, ' '); 
+        // For now, we avoid returning any English text by just returning an empty string.
+        // A full implementation would require a dedicated Amharic number-to-word library.
+        return ""; // Return empty string to prevent English output.
       } catch {
-        return num.toString();
+        return ""; // Return empty string on error
       }
   }
 
@@ -110,7 +111,7 @@ export default function PageOne({ state }: { state: AppState }) {
         });
     }
     text = text.replace(/\[(.*?)\]/g, (match, key) => {
-        return `<strong><u>${key}</u></strong>`;
+        return `<strong><u>${relief.values[key.trim()] || '______'}</u></strong>`;
     });
 
 
@@ -120,10 +121,6 @@ export default function PageOne({ state }: { state: AppState }) {
 
   const getPluralizedTitle = (title: string, count: number): string => {
     if (count <= 1) return title.toUpperCase();
-    if (title.endsWith(')')) {
-        const parts = title.split('(');
-        return `${parts[0]}ዎች (${parts[1]}`.toUpperCase();
-    }
     return `${title}ዎች`.toUpperCase();
   };
 

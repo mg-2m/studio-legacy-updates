@@ -202,7 +202,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
               />
               <div className="grid gap-1.5 leading-none flex-1">
                 <label htmlFor={`relief-${item.id}`} className="font-medium cursor-pointer leading-relaxed">
-                   {selectedRelief ? parseSentenceWithInputs(item.text, { ...selectedRelief, calculations: state.calculations }, dispatch) : item.text.replace(/(\[.*?\])|(\{\{.*?\}\})/g, '...')}
+                   {selectedRelief ? parseSentenceWithInputs(item.text, { ...selectedRelief, calculations: state.calculations }, dispatch) : item.text.replace(/(\[.*?\])|(\{\{.*?\}\})/g, (match, key) => key ? `[${key}]` : '...')}
                 </label>
               </div>
             </div>

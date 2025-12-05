@@ -86,7 +86,7 @@
           "description": "የሚጠየቀውን ዋና ገንዘብ እና ወለድ ያስሉ።",
           "inputs": [
             { "id": "principal", "label": "የብር መጠን", "type": "number", "defaultValue": 10000 },
-            { "id": "interestRate", "label": "ዓመታዊ ወለድ %", "type": "number", "defaultValue": 9 },
+            { "id": "interestRate", "label": "ዓመታዊ ወለድ", "type": "number", "defaultValue": 9 },
             { "id": "defaultDate", "label": "የክፍያ ጊዜ ያለፈበት ቀን", "type": "date", "defaultValue": "2023-01-01" }
           ],
           "outputs": [

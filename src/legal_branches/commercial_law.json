@@ -15,7 +15,7 @@
         ],
         "jurisdictionType": "Federal/Regional First Instance Court (Commercial Bench)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ገንዘቡ ሳይከፈል የቀረን ቼክ፣ የሐዋላ ወረቀት ወይም ሌላ በድርድር የሚተላለፍ ሰነድ መሠረት በማድረግ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ጉዳዮችን ለማየት ስልጣን ባለው ፍርድ ቤት (የንግድ ችሎት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበንግድ ሕጉ አንቀጽ 882(1) መሰረት፣ በቼክ ላይ የተመሰረተ ክስ ቼኩ ከቀረበበት ቀን ጀምሮ በ**ስድስት (6) ወራት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nዋናው ያልተከፈለ የንግድ ሰነድ (ቼክ) እና ክፍያ እንዳልተፈጸመ የሚያሳይ የባንክ ማስታወሻ ወይም የክፍያ እምቢታ ማረጋገጫ (ProtestCertificate)።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ገንዘቡ ሳይከፈል የቀረን ቼክ، የሐዋላ ወረቀት ወይም ሌላ በድርድር የሚተላለፍ ሰነድ መሠረት በማድረግ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ጉዳዮችን ለማየት ስልጣን ባለው ፍርድ ቤት (የንግድ ችሎት) ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nበንግድ ሕጉ አንቀጽ 882(1) መሰረት، በቼክ ላይ የተመሰረተ ክስ ቼኩ ከቀረበበት ቀን ጀምሮ በ**ስድስት (6) ወራት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nዋናው ያልተከፈለ የንግድ ሰነድ (ቼክ) እና ክፍያ እንዳልተፈጸመ የሚያሳይ የባንክ ማስታወሻ ወይም የክፍያ እምቢታ ማረጋገጫ (ProtestCertificate)።",
       "partyTitles": {
         "applicant": "ከሳሽ (ሰነዱን የያዘ) (Plaintiff - Holder of Instrument)",
         "respondent": "ተከሳሽ (ፈራሚ/አውጪ) (Defendant - Drawer/Maker)"
@@ -24,7 +24,7 @@
         {
           "id": "comm_fact_instrument_issuance",
           "label": "የሰነዱ መኖር እና አቀራረብ",
-          "legalText": "ተከሳሹ በ [issueDate]፣ [amount] ብር የሚያወጣ ቼክ/የሐዋላ ወረቀት ቁጥር [instrumentNumber] ለከሳሽ ሰጥቷል። (The Defendant issued cheque/instrument No. [instrumentNumber] for the sum of [amount] ETB on [issueDate] to the Plaintiff.)",
+          "legalText": "ተከሳሹ በ [issueDate]، [amount] ብር የሚያወጣ ቼክ/የሐዋላ ወረቀት ቁጥር [instrumentNumber] ለከሳሽ ሰጥቷል። (The Defendant issued cheque/instrument No. [instrumentNumber] for the sum of [amount] ETB on [issueDate] to the Plaintiff.)",
           "citation": "Commercial Code Art. 735",
           "autoEvidence": [
             "NotarizedCheque"
@@ -83,7 +83,7 @@
         ],
         "jurisdictionType": "Federal High Court (Commercial Bench)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገንዘብ ችግር ያጋጠመው ነገር ግን የመዳን ተስፋ ያለው የንግድ ድርጅት፣ ከኪሳራ ለመዳን የዕዳ ማዋቀሪያ እቅድ በፍርድ ቤት እንዲጸድቅለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየከሰሩ ድርጅቶችን ጉዳይ ለማየት ስልጣን ባለው የፌደራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ ድርጅቱ የገንዘብ ችግር እንዳጋጠመው ሲያውቅ ሊያቀርበው ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየድርጅቱ የቅርብ ጊዜ ኦዲት የተደረገ የሂሳብ መግለጫ (BalanceSheetAndAudit)።\nየአበዳሪዎች ዝርዝር (ListofCreditors)።\nየማገገሚያ እቅድ ረቂቅ።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት የገንዘብ ችግር ያጋጠመው ነገር ግን የመዳን ተስፋ ያለው የንግድ ድርጅት، ከኪሳራ ለመዳን የዕዳ ማዋቀሪያ እቅድ በፍርድ ቤት እንዲጸድቅለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየከሰሩ ድርጅቶችን ጉዳይ ለማየት ስልጣን ባለው የፌደራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ ድርጅቱ የገንዘብ ችግር እንዳጋጠመው ሲያውቅ ሊያቀርበው ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየድርጅቱ የቅርብ ጊዜ ኦዲት የተደረገ የሂሳብ መግለጫ (BalanceSheetAndAudit)።\nየአበዳሪዎች ዝርዝር (ListofCreditors)።\nየማገገሚያ እቅድ ረቂቅ።",
       "partyTitles": {
         "applicant": "አመልካች (ባለዕዳው ድርጅት) (Applicant - Debtor Company)",
         "respondent": "አበዳሪዎች (በማስታወቂያ) (Creditors (by notice))"
@@ -121,7 +121,7 @@
         {
           "id": "comm_fact_plan_details",
           "label": "የእቅዱ ዝርዝሮች",
-          "legalText": "አመልካቹ ዕዳዎችን ለማስተዳደር፣ ንግዱን ለማሻሻል እና ቀጣይነትን ለማረጋገጥ የሚያስችል ዝርዝር የማገገሚያ እቅድ አዘጋጅቷል። (The Applicant has prepared a detailed restructuring plan to manage debts, reform the business, and ensure continued viability.)",
+          "legalText": "አመልካቹ ዕዳዎችን ለማስተዳደር، ንግዱን ለማሻሻል እና ቀጣይነትን ለማረጋገጥ የሚያስችል ዝርዝር የማገገሚያ እቅድ አዘጋጅቷል። (The Applicant has prepared a detailed restructuring plan to manage debts, reform the business, and ensure continued viability.)",
           "citation": "Commercial Code Art. 1173",
           "autoEvidence": [],
           "rhetoric": {
@@ -163,7 +163,7 @@
         ],
         "jurisdictionType": "Federal High Court (Commercial Bench)"
       },
-      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በባለአክሲዮኖች መካከል በተፈጠረ ከባድ እና ሊፈታ የማይችል አለመግባባት ምክንያት የንግድ ማህበሩን ሥራ ማስቀጠል በማይቻልበት ጊዜ፣ ማህበሩ በፍርድ ቤት ትዕዛዝ እንዲፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ማህበሩ ዋና መሥሪያ ቤት በሚገኝበት ቦታ ስልጣን ባለው የፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ ነገር ግን አለመግባባቱ ከባድ እና ቀጣይ መሆኑን ማሳየት ያስፈልጋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየድርጅቱ መመስረቻ ጽሑፍ (MemorandumAndArticles)።\nአለመግባባቱን የሚያሳዩ የስብሰባ ቃለ-ጉባኤዎች ወይም የደብዳቤ ልውውጦች።",
+      "templateDescription": "### መመሪያ (Guide)\nይህ አብነት በባለአክሲዮኖች መካከል በተፈጠረ ከባድ እና ሊፈታ የማይችል አለመግባባት ምክንያት የንግድ ማህበሩን ሥራ ማስቀጠል በማይቻልበት ጊዜ، ማህበሩ በፍርድ ቤት ትዕዛዝ እንዲፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nየንግድ ማህበሩ ዋና መሥሪያ ቤት በሚገኝበት ቦታ ስልጣን ባለው የፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የጊዜ ገደብ የለውም፤ ነገር ግን አለመግባባቱ ከባድ እና ቀጣይ መሆኑን ማሳየት ያስፈልጋል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየድርጅቱ መመስረቻ ጽሑፍ (MemorandumAndArticles)።\nአለመግባባቱን የሚያሳዩ የስብሰባ ቃለ-ጉባኤዎች ወይም የደብዳቤ ልውውጦች።",
       "partyTitles": {
         "applicant": "ከሳሽ (ባለአክሲዮን/ዳይሬክተር) (Plaintiff - Shareholder/Director)",
         "respondent": "ተከሳሽ (የንግድ ማህበሩ እና ሌሎች ባለአክሲዮኖች) (Defendant - The Company & Other Shareholders)"
@@ -200,7 +200,7 @@
         {
           "id": "comm_fact_applicant_standing",
           "label": "የአመልካች ሁኔታ",
-          "legalText": "ከሳሽ በማህበሩ ውስጥ ባለድርሻ ሲሆን፣ ይህን ክስ ለማቅረብ ሕጋዊ መብት አለው። (The Plaintiff has a legitimate interest as a stakeholder in the company to bring this action.)",
+          "legalText": "ከሳሽ በማህበሩ ውስጥ ባለድርሻ ሲሆን، ይህን ክስ ለማቅረብ ሕጋዊ መብት አለው። (The Plaintiff has a legitimate interest as a stakeholder in the company to bring this action.)",
           "citation": "",
           "autoEvidence": [
             "MemorandumAndArticles"
@@ -305,3 +305,5 @@
     }
   }
 }
+
+    

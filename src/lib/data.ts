@@ -1,5 +1,4 @@
 
-
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
 import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning, FileMinus, FilePlus, UserMinus } from 'lucide-react';
 import { differenceInDays, parseISO } from 'date-fns';
@@ -103,6 +102,8 @@ export const COURT_HIERARCHY = {
   "የፌዴራል ከፍተኛ ፍርድ ቤት": [
     "ልደታ ምድብ",
     "ቦሌ ምድብ",
+    "አራዳ ምድብ",
+    "አቃቂ ቃሊቲ ምድብ",
     "ሌላ"
   ],
   "የፌዴራል ጠቅላይ ፍርድ ቤት": [

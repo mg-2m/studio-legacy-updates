@@ -268,7 +268,7 @@ export default function PageOne({ state }: { state: AppState }) {
           <li>➤ ይህ የተከበረ ፍርድ ቤት በ{jurisdictionText} መሰረት ይህን ጉዳይ የማየት ሥልጣን አለው፡፡</li>
           <li>➤ {applicants.length > 1 ? "አመልካቾች" : "አመልካች"} ጉዳዩን የምንከታተለው፡ {repMap[meta.representation]}</li>
           <li>➤ {summonsMap[meta.summonsDelivery]} (ሂደት አንዴት መሆን አለበት?)</li>
-          <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር ፪፻፳፫ መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
+          <li>➤ ክሱ በፍ/ብ/ሥ/ሥ/ሕግ ቁጥር 223 መሰረት በማስረጃ ተሙዋልቶ ቀርቡዋል፡፡</li>
         </ul>
       </div>
 
@@ -293,7 +293,7 @@ export default function PageOne({ state }: { state: AppState }) {
 
       <div className="mt-12">
         <div className="black-box">ማረጋገጫ</div>
-        <p>ከላይ የቀረበው አቤቱታ እውነት መሆኑን በፍ/ብ/ሥ/ሥ/ሕግ ቁ. ፺፪ መሰረት አረጋግጣለሁ፡፡</p>
+        <p>ከላይ የቀረበው አቤቱታ እውነት መሆኑን በፍ/ብ/ሥ/ሥ/ሕግ ቁ. 92 መሰረት አረጋግጣለሁ፡፡</p>
         <div className="text-right mt-10">
           <div className="inline-block text-center w-52">
             <div className="border-b-2 border-black h-8"></div>

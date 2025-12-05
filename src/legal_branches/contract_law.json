@@ -3,7 +3,7 @@
   "templates": {
     "contract_debt_recovery": {
       "documentTitle": "የብድር/ዕዳ ማስመለሻ ክስ",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ቁጥር ፪፻፲፮ እና ተከታዮቹ እና የፍትሐ ብሔር ሕግ ቁጥር ፪ሺ፬፻፸፩",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ቁጥር 216 እና ተከታዮቹ እና የፍትሐ ብሔር ሕግ ቁጥር 2471",
       "meta": {
         "keywords": ["debt recovery", "loan agreement", "non-payment", "የዕዳ ማስመለስ", "የብድር ክስ"],
         "jurisdictionType": "Federal/Regional First Instance",
@@ -19,7 +19,7 @@
           "id": "con_fact_loan_agreement",
           "label": "የውል መመስረት",
           "legalText": "በ {{Date}} ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት አድርገዋል።",
-          "citation": "የፍትሐ ብሔር ሕግ ፪፬፻፸፩",
+          "citation": "የፍትሐ ብሔር ሕግ 2471",
           "autoEvidence": ["WrittenContract", "AdmissionofDebt"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የብድር ስምምነት" }
         },
@@ -35,7 +35,7 @@
           "id": "con_fact_payment_due",
           "label": "ውል ማፍረስ",
           "legalText": "የተስማሙበት የመክፈያ ጊዜ በ {{Date}} አብቅቷል።",
-          "citation": "የፍትሐ ብሔር ሕግ ፩፰፻፶፯",
+          "citation": "የፍትሐ ብሔር ሕግ 1857",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የመክፈያ ጊዜ ማብቃት" }
         },
         {
@@ -49,7 +49,7 @@
           "id": "con_fact_notice_given",
           "label": "ውል ማፍረስ",
           "legalText": "ከሳሽ በ {{Date}} መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
-          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፸፪",
+          "citation": "የፍትሐ ብሔር ሕግ 1772",
           "autoEvidence": ["NoticeofDefault"],
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ማስታወቂያ መሰጠት" }
         }
@@ -64,14 +64,14 @@
         {
           "id": "con_relief_legal_interest",
           "text": "ከውል ማፍረሻ ቀን {{defaultDate}} ጀምሮ የተሰላውን የሕግ ወለድ {{interestRate}}% ማለትም {{interestAmount}} ብር እንዲከፍል ትዕዛዝ እንዲሰጥ።",
-          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፶፩",
+          "citation": "የፍትሐ ብሔር ሕግ 1751",
           "isDefault": true,
           "isDynamic": true
         },
         {
           "id": "con_relief_contractual_interest",
           "text": "በ {{Percentage}} የተስማማውን የውል ወለድ (ቢበዛ 12%) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
-          "citation": "የፍትሐ ብሔር ሕግ ፪፬፻፸፱",
+          "citation": "የፍትሐ ብሔር ሕግ 2479",
           "isDefault": false,
           "isDynamic": false
         }
@@ -94,7 +94,7 @@
     },
     "contract_specific_performance": {
       "documentTitle": "ውል ይፈጸምልኝ ክስ",
-      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ ፩፯፻፸፮",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1776",
        "meta": {
         "keywords": ["specific performance", "enforcement", "contract breach", "ውል ይፈጸምልኝ", "ውል ማስከበር"],
         "jurisdictionType": "Federal/Regional First Instance",
@@ -110,7 +110,7 @@
           "id": "con_fact_valid_contract",
           "label": "የውል ግዴታ",
           "legalText": "በ {{Subject Matter}} ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል አለ።",
-          "citation": "የፍትሐ ብሔር ሕግ ፩፮፻፸፰",
+          "citation": "የፍትሐ ብሔር ሕግ 1678",
           "autoEvidence": ["WrittenContract"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ሕጋዊ ውል" }
         },
@@ -125,14 +125,14 @@
           "id": "con_fact_non_performance",
           "label": "የውል ጥሰት",
           "legalText": "ተከሳሹ ያለ ሕጋዊ ምክንያት {{Specific Obligation}} አልፈጸመም።",
-          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፸፩",
+          "citation": "የፍትሐ ብሔር ሕግ 1771",
           "rhetoric": { "intro": "በመቀጠልም፣", "transition": "በተጨማሪም፣", "summary_keyword": "የተከሳሽ ግዴታ አለመወጣት" }
         },
         {
           "id": "con_fact_special_interest",
           "label": "የውል ጥሰት",
           "legalText": "የተወሰነ አፈጻጸም ለከሳሽ ልዩ ፍላጎት ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም።",
-          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፸፮",
+          "citation": "የፍትሐ ብሔር ሕግ 1776",
           "rhetoric": { "intro": "በመጨረሻም፣", "transition": "ከዚህም በላይ፣", "summary_keyword": "ልዩ ጥቅም" }
         }
       ],
@@ -153,7 +153,7 @@
     },
     "contract_termination_claim": {
       "documentTitle": "የውል ስረዛ ክስ",
-      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ ፩፯፻፹፬ እና ፩፯፻፹፭",
+      "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1784 እና 1785",
       "meta": {
         "keywords": ["contract termination", "cancellation", "breach of contract", "የውል ስረዛ", "ውል ማፍረስ"],
         "jurisdictionType": "Federal/Regional First Instance",
@@ -169,7 +169,7 @@
           "id": "con_fact_fundamental_breach",
           "label": "የጥሰት ትንተና",
           "legalText": "የተከሳሹ አለመፈጸም የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው።",
-          "citation": "የፍትሐ ብሔር ሕግ ፩፯፻፹፭",
+          "citation": "የፍትሐ ብሔር ሕግ 1785",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "መሠረታዊ ጥሰት" }
         },
         {
@@ -191,7 +191,7 @@
         {
           "id": "con_relief_reinstatement",
           "text": "ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።",
-          "citation": "የፍትሐ ብሔር ሕግ ፩፰፻፲፭",
+          "citation": "የፍትሐ ብሔር ሕግ 1815",
           "isDefault": true,
           "isDynamic": false
         }
@@ -199,7 +199,7 @@
     },
     "app_attachment_before_judgment": {
       "documentTitle": "ከፍርድ በፊት የንብረት እግድ ማመልከቻ",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ ፩፻፶፩ እና ፩፻፶፪",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 151 እና 152",
       "meta": {
         "keywords": ["attachment", "injunction", "pre-judgment", "asset freeze", "የንብረት እግድ", "ጊዜያዊ"],
         "jurisdictionType": "Federal/Regional First Instance",
@@ -215,7 +215,7 @@
           "id": "app_fact_intent_to_obstruct",
           "label": "የፍትሕ መደናቀፍ",
           "legalText": "ተከሳሹ የፍርዱን አፈጻጸም ለማደናቀፍ በማሰብ ንብረቱን ሊያስወግድ ወይም ከፍርድ ቤቱ ሥልጣን ሊያርቅ ነው።",
-          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፩፻፶፩",
+          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 151",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የማደናቀፍ ዓላማ" }
         },
         {
@@ -243,7 +243,7 @@
     },
     "app_judgment_on_admission": {
       "documentTitle": "በእምነት ላይ ለሚሰጥ ፍርድ ማመልከቻ",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ ፪፻፵፪",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 242",
        "meta": {
         "keywords": ["judgment on admission", "summary judgment", "pleading", "በእምነት ላይ ፍርድ", "አፋጣኝ ውሳኔ"],
         "jurisdictionType": "Federal/Regional First Instance",
@@ -259,7 +259,7 @@
           "id": "app_fact_clear_admission",
           "label": "እምነት",
           "legalText": "በመከላከያ መግለጫቸው፣ ተጠሪው የውሉን እና የእዳውን መኖር በግልጽ አምኗል።",
-          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፪፻፵፪",
+          "citation": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 242",
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "ግልጽ እምነት" }
         }
       ],

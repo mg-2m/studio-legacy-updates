@@ -31,6 +31,7 @@ All user-facing English text must be removed from the final rendered output and 
 - Jurisdiction text (e.g., "Art. 1776 of the Civil Code").
 - In-line citations within facts.
 - All labels and placeholder text within the evidence sections, including both auto-linked and manual evidence forms.
+- **Rule 2.1.1: Modern Numeral Standard:** All numbers, especially legal article and proclamation numbers, must be rendered using modern Arabic numerals (e.g., "123", "2024") instead of traditional Geez numerals (e.g., "፻፳፫", "፪ሺ፳፬"). This ensures consistency and modern readability across the entire platform.
 
 ### 2.2. Requirement (B): The WYSIWYG "Prophetic Editor" Mandate
 To ensure clarity, grammatical correctness, and an intuitive user experience, the editor UI must, wherever possible, mirror the final rendered output. This "What You See Is What You Get" approach serves as a core principle for the platform's design.

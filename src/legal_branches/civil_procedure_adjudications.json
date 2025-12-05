@@ -3,7 +3,7 @@
   "templates": {
     "civ_proc_amendment_of_pleading": {
       "documentTitle": "የፍሬ ነገር ማሻሻያ ጥያቄ (Application for Amendment of Pleading)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ 94 (Civil Procedure Code of 1965, Art. 94)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 94 (Civil Procedure Code of 1965, Art. 94)",
       "meta": {
         "keywords": ["amendment", "pleading", "correction", "ፍሬ ነገር ማሻሻያ", "ክስ ማሻሻል"],
         "jurisdictionType": "Court seized of the original case"
@@ -60,7 +60,7 @@
     },
     "civ_proc_intervention_by_third_party": {
       "documentTitle": "በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ (Application for Leave to Intervene in a Pending Suit)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ 40 (Civil Procedure Code of 1965, Art. 40)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 40 (Civil Procedure Code of 1965, Art. 40)",
       "meta": {
         "keywords": ["intervention", "third party", "joinder", "ጣልቃ ገብ", "ሶስተኛ ወገን"],
         "jurisdictionType": "Court seized of the original case"
@@ -109,7 +109,7 @@
     },
     "civ_proc_joinder_of_third_party": {
       "documentTitle": "ሶስተኛ ወገንን በክሱ የማካተት ጥያቄ (Application to Join a Third Party)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ 41 (Civil Procedure Code of 1965, Art. 41)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 41 (Civil Procedure Code of 1965, Art. 41)",
       "meta": {
         "keywords": ["third party joinder", "indemnity", "contribution", "ማካተት", "ሶስተኛ ወገን"],
         "jurisdictionType": "Court seized of the original case"
@@ -161,7 +161,7 @@
     },
     "civ_proc_judgment_objection_default": {
       "documentTitle": "በአንድ ወገን ፍርድ ላይ የተቃውሞ ጥያቄ (Application for Judgment Objection / Setting Aside Ex Parte Decree)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ 78 እና 79 (Civil Procedure Code of 1965, Arts. 78 & 79)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 78 እና 79 (Civil Procedure Code of 1965, Arts. 78 & 79)",
       "meta": {
         "keywords": ["default judgment", "ex parte", "set aside", "objection", "በሌሉበት የተሰጠ ፍርድ", "ተቃውሞ"],
         "jurisdictionType": "Court which passed the ex-parte decree"
@@ -218,7 +218,7 @@
     },
     "civ_proc_review_of_judgment": {
       "documentTitle": "የፍርድ ዳግም ማየት ጥያቄ (Application for Review of Judgment)",
-      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ፲፱፻፶፯ ዓ.ም.، አንቀጽ 6 (Civil Procedure Code of 1965, Art. 6)",
+      "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 6 (Civil Procedure Code of 1965, Art. 6)",
       "meta": {
         "keywords": ["review of judgment", "new evidence", "error on record", "የፍርድ ዳግም ክለሳ", "አዲስ ማስረጃ"],
         "jurisdictionType": "Court which passed the original decree"
@@ -248,7 +248,7 @@
         {
           "id": "civ_proc_fact_other_sufficient_reason",
           "label": "የዳግም የማየት ምክንያቶች (Grounds for Review)",
-          "legalText": "ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ בቂ ምክንያት አለ። (There is any other sufficient reason analogous to the specified grounds justifying a review.)",
+          "legalText": "ዳግም ማየትን የሚያረጋግጥ ከተጠቀሱት ምክንያቶች ጋር ተመሳሳይ የሆነ ሌላ በቂ ምክንያት አለ። (There is any other sufficient reason analogous to the specified grounds justifying a review.)",
           "citation": "C.P.C. Art. 6(1)(c)",
           "autoEvidence": ["ReviewApplicationMemo"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ሌላ በቂ ምክንያት" }
@@ -389,7 +389,7 @@
         ],
         "jurisdictionType": "Court Handling the Main Case"
       },
-      "templateDescription": "### መመሪያ\nይህ አስቸኳይ ማመልከቻ፣ ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው፣ ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n**አስቸኳይነት (Urgency)**\nመተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
+      "templateDescription": "### መመሪያ\nይህ አስቸኳይ ማመልከቻ፣ ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው، ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n**አስቸኳይነት (Urgency)**\nመተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
       "partyTitles": {
         "applicant": "አመልካች (Applicant)",
         "respondent": "ተጠሪ (Respondent)"

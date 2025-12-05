@@ -67,13 +67,10 @@ export default function PageOne({ state }: { state: AppState }) {
   const { documentTitle, jurisdictionText } = currentTemplateData;
 
   const toAmharicWords = (num: number): string => {
-      // This is a placeholder. A proper library or service would be needed for real conversion.
-      // For now, it will return the English words but this would be the integration point.
       try {
         // This is a placeholder. A proper Amharic library would be used here.
-        // For now, we avoid returning any English text by just returning an empty string.
-        // A full implementation would require a dedicated Amharic number-to-word library.
-        return ""; // Return empty string to prevent English output.
+        // For now, it will return an empty string to prevent English words.
+        return ""; 
       } catch {
         return ""; // Return empty string on error
       }
@@ -191,7 +188,7 @@ export default function PageOne({ state }: { state: AppState }) {
 
     if (amount !== null) {
       try {
-          const amountInAmharicWords = toAmharicWords(amount); // This would be the Amharic conversion
+          const amountInAmharicWords = toAmharicWords(amount);
           valueText = `ብር ${amount.toFixed(2)} (${amountInAmharicWords} ብር)`;
       } catch (e) {
           console.error("Failed to convert number to words:", e);

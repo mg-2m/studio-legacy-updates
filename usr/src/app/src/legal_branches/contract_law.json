@@ -18,8 +18,8 @@
         {
           "id": "con_fact_loan_agreement",
           "label": "የውል መመስረት",
-          "legalText": "በ [Date] ከሳሽ እና ተከሳሽ የጽሑፍ የብድር ስምምነት ማድረጋቸው ይታወቃል።",
-          "citation": "የፍትሐ ብሔር ሕግ 2471",
+          "legalText": "በ [Date] ከሳሽ እና ተከሳሽ በፍትሐ ብሔር ሕግ 2471 መሰረት የጽሑፍ የብድር ስምምነት ማድረጋቸው ይታወቃል።",
+          "citation": "",
           "autoEvidence": ["WrittenContract", "AdmissionofDebt"],
           "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም፣", "summary_keyword": "የብድር ስምምነት" }
         },
@@ -69,7 +69,7 @@
         },
         {
           "id": "con_relief_contractual_interest",
-          "text": "በ [Percentage] የተስማማውን የውል ወለድ (ቢበዛ 12 ከመቶ) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
+          "text": "በ [Percentage] ከመቶ የተስማማውን የውል ወለድ (ቢበዛ 12 ከመቶ) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
           "isDefault": false,
           "isDynamic": false
         },

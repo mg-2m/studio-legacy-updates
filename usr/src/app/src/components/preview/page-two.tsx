@@ -32,7 +32,7 @@ const formatPartyList = (parties: Party[]) => {
             return (
               <li key={index} className="mb-2">
                  <div className="grid grid-cols-1 text-left">
-                    <span className="font-bold text-base whitespace-nowrap">{party.honorific} ${party.name}</span>
+                    <span className="font-bold text-base whitespace-nowrap">{party.honorific} {party.name}</span>
                     <div></div>
                 </div>
                 <div className="text-sm pl-6">
@@ -98,7 +98,7 @@ export default function PageTwo({ state }: PageTwoProps) {
         }
         const woreda = e.woreda ? `, ወረዳ ${e.woreda}` : '';
         const houseNo = e.houseNo ? `, የቤት ቁጥር ${e.houseNo}` : '';
-        const details = `አድራሻ: ${e.city}, ${subcity || ''}{woreda}${houseNo}`;
+        const details = `አድራሻ: ${e.city}, ${subcity || ''}${woreda}${houseNo}`;
         witnessEvidence.push({ label, details });
     } else if (e.type === 'CourtOrder') {
         const label = e.description || 'የትዕዛዝ ማስረጃ';

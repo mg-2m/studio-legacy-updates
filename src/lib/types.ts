@@ -15,13 +15,15 @@ export interface Party {
 
 export interface Metadata {
   courtLevel: string;
+  courtLevelOther?: string;
   bench: string;
   benchOther?: string;
   benchType: string;
+  benchTypeOther?: string;
   city: string;
+  cityOther?: string;
   fileNumber: string;
   date: string;
-  jurisdictionLaw: string;
   representation: 'self' | 'lawyer' | 'both';
   summonsDelivery: 'self' | 'police' | 'post';
   claimPurpose: string;

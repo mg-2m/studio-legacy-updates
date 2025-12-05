@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import type { AppState, ManualEvidence, Party } from '@/lib/types';
@@ -117,6 +118,12 @@ export default function PageTwo({ state }: PageTwoProps) {
   if (!hasEvidence) {
     return null; // Don't render page two if there's no evidence at all
   }
+  
+  const displayCourtLevel = meta.courtLevel === 'ሌላ' ? (meta.courtLevelOther || '___________') : meta.courtLevel;
+  const displayBench = meta.bench === 'ሌላ' ? (meta.benchOther || '___________') : meta.bench;
+  const displayBenchType = meta.benchType === 'ሌላ' ? (meta.benchTypeOther || '___________') : meta.benchType;
+  const displayCity = meta.city === 'ሌላ' ? (meta.cityOther || '___________') : meta.city;
+
 
   return (
     <div className="a4-page">
@@ -132,13 +139,13 @@ export default function PageTwo({ state }: PageTwoProps) {
           </div>
         </div>
         <div>
-          <span className="black-box text-lg">ለ: {meta.courtLevel || '___________'}</span>
+          <span className="black-box text-lg">ለ: {displayCourtLevel}</span>
         </div>
         <div className="mt-1">
-            <span className="green-box">{meta.bench === 'ሌላ' ? (meta.benchOther || '___________') : meta.bench} - {meta.benchType}</span>
+            <span className="green-box">{displayBench} - {displayBenchType}</span>
         </div>
         <div className="mt-1">
-          <span className="black-box">{meta.city || '___________'}</span>
+          <span className="black-box">{displayCity}</span>
         </div>
       </div>
 

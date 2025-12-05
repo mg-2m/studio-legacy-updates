@@ -39,18 +39,26 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
           <div className="space-y-4">
              <div className="grid grid-cols-[120px_1fr] items-center gap-4">
               <Label>የፍ/ቤት ደረጃ</Label>
-              <Select 
-                value={metadata.courtLevel} 
-                onValueChange={(value) => {
-                  dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevel', value } });
-                  const newBenches = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY] || [];
-                  const newDefaultBench = newBenches.length > 0 ? newBenches[0] : 'ሌላ';
-                  dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
-                }}
-              >
-                <SelectTrigger><SelectValue /></SelectTrigger>
-                <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
-              </Select>
+              {metadata.courtLevel === 'ሌላ' ? (
+                <Input
+                  value={metadata.courtLevelOther || ''}
+                  onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevelOther', value: e.target.value }})}
+                  placeholder="የፍ/ቤቱን ደረጃ ያስገቡ"
+                />
+              ) : (
+                <Select 
+                  value={metadata.courtLevel} 
+                  onValueChange={(value) => {
+                    dispatch({ type: 'UPDATE_METADATA', payload: { key: 'courtLevel', value } });
+                    const newBenches = COURT_HIERARCHY[value as keyof typeof COURT_HIERARCHY] || [];
+                    const newDefaultBench = newBenches.length > 0 ? newBenches[0] : 'ሌላ';
+                    dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value: newDefaultBench } });
+                  }}
+                >
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>{Object.keys(COURT_HIERARCHY).map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                </Select>
+              )}
             </div>
 
             <div className="grid grid-cols-[120px_1fr] items-center gap-4">
@@ -59,7 +67,7 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
                  <Input 
                     value={metadata.benchOther || ''}
                     onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'benchOther', value: e.target.value }})}
-                    placeholder="የችሎቱን ስም ያስገቡ"
+                    placeholder="የችሎቱን አካባቢ/ምድብ ያስገቡ"
                 />
                ) : (
                 <Select value={metadata.bench} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'bench', value } })}>
@@ -71,18 +79,34 @@ export default function HeaderPartiesTab({ state, dispatch }: HeaderPartiesTabPr
             
             <div className="grid grid-cols-[120px_1fr] items-center gap-4">
               <Label>የችሎት አይነት</Label>
-              <Select value={metadata.benchType} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'benchType', value } })}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
-                  <SelectContent>{BENCH_TYPES.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
-              </Select>
+              {metadata.benchType === 'ሌላ' ? (
+                <Input
+                  value={metadata.benchTypeOther || ''}
+                  onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'benchTypeOther', value: e.target.value }})}
+                  placeholder="የችሎቱን አይነት ያስገቡ"
+                />
+              ) : (
+                <Select value={metadata.benchType} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'benchType', value } })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>{BENCH_TYPES.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}</SelectContent>
+                </Select>
+              )}
             </div>
 
             <div className="grid grid-cols-[120px_1fr] items-center gap-4">
               <Label>ከተማ</Label>
-              <Select value={metadata.city} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'city', value } })}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
-                  <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
-              </Select>
+              {metadata.city === 'ሌላ' ? (
+                 <Input 
+                    value={metadata.cityOther || ''}
+                    onChange={(e) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'cityOther', value: e.target.value }})}
+                    placeholder="የከተማውን ስም ያስገቡ"
+                />
+              ) : (
+                <Select value={metadata.city} onValueChange={(value) => dispatch({ type: 'UPDATE_METADATA', payload: { key: 'city', value } })}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent>{REGIONS_AND_CITIES.map(c => <SelectItem key={c} value={c}>{c}</SelectItem>)}</SelectContent>
+                </Select>
+              )}
             </div>
             <div className="space-y-2">
                 <div className="grid grid-cols-[120px_1fr] items-center gap-4">

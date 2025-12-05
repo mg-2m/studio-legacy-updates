@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import type { AppState, Party, Relief, Fact } from '@/lib/types';
@@ -59,7 +60,7 @@ const composeNarrative = (facts: Fact[]): string => {
 
 export default function PageOne({ state }: { state: AppState }) {
   const { metadata: meta, applicants, respondents, selectedFacts, maintenance, calculations, partyTitles, selectedReliefs, selectedSubTemplate } = state;
-  const currentTemplateData = TEMPLATE_DATA[selectedSubTemplate!];
+  const currentTemplateData = selectedSubTemplate ? TEMPLATE_DATA[selectedSubTemplate] : null;
   
   if (!currentTemplateData) {
     return <div className="a4-page">Loading...</div>;
@@ -205,7 +206,10 @@ export default function PageOne({ state }: { state: AppState }) {
     );
   };
   
+  const displayCourtLevel = meta.courtLevel === 'ሌላ' ? (meta.courtLevelOther || '___________') : meta.courtLevel;
   const displayBench = meta.bench === 'ሌላ' ? (meta.benchOther || '___________') : meta.bench;
+  const displayBenchType = meta.benchType === 'ሌላ' ? (meta.benchTypeOther || '___________') : meta.benchType;
+  const displayCity = meta.city === 'ሌላ' ? (meta.cityOther || '___________') : meta.city;
 
   return (
     <div className="a4-page">
@@ -221,13 +225,13 @@ export default function PageOne({ state }: { state: AppState }) {
           </div>
         </div>
         <div>
-          <span className="black-box text-lg">ለ: {meta.courtLevel || '___________'}</span>
+          <span className="black-box text-lg">ለ: {displayCourtLevel}</span>
         </div>
         <div className="mt-1">
-          <span className="green-box">{displayBench} - {meta.benchType}</span>
+          <span className="green-box">{displayBench} - {displayBenchType}</span>
         </div>
         <div className="mt-1">
-          <span className="black-box">{meta.city || '___________'}</span>
+          <span className="black-box">{displayCity}</span>
         </div>
       </div>
 

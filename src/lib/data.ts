@@ -93,6 +93,7 @@ import * as comm_preventive_restructuring from '@/legal_branches/commercial_law/
 import * as comm_dissolution_by_court from '@/legal_branches/commercial_law/comm_dissolution_by_court.json';
 import * as comm_appoint_auditors from '@/legal_branches/commercial_law/comm_appoint_auditors.json';
 
+// Import individual criminal law defences templates
 import * as crim_defence_justification_self_defence from '@/legal_branches/criminal_law_defences/crim_defence_justification_self_defence.json';
 import * as crim_defence_excuse_insanity from '@/legal_branches/criminal_law_defences/crim_defence_excuse_insanity.json';
 import * as crim_defence_justification_necessity from '@/legal_branches/criminal_law_defences/crim_defence_justification_necessity.json';
@@ -703,6 +704,7 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
+
 
 
 

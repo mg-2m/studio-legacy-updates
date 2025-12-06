@@ -1,0 +1,98 @@
+
+{
+  "id": "labour_unpaid_wages",
+  "documentTitle": "ላልተከፈለ ክፍያ ክስ",
+  "partyTitles": {
+    "applicant": "አመልካች/ሰራተኛ",
+    "respondent": "ተጠሪ/ቀጣሪ"
+  },
+  "jurisdictionText": "የሠራተኛ አዋጅ ቁጥር 1156/2019",
+  "meta": {
+    "keywords": ["unpaid wages", "salary", "overtime", "labour", "ያልተከፈለ ደመወዝ", "ትርፍ ሰዓት"],
+    "jurisdictionType": "Labour Board / First Instance Court"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት ሰራተኞች ያልተከፈላቸውን ደመወዝ፣ የትርፍ ሰዓት ክፍያ ወይም ሌሎች ሕጋዊ ክፍያዎችን ለመጠየቅ ይጠቅማል።\n\n### የዳኝነት ሥልጣን\nየሠራተኛ ጉዳዮች በመጀመሪያ ደረጃ የሚታዩት በሠራተኛ ጉዳይ ወሳኝ ቦርድ (Labour Adjudication Board) ነው።\n\n### የጊዜ ገደብ\nክፍያው መከፈል ከነበረበት ቀን ጀምሮ ባሉት **ስድስት (6) ወራት** ውስጥ ክስ መቅረብ አለበት (አንቀጽ 164(1))።\n\n### ቅድመ ሁኔታዎች\n- የደመወዝ ወረቀት (PayrollSlip)\n- የትርፍ ሰዓት ስራ ማረጋገጫ (ለምሳሌ ምስክር (UnpaidWageWitness) ወይም የሰዓት መቆጣጠሪያ (AttendanceSheet))",
+  "facts": [
+    {
+      "id": "labour_fact_unpaid_salary",
+      "label": "የደመወዝ ውዝፍ",
+      "legalText": "የ [specifyMonths] መደበኛ ወርሃዊ ደመወዝ አለመክፈል።",
+      "citation": "አንቀጽ 53 (የክፍያ ግዴታዎች)",
+      "autoEvidence": [
+        "UnpaidWageWitness",
+        "PayrollSlip"
+      ],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ያልተከፈለ ደመወዝ" }
+    },
+    {
+      "id": "labour_fact_unlawful_deduction",
+      "label": "የደመወዝ ውዝፍ",
+      "legalText": "ያለ ሠራተኛ ፈቃድ ወይም ሕጋዊ የፍርድ ቤት ትዕዛዝ ከደመወዝ ሕገ-ወጥ ቅናሽ ተደርጓል።",
+      "citation": "አንቀጽ 59 (የቅናሽ ክልከላ)",
+      "autoEvidence": [
+        "PayrollSlip"
+      ],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ህገ-ወጥ ቅናሽ" }
+    },
+    {
+      "id": "labour_fact_unpaid_overtime",
+      "label": "የሕግ ጥቅማጥቅሞች",
+      "legalText": "ሠራተኛው ከመደበኛ 8 ሰዓት/በቀን ወይም 48 ሰዓት/በሳምንት በላይ ሠርቷል ነገር ግን በሕግ በተደነገገው መሠረት የትርፍ ሰዓት ካሳ አላገኘም።",
+      "citation": "አንቀጽ 66 & 68 (የስሌት መመዘኛዎች)",
+      "autoEvidence": [
+        "AttendanceSheet",
+        "UnpaidWageWitness"
+      ],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያልተከፈለ የትርፍ ሰዓት" }
+    },
+    {
+      "id": "labour_fact_unpaid_annual_leave",
+      "label": "የሕግ ጥቅማጥቅሞች",
+      "legalText": "ሠራተኛው ዓመታዊ ፈቃድ እንዲወስድ አልተፈቀደለትም እና ሥራው ሲቋረጥ ላላገለገለበት ፈቃድ ካሳ አልተከፈለውም።",
+      "citation": "አንቀጽ 77 & 79 (ወደ ገንዘብ መቀየር የሚቻለው ሲቋረጥ ብቻ)",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያልተከፈለ ዓመታዊ ፈቃድ" }
+    },
+    {
+      "id": "labour_fact_unpaid_holiday_work",
+      "label": "የሕግ ጥቅማጥቅሞች",
+      "legalText": "ሠራተኛው በሕዝባዊ በዓላት ላይ ሠርቷል ነገር ግን ከመደበኛ የሰዓት ደመወዙ በሁለት እጥፍ ካሳ አልተከፈለውም።",
+      "citation": "አንቀጽ 73",
+      "autoEvidence": ["AttendanceSheet"],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያልተከፈለ የበዓል ክፍያ" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "labour_relief_payment_principal",
+      "text": "ተጠሪው ሁሉንም ያልተከፈሉ ደመወዞች እና ጥቅማጥቅሞች አጠቃላይ ዋና መጠን እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "labour_relief_payment_interest",
+      "text": "በዘገዩ ክፍያዎች ላይ የሕግ ወለድ እንዲከፈል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "labour_relief_payment_overtime_specific",
+      "text": "የተሰላ የትርፍ ሰዓት ደመወዝ እንዲከፈል የተወሰነ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "labour_relief_costs_and_fees_labour_wages",
+      "text": "ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}
+
+    

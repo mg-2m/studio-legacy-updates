@@ -6,8 +6,6 @@ import { differenceInDays, parseISO } from 'date-fns';
 
 // Import the raw JSON data from the new modular files
 import * as baseData from '@/legal_branches/_base.json';
-// import * as familyLaw from '@/legal_branches/family_law.json'; // This will be removed
-import * as labourLaw from '@/legal_branches/labour_law.json';
 import * as publicServiceLaw from '@/legal_branches/public_service_law.json';
 import * as successionLaw from '@/legal_branches/succession_law.json';
 
@@ -38,6 +36,11 @@ import * as family_post_judgment_partition from '@/legal_branches/family_law/fam
 import * as app_temporary_maintenance from '@/legal_branches/family_law/app_temporary_maintenance.json';
 import * as app_property_preservation from '@/legal_branches/family_law/app_property_preservation.json';
 import * as app_protective_order from '@/legal_branches/family_law/app_protective_order.json';
+
+// Import individual labour law templates
+import * as labour_unlawful_termination from '@/legal_branches/labour_law/labour_unlawful_termination.json';
+import * as labour_unpaid_wages from '@/legal_branches/labour_law/labour_unpaid_wages.json';
+import * as labour_employment_injury from '@/legal_branches/labour_law/employment_injury.json';
 
 
 import * as ipLaw from '@/legal_branches/ip_law.json';
@@ -79,10 +82,16 @@ const familyLawTemplates = {
     app_protective_order
 };
 
+const labourLawTemplates = {
+    labour_unlawful_termination,
+    labour_unpaid_wages,
+    labour_employment_injury
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
-    ...labourLaw.templates,
+    ...labourLawTemplates,
     ...publicServiceLaw.templates,
     ...successionLaw.templates,
     ...propertyAndLandLawTemplates,
@@ -561,3 +570,5 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
+
+    

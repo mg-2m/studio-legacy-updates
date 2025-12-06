@@ -1,2 +1,329 @@
-
-    
+{
+  "entities": {
+    "Court": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Court",
+      "type": "object",
+      "description": "Represents a court entity with its details.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the court entity."
+        },
+        "level": {
+          "type": "string",
+          "description": "The tier or level of the court (e.g., Federal First Instance Court)."
+        },
+        "bench": {
+          "type": "string",
+          "description": "The specific bench or division within the court (e.g., Lideta)."
+        },
+        "city": {
+          "type": "string",
+          "description": "The city where the court is located."
+        }
+      },
+      "required": [
+        "id",
+        "level",
+        "bench",
+        "city"
+      ]
+    },
+    "Party": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Party",
+      "type": "object",
+      "description": "Represents a party involved in a legal case (applicant or respondent).",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the party entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The full name of the party."
+        },
+        "idNumber": {
+          "type": "string",
+          "description": "The ID number of the party."
+        },
+        "phone": {
+          "type": "string",
+          "description": "The phone number of the party."
+        },
+        "address": {
+          "type": "string",
+          "description": "The address of the party."
+        },
+        "partyType": {
+          "type": "string",
+          "description": "Type of party. (applicant, respondent)"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "address",
+        "partyType"
+      ]
+    },
+    "Case": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Case",
+      "type": "object",
+      "description": "Represents a legal case with its details.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the case entity."
+        },
+        "courtId": {
+          "type": "string",
+          "description": "Reference to Court. (Relationship: Court 1:N Case)"
+        },
+        "fileNumber": {
+          "type": "string",
+          "description": "The file number of the case."
+        },
+        "date": {
+          "type": "string",
+          "description": "The date of the case (DD/MM/YYYY EC)."
+        },
+        "applicantIds": {
+          "type": "array",
+          "description": "References to Applicants. (Relationship: Party N:N Case)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "respondentIds": {
+          "type": "array",
+          "description": "References to Respondents. (Relationship: Party N:N Case)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "jurisdictionLaw": {
+          "type": "string",
+          "description": "The jurisdiction law applicable to the case (Proc. No.)."
+        },
+        "representation": {
+          "type": "string",
+          "description": "The type of representation (self, lawyer, both)."
+        },
+        "summonsDelivery": {
+          "type": "string",
+          "description": "The method of summons delivery (self, police, post)."
+        }
+      },
+      "required": [
+        "id",
+        "courtId",
+        "fileNumber",
+        "date",
+        "applicantIds",
+        "respondentIds"
+      ]
+    },
+    "Fact": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Fact",
+      "type": "object",
+      "description": "Represents a fact related to a legal case.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the fact entity."
+        },
+        "caseId": {
+          "type": "string",
+          "description": "Reference to Case. (Relationship: Case 1:N Fact)"
+        },
+        "label": {
+          "type": "string",
+          "description": "The label or description of the fact."
+        },
+        "legalText": {
+          "type": "string",
+          "description": "The legal argument or text associated with the fact."
+        },
+        "citation": {
+          "type": "string",
+          "description": "The legal citation or reference for the fact."
+        }
+      },
+      "required": [
+        "id",
+        "caseId",
+        "label",
+        "legalText"
+      ]
+    },
+    "Evidence": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Evidence",
+      "type": "object",
+      "description": "Represents evidence presented in a legal case.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the evidence entity."
+        },
+        "caseId": {
+          "type": "string",
+          "description": "Reference to Case. (Relationship: Case 1:N Evidence)"
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of evidence (Document, Witness, CourtOrder)."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the evidence."
+        },
+        "issuer": {
+          "type": "string",
+          "description": "The issuer or source of the evidence."
+        },
+        "refNumber": {
+          "type": "string",
+          "description": "The reference number of the evidence document."
+        }
+      },
+      "required": [
+        "id",
+        "caseId",
+        "type",
+        "description"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/courts/{courtId}",
+        "definition": {
+          "entityName": "Court",
+          "schema": {
+            "$ref": "#/backend/entities/Court"
+          },
+          "description": "Stores court entities. Top-level collection for secure list operations.",
+          "params": [
+            {
+              "name": "courtId",
+              "description": "Unique identifier for the court."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/parties/{partyId}",
+        "definition": {
+          "entityName": "Party",
+          "schema": {
+            "$ref": "#/backend/entities/Party"
+          },
+          "description": "Stores party entities (applicants and respondents). Top-level collection for secure list operations.",
+          "params": [
+            {
+              "name": "partyId",
+              "description": "Unique identifier for the party."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/courts/{courtId}/cases/{caseId}",
+        "definition": {
+          "entityName": "Case",
+          "schema": {
+            "$ref": "#/backend/entities/Case"
+          },
+          "description": "Stores case entities associated with a specific court. Includes courtId for relationship management. No denormalized authorization fields.",
+          "params": [
+            {
+              "name": "courtId",
+              "description": "Unique identifier for the court."
+            },
+            {
+              "name": "caseId",
+              "description": "Unique identifier for the case."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/courts/{courtId}/cases/{caseId}/facts/{factId}",
+        "definition": {
+          "entityName": "Fact",
+          "schema": {
+            "$ref": "#/backend/entities/Fact"
+          },
+          "description": "Stores facts related to a specific case. Includes caseId for relationship management. No denormalized authorization fields.",
+          "params": [
+            {
+              "name": "courtId",
+              "description": "Unique identifier for the court."
+            },
+            {
+              "name": "caseId",
+              "description": "Unique identifier for the case."
+            },
+            {
+              "name": "factId",
+              "description": "Unique identifier for the fact."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/courts/{courtId}/cases/{caseId}/evidence/{evidenceId}",
+        "definition": {
+          "entityName": "Evidence",
+          "schema": {
+            "$ref": "#/backend/entities/Evidence"
+          },
+          "description": "Stores evidence associated with a specific case. Includes caseId for relationship management. No denormalized authorization fields.",
+          "params": [
+            {
+              "name": "courtId",
+              "description": "Unique identifier for the court."
+            },
+            {
+              "name": "caseId",
+              "description": "Unique identifier for the case."
+            },
+            {
+              "name": "evidenceId",
+              "description": "Unique identifier for the evidence."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/data",
+        "definition": {
+          "entityName": "data",
+          "schema": {
+            "$ref": "#/backend/entities/Party"
+          },
+          "description": "Stores user-specific data, accessible only by the user. Enforces path-based ownership.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "Unique identifier for the user."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to provide a clear and secure data model for the Addis Crown Legal Assistant application. The structure prioritizes authorization independence by avoiding hierarchical `get()` calls in security rules and supports secure `list` operations. It also includes DBAC by utilizing path-based ownership and explicit role assignments.\n\n*   **Authorization Independence:** All collections related to cases (`cases`, `facts`, `evidence`) are located under the `/courts/{courtId}` path. This structure allows us to denormalize court-level authorization data (if needed in the future) into the case documents, avoiding `get()` calls in security rules. Currently, no such denormalization is implemented.\n\n*   **Structural Segregation:** Each top-level collection (`courts`, `parties`, and cases) serves a distinct purpose and have their own security needs. Private data is stored under the `/users/{userId}` collection, enforcing path-based ownership.\n\n*   **Access Modeling:**\n    *   Path-Based Ownership: `/users/{userId}/data` stores private user data.\n    *   Hierarchical Paths: `/courts/{courtId}/cases/{caseId}` structures cases within courts.\n\n*   **QAPs (Rules are not Filters):** The `courts` and `cases` collections can be listed securely because access does not depend on the content of the parent document.\n\n*   **Invariants:** The use of hierarchical paths supports the integrity of ownership and relationships between entities.\n\n*   **Debuggability:** The data structure makes the authorization intent clear through the use of explicit paths and naming conventions."
+  }
+}

@@ -1,0 +1,66 @@
+
+{
+  "id": "ip_trademark_infringement",
+  "documentTitle": "የንግድ ምልክት ጥሰት እና የካሳ ክስ",
+  "jurisdictionText": "የንግድ ምልክት አዋጅ ቁጥር 501/2006 አንቀጽ 18",
+  "meta": {
+    "keywords": ["trademark", "infringement", "counterfeit", "የንግድ ምልክት", "ጥሰት", "ሐሰተኛ"],
+    "jurisdictionType": "Federal High Court",
+    "purpose": "የንግድ ምልክት ጥሰት ካሳ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የእርስዎ የተመዘገበ የንግድ ምልክት በሌላ ወገን ያለፈቃድ ጥቅም ላይ ሲውል እና በገበያ ላይ ግራ መጋባትን ሲፈጥር ክስ ለመመስረት ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየንግድ ምልክት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይታያሉ።\n\n### የጊዜ ገደብ\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\n- የንግድ ምልክት ምዝገባ ሰርተፍኬት (CertificateOfRegistrationEIPO)።\n- ጥሰቱን የሚያሳይ ናሙና (ለምሳሌ፣ የሐሰት ምርት)።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (የንግድ ምልክት ባለቤት)",
+    "respondent": "ተከሳሽ (ጥሰት ፈፃሚ)"
+  },
+  "facts": [
+    {
+      "id": "ip_fact_tm_registration",
+      "label": "የባለቤትነት መብት",
+      "legalText": "ከሳሽ በክፍል [class] ውስጥ ለሚገኙ ዕቃዎች/አገልግሎቶች የንግድ ምልክት ቁጥር [trademarkNumber] የተመዘገበ ባለቤት ነው።",
+      "citation": "Proclamation 501/2006 Art. 11",
+      "autoEvidence": ["CertificateOfRegistrationEIPO"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የንግድ ምልክት ባለቤትነት" }
+    },
+    {
+      "id": "ip_fact_unauthorized_use",
+      "label": "የጥሰት ድርጊት",
+      "legalText": "ተከሳሹ በንግድ ሂደት ውስጥ ተመሳሳይ ወይም አሳሳች ምልክት ያለፈቃድ በ [productName] ላይ እየተጠቀመ ነው።",
+      "citation": "Proclamation 501/2006 Art. 18",
+      "autoEvidence": ["ProductSampleSpecimen", "MarketSurveyAffidavit", "CeaseAndDesistLetter"],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያለፈቃድ አጠቃቀም" }
+    },
+    {
+      "id": "ip_fact_consumer_confusion",
+      "label": "የጥሰት ድርጊት",
+      "legalText": "የተከሳሹ አጠቃቀም በሚመለከታቸው ሸማቾች መካከል ግራ መጋባት ሊፈጥር ይችላል።",
+      "citation": "Proclamation 501/2006 Art. 18",
+      "autoEvidence": ["MarketSurveyAffidavit"],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "በተጨማሪም،", "summary_keyword": "የሸማቾች ግራ መጋባት" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "ip_relief_permanent_injunction",
+      "text": "ተከሳሹ የጣሰውን ምልክት እንዳይጠቀም የሚከለክል ቋሚ እገዳ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "ip_relief_damages_ip",
+      "text": "በጥሰቱ ምክንያት በከሳሽ የደረሰውን ጉዳት ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "ip_relief_destruction_goods",
+      "text": "ሁሉም የጣሱ ቁሳቁሶች እና ዕቃዎች እንዲወድሙ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

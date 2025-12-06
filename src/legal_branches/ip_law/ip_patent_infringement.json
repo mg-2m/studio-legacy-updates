@@ -1,0 +1,67 @@
+
+{
+  "id": "ip_patent_infringement",
+  "documentTitle": "የፓተንት ጥሰት እና የካሳ ክስ",
+  "jurisdictionText": "የፓተንት አዋጅ ቁጥር 123/1995 አንቀጽ 21",
+  "meta": {
+    "keywords": ["patent", "infringement", "invention", "EIPO", "ፓተንት", "የፈጠራ ባለቤትነት", "ጥሰት"],
+    "jurisdictionType": "Federal High Court",
+    "purpose": "የፓተንት ጥሰት ካሳ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህንን አብነት ይጠቀሙ አንድ ሰው የፈጠራ ባለቤትነት መብትዎን ያለእርስዎ ፈቃድ ሲሰራ፣ ሲጠቀም ወይም ሲሸጥ።\n\n### የዳኝነት ሥልጣን\nየፓተንት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት **አምስት (5) ዓመታት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\n- የፓተንት ምዝገባ ሰርተፍኬት (CertificateOfRegistrationEIPO)።\n- የጥሰቱን መጠን የሚያሳይ የባለሙያ ሪፖርት (TechnicalExpertReport)።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (የፓተንት ባለቤት)",
+    "respondent": "ተከሳሽ (ጥሰት ፈፃሚ)"
+  },
+  "facts": [
+    {
+      "id": "ip_fact_patent_validity",
+      "label": "የባለቤትነት መብት",
+      "legalText": "ከሳሽ የፓተንት ቁጥር [patentNumber] ያለው ሲሆን ይህም ሕጋዊ እና በሥራ ላይ ነው።",
+      "citation": "Proclamation 123/1995 Art. 6",
+      "autoEvidence": ["CertificateOfRegistrationEIPO", "TechnicalExpertReport"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የፓተንት ባለቤትነት" }
+    },
+    {
+      "id": "ip_fact_unauthorized_manufacture",
+      "label": "የጥሰት ድርጊት",
+      "legalText": "ተከሳሹ በፓተንት ጥያቄዎች ወሰን ውስጥ የሚወድቅ ምርት በማምረት/በመሸጥ ላይ ነው።",
+      "citation": "Proclamation 123/1995 Art. 21",
+      "autoEvidence": ["ProductSampleSpecimen", "TechnicalExpertReport"],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያለፈቃድ ማምረት" }
+    },
+    {
+      "id": "ip_fact_commercial_loss",
+      "label": "ጉዳት",
+      "legalText": "ጥሰቱ በሽያጭ በመጥፋቱ ምክንያት የ [amount] ብር ቀጥተኛ የንግድ ኪሳራ አስከትሏል።",
+      "citation": "",
+      "autoEvidence": ["AuditReport"],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የንግድ ኪሳራ" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "ip_relief_stop_manufacture",
+      "text": "ተከሳሹ የጣሰውን ምርት ማምረት እና መሸጥ እንዲያቆም የሚገልጽ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "ip_relief_compensation_royalty",
+      "text": "በተመጣጣኝ የሮያሊቲ ክፍያ ላይ ተመስርቶ የካሳ ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
+      "citation": "Proclamation 123/1995 Art. 21",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "ip_relief_seize_equipment",
+      "text": "የጣሱትን ዕቃዎች ለማምረት በዋናነት ያገለገሉ ማሽነሪዎች እንዲወረሱ እና እንዲወገዱ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

@@ -1,0 +1,51 @@
+
+{
+  "id": "ip_moral_rights_violation",
+  "documentTitle": "የሞራል መብቶች ጥሰት ክስ",
+  "jurisdictionText": "የቅጂ መብት እና ተዛማጅ መብቶች አዋጅ ቁጥር 410/2004 አንቀጽ 8",
+  "meta": {
+    "keywords": ["moral rights", "authorship", "integrity", "copyright", "የሞራል መብት", "ደራሲነት"],
+    "jurisdictionType": "Federal High Court",
+    "purpose": "የሞራል መብቶች ጥሰት ካሳ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የእርስዎ ስራ ያለእርስዎ እውቅና ሲቀርብ (የደራሲነት መብት ጥሰት) ወይም ስራዎ መልካም ስምዎን በሚጎዳ መልኩ ሲቀየር ወይም ሲበላሽ (የስራውን ሙሉነት የመጠበቅ መብት ጥሰት) ሲከሰት ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየሞራል መብቶች ከቅጂ መብት ጋር የተያያዙ በመሆናቸው በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ\nየሞራል መብቶች ከኢኮኖሚያዊ መብቶች ጋር አብረው የሚቆዩ ሲሆን የህይወት ዘመን ጥበቃ አላቸው። ክስ ለማቅረብ ያለው ገደብ ጥሰቱን ካወቁበት ቀን ጀምሮ 2 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች\n- የመጀመሪያውን ስራ እና የተጣሰውን/የተበላሸውን ስራ ቅጂ ጎን ለ ጎን ማቅረብ።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ደራሲ)",
+    "respondent": "ተከሳሽ (ጥሰት ፈፃሚ)"
+  },
+  "facts": [
+    {
+      "id": "ip_fact_failure_to_attribute",
+      "label": "የደራሲነት እና የመብት ጥሰት",
+      "legalText": "ተከሳሹ የከሳሽን ስራ '[workTitle]' ያለአግባብ ስሙን ሳይጠቅስ ተጠቅሞበታል።",
+      "citation": "Proclamation 410/2004 Art. 8(1)(a)",
+      "autoEvidence": ["ProductSampleSpecimen"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የስም አለመጥቀስ" }
+    },
+    {
+      "id": "ip_fact_distortion_or_mutilation",
+      "label": "የደራሲነት እና የመብት ጥሰት",
+      "legalText": "ተከሳሹ የከሳሽን ስራ '[workTitle]' ክብሩን እና መልካም ስሙን በሚጎዳ መልኩ አሻሽሏል ወይም አበላሽቷል።",
+      "citation": "Proclamation 410/2004 Art. 8(1)(b)",
+      "autoEvidence": ["ProductSampleSpecimen"],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የሥራ መበላሸት" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "ip_relief_public_apology",
+      "text": "ተከሳሹ የደራሲነት መብቱን እንዲያከብር እና/ወይም ይፋዊ ይቅርታ እንዲጠይቅ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "ip_relief_retraction_of_work",
+      "text": "የተበላሸው ስራ ከስርጭት እንዲወገድ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

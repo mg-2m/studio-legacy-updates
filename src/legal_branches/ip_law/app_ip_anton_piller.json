@@ -1,0 +1,44 @@
+
+{
+  "id": "app_ip_anton_piller",
+  "documentTitle": "የማስረጃ ጥበቃ እና መያዣ ማመልከቻ ('Anton Piller' Order)",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (Inherent Power) እና የቅጂ መብት አዋጅ ቁጥር 410/2004 አንቀጽ 10",
+  "meta": {
+    "keywords": ["anton piller", "seizure", "evidence preservation", "ex parte", "ማስረጃ መያዣ"],
+    "jurisdictionType": "Federal High Court",
+    "purpose": "የአንቶን ፒለር ትዕዛዝ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ በጣም አስቸኳይ እና ልዩ የሆነ 'የፍተሻ እና የመያዝ' ትእዛዝ ነው። አጥፊው ስለ ክሱ ከተነገረው ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ኮምፒተሮችን፣ ሰነዶችን) ያጠፋል ብሎ ለማመን በጣም ጠንካራ ምክንያት ሲኖር ጥቅም ላይ ይውላል።\n\n### የዳኝነት ሥልጣን\nማመልከቻው ዋናው የIP ክስ በሚታይበት ፍርድ ቤት (ብዙውን ጊዜ ፌዴራል ከፍተኛ ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ\nN/A. ይህ አስቸኳይ ማመልከቻ ነው።\n\n### ቅድመ ሁኔታዎች\n- ተከሳሹ ማስረጃዎችን እንደሚያጠፋ የሚያሳይ በጣም ጠንካራ እና ተጨባጭ ስጋት መኖሩን ማሳየት።\n- የጥሰት ክስዎ በጣም ጠንካራ መሆኑን ለፍርድ ቤቱ ማሳመን።\n- ይህ ማመልከቻ ለሌላኛው ወገን ሳይነገር ነው የሚቀርበው።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "app_ip_fact_concealment_risk",
+      "label": "የማስረጃ ጥበቃ",
+      "legalText": "ተከሳሹ ወሳኝ የጥሰት ማስረጃዎችን (ለምሳሌ ሻጋታዎችን፣ ሂሳቦችን) ያጠፋል ወይም ይደብቃል የሚል ከባድ ስጋት አለ።",
+      "citation": "CPC Art. 154",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የማስረጃ መጥፋት ስጋት" }
+    },
+    {
+      "id": "app_ip_fact_specific_evidence_location",
+      "label": "የማስረጃ ጥበቃ",
+      "legalText": "አመልካቹ ስለ ማስረጃው ቦታ እና ተፈጥሮ የተወሰነ እውቀት አለው።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የማስረጃ ቦታ እውቀት" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_ip_relief_seize_evidence",
+      "text": "የፍርድ ቤት ባለሥልጣን ከጥሰቱ ጋር የተያያዙ ማስረጃዎችን ለመያዝ እና ለመጠበቅ ወደ ተጠሪው ግቢ እንዲገባ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

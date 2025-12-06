@@ -52,8 +52,16 @@ import * as labour_unlawful_termination from '@/legal_branches/labour_law/labour
 import * as labour_unpaid_wages from '@/legal_branches/labour_law/labour_unpaid_wages.json';
 import * as labour_employment_injury from '@/legal_branches/labour_law/employment_injury.json';
 
+// Import individual IP law templates
+import * as ip_trademark_infringement from '@/legal_branches/ip_law/ip_trademark_infringement.json';
+import * as ip_trademark_opposition from '@/legal_branches/ip_law/ip_trademark_opposition.json';
+import * as ip_patent_infringement from '@/legal_branches/ip_law/ip_patent_infringement.json';
+import * as ip_copyright_infringement from '@/legal_branches/ip_law/ip_copyright_infringement.json';
+import * as ip_moral_rights_violation from '@/legal_branches/ip_law/ip_moral_rights_violation.json';
+import * as app_ip_interlocutory_injunction from '@/legal_branches/ip_law/app_ip_interlocutory_injunction.json';
+import * as app_ip_anton_piller from '@/legal_branches/ip_law/app_ip_anton_piller.json';
 
-import * as ipLaw from '@/legal_branches/ip_law.json';
+
 import * as statusLaw from '@/legal_branches/status_law.json';
 import * as taxCustomsLaw from '@/legal_branches/tax_customs_law.json';
 import * as tortLaw from '@/legal_branches/tort_law.json';
@@ -110,6 +118,16 @@ const successionLawTemplates = {
     succession_partition_estate,
 };
 
+const ipLawTemplates = {
+    ip_trademark_infringement,
+    ip_trademark_opposition,
+    ip_patent_infringement,
+    ip_copyright_infringement,
+    ip_moral_rights_violation,
+    app_ip_interlocutory_injunction,
+    app_ip_anton_piller
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
@@ -117,7 +135,7 @@ const allTemplates = {
     ...publicServiceLawTemplates,
     ...successionLawTemplates,
     ...propertyAndLandLawTemplates,
-    ...ipLaw.templates,
+    ...ipLawTemplates,
     ...statusLaw.templates,
     ...taxCustomsLaw.templates,
     ...tortLaw.templates,

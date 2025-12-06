@@ -1,0 +1,92 @@
+
+{
+  "id": "ip_copyright_infringement",
+  "documentTitle": "የቅጂ መብት ጥሰት እና የሕግ ካሳ ክስ",
+  "jurisdictionText": "የቅጂ መብት እና ተዛማጅ መብቶች አዋጅ ቁጥር 410/2004 አንቀጽ 38",
+  "meta": {
+    "keywords": ["copyright", "piracy", "infringement", "author", "የቅጂ መብት", "የባህር ላይ ወንበዴነት"],
+    "jurisdictionType": "Federal High Court",
+    "purpose": "የቅጂ መብት ጥሰት ካሳ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህንን አብነት ለባህር ላይ ወንበዴነት ጉዳዮች ይጠቀሙ፤ የእርስዎ የመጀመሪያ ስራ (መጽሐፍ፣ ሙዚቃ፣ ፊልም) ያለፈቃድ ሲባዛ፣ ሲሰራጭ ወይም ሲሸጥ።\n\n### የዳኝነት ሥልጣን\nየቅጂ መብት ጉዳዮች በፌዴራል ከፍተኛ ፍርድ ቤት ይታያሉ።\n\n### የጊዜ ገደብ\nጥሰቱን ካወቁበት ቀን ጀምሮ ባሉት **ሁለት (2) ዓመታት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\n- የስራው ደራሲ መሆንዎን ማሳየት።\n- ጥሰቱ መፈጸሙን ማሳየት (ለምሳሌ፣ የተሰረቀውን ስራ ቅጂ (ProductSampleSpecimen) ማቅረብ)።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ደራሲ/ፈጣሪ)",
+    "respondent": "ተከሳሽ (ወንበዴ/አባዥ)"
+  },
+  "facts": [
+    {
+      "id": "ip_fact_original_work",
+      "label": "የደራሲነት መብት",
+      "legalText": "ከሳሽ በ [publicationDate] የታተመ/የተቀረጸው የ '[workTitle]' የመጀመሪያ ሥራ ደራሲ ነው።",
+      "citation": "Proclamation 410/2004 Art. 38",
+      "autoEvidence": ["ProductSampleSpecimen"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የመጀመሪያ ሥራ" }
+    },
+    {
+      "id": "ip_fact_unauthorized_reproduction",
+      "label": "የጥሰት ድርጊት",
+      "legalText": "ተከሳሹ ሥራውን ያለፈቃድ አባዝቷል፣ አሰራጭቷል ወይም በይፋ አቅርቧል።",
+      "citation": "Proclamation 410/2004 Art. 9",
+      "autoEvidence": ["ProductSampleSpecimen", "CeaseAndDesistLetter"],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያለፈቃድ ማባዛት" }
+    },
+    {
+      "id": "ip_fact_commercial_scale",
+      "label": "የጥሰት ድርጊት",
+      "legalText": "ጥሰቱ የተፈጸመው በንግድ ደረጃ ነው።",
+      "citation": "Proclamation 410/2004 Art. 38",
+      "autoEvidence": ["AuditReport"],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "በተጨማሪም،", "summary_keyword": "የንግድ ደረጃ ጥሰት" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "ip_relief_statutory_damages",
+      "text": "በሕግ የተደነገገውን የሕግ ካሳ ወይም የደረሰውን ትክክለኛ ጉዳት {{statutoryDamages}} ብር እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": true,
+      "isCustom": false
+    },
+    {
+      "id": "ip_relief_injunction_copyright",
+      "text": "ተጨማሪ ያልተፈቀደ አጠቃቀምን የሚከለክል የመጨረሻ እገዳ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "ip_relief_impoundment",
+      "text": "ሁሉም የጣሱ ሥራ ቅጂዎች እንዲወረሱ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {
+    "copyright_damages": {
+      "title": "የቅጂ መብት ካሳ ማስያ",
+      "description": "Calculate estimated statutory damages based on the number of infringing copies.",
+      "inputs": [
+        {
+          "id": "infringingCopies",
+          "label": "የተጣሱ ቅጂዎች ብዛት",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "retailPrice",
+          "label": "የችርቻሮ ዋጋ",
+          "type": "number",
+          "defaultValue": 250
+        }
+      ],
+      "outputs": [
+        {
+          "id": "statutoryDamages",
+          "label": "የሚገመት የሕግ ካሳ"
+        }
+      ],
+      "formula": "(infringingCopies * retailPrice) * 0.5"
+    }
+  }
+}

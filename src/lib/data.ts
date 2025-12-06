@@ -6,11 +6,18 @@ import { differenceInDays, parseISO } from 'date-fns';
 
 // Import the raw JSON data from the new modular files
 import * as baseData from '@/legal_branches/_base.json';
-import * as contractLaw from '@/legal_branches/contract_law.json';
 import * as familyLaw from '@/legal_branches/family_law.json';
 import * as labourLaw from '@/legal_branches/labour_law.json';
 import * as publicServiceLaw from '@/legal_branches/public_service_law.json';
 import * as successionLaw from '@/legal_branches/succession_law.json';
+
+// Import individual contract law templates
+import * as contract_debt_recovery from '@/legal_branches/contract_law/contract_debt_recovery.json';
+import * as contract_specific_performance from '@/legal_branches/contract_law/contract_specific_performance.json';
+import * as contract_termination_claim from '@/legal_branches/contract_law/contract_termination_claim.json';
+import * as app_attachment_before_judgment from '@/legal_branches/contract_law/app_attachment_before_judgment.json';
+import * as app_judgment_on_admission from '@/legal_branches/contract_law/app_judgment_on_admission.json';
+
 
 // Import individual property law templates
 import * as prop_petitory_vindication from '@/legal_branches/property_and_land_law/prop_petitory_vindication.json';
@@ -32,6 +39,14 @@ import * as commercialLaw from '@/legal_branches/commercial_law.json';
 import * as criminalLaw from '@/legal_branches/criminal_law_defences.json';
 import * as civilProcedure from '@/legal_branches/civil_procedure_adjudications.json';
 
+const contractLawTemplates = {
+    contract_debt_recovery,
+    contract_specific_performance,
+    contract_termination_claim,
+    app_attachment_before_judgment,
+    app_judgment_on_admission
+};
+
 const propertyAndLandLawTemplates = {
     prop_petitory_vindication,
     prop_possessory_restoration,
@@ -45,7 +60,7 @@ const propertyAndLandLawTemplates = {
 };
 
 const allTemplates = {
-    ...contractLaw.templates,
+    ...contractLawTemplates,
     ...familyLaw.templates,
     ...labourLaw.templates,
     ...publicServiceLaw.templates,
@@ -527,4 +542,4 @@ export const INITIAL_STATE: AppState = {
   selectedSubTemplate: null,
 };
 
-    
+  

@@ -1,0 +1,150 @@
+
+{
+  "id": "contract_debt_recovery",
+  "documentTitle": "የብድር/ዕዳ ማስመለሻ ክስ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ቁጥር 216 እና ተከታዮቹ እና የፍትሐ ብሔር ሕግ ቁጥር 2471",
+  "meta": {
+    "keywords": [
+      "debt recovery",
+      "loan agreement",
+      "non-payment",
+      "የዕዳ ማስመለስ",
+      "የብድር ክስ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance",
+    "purpose": "ለተሰጠ የብድር ዕዳ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ ሰው ወይም ድርጅት የሰጡትን ብድር ወይም ዕዳ ለመመለስ ፈቃደኛ ሳይሆን ሲቀር ክስ ለመመስረት ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየክሱ የገንዘብ መጠን ከፍርድ ቤቱ የዳኝነት ወሰን ጋር መጣጣም አለበት።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት، በጽሑፍ ለተደገፈ የውል ዕዳ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች\nየጽሑፍ የብድር ስምምነት ወይም የዕዳ ማመኛ ሰነድ።\nገንዘቡ መተላለፉን የሚያሳይ የባንክ መረጃ ወይም ደረሰኝ።\nክፍያ እንዲፈጸም የተላከ የማስጠንቀቂያ ደብዳቤ።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (አበዳሪ)",
+    "respondent": "ተከሳሽ (ተበዳሪ)"
+  },
+  "facts": [
+    {
+      "id": "con_fact_loan_agreement",
+      "label": "የውል መመስረት",
+      "legalText": "በ [Date] ከሳሽ እና ተከሳሽ በፍትሐ ብሔር ሕግ 2471 መሰረት የጽሑፍ የብድር ስምምነት ማድረጋቸው ይታወቃል።",
+      "citation": "",
+      "autoEvidence": [
+        "WrittenContract",
+        "AdmissionofDebt"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም፣",
+        "summary_keyword": "የብድር ስምምነት"
+      }
+    },
+    {
+      "id": "con_fact_disbursement",
+      "label": "የውል መመስረት",
+      "legalText": "ከሳሽ [Amount] ብር ለተከሳሽ መስጠቱ ይታወቃል።",
+      "citation": "",
+      "autoEvidence": [
+        "PaymentReceipt"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም፣",
+        "transition": "ከዚህም ባሻገር፣",
+        "summary_keyword": "ገንዘብ መሰጠት"
+      }
+    },
+    {
+      "id": "con_fact_payment_due",
+      "label": "ውል ማፍረስ",
+      "legalText": "በፍትሐ ብሔር ሕግ 1857 መሰረት የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል።",
+      "citation": "",
+      "rhetoric": {
+        "intro": "በመቀጠልም፣",
+        "transition": "በተጨማሪም፣",
+        "summary_keyword": "የመክፈያ ጊዜ ማብቃት"
+      }
+    },
+    {
+      "id": "con_fact_failure_to_pay",
+      "label": "ውል ማፍረስ",
+      "legalText": "ዕዳው ቢደርስም ተከሳሹ ክፍያ አልፈጸመም።",
+      "citation": "",
+      "rhetoric": {
+        "intro": "በመቀጠልም፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ክፍያ አለመፈጸም"
+      }
+    },
+    {
+      "id": "con_fact_notice_given",
+      "label": "ውል ማፍረስ",
+      "legalText": "ከሳሽ በፍትሐ ብሔር ሕግ 1772 መሰረት በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
+      "citation": "",
+      "autoEvidence": [
+        "NoticeofDefault"
+      ],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ማስታወቂያ መሰጠት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "con_relief_principal_amount",
+      "text": "ተከሳሹ ዋናውን ገንዘብ {{principal}} ብር እንዲከፍል እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": true
+    },
+    {
+      "id": "con_relief_legal_interest",
+      "text": "ከውል ማፍረሻ ቀን {{defaultDate}} ጀምሮ የተሰላውን የሕግ ወለድ {{interestRate}} ከመቶ ማለትም {{interestAmount}} ብር እንዲከፍል እንዲታዘዝ።",
+      "isDefault": true,
+      "isDynamic": true
+    },
+    {
+      "id": "con_relief_contractual_interest",
+      "text": "በ [Percentage] ከመቶ የተስማማውን የውል ወለድ (ቢበዛ 12 ከመቶ) ክፍያ እንዲፈጽም ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false
+    },
+    {
+      "id": "con_relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {
+    "debt_calculator": {
+      "title": "የዕዳ ማስያ",
+      "description": "የሚጠየቀውን ዋና ገንዘብ እና ወለድ ያስሉ።",
+      "inputs": [
+        {
+          "id": "principal",
+          "label": "የብር መጠን",
+          "type": "number",
+          "defaultValue": 10000
+        },
+        {
+          "id": "interestRate",
+          "label": "ዓመታዊ ወለድ",
+          "type": "number",
+          "defaultValue": 9
+        },
+        {
+          "id": "defaultDate",
+          "label": "የክፍያ ጊዜ ያለፈበት ቀን",
+          "type": "date",
+          "defaultValue": "2023-01-01"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "interestAmount",
+          "label": "ጠቅላላ ወለድ"
+        }
+      ],
+      "formula": "(principal * (interestRate / 100) / 365) * (differenceInDays(new Date(), defaultDate))"
+    }
+  }
+}
+
+  

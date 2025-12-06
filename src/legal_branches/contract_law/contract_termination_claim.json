@@ -1,0 +1,72 @@
+
+{
+  "id": "contract_termination_claim",
+  "documentTitle": "የውል ስረዛ ክስ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1784 እና 1785",
+  "meta": {
+    "keywords": [
+      "contract termination",
+      "cancellation",
+      "breach of contract",
+      "የውል ስረዛ",
+      "ውል ማፍረስ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance",
+    "purpose": "የውል ስረዛን ለማረጋገጥ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት ሌላኛው ወገን የፈጸመው የውል ጥሰት በጣም መሠረታዊ እና ከባድ ከመሆኑ የተነሳ የውሉ መቀጠል ትርጉም የለሽ ሲሆን ውሉ በፍርድ ቤት እንዲሰረዝ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nክሱ መቅረብ ያለበት ውሉ በተፈጸመበት ቦታ ወይም ጥሰቱ በተከሰተበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት، በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች\nየተፈጸመው ጥሰት የውሉን ዋና ዓላማ የሚያናጋ መሆኑን ማሳየት ያስፈልጋል።\nውሉ ከመሰረዙ በፊት ለተዋዋይ ወገን ማስጠንቀቂያ መስጠት አስፈላጊ ሊሆን ይችላል።\nየጽሑፍ ውል ማስረጃ ማቅረብ ያስፈልጋል።",
+  "partyTitles": {
+    "applicant": "ከሳሽ",
+    "respondent": "ተከሳሽ"
+  },
+  "facts": [
+    {
+      "id": "con_fact_fundamental_breach",
+      "label": "የጥሰት ትንተና",
+      "legalText": "የተከሳሹ አለመፈጸም በፍትሐ ብሔር ሕግ አንቀጽ 1785 መሰረት የውሉን ዋና ይዘት የሚነካ መሠረታዊ ጥሰት ነው።",
+      "citation": "",
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "መሠረታዊ ጥሰት"
+      }
+    },
+    {
+      "id": "con_fact_payments_made",
+      "label": "ካሳ",
+      "legalText": "ከሳሽ ለተከሳሽ [Amount] ብር ከፍሏል።",
+      "citation": "",
+      "autoEvidence": [
+        "PaymentReceipt"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የተከፈለ ገንዘብ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "con_relief_judicial_cancellation",
+      "text": "ውሉ መሰረዙን/መቋረጡን የሚገልጽ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "con_relief_reinstatement",
+      "text": "በፍትሐ ብሔር ሕግ አንቀጽ 1815 መሰረት ተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው እንዲመለሱ (ካሳ) ትዕዛዝ እንዲሰጥ።",
+      "citation": "",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "con_relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ]
+}
+
+  

@@ -1,0 +1,82 @@
+
+{
+  "id": "succession_partition_estate",
+  "documentTitle": "የውርስ ንብረት ክፍፍል ማመልከቻ (Application for Partition of Hereditary Estate)",
+  "jurisdictionText": "Art. 1060 of the Civil Code.",
+  "meta": {
+    "keywords": [
+      "partition",
+      "estate",
+      "division",
+      "ክፍፍል",
+      "ውርስ",
+      "ንብረት"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance",
+    "purpose": "የውርስ ንብረት ክፍፍል"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ወራሾቹ በሕግ ከታወቁ በኋላ፣ የውርስ ንብረቱን እንዴት እንደሚከፋፈሉ መስማማት ሳይችሉ ሲቀሩ ጥቅም ላይ ይውላል። ክሱ ንብረቱ በፍርድ ቤት በኩል እንዲከፋፈል ለመጠየቅ ነው።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክስ መታየት ያለበት ውርስ ንብረቶቹ በሚገኙበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው። ንብረቶቹ በተለያዩ ቦታዎች የሚገኙ ከሆነ፣ የሟቹ የመጨረሻ መኖሪያ በነበረበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nየፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በ**መዝገብ ቁጥር ፩፰፮፫፳፱** (ቅጽ ፳፫) በሰጠው ውሳኔ، የ10 ዓመት የይርጋ ጊዜ እንደማይሠራ በማረጋገጥ، የ**3 ዓመት** የይርጋ ጊዜ እንደሚኖር አስቀምጧል። ይህም ጊዜ መቆጠር የሚጀምረው አንድ ወራሽ ንብረቱን እንደግል ንብረቱ አድርጎ በሌሎች ወራሾች ላይ መብቱን የሚፃረር ድርጊት ከፈጸመበት ጊዜ ጀምሮ ነው። (Per Cassation File No. 186329 (Vol. 23), the claim for partition of property post-divorce is subject to a **3-year** period of limitation, which starts to run from when a co-heir manifests an unequivocal intention to treat the property as their own private property, thereby adversely possessing against other co-heirs.)\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n**የግድ የሚያስፈልግ ማስረጃ**\nወራሽ መሆንዎን የሚያረጋግጥ የፍርድ ቤት ውሳኔ ወይም የወራሽነት ሰርተፍኬት (CertificateofHeirship)።\n\n**ተጨማሪ ማስረጃ**\nየሟቹ እዳዎች መከፈላቸውን የሚያረጋግጥ ሰነድ (CertificateofLiquidation)።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ወራሽ) (Plaintiff (Heir))",
+    "respondent": "ተከሳሽ (አብሮ ወራሽ) (Defendant (Co-Heir))"
+  },
+  "facts": [
+    {
+      "id": "succession_fact_heirship_established",
+      "label": "የጋራ ባለቤትነት (Co-ownership)",
+      "legalText": "ተዋዋይ ወገኖች በሕጋዊ መንገድ እንደ አብሮ ወራሾች ታውጇል። (The parties have been legally declared as co-heirs.)",
+      "citation": "Civ. Code Art. 1060",
+      "autoEvidence": [
+        "CertificateofHeirship"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የጋራ ወራሽነት"
+      }
+    },
+    {
+      "id": "succession_fact_liquidation_complete",
+      "label": "የንብረት ሁኔታ (Estate Status)",
+      "legalText": "የንብረቱ እዳዎች ተከፍለዋል، እና ንብረቶቹ ለክፍፍል ዝግጁ ናቸው። (The debts of the estate have been paid, and the assets are ready for division.)",
+      "citation": "",
+      "autoEvidence": [
+        "CertificateofLiquidation"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የእዳ ክፍያ"
+      }
+    },
+    {
+      "id": "succession_fact_disagreement",
+      "label": "የንብረት ሁኔታ (Estate Status)",
+      "legalText": "አብሮ ወራሾቹ በንብረቶቹ በፈቃደኝነት ክፍፍል ላይ መስማማት አልቻሉም። (The Co-heirs cannot agree on a voluntary division of the assets.)",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የክፍፍል አለመስማማት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "succession_relief_partition_kind",
+      "text": "ንብረቱን በአይነት በወራሾች መካከል እንዲከፋፈል ትዕዛዝ እንዲሰጥ። (Order the physical division of the property in kind among the heirs.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "succession_relief_partition_sale",
+      "text": "ንብረቱን በሽያጭ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ (በአይነት ክፍፍል የማይቻል ከሆነ)። (Order the sale of the property and division of proceeds (if division in kind is impossible).)",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

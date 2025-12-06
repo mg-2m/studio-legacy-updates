@@ -7,13 +7,17 @@ import { differenceInDays, parseISO } from 'date-fns';
 // Import the raw JSON data from the new modular files
 import * as baseData from '@/legal_branches/_base.json';
 
+// Import individual succession law templates
+import * as succession_heirship_declaration from '@/legal_branches/succession_law/succession_heirship_declaration.json';
+import * as succession_probate_will from '@/legal_branches/succession_law/succession_probate_will.json';
+import * as succession_partition_estate from '@/legal_branches/succession_law/succession_partition_estate.json';
+
+
 // Import individual public service law templates
 import * as pub_serv_disciplinary_appeal from '@/legal_branches/public_service_law/pub_serv_disciplinary_appeal.json';
 import * as pub_serv_termination_unlawful from '@/legal_branches/public_service_law/pub_serv_termination_unlawful.json';
 import * as pub_serv_benefits_grievance from '@/legal_branches/public_service_law/pub_serv_benefits_grievance.json';
 
-
-import * as successionLaw from '@/legal_branches/succession_law.json';
 
 // Import individual contract law templates
 import * as contract_debt_recovery from '@/legal_branches/contract_law/contract_debt_recovery.json';
@@ -100,12 +104,18 @@ const publicServiceLawTemplates = {
     pub_serv_benefits_grievance
 };
 
+const successionLawTemplates = {
+    succession_heirship_declaration,
+    succession_probate_will,
+    succession_partition_estate,
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
     ...labourLawTemplates,
     ...publicServiceLawTemplates,
-    ...successionLaw.templates,
+    ...successionLawTemplates,
     ...propertyAndLandLawTemplates,
     ...ipLaw.templates,
     ...statusLaw.templates,
@@ -293,7 +303,7 @@ export const TEMPLATES: Template[] = [
     label: 'የውል ሕግ', 
     icon: FileSignature,
     subTemplates: [
-      { id: 'contract_debt_recovery', label: 'የብድር/እዳ ክስ', icon: Banknote },
+      { id: 'contract_debt_recovery', label: 'የብድር/ዕዳ ክስ', icon: Banknote },
       { id: 'contract_specific_performance', label: 'ውል ይፈጸምልኝ ክስ', icon: Gavel },
       { id: 'contract_termination_claim', label: 'የውል ማፍረስ ክስ', icon: FileX2 },
     ]

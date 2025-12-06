@@ -1,0 +1,94 @@
+
+{
+  "id": "succession_heirship_declaration",
+  "documentTitle": "የወራሽነት ማረጋገጫ ማመልከቻ (Application for Declaration of Heirship)",
+  "jurisdictionText": "Art. 996 of the Civil Code & Civil Procedure Code.",
+  "meta": {
+    "keywords": [
+      "inheritance",
+      "intestate",
+      "heirship",
+      "declaration",
+      "ወራሽነት",
+      "ውርስ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance",
+    "purpose": "የወራሽነት ማረጋገጫ"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አብነት አንድ ሟች ኑዛዜ ሳይተው ሲቀር، ሕጋዊ ወራሾቹ እነማን እንደሆኑ በፍርድ ቤት ለማረጋገጥ ያገለግላል። ይህም ወራሾቹ የሟቹን ንብረት በሕጋዊ መንገድ እንዲቆጣጠሩ እና እንዲያስተዳድሩ ያስችላቸዋል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው ሟቹ የመጨረሻ የመኖሪያ አድራሻ በነበረበት አካባቢ በሚገኘው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየወራሽነት ጥያቄ በማንኛውም ጊዜ ሊቀርብ ይችላል፣ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n**የግድ የሚያስፈልግ ማስረጃ**\nየሟቹ የሞት ማረጋገጫ ወረቀት (DeathCertificate)።\n\n**ተጨማሪ ማስረጃ**\nየወራሾቹን ዝምድና የሚያረጋግጡ ሦስት ምስክሮች (WitnessAffidavitsSuccession) እና የቤተሰብ ግንኙነት የሚያሳይ የቀበሌ መታወቂያ (KebeleFamilyID)።",
+  "partyTitles": {
+    "applicant": "አመልካች / ፍላጎት ያላቸው ወገኖች (Applicant / Interested Parties)",
+    "respondent": "የሕዝብ ማስታወቂያ (Public Notice)"
+  },
+  "facts": [
+    {
+      "id": "succession_fact_deceased_identity",
+      "label": "የሞት እውነታ (Fact of Death)",
+      "legalText": "ሟቹ፣ [deceasedName]፣ በ [deathDate] በ [deathPlace] ከዚህ ዓለም በሞት ተለይቷል። (The Deceased, [deceasedName], passed away on [deathDate] at [deathPlace].)",
+      "citation": "Civ. Code Art. 826",
+      "autoEvidence": [
+        "DeathCertificate"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የሟች ማንነት"
+      }
+    },
+    {
+      "id": "succession_fact_relationship_descendant",
+      "label": "ግንኙነት (ያለ ኑዛዜ ውርስ ሕጎች) (Relationship (Intestate Rules))",
+      "legalText": "አመልካቾች የሟቹ ልጆች/ዘሮች ናቸው። (The Applicants are the children/descendants of the deceased.)",
+      "citation": "Civ. Code Art. 842",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የልጅነት ግንኙነት"
+      }
+    },
+    {
+      "id": "succession_fact_no_will",
+      "label": "ግንኙነት (ያለ ኑዛዜ ውርስ ሕጎች) (Relationship (Intestate Rules))",
+      "legalText": "ሟቹ ኑዛዜ አልተወም، ይህም ያለ ኑዛዜ ውርስን አስፈላጊ ያደርገዋል። (The Deceased left no will, necessitating an intestate succession.)",
+      "citation": "Civ. Code Art. 829",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ኑዛዜ አለመኖር"
+      }
+    },
+    {
+      "id": "succession_fact_witness_testimony",
+      "label": "ምስክሮች (Witnesses)",
+      "legalText": "አመልካቾች ብቸኛ የታወቁ ወራሾች መሆናቸውን ለመመስከር ሦስት ምስክሮች ቀርበዋል። (Three witnesses are present to testify that the Applicants are the only known heirs.)",
+      "citation": "",
+      "autoEvidence": [
+        "WitnessAffidavitsSuccession"
+      ],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም በተጨማሪ،",
+        "summary_keyword": "የምስክሮች ቃል"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "succession_relief_declare_heirs",
+      "text": "አመልካቾችን የሟቹ ብቸኛ ሕጋዊ ወራሾች መሆናቸውን የሚገልጽ ፍርድ እንዲሰጥ። (Judgment declaring the Applicants as the sole legal heirs of the Deceased.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "succession_relief_certificate_issuance",
+      "text": "የወራሽነት ማረጋገጫ ሰርተፍኬት እንዲሰጥ ትዕዛዝ እንዲሰጥ። (Order the issuance of a Certificate of Heirship.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

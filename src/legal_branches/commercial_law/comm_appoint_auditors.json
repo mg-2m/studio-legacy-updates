@@ -1,0 +1,77 @@
+
+{
+  "id": "comm_appoint_auditors",
+  "documentTitle": "የውጭ ኦዲተሮች እንዲሾሙ የሚጠይቅ አቤቱታ",
+  "jurisdictionText": "የንግድ ሕግ ቁጥር 175",
+  "meta": {
+    "keywords": [
+      "auditor",
+      "appointment",
+      "shareholder",
+      "mismanagement",
+      "ኦዲተር",
+      "ሹመት",
+      "የአክሲዮን ማህበር"
+    ],
+    "jurisdictionType": "Federal High Court (Commercial Bench)",
+    "purpose": "የውጭ ኦዲተሮች እንዲሾሙ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት ቢያንስ አንድ አስረኛውን የካፒታል ድርሻ የሚወክሉ የአንድ የንግድ ድርጅት አባላት، የድርጅቱን ሂሳቦች እና አስተዳደር ለመመርመር በቂ ምክንያት ሲኖራቸው ፍርድ ቤቱ ኦዲተሮችን እንዲሾምላቸው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየንግድ ማህበሩ ዋና መሥሪያ ቤት በሚገኝበት ቦታ ስልጣን ባለው የፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\nአመልካቾች ቢያንስ 1/10ኛውን የድርጅቱን ካፒታል መያዝ አለባቸው።\nኦዲት እንዲደረግ የሚያስገድድ ከባድ ምክንያት መኖሩን ማሳየት።\nየአመልካቾችን የባለቤትነት ድርሻ የሚያሳይ ማስረጃ (MemorandumAndArticles) እና ጥርጣሬውን የሚደግፍ ማንኛውም ማስረጃ።",
+  "partyTitles": {
+    "applicant": "አመልካች (ባለአክሲዮኖች)",
+    "respondent": "ተጠሪ (የንግድ ማህበሩ)"
+  },
+  "facts": [
+    {
+      "id": "comm_fact_shareholder_standing",
+      "label": "የአመልካቾች ሁኔታ",
+      "legalText": "አመልካቾች በጋራ ቢያንስ አንድ አስረኛውን የተጠሪ ድርጅት ካፒታል ይይዛሉ።",
+      "citation": "Commercial Code Art. 175(1)",
+      "autoEvidence": [
+        "MemorandumAndArticles"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የካፒታል ድርሻ"
+      }
+    },
+    {
+      "id": "comm_fact_serious_grounds_suspicion",
+      "label": "የምርመራ ምክንያቶች",
+      "legalText": "የድርጅቱ አስተዳዳሪዎች ወይም ተቆጣጣሪዎች በንግድ ሥራ አመራር ላይ ከባድ ስህተት እንደሠሩ ወይም ሕግ እንደጣሱ የሚጠቁሙ ከባድ ምክንያቶች አሉ።",
+      "citation": "Commercial Code Art. 175(1)",
+      "autoEvidence": [
+        "ShareholdersResolution"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የከባድ ስህተት ጥርጣሬ"
+      }
+    },
+    {
+      "id": "comm_fact_internal_request_failed",
+      "label": "የምርመራ ምክንያቶች",
+      "legalText": "አመልካቾች ለጠቅላላ ጉባኤው ኦዲተሮች እንዲሾሙ ጠይቀው ነበር ነገር ግን ጥያቄው ውድቅ ተደርጓል ወይም ምላሽ አላገኘም።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በመሆኑም،",
+        "summary_keyword": "የውስጥ ጥያቄ አለመሳካት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "comm_relief_appoint_auditor",
+      "text": "የድርጅቱን የሂሳብ መዝገቦች እና አስተዳደር የሚመረምሩ አንድ ወይም ከዚያ በላይ ኦዲተሮች እንዲሾሙ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}
+  

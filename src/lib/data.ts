@@ -1,4 +1,5 @@
 
+
 import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
 import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning, FileMinus, FilePlus, UserMinus } from 'lucide-react';
 import { differenceInDays, parseISO } from 'date-fns';
@@ -86,8 +87,12 @@ import * as tort_strict_liability_buildings from '@/legal_branches/tort_law/tort
 import * as admin_appeal_judicial_review from '@/legal_branches/administrative_law/admin_appeal_judicial_review.json';
 import * as admin_review_directive_legality from '@/legal_branches/administrative_law/admin_review_directive_legality.json';
 
+// Import individual commercial law templates
+import * as comm_restitution_nonpayment from '@/legal_branches/commercial_law/comm_restitution_nonpayment.json';
+import * as comm_preventive_restructuring from '@/legal_branches/commercial_law/comm_preventive_restructuring.json';
+import * as comm_dissolution_by_court from '@/legal_branches/commercial_law/comm_dissolution_by_court.json';
+import * as comm_appoint_auditors from '@/legal_branches/commercial_law/comm_appoint_auditors.json';
 
-import * as commercialLaw from '@/legal_branches/commercial_law.json';
 import * as criminalLaw from '@/legal_branches/criminal_law_defences.json';
 import * as civilProcedure from '@/legal_branches/civil_procedure_adjudications.json';
 
@@ -178,6 +183,13 @@ const administrativeLawTemplates = {
     admin_review_directive_legality,
 };
 
+const commercialLawTemplates = {
+    comm_restitution_nonpayment,
+    comm_preventive_restructuring,
+    comm_dissolution_by_court,
+    comm_appoint_auditors
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
@@ -190,7 +202,7 @@ const allTemplates = {
     ...taxCustomsLawTemplates,
     ...tortLawTemplates,
     ...administrativeLawTemplates,
-    ...commercialLaw.templates,
+    ...commercialLawTemplates,
     ...criminalLaw.templates,
     ...civilProcedure.templates,
 };
@@ -660,3 +672,4 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
+

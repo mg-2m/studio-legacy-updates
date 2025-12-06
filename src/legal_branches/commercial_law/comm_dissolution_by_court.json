@@ -1,0 +1,85 @@
+
+{
+  "id": "comm_dissolution_by_court",
+  "documentTitle": "የንግድ ማህበር በፍርድ ቤት እንዲፈርስ የማመልከቻ ክስ",
+  "jurisdictionText": "የንግድ ሕግ ቁጥር 176",
+  "meta": {
+    "keywords": [
+      "dissolution",
+      "shareholder dispute",
+      "deadlock",
+      "company",
+      "መፍረስ",
+      "የባለአክሲዮን ክርክር"
+    ],
+    "jurisdictionType": "Federal High Court (Commercial Bench)",
+    "purpose": "የንግድ ማህበር እንዲፈርስ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት በባለአክሲዮኖች መካከል በተፈጠረ ከባድ እና ሊፈታ የማይችል አለመግባባት ምክንያት የንግድ ማህበሩን ሥራ ማስቀጠል በማይቻልበት ጊዜ، ማህበሩ በፍርድ ቤት ትዕዛዝ እንዲፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየንግድ ማህበሩ ዋና መሥሪያ ቤት በሚገኝበት ቦታ ስልጣን ባለው የፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም፤ ነገር ግን አለመግባባቱ ከባድ እና ቀጣይ መሆኑን ማሳየት ያስፈልጋል።\n\n### ቅድመ ሁኔታዎች\nየድርጅቱ መመስረቻ ጽሑፍ (MemorandumAndArticles)።\nአለመግባባቱን የሚያሳዩ የስብሰባ ቃለ-ጉባኤዎች ወይም የደብዳቤ ልውውጦች።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ባለአክሲዮን/ዳይሬክተር)",
+    "respondent": "ተከሳሽ (የንግድ ማህበሩ እና ሌሎች ባለአክሲዮኖች)"
+  },
+  "facts": [
+    {
+      "id": "comm_fact_serious_disagreement",
+      "label": "የመፍረስ ምክንያቶች",
+      "legalText": "በማህበሩ ባለአክሲዮኖች/አስተዳዳሪዎች መካከል ማህበሩን ማስተዳደርን በሚመለከት ከባድ እና የማያቋርጥ አለመግባባት አለ።",
+      "citation": "Commercial Code Art. 176(a)",
+      "autoEvidence": [
+        "ShareholdersResolution"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ከባድ አለመግባባት"
+      }
+    },
+    {
+      "id": "comm_fact_deadlock",
+      "label": "የመፍረስ ምክንያቶች",
+      "legalText": "በአለመግባባቱ ምክንያት የማህበሩ አስተዳደር ሙሉ በሙሉ ተ deadlock በመሆኑ መደበኛ ሥራውን ማከናወን አልቻለም።",
+      "citation": "Commercial Code Art. 176(b)",
+      "autoEvidence": [
+        "ShareholdersResolution"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የአስተዳደር መቆለፍ"
+      }
+    },
+    {
+      "id": "comm_fact_applicant_standing",
+      "label": "የአመልካች ሁኔታ",
+      "legalText": "ከሳሽ በማህበሩ ውስጥ ባለድርሻ ሲሆን، ይህን ክስ ለማቅረብ ሕጋዊ መብት አለው።",
+      "citation": "",
+      "autoEvidence": [
+        "MemorandumAndArticles"
+      ],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በመሆኑም،",
+        "summary_keyword": "ሕጋዊ ጥቅም"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "comm_relief_order_dissolution",
+      "text": "የንግድ ማህበሩ እንዲፈርስ የሚወስን ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "comm_relief_appoint_liquidator_commercial",
+      "text": "የማህበሩን ንብረትና ዕዳ የሚያጣራ እና ክፍፍል የሚያከናውን ሕጋዊ አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}
+  

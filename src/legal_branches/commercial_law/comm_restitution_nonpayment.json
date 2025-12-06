@@ -1,0 +1,72 @@
+
+{
+  "id": "comm_restitution_nonpayment",
+  "documentTitle": "በድርድር የሚተላለፍ ሰነድ ላይ የተመሰረተ የክፍያ ክስ",
+  "jurisdictionText": "የንግድ ሕግ ቁጥር 715 እና ተከታዮቹ",
+  "meta": {
+    "keywords": [
+      "negotiable instrument",
+      "cheque",
+      "promissory note",
+      "non-payment",
+      "የማይከፈል ቼክ",
+      "የክፍያ ክስ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance Court (Commercial Bench)",
+    "purpose": "በድርድር የሚተላለፍ ሰነድ ላይ የተመሰረተ ክፍያ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት ገንዘቡ ሳይከፈል የቀረን ቼክ، የሐዋላ ወረቀት ወይም ሌላ በድርድር የሚተላለፍ ሰነድ መሠረት በማድረግ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየንግድ ጉዳዮችን ለማየት ስልጣን ባለው ፍርድ ቤት (የንግድ ችሎት) ይቀርባል።\n\n### የጊዜ ገደብ\nበንግድ ሕጉ አንቀጽ 882(1) መሰረት، በቼክ ላይ የተመሰረተ ክስ ቼኩ ከቀረበበት ቀን ጀምሮ በ**ስድስት (6) ወራት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\nዋናው ያልተከፈለ የንግድ ሰነድ (ቼክ) እና ክፍያ እንዳልተፈጸመ የሚያሳይ የባንክ ማስታወሻ ወይም የክፍያ እምቢታ ማረጋገጫ (ProtestCertificate)።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ሰነዱን የያዘ)",
+    "respondent": "ተከሳሽ (ፈራሚ/አውጪ)"
+  },
+  "facts": [
+    {
+      "id": "comm_fact_instrument_issuance",
+      "label": "የሰነዱ መኖር እና አቀራረብ",
+      "legalText": "ተከሳሹ በ [issueDate]፣ [amount] ብር የሚያወጣ ቼክ/የሐዋላ ወረቀት ቁጥር [instrumentNumber] ለከሳሽ ሰጥቷል።",
+      "citation": "Commercial Code Art. 735",
+      "autoEvidence": [
+        "NotarizedCheque"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የሰነድ መሰጠት"
+      }
+    },
+    {
+      "id": "comm_fact_instrument_presentation",
+      "label": "የሰነዱ መኖር እና አቀራረብ",
+      "legalText": "ከሳሽ ሰነዱን ለክፍያ አቅርቦ ነበር ነገር ግን ክፍያ ሳይፈጸም ቀርቷል።",
+      "citation": "Commercial Code Art. 767",
+      "autoEvidence": [
+        "ProtestCertificate"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የክፍያ አለመፈጸም"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "comm_relief_payment_instrument",
+      "text": "ተከሳሹ ያልተከፈለውን የ [amount] ብር እንዲከፍል የሚወስን ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "comm_relief_interest_commercial",
+      "text": "ከክፍያ ቀን ጀምሮ የተሰላውን የንግድ ወለድ (12%) እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "citation": "Commercial Code Art. 886",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}
+  

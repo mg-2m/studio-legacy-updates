@@ -1,0 +1,69 @@
+
+{
+  "id": "prop_boundary_encroachment",
+  "documentTitle": "የድንበር መጣስ እንዲወገድ የክስ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1204 እና 1211",
+  "meta": {
+    "keywords": [
+      "boundary dispute",
+      "encroachment",
+      "neighbor dispute",
+      "demolition",
+      "የድንበር ክርክር",
+      "መጣስ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "የድንበር መጣስ እንዲወገድ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የእርስዎ ጎረቤት በህጋዊ የድንበር መስመርዎ ላይ ግንባታ ሲፈጽም (ለምሳሌ አጥር ወይም የቤት ክፍል)፣ ያንን ግንባታ እንዲያፈርስ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nበአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች\n*   **ማስረጃ (Required Evidence):** የቦታውን ህጋዊ ድንበር የሚያሳይ የሳይት ፕላን (SitePlan) እና ጥሰቱን የሚያረጋግጥ የባለሙያ (ሰርቬየር) ሪፖርት (SurveyorsReport)።",
+  "partyTitles": {
+    "applicant": "ከሳሽ",
+    "respondent": "ተከሳሽ (ጎረቤት)"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_defined_boundary",
+      "label": "የድንበር መስመሮች",
+      "legalText": "በከሳሽ እና በተከሳሽ ይዞታዎች መካከል ያለው ህጋዊ ድንበር በኦፊሴላዊው የቦታ ፕላን ይገለጻል።",
+      "citation": "",
+      "autoEvidence": [
+        "SitePlan"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተገለጸ ድንበር"
+      }
+    },
+    {
+      "id": "prop_fact_encroachment_act",
+      "label": "መጣሱ",
+      "legalText": "ተከሳሹ የድንበር መስመሩን በ {{distance}} ሜትር የሚያልፍ ግድግዳ/ግንባታ ሰርቷል።",
+      "citation": "",
+      "autoEvidence": [
+        "SurveyorsReport",
+        "PhotosVideoEvidence"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የድንበር መጣስ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_demolition",
+      "text": "ተከሳሹ የጣሰውን ግንባታ እንዲያፈርስ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "prop_relief_boundary_restitution",
+      "text": "የድንበር ምልክቶቹ ወደ ቀድሞ ቦታቸው እንዲመለሱ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

@@ -1,0 +1,57 @@
+
+{
+  "id": "app_local_inspection",
+  "documentTitle": "የአካባቢ ምርመራ ትዕዛዝ እንዲሰጥ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 136",
+  "meta": {
+    "keywords": [
+      "local inspection",
+      "site visit",
+      "court inspection",
+      "የአካባቢ ምርመራ",
+      "ቦታ መጎብኘት"
+    ],
+    "jurisdictionType": "Court Handling the Main Case",
+    "purpose": "የአካባቢ ምርመራ እንዲደረግ"
+  },
+  "templateDescription": "### መመሪያ\nይህ ማመልከቻ በክርክሩ ውስጥ ያሉ ወገኖች ስለ ንብረቱ አካላዊ ገጽታ (ለምሳሌ ስለ ድንበር ወይም ስለ ይዞታ) የሚሰጡት ቃል ወይም ሰነድ ሲጋጭ፣ ፍርድ ቤቱ እውነታውን ለማረጋገጥ ቦታው ድረስ ሄዶ እንዲመለከት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nዋናው ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n*   **አስፈላጊነት፡** ፍርድ ቤቱ ቦታውን በአካል ሳያይ ፍትሃዊ ውሳኔ መስጠት እንደማይቻል ማሳመን ያስፈልጋል።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_physical_dispute",
+      "label": "ማብራሪያ",
+      "legalText": "ስለ መሬቱ አካላዊ ገጽታዎች/ድንበሮች የሚቀርቡት የቃል ምስክርነቶች እና ሰነዶች እርስ በርሳቸው የሚጋጩ ናቸው።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም፣",
+        "summary_keyword": "የሚጋጩ ማስረጃዎች"
+      }
+    },
+    {
+      "id": "prop_fact_necessity_to_view",
+      "label": "ማብራሪያ",
+      "legalText": "ፍርድ ቤቱ (ወይም ሬጅስትራሩ) ቦታውን በአካል ሳይመለከት ፍትሃዊ ውሳኔ ሊሰጥ አይችልም።",
+      "citation": "CPC Art. 136",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በመሆኑም،",
+        "summary_keyword": "የምርመራ አስፈላጊነት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_order_visit",
+      "text": "ድንበሮችን/ይዞታን ለማረጋገጥ የንብረቱ አካባቢያዊ ምርመራ እንዲደረግ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

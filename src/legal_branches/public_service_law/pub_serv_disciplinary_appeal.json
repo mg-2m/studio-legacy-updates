@@ -1,0 +1,124 @@
+{
+  "id": "pub_serv_disciplinary_appeal",
+  "documentTitle": "የዲሲፕሊን ይግባኝ ለአስተዳደር ፍርድ ቤት",
+  "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017",
+  "meta": {
+    "keywords": ["civil service", "discipline", "appeal", "tribunal", "demotion", "dismissal", "የመንግስት ሰራተኛ", "ይግባኝ", "ቅጣት"],
+    "jurisdictionType": "Administrative Tribunal",
+    "purpose": "ለዲሲፕሊን ይግባኝ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ የመንግስት ሰራተኛ በተቋሙ የተወሰነበትን ከባድ የዲሲፕሊን ቅጣት (ከሥራ መባረር፣ የደረጃ ዝቅ ማድረግ፣ ከአንድ ወር ደመወዝ በላይ መቀጮ) ለመቃወም ለአስተዳደር ፍርድ ቤት ይግባኝ ሲያቀርብ ይጠቅማል።\n\n### የዳኝነት ሥልጣን\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nይግባኙ ውሳኔው ከደረሰበት ቀን ጀምሮ በ90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች\nከባድ የዲሲፕሊን እርምጃ፡ ይግባኝ ለማለት የሚቻለው የተወሰደው እርምጃ ከባድ ሲሆን ብቻ ነው።\n\n### ማስረጃ\nየቅጣቱን ውሳኔ የያዘ ደብዳቤ።",
+  "partyTitles": {
+    "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ",
+    "respondent": "መስሪያ ቤት/መልስ ሰጪ"
+  },
+  "facts": [
+    {
+      "id": "pub_serv_fact_measure_dismissal",
+      "label": "የዲሲፕሊን እርምጃ",
+      "legalText": "ከሥራ መባረር።",
+      "citation": "Proc. 1064/2017 Art. 81(1)(b)",
+      "autoEvidence": ["DismissalLetter"],
+      "mutexGroup": "penalty_type",
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ከሥራ መባረር" }
+    },
+    {
+      "id": "pub_serv_fact_measure_demotion",
+      "label": "የዲሲፕሊን እርምጃ",
+      "legalText": "የሥራ መደብ/ደረጃ ዝቅ ማድረግ።",
+      "citation": "Proc. 1064/2017 Art. 81(1)(b)",
+      "autoEvidence": ["DismissalLetter"],
+      "mutexGroup": "penalty_type",
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የደረጃ ዝቅ ማድረግ" }
+    },
+    {
+      "id": "pub_serv_fact_measure_fine",
+      "label": "የዲሲፕሊን እርምጃ",
+      "legalText": "ከአንድ ወር ደመወዝ በላይ የሆነ ቅጣት መጣ።",
+      "citation": "Proc. 1064/2017 Art. 81(1)(b)",
+      "autoEvidence": ["DismissalLetter"],
+      "mutexGroup": "penalty_type",
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የገንዘብ ቅጣት" }
+    },
+    {
+      "id": "pub_serv_fact_no_right_to_be_heard",
+      "label": "የሥነ-ሥርዓት ጥሰቶች",
+      "legalText": "ተቋሙ ይግባኝ ባዩ መከላከያ እንዲያቀርብ እድል ሳይሰጥ እርምጃውን ወስዷል።",
+      "citation": "Proc. 1064/2017 Art. 69",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የመሰማት መብት ጥሰት" }
+    },
+    {
+      "id": "pub_serv_fact_limitation_period_1yr",
+      "label": "የሥነ-ሥርዓት ጥሰቶች",
+      "legalText": "ጥብቅ እርምጃው ጥፋቱ ከታወቀ ከ1 ዓመት በላይ ባለፈ ጊዜ ተወስዷል، ይህም በይርጋ እንዲታገድ ያደርገዋል።",
+      "citation": "Proc. 1064/2017 Art. 76(2)",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የአንድ አመት ይርጋ" }
+    },
+    {
+      "id": "pub_serv_fact_limitation_period_6mo",
+      "label": "የሥነ-ሥርዓት ጥሰቶች",
+      "legalText": "ቀላል እርምጃው ጥፋቱ ከታወቀ ከ6 ወራት በላይ ባለፈ ጊዜ ተወስዷል، ይህም በይርጋ እንዲታገድ ያደርገዋል።",
+      "citation": "Proc. 1064/2017 Art. 76(1)",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የስድስት ወር ይርጋ" }
+    },
+    {
+      "id": "pub_serv_fact_improper_committee",
+      "label": "የሥነ-ሥርዓት ጥሰቶች",
+      "legalText": "የዲሲፕሊን ኮሚቴው በደንብ 77/2002 መሠረት አልተቋቋመም (ለምሳሌ የሠራተኛ ተወካይ የለም)።",
+      "citation": "Regulation 77/2002",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የተሳሳተ ኮሚቴ" }
+    },
+    {
+      "id": "pub_serv_fact_not_an_offense",
+      "label": "ዋና መከላከያዎች",
+      "legalText": "የተጠረጠረው ድርጊት በሕጉ መሠረት የዲሲፕሊን ጥፋት አይደለም።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "በተጨማሪም،", "summary_keyword": "ጥፋት አለመሆን" }
+    },
+    {
+      "id": "pub_serv_fact_disproportionate_penalty",
+      "label": "ዋና መከላከያዎች",
+      "legalText": "ቅጣቱ ለተፈጸመው ጥፋት ተመጣጣኝ አይደለም።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "ያልተመጣጠነ ቅጣት" }
+    },
+    {
+      "id": "pub_serv_fact_double_jeopardy",
+      "label": "ዋና መከላከያዎች",
+      "legalText": "ይግባኝ ባዩ በተመሳሳይ በተጠረጠረ ጥፋት ቀደም ሲል ተቀጥቷል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "ድጋሚ ቅጣት" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "pub_serv_relief_quash_decision",
+      "text": "የተጠሪ ተቋሙን አስተዳደራዊ ውሳኔ እንዲሻር።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "pub_serv_relief_reinstate_with_pay",
+      "text": "ይግባኝ ባዩ ወደ ቀድሞ ቦታው እንዲመለስ እና ለእግድ ጊዜ ሙሉ ደመወዝ እንዲከፈለው ትዕዛዝ እንዲሰጥ (አንቀጽ 81(3))።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "pub_serv_relief_expunge_record",
+      "text": "የዲሲፕሊን እርምጃው ከይግባኝ ባዩ የግል ፋይል እንዲሰረዝ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

@@ -6,7 +6,13 @@ import { differenceInDays, parseISO } from 'date-fns';
 
 // Import the raw JSON data from the new modular files
 import * as baseData from '@/legal_branches/_base.json';
-import * as publicServiceLaw from '@/legal_branches/public_service_law.json';
+
+// Import individual public service law templates
+import * as pub_serv_disciplinary_appeal from '@/legal_branches/public_service_law/pub_serv_disciplinary_appeal.json';
+import * as pub_serv_termination_unlawful from '@/legal_branches/public_service_law/pub_serv_termination_unlawful.json';
+import * as pub_serv_benefits_grievance from '@/legal_branches/public_service_law/pub_serv_benefits_grievance.json';
+
+
 import * as successionLaw from '@/legal_branches/succession_law.json';
 
 // Import individual contract law templates
@@ -88,11 +94,17 @@ const labourLawTemplates = {
     labour_employment_injury
 };
 
+const publicServiceLawTemplates = {
+    pub_serv_disciplinary_appeal,
+    pub_serv_termination_unlawful,
+    pub_serv_benefits_grievance
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
     ...labourLawTemplates,
-    ...publicServiceLaw.templates,
+    ...publicServiceLawTemplates,
     ...successionLaw.templates,
     ...propertyAndLandLawTemplates,
     ...ipLaw.templates,

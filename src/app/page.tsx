@@ -8,7 +8,7 @@ import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
 import { differenceInDays, parseISO } from 'date-fns';
-import { app } from '@/firebase/client'; // Import the initialized Firebase app
+import { initializeFirebase } from '@/firebase'; // Correctly import the initialization function
 
 
 import MainLayout from '@/components/main-layout';
@@ -491,6 +491,7 @@ export default function Home() {
   useEffect(() => {
     setIsClient(true);
     // Log the Firebase app object to the console to confirm initialization
+    const { app } = initializeFirebase();
     if (app) {
       console.log('Firebase connection successful:', app.name);
     }

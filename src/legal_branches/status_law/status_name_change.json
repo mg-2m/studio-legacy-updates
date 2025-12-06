@@ -1,0 +1,49 @@
+
+{
+  "id": "status_name_change",
+  "documentTitle": "የስም ለውጥ አቤቱታ",
+  "jurisdictionText": "የወሳኝ ኩነት ምዝገባ እና የብሔራዊ መታወቂያ አዋጅ ቁጥር ፯፻፷/፪ሺ፬",
+  "meta": {
+    "keywords": [
+      "name change",
+      "vital events",
+      "VERA",
+      "የስም ለውጥ",
+      "ወሳኝ ኩነት"
+    ],
+    "jurisdictionType": "Addis Ababa City First Instance Court",
+    "purpose": "የስም ለውጥ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው የመጀመሪያ ስሙን በሕጋዊ መንገድ ለመለወጥ ሲፈልግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nበአዋጅ 760/2012 አንቀጽ 13(2) መሰረት، ይህ ጉዳይ የሚታየው **በአዲስ አበባ ከተማ የመጀመሪያ ደረጃ ፍርድ ቤት** ወይም በክልሎች አቻ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nከባድ ምክንያት፡ ስሙን ለመለወጥ የሚያስገድድ በቂ እና ከባድ ምክንያት መኖሩን ማሳየት።\nማስረጃ፡ የአሁኑን ስም የሚያሳይ መታወቂያ (IdentityCard)، የልደት የምስክር ወረቀት (BirthCertificate) እና ምክንያቱን የሚደግፍ ማንኛውም ማስረጃ።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ",
+    "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ"
+  },
+  "facts": [
+    {
+      "id": "status_fact_name_change_reason",
+      "label": "የለውጡ ምክንያት",
+      "legalText": "አመልካቹ የአሁኑን ስሙን '[currentName]' ወደ '[newName]' ለመቀየር ይፈልጋል። ለዚህም በቂ ምክንያት አለው፤ ይህም '[reason]' ነው።",
+      "citation": "Proc. 760/2012 Art. 13",
+      "autoEvidence": [
+        "IdentityCard",
+        "BirthCertificate"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የስም ለውጥ ምክንያት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "status_relief_order_name_change",
+      "text": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (VERA) የአመልካቹን ስም ወደ '[newName]' እንዲለውጥ እና አዲስ ሰነድ እንዲሰጥ የሚወስን ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

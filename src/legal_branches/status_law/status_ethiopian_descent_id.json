@@ -1,0 +1,62 @@
+
+{
+  "id": "status_ethiopian_descent_id",
+  "documentTitle": "የትውልደ ኢትዮጵያዊ መታወቂያ እንዲሰጥ አቤቱታ",
+  "jurisdictionText": "የትውልደ ኢትዮጵያዊ የሆኑ የውጭ ዜጎችን መብት ለመወሰን የወጣ አዋጅ ቁጥር ፪፻፸/፲ᱺ፱፻፺፬",
+  "meta": {
+    "keywords": [
+      "ethiopian origin id",
+      "yellow card",
+      "descent",
+      "immigration",
+      "የትውልደ ኢትዮጵያዊ",
+      "ቢጫ ካርድ"
+    ],
+    "jurisdictionType": "Administrative (Immigration and Citizenship Service)",
+    "purpose": "የትውልደ ኢትዮጵያዊ መታወቂያ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ የኢትዮጵያዊነት ዜግነታቸውን የቀየሩ ነገር ግን ትውልዳቸው ኢትዮጵያዊ የሆኑ ሰዎች، በኢትዮጵያ ውስጥ የተለያዩ መብቶችን የሚያጎናጽፋቸውን የትውልደ ኢትዮጵያዊ መታወቂያ (ቢጫ ካርድ) እንዲሰጣቸው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ በፍርድ ቤት ሳይሆን **በኢሚግሬሽን እና ዜግነት አገልግሎት** ጽ/ቤት የሚፈጸም አስተዳደራዊ ሂደት ነው። ነገር ግን አገልግሎቱ ያለ በቂ ምክንያት እምቢ ሲል ጉዳዩን ወደ ፍርድ ቤት መውሰድ ይቻላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ፡ ትውልደ ኢትዮጵያዊ መሆንዎን የሚያረጋግጥ ማስረጃ (የድሮ ፓስፖርት، የወላጅ የልደት ሰርተፍኬት) እና የአሁኑ የውጭ ዜግነት ፓስፖርት።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ",
+    "respondent": "የኢሚግሬሽን እና ዜግነት አገልግሎት"
+  },
+  "facts": [
+    {
+      "id": "status_fact_ethiopian_origin_proof",
+      "label": "የትውልድ ሁኔታ",
+      "legalText": "አመልካቹ በአዋጅ ቁጥር 270/2002 እንደተገለጸው ትውልደ ኢትዮጵያዊ ነው። ይህንንም የሚያረጋግጥ '[proofDocument]' ማስረጃ አለው።",
+      "citation": "Proc. 270/2002 Art. 2(1)",
+      "autoEvidence": [
+        "BirthCertificate",
+        "IdentityCard"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ትውልደ ኢትዮጵያዊነት"
+      }
+    },
+    {
+      "id": "status_fact_foreign_nationality",
+      "label": "የትውልድ ሁኔታ",
+      "legalText": "አመልካቹ በአሁኑ ጊዜ የ [countryName] ዜጋ ነው።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የውጭ ዜግነት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "status_relief_issue_descent_id",
+      "text": "የኢሚግሬሽን እና ዜግነት አገልግሎት ለአመልካቹ የትውልደ ኢትዮጵያዊ መታወቂያ ካርድ እንዲሰጥ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

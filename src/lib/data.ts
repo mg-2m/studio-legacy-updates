@@ -61,8 +61,17 @@ import * as ip_moral_rights_violation from '@/legal_branches/ip_law/ip_moral_rig
 import * as app_ip_interlocutory_injunction from '@/legal_branches/ip_law/app_ip_interlocutory_injunction.json';
 import * as app_ip_anton_piller from '@/legal_branches/ip_law/app_ip_anton_piller.json';
 
+// Import individual status law templates
+import * as status_judicial_interdiction from '@/legal_branches/status_law/status_judicial_interdiction.json';
+import * as status_name_change from '@/legal_branches/status_law/status_name_change.json';
+import * as status_birth_date_correction from '@/legal_branches/status_law/status_birth_date_correction.json';
+import * as status_double_record_correction from '@/legal_branches/status_law/status_double_record_correction.json';
+import * as status_ethiopian_descent_id from '@/legal_branches/status_law/status_ethiopian_descent_id.json';
+import * as status_declaration_of_absence from '@/legal_branches/status_law/status_declaration_of_absence.json';
+import * as app_status_provisional_curator from '@/legal_branches/status_law/app_status_provisional_curator.json';
+import * as app_status_lift_interdiction from '@/legal_branches/status_law/app_status_lift_interdiction.json';
 
-import * as statusLaw from '@/legal_branches/status_law.json';
+
 import * as taxCustomsLaw from '@/legal_branches/tax_customs_law.json';
 import * as tortLaw from '@/legal_branches/tort_law.json';
 import * as administrativeLaw from '@/legal_branches/administrative_law.json';
@@ -128,6 +137,17 @@ const ipLawTemplates = {
     app_ip_anton_piller
 };
 
+const statusLawTemplates = {
+    status_judicial_interdiction,
+    status_name_change,
+    status_birth_date_correction,
+    status_double_record_correction,
+    status_ethiopian_descent_id,
+    status_declaration_of_absence,
+    app_status_provisional_curator,
+    app_status_lift_interdiction
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
@@ -136,7 +156,7 @@ const allTemplates = {
     ...successionLawTemplates,
     ...propertyAndLandLawTemplates,
     ...ipLawTemplates,
-    ...statusLaw.templates,
+    ...statusLawTemplates,
     ...taxCustomsLaw.templates,
     ...tortLaw.templates,
     ...administrativeLaw.templates,
@@ -610,5 +630,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
-
-    

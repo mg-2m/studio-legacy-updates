@@ -1,0 +1,79 @@
+
+{
+  "id": "status_declaration_of_absence",
+  "documentTitle": "የመጥፋት መግለጫ እና የንብረት አስተዳደር አቤቱታ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 154 እና 158",
+  "meta": {
+    "keywords": [
+      "declaration of absence",
+      "missing person",
+      "estate administration",
+      "የመጥፋት መግለጫ",
+      "የጠፋ ሰው"
+    ],
+    "jurisdictionType": "Court of the person's last domicile",
+    "purpose": "የመጥፋት መግለጫ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው ለረጅም ጊዜ ሲጠፋና ወሬው ሳይሰማ ሲቀር، በፍርድ ቤት ውሳኔ እንደጠፋ እንዲቆጠር እና ንብረቱን የሚያስተዳድርለት ሰው እንዲሾም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው የጠፋው ሰው የመጨረሻ መኖሪያ በነበረበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየመጥፋት መግለጫ፡ ሰውየው ከጠፋና ወሬው ካልተሰማ ሁለት ዓመት ካለፈ በኋላ ሊጠየቅ ይችላል (አንቀጽ 154)።\nየሞት ግምት፡ ሰውየው ከጠፋ አምስት ዓመት ካለፈ በኋላ የሞት ግምት እንዲሰጥ ሊጠየቅ ይችላል (አንቀጽ 158)።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየሕዝብ ማስታወቂያ፡ አቤቱታው ከመቅረቡ በፊት ስለጠፋው ሰው መረጃ የሚጠይቅ የጋዜጣ ማስታወቂያ ማውጣት ግዴታ ነው (አንቀጽ 159)።\nማስረጃ፡ የወጣው የጋዜጣ ማስታወቂያ (PublicNoticeOfAbsence)።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ (ዘመድ/ጥቅም ያለው ወገን)",
+    "respondent": "የጠፋው ሰው (በስም ተጠሪ)"
+  },
+  "facts": [
+    {
+      "id": "status_fact_absence_duration",
+      "label": "የመጥፋት እውነታ",
+      "legalText": "[personName] የተባለው ሰው ጠፍቶ ከአምስት ዓመታት በላይ ወሬው አልተሰማም።",
+      "citation": "Civ. Code Art. 158",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የረጅም ጊዜ መጥፋት"
+      }
+    },
+    {
+      "id": "status_fact_domicile_proof",
+      "label": "የመጥፋት እውነታ",
+      "legalText": "የሰውየው የመጨረሻ የታወቀ መኖሪያ [lastAddress] ነበር።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የመጨረሻ መኖሪያ"
+      }
+    },
+    {
+      "id": "status_fact_public_notice_given",
+      "label": "የህዝብ ይፋዊነት",
+      "legalText": "በሕጉ መሠረት ስለጠፋው ሰው መረጃ የሚጠይቅ የሕዝብ ማስታወቂያ ታትሟል።",
+      "citation": "",
+      "autoEvidence": [
+        "PublicNoticeOfAbsence"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በተጨማሪ،",
+        "summary_keyword": "የጋዜጣ ማስታወቂያ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "status_relief_declare_absence",
+      "text": "ሰውየው በይፋ እንደጠፋ የሚገልጽ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "status_relief_appoint_administrator",
+      "text": "የጠፋውን ሰው ንብረት በጊዜያዊነት የሚያስተዳድር አስተዳዳሪ እንዲሾም ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

@@ -1,0 +1,147 @@
+
+{
+  "id": "family_post_judgment_partition",
+  "documentTitle": "የጋራ ንብረትን ለማፍሰስ እና ለመከፋፈል ማመልከቻ",
+  "jurisdictionText": "የተሻሻለው የቤተሰብ ሕግ አንቀጽ 85 እና 90 እና የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 219",
+  "meta": {
+    "keywords": ["property partition", "liquidation", "marital assets", "የንብረት ክፍፍል", "ፍቺ"],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "ከፍቺ በኋላ የንብረት ክፍፍል"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የፍቺ ፍርድ ከተሰጠ በኋላ، በፍቺው ወቅት ያልተከፋፈለውን የጋራ ንብረት በፍርድ ቤት በኩል እንዲገመት፣ እንዲጣራ እና እንዲከፋፈል ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nዋናው የፍቺ ክስ በታየበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nየፌዴራል ጠቅላይ ፍርድ ቤት ሰበር ሰሚ ችሎት በመዝገብ ቁጥር ፳፩፬፸፰ (ቅጽ ፰) በሰጠው ውሳኔ መሠረት፣ ከፍቺ በኋላ የንብረት ክፍፍል ጥያቄ የ10 ዓመት የይርጋ ጊዜ ገደብ አለው። ይህ ጊዜ መቆጠር የሚጀምረው ፍቺው ከተፈጸመበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች\n- የፍቺ ፍርድ መኖር፡ የፍቺ ውሳኔ የተሰጠ መሆኑን ማረጋገጥ።\n\n### ማስረጃ\n- የፍቺ ፍርድ ቅጂ (CopyofDivorceJudgment) እና የጋራ ንብረቱን ዝርዝር (ListofCommonProperty)።",
+  "partyTitles": {
+    "applicant": "የፍርድ ባለቤት (አመልካች)",
+    "respondent": "የፍርድ ባለዕዳ (ተጠሪ)"
+  },
+  "facts": [
+    {
+      "id": "fam_fact_prior_dissolution",
+      "label": "የሥነ-ሥርዓት ታሪክ",
+      "legalText": "ይህ የተከበረ ፍርድ ቤት በዚህ የፋይል ቁጥር በተዋዋይ ወገኖች መካከል ያለውን ጋብቻ የሚፈርስ ፍርድ ቀደም ሲል ሰጥቷል።",
+      "citation": "Civil Procedure Code Art. 182",
+      "autoEvidence": [
+        "CopyofDivorceJudgment"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የቀድሞ የፍቺ ፍርድ"
+      }
+    },
+    {
+      "id": "fam_fact_custody_settled",
+      "label": "የሥነ-ሥርዓት ታሪክ",
+      "legalText": "የልጅ የማሳደግ እና የጥገና ጉዳዮች ቀደም ሲል ተወስነዋል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የልጆች ጉዳይ መወሰን"
+      }
+    },
+    {
+      "id": "fam_fact_existence_common_property",
+      "label": "የንብረት መለያ",
+      "legalText": "ተዋዋይ ወገኖች በጋብቻው ወቅት የጋራ ንብረት የሆነውን ተንቀሳቃሽ እና የማይንቀሳቀስ ንብረት አግኝተዋል።",
+      "citation": "RFC Art. 62",
+      "autoEvidence": [
+        "ListofCommonProperty",
+        "TitleDeedsLibrec"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የጋራ ንብረት መኖር"
+      }
+    },
+    {
+      "id": "fam_fact_property_possession",
+      "label": "የንብረት መለያ",
+      "legalText": "ንብረቱ በአሁኑ ጊዜ በተጠሪው/አመልካቹ ብቸኛ ይዞታ/ቁጥጥር ሥር ነው።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የንብረት ይዞታ"
+      }
+    },
+    {
+      "id": "fam_fact_personal_property_claim",
+      "label": "የግል ንብረትን መመለስ (ቅድመ-ክፍፍል)",
+      "legalText": "አመልካቹ ከጋብቻ በፊት የነበረውን ወይም በውርስ/በስጦታ ያገኘውን የግል ንብረት ማረጋገጫ ያለው ሲሆን ይህም ከክፍፍል በፊት መውጣት አለበት።",
+      "citation": "RFC Art. 57 & 86",
+      "autoEvidence": [
+        "ProofofInheritanceDonation",
+        "Pre-maritalOwnershipDocuments"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የግል ንብረት ጥያቄ"
+      }
+    },
+    {
+      "id": "fam_fact_dispute_valuation",
+      "label": "ግምገማ እና ክርክር",
+      "legalText": "ተዋዋይ ወገኖች በንብረቶቹ ዋጋ ወይም ክፍፍል ሁኔታ ላይ መስማማት አልቻሉም።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "በግምገማ ላይ አለመስማማት"
+      }
+    },
+    {
+      "id": "fam_fact_expert_need",
+      "label": "ግምገማ እና ክርክር",
+      "legalText": "የንብረቶቹ ውስብስብነት (ለምሳሌ የንግድ ድርሻዎች፣ ሪል እስቴት) ሙያዊ ግምገማ ይጠይቃል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የባለሙያ ግምገማ አስፈላጊነት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "fam_relief_appoint_liquidator",
+      "text": "የጋራ ንብረቱን ለመመዝገብ እና ለመገምገም በፍርድ ቤት የተረጋገጠ ባለሙያ/አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "fam_relief_withdraw_personal",
+      "text": "ከክፍፍል በፊት የአመልካቹን የግል ንብረት [itemsToWithdraw] እንዲመለስ/እንዲወጣ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "fam_relief_partition_equal",
+      "text": "የቀረው የጋራ ንብረት በተዋዋይ ወገኖች መካከል በእኩል (50/50) እንዲከፋፈል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "fam_relief_auction_sale",
+      "text": "የማይከፋፈል ንብረትን በጨረታ እንዲሸጥ እና ገቢው እንዲከፋፈል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "con_relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

@@ -1,0 +1,67 @@
+
+{
+  "id": "family_paternity_claim",
+  "documentTitle": "የአባትነት ማረጋገጫ ክስ",
+  "jurisdictionText": "የተሻሻለው የቤተሰብ ሕግ አንቀጽ 143",
+  "meta": {
+    "keywords": ["paternity", "fatherhood", "child support", "parentage", "አባትነት", "የልጅ ቀለብ"],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "የአባትነትን ለማረጋገጥ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ ልጅ ከአባትየው መወለዱን በፍርድ ቤት ለማረጋገጥ እና የአባትነት መብቶችና ግዴታዎች (ለምሳሌ ቀለብ) እንዲከበሩ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nበተሻሻለው የቤተሰብ ሕግ አንቀጽ 142(2) መሰረት፣ የአባትነት ክስ የሚታየው እናት፣ ልጅ ወይም የተጠረጠረው አባት በሚኖሩበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nልጁ 18 ዓመት እስኪሞላው ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች\n- የእናትና የተጠረጠረው አባት ግንኙነት እንደነበራቸው የሚያሳይ ማስረጃ (ምስክር) ወይም ልጁን እንደ ልጁ አድርጎ እንደያዘው የሚያሳይ ማስረጃ (ምስክር)።\n- የህክምና ቦርድ የDNA ምርመራ ውጤት (MedicalBoardCertificate) በጣም ወሳኝ ማስረጃ ነው።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ልጅ/አሳዳጊ)",
+    "respondent": "ተከሳሽ (የተጠረጠረ አባት)"
+  },
+  "facts": [
+    {
+      "id": "fam_fact_sexual_intercourse",
+      "label": "የወሲብ ግንኙነት",
+      "legalText": "እናት እና ተከሳሽ በሕጋዊ የእርግዝና ወቅት የወሲብ ግንኙነት ነበራቸው።",
+      "citation": "RFC Art. 143",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የወሲብ ግንኙነት"
+      }
+    },
+    {
+      "id": "fam_fact_possession_status",
+      "label": "የሁኔታ ይዞታ",
+      "legalText": "ተከሳሹ ልጁን በሕዝብ እና በግል እንደራሱ አድርጎታል።",
+      "citation": "RFC Art. 136",
+      "autoEvidence": [
+        "WitnessStatements"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የልጅነት ይዞታ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "fam_relief_declare_paternity",
+      "text": "ተከሳሹ የልጁ ባዮሎጂያዊ አባት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "fam_relief_reimbursement",
+      "text": "ከትውልድ እና ከጥገና ጋር የተያያዙ ወጪዎችን ለመመለስ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "con_relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

@@ -6,7 +6,7 @@ import { differenceInDays, parseISO } from 'date-fns';
 
 // Import the raw JSON data from the new modular files
 import * as baseData from '@/legal_branches/_base.json';
-import * as familyLaw from '@/legal_branches/family_law.json';
+// import * as familyLaw from '@/legal_branches/family_law.json'; // This will be removed
 import * as labourLaw from '@/legal_branches/labour_law.json';
 import * as publicServiceLaw from '@/legal_branches/public_service_law.json';
 import * as successionLaw from '@/legal_branches/succession_law.json';
@@ -29,6 +29,16 @@ import * as property_possessory_disturbance from '@/legal_branches/property_and_
 import * as app_stay_construction from '@/legal_branches/property_and_land_law/app_stay_construction.json';
 import * as app_local_inspection from '@/legal_branches/property_and_land_law/app_local_inspection.json';
 import * as app_servitude_temporary_passage from '@/legal_branches/property_and_land_law/app_servitude_temporary_passage.json';
+
+// Import individual family law templates
+import * as family_divorce_dispute from '@/legal_branches/family_law/family_divorce_dispute.json';
+import * as family_divorce_agreement from '@/legal_branches/family_law/family_divorce_agreement.json';
+import * as family_paternity_claim from '@/legal_branches/family_law/family_paternity_claim.json';
+import * as family_post_judgment_partition from '@/legal_branches/family_law/family_post_judgment_partition.json';
+import * as app_temporary_maintenance from '@/legal_branches/family_law/app_temporary_maintenance.json';
+import * as app_property_preservation from '@/legal_branches/family_law/app_property_preservation.json';
+import * as app_protective_order from '@/legal_branches/family_law/app_protective_order.json';
+
 
 import * as ipLaw from '@/legal_branches/ip_law.json';
 import * as statusLaw from '@/legal_branches/status_law.json';
@@ -59,9 +69,19 @@ const propertyAndLandLawTemplates = {
     app_servitude_temporary_passage
 };
 
+const familyLawTemplates = {
+    family_divorce_dispute,
+    family_divorce_agreement,
+    family_paternity_claim,
+    family_post_judgment_partition,
+    app_temporary_maintenance,
+    app_property_preservation,
+    app_protective_order
+};
+
 const allTemplates = {
     ...contractLawTemplates,
-    ...familyLaw.templates,
+    ...familyLawTemplates,
     ...labourLaw.templates,
     ...publicServiceLaw.templates,
     ...successionLaw.templates,
@@ -541,5 +561,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
-
-  

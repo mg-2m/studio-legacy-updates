@@ -1,0 +1,99 @@
+
+{
+  "id": "tort_strict_liability_buildings",
+  "documentTitle": "በህንጻ ጉድለት ለደረሰ ጉዳት የካሳ ክስ",
+  "jurisdictionText": "Art. 2068 of the Civil Code of 1960 (Liability of the owner of a building).",
+  "meta": {
+    "keywords": [
+      "strict liability",
+      "building collapse",
+      "defect",
+      "ruin",
+      "owner liability",
+      "ጥብቅ ተጠያቂነት",
+      "የህንጻ ጉዳት"
+    ],
+    "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)",
+    "purpose": "በህንጻ ጉድለት ለደረሰ ጉዳት የካሳ ክስ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ ህንጻ በግንባታ ጉድለት ወይም በጥገና እጦት ምክንያት ጉዳት ሲያደርስ፣ የህንጻውን ባለቤት ጥፋት ማረጋገጥ ሳያስፈልግ ካሳ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nጉዳዩ የሚታየው ጉዳቱ በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ የይርጋ ጊዜ ገደቡ **ሁለት (2) ዓመት** ነው።\n\n### ቅድመ ሁኔታዎች\n- **ማስረጃ (Required Evidence):** የጉዳቱን መንስኤ (የህንጻ መፍረስ) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ። የባለሙያ ሪፖርት ክሱን በእጅጉ ያጠናክረዋል።",
+  "partyTitles": {
+    "applicant": "ከሳሽ",
+    "respondent": "የህንፃው ባለቤት"
+  },
+  "facts": [
+    {
+      "id": "tort_fact_building_owner_status",
+      "label": "ጥብቅ ተጠያቂነት መሠረት",
+      "legalText": "ተከሳሹ ጉዳቱ የመነጨበት ህንፃ ወይም ግንባታ ባለቤት ነው።",
+      "citation": "Civil Code Art. 2068",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የባለቤትነት ሁኔታ"
+      }
+    },
+    {
+      "id": "tort_fact_damage_caused_by_ruin",
+      "label": "ጥብቅ ተጠያቂነት መሠረት",
+      "legalText": "ጉዳቱ የተከሰተው በህንፃው ሙሉ በሙሉ ወይም በከፊል መውደም ምክንያት ሲሆን ይህም በጥገና እጦት ወይም በግንባታ ጉድለት ምክንያት ነው።",
+      "citation": "Civil Code Art. 2068",
+      "autoEvidence": [
+        "WitnessStatements",
+        "PropertyValuationReport"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "በህንጻ ጉድለት የደረሰ ጉዳት"
+      }
+    },
+    {
+      "id": "tort_fact_bodily_injury_building",
+      "label": "ጉዳት እና ምክንያታዊነት",
+      "legalText": "ከሳሽ በህንጻው መውደም ምክንያት ቀጥተኛ የአካል ጉዳት ደርሶበታል።",
+      "citation": "Civil Code Art. 2068 & 2035",
+      "autoEvidence": [
+        "MedicalExpenseReceipts",
+        "DoctorAssessment"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የአካል ጉዳት"
+      }
+    },
+    {
+      "id": "tort_fact_property_damage_building",
+      "label": "ጉዳት እና ምክንያታዊነት",
+      "legalText": "የከሳሽ ንብረት በህንጻው መውደም ምክንያት ቀጥተኛ ጉዳት ደርሶበታል።",
+      "citation": "Civil Code Art. 2068 & 2035",
+      "autoEvidence": [
+        "PropertyValuationReport"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የንብረት ጉዳት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "tort_relief_building_repair_cost",
+      "text": "ተከሳሹ ለደረሰው የንብረት ጉዳት ጥገና [amount] ብር እንዲከፍል እንዲታዘዝ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "tort_relief_building_medical_expenses",
+      "text": "ተከሳሹ ለአካል ጉዳት እና ለህክምና [amount] ብር እንዲከፍል እንዲታዘዝ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

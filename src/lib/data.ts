@@ -78,8 +78,11 @@ import * as customs_claim_for_refund from '@/legal_branches/tax_customs_law/cust
 import * as app_tax_stay_of_execution from '@/legal_branches/tax_customs_law/app_tax_stay_of_execution.json';
 import * as app_tax_adr_request from '@/legal_branches/tax_customs_law/app_tax_adr_request.json';
 
+// Import individual tort law templates
+import * as tort_general_negligence_claim from '@/legal_branches/tort_law/tort_general_negligence_claim.json';
+import * as tort_strict_liability_buildings from '@/legal_branches/tort_law/tort_strict_liability_buildings.json';
 
-import * as tortLaw from '@/legal_branches/tort_law.json';
+
 import * as administrativeLaw from '@/legal_branches/administrative_law.json';
 import * as commercialLaw from '@/legal_branches/commercial_law.json';
 import * as criminalLaw from '@/legal_branches/criminal_law_defences.json';
@@ -162,6 +165,11 @@ const taxCustomsLawTemplates = {
     app_tax_adr_request,
 };
 
+const tortLawTemplates = {
+    tort_general_negligence_claim,
+    tort_strict_liability_buildings,
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
@@ -172,7 +180,7 @@ const allTemplates = {
     ...ipLawTemplates,
     ...statusLawTemplates,
     ...taxCustomsLawTemplates,
-    ...tortLaw.templates,
+    ...tortLawTemplates,
     ...administrativeLaw.templates,
     ...commercialLaw.templates,
     ...criminalLaw.templates,

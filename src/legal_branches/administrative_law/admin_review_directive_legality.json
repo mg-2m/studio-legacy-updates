@@ -1,0 +1,98 @@
+
+{
+  "id": "admin_review_directive_legality",
+  "documentTitle": "የአስተዳደር መመሪያ ሕጋዊነት በፍርድ ቤት እንዲታይ አቤቱታ",
+  "jurisdictionText": "የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር 1183/2012፣ አንቀጽ 49",
+  "meta": {
+    "keywords": [
+      "directive",
+      "legality review",
+      "ultra vires",
+      "administrative law",
+      "የመመሪያ ክለሳ",
+      "ሕጋዊነት"
+    ],
+    "jurisdictionType": "Federal High Court",
+    "purpose": "የአስተዳደር መመሪያን ለመቃወም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ የመንግስት ተቋም ያወጣው መመሪያ ከሕገ-መንግስቱ ወይም ከበላይ ሕጎች ጋር ሲቃረን ወይም ተቋሙ ሥልጣኑን አልፎ ሲያወጣው، መመሪያው ሕጋዊ አይደለም ብሎ ለመከራከር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nበአስተዳደር ሥነ-ሥርዓት አዋጅ 1183/2020 አንቀጽ 49 መሰረት، ይህን አይነት ጉዳይ የማየት ስልጣን ያለው የፌዴራል ከፍተኛ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nይህ ዓይነቱ ክስ በአጠቃላይ የ10 ዓመት የይርጋ ጊዜ ገደብ ይኖረዋል።\n\n### ቅድመ ሁኔታዎች\nየጥቅም መጎዳት፡ መመሪያው መብትዎን ወይም ጥቅምዎን በቀጥታ የሚነካ መሆኑን ማሳየት አለብዎት።\n\n### ማስረጃ\nእንዲሻር የሚፈልጉትን መመሪያ ቅጂ ማያያዝ ያስፈልጋል።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ",
+    "respondent": "መልስ ሰጪ ተቋም"
+  },
+  "facts": [
+    {
+      "id": "admin_fact_directive_unlawful_delegation",
+      "label": "የመመሪያ ስልጣን እና ተገዢነት",
+      "legalText": "መመሪያው በሕግ ተገቢው የውክልና ሥልጣን ሳይሰጥ የወጣ ነው، ወይም ከወከለው አዋጅ ወሰን በላይ አልፏል።",
+      "citation": "Proc. 1183/2020 Art. 49(2)(a)",
+      "autoEvidence": [
+        "AgencyDirectiveCopy"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ሕገ-ወጥ ውክልና"
+      }
+    },
+    {
+      "id": "admin_fact_directive_violates_constitution",
+      "label": "የመመሪያ ስልጣን እና ተገዢነት",
+      "legalText": "መመሪያው ሕገ-መንግስትን ወይም ሌላ የበላይ የሆነን ሕግ ይጥሳል።",
+      "citation": "Proc. 1183/2020 Art. 49(2)(a)",
+      "autoEvidence": [
+        "AgencyDirectiveCopy"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የሕግ ጥሰት"
+      }
+    },
+    {
+      "id": "admin_fact_directive_procedural_flaw",
+      "label": "የመመሪያ ስልጣን እና ተገዢነት",
+      "legalText": "መመሪያው ሲወጣ በሕግ የተደነገገውን የግዴታ የሕዝብ ተሳትፎ ሂደት (ለምሳሌ የሕዝብ አስተያየት መጠየቅ ወይም ከጠቅላይ ዓቃቤ ሕግ ጋር መመካከር) አልተከተለም (አንቀጽ 7-12)።",
+      "citation": "Proc. 1183/2020 Art. 7-12",
+      "autoEvidence": [
+        "AgencyDirectiveCopy"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የሥነ-ሥርዓት ጉድለት"
+      }
+    },
+    {
+      "id": "admin_fact_directive_affects_rights",
+      "label": "የጥቅም መጎዳት",
+      "legalText": "መመሪያው የአቤቱታ አቅራቢውን መብት ወይም ጥቅም በቀጥታ ይነካል።",
+      "citation": "Proc. 1183/2020 Art. 48(1)",
+      "autoEvidence": [
+        "AgencyDirectiveCopy"
+      ],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በመሆኑም،",
+        "summary_keyword": "የጥቅም መጎዳት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "admin_relief_invalidate_directive",
+      "text": "መመሪያው ሙሉ በሙሉ ወይም በከፊል ውድቅ እንዲደረግ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "admin_relief_order_compliance",
+      "text": "ተቋሙ የሥነ-ሥርዓት ጉድለቱን እንዲያስተካክል እና መመሪያውን በሕጉ መሠረት ዳግም እንዲያወጣ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

@@ -82,8 +82,11 @@ import * as app_tax_adr_request from '@/legal_branches/tax_customs_law/app_tax_a
 import * as tort_general_negligence_claim from '@/legal_branches/tort_law/tort_general_negligence_claim.json';
 import * as tort_strict_liability_buildings from '@/legal_branches/tort_law/tort_strict_liability_buildings.json';
 
+// Import individual administrative law templates
+import * as admin_appeal_judicial_review from '@/legal_branches/administrative_law/admin_appeal_judicial_review.json';
+import * as admin_review_directive_legality from '@/legal_branches/administrative_law/admin_review_directive_legality.json';
 
-import * as administrativeLaw from '@/legal_branches/administrative_law.json';
+
 import * as commercialLaw from '@/legal_branches/commercial_law.json';
 import * as criminalLaw from '@/legal_branches/criminal_law_defences.json';
 import * as civilProcedure from '@/legal_branches/civil_procedure_adjudications.json';
@@ -170,6 +173,11 @@ const tortLawTemplates = {
     tort_strict_liability_buildings,
 };
 
+const administrativeLawTemplates = {
+    admin_appeal_judicial_review,
+    admin_review_directive_legality,
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
@@ -181,7 +189,7 @@ const allTemplates = {
     ...statusLawTemplates,
     ...taxCustomsLawTemplates,
     ...tortLawTemplates,
-    ...administrativeLaw.templates,
+    ...administrativeLawTemplates,
     ...commercialLaw.templates,
     ...criminalLaw.templates,
     ...civilProcedure.templates,

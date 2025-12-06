@@ -11,7 +11,18 @@ import * as familyLaw from '@/legal_branches/family_law.json';
 import * as labourLaw from '@/legal_branches/labour_law.json';
 import * as publicServiceLaw from '@/legal_branches/public_service_law.json';
 import * as successionLaw from '@/legal_branches/succession_law.json';
-import * as propertyAndLandLaw from '@/legal_branches/property_land_law.json';
+
+// Import individual property law templates
+import * as prop_petitory_vindication from '@/legal_branches/property_and_land_law/prop_petitory_vindication.json';
+import * as prop_possessory_restoration from '@/legal_branches/property_and_land_law/prop_possessory_restoration.json';
+import * as prop_boundary_encroachment from '@/legal_branches/property_and_land_law/prop_boundary_encroachment.json';
+import * as property_nuisance_cessation from '@/legal_branches/property_and_land_law/property_nuisance_cessation.json';
+import * as property_servitude_right_of_way from '@/legal_branches/property_and_land_law/property_servitude_right_of_way.json';
+import * as property_possessory_disturbance from '@/legal_branches/property_and_land_law/property_possessory_disturbance.json';
+import * as app_stay_construction from '@/legal_branches/property_and_land_law/app_stay_construction.json';
+import * as app_local_inspection from '@/legal_branches/property_and_land_law/app_local_inspection.json';
+import * as app_servitude_temporary_passage from '@/legal_branches/property_and_land_law/app_servitude_temporary_passage.json';
+
 import * as ipLaw from '@/legal_branches/ip_law.json';
 import * as statusLaw from '@/legal_branches/status_law.json';
 import * as taxCustomsLaw from '@/legal_branches/tax_customs_law.json';
@@ -21,13 +32,25 @@ import * as commercialLaw from '@/legal_branches/commercial_law.json';
 import * as criminalLaw from '@/legal_branches/criminal_law_defences.json';
 import * as civilProcedure from '@/legal_branches/civil_procedure_adjudications.json';
 
+const propertyAndLandLawTemplates = {
+    prop_petitory_vindication,
+    prop_possessory_restoration,
+    prop_boundary_encroachment,
+    property_nuisance_cessation,
+    property_servitude_right_of_way,
+    property_possessory_disturbance,
+    app_stay_construction,
+    app_local_inspection,
+    app_servitude_temporary_passage
+};
+
 const allTemplates = {
     ...contractLaw.templates,
     ...familyLaw.templates,
     ...labourLaw.templates,
     ...publicServiceLaw.templates,
     ...successionLaw.templates,
-    ...propertyAndLandLaw.templates,
+    ...propertyAndLandLawTemplates,
     ...ipLaw.templates,
     ...statusLaw.templates,
     ...taxCustomsLaw.templates,
@@ -268,8 +291,8 @@ export const TEMPLATES: Template[] = [
         { id: 'prop_petitory_vindication', label: 'የይዞታ ክስ', icon: FileText },
         { id: 'prop_possessory_restoration', label: 'የተነጠቀ ይዞታን ማስመለስ', icon: FileText },
         { id: 'prop_boundary_encroachment', label: 'የድንበር መጣስ', icon: Map },
-        { id: 'prop_nuisance_cessation', label: 'የአደጋ መከላከል', icon: ShieldAlert },
-        { id: 'prop_servitude_right_of_way', label: 'የመንገድ መብት', icon: Map },
+        { id: 'property_nuisance_cessation', label: 'የአደጋ መከላከል', icon: ShieldAlert },
+        { id: 'property_servitude_right_of_way', label: 'የመንገድ መብት', icon: Map },
         { id: 'prop_possessory_disturbance', label: 'የይዞታ መረበሽ', icon: FileText },
     ]
   },

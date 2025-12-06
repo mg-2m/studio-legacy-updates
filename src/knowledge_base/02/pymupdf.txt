@@ -1,6226 +1,704 @@
- 
- nU¶T Uz¤È ±.œ.q.Ü  *¹þ1 
-   Negarit G. P.O.Box 80001 
- ÃNÇ êU
-   Unit Price  
+import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning, FileMinus, FilePlus, UserMinus } from 'lucide-react';
+import { differenceInDays, parseISO } from 'date-fns';
+
+
+// Import the raw JSON data from the new modular files
+import * as baseData from '@/legal_branches/_base.json';
+
+// Import individual succession law templates
+import * as succession_heirship_declaration from '@/legal_branches/succession_law/succession_heirship_declaration.json';
+import * as succession_probate_will from '@/legal_branches/succession_law/succession_probate_will.json';
+import * as succession_partition_estate from '@/legal_branches/succession_law/succession_partition_estate.json';
+
+
+// Import individual public service law templates
+import * as pub_serv_disciplinary_appeal from '@/legal_branches/public_service_law/pub_serv_disciplinary_appeal.json';
+import * as pub_serv_termination_unlawful from '@/legal_branches/public_service_law/pub_serv_termination_unlawful.json';
+import * as pub_serv_benefits_grievance from '@/legal_branches/public_service_law/pub_serv_benefits_grievance.json';
+
+
+// Import individual contract law templates
+import * as contract_debt_recovery from '@/legal_branches/contract_law/contract_debt_recovery.json';
+import * as contract_specific_performance from '@/legal_branches/contract_law/contract_specific_performance.json';
+import * as contract_termination_claim from '@/legal_branches/contract_law/contract_termination_claim.json';
+import * as app_attachment_before_judgment from '@/legal_branches/contract_law/app_attachment_before_judgment.json';
+import * as app_judgment_on_admission from '@/legal_branches/contract_law/app_judgment_on_admission.json';
+
+
+// Import individual property law templates
+import * as prop_petitory_vindication from '@/legal_branches/property_and_land_law/prop_petitory_vindication.json';
+import * as prop_possessory_restoration from '@/legal_branches/property_and_land_law/prop_possessory_restoration.json';
+import * as prop_boundary_encroachment from '@/legal_branches/property_and_land_law/prop_boundary_encroachment.json';
+import * as property_nuisance_cessation from '@/legal_branches/property_and_land_law/property_nuisance_cessation.json';
+import * as property_servitude_right_of_way from '@/legal_branches/property_and_land_law/property_servitude_right_of_way.json';
+import * as property_possessory_disturbance from '@/legal_branches/property_and_land_law/property_possessory_disturbance.json';
+import * as app_stay_construction from '@/legal_branches/property_and_land_law/app_stay_construction.json';
+import * as app_local_inspection from '@/legal_branches/property_and_land_law/app_local_inspection.json';
+import * as app_servitude_temporary_passage from '@/legal_branches/property_and_land_law/app_servitude_temporary_passage.json';
+
+// Import individual family law templates
+import * as family_divorce_dispute from '@/legal_branches/family_law/family_divorce_dispute.json';
+import * as family_divorce_agreement from '@/legal_branches/family_law/family_divorce_agreement.json';
+import * as family_paternity_claim from '@/legal_branches/family_law/family_paternity_claim.json';
+import * as family_post_judgment_partition from '@/legal_branches/family_law/family_post_judgment_partition.json';
+import * as app_temporary_maintenance from '@/legal_branches/family_law/app_temporary_maintenance.json';
+import * as app_property_preservation from '@/legal_branches/family_law/app_property_preservation.json';
+import * as app_protective_order from '@/legal_branches/family_law/app_protective_order.json';
+
+// Import individual labour law templates
+import * as labour_unlawful_termination from '@/legal_branches/labour_law/labour_unlawful_termination.json';
+import * as labour_unpaid_wages from '@/legal_branches/labour_law/labour_unpaid_wages.json';
+import * as labour_employment_injury from '@/legal_branches/labour_law/employment_injury.json';
+
+// Import individual IP law templates
+import * as ip_trademark_infringement from '@/legal_branches/ip_law/ip_trademark_infringement.json';
+import * as ip_trademark_opposition from '@/legal_branches/ip_law/ip_trademark_opposition.json';
+import * as ip_patent_infringement from '@/legal_branches/ip_law/ip_patent_infringement.json';
+import * as ip_copyright_infringement from '@/legal_branches/ip_law/ip_copyright_infringement.json';
+import * as ip_moral_rights_violation from '@/legal_branches/ip_law/ip_moral_rights_violation.json';
+import * as app_ip_interlocutory_injunction from '@/legal_branches/ip_law/app_ip_interlocutory_injunction.json';
+import * as app_ip_anton_piller from '@/legal_branches/ip_law/app_ip_anton_piller.json';
+
+// Import individual status law templates
+import * as status_judicial_interdiction from '@/legal_branches/status_law/status_judicial_interdiction.json';
+import * as status_name_change from '@/legal_branches/status_law/status_name_change.json';
+import * as status_birth_date_correction from '@/legal_branches/status_law/status_birth_date_correction.json';
+import * as status_double_record_correction from '@/legal_branches/status_law/status_double_record_correction.json';
+import * as status_ethiopian_descent_id from '@/legal_branches/status_law/status_ethiopian_descent_id.json';
+import * as status_declaration_of_absence from '@/legal_branches/status_law/status_declaration_of_absence.json';
+import * as app_status_provisional_curator from '@/legal_branches/status_law/app_status_provisional_curator.json';
+import * as app_status_lift_interdiction from '@/legal_branches/status_law/app_status_lift_interdiction.json';
+
+// Import individual tax & customs law templates
+import * as tax_objection_admin_review from '@/legal_branches/tax_customs_law/tax_objection_admin_review.json';
+import * as tax_appeal_ftac from '@/legal_branches/tax_customs_law/tax_appeal_ftac.json';
+import * as customs_claim_for_refund from '@/legal_branches/tax_customs_law/customs_claim_for_refund.json';
+import * as app_tax_stay_of_execution from '@/legal_branches/tax_customs_law/app_tax_stay_of_execution.json';
+import * as app_tax_adr_request from '@/legal_branches/tax_customs_law/app_tax_adr_request.json';
+
+// Import individual tort law templates
+import * as tort_general_negligence_claim from '@/legal_branches/tort_law/tort_general_negligence_claim.json';
+import * as tort_strict_liability_buildings from '@/legal_branches/tort_law/tort_strict_liability_buildings.json';
+
+// Import individual administrative law templates
+import * as admin_appeal_judicial_review from '@/legal_branches/administrative_law/admin_appeal_judicial_review.json';
+import * as admin_review_directive_legality from '@/legal_branches/administrative_law/admin_review_directive_legality.json';
+
+// Import individual commercial law templates
+import * as comm_restitution_nonpayment from '@/legal_branches/commercial_law/comm_restitution_nonpayment.json';
+import * as comm_preventive_restructuring from '@/legal_branches/commercial_law/comm_preventive_restructuring.json';
+import * as comm_dissolution_by_court from '@/legal_branches/commercial_law/comm_dissolution_by_court.json';
+import * as comm_appoint_auditors from '@/legal_branches/commercial_law/comm_appoint_auditors.json';
+
+// Import individual criminal law defences templates
+import * as crim_defence_justification_self_defence from '@/legal_branches/criminal_law_defences/crim_defence_justification_self_defence.json';
+import * as crim_defence_excuse_insanity from '@/legal_branches/criminal_law_defences/crim_defence_excuse_insanity.json';
+import * as crim_defence_justification_necessity from '@/legal_branches/criminal_law_defences/crim_defence_justification_necessity.json';
+import * as crim_defence_mitigation_plea from '@/legal_branches/criminal_law_defences/crim_defence_mitigation_plea.json';
+import * as crim_objection_preliminary from '@/legal_branches/criminal_law_defences/crim_objection_preliminary.json';
+
+// Import individual civil procedure templates
+import * as civ_proc_amendment_of_pleading from '@/legal_branches/civil_procedure_adjudications/civ_proc_amendment_of_pleading.json';
+import * as civ_proc_intervention_by_third_party from '@/legal_branches/civil_procedure_adjudications/civ_proc_intervention_by_third_party.json';
+import * as civ_proc_joinder_of_third_party from '@/legal_branches/civil_procedure_adjudications/civ_proc_joinder_of_third_party.json';
+import * as civ_proc_judgment_objection_default from '@/legal_branches/civil_procedure_adjudications/civ_proc_judgment_objection_default.json';
+import * as civ_proc_review_of_judgment from '@/legal_branches/civil_procedure_adjudications/civ_proc_review_of_judgment.json';
+import * as succ_app_appoint_liquidator from '@/legal_branches/civil_procedure_adjudications/succ_app_appoint_liquidator.json';
+import * as succ_app_seal_estate from '@/legal_branches/civil_procedure_adjudications/succ_app_seal_estate.json';
+
+
+const contractLawTemplates = {
+    contract_debt_recovery,
+    contract_specific_performance,
+    contract_termination_claim,
+    app_attachment_before_judgment,
+    app_judgment_on_admission
+};
+
+const propertyAndLandLawTemplates = {
+    prop_petitory_vindication,
+    prop_possessory_restoration,
+    prop_boundary_encroachment,
+    property_nuisance_cessation,
+    property_servitude_right_of_way,
+    property_possessory_disturbance,
+    app_stay_construction,
+    app_local_inspection,
+    app_servitude_temporary_passage
+};
+
+const familyLawTemplates = {
+    family_divorce_dispute,
+    family_divorce_agreement,
+    family_paternity_claim,
+    family_post_judgment_partition,
+    app_temporary_maintenance,
+    app_property_preservation,
+    app_protective_order
+};
+
+const labourLawTemplates = {
+    labour_unlawful_termination,
+    labour_unpaid_wages,
+    labour_employment_injury
+};
+
+const publicServiceLawTemplates = {
+    pub_serv_disciplinary_appeal,
+    pub_serv_termination_unlawful,
+    pub_serv_benefits_grievance
+};
+
+const successionLawTemplates = {
+    succession_heirship_declaration,
+    succession_probate_will,
+    succession_partition_estate,
+};
+
+const ipLawTemplates = {
+    ip_trademark_infringement,
+    ip_trademark_opposition,
+    ip_patent_infringement,
+    ip_copyright_infringement,
+    ip_moral_rights_violation,
+    app_ip_interlocutory_injunction,
+    app_ip_anton_piller
+};
+
+const statusLawTemplates = {
+    status_judicial_interdiction,
+    status_name_change,
+    status_birth_date_correction,
+    status_double_record_correction,
+    status_ethiopian_descent_id,
+    status_declaration_of_absence,
+    app_status_provisional_curator,
+    app_status_lift_interdiction
+};
+
+const taxCustomsLawTemplates = {
+    tax_objection_admin_review,
+    tax_appeal_ftac,
+    customs_claim_for_refund,
+    app_tax_stay_of_execution,
+    app_tax_adr_request,
+};
+
+const tortLawTemplates = {
+    tort_general_negligence_claim,
+    tort_strict_liability_buildings,
+};
+
+const administrativeLawTemplates = {
+    admin_appeal_judicial_review,
+    admin_review_directive_legality,
+};
+
+const commercialLawTemplates = {
+    comm_restitution_nonpayment,
+    comm_preventive_restructuring,
+    comm_dissolution_by_court,
+    comm_appoint_auditors
+};
+
+const criminalLawDefencesTemplates = {
+    crim_defence_justification_self_defence,
+    crim_defence_excuse_insanity,
+    crim_defence_justification_necessity,
+    crim_defence_mitigation_plea,
+    crim_objection_preliminary
+};
+
+const civilProcedureAdjudicationsTemplates = {
+    civ_proc_amendment_of_pleading,
+    civ_proc_intervention_by_third_party,
+    civ_proc_joinder_of_third_party,
+    civ_proc_judgment_objection_default,
+    civ_proc_review_of_judgment,
+    succ_app_appoint_liquidator,
+    succ_app_seal_estate
+};
+
+const allTemplates = {
+    ...contractLawTemplates,
+    ...familyLawTemplates,
+    ...labourLawTemplates,
+    ...publicServiceLawTemplates,
+    ...successionLawTemplates,
+    ...propertyAndLandLawTemplates,
+    ...ipLawTemplates,
+    ...statusLawTemplates,
+    ...taxCustomsLawTemplates,
+    ...tortLawTemplates,
+    ...administrativeLawTemplates,
+    ...commercialLawTemplates,
+    ...criminalLawDefencesTemplates,
+    ...civilProcedureAdjudicationsTemplates,
+};
+
+const allEntities = {
+    ...baseData.entities
+};
+
+// Formula Execution
+function executeFormula(formula: string, data: { [key: string]: any }): any {
+    const context = {
+        ...data,
+        differenceInDays: (date1: Date, date2: string | Date) => {
+             if (!date1 || !date2) return 0;
+            const d2 = typeof date2 === 'string' ? parseISO(date2) : date2;
+            if (isNaN(d2.getTime())) return 0;
+            return differenceInDays(date1, d2);
+        }
+    };
+    
+    const keys = Object.keys(context);
+    const values = Object.values(context);
+    
+    try {
+        const func = new Function(...keys, `return ${'return ' + formula}`);
+        return func(...values);
+    } catch (e) {
+        console.error("Error executing formula:", e);
+        return 0; // Return 0 or some other default on error
+    }
+}
+
+
+export const AA_SUBCITIES = [
+  "አራዳ", "ቦሌ", "አዲስ ከተማ", "ኒፋስ ስልክ",
+  "ቂርቆስ", "ጉለሌ", "ልደታ", "አቃቂ ቃሊቲ",
+  "የካ", "ለሚ ኩራ", "ኮልፌ ቀራኒዮ", "ሌላ"
+];
+
+const AA_FIRST_INSTANCE_BENCHES = AA_SUBCITIES.map(sc => sc === 'ሌላ' ? sc : `${sc} ምድብ`);
+
+
+export const BENCH_TYPES = [
+    "ፍትሐብሔር ችሎት",
+    "ቤተሰብ ችሎት",
+    "ወንጀል ችሎት",
+    "የንግድ ችሎት",
+    "የሠራተኛ ግንኙነት ችሎት",
+    "የታክስ ችሎት",
+    "ይግባኝ ሰሚ ችሎት",
+    "ሰበር ሰሚ ችሎት",
+    "ሌላ"
+];
+
+
+export const COURT_HIERARCHY = {
+  "የፌዴራል የመጀመሪያ ደረጃ ፍርድ ቤት": [
+    "ልደታ ምድብ", 
+    "ቦሌ ምድብ",
+    "ቂርቆስ ምድብ",
+    "አራዳ ምድብ",
+    "የካ ምድብ", 
+    "አቃቂ ቃሊቲ ምድብ",
+    "ሌላ"
+  ],
+  "የፌዴራል ከፍተኛ ፍርድ ቤት": [
+    "ልደታ ምድብ",
+    "ቦሌ ምድብ",
+    "አራዳ ምድብ",
+    "አቃቂ ቃሊቲ ምድብ",
+    "ሌላ"
+  ],
+  "የፌዴራል ጠቅላይ ፍርድ ቤት": [
+    "ይግባኝ ሰሚ ችሎት", 
+    "ሰበር ሰሚ ችሎት",
+    "ሌላ"
+  ],
+  "የአዲስ አበባ ከተማ አስተዳደር የመጀመሪያ ደረጃ ፍርድ ቤት": AA_FIRST_INSTANCE_BENCHES,
+  "የአዲስ አበባ ከተማ አስተዳደር ይግባኝ ሰሚ ፍርድ ቤት": ["ይግባኝ ሰሚ ችሎት", "ሌላ"],
+  "የአዲስ አበባ ከተማ አስተዳደር ሰበር ሰሚ ችሎት": ["ሰበር ሰሚ ችሎት", "ሌላ"],
+  "ሌላ": ["ሌላ"],
+};
+
+export const REGIONS_AND_CITIES = [
+  "አዲስ አበባ",
+  "የአፋር ክልል",
+  "የአማራ ክልል",
+  "የቤኒሻንጉል ጉሙዝ ክልል",
+  "የማዕከላዊ ኢትዮጵያ ክልል",
+  "የድሬዳዋ ከተማ አስተዳደር",
+  "የጋምቤላ ክልል",
+  "የሐረሪ ክልል",
+  "የኦሮሚያ ክልል",
+  "የሲዳማ ክልል",
+  "የሶማሌ ክልል",
+  "የደቡብ ኢትዮጵያ ክልል",
+  "የደቡብ ምዕራብ ኢትዮጵያ ህዝቦች ክልል",
+  "የትግራይ ክልል",
+  "ሌላ"
+];
+
+export const HONORIFICS = ["አቶ", "ወ/ሮ", "ወ/ሪት"];
+
+export const EVIDENCE_LOCATIONS = [
+  "በአመልካች እጅ",
+  "በተከሳሽ እጅ",
+  "ፍርድ ቤት ውስጥ",
+  "ጠፍቷል",
+  "የማይመለከተው",
+  "ሌላ",
+];
+
+export const DOCUMENT_ISSUERS = [
+  // --- Law Enforcement & Justice ---
+  "የፌደራል ፖሊስ ኮሚሽን",
+  "የአዲስ አበባ ፖሊስ ኮሚሽን",
+  "የኦሮሚያ ፖሊስ ኮሚሽን",
+  "የአማራ ፖሊስ ኮሚሽን",
+  "የፍትህ ሚኒስቴር",
+  "የፌዴራል ጠቅላይ ዐቃቤ ሕግ",
   
+  // --- Vital Events, Civil Status & Documents ---
+  "የወሳኝ ኩነት ምዝገባ ኤጀንሲ",
+  "የሰነዶች ማረጋገጫ እና ምዝገባ አገልግሎት",
+  "የኢሚግሬሽን እና የዜግነት አገልግሎት",
   
+  // --- Economy, Trade & Finance ---
+  "የንግድ እና ቀጣናዊ ትስስር ሚኒስቴር",
+  "የገቢዎች ሚኒስቴር",
+  "የገንዘብ ሚኒስቴር",
+  "የኢትዮጵያ ኢንቨስትመንት ኮሚሽን",
+  "የኢትዮጵያ ብሔራዊ ባንክ",
+  "የኢትዮጵያ ንግድ ባንክ",
+
+  // --- Land, Property & Infrastructure ---
+  "የአ/አ ከተማ የመሬት ልማት እና ማኔጅመንት ቢሮ",
+  "የከተማ እና መሠረተ ልማት ሚኒስቴር",
+  "የኢትዮጵያ መንገዶች አስተዳደር",
+  "የትራንስፖርት እና ሎጂስቲክስ ሚኒስቴር",
+  "የኢትዮጵያ ኤሌክትሪክ ኃይል",
+
+  // --- Social & Health ---
+  "የጤና ጥበቃ ሚኒስቴር",
+  "ሆስፒታል ወይም ክሊኒክ",
+  "የትምህርት ሚኒስቴር",
+  "ዩኒቨርሲቲ ወይም የትምህርት ተቋም",
+  "የሥራ እና ክህሎት ሚኒስቴር",
   
-   
- 	
- 
- 
- 	
- 
- 
- 	
- 
- 
- 	
- 
-  
- 
-	
-  
-	
-  
-	
-  
-	
-   
-FEDERAL NEGARIT GAZETTE 
-OF THE FEDERAL DEMOCRATIC REPUBLIC OF ETHIOPIA 
- 
- 
- 
- 
- 
+  // --- IP ---
+  "የኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት",
   
-                        
-                                 	
- 
-  
-                                           !" # $%&  
- 
- 
-'()
-'()
-'()
-'() 
-*+, -." /01234/6078 
- 
-9$" :; *<=	"> *$?@! *+, ……… 
-…………………………………………9B 7C0D271 
-Content 
-Proclamation No. 1324/2024 
- 
- 
-Rural Land Administration and Use Proclamation 
-…….....................................................Page 15913 
-*+,
-*+,
-*+,
-*+, -."
--."
--."
--." /01234
-/01234
-/01234
-/01234/6078
-6078
-6078
-6078 
+  // --- Other ---
+  "ሌላ",
+];
+
+const stripEnglish = (text: string) => {
+    if (!text) return '';
+    const match = text.match(/^(.*?)\s*\(/);
+    return match ? match[1].trim() : text;
+}
+
+
+export const EVIDENCE_REGISTRY: EvidenceRegistry = Object.entries(allEntities).reduce((acc: EvidenceRegistry, [key, entity]: [string, any]) => {
+    acc[key] = {
+        id: key,
+        label: stripEnglish(entity.title),
+        type: 'Document', // Defaulting to document, can be refined
+        credentialLabel: entity.credentialLabel || `${stripEnglish(entity.title)} ማጣቀሻ`,
+        credentialPlaceholder: entity.credentialPlaceholder || `ለምሳሌ፦ ${key.substring(0, 3).toUpperCase()}-123`,
+        sentenceTemplate: entity.sentenceTemplate || `${stripEnglish(entity.title)} ማስረጃ`
+    };
+    return acc;
+}, {});
+
+export const TEMPLATES: Template[] = [
+  { 
+    id: 'contract_law', 
+    label: 'የውል ሕግ', 
+    icon: FileSignature,
+    subTemplates: [
+      { id: 'contract_debt_recovery', label: 'የብድር/ዕዳ ክስ', icon: Banknote },
+      { id: 'contract_specific_performance', label: 'ውል ይፈጸምልኝ ክስ', icon: Gavel },
+      { id: 'contract_termination_claim', label: 'የውል ማፍረስ ክስ', icon: FileX2 },
+    ]
+  },
+  { 
+    id: 'family_law', 
+    label: 'የቤተሰብ ሕግ', 
+    icon: Handshake,
+    subTemplates: [
+      { id: 'family_divorce_dispute', label: 'የፍቺ ክርክር', icon: Scale },
+      { id: 'family_divorce_agreement', label: 'የፍቺ ስምምነት', icon: Handshake },
+      { id: 'family_paternity_claim', label: 'የአባትነት ክስ', icon: FileText },
+      { id: 'family_post_judgment_partition', label: 'ከፍቺ በኋላ የንብረት ክፍፍል', icon: Building2 },
+    ]
+  },
+  { 
+    id: 'labour_law', 
+    label: 'የሠራተኛ ሕግ', 
+    icon: Briefcase,
+    subTemplates: [
+       { id: 'labour_unlawful_termination', label: 'ሕገ-ወጥ ስንብት', icon: FileText },
+       { id: 'labour_unpaid_wages', label: 'ያልተከፈለ ደመወዝ', icon: Receipt },
+       { id: 'labour_employment_injury', label: 'የሥራ ላይ ጉዳት', icon: HeartPulse },
+    ]
+  },
+   { 
+    id: 'public_service_law', 
+    label: 'የመንግስት ሰራተኛ ህግ', 
+    icon: Landmark,
+    subTemplates: [
+       { id: 'pub_serv_disciplinary_appeal', label: 'የዲሲፕሊን ይግባኝ', icon: FileText },
+       { id: 'pub_serv_termination_unlawful', label: 'ሕገ-ወጥ ስንብት ይግባኝ', icon: FileText },
+       { id: 'pub_serv_benefits_grievance', label: 'የጥቅማጥቅም ቅሬታ', icon: FileText },
+    ]
+  },
+  {
+    id: 'succession_law',
+    label: 'የውርስ ሕግ',
+    icon: Users,
+    subTemplates: [
+      { id: 'succession_heirship_declaration', label: 'የወራሽነት ማረጋገጫ', icon: FileText },
+      { id: 'succession_probate_will', label: 'የኑዛዜ ማጽደቅ', icon: Gavel },
+      { id: 'succession_partition_estate', label: 'የውርስ ንብረት ክፍፍል', icon: Building2 },
+    ]
+  },
+  {
+    id: 'property_and_land_law',
+    label: 'የንብረት እና መሬት ህግ',
+    icon: Map,
+    subTemplates: [
+        { id: 'prop_petitory_vindication', label: 'የይዞታ ክስ', icon: FileText },
+        { id: 'prop_possessory_restoration', label: 'የተነጠቀ ይዞታን ማስመለስ', icon: FileText },
+        { id: 'prop_boundary_encroachment', label: 'የድንበር መጣስ', icon: Map },
+        { id: 'property_nuisance_cessation', label: 'የአደጋ መከላከል', icon: ShieldAlert },
+        { id: 'property_servitude_right_of_way', label: 'የመንገድ መብት', icon: Map },
+        { id: 'prop_possessory_disturbance', label: 'የይዞታ መረበሽ', icon: FileText },
+    ]
+  },
+  {
+    id: 'ip_law',
+    label: 'የአእምሯዊ ንብረት ህግ',
+    icon: Brain,
+    subTemplates: [
+        { id: 'ip_trademark_infringement', label: 'የንግድ ምልክት ጥሰት', icon: FileWarning },
+        { id: 'ip_trademark_opposition', label: 'የንግድ ምልክት መቃወሚያ', icon: MessageSquareWarning },
+        { id: 'ip_patent_infringement', label: 'የፓተንት ጥሰት', icon: FileWarning },
+        { id: 'ip_copyright_infringement', label: 'የቅጂ መብት ጥሰት', icon: FileWarning },
+        { id: 'ip_moral_rights_violation', label: 'የሞራል መብቶች ጥሰት', icon: BadgeCheck },
+    ]
+  },
+  {
+    id: 'status_law',
+    label: 'የሰው ህግ እና ሁኔታ',
+    icon: UserCheck,
+    subTemplates: [
+        { id: 'status_judicial_interdiction', label: 'የፍርድ እግድ', icon: FileText },
+        { id: 'status_name_change', label: 'የስም ለውጥ', icon: FileSignature },
+        { id: 'status_birth_date_correction', label: 'የልደት ቀን ማስተካከያ', icon: FileSignature },
+        { id: 'status_double_record_correction', label: 'የተደጋገመ መዝገብ ማስተካከያ', icon: FileSignature },
+        { id: 'status_ethiopian_descent_id', label: 'የትውልደ ኢትዮጵያዊ መታወቂያ', icon: FileSignature },
+        { id: 'status_declaration_of_absence', label: 'የመጥፋት መግለጫ', icon: FileX2 },
+    ]
+  },
+  {
+    id: 'tax_customs_law',
+    label: 'የግብር እና ጉምሩክ ህግ',
+    icon: LandmarkIcon,
+    subTemplates: [
+        { id: 'tax_objection_admin_review', label: 'የግብር መቃወሚያ', icon: FileText },
+        { id: 'tax_appeal_ftac', label: 'የግብር ይግባኝ', icon: Gavel },
+        { id: 'customs_claim_for_refund', label: 'የጉምሩክ ተመላሽ ጥያቄ', icon: Receipt },
+    ]
+  },
+  {
+    id: 'tort_law',
+    label: 'ከውል ውጭ ተጠያቂነት',
+    icon: Siren,
+    subTemplates: [
+      { id: 'tort_general_negligence_claim', label: 'አጠቃላይ የቸልተኝነት ክስ', icon: FileText },
+      { id: 'tort_strict_liability_buildings', label: 'ጥብቅ ተጠያቂነት (ህንጻዎች)', icon: Building2 },
+    ]
+  },
+  {
+    id: 'administrative_law',
+    label: 'የአስተዳደር ህግ',
+    icon: Landmark,
+    subTemplates: [
+      { id: 'admin_appeal_judicial_review', label: 'የውሳኔ ፍርድ ቤት ክለሳ', icon: Gavel },
+      { id: 'admin_review_directive_legality', label: 'የመመሪያ ሕጋዊነት ክለሳ', icon: FileX2 },
+    ]
+  },
+  {
+    id: 'commercial_law',
+    label: 'የንግድ ህግ',
+    icon: Building2,
+    subTemplates: [
+      { id: 'comm_restitution_nonpayment', label: 'በንግድ መሣሪያ ላይ ክፍያ', icon: Banknote },
+      { id: 'comm_preventive_restructuring', label: 'የዕዳ መልሶ ማዋቀር', icon: Shield },
+      { id: 'comm_dissolution_by_court', label: 'የፍርድ ቤት መፍረስ', icon: FileX2 },
+      { id: 'comm_appoint_auditors', label: 'ኦዲተር እንዲሾም መጠየቅ', icon: BookUser },
+    ]
+  },
+  {
+    id: 'criminal_law_defences',
+    label: 'የወንጀል መከላከያዎች',
+    icon: ShieldCheck,
+    subTemplates: [
+        { id: 'crim_defence_justification_self_defence', label: 'ራስን መከላከል', icon: Shield },
+        { id: 'crim_defence_excuse_insanity', label: 'የአእምሮ ሕመም', icon: Brain },
+        { id: 'crim_defence_justification_necessity', label: 'በግዴታ', icon: ShieldAlert },
+        { id: 'crim_defence_mitigation_plea', label: 'የቅጣት ማቅለያ ክርክር', icon: UserMinus },
+        { id: 'crim_objection_preliminary', label: 'የመጀመሪያ ደረጃ መቃወሚያ', icon: FileMinus },
+    ]
+  },
+  {
+    id: 'civil_procedure_adjudications',
+    label: 'የፍትሐ ብሔር ሥነ ሥርዓት',
+    icon: Gavel,
+    subTemplates: [
+      { id: 'civ_proc_amendment_of_pleading', label: 'የፍሬ ነገር ማሻሻያ', icon: FileSignature },
+      { id: 'civ_proc_intervention_by_third_party', label: 'የሶስተኛ ወገን ጣልቃ ገብነት', icon: Users },
+      { id: 'civ_proc_joinder_of_third_party', label: 'የሶስተኛ ወገን ማካተት', icon: Users },
+      { id: 'civ_proc_judgment_objection_default', label: 'የሌሉበት ፍርድ መቃወሚያ', icon: ShieldAlert },
+      { id: 'civ_proc_review_of_judgment', label: 'የፍርድ ዳግም ክለሳ', icon: FileX2 },
+      { id: 'app_attachment_before_judgment', label: 'ከፍርድ በፊት እግድ', icon: Shield },
+      { id: 'app_judgment_on_admission', label: 'በእምነት ላይ ፍርድ', icon: BookUser },
+      { id: 'app_temporary_maintenance', label: 'ጊዜያዊ ቀለብ ጥያቄ', icon: Receipt },
+      { id: 'app_property_preservation', label: 'የንብረት እግድ ጥያቄ', icon: Home },
+      { id: 'app_protective_order', label: 'የጥበቃ ትዕዛዝ ጥያቄ', icon: ShieldAlert },
+      { id: 'succ_app_appoint_liquidator', label: 'ዋና ከፋይ ሹመት', icon: BookUser },
+      { id: 'succ_app_seal_estate', label: 'የንብረት ማሸግ', icon: Shield },
+      { id: 'app_ip_interlocutory_injunction', label: 'ጊዜያዊ እገዳ', icon: Shield },
+      { id: 'app_ip_anton_piller', label: 'የማስረጃ መያዣ ትዕዛዝ', icon: ShieldAlert },
+      { id: 'app_status_provisional_curator', label: 'ጊዜያዊ ጠባቂ መሾም', icon: BookUser },
+      { id: 'app_status_lift_interdiction', label: 'የእገዳ ማንሳት', icon: Gavel },
+      { id: 'app_tax_stay_of_execution', label: 'የአፈጻጸም እግዳ', icon: Shield },
+      { id: 'app_tax_adr_request', label: 'የአማራጭ መፍትሄ ጥያቄ', icon: Handshake },
+      { id: 'app_stay_construction', label: 'ግንባታን የማገድ ትዕዛዝ', icon: Shield },
+      { id: 'app_local_inspection', label: 'የአካባቢ ምርመራ ትዕዛዝ', icon: Map },
+      { id: 'app_servitude_temporary_passage', label: 'ጊዜያዊ የመተላለፊያ ትዕዛዝ', icon: Map },
+    ]
+  }
+];
+
+// This function processes facts from the old structure to the new one.
+const processFacts = (facts: any): Fact[] => {
+    if (!facts) return [];
+    
+    // If it's the old nested structure, flatten it and add labels.
+    if (typeof facts === 'object' && !Array.isArray(facts)) {
+         return Object.values(facts).flatMap((group: any) => 
+            (group.facets || []).map((facet: any) => ({
+                ...facet,
+                label: group.title // Use the group title as the label for grouping in the UI
+            }))
+        );
+    }
+
+    // If it's ALREADY a flat array (new structure), ensure every fact has a label.
+    if (Array.isArray(facts)) {
+        let lastLabel = 'Facts'; // Default label if the first fact has no label
+        return (facts as Fact[]).map(fact => {
+            if (fact.label) {
+                lastLabel = fact.label;
+            } else {
+                fact.label = lastLabel;
+            }
+            return fact;
+        });
+    }
+
+    return [];
+};
+
+
+export const TEMPLATE_DATA: { [key: string]: TemplateData } = Object.entries(allTemplates).reduce((acc, [key, value] : [string, any]) => {
+  if (!value) {
+    console.error(`Template data for key "${key}" is missing or invalid. Skipping.`);
+    return acc;
+  }
   
-
-
-
- 	
-	
-	
-	
-
-
-
-
-
-
- 
-
-
-
-
-
-
- 
-
-
- 
-:EF<
-:EF<
-:EF<
-:EF< 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; *<=	">
-*<=	">
-*<=	">
-*<=	"> *$?@!
-*$?@!
-*$?@!
-*$?@! 
-*+,
-*+,
-*+,
-*+,  
- 
-*"G 
-*	HEI 
-JK 
-*"L 
-*	"> 
-*"L *	HE MN 	OP *9Q J	OR  
-STUI VWX Y> 'Z
- Y[9 " 
-W'
-:[ YE\ YE]! *"G *	HEI JK 
-*"L *	H> *"L *	HE :; ^_`( ^ 
-W(E EO : W'$>J" aaW 9$" 
-:; *<=	"> *$?@! b"c :d" 
-*Ref gT :9hQi  
- 
- 
-JK *"L *	"> *"L *	H %Z 
-:; *$?@! Y> *$%j b"c $?U> 
-kZ *<+Bl W( <Wg Y>  
-*"L *	N  :; ^_` : :WJ 
-Z9-:EF<Q Y(j> R$( :gMi Y> 
-cW! 
-*@n> 
-*Zk" 
-	OP 
-eO:\o(E 
-<!!L  F%
- W'[OF Y> '<epU 
-F '<	9n '<eWki 
- 
-               9$" :; !9% :OPE .
-QE $@ 
-:q 
-W'	
-r> 
-W$?U( 
-*F%s 
-W'R
-t U<  !u F 'v@n :n$" 
-%W^_`w E ^_` +<>E '$>J" e.N 
-x 
-.? 
-Y> 
-*$?@! 
-^ 
-kZ 
-W(. 
-W'!I :; ^ Uy FzL E W:@<I 
-Y> :EF< Y> $?Uw  *<''{ g :OP 
-U9|E 
-d:> 
-:; 
-:OP 
-b"c 
-:d" '<eWki 
- 
- 
- 
-PROCLAMATION NO. 1324/2024 
- 
- 
-FEDERAL 
-DEMOCRATIC 
-REPUBLIC 
-OF 
-ETHIOPIA RURAL LANDS ADMINISTRATION 
-AND USE PROCLAMATION 
- 
- 
-WHEREAS, it has become necessary to 
-improve the livelihood of farmers, semi-
-pastoralists, and pastoralists at the level of the 
-Country’s 
-economic, 
-political, 
-and 
-social 
-development by establishing improved rural land 
-administration and use system that enhance the 
-land property rights of farmers, semi-pastoralists, 
-and pastoralists over their landholding;   
- 
- 
-WHEREAS, it has been proved that the 
-customary land use and land management of 
-semi-pastoralists and pastoralists have significant 
-and noticeable importance; and the landholding 
-rights of these groups are recognized under the 
-FDRE Constitution, and it has become necessary 
-to issue laws that implement international and 
-regional treaties to which Ethiopia is signatory; 
- 
-WHEREAS, it has become necessary to 
-establish a modern land information system that 
-provides reliable data to users in order to bring 
-about significant change in natural resource use 
-and conservation practices by strengthening 
-tenure security of landholders; and reduce land 
-related disputes;   
- 
- 
- 
- 
- 
-30th Year   No.58 
-ADDIS ABABA 14th August, 2024 
-   R}~ c: -." 
-*< *%    @E 6078 c.!    
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15914 
- 
-W x9Q b !Z=" @$>w E 
-9>d d& 9$" :; *$?@! vj[ 
-'(> :F" e.N xL E d& 
-:$j> '' W:( ([ '<Wn 
-'<eWkIi 
- 
- 
-L  Y> [n U Rw E :; 
-$?U 
-: 
-UOF.> 
-U$>" 
-:; *<=	"> *$?@! *`  b"c 
-:d" *<ef gT :9hQi  
- 
- 	
- 
-  
-9-:EF< *E@B C (/) Y> (6) (x) :O 
-UJW( `( 
- 
-n
-n
-n
-n *E[
-*E[
-*E[
-*E[ 
-    
-$j
-$j
-$j
-$j  
- 
-/.  
-.  
-.  
-.  *z"
-*z"
-*z"
-*z" "v<
-"v<
-"v<
-"v< 
- 
-^Z *+, “9$" :; *<=	"> *$?@! 
-*+, -." /01234/6078”  $@<  
-^  
- 
-6. 
-. . 
-.  "
-"
-"
-" 
- 
-? *9%  "k! UR$( g 
-<@" Z *+, (<.- 
- 
-// “9$" :;” J'dP #  (z 
-^! *F% %W( F J'  
-JUR:( (z W 'E~(! :; 
-(i 
- 
-6/ “9$" :; :OP b"c” 'W 9$" 
-:; 
-Y> 
-:;  
-:OPw E 
-'R%RI 
-'	
-rI 
-:EE> 
-*F%s 
-YE> 
-j` 
-'[OF 
-W$?Uw  'R
-t b"c (i 
- 
-1/ “9$" :; !9%” 'W 9$" :; 
-:$@! :> %W^_` U9W 
-:OP 
-'R%RI 
-'$>@"> 
-j` 
-U	Ok 	 (i 
- 
-4/ “9$" :; *<=	"” 'W 9$" 
-:; ^_` : UR.I +<> 
-UO9.I 
-:; 
-x 
-+ 
-U:EI 
-:; 
-*$?@! 
-vj[ 
-U9" :; $?Uw  :J 
-Uy FzL  UeQ> F`w  
-U9H YE]! 9$" :; :OP 
-b"c UdO 	 (i  
-WHEREAS, it has become necessary to 
-sustainably 
-conserve 
-and 
-develop 
-natural 
-resources and transfer them to the coming 
-generation 
-through 
-the 
-preparation 
-and 
-implementation of a sustainable rural land use 
-planning considering the different agro-ecological 
-zones of the country;  
- 
-WHEREAS, it has become necessary to 
-establish an inclusive land administration and use 
-system that ensures and strengthens the land 
-rights of women and vulnerable groups; 
- 
-NOW, THEREFORE, in accordance 
-with Article 55(1) and (2) (a) of the Federal 
-Democratic Republic of Ethiopia Constitution, it 
-is hereby proclaimed as follows. 
- 
-PART ONE 
- 
-GENERAL  
- 
-1.   Short title 
- 
-This Proclamation may be cited as “Rural 
-Land Administration and Use Proclamation 
-No. 1324/2024”. 
- 
- 
-2.   Definition 
- 
- 
- 
-In this Proclamation, unless the context 
-requires otherwise: 
- 
- 
-1/ “Rural Land” means land outside of a 
-municipality 
-holding 
-or 
-a 
-town 
-designated as such by the relevant law; 
- 
- 
-2/  “Rural Land Information System” means a 
-system 
-of 
-recording, 
-organizing, 
-analyzing, and updating rural land and 
-land-related 
-information 
-and 
-disseminating of same to stakeholders;   
- 
-3/ “Rural Land Registration” means the 
-process of recording and organizing land 
-information 
-pertaining 
-to 
-rural 
-landholding and land use rights'; 
- 
-4/ “Rural Land Administration” means a 
-process whereby rural land holding rights 
-are recognized and recorded, tenure 
-security ensured, land property valued, a 
-land 
-use 
-plan 
-is 
-prepared 
-and 
-implemented, land dispute among land 
-users is resolved, and obligations of land 
-users enforced as well as rural land 
-information system  developed;  
- 
-7C0D274 
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15915 
- 
-C/ “9$" :; *$?@!” 'W 9$" 
-:;E YE# ^_ d& %W( 
-:E9[ 
-WaW 
-$@` 
-YE( 
-U	OF 	 (i 
- 
-8/ “9$" :; *$?@! vj[” 'W 
-*I STU> 'Z
- :OPw E 
-:O '[OF 9$" :; R. 
-JU W( 
-W 
-:; 
-*$?@! 
-*'
-  :J :; :E> 
-*%E 
-W 
-<J 
-Jn~ 
-STU 
-$@` 
-U<9| 
-*'
-  
-URM> 
-F%
- 
-U	Ok *R
-" d (i 
- 
-/ “*%>  :; *$?@!” 
-'W 9$" @ ' 	OP :O 
-*[" Ud, :; *$?@! vj[ 
-F, ^ UT" 'ZOR% `K 
-(i 
- 
-/ “*"G *	"” 'W Z *+, :O 
-:	~ 
-^! 
-U 
-:=	( 
-Y"a b
- g 'E~(! R( (i 
- 
- 
-D/ “*"L *	"” 'W Z *+, :O 
-:	~ ^! U :=	( YE< 
-'"% ^ :RO R( (i 
- 
-7/ “JK *"L *	"” 'W Z *+, 
-:O :	~ ^! U :=	( 
-YE< 
-'"% 
-Y> 
-Y"a 
-b
- 
-U=	" (i 
- 
-7// “'}” 'W *E[  ` ^ U9{ 
-[E" R> %W^_`( <" W 
-:; (i 
- 
-76/ “F ^_`” 'W *E[ %W^_` ^! 
-J*E[ ^ gM %W^_`w  
- ^_` 
-<" W 9$" :; (i 
- 
-71/ “ ^_`” 'W *"G *	N  ^! 
-*"L *	N  ^! JK *"L *	N  
-WF¡¢I W	E> W'Z
- *9FL  
-U$@£ 
- 9$" :; (i 
- 
-74/ “:EF< ^_`” 'W  ^! F 
-^_` d :; gE :EF< 
-' ^_`w EI 	E :;L EI ¤" 
-YE<> 
-.j 
- `w EI 
-x^ EI 
-E_ E> 
- E 
-:^ 
-:q 
-E $?i 
- 
-7C/ “9 . :; ^_`” 'W  
-%g :E9[ d> *F% %W( * 
-Y(j> 
-R$( 
-'>o(! 
-9$" 
-:; ^_` (i 
-5/ “Rural Land Use” means a process 
-whereby rural land is conserved and 
-sustainably used in a manner that gives 
-better output; 
- 
-6/   “Rural Land Use Plan” means a practice 
-whereby the options that give better 
-economic benefits without causing land 
-degradation and environmental pollution 
-are determined and implemented from 
-among the different use options a rural 
-land can give on the basis of physical, 
-economic, and social information; 
- 
- 
- 
-7/  "Local and Participatory Land Use" means 
-community 
-participation 
-in 
-the 
-preparation of parcel based  land use plan 
-in a rural kebele; 
- 
-8/   "Farmer" means any person, whose 
-livelihood depends on farming activites  
-as per this  Proclamation;  
- 
- 
-9/ "Pastoralist" means a person, whose 
-livelihood 
-depends 
-on 
-livestock 
-production as per this Proclamation; 
- 
-10/ “Semi-pastoralist" means a person, whose 
-livelihood 
-depends 
-on 
-livestock 
-production and farming activites  as per 
-this Proclamation; 
- 
-11/  “Parcel”  means a portion of land that 
-has its own boundary for which distinct 
-rights exist;  
- 
-12/   “Private Landholding” means rural land 
-held by an individual or jointly by more 
-landholders; 
- 
-13/ “Communal Landholding” means rural 
-land that farmers, pastoralists, and semi-
-pastoralists use in common for grazing, 
-forest, and other social services;  
- 
-14/ “State Landholding” means land which is 
-not held as communal or private and 
-includes land holdings of government 
-organs, 
-forest 
-lands, 
-wildlife, 
-and 
-protected areas, lakes, rivers, and other 
-similar holdings; 
- 
-15/ "Illegal Landholding" means any rural 
-landholding held illegally and not 
-recognized by the appropriate body; 
- 
- 
-7C0D27C 
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15916 
- 
-78/ “^_` 'O9) !<" O@” 
-'W 
-^_` 
-%W: 
-:gME 
-W'O9. :; *<=	" '
-UR. R[ (i 
- 
-7/ “*<=	
- (¥” 'W :; 
-W'<=	" <E Ro( Y> 
-J:; ^_`> *$?@! 	L 
-"  k= E U<e£
-'E 
-U: 
-gT 
-F
-Ro(E 
-<E> 
-F%" 
-Ue£ f Rw  : ^! 
-.j! ^ *<=	
- k=  ^ 
-UR. (¥ gE 9$" :; 
-!9%Ei ^_` 'O9) 	" 
-*R.EI J:; *$?@! vj[
-Y> J  ¦', Y"!Pw  " 
-9>h 
-UW§ 
-(¥w E
-$?i 
- 
-7/ “:EFb` g [",” 'W
-E< ]W> J ^ gM Rw 
-e?	{ U:OI :EFb
-* gI 'E~(! VWX
-¨"X JWI W"n :
- c'E W' *F% %W(
-F <E R$( * :F 
-UE@@< * (i 
- 
-7D/    “©^'T 
-!” 
-'W 
-Rw  
-:Oª> @E ©^'T ^d( 
-^« W'!W I W:JI W:F" I 
-W'<'" I W:FW ^! W'<«« 
-YE< o( 	
-¬> c'( W"n 
-g F bE R$( * 
-:F   R( R$( * 
-(i 
- 
-3/ “'Z
- '” 'W 'ZOR 
-*%E  F" W:n` 'ZORs
-n?	{ ^ :<"L £
-*	OPrL  >o(i 
- 
-3// “nn” 'W d ^! W 
-!E 
-Z 
-F> 
- 
-  
-J%W^_`w  
-$@ 
-^! 
-W@@ 
-9$" :;i :; Wo( ^! 
-:; o( Rw  :<$ (i 
- 
- 
- 
-36/ “¢F¢F” 'W 9$" :; n© 
-W$?Uw  YE=O< W'[OF ^_` 
-o( :@< Wo( ^! ^_`o( 
-*<~ WgM Rw  :<$ F%" (i 
- 
-16/  "Landholding 
-Certificate" 
-means 
-a 
-document issued by land administration 
-institutions to prove holding right; 
- 
- 
-17/  "Administrative 
-Decision" 
-refers 
-to 
-institutions 
-that 
-are 
-authorized 
-to 
-administer land and carry out issues 
-related to landholding right and use 
-processes, and it is a decision that is 
-given 
-on 
-administrative 
-issues 
-on 
-people's 
-rights 
-or 
-interests, 
-and 
-registration of rural land; that includes 
-the issuance of landholding certeficate, 
-land use planning and other related 
-measures, when they exercise their 
-powers and duties given by law; 
- 
- 
- 
- 
-18/ "Non-Governmental Organization" means 
-a non partisan, not for profit entity 
-established at least by two or more 
-persons on voluntary basis and registerd 
-by competent authority to carry out any 
-lawfull purpose;  
- 
- 
- 
-19/ "Religious Institution" means a non-profit 
-organization 
-registered 
-by 
-a 
-body 
-authorized by law to enable people to 
-publicly worship, follow, practice, teach, 
-express or propagate their chosen and 
-accepted religion; 
- 
- 
-20/ "Social Institutions" means organizations 
-established 
-based 
-on 
-the 
-will 
-of 
-communities to solve problems of 
-community members; 
- 
-21/ “Distribution” means the allocation of 
-unoccupied land or land which has been 
-reclaimed from holders because of 
-violations of obligations prescribed in 
-this Proclamation or other regional laws, 
-or land that was voluntarily relinquished 
-by previous holders to those who are 
-landless or with small holding size; 
- 
-22/ “Re-distribution” means the transfer of 
-land from those who have excess land to 
-those who have none or hold a small size 
-to ensure equity in landholding; 
- 
- 
-7C0D278
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15917 
- 
- 
-31/ “[n U Rw ” 'W %W%o( 
-STU> 
-'Z
- 
- F" 
-!E 
-:; :$@! : 9| ^! 
-:$@! 
-: 
-T
-o(! 
-YE­E 
-:`o(E 
-J
-O( 
-<JH 
-'^  YE	 ®\o(E ª Z¯>I 
-*OE> * k=° E $?i 
+  const newTemplateData = JSON.parse(JSON.stringify(value));
   
-34/ “:;E W
- *
-¢ :<$” 'W *E[ 
-%W^_` ^_`(E  R(   
-URE 
-f YEW'( Y> J] 
-U9h(E 
-!" 
-U<'£ 
-:$E 
-:O W:e U<'£ ( (i 
- 
-3C/ “±
- ²lX :a .” 'W 
-*9" *@n 	OP <E R$( * 
-:O ±
- ²lX ![" 
-:$ .   :O * g> 
-W@^ j b
- :a gT U9WF 
-(i 
- 
-38/ 
-"" 
-'W 
- 
-	
- 
-
-  9 :EF< *E@ 
-´ :O  'E~(!  
-gE [;=+ J' *<=	"E ^t!
-i 
- 
- 
-3/ “Uµ<¶"” 'W F"> Uµ<¶" (i 
-  
- 
-3/ “R(” 'W e.N R( ^! F 
-R( : R$( * 'W (i 
-  
- 
-3D/ 
-Z 
-*+, 
-'E~(! 
-E[ 
-·` 
-9Wp(  ·`E! ` 
- 
- 
-1.  
-.  
-.  
-.  *+¬
-*+¬
-*+¬
-*+¬ e¸U
-e¸U
-e¸U
-e¸U RE
-RE
-RE
-RE 
- 
-    
-    
-// 
-^Z 
-*+, 
- 
-(<. 
-U9{ 
-'E~(! 9$" :; Y> J' 
- (<.    Y> J' 
-*<=	N  
-(<. 
-RM 
-9$" 
-@w  ^ e¸U ^TO+ 
- 
- 
-6/ Z *E@ E¹< *E@ (/) 	99( 
-YE	$@ gT Z *+, [Eºw  
-J' RE (<. $?W 9" FE 
-" %	O9%o( ^_`w  ^! 
-e¸U ^TO+  
- 
-n
-n
-n
-n ]W
-]W
-]W
-]W 
- 
-9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; *<=	"
-*<=	"
-*<=	"
-*<=	" 
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n / 
- 
-9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; <W'Fh>
-<W'Fh>
-<W'Fh>
-<W'Fh> <W:$@!
-<W:$@!
-<W:$@!
-<W:$@! 
-    
- 
- 
-23/  “Vulnerable Groups” means such people 
-as orphans, people of old age, and 
-disabled who do not have landholding 
-rights or, even if they have one, cannot 
-protect their rights because of their 
-economic and social problems; 
- 
- 
-24/  “Share Cropping” means a contract 
-where a landholder agrees, for a period 
-of time to be determined by regions, with 
-another person to use his landholding in 
-exchange for a share of the crop;    
- 
-25/ “National Geodetic Reference Point" 
-means a point established by a nationally 
-authorized organ; a part of the national 
-geodetic control points network which 
-serves as a starting point for future 
-surveying activity; 
- 
-26/  “Region” means any region referred to 
-under Article 47 of the Constitution of 
-the Federal Democratic Republic of 
-Ethiopia and includes Dire Dawa City 
-Administration; 
- 
- 
-27/ “Ministry” means the Ministry of 
-Agriculture; 
- 
-28/  “Person” means any natural or juridical 
-person;  
- 
- 
-29/ In this Proclamation, any expression in 
-the masculine gender shall include the 
-feminine.  
- 
-3.   Scope of Application 
- 
- 
-1/ This Proclamation shall apply to any rural 
-land in Ethiopia and certain rural kebeles 
-in the Regions and City Administrations 
-in urban areas.   
- 
- 
-2/    Without prejudice to Sub-Article (1) of 
-this Article, this Proclamation shall apply 
-to lands that are incorporated into urban 
-boundaries but where such lands have 
-not yet been officially handed over to the 
-urban administration.  
- 
-PART TWO 
- 
- 
-RURAL LAND ADMINISTRATION 
- 
-SECTION 1 
- 
-ACCESS AND USE OF RURAL LAND 
-  
- 
-7C0D27 
+  newTemplateData.facts = processFacts(newTemplateData.facts);
 
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15918 
- 
-4.  
-.  
-.  
-.  9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; J:EF<
-J:EF<
-J:EF<
-J:EF< <W'Fh
-<W'Fh
-<W'Fh
-<W'Fh 
- 
-// F"> 
-b
- 
-Y=	O 
-W 
-^! 
-W:=	" UeF R( 9$" :; 
-Z F :O ¸ 'Fh : 
-*W( 
- 
-6/ F"> b
- W:=	" 9$" :; 
-YER$( U$^j *:  v[( 
-7  c:> J ^ :gE *W 
- 
-1/ Z *E@ E¹< *E@ (/) 	99( 
-YE	$@ gT   WL > L  
-YE]!  W* k=°  *E` [n 
-UREE *F% F ^<>  
- 
-4/ Z *E@ E¹< *E@ (/) Y> (6) ^ 
- [Eºw  	
-,( WU:ª
-L ! e¸U ^g> 
- 
-C/ Z *E@ E¹< *E@ (6) 	99( 
-T"! 7 *: o( ®\o(E 
-ª Z¯>I ®\o( 9$" ^TH 
-H> 
-o( :; 
-o( Jg 
-9$" :; 'Fh : *o(  
- 
- 
-8/ =" ^  w  *E¤ F! g 
-
- ^_` JW( YE	 'E~(! :; 
-*% *:  :; 'Fh : 
-*W( UR$( :;! F ^_`( 
-gT ^:d9%  
- 
-/ :; ^_`( ]WQ! w  F
-^_` ^T
-o( 9h Jg ]WQ!
-
- ^_` gT ^:d9% 
- 
-C. 
-. . 
-. :EF<`
-:EF<`
-:EF<`
-:EF<` gM
-gM
-gM
-gM [",L I
-[",L I
-[",L I
-[",L I 'Z
-
-'Z
-
-'Z
-
-'Z
- '
-'
-'
-' 
-Y>
-Y>
-Y>
-Y> F
-F
-F
-F %Wx
-%Wx
-%Wx
-%Wx 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; 'Fh
-'Fh
-'Fh
-'Fh 
-:
-:
-:
-: 
- 
-// :EF<` gM [",L > 'Z
- 
-' 
-  
-U»o( 
-  
-:O Wc'o( '¼ U( 9$" 
-:; 9| ^   
- 
- 
-6/ Z *E@ E¹< *E@ (/) W9W½ 
-' 9$" :; :$@! : 
-f 
-9	 gE 
-f(!  
-Uª   ^R>  
- 
- 
-1/ Z *E@ E¹< *E@ (/) Y> (6) 
-$@y :EF<` gM [",L  
-:; ^ UT
-o( : :$@! 
-: \ gE 'J
-I W
- *
-¢ 
-:<$I '(O<I <¡` '<WnI 
-4. 
- Access 
-to 
-Rural 
-Land 
-Through 
-Government Allocation  
- 
-1/ A person may have the right to freely 
-access rural land where he has been 
-engaged 
-or 
-prefer 
-to 
-engage 
-in 
-agricultural activities for a living.  
- 
-2/   Applicants shall be above 18 years of age. 
- 
-   
-3/   Without prejudice to Sub-Article (1) of 
-this Article, regional laws may create 
-affirmative action rules for women and 
-youths 
-as 
-well 
-as 
-persons 
-with  
-disablities.  
- 
-4/  The provisions in Sub-Articles (1) and (2) 
-of this Article shall also apply to 
-organized youths. 
- 
-5/ Notwithstanding Sub-Article (2) of this 
-Article, orphans who are below 18 years 
-of age whose parents used to live in rural 
-areas and did not have their own land 
-holdings shall have the right to get rural 
-land. 
- 
-6/   Where one of the spouses does not have 
-joint or private holding, he shall have the 
-right to access land, like any landless 
-person. The land granted shall be 
-registered as a private holding of such a 
-person. 
- 
-7/ Where the landholding is acquired during 
-their marriage and both spouses do not 
-have private holding, it will be registered 
-as common property of both spouses.  
- 
- 
-5. 
-The 
-Right 
-of 
-Non-Governmental 
-Organizations, Social Institutions and 
-Private Investors to Access Rural Land  
- 
-1/ Non-Governmental organizations and 
-social institutions may have the right to 
-access rural land as per regional laws.  
- 
- 
-2/  The rural land use right of institutions 
-mentioned under Sub-Article (1) of this 
-Article shall be limited by time and such 
-period shall be determined by regional 
-laws. 
- 
-3/  The land users mentioned under Sub-
-Article (1) and (2) of this Article shall 
-have only use right over the land, and 
-they may not lease, sharecrop, bequeath, 
-donate, create partnership contracts over 
-7C0D27 
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15919 
- 
-J%W© " 
- ''I W[" 
-+<> '< : *^T
-o(!  
+  newTemplateData.documentTitle = stripEnglish(newTemplateData.documentTitle);
   
-4/ Z *E@ E¹< *E@ (/) $@y 
-'Z
- ' ^_`o(E J'(O< Y> 
-<¡` J'<Wn (z W%W^_`w  
-Rª :L  ] ^T
-o+  
- 
-C/ 9$" ' WUR'H F %WxL  
-	
->  E¾<:E   
-e¸U ^g> 
- 
- 
-8. 
-. . 
-. 
-9$"
-9$"
-9$"
-9$" 
-:;
-:;
-:;
-:; 
-:$@!
-:$@!
-:$@!
-:$@! 
-:
-:
-:
-: 
-pEL
-pEL
-pEL
-pEL 
-<WU^
-<WU^
-<WU^
-<WU^ f
-f
-f
-f 
- 
-// *"G *	N I JK *"L *	N I 
-*"L *	N  Y> ©^'T '
-^_`o( ^ o( : f 9	 
-W(! 
- 
-6/   
-$?Uw  
-9$" 
-:; 
-:$@! : pEL U^ f 
-9	   U»o(   :O 
-^R> 
- 
-1/ Z *E@ E¹< *E@ (/) Y> (6) 
-	9k TH! :EF< 9$" :; 
-WZ .j! W:(R[ W(E <E 
-U *^gE! 
- 
- 
-        E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n 6 
- 
-9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; ^_`
-^_`
-^_`
-^_` c^L 
-c^L 
-c^L 
-c^L  Y>
-Y>
-Y>
-Y> %W^_`w 
-%W^_`w 
-%W^_`w 
-%W^_`w  
-:;`o(
-:;`o(
-:;`o(
-:;`o( ^
-^
-^
-^ <WUT
-o(
-<WUT
-o(
-<WUT
-o(
-<WUT
-o( :
-:
-:
-: 
- 
- 
-.  
-.  
-.  
-.  ^_`
-^_`
-^_`
-^_` c^L 
-c^L 
-c^L 
-c^L  
- 
-9$" :; ^  ^_` c^L  FI 
- Y> :EF< >o( 
- 
-    
-.  
-.  
-.  
-.  ^_`
-^_`
-^_`
-^_` :
-:
-:
-: 
- 
-// W*"G *	N I *"L *	N  I JK 
-*"L *	N  Y> ©^'T '
-R$( :; 
-^ o( : 
-^_` : ( 
- 
-6/ 9$" 
-:; 
-^_` 
-: 
-:;Q 
-:$@!EI 
-'J
-EI 
-W
- 
-*
-¢ 
-:<$EI :$@! :QE v= +<> 
-'<EI J%W © " 
- ''EI 
-("< ^! <¡` '<WnEI 9$" 
-:; ^_` ^ e
-E EO ¢z 
-'<nEI q` 9$! '[OFEI ^_`E 
-'@
-OEI F ^_`E q` 9$! 
-(<") 'O<E YE]!  9$" 
-:; :W.E $?  
- 
-the land with investors, or mortgage the 
-land use right.  
- 
-4/  Social institutions referred to under Sub-
-Article (1) of this Article shall have all 
-holding rights other than bequeathing 
-and gifting.  
- 
-5/   Private investors who intend to engage in 
-rural development shall have the right to 
-access rural land as per regional 
-investment laws and policies. 
- 
-6.   Duration of the Right to Use Rural Land 
+  if (newTemplateData.jurisdictionText) {
+    newTemplateData.jurisdictionText = stripEnglish(newTemplateData.jurisdictionText);
+  }
   
-1/  The landholding rights of farmers, semi- 
-pastoralists, pastoralists and Religious 
-Institutions have no time limit. 
- 
- 
-2/  The duration of land use rights of other 
-users shall be determined by regional 
-laws.  
- 
- 
-3/ Notwithstanding the provisions of Sub-
-Articles (1) and (2) of this Article, the 
-eminent 
-domain 
-power 
-of 
-the 
-government to expropriate land may not 
-be restricted. 
- 
-           SECTION TWO 
- 
-THE HOLDING TYPES OF RURAL LAND 
-AND THE RIGHTS OF HOLDERS ON 
-THEIR LAND 
- 
-7. Holding Types 
- 
-Rural land holding types include private, 
-communal, and state holdings.  
-   
-8.   Holding Right 
- 
- 
-1/ The right that farmers, pastoralists, semi-
-pastoralists, and Religious Institutions 
-have over their land is a holding right. 
- 
-2/   Holding right includes the rights of use; 
-lease; sharecrop; collateralize the use 
-right; jointly develop the land with 
-investors; bequeath; donate; transfer 
-through sale or in any form properties 
-fixed 
-on 
-the 
-holding; 
-consolidate; 
-exchange with similar rural land holding, 
-and cultivate the land through cluster 
-arrangement.  
- 
- 
-7C0D27D
+  if (newTemplateData.partyTitles) {
+      newTemplateData.partyTitles.applicant = stripEnglish(newTemplateData.partyTitles.applicant);
+      newTemplateData.partyTitles.respondent = stripEnglish(newTemplateData.partyTitles.respondent);
+  }
 
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15920 
- 
-D.  
-.  
-.  
-.  ¼
-^
-¼
-^
-¼
-^
-¼
-^ 
- 
-// 9$" :; %W^_` :$@! :QE 
- Uª   WURE f 
-9	 
-Y> 
-:; 
-:$E 
-'J
- 
-^   
- 
- 
-6/ Z *E@ E¹< *E@ (/) 	99( 
-YE	$@ gT ¼
-^ d:M Wc:` 
-R J 7 c: YE]! WU  J 
-¿ c: . *^ ! 
- 
-1/ Z *E@ E¹< *E@ (/) 	99( 
-YE	$@ 
-gT 
-*j: 
-	 I 
-Y'
-w I Z¯>I YE]! W 
-!E ^_`o(E W'' \ 
-%W^_`w  
-^_`o(E 
-££ 
-J'J
- *^JWJ!  
- 
- 
-4/ ¼
-^ (  B]n :	OF>  
-<E 
-R$( 
-! 
-:O9.> 
-::9 *W%o(  
- 
-    
-7. 
-. . 
-. :;
-:;
-:;
-:; '<WnE
-'<WnE
-'<WnE
-'<WnE :WJQ
-:WJQ
-:WJQ
-:WJQ :OPw E
-:OPw E
-:OPw E
-:OPw E 
-<W'	
-r>
-<W'	
-r>
-<W'	
-r>
-<W'	
-r> <W:<$
-<W:<$
-<W:<$
-<W:<$  
- 
- 
-//  9$" :; *<=	" ' 
- I _E I   O= I J' I O=> 
-@ 
-B/#`o( 
-q 
-*J
- > 
-J
- EI ^_`o(E :W+. Uek 
-%W^_`w E 
-YE]! 
-^_`o(E 
-J%Wx " 
- '' UekE 
-%W^_`w  
-Y:d9 
-U9>{ 
-Y> 
-*%(E :; 9 Y$> :OP 
-UR. n -' 
- 
- 
- 
-6/ n 
-*	OPr> 
-*R
-" 
-b"c 
- Uª   ^R> 
- 
- 
- 
-7/
-7/
-7/
-7/. 
-. . 
-. <¡`
-<¡`
-<¡`
-<¡`  
- 
-    
-    
-// 9$" 
-:; 
-%W^_` 
-^_`(E
-#R  k  <  d:=  :J 
-<¡` ^! (	9e ^¡O~ 
-b!! <n ^  
- 
- 
-6/   Z *E@  E¹< *E@ (/) 	99( 
-YE	$@ gT %W^_`( ( 
-	9e ^¡O~ <!! ( 
-W9%W 
-W'E~(! 
-R( 
-<¡`
-'<Wn ^  
- 
- 
- 
-9.   Lease 
- 
-1/  A rural landholder may lease out part or 
-all of his land holding for a specific 
-period of time that shall be determined 
-by regional laws.  
- 
-2/   Without prejudice to Sub-Article (1) of 
-this Article, the lease period may not be 
-more than 10 years for annual crops and 
-30 years for perennial crops. 
- 
-3/   Without prejudice to Sub-Article (1) of 
-this Article, the elderly, female-headed 
-households, children, and other people 
-who cannot cultivate their land for valid 
-reasons may not be restricted from 
-leasing 
-out 
-the 
-whole 
-of 
-their 
-landholding.  
- 
-4/   Lease contracts shall be authenticated and 
-registered 
-before 
-an 
-institution 
-authorized by regional governments.   
- 
- 
-10.  Organizing And Providing Information 
-Related to Land Transfers   
- 
-1/ Regional Rural Land Administration 
-Institutions shall establish working teams 
-in their Regional, Zone, Special Woreda, 
-City, Woreda, and Kebele offices that 
-may gather and provide information 
-about potential lessors and lessees, 
-landholders who intend to exchange their 
-holdings as well as jointly develop their 
-holdings with investors. Such working 
-teams shall conduct assessments on the 
-local land market, and avail information 
-to interested parties. 
- 
-2/  The Organization and workflow of the 
-team shall be determined by regional 
-laws.  
- 
-11.  Donation 
- 
- 
- 
- 
-1/ A landholder may donate his landholding 
-to his relatives by consanguinity as 
-provided in the Family Code or through   
-maintenance contractual agreement. 
+  if (newTemplateData.facts) {
+    newTemplateData.facts.forEach((fact: Fact) => {
+      fact.legalText = stripEnglish(fact.legalText);
+      fact.label = stripEnglish(fact.label);
+    });
+  }
+
+  if (newTemplateData.reliefs) {
+    newTemplateData.reliefs.forEach((relief: Relief) => {
+      relief.text = stripEnglish(relief.text);
+    });
+  }
+
+  if (newTemplateData.templateDescription) {
+    newTemplateData.templateDescription = newTemplateData.templateDescription.replace(/\s*\([^)]*\)/g, '').replace(/###\s*(.*?)\s*\n/g, '### $1\n').replace(/-\s/g, '');
+  }
   
- 
-2/  Without prejudice  to the provisions of 
-Sub-Article (1) of this Article, the 
-landholder may transfer his holding 
-through gift to any person through 
-maintenance contractual agreement. 
- 
- 
- 
-7C0D23 
+  if (newTemplateData.calculations) {
+      Object.values(newTemplateData.calculations).forEach((calc: any) => {
+          calc.title = stripEnglish(calc.title);
+          calc.description = stripEnglish(calc.description);
+          calc.inputs.forEach((input: any) => {
+              input.label = stripEnglish(input.label);
+          });
+          calc.outputs.forEach((output: any) => {
+              output.label = stripEnglish(output.label);
+          });
+      });
+  }
 
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15921 
- 
-1/   Z   *E@   E¹<  *E@  ( /) Y> ( 6) 
-	99( :O <¡` 	OF
-* k=° E Y> v[o( W*W 
-:$E 	Oy ® E U= Jg
-F K e¸U *^TO(! 
- 
-4/ Z *E@ E¹< *E@ (/) 	99( 
-]¥`w  ^ :RO <¡` ( 
-^nO<{ 
-^! 
-< 
-( 
-^ 
-@:$( j[: ]¥` JR ^! 
-:yE <¡` R( @ f r!N 
- 6 c: f (<. :jO *W 
- 
-C/ 'E~(! <¡` ( B]n gT  
-<E R$( ! @"  :O9.> 
-::9 *W  
- 
- 
-76
-76
-76
-76.  
-.  
-.  
-.  ("<
-("<
-("<
-("< 
- 
-  
-// 9$" :; %W^_` ^_`(E n 
-±" k ("< [Eºw  :O 
-W'E~(! R( '(O< ^   
- 
-6/ %W^_`( M¦ 
-"<  f 
-^! M¦( e
-¢ Jg n ±" 
-k W M¦ ("< [Eºw  e¸U 
-^g>  
- 
-71
-71
-71
-71. 
-. . 
-. :;E
-:;E
-:;E
-:;E W
-W
-W
-W
- *
-¢
-*
-¢
-*
-¢
-*
-¢ :<$
-:<$
-:<$
-:<$  
- 
-// 9$" :; %W^_` ^_`(E  
-Uª   WURE f 9	 Y> 
-:; :$E W
- *
-¢ W:<$ 
-^   
- 
-6/ 
- Y"a ( B]n :	OF>  
-<E R$( ! @"( :O9.> 
-::9 *W%o(   
- 
- 
-1/ Z *E@ E¹< *E@ (/) 	99( 
-YE	$@ 
-gT 
-^_`o(E 
-W'' 
-'^  
-Rw  
-YE	 
-*j: 
-	 I 
-Y'
-w I 
-Z¯>I 
-W 
-!E 
-^_`o(E 
-W'' 
-\ 
-Rw  
-^_`o(E 
-£ 
-£ 
-W
- 
-Y"a 
-J:<$ *^JWJ!  
- 
-4/ ++^ 
-9T  
-<WUT
-o( 
-:> 
-F` 
- 
-Uª 
-  
-Y> 
-++^ 9T  ( ^R> 
- 
- 
- 
- 
- 
-3/  Where gifting contract is made in 
-accordance with the provisions of Sub-
-Articles (1) and (2) of this Article, the 
-contract shall not apply in case it is 
-prejudicial to minor children and persons 
-with disabilities  
- 
- 
-4/  An application for cancellation of the 
-conditional contract referred to in Sub-
-Article (1) of this Article shall be made 
-within two years from the time the donor 
-becomes aware of the non-performance 
-of the contract.   
- 
-5/   A contract of donation shall be made in 
-writing 
-and 
-be 
-authenticated 
-and 
-registered 
-before 
-an 
-institution 
-authorized by Regional Governments. 
- 
-12.   Inheritance 
- 
- 
- 
-1/   A landholder may bequeath his holding to 
-any person in accordance with the 
-Succession Provisions of the Civil Code. 
- 
-2/  Where the landholder dies intestate, or 
-where the will is invalidated, the 
-Succession Provisions of the Civil Code 
-shall apply.   
- 
-13.  Sharecropping 
- 
- 
-1/  A landholder may sharecrop part or all of 
-his land holding for a specific period of 
-time that shall be determined by 
-Regional Laws 
- 
-2/   A sharecropping contract shall be made in 
-writing 
-and 
-be 
-authenticated 
-and 
-registered before an institution authorizd 
-by Regional Governments.   
- 
- 
-3/  Without prejudice to Sub-Article (1) of 
-this Article, the elderly, female-headed 
-households, children, and other people 
-who cannot cultivate their land for valid 
-reasons may not be restricted from 
-sharecropping 
-the 
-whole 
-of 
-their 
-landholding. 
- 
-4/  The rights and obligations of the parties in 
-a 
-sharecropping 
-contract 
-shall 
-be 
-determined by the contracting parties and 
-by the laws to be enacted by Regions. 
- 
- 
- 
- 
- 
-7C0D23/
 
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15922 
- 
-74
-74
-74
-74. 
-. . 
-. ^_`E
-^_`E
-^_`E
-^_`E J%Wx
-J%Wx
-J%Wx
-J%Wx
-
-
- "
-"
-"
-" 
-
-
-
- <W''
-<W''
-<W''
-<W'' 
- 
-    
-// 9$" :;E 
- W'' :; 
-%W^_`( 
-:;Q 
-:$@! 
-:QE 
-YE	 À` :+ '[OF J%Wx 
-" U9%( ( :O ' b
- 
-R
- ^   
- 
-6/ ^_`E J%Wx " 
- '' ( 
-B]n :	OF>  <E R$( 
-! @"  :O9.> ::9 *W 
- 
- 
- 
-7C
-7C
-7C
-7C. 
-. . 
-. ^_`
-^_`
-^_`
-^_` :$@!
-:$@!
-:$@!
-:$@! :E
-:E
-:E
-:E W["
-W["
-W["
-W[" +<>
-+<>
-+<>
-+<> 
-<W'<
-<W'<
-<W'<
-<W'< 
- 
-// 9$" :; %W^_` :$@! :QE 
- Uª   WURE f 
-9	 W«^>E< ' W[" +<> 
-'< ^   
- 
-6/ 9$" :; :$@! :E :$@! 
-*=w  
-URª 
-[" 
-:$E 
-=(E 
-vjÁ  
- 
-U  
-YEgE :;QE Y!j *j! Jn~ 
- :O '[OF *W%o( 
- 
- 
-1/ 9$" :; %W^_` :$@! :QE 
- R( J«^>E< ' WU	O( 
-[" +<> '< ^  
- 
-4/ *=> = [" ::Wa fE> 
-[H £ ^! JK %^:W< 
-*= :;QE ^ U E f 
-9	 
-F 
-(o( 
-^ 
-'<@:. 
-*W%o(  
- 
- 
-C/ [H %W::Wy !E *=( 
-+<> d(E :; :$@! : 
-J 7 c: . *^ ! 
- 
-8/ = (o( $@R( f [HE 
-JeW Jg *= ( W$@R( f 
-Z \ :;Q :$@!I 'J
- 
-^! W
- *
-¢ :<$ : *W(  
- 
- 
-/ *= v=( %W:Je ( @:$( 
-f 
-9	 
-+<> 
-d(E 
-:; 
-:$@! J*	O( 9Ed W$ .j! 
-9{ 
-= 
-JZ 
-:$j 
-: 
-W(! 
- 
-/ [H JK %JeW f *=( 
-:;Q ^ W( :$@! :> 
-*J«e  ]¥`  JeW(E ["  ` 
-'[OF *W  
- 
- 
-14.  Joint Development  
- 
- 
-1/ A landholder may enter into a joint 
-development contract with an investor by 
-contributing his use right as a capital 
-contribution. 
- 
- 
-2/ A joint development contract shall be 
-made in writing and be authenticated and 
-registered 
-before 
-an 
-institution 
-authorized by Regional Governments. 
-   
-15.  Using Land Use Rights as Collateral  
- 
-1/ A landholder may collateralize his use 
-right to financial institutions for a period 
-of time that shall be specified under 
-regional laws.  
- 
-2/  Financial institutions shall consider the 
-maximum potential of the land when 
-providing credit to the landholder.  
- 
- 
- 
-3/ A landholder may collateralize his use 
-right as suretyship.  
- 
- 
-4/  Contracting parties shall stipulate under 
-their contract the time for the repayment 
-of the debt, and the length of time that 
-the creditor may use the land where the 
-debtor fails to pay the whole or part of 
-the debt.  
- 
- 
-5/   The land use right of the creditor over the 
-collateralized land shall not exceed 
-above ten years.  
- 
-6/  Where the debtor fails to pay the debt at 
-the time prescribed in the contract, the 
-creditor may have the right to use, lease, 
-or sharecrop the land for the prescribed 
-time only.  
- 
-7/  Where the creditor, by using the land, 
-generates more money than he had lent, 
-the debtor may not claim the difference. 
- 
- 
- 
-8/    Where the debt is partially paid, the right 
-of the creditor to use the land shall be 
-adjusted in accordance with the unpaid 
-debt.  
- 
- 
-7C0D236 
+  acc[key] = newTemplateData;
+  return acc;
+}, {} as { [key: string]: TemplateData });
 
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15923 
- 
-D/ *= v=( %W:Je +<> d(E 
-:; :$@! J*	O( 9Ed R 
-.j! 9{ :;QE ( J@:$( 
-f 9	 ^ W: ^! =(E 
- EO : Wv=( '<epU 
-W'+ *^ !  
-   
-7/ 'E~(! '<Â ( B]n :	OF> 
-  <E  R$(  O=I O=
-Y> J' *<=	" !  @"   :O9. 
-Y> ::9 *W  
- 
-7// J^ 	99( YE	$@ gT *=> 
-= <WUT
-o( "" :> F` 
- Uª   ^R>  
- 
- 
-76/ *=> = :J +<> :; 
-:$@! 
-:E 
-U:WJ 
-WU 
-'>o(! "" Y"j ^! bE 
-%W( 
-:	~ 
-n/# 
-@"  
-:RE 
-*W 
- 
-78
-78
-78
-78. ^_`E
-^_`E
-^_`E
-^_`E <W:W+.
-<W:W+.
-<W:W+.
-<W:W+. 
- 
-// 9$" :; %W^_` ^_`(E J 
-%W^_` :; " :W+. ^   
- 
-6/ Z *E@ E¹< *E@ (/) ^ 
-W( 
-: 
-*<=	" 
-RE 
-9	 *^	W! 
- 
-1/ ^_` ((. ( B]n :	OF> 
- 
-<E 
-R$( 
-! 
-@"  
-:O9.> ::9 *W  
- 
- 
-4/ ((ª U	O9( W   
-:J Jg ( B]n :	OF>
-	
- bE R$( !
-@"  :O9.> ::9 *W 
- 
- 
-7
-7
-7
-7. 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; ^_`
-^_`
-^_`
-^_` ^
-^
-^
-^ e
-E
-e
-E
-e
-E
-e
-E EO
-EO
-EO
-EO 
-¢z
-¢z
-¢z
-¢z <W'<n
-<W'<n
-<W'<n
-<W'<n 
-  
- 
-//   %W^_`w  
-:; 
-^_`o( 
-^ 
-k`o(I 
-Y(@`o( 
-^! 
-:n$" 
- `o( 
-eÃo(E 
-'^E@@y U EOL  % ]¥` 
-:Ä.I :W. ^!  'E~(! 
- :E9[ '<n : *o( 
- 
- 
-6/ Z *E@ E¹< *E@B (/) 	9k 
-'^E@@y U EOL  FE%`w E 
-^! :; ^ £ £ W£ U 
- E U$? gE ""
-:<e"Q   ^  
- 
-9/   The liability of the debtor shall be limited 
-to the use right of the land transferred for 
-the agreed time. 
- 
- 
- 
- 
- 
-10/ Collateral contracts shall be made in 
-writing 
-and 
-be 
-authenticated 
-and 
-registered 
-before 
-Woreda, 
-Special 
-Woreda 
-and 
-City-Adminstration 
-institutions 
-authorized 
-by 
-regional 
-governments.  
- 
-11/ Without prejudice to the above Sub-
-Articles of this Article, the rights and 
-obligations of the creditor and debtor 
-shall be determined by regional laws. 
- 
-12/ Any dispute regarding the collateral 
-contract shall be resolved through 
-conciliation/mediation or regular court 
-having jurisdiction.  
- 
- 
- 
-16.   Exchange of Holdings 
- 
-1/ A landholder may exchange his holding 
-with another land. 
- 
-2/ The right in Sub-Article (1) of this Article 
-shall not be limited by administrative 
-boundary. 
- 
-3/  Every landholding exchange contract shall 
-be made in writing and be authenticated 
-and registered before an institution 
-authorized by regional governments.  
- 
-4/    Where the exchange takes place between 
-different regions, the contract shall be 
-made in written form, and verified and 
-registered 
-by 
- 
-authorized 
-federal 
-institution . 
- 
-17.   Sale of Properties Found on Landholding  
- 
- 
-1/  A landholder may sell or transfer in any 
-other means his immovable properties 
-fixed on the land without separating 
-them from the land.  
- 
- 
- 
-2/  Immovable properties referred to under 
-Sub-Article (1) of this Article may 
-include buildings, trees, perennial crops, 
-and other fixtures. the detailed criteria 
-shall be issued by Regions. 
- 
-7C0D231 
 
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15924 
- 
-1/ Z *E@ E¹< *E@B (/) 	99( 
-: e¸U gE *N UWe( 
-:;    U( "" F Y> 
-:<e"  :O  %W^_`(E  J^_`( 
-'e>j :q  :;Q ^  e
-(E 
-EO 
-W:$@! 
-U9WF 
-:; 
-<« \ :gE *W 
- 
-4/ Z *E@ E¹< *E@ (/) 	99( 
-: e¸U Ug( :; *$?@! 
-vj[E :O '[OF \ ^g> 
- 
-C/ ^Z [Eº '^E@@y EOL E ¢z 
-:WJQ 
-  
- E 
-U<@" 
-*^gE!  
- 
- 
-7
-7
-7
-7.^_`E
-^_`E
-^_`E
-^_`E q`
-q`
-q`
-q` 9$!
-9$!
-9$!
-9$! <W'[OF
-<W'[OF
-<W'[OF
-<W'[OF Y>
-Y>
-Y>
-Y> <W'@
-O
-<W'@
-O
-<W'@
-O
-<W'@
-O 
- 
-// *<~ 'w  W' *:Å YEgM 
-%W^_`w  
-^_`o(E 
-q` 
-9$! 
-W'[OF 
-Y> 
-W'@
-O 
-U<  
-((. 	"k ^   
- 
-6/ ^_`E q` 9$! '[OF Y> '@
-O 
-( B]n :	OF>  <E 
-R$( ! @"  :O9.> ::9 
-*W  
- 
- 
-1/ ^_`o(E 
-q` 
-9$! 
-W'[OF 
-Y> 
-W'@
-O  ((.  WU	"k %W^_`w  
-URª 'O`\w E :WJ  
-Uª   ^R>  
- 
- 
-7D
-7D
-7D
-7D. 
-. . 
-. F
-F
-F
-F ^_`E
-^_`E
-^_`E
-^_`E q`
-q`
-q`
-q` 9$!
-9$!
-9$!
-9$! 'O<
-'O<
-'O<
-'O< 
- 
-//   %W^_`w  
-^_`o(E 
-q` 
-9$! 
-%	"k! 
-q` 
-9$! 
-YE"y 
-^O``Æ 
- 
-6/   ^_`o(E q` 9$! WU"y 
-%W^_`w  
-W 
-'O`\w E 
-'jO *W%o(  
- 
-1/   ^_`o(E q` 9$! WU"y 
-%W^_`w  W!"L\o( 9 <<" 
-:n$" *W%o(  
- 
- 
-3. 
-. . 
-. ^_`E
-^_`E
-^_`E
-^_`E q`
-q`
-q`
-q` 9$!
-9$!
-9$!
-9$! '[OF
-'[OF
-'[OF
-'[OF YE]!
-YE]!
-YE]!
-YE]! q`
-q`
-q`
-q` 
-9$!
-9$!
-9$!
-9$! 'O<
-'O<
-'O<
-'O< *<9=,
-*<9=,
-*<9=,
-*<9=,   
-   
-   
-    
- 
-:EF< ^! :EF<` %gM [",L  
-ÇNrL  9s :<T *(`N  $?U 
-gM  :;  %W^_`w   ^_`o(E q`9$! 
-'[OF Y> q` 9$! 'O< *W%o(  
- 
- 
- 
- 
-3/ Where the right stipulated in Sub-Article 
-(1) of this Article is applied,  the land to 
-be transferred shall only be confined to 
-the area ofland, the property to be 
-transferred is situated in a manner that 
-does not displace the holder;  the detailed 
-laws and criteria shall be dettremined by 
-regions.  
- 
- 
-4/  The application of the right referred to 
-under Sub-Article (1) of this Article shall 
-be based on the land use plan.  
- 
- 
-5/ Relevant laws in the transfer of immovable 
-properties shall apply in such cases. 
- 
- 
-18.   Consolidation of Holdings 
- 
-1/ 
-Landholders 
-may 
-exchange 
-their 
-landholdings where the transaction has 
-the effect of consolidating the holdings.  
- 
- 
- 
-2/  Land consolidation contracts shall be 
-made in writing and be authenticated and 
-registered 
-before 
-an 
-institution 
-authorized by regional governments.  
- 
-3/  Regional laws may provide incentives to 
-landholders who exchange their holdings 
-with the effect of consolidation. 
- 
- 
- 
- 
-19.   Clustering  
- 
- 
-1/ Landholders may cultivate their holdings 
-through cluster.  
- 
- 
-2/   Regional laws shall provide incentives to 
-landholders who are cultivating their 
-land through cluster.  
- 
-3/ Regions shall create market linkage to 
-landholders who are cultivating their 
-land through cluster.  
- 
-20.  Mandatory Consolidation and Clustering  
- 
- 
-Landholders whose holdings are within 
-government 
-or 
-non-governmental 
-organizations’ irrigation projects shall be 
-bound by consolidation 
-and clustering 
-schemes laid by the government.  
- 
- 
- 
- 
- 
-7C0D234
+const defaultCourtLevel = Object.keys(COURT_HIERARCHY)[0];
+const defaultBench = COURT_HIERARCHY[defaultCourtLevel as keyof typeof COURT_HIERARCHY][0];
+const defaultBenchType = BENCH_TYPES[0];
 
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15925 
- 
-3/
-3/
-3/
-3/. 
-. . 
-. 
-
-
-
- %W^_`w 
-%W^_`w 
-%W^_`w 
-%W^_`w  e?[
-e?[
-e?[
-e?[ *<ef
-*<ef
-*<ef
-*<ef <W:gM
-<W:gM
-<W:gM
-<W:gM 
- 
-^Z *+, Uej	( :O 9$" :; 
-^_` Wn ^_`( %> U< ^! 
-  %W^_`w  
- Jg :W§ 
-]! %W^_`w  e?[ ^ :O 
-:gE *W  
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n 1 
- 
-9$"
-9$"
-9$"
-9$" :;E
-:;E
-:;E
-:;E <W:WI
-<W:WI
-<W:WI
-<W:WI <W::9>
-<W::9>
-<W::9>
-<W::9> ^_`
-^_`
-^_`
-^_` 
-'O9)
-'O9)
-'O9)
-'O9) !<"
-!<"
-!<"
-!<" O@
-O@
-O@
-O@ <W:<$
-<W:<$
-<W:<$
-<W:<$ 
- 
-36
-36
-36
-36. 
-. . 
-. ^_`E
-^_`E
-^_`E
-^_`E <W:W>
-<W:W>
-<W:W>
-<W:W> <W'<:9
-<W'<:9
-<W'<:9
-<W'<:9 
- 
-  
-// FI 
- Y> :EF< ^_`w  
-d:>    j      :w      YWq 
-^:d9% 
- 
-6/ Z *E@ E¹< *E@ (/) :O 
-Wq :;L  %W^_`w  ^_`o(E 
-[E" Y> :$E U^ ^_` 'O9) 
-!<" O@ 'Fh : *o( 
- 
-1/ :;Q %> U< 
- ^_` ^! 
-  Rw  
- d Jg ^_` 
-'O9) !<" O@Q ]! 
- 
-%W^_`w  <! :dr *W 
- 
- 
-31
-31
-31
-31. 
-. . 
-. J*E[
-J*E[
-J*E[
-J*E[ ^
-^
-^
-^ U<
-U<
-U<
-U< UT"
-UT"
-UT"
-UT" f
-f
-f
-f 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; 
-^_`
-^_`
-^_`
-^_` !9%
-!9%
-!9%
-!9% 
- 
-// Er Y> #R k J*E[ ^ 
-U< 'F%E U:WJ W( J 
-YE	$@ gT %Z ^! ©^'T 
-!E J*E[ ^ U<L  UTH 
-f :;Q W:$@! % L E 
-: U<$j ]¥` !9% :	OF 
-*W 
- 
-6/    Z  *E@  E¹<  *E@ ( /)  YE	$@ 
-gT JZ F :( È % J*E[ 
-^ \ U:" Jg J:r: 
-U<Q " W( \ YE	$@ gT 
-J@[ U<Q  "  o(E  :; ^_` 
-nn 
-'[OF 
-:;Q 
-:OP 
-["ao( 
-j` 
-:	OF 
-*Wi 
-YE]! *< J:O( =" *H 
-" LuE : U<$j ]¥` 
-
-y  ["a  =F!  ^_`  !9%  '[OF
-*W  
- 
-34
-34
-34
-34. 
-. . 
-. <W
-<W
-<W
-<W 
-
-
- :;
-:;
-:;
-:; ^_`
-^_`
-^_`
-^_` *<=	">
-*<=	">
-*<=	">
-*<=	"> !9%
-!9%
-!9%
-!9% 
- 
-//       
- 
-:;E 
-U<$- 
-*<=	"> *  E   
- 
- 
-21.  Securing the Consent of Joint Holders 
- 
-Joint holders or spouses shall consent to any 
-landholding 
-transfers 
-provided 
-in 
-this 
-proclamation.  
- 
- 
- 
- 
-SECTION THREE 
- 
-RURAL LAND SURVEYING, 
- 
- REGISTRATION, AND CERTIFICATION 
- 
-22.  Surveying and Registration of Land 
-Holdings  
- 
-1/ Private, communal, and state holdings 
-shall 
-be 
-surveyed 
-using 
-modern 
-surveying instruments and registered.  
- 
-2/  Holders of lands surveyed and registered 
-under Sub-Article (1) of this Article shall 
-have the right to get a holding certificate 
-for their parcels showing boundaries and 
-land size. 
- 
-3/  The holding certificate shall be prepared 
-in the name of all joint holders where the 
-land belongs to spouses or other joint 
-holders. 
- 
-23.  Registration of Rural Landholdings of 
-Couples in a Polygamous Marriage  
- 
-1/ Without prejudice to the prohibition of 
-polygamy under the Criminal and Family 
-Codes, where a person has two or more 
-wives the landholding shall be registered 
-in a manner that protects the rights of all 
-the wives in the polygamous marriage. 
- 
-2/  Without prejudice to Sub-Article (1) of 
-this Article where a husband concludes  
-polygamous  marriage after entering into 
-force of this Proclamation, the common 
-land property of the husband and the first 
-wife shall be partitioned, updated, and 
-registered in the name of each spouse. 
-The share of the husband shall be re-
-registered with his new spouse in a 
-manner that protects the rights of the 
-women.  
- 
-24.  Communal Landholding Administration 
-and Certification  
- 
-1/   Regions may issue land administration 
-and management laws that protect and 
-conserve communal lands.  
- 
-7C0D23C 
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15926 
- 
-6/  :; $?Uw  F R(
-UT
-o( gE *R
-" b"c
-:d" *W 
- 
- 
-1/  :; %W^_`w   ^_` 
-'O9) !<" O@ $?U( 
-ZOR <! d,L ^Ro+  
- 
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n 4 
-  
-    
-¢F¢F>
-¢F¢F>
-¢F¢F>
-¢F¢F> nn
-nn
-nn
-nn 
- 
-3C
-3C
-3C
-3C. ¢F¢F
-¢F¢F
-¢F¢F
-¢F¢F 
- 
-// F Y>  :; ^_`w  ¢F¢F 
-*^J«e!  
- 
-6/ Z *E@ E¹< *E@ (/) 	99( 
-T"! 
-:EF< 
-^! 
-:EF<` 
-%gM [",L  [n 9s :<T 
-ÇNrL  
-(<. 
- 
-^_`w  
-^ 
-¢F¢F É[ ^  
- 
-1/  :<T :; ¢F¢F U	OF f 
-L > [n U Rw E :; 
-:$@! :E F! (<. <9% 
-:gE *W  
- 
-4/ :<T :; ^ <WU	OF ¢F¢F 
-"H  Uª   ^R> 
- 
- 
-38
-38
-38
-38. 
-. . 
-. nn
-nn
-nn
-nn  
- 
- 
-//  :; nn- 
- 
- 
- 
- 
- 
- 
- 
-x) :; %W^_`w  Z^ > 
-
-¢ o( JgMI 
- 
- 
-W)   %W^_`wu 
-Re
- 
-^!
-n`o(     9$" :;
-*<=	" F JUR( ]¥`>
-f 9	 ^ J*%( W@(
- Jgi 
- 
-*%( 
-WUTH 9$" :; 
-Wo( 
-^! 
-:; 
-o( 
-*"G *	N  nn ^R 
- 
- 
-6/  Z *E@ E¹< *E@ (/) 	99( 
-e.N> R( R
-¢ *	w  ^!  
-J*j! 
-^ 
-g 
- F" 
-!E 
-*%(E W@( É¤ Rw  ^_` ^ 
-e¸U *^gE!   
- 
- 
-  
-2/  Users of communal land shall have legal 
-personality and working procedure  shall 
-be established.  
- 
- 
-3/   A communal landholding certificate shall 
-be issued in the name of the user 
-community.  
- 
- 
-SECTION FOUR 
- 
- 
-REDISTRIBUTION AND DISTRIBUTION 
- 
-25.  Re-distribution 
- 
-1/  Private and communal holdings may not 
-be re-distributed.   
- 
-2/ Notwithstanding Sub-Article (1) of this 
-Article, landholdings within government 
-and 
-non-governmental 
-organization 
-funded irrigation structures may be re-
-distributed.  
- 
-3/ 
-Irrigation 
-land 
-re-distribution 
-shall 
-consider the land rights of women and 
-vulnerable groups.   
- 
-4/   The details of irrigated land re-
-distribution shall be determined by 
-regional laws. 
- 
- 
- 
-26.  Distribution  
- 
- 
- 
-1/  Distribution of  land: 
- 
-The land holding shall be distributed to those 
-who do not have rural land or to those who 
-have small  size land holding. Where: 
- 
-a)  A land holder is deceased and has no 
-heirs; 
- 
-b)  A land holder has left his area of 
-residence due to settlement or their 
-desire for more than the time limit 
-and conditions   determined by the 
-rural land administration laws of the 
-regions. 
- 
- 
- 
-2/ Notwithstanding Sub-Article (1) of this 
-Article, the landholdings of landholders 
-who left their locality due to natural or 
-man-made 
-disasters 
-may 
-not 
-be 
-distributed.  
- 
- 
- 
- 
-7C0D238 
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15927 
- 
-1/ W£ U  
-
-'>  O 
-' gM 
-:;L E .> ^ ::<O :;Q 
-^ k= '<J ]¥` nn 
-Rª ^   
- 
-4/   Z *+, *E@ C (/) Y> Z *E@ 
-:O :; R. :; *$?@! 
-vj¤E ^! .>QE :O 	" 
-:gE *W 
- 
-C/ nn U	OF f 9$" :; 
-o(  YE	  L I  L I ®\o(E
-ª Z¯>I *j: 	    
-Uª   j[U Rª ^9% 
-^Z! 	OF 9 
-:$EEI 
-#R 
-¦E> :RE JF! (<. <9% 
-j	! J  Uª   
-	Fk ^9% 
- 
-3
-3
-3
-3. 
-. . 
-. j~
-j~
-j~
-j~ '
-'
-'
-' Y>
-Y>
-Y>
-Y> Jn~
-Jn~
-Jn~
-Jn~ ^_`
-^_`
-^_`
-^_` :$EE
-:$EE
-:$EE
-:$EE 
-<W:RE
-<W:RE
-<W:RE
-<W:RE 
- 
-  
-//  *E[ %W^_` TO( U9%( j~ 
-' YE]! Jn~ 9$" :; ^_` 
-:$E   Uª F :O 
-URE ^g>  
- 
-6/  9$" :; ^_` 'E~(! :E9[ 
-UJ«e j UJ«eW( :; 
-^_` :$E Jj~( ' :$E `  
-:gE W!    
- 
-1/  Z *E@ E¹<-*E@ (6) 	99( 
-%> 
-U< 
-n  
-Ue£ 
-f 
-U	"kE 
-:; 
-^_` 
-nn 
-*^:WJ!  
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n C 
- 
-    
-:;
-:;
-:;
-:; *$?@!>
-*$?@!>
-*$?@!>
-*$?@!> '
-'
-'
-' vj[
-vj[
-vj[
-vj[ 
- 
-3
-3
-3
-3.  
-.  
-.  
-.  :
-:
-:
-: :;
-:;
-:;
-:; *$?@!
-*$?@!
-*$?@!
-*$?@! vj[
-vj[
-vj[
-vj[ <W'dr
-<W'dr
-<W'dr
-<W'dr 
- 
-// 	
- 
-:EF< 
-:;E 
-d& 
-W:$@! U<  :;QE <'U 
-:O 	O9 *9" *@n : :; 
-*$?@! vj[ dP  
- 
-6/   
-*9" 
-*@§E 
-: 
-:; 
-*$?@! vj[ :O '[OF  
-: :; *$?@! vj[ dP  
- 
-1/ +O[! E : :; *$?@! 
-vj[ :O '[OF "" :; 
-*$?@! vj[ :dr *W  
- 
- 
- 
- 
- 
-3/  Cultivable mountainous and gully lands 
-may be distributed to the landless based 
-on studies and in a manner that may not 
-cause damage to the land.  
- 
-4/ where land is allocated according to 
-Article 5(1) of this Proclamation and  
-this Article, it shall be based on the land 
-use plan or study.  
- 
-5/ Regional laws shall give priority to 
-landless women, youth, orphans, and 
-people with disabilities in distribution 
-programs. Regional laws shall consider, 
-inter alia, the income and family size of 
-applicants 
-to 
-access 
-lands 
-to 
-be 
-distributed.    
- 
- 
-27.  Minimum Parcel and Maximum Holding 
-Size  
- 
- 
-1/ Minimum parcel and maximum holding 
-size shall be determined by regional 
-laws.  
- 
- 
-2/  When the rural holding is distributed in 
-any manner, the land to be distributed 
-should not be below the minimum parcel 
-size. 
- 
-3/  Sub-Article (2) of this Article may not 
-apply to the partition of matrimonial 
-landholdings following the dissolution of 
-marriage.  
- 
-SECTION FIVE 
- 
- 
- 
-LAND USE AND DEVELOPMENT PLAN 
- 
-28.  Preparing Master Land Use Plan 
- 
-1/ The Federal Government shall prepare a 
-national master land use plan based on 
-the suitability of the land and which 
-ensures sustainable land utilization.  
- 
-2/  Regions shall prepare a regional master 
-land use plan based on the national 
-master land use plan. 
- 
-3/  A detailed land use plan shall be prepared 
-based on the regional master land use 
-plan.  
- 
- 
- 
- 
- 
-7C0D23
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15928 
- 
-3D
-3D
-3D
-3D. 
-. . 
-. *%
-*%
-*%
-*% 
-
-
- :;
-:;
-:;
-:; *$?@!
-*$?@!
-*$?@!
-*$?@! vj[
-vj[
-vj[
-vj[ 
-<W'dr
-<W'dr
-<W'dr
-<W'dr 
- 
-Udr( 
-'E+ 
-:<e" 
-:O 
-*%  :; *$?@! vj[ 
-:dr *W  
- 
-¿. 
-. . 
-. :;
-:;
-:;
-:; *$?@!
-*$?@!
-*$?@!
-*$?@! vj[E
-j[E
-j[E
-j[E j`
-j`
-j`
-j` <W'[OF
-<W'[OF
-<W'[OF
-<W'[OF 
- 
-// *9" 
-*@n> 
- 
-: 
-:; 
-*$?@! vjÁ  YE]! *% 
- :; *$?@! vj[ vj[ 
-R¤ URE f 9	 :JW< ^! 
-j` :	OF *W%o(  
- 
-6/ 'E~(! 
-:; 
-*$?@! 
-vj[ 
-'E~(! 
-]¥` 
-©^'T`I 
-%Z 
-j"G  Y>  `w  % ]¥` *F%s 
-$@( YE '[OF *W  
- 
- 
-¿/
-¿/
-¿/
-¿/.9$" :; $?U F`w  Y> 
-9$" :; $?U F`w  Y> 
-9$" :; $?U F`w  Y> 
-9$" :; $?U F`w  Y> 
-:QE Uª ]¥`w 
-:QE Uª ]¥`w 
-:QE Uª ]¥`w 
-:QE Uª ]¥`w  
- 
-// 9$" :; $?U :;QE U 
-:; *$?@! vj[ :O *F%s 
-:$@! F` *W gT! :; 
-*$?@! vj[ %%o( *%w  
-vj¤ Y<JUd, [O< :;QE *F%s 
-:EJ%J F` *W 
- 
-6/ 9$" :; $?U :;Q ^ k= 
-	OR 
-YE	 
-k=Q 
-	 
-:$@! 
-:QE 
-Y<J' 
-U	"< 
-Y"!P 
-^R[`   
- 
- 
-1/    Z  *E@  E¹<  *E@ (/) Y> (6) :O 
-9$" :; $?U <WU F`I 
-:; 
-^ 
-<WU	"< 
-k= 
-""I 
-<WUR	( Y"!PI ^_`> :$@! 
-: `%o( U    "" 
-!EL   Uª  ^R> 
- 
-¿6
-¿6
-¿6
-¿6. 
-. . 
-. 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; *$?@!
-*$?@!
-*$?@!
-*$?@! O9[
-O9[
-O9[
-O9[ <W
-<W
-<W
-<W 9	  
-9	  
-9	  
-9	   
- 
-    
-Z *+, *E@ 3 Y> 3D 	99( 
-:; *$?@! Y> * b"c :O 
-Udr( :; *$?@! vj[ URE 
-:gM YE	$@ gT-   
- 
- 
-// =«`o( ¿ :L> `  gM 
-9$" 
-:;L  
-$?Uw  
-:; 
-* *e" WE U@E< :gE 
-W gE Y". *$" *%w  
-(ÊE : <E z!" JW 
-:gE *Wi  
- 
-29.  Participatory Local Level Land Use Plan 
- 
- 
-A participatory local-level land use plan shall 
-be prepared in accordance with the scale set 
-in the manual to be prepared.  
- 
-30.  Updating Land Use Plan 
- 
-1/  The national and regional master land use 
-plans as well as local participatory local 
-level land use plans shall be revised or 
-updated on a timely basis set in the plan 
-document.  
- 
-2/  Any land use plan shall, at any time, 
-protect and preserve religious and 
-cultural heritages and places. 
- 
- 
-31.  Obligations of  Rural Land Users and 
-Conditions that Deprive Rights 
- 
-1/ A rural land user shall properly use the 
-land in accordance with the land use plan 
-issued. In areas where the land use plan 
-is not yet issued, the land user shall 
-properly conserve the land.  
- 
- 
- 
-2/ Based on the gravity of the damage, 
-measures, to the extent depriving the 
-landholding right, shall be taken where 
-the landholders fails to properly conserve 
-his land.  
- 
-3/ As per Sub-Articles (1) and (2) of this 
-Article, the obligations to be imposed on 
-users of rural land, the details of the 
-damage to the land, the measures to be 
-taken, and the detail reasons that may 
-result in the loss of holding and use 
-rights shall be determined by regional 
-laws. 
- 
-32.  Restrictions Imposed on Rural Land Use 
- 
-The following restrictions shall be observed 
-until such time that land use plans are 
-prepared pursuant to Articles 28 and 29 of 
-this Proclamation:  
- 
-1/ The management of rural lands the slope 
-of which is less than 30 percent shall 
-reduce soil degradation, and in dry-land 
-areas, a strategy of water harvesting shall 
-also be followed; 
- 
- 
-7C0D23 
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15929 
- 
-6/ =«`o( J ¿/ Y<J Ë :L gM 
-9$" :;L E $?Uw  Wc:` 
-R  ' '+ U  *F% 
-o(E *e"> (© Y@% ¶T²w  
-:<
- \ ^g>i 
- 
-1/ $?Uw  =«`o( J Ë :L 
-^ gM 9$" :;L E Jc:` 
-R> 
-Jj 
-F¡¢ 
-*9F 
-( 
-'[OF W¦nI WU  I WE 'I 
-WYE< :T '> YE	 ]¥`( 
-WQ< :<Z '+ ^T"%o+i 
- 
-4/ :; $?Uw  'E~(! =« 
-U9{> ! = 9$" :;E 
-JR(> 
-JYE< 
-E¼ 
-¸ 
-'[OF 
-YE9F!> '99£ O9. UW 
-:; *$?@! vj[ :O .j! 
-YE<. '[OF ^T"%o+i  
- 
-C/  O 
-'> 
-¤ 
-9$" 
-:;L E 
-*%( 'ZOR 
- " YE	 
-K> b-Z^` b
-w E :<
- 
-YE9F£> .j! ^ YE( '[OF 
-^T"`i 
- 
-8/ SO`' *%w    O "  ¤ 9$" 
-:;L   ^! YE	]¥`( F 
-^_` b" g( YE9F£> :R( 
-YEW£ :	OF *W%o(i 
- 
-/ 'E~(! 9$" :; $?U & 
-Ì<¶E¢E *9F 9{ aa 
-%Z> 
-^E 
-:; 
-*$?@!> 
-* 
-dw E 
-:$@!> 
-Y"aI 
-F¡¢ Y> 	E :;L E !"`' 
-:$j F` *Wi  
- 
-/ (© *d 9$" :;L  *%( 
-'ZOR> U:WJ( * U	OF 
-£ 
-[n 
-JW( 
-:$j 
-Y> 
-*F%s W.j! :+ *W%o(i  
- 
-D/ (© ="\w  .> ^ :<"( 
-R  "@  JW(  J:;  *$?@! 
-vj[ " . :ep! *Wi  
- 
- 
-7/ U:WJ`o( * 9$" :; ^ 
-*=< Y"a E¾<:EL  £> 
-<«§I 
-:RO 
-' 
-*(`N  
-dOk> 
-Re
- 
-ÇNF
- E 
-F%
- 
-	"k 
-*% 
-	ZEEI 
-JRQ 
-WU  
- FN  
-:F\ 
-<L E> 
-F%
-E vjÁ\o( *( :F" 
-*W%o(i 
- 
-2/  Users of rural lands, the slopes of which 
-are between 31-60 percent, may use the 
-land for annual crops, only after proper 
-conservation technologies are in place;  
- 
- 
-3/  Users of rural lands, the slope of which is 
-more than 60 percent, shall use the land 
-for tree planting, perennial crops, bee 
-harvesting, forage production, and tourist 
-attraction, instead of farming and free 
-grazing; 
- 
-4/   Users must ensure that rural land of every 
-slope which is highly degraded shall be 
-restricted from human and animal 
-interference for a given period of time to 
-let it recover, and shall be put to use 
-when ascertained that it has recovered;  
- 
-5/  The local community, through joint effort, 
-shall rehabilitate and make use of the 
-land which is damaged and full of gullies 
-by using biological and physical works;  
- 
-6/ Rural lands in hilly areas that are damaged 
-by gullies shall be rehabilitated and 
-developed by putting them either under 
-the custody of communal or private 
-holding as the case may be; 
- 
-7/  Every rural land user shall use improved 
-traditional and scientific land use and 
-management methods and ensure the 
-productivity of agricultural, grazing and 
-forest lands, after getting an adequate 
-extension package; 
- 
-8/  Wetlands shall be preserved and put to 
-proper use by the local community and 
-the help of the experts of relevant organs; 
-  
-9/ Water banks shall be protected with in 
-certain distance based on study and land 
-use plan;  
- 
- 
-10/ Relevant organs shall include in their plan 
-strategies 
-and 
-actions 
-to 
-protect 
-environmental 
-damages 
-when 
-they 
-establish and expand new agricultural 
-investments, construct infrastructure, and 
-implement resettlement programs on 
-rural lands;  
- 
- 
-7C0D23D
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15930 
- 
-7// :<T :;L  ^ J'I :E	" 
-!<O`> *9F Rz ' FE%` 
-YE]!  J:; *$?@! vj[ J@:ª 
-FL  ( :$@! JWJW (i  
- 
- 
-76/ 'E~(! =« 	OP W 9$" 
-:;E   F :O W	E ' 
-'+ ^\  
- 
-¿1
-¿1
-¿1
-¿1. 
-. . 
-. '
-'
-'
-' vj[
-vj[
-vj[
-vj[ <W'dr
-<W'dr
-<W'dr
-<W'dr 
- 
-:; 
-*$?@! 
-vj[ 
-d, 
-' 
-vj¤! :dr *W  
- 
-¿4
-¿4
-¿4
-¿4. 
-. . 
-. 9$"
-9$"
-9$"
-9$" @
-@
-@
-@ 'vJ
-'vJ
-'vJ
-'vJ !<O`
-<O`
-<O`
-<O` 
- 
-9$" @ 'vJ !<O` :; *$?@! 
-vj[E :O '[OF ^'  
- 
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n 8 
- 
-*"L
-*"L
-*"L
-*"L *	"
-*	"
-*	"
-*	" :;
-:;
-:;
-:; *<=	">
-*<=	">
-*<=	">
-*<=	"> *$?@!
-*$?@!
-*$?@!
-*$?@! 
- 
-¿C
-¿C
-¿C
-¿C. 
-. . 
-. 
-
-
- :;
-:;
-:;
-:; *<=	">
-*<=	">
-*<=	">
-*<=	"> *$?@!
-*$?@!
-*$?@!
-*$?@! F 
-<W'(
-<W'(
-<W'(
-<W'( 
- 
-*"L *	" o(   *"L *	" 
- 
-:; 
-*<=	"> 
-*$?@! 
-F 
-  
- 
-¿8
-¿8
-¿8
-¿8. 
-. . 
-. 
-
-
- ^_`
-^_`
-^_`
-^_` '^J«e
-'^J«e
-'^J«e
-'^J«e RW:gM
-RW:gM
-RW:gM
-RW:gM 
- 
-*"L *	" 'ZOR n> 
- (¥
-Y> .> 	FÍ g <@" 
-:;L  nn! g 'E~(! :E9[ 	
-F ^_` *^Wª!  
- 
-¿
-¿
-¿
-¿. 
-. . 
-. W%Z
-W%Z
-W%Z
-W%Z :;
-:;
-:;
-:; *
-*
-*
-* b"cL 
-b"cL 
-b"cL 
-b"cL  Y(j>
-Y(j>
-Y(j>
-Y(j> 
-<W:<$
-<W:<$
-<W:<$
-<W:<$ 
- 
-    
-//  Uª   W%Z 'I 
-W%Z 
-:; 
-*$?@!> 
-* 
-YE]! WFz *e` b"c Y(j> 
-:<$ [n>  	" 
- 
- 
- 
-6/ %Z :; *$?@!> *  > 
-Fz *e` b"cL  :O` gM 
-9-:EF<` :L EI L E : 
-YE]!     Rª :> 
-F`w E 
-U¸OH 
-Jg 
-e¸U 
-o(! 
-  
- 
-¿
-¿
-¿
-¿. 
-. . 
-. 
-
-
- ^_`E
-^_`E
-^_`E
-^_`E <W'J
-
-<W'J
-
-<W'J
-
-<W'J
- 
- 
-    
-// *"L 
-*	N  
-J 
-^_`o( 
-^ 
-$?Uw  
-
- 
-(¥ 
-¼
-^ 
-11/ Development 
-of 
-urban 
-and 
-village 
-centers, service rendering institutions as 
-well as other services contrary to the land 
-use plan, on irrigable lands is prohibited; 
-   
-12/ Sloppy lands of any degree may be used 
-for forest development based on regional 
-laws.  
- 
-33.   Preparing Development Plan 
- 
-A development plan shall be prepared 
-together with the land use plan. 
- 
-34.  Establishing Kebele Centres  
- 
-Rural kebele centers shall be established 
-based on land use plans.  
- 
- 
-SECTION SIX 
- 
-PASTORAL LAND ADMINISTRATION 
-AND USE  
- 
-35.  Issuance of Communal Land Administration 
-and Use Law 
- 
-Regional States with pastoral population shall 
-issue pastoral communal land administration 
-and use laws.   
- 
-36.  Prohibition of Privatization of Communal 
-Lands  
- 
-Communal lands may not be partitioned and 
-privatized either through distribution or any 
-other means unless it is based on the 
-decisions of pastoral communities as well as 
-a study to be conducted.  
- 
-37.        Recognition of Customary Land     
-Administration and Use Systems 
- 
-1/ Regional laws shall recognize customary 
-institutions; customary land use and 
-management 
-practices, 
-and 
-conflict 
-resolution mechanisms and shall provide 
-support and follow-up. 
- 
- 
- 
-2/  Customary land use and management 
-rules and conflict resolution mechanisms 
-shall be of no effect where they 
-contravene the fundamental constitutional 
-rights, women rights, as well as the 
-rights and obligations provided by other 
-laws.  
- 
-38.   Leasing Communal Holding 
- 
-1/ Pastoralists may Lease out part of their 
-communal land holdings based on their 
-7C0D2¿
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15931 
- 
-<§ 
-^  
-
- 
-(¥( 
-J$?Uw  
-E< 
-G< 
-*
-~( 
-[! :RE *W 
- 
-6/ Z *E@ E¹< *E@ (/) :O 
- :; J
-^ $?U(E 
-F¡¢ 
-:; 
-' 
-:q
-:gE *W 
- 
-1/ *"L 
-*	" 
-*% 
-9$" 
-:; 
-*<=	" '  I  _EI O=
-I J' Y> O= BZe #`o( q 
-J%Z 'ZORs :w  " :gE 
-UJ
-^ 
- 
-:; 
-:WI 
- 
-:; W:J
- Uek $?Uw E 
-Y:d9 
-U9>{ 
-Y> 
-*%(E 
-:; ¼
-^ 9 Y$> W*J
-^> 
-J
-^ :OP UR. n -'  
- 
- 
- 
-¿D
-¿D
-¿D
-¿D. 
-. . 
-. J
-J
-J
-J :;
-:;
-:;
-:; U9{
-U9{
-U9{
-U9{ 9
-9
-9
-9 *<=	"
-*<=	"
-*<=	"
-*<=	" 
- 
-//   J :; U9{ 9 J¼
-^I
-J nI J:;Q U9{ 'E~(!
-!"¢z Y>  E!$?
- 
-6/ J :; JU9h( 9 ]E!
-'ZOR $?U U	"F  
-:; 
-^_` 
-$?Uw  
-eE[
-  :! *W 
- 
-1/  eE¤ STU  *j! o( L  
-Y>   [n  U  Rw E  *wE` 
-[n '[OF *W%o(::  
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n  
-  
-9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; ^
-^
-^
-^ Uy
-Uy
-Uy
-Uy "N E
-"N E
-"N E
-"N E <W:n`
-<W:n`
-<W:n`
-<W:n` 
- 
-    
-´. 
-. . 
-. 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; ^
-^
-^
-^ Uy
-Uy
-Uy
-Uy "N 
-"N 
-"N 
-"N  UeQ
-UeQ
-UeQ
-UeQ 
-*F%
-*F%
-*F%
-*F%  
- 
-// 9$" :; ^ 	] U 9E 
-k=E JJ
- " <!! ^! 
-Y
-o( U:"»o( *<'U ¢'Fw  
-*'{ :n`I ^! <E W( 
- n"[ # < 'jO k= 
-YE`^W '[OF ^   
- 
-6/ <E 
-W( 
- 
-n"[ 
-# 
-:r: 	OP *^L (¥ R$ 
-k=^ ^F%{ @" ^    
- 
- 
-1/ J¢!F>> J:	~ n"[ # (z  
-* :; "" :` W! 
- 
- 
-4/    Z  *E@ E¹< *E@ (1) 	99( 
-T"! *<=	" * :; 
-k=^ F Ro( F%
- ^ 
-common decision. The decision shall be 
-supported 
-by 
-at 
-least 
-three-fourth 
-majority vote of the user community. 
- 
-2/ Where communal land is leased out 
-pursuant to Sub-Article (1) of this 
-Article, it shall not result in the 
-deprivation of their grazing land.  
- 
-3/ Regional Rural Land Administration 
-Institutions shall establish working teams 
-in their Regional, Zone, Special Woreda, 
-City, Woreda, and Kebele offices that 
-may gather and provide information 
-about potential lessors and lessees as 
-well as jointly develop their holdings 
-with investors. Such working teams shall 
-conduct assessments on the local land 
-market, 
-and 
-avail 
-information 
-to 
-interested parties. 
- 
-39.  Communal  Land Income Management 
- 
- 
-1/   Income from communal land includes 
-rent, compensation, sales of any produce 
-from the land, and others. 
- 
-2/ A communal land users' fund shall be 
-established by regions, with the income 
-generated from the communal land, for 
-the benefit the entire community. 
- 
-3/ The fund shall provide affirmative 
-support to economically disadvantaged 
-women and vulnerable groups.  
- 
- 
-SECTION SEVEN 
- 
-RURAL LAND DISPUTE RESOLUTION 
- 
-40.   Jurisdiction on Rural Land Disputes 
- 
- 
-1/   Rural land disputes may be solved 
-through 
-negotiation, 
-mediation/ 
-conciliation, or adjudicated in the regular 
-court having jurisdiction.  
- 
- 
- 
-2/ A decision of the regional court having 
-jurisdiction may be taken by appeal.  
- 
- 
- 
-3/ Such bodies other than mediators and 
-regular courts may not see land disputes. 
- 
-   
-4/ Notwithstanding the provisions of Sub-
-Article (3) of this Article, Administrative 
-bodies shall not be prevented from 
-7C0D2¿/
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15932 
- 
-Uy *<=	
- k= E J'
-UJW *^	W! 
- 
-´/
-´/
-´/
-´/. L >
-L >
-L >
-L > 
-[n
-[n
-[n
-[n 
-U
-U
-U
-U 
-Rw E
-Rw E
-Rw E
-Rw E 
-
-
-
- 
-<W:J
-J"
-<W:J
-J"
-<W:J
-J"
-<W:J
-J" 
-    
- 
-//     	9k YE	$- g( 
-W:J
-J" 9Ed *j! o(E L  
-Y> [n U Rw E :; :$@! 
-: 
-W'<J" 
-L I 
-Z¯>> 
-'Z
- k=^ ' Y"yE W( 
-J
-JH ^   
- 
-6/  Z *E@ E¹< *E@ (/) $@yE
-Rw  :J UJ
-JH 'E
-:WJ 
-nZ 
-Uµ<¶" 
-^!
-nZ N  *R
-" b"c^dO 
- 
- 
-n
-n
-n
-n Ï<
-Ï<
-Ï<
-Ï< 
- 
-9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; !9%>
-!9%>
-!9%>
-!9%> j
-j
-j
-j 
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n / 
- 
-9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; !9%>
-!9%>
-!9%>
-!9%> j
-j
-j
-j !
-!
-!
-!  
- 
- 
-  
-´6
-´6
-´6
-´6.  
-.  
-.  
-.  :!
-:!
-:!
-:! 
- 
-    
-//  :EF<` 9$" :; !9%> 
-j n E 9$" :; *<=	"> 
-*$?@! ' <" -' 
- 
- 
-6/ nu 
-*	OPr 
-<E> 
-ÊK 
- :EF<`   ^R> 
- 
- 
-1/ Z *E@ E¹< *E@ (6) 	99( 
-T"! 
-9$" 
-:; 
-!9%> 
-j 
-n  
-I _EI 
- 
-O=I
-J' Y >  O= 	OP ^	
-P 
- 
- 
-4/  9$" :; !9%> j n  
-+> :> @¢i _EI  O=
-Y> J' 9$" :; !9%> j
-n   :> @¢  i  O=  9$" 
-:; !9%> j n  	F O= 
-:> @¢ ^:
-  
- 
- 
- 
-C/  
-+>( 
-:> 
-+>( 
-@¢ 
-YE]! 
-O=( 
-:> 
-O=( 
-@¢  9$" :; *<=	"> 
-*$?@! ! ^:	% 
- 
-entertaining administrative issues that 
-arise from land matters within their 
-mandates.  
- 
-41.   Representing 
-Women 
-and 
-Other 
-Vulnerable Groups 
- 
-1/ Without prejudice to the provisions 
-provided in other laws, women, children 
-and social affairs’ institutions may 
-represent poor women and vulnerable 
-groups in a court of law to protect their 
-land right.  
- 
-2/   The Ministry of Justice or the Bureau of 
-Justice shall develop a procedural system 
-regarding institutions that are mandated 
-to represent persons mentioned in Sub-
-Article (1) of this Article 
- 
- 
-PART THREE 
- 
-RURAL LAND REGISTRATION AND 
-SURVEYING 
- 
-SECTION ONE 
- 
- 
-RURAL LAND REGISTRATION AND 
-SURVEYING INSTITUTION 
- 
-42.  Establishment  
- 
- 
-1/ Rural land registration and surveying 
-departments shall be established by 
-regional governments under their Rural 
-Land Administration and UseInstitutions. 
- 
-2/ The organizational structure; and powers 
-and responsibilities of the departments 
-shall be determined under regional laws.  
- 
-3/   Notwithstanding  Sub-Article  (2) of  this 
-Article, rural land registration and 
-surveying 
-departments 
-shall 
-be 
-established  at  Regional,  Zone, Special 
-Woreda, City, and  Woreda levels.  
- 
-4/ Regional rural land registration and 
-surveying departments shall be led by the 
-chief registrar and chief surveyor; zonal, 
-special woreda and urban rural land 
-registration and survey units by registrar 
-and 
-surveyor; 
-while 
-woreda 
-land 
-registration and surveying departments 
-shall be led by woreda registrar and 
-surveyor. 
- 
-5/ The Regional Chief Registrar and Chief 
-Surveyor; and the Woreda Registrar and 
-Surveyor shall be appointed by Regional 
-Governments.  
- 
-7C0D2¿6
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15933 
- 
-8/  
-+>( 
-:> 
-+>( 
-@¢ 
-YE]! O=( :> O=( @¢ 
-<E> F%"  Uª   
-^R> 
-$`o(! 
-WU:WJ( 
-! ÊK ^g>  
- 
-    
-´1
-´1
-´1
-´1. 
-. . 
-. 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; ^_`
-^_`
-^_`
-^_` !9%>
-!9%>
-!9%>
-!9%> j
-j
-j
-j b"c
-"c
-"c
-"c 
- 
- 
-// 9$" :; ^_`E 'O9. 	 
-*<9=,> b"c` *E[ *%  
-'w E *E[ j "` :W> 
-::9 UJ>E ^g> 
- 
-6/ !9% b"cQ '}E :O 	O9 
-( 
- 
- 
-´4
-´4
-´4
-´4. 
-. . 
-. 
-
-
- '}
-'}
-'}
-'} :W
-:W
-:W
-:W -."
--."
--."
--." *R.
-*R.
-*R.
-*R. 
- 
-//  
-' 
-:W 
--." 
-UR$( 
-*<=	
- :+j"E :O '[OF 
-J^ 	 `  gT UJE %Z 
-'Ð ^T"`- 
- 
- 
-x) 
-W*E[ ' R$  ' :W 
--." W :R$ W!i 
- 
- 
-W) ^_` UJe> U+x[ f 
-g 
-<@" 
-^_` 
-((.> 
-^_`E 
-£ 
-£ 
-W 
-R( 
-UWn f ] '^W+. 
-U :gE ^T"` 
- 
-6/  
-' 
-:W 
--." 
-UJE 
-^^¦- 
- 
-x)   
-:W 
-K	 
-gT 
-]W 
-gÉ I 
-W)  _E :W  -." gT ]W *© 
-I  
-)  O= :W  -." gT ]W *© 
-I   
-:)  @ :W  -." gT Ï< *© 
-I Y> 
-)  ' :W  -." gT *!< *© 
-I 
-       ^g> 
- 
-´C
-´C
-´C
-´C.  ±
-
-±
-
-±
-
-±
- 
-²lX
-²lX
-²lX
-²lX 
-:a
-:a
-:a
-:a 
-.  
-.  
-.  
-.   
-9Ñ
-9Ñ
-9Ñ
-9Ñ 
-<W:g>o(
-<W:g>o(
-<W:g>o(
-<W:g>o(  
- 
-W 
-9$" 
-=<" 
-j 
-dw  
-J±
- 
-²lX 
-:a 
-.   
-" 
-:R" *W 
- 
- 
- 
-6/ The powers and responsibilities of the 
-Regional Chief Registrar and Chief 
-Surveyor; and the Woreda Registrar and 
-Surveyor shall be determined under 
-regional laws. They shall be accountable 
-to the respective institution head.  
- 
-43.  Rural Land Registration and Surveying 
-Procedure 
- 
-1/  The rural land adjudication system shall 
-be compulsory and systematic.  
- 
- 
- 
-2/ The registration system shall be parcel 
-based. 
- 
-44.  Unique Parcel Identification Number 
- 
- 
-1/ 
-The 
-assignment 
-of 
-unique 
-parcel 
-identification number shall be given in 
-order 
-of 
-descending 
-government 
-administrative structure and shall fulfill 
-the following features: 
- 
-a)   A unique parcel identification 
-number that has been assigned to a 
-parcel may not be given to another 
-parcel; 
- 
-b)   It shall remain permanent even 
-during the exchange and transfer of 
-holdings; 
-except 
-in 
-cases 
-of 
-division 
-and 
-amalgamation 
-of 
-holdings.   
- 
-2/ The unique parcel identification number 
-shall contain: 
- 
-a)   The regional identification that shall 
-be represented by two letters; 
- 
-b)   The zonal identification that shall be 
-represented by two numbers; 
- 
-c)  The woreda identification that shall 
-be represented by two numbers; 
- 
-d)   The kebele identification that shall 
-be represented by three numbers; 
- 
-e)    The parcel identification that shall 
-be represented by five numbers. 
- 
- 
- 
-45.  National Geodetic Ground Control Points  
- 
- 
- 
- 
-The different rural cadastral surveying 
-methods shall be networked with the national 
-geodetic ground control points.  
- 
- 
- 
-7C0D2¿1 
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15934 
- 
-´8
-´8
-´8
-´8.  
-.  
-.  
-.  *`K
-*`K
-*`K
-*`K 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; ^_`
-^_`
-^_`
-^_` !9%
-!9%
-!9%
-!9% 
- 
-9$" :; ^_` !9% ZORsE e 
-:gE *W  
- 
-´
-´
-´
-´.  ¯>EI
-¯>EI
-¯>EI
-¯>EI 
-L EI
-L EI
-L EI
-L EI 
-*
-*
-*
-* 
-k=° E>
-k=° E>
-k=° E>
-k=° E> 
-*%(
-*%(
-*%(
-*%( 9|
-9|
-9|
-9| Rw E
-Rw E
-Rw E
-Rw E :
-:
-:
-: <W:$j
-<W:$j
-<W:$j
-<W:$j 
- 
-//  :EF<` U»o(   
-9$" :; ^_`E 'O9. 	 
-J*j! ^ g !E *%( 
-9| 
-Rw E 
-: 
-U<$- 
-:g>o(E 'O9. ^T"%o+ 
- 
-6/ W^ ¯>I * k=°  YE]! 
-L  ^_` UO9.  ` Y> f 
-%W:9h`o( 
-:`o(E 
-YE=ª 
-'O9. *W%o( 
- 
- 
-1/ ¼ ^! F { %^ ^_`E 
-W'O9. ^! W'<:9 U@" 
-f : *  (>o(E 
-YE@"s '[OF 'O9. *W%o( 
- 
- 
-´
-´
-´
-´.  ^_`
-^_`
-^_`
-^_` 
-'O9)
-'O9)
-'O9)
-'O9) 
-:OP
-:OP
-:OP
-:OP 
-^
-^
-^
-^ 
-?(
-?(
-?(
-?( 
-<W'jO>
-<W'jO>
-<W'jO>
-<W'jO> 'aa
-'aa
-'aa
-'aa <W'[OF
-<W'[OF
-<W'[OF
-<W'[OF  
- 
-// 9$" :; ^_`E :WJ d 
-:OP :tOa gT 9$" :; :9 
-(<. J:F%Q K j;` W( 9E 
-*#Q` U@" f 9	> b- 
-b"c  :EF<` ^R>  
- 
- 
-6/ Z *E@ E¹< *E@ (/) :O 
-UR( f J <[< " R gE 
-*^ ! 
- 
-1/ Z *E@ E¹< *E@ (6) 	99( 
-f We È 'E~(! %W ^_` 
-<W:d9( 
-:OP 
-(? 
- 
-^9:` JZ f È <W!9% 
-:OP( 
-*(j! 
-U 
-:?U 
-@%^ W(!  
- 
-´D
-´D
-´D
-´D.  
-.  
-.  
-.  <W
-<W
-<W
-<W %Z"
-%Z"
-%Z"
-%Z" :9
-:9
-:9
-:9  
- 
-9$" :; !9% :OPw  %Z" :9 
-(<. : *W%o(  
- 
- 
-. 
-. . 
-. <W
-<W
-<W
-<W ²`
-²`
-²`
-²` :OP
-:OP
-:OP
-:OP b"c
-"c
-"c
-"c  
- 
-    
-// %Z" 
-:9 
-ReH 
-:OPw  
-	 
-²` :OP b"c  :Ä9" *W%o( 
- 
-  
-46.  Participatory Registration Process  
- 
-The rural landholding registration shall be 
-participatory.  
- 
- 
-47.  Protecting the Rights of Children, Women, 
-Disabled and Absentee Landholders  
- 
-1/  Regional States shall ensure that the laws 
-they enacted protect the rights of 
-landholders who may not be present 
-during the rural land adjudication process 
-for reasons beyond their control. 
- 
-2/  Special emphasis shall be given to the 
-protection of rights of children; people 
-with disabilities; and women who may  
-not be present at the time and place of 
-adjudication of rights.  
- 
-3/ Registering organs shall ensure that 
-representatives or tutors who appear 
-during 
-adjudication 
-processes 
-or 
-registration of holding rights have 
-produced their power of attorney.  
- 
-48.  Objections to the Adjudication Information 
-and Request for Amendment 
- 
-1/ Regional States shall determine the time 
-limit and procedure where aggrieved 
-parties may lodge objections and apply 
-for rectification of the adjudication 
-information 
-before 
-the 
-information 
-pertaining to rural land holding is entered 
-into the rural land register.    
- 
-2/  The time limit to be determined as per 
-Sub- Article (1) of this Article may not 
-be less than six month. 
- 
-3/  After the lapse of the time limit provided 
-under Sub-Article (2) of this Article, 
-every land holder is presumed to be 
-aware of the registered information. 
-objection based on lack of knowledge of 
-registration is not acceptable. 
- 
-49.   Registry Book 
- 
-Rural land registration information shall be 
-contained in the registry book.  
- 
- 
-50.  Digital Land Information System  
- 
- 
-1/  Information contained in the registry book 
-shall be migrated to the digital land 
-information system.  
- 
- 
-7C0D2¿4
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15935 
- 
-6/ :; 
-^_` 
-^ 
-U	Ok 
-: 
-'<Wn> 
-9	   
-²` 
-:OP 
-b"cQ ::9 *W%o(  
- 
-1/ R[ :¦F Y> ²` :OP 
-b"c 
-YE	 
-*F%Q 
-W'<OP 
-9WF 
- 
-/
-/
-/
-/. 
-. . 
-. <W
-<W
-<W
-<W ^_`
-^_`
-^_`
-^_` 'O9)
-'O9)
-'O9)
-'O9) !<"
-!<"
-!<"
-!<" O@
-O@
-O@
-O@  
- 
-// 9$" :; %W ^_` ^_`( <" 
-WU9h( YE=E¤ '} ^_` 'O9) 
-!<" O@ :R$ *W 
- 
- 
-6/ ^_` 'O9) !<" O@ U<.
- 
-S[ TO( ^  
-  
-6
-6
-6
-6. 
-. . 
-. ^_`
-^_`
-^_`
-^_` 'O9)
-'O9)
-'O9)
-'O9) !<"
-!<"
-!<"
-!<" O@
-O@
-O@
-O@ (Ò
-(Ò
-(Ò
-(Ò  
- 
- 
-// *E[ '} *E[ %W ^_` <! :d9  
-!<" O@ JR$( !<" O@Q 
-'E~(E! %W^_` :> .j! 
-JF`wu <9{W` 
- 
-6/ 
-^_` 
-'O9) 
-!<" 
-O@ 
-%W^_`E 'O9) :tOa '<OP 
-( ^_` 'O9) !<" O@ ^ 
-'E~(!  ?
-µ '<OP  *^@"! 
- 
-1/ Z *E@B E¹< *E@B (/) Y> (6) 
-	99( 
-T"! 
-^_` 
-'O9) 
-!<" O@ ^ :?U @" 
-U W(-  
- 
- 
-x)  !9%( 
-bE 
-W( 
-* 
-Á O Jgi ^! 
- 
-W) !9%( 9 . g R[ ^ 
-:"q_ J> Jg \ ( 
- 
-4/ Z *+, 9$" :; ::9 
-b$E R$( : * !9% 
-	 ep:( <Z k= 	OR 
-%W^_` W	OR k= :( * 
-:{ } ^JeW+ 
- 
- 
-1
-1
-1
-1. 
-. . 
-. !9%
-!9%
-!9%
-!9% :OPE
-:OPE
-:OPE
-:OPE j`
-j`
-j`
-j` <W'[OF
-<W'[OF
-<W'[OF
-<W'[OF  
- 
-    
-// 
-%W ^_` W(. 	O9 fI ' 
-J«eW 
-^! 
-+©	 
-f 
-] 
-:; !9%  R¤  :aa  ^T"` 
- 
-6/ 
-  
-J:; 
-^_` 
-" 
- 
-9	  > Y9=w  :d9s ^9% 
-  
- 
-4
-4
-4
-4.  
-.  
-.  
-.  *9"
-*9"
-*9"
-*9" *@n
-*@n
-*@n
-*@n 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; :OP
-:OP
-:OP
-:OP b"c
-"c
-"c
-"c  
- 
-    
-// 	
- 
-	OP 
-9$" 
-:; 
-:OP 
-b"c ^dO 
- 
- 
-2/  All land rights transfers and restrictions 
-shall be registered in the digital land 
-information system.  
- 
-3/ Printed documents and digital land 
-information systems may be used as 
-evidence, as relevant.  
- 
-51.   Landholding Certificate  
- 
-1/   Rural landholders shall be issued with a 
-landholding certificate for each of their 
-parcels. 
- 
-2/   The landholding certificates may carry 
-secret codes.  
- 
-52.  Effect of Landholding Certificate   
- 
- 
-1/  A landholder shall have all the rights and 
-duties that a holding right confers over 
-the parcel that is registered and certified 
-in his name.   
- 
-2/ Landholding certificate is the ultimate 
-evidence that proves a landholder. 
-Contrary evidence may not be admitted 
-to disprove the landholding certificate.  
- 
-3/   Objections over rights accrued under 
-Sub-Articles (1) and (2) of this Article 
-may only be made where:   
- 
- 
-a) The registration was conducted by an 
-unauthorized organ; or 
- 
-b) The registration was made based on an 
-unlawful document. 
- 
-4/    A landholder who suffered damage due 
-to mistakes committed by a rural land 
-registering officer or organ authorized 
-under this Proclamation, shall be entitled 
-to commensurate compensation.  
- 
-53.   Updating the Register 
- 
-1/ The land information shall be updated 
-during 
-the 
-change 
-of 
-landholders; 
-division; or amalgamation of parcels. 
- 
-2/  All other restrictions on landholding rights 
-shall be registered.  
- 
-54.   National Rural Land Information System  
- 
-1/   National Rural Land Information System 
-shall be established at federal level.  
- 
-7C0D2¿C
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15936 
- 
-6/ Uµ<¶H 9$" :; :OP b"cE 
-	
-PI <=[
- 
- 
- 
-C
-C
-C
-C.  
-.  
-.  
-.  :;
-:;
-:;
-:; :OP
-:OP
-:OP
-:OP ((.>
-((.>
-((.>
-((.> jE,
-jE,
-jE,
-jE, 
- 
-//  9$" :; :OP b"c Z 
-*+, 
-:O 
-Uµ<¶H 
-JU:( 
-	
- 9$" :; :OP b"c " 
-9>h> @>r :gE ^T"` 
- 
- 
-6/ J 	 	
- :OP b"c : 
-U9%( 9$" :; :OP c^> 
-^d Uµ<¶H ^R>  
- 
-1/   Z *E@ E¹< *E@ (6) 
-:O 
-Uµ<¶H 
-U<( 
-*F% 
-j` 
-:OPw E 
-W	
- 
-:OP 
-b"c : *W%o( 
- 
- 
-8
-8
-8
-8. 
-. . 
-. %^:d9s!
-%^:d9s!
-%^:d9s!
-%^:d9s! F
-F
-F
-F (Ò
-(Ò
-(Ò
-(Ò <o(
-<o(
-<o(
-<o( :L 
-:L 
-:L 
-:L  
- 
-    
-%W^_`( %<:d9( ^_` ^ YE	 v= 
-^! 9	 %^:d9s! UJ 9	   
-@%^ *o(- 
- 
-//  9$" :; *<=	" F %Z" 
-:9s  ^  YE:d9s F`W%o( 
-YE	 *z" f ¼
-^ ( I 
- Y"a 
-<!!L  ^! f 
- ^_` 
-<!!L I ^! 
- 
-6/ :d9( ^_` ^ :(E : 
-U@Ey ^! Uª YE	  
-Ò> .? ^! J' ÇE ^! 
-:^ 	
- ^!  F 
-:O U£ F`w  
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n 6 
- 
-<W
-<W
-<W
-<W :OP
-:OP
-:OP
-:OP 'Fh
-'Fh
-'Fh
-'Fh :>
-:>
-:>
-:> <W
-<W
-<W
-<W n
-n
-n
-n 
- 
-
-
-
-. 
-. . 
-. :OP
-:OP
-:OP
-:OP 'Fh
-'Fh
-'Fh
-'Fh :
-:
-:
-: 
- 
- 
-// 9$" 
-:; 
-*<=	"> 
-*$?@! 
-' '>o(E! !9% RÁ  .j! 
-*WE 
-WU 
-9T  
-n 
-'[OF 
-*W%o( 
- 
-6/ :; 
-^_` 
-:OPw E 
-WUek 
-$&w  
-UR$( 
-:OP 
-c^I 
-UR. b"c>  U$@( *9F 
-n 
-:$E 
- 
-Uª 
-  
-^R> 
- 
-2/ The Ministry shall organize and administer 
-the rural land information system. 
- 
- 
-55.   Coordination and Sharing of Land 
-Information  
- 
-1/ Regional rural land information system 
-shall be linked and harmonized with the 
-federal rural land information system 
-which 
-is 
-established 
-under 
-this 
-Proclamation. 
- 
-2/ The type and content of rural land 
-information that need to be sent from 
-regional to federal land information 
-system shall be determined by the 
-Ministry. 
- 
-3/ Regional States shall send updated 
-information 
-to 
-the 
-federal 
-land 
-information system pursuant to Sub-
-Article (2) of this Article.  
- 
- 
-56.   Unregistered Valid Rights  
- 
-Even if not registered as debt or restriction 
-over the registered holding, the following 
-restrictions shall have legal effect: 
- 
-1/  As short-term lease; sharecropping; or 
-short-term joint holding contracts which 
-are not required to be recorded in the 
-land 
-register 
-under 
-regional 
-land 
-administration law, 
- 
-2/   Such obligations established by federal or 
-regional laws as public health; urban 
-plans; or similar servitudes which 
-restrict; or totally cancel the rights 
-created on registered holdings.  
- 
-SECTION TWO 
- 
-RIGHT TO ACCESS INFORMATION AND  
- 
-PAYMENT 
- 
-57.   Right to Access to Information 
- 
- 
- 
- 
-1/ Rural Land Administration and Use 
-Institutions 
-shall 
-avail 
-registration 
-information to all interested parties.   
- 
-2/   The type of information, and procedure of 
-accessing and availing the information 
-and the corresponding service fees to be 
-paid shall be determined by regional 
-laws.   
- 
-7C0D2¿8
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15937 
- 
-
-
-
-. 
-. . 
-. <W
-<W
-<W
-<W n
-n
-n
-n  
- 
-    
-// W:r: f WU	OF !9%> j 
-n *^$j! 
- 
-6/ ^_` :OPE j` W'[OF :{ 
-g n :Je *W  
- 
-1/ ^_`E q` 9$! '[OF (Ò W( 
-^_` ((.  U	OF f W++u 
-Jn ¸ ^g> 
- 
-E¹<
-E¹<
-E¹<
-E¹< n
-n
-n
-n 1 
-    
-    
-*<e¸
-*<e¸
-*<e¸
-*<e¸U *
-*
-*
-* ÊK
-ÊK
-ÊK
-ÊK  
- 
-    
-D
-D
-D
-D.  
-.  
-.  
-.  Uµ<¶H
-Uµ<¶H
-Uµ<¶H
-Uµ<¶H ÊK
-ÊK
-ÊK
-ÊK  
- 
-Uµ<¶H-  
- 
- 
-// U:WJ`o(E 
-' 
-'<%"> 
-£ 
-[n 
-:<$ 
-^ZE 
-*+, 
-'<ep!i 
- 
- 
-6/ WZ *+, *e¸p! UF> W:OP 
->% 
-UO¤ 
-*9" 
-*@n 
-<`E="Á E dPi YE]! 
- 
- 
-1/  *9" *@n 9$" :; :OP b"c 
-YEdO 	"   
- 
-Ë.  
-.  
-.  
-.   
- 
- 
-  ÊK
-ÊK
-ÊK
-ÊK 
- 
-// YE	  %
- ]¥` 9$" :;E 
-U<=[" *	OPr -' 
- 
-6/ JZ F " U! "" F 
-'( ^ZEE *+, '<ep! ÊK 
-*W%o( 
- 
-1/ L > [n U Rw  9$" :; 
-:$@! :E  % ' 
-e¸U 
-:g>o(E 
-'<J" 
-ÊK 
-*W%o(  
- 
-Ë/
-Ë/
-Ë/
-Ë/. 
-. . 
-. 
-
-
- 9$"
-9$"
-9$"
-9$" :;
-:;
-:;
-:; *<=	">
-*<=	">
-*<=	">
-*<=	"> *$?@!
-*$?@!
-*$?@!
-*$?@! 
-!
-!
-!
-! ÊK
-ÊK
-ÊK
-ÊK 
- 
-//  9$" :; *<=	" ' 
-9$" :; 	 J'  > 
-J:Q K YE]! 9$" :; 
-W *9F YE( 	OF 	QE 
-^! ¢FFHE Y<J :tOa( :H 
-^9% 
- 
-6/  :EF<` W^! 	F 9$" 
-:; 
-*<=	"> 
-*$?@! 
-' 
-*"G *	N I JK *"L *	N > 
-*"L *	N  ^_` 	 J'  
-58.  Payment 
- 
-1/   No payment shall be requested for initial 
-registration and surveying.  
- 
-2/  Service fees shall be paid for updating 
-landholding data. 
- 
-3/   Service fees may not be paid in cases of 
-land exchange which has the effect of 
-land consolidation.   
- 
-SECTION THREE 
- 
-RESPONSIBILITIES OF EXECUTIVE 
-ORGANS 
- 
-59.   The Responsibility of the Ministry 
- 
-The Ministry shall be responsible to: 
- 
-1/ 
-Ensure 
-implementation 
-of 
-this 
-Proclamation 
-by 
-coordinating 
-and 
-providing the necessary professional 
-support to relevant institutions; 
- 
-2/  Prepare national standards to implement 
-this 
-Proclamation 
-and 
-ensure 
-harmonization of the land information 
-systems; and 
- 
-3/ Facilitate the establishment of national 
-rural land information system.  
- 
-60.   The Responsibility of Regions 
- 
- 
-1/ Based on their reality, regions shall 
-establish rural land administration and 
-use institutions. 
- 
-2/ Regions shall issue detailed laws in 
-conformity with this Proclamation.  
- 
-3/  Regional States shall be responsible to 
-oversee the implementation of the rules 
-on the land rights of women and 
-vulnerable group by various regional 
-institutions. 
-  
-61.   Responsibility of Regional Rural Land 
-Administration and Use Institutions 
- 
-1/   Regional Rural Land Administration and 
-Use Institutions shall lead the process 
-where rural land is expropriated for 
-urban expansion or for other purposes.  
- 
-2/   In the event of expropriation of farmers’ 
-and 
-pastoralists’ 
-land 
-for 
-urban 
-expansion, 
-Regional 
-Governments, 
-especially Rural Land Administration 
-7C0D2¿
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15938 
- 
- *<@[ } ^Je :$@!> 
-^_` :`o( YE=^O. 'O9. 
-*W%o(  
- 
-n
-n
-n
-n *
-
-*
-
-*
-
-*
- 
-    
-  
-
-
-
- 
-
-
- [Eºw 
-[Eºw 
-[Eºw 
-[Eºw  
- 
-Ë6
-Ë6
-Ë6
-Ë6.  
-.  
-.  
-.  Er
-Er
-Er
-Er $&
-$&
-$&
-$& 
- 
-// 'E~(! R( FI  ^! 
-:EFb ^_`E 9. :E9[ 
-OO J" ¿0 Y<J /20 ^! 
-J/ c: Y<J C c: U	"< 
-M  Y<
-  ^! ]WQ! ^@ 
- 
-6/ 'E~(! R( FI  ^! 
-:EFb ^_` ^ k= 	OR 
-J" 0 Y<J /20 ^! J1 
-c: Y<J  c: U	"< M 
-Y<
- ^! ]WQ! ^@ 
- 
-1/ 'E~(! R( %e@	  ` ^ 
-'E~(E! 
-FE%` 
-R
- 
-^! 
-YER
- e@	 J" 3C0 Y<J 
-0 ^! J/ c: Y<J 1 c: 
-U	"< Y<
- ^! ]WQ! 
-^@ 
- 
-4/ 'E~(! R( J:; *$?@! 
-vj[ ( ^_`(E .j! ^ +W 
-J" 30 Y<J 0 ^! J/ c: 
-Y<J 
-1 
-c: 
-U	"< 
-Y<
- 
-^! ]WQ! ^@ 
- 
- 
-C/ xR~ :; ^_` 'ROP @O 
-%W^_`I 
-'<OP 
-RO 
-^! 
- '<OP R$ %W£ J" 
-70 Y<J 3C0 ^! J/ c: 
-Y<J 1 c: U	"< M Y<
- 
-^! ]WQ! ^@ 
- 
-8/  'E~(!  R( :; Ä$  ^!  9¦  
-YE	g  J" /20 Y<J 620 ^! 
-J/ c: Y<J C c: U	"< 
-M  Y<
- ^!  ]WQ! ^@ 
- 
- 
- 
-Ë1
-Ë1
-Ë1
-Ë1.  
-.  
-.  
-.  n
-n
-n
-n ±"
-±"
-±"
-±" k *F%
-*F%
-*F%
-*F% 
- 
-    
-JZ F " *F% o(> Z F 
-%ÄeM k=  ^  n ±" k 
-[Eºw  e¸U ^g>  
- 
-Ë4
-Ë4
-Ë4
-Ë4.  
-.  
-.  
-.  ^"
-^"
-^"
-^" 
- 
-    
-// :EF< ^!  ^_`E 9 . 
-:E9[ d R( ^"E YE	 :JJ 
- *^ ! 
-and Use Institutions, shall ensure that no 
-use and holding right be taken before 
-compensation is paid in advance.  
- 
-PART FOUR 
- 
-MISCELLANEOUS PROVISIONS 
- 
-62.  Criminal Liability 
- 
-1/   Any person who illegally invades private, 
-communal or state holdings shall be 
-fined with payment of 30,000 to 100,000 
-Birr or punished with 1 to 5 years' 
-rigorous imprisonment or both.  
- 
- 
-2/  Any person who causes damage to private, 
-communal or state holding shall be fined 
-with payment of 50,000 to 150,000 Birr 
-or punished with 3 to 7 years rigorous 
-imprisonment or both.  
- 
-3/  Any person who constructs or permits any 
-construction in an unauthorized place 
-shall be fined with payment of 25,000 to 
-50,000 Birr or punished with 1 to 3 years 
-imprisonment  or both.  
- 
- 
-4/    Any person who uses his holding 
-contrary to the land use plan shall be 
-fined with payment of 20,000 to 50,000 
-Birr or punished with 1 to 3 years 
-imprisonment or both. 
- 
-5/    A landholder who submits a forged 
-landholding certificate, a professional 
-who hides evidence or gives false 
-evidence shall be fined with payment of 
-10,000 to 25,000 Birr or punished with 1 
-to 3 years rigorous imprisonment or both. 
- 
-6/ Anyone who sells or buys land shall be 
-fined with payment of 100,000 to 
-200,000 Birr or punished with 1 to 5 
-years of rigorous imprisonment or both. 
- 
- 
-63.   Application of the Civil Code 
- 
- 
-The Civil Code provisions shall apply as 
-deemed necessary in areas relevant to this 
-law that are not covered under this 
-Proclamation.  
- 
-64.   Period of Limitation 
- 
-1/    A person who illegally possesses state or 
-communal holding may not invoke a 
-period of limitation as a defense.  
-7C0D2¿
-
-       gA                   Ød‰L ነU¶T Uz¤È qÜ_R    @E 6078 ›.M   Federal   Negarit  Gazette  No. 58, 14th August,  2024 ….page                          
- 
- 
- 
-15939 
- 
-6/ ^_`Ó W*F%  R( <Á~ 
-U R( :QE :$j JO 
-^! @ f r!N 7C c: 
-(<. 
-< 
-@O 
-:Q 
-^" 
-^`9=  
- 
-331/   :E W:$j     
-@:ª ^" [Eºw  e¸U 
-^g>  
- 
-ËC
-ËC
-ËC
-ËC. 
-. . 
-. :Ä9
-:Ä9
-:Ä9
-:Ä9 [Eº
-[Eº
-[Eº
-[Eº 
- 
-// Z F [Eºw  ^Z *+, J:	- 
-K > 	
- ={ * 
-K @"( "" Y	O9%o( % 
-k=  ^ e¸U *^gM!  
-   
-6/ ^Z *+, J:(Q K Rª ^_` 
-'O9) !<" O@L  @%^ 
-*o( 
- 
- 
-Ë8
-Ë8
-Ë8
-Ë8. 
-. . 
-. 	E
-	E
-	E
-	E '(
-'(
-'(
-'( <E
-<E
-<E
-<E  
- 
-    
-Uµ<N  !" # YE	 *<efQ ^ZE 
-*+, W'<ep! 	E  E  ^   
- 
- 
-Ë
-Ë
-Ë
-Ë. 
-. . 
-. <WaH>
-<WaH>
-<WaH>
-<WaH> e¸U
-e¸U
-e¸U
-e¸U <W'^gM
-<W'^gM
-<W'^gM
-<W'^gM  
- 
- 
-  
- 
-// 	
- 
-:EF< 
-9$" 
-:; 
-*<=	"> 
-*$?@! 
-*+, 
--." 
-428//0D2Õ Z *+, ¢Ã 
- 
-6/ ^ZE *+, U?OE 
-'E~(! FI 
-*+,I 	EI :: ^! *R
-" 
-![ Z *+, 	9kE k=  
-:WJ e¸U *^TO(!  
- 
-Ë
-Ë
-Ë
-Ë. 
-. . 
-. *+¬
-*+¬
-*+¬
-*+¬ Up>
-Up>
-Up>
-Up> f
-f
-f
-f  
-  
-  
-   
- 
-^Z *+, 	
-   ` 
-J @E r!N p> ^g> 
- 
-*<
-*<
-*<
-*< *%
-*%
-*%
-*% 
-
-
-  @E
-@E
-@E
-@E 6078
-6078
-6078
-6078 c.! 
- 
-ZW"j
-ZW"j
-ZW"j
-ZW"j d(
-d(
-d(
-d( 
- 
-
-
-
- 	
-
-	
-
-	
-
-	
- 
-
-
-
-
-
-
-  
-    
-
-
-
- :EF<
-:EF<
-:EF<
-:EF< Ç;
-Ç;
-Ç;
-Ç;=E
-=E
-=E
-=E 
- 
- 
-2/   An action to reclaim a holding which was 
-illegally possessed by another person 
-shall be barred by period of limitation if 
-not brought within 15 years after the date 
-he should have brought the case or 
-having become aware of his rights.  
- 
-3/  Period of limitation provided in other laws 
-shall apply in respect of claims of other 
-rights.   
- 
-65.   Transitory Provisions 
- 
-1/  The provisions of this Proclamation may 
-not apply to cases that are pending at 
-federal or regional judicial bodies before 
-the 
-coming 
-into 
-force 
-of 
-this 
-Proclamation. 
- 
-2/ Landholding certificates, which were 
-issued before the coming in to force of 
-this Proclamation shall be valid.  
- 
-66.   Power to Issue Regulation  
- 
-The 
-Council 
-of 
-Ministers 
-may 
-issue 
-Regulations to implement this Proclamation.  
- 
-67.   Repeals  
- 
-1/ The Federal Rural Land Administration 
-and Use Proclamation No 456/2005 is 
-hereby repealed. 
- 
-2/ No law, Regulation, Directive or Practice 
-shall, in so far as it is inconsistent with 
-this Proclamation, be applicable with 
-respect to matters provided for in this 
-Proclamation.  
- 
-68.   Effective Date 
- 
- 
-This Proclamation shall come into force on 
-the date of publication in the Federal Negarit 
-Gazeta. 
- 
-Done at Addis Ababa, on this 14th day of 
-August, 2024 
- 
- 
-SAHLEWORK ZEWDIE 
- 
-PRESIDENT OF THE FEDERAL 
-DEMOCRATIC REPUBLIC OF ETHIOPIA 
- 
- 
-7C0D2¿D
+export const INITIAL_STATE: AppState = {
+  metadata: {
+    courtLevel: defaultCourtLevel,
+    bench: defaultBench,
+    benchType: defaultBenchType,
+    city: REGIONS_AND_CITIES[0],
+    fileNumber: '',
+    date: new Date().toLocaleDateString('en-GB') + ' ዓ/ም',
+    representation: 'self',
+    summonsDelivery: 'self',
+    claimPurpose: '',
+    claimAmount: '',
+    isManualAmount: false,
+  },
+  applicants: [{ id: '1', name: '', honorific: HONORIFICS[0], address: { city: REGIONS_AND_CITIES[0], subcity: AA_SUBCITIES[1], subcityOther: '', woreda: '', houseNo: '' } }],
+  respondents: [],
+  selectedFacts: [],
+  selectedReliefs: [],
+  maintenance: { 
+    active: false, 
+    income: 0, 
+    children: 1,
+    result: 0,
+    context: '',
+  },
+  calculations: {},
+  evidence: [],
+  smartEvidence: {},
+  partyTitles: { applicant: 'አመልካች', respondent: 'ተከሳሽ' },
+  selectedTemplate: '',
+  selectedSubTemplate: null,
+};

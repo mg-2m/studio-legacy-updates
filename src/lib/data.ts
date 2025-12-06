@@ -462,7 +462,7 @@ export const TEMPLATES: Template[] = [
     ]
   },
   {
-    id: 'property_land_law',
+    id: 'property_and_land_law',
     label: 'የንብረት እና መሬት ህግ',
     icon: Map,
     subTemplates: [
@@ -704,7 +704,3 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
-
-
-
-

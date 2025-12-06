@@ -1,0 +1,80 @@
+
+{
+  "id": "tax_appeal_ftac",
+  "documentTitle": "የይግባኝ ማመልከቻ ለፌደራል የግብር ይግባኝ ኮሚሽን",
+  "jurisdictionText": "የፌደራል የግብር አስተዳደር አዋጅ አንቀጽ ፹፰",
+  "meta": {
+    "keywords": [
+      "tax appeal",
+      "tax commission",
+      "FTAC",
+      "appeal",
+      "የግብር ይግባኝ",
+      "ኮሚሽን"
+    ],
+    "jurisdictionType": "Administrative Tribunal (FTAC)",
+    "purpose": "የግብር ይግባኝ ለማቅረብ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የገቢዎች ሚኒስቴር በመቃወሚያዎ ላይ የሰጠውን ውሳኔ ለመቃወም እና ጉዳዩ በገለልተኛ የግብር ይግባኝ ኮሚሽን እንዲታይ ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ይግባኝ የሚቀርበው ለፌደራል የግብር ይግባኝ ኮሚሽን ነው።\n\n### የጊዜ ገደብ\nየገቢዎች ሚኒስቴር የመቃወሚያ ውሳኔ ከደረሰዎት ቀን ጀምሮ ባሉት ሰላሳ (30) ቀናት ውስጥ ይግባኙ መቅረብ አለበት (አንቀጽ 88(2))።\n\n### ቅድመ ሁኔታዎች\n- የ50% ቅድመ ክፍያ፡ ይግባኝ ከማቅረብዎ በፊት፣ ከተከራከሩበት የግብር መጠን ውስጥ 50% (ቅጣቶችን እና ወለድን ሳይጨምር) መክፈል ግዴታ ነው (አንቀጽ 88(3))።\n- ማስረጃ (Required Evidence): የገቢዎች ሚኒስቴር የሰጠው ውሳኔ እና የ50% ክፍያ ደረሰኝ (PaymentReceiptsTaxCustoms)።",
+  "partyTitles": {
+    "applicant": "ይግባኝ ባይ (ግብር ከፋይ)",
+    "respondent": "መልስ ሰጪ (የገቢዎች ሚኒስቴር)"
+  },
+  "facts": [
+    {
+      "id": "tax_fact_objection_rejected",
+      "label": "ቅድመ ሁኔታዎች",
+      "legalText": "ገቢዎች ሚኒስቴር በ [rejectionDate] የግብር ከፋዩን መቃወሚያ ውድቅ የሚያደርግ ውሳኔ ሰጥቷል።",
+      "autoEvidence": [
+        "NoticeOfObjectionInitial"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተቃውሞ ውድቅ"
+      }
+    },
+    {
+      "id": "tax_fact_50_percent_deposit",
+      "label": "ቅድመ ሁኔታዎች",
+      "legalText": "ግብር ከፋዩ ከተከራከረበት የግብር መጠን 50% (ቅጣቶችን/ወለድን ሳይጨምር) አስቀምጧል።",
+      "citation": "FTAP Art. 88(3)",
+      "autoEvidence": [
+        "PaymentReceiptsTaxCustoms"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "50% ቅድመ ክፍያ"
+      }
+    },
+    {
+      "id": "tax_fact_mof_error",
+      "label": "የይግባኝ ምክንያቶች",
+      "legalText": "የገቢዎች ሚኒስቴር የውስጥ ግምገማ ውሳኔ ስህተት ነው ምክንያቱም [specificReason]።",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የውሳኔ ስህተት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "tax_relief_ftac_overrule",
+      "text": "የገቢዎች ሚኒስቴርን ውሳኔ በመሻር እና የግብር ግዴታውን በማስተካከል ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "tax_relief_ftac_remand",
+      "text": "ገቢዎች ሚኒስቴር ትክክለኛ የሕግ መርሆዎችን በመጠቀም አዲስ ግምት እንዲያካሂድ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

@@ -71,8 +71,14 @@ import * as status_declaration_of_absence from '@/legal_branches/status_law/stat
 import * as app_status_provisional_curator from '@/legal_branches/status_law/app_status_provisional_curator.json';
 import * as app_status_lift_interdiction from '@/legal_branches/status_law/app_status_lift_interdiction.json';
 
+// Import individual tax & customs law templates
+import * as tax_objection_admin_review from '@/legal_branches/tax_customs_law/tax_objection_admin_review.json';
+import * as tax_appeal_ftac from '@/legal_branches/tax_customs_law/tax_appeal_ftac.json';
+import * as customs_claim_for_refund from '@/legal_branches/tax_customs_law/customs_claim_for_refund.json';
+import * as app_tax_stay_of_execution from '@/legal_branches/tax_customs_law/app_tax_stay_of_execution.json';
+import * as app_tax_adr_request from '@/legal_branches/tax_customs_law/app_tax_adr_request.json';
 
-import * as taxCustomsLaw from '@/legal_branches/tax_customs_law.json';
+
 import * as tortLaw from '@/legal_branches/tort_law.json';
 import * as administrativeLaw from '@/legal_branches/administrative_law.json';
 import * as commercialLaw from '@/legal_branches/commercial_law.json';
@@ -148,6 +154,14 @@ const statusLawTemplates = {
     app_status_lift_interdiction
 };
 
+const taxCustomsLawTemplates = {
+    tax_objection_admin_review,
+    tax_appeal_ftac,
+    customs_claim_for_refund,
+    app_tax_stay_of_execution,
+    app_tax_adr_request,
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
@@ -157,7 +171,7 @@ const allTemplates = {
     ...propertyAndLandLawTemplates,
     ...ipLawTemplates,
     ...statusLawTemplates,
-    ...taxCustomsLaw.templates,
+    ...taxCustomsLawTemplates,
     ...tortLaw.templates,
     ...administrativeLaw.templates,
     ...commercialLaw.templates,
@@ -185,7 +199,7 @@ function executeFormula(formula: string, data: { [key: string]: any }): any {
     const values = Object.values(context);
     
     try {
-        const func = new Function(...keys, `return ${formula}`);
+        const func = new Function(...keys, `return ${'return ' + formula}`);
         return func(...values);
     } catch (e) {
         console.error("Error executing formula:", e);

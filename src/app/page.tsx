@@ -8,7 +8,7 @@ import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
 import { differenceInDays, parseISO } from 'date-fns';
-import { initializeFirebase } from '../firebase'; // Correctly import the initialization function
+import { useFirebase } from '@/firebase';
 
 
 import MainLayout from '@/components/main-layout';
@@ -487,15 +487,14 @@ export default function Home() {
   const [state, dispatch] = useReducer(appReducer, INITIAL_STATE);
   const [isClient, setIsClient] = React.useState(false);
   const { toast } = useToast();
+  const { user, isUserLoading } = useFirebase();
 
   useEffect(() => {
     setIsClient(true);
-    // Log the Firebase app object to the console to confirm initialization
-    const { app } = initializeFirebase();
-    if (app) {
-      console.log('Firebase connection successful:', app.name);
+    if (!isUserLoading && user) {
+        console.log('Firebase connection successful, user ID:', user.uid);
     }
-  }, []);
+  }, [user, isUserLoading]);
 
   const { selectedFacts } = state;
 

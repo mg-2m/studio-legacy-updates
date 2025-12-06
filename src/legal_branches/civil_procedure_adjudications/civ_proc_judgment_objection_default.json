@@ -1,0 +1,59 @@
+
+{
+  "id": "civ_proc_judgment_objection_default",
+  "documentTitle": "በአንድ ወገን ፍርድ ላይ የተቃውሞ ጥያቄ (Application for Judgment Objection / Setting Aside Ex Parte Decree)",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 78 እና 79 (Civil Procedure Code of 1965, Arts. 78 & 79)",
+  "meta": {
+    "keywords": ["default judgment", "ex parte", "set aside", "objection", "በሌሉበት የተሰጠ ፍርድ", "ተቃውሞ"],
+    "jurisdictionType": "Court which passed the ex-parte decree"
+  },
+  "templateDescription": "### መመሪያ\nይህ ማመልከቻ አንድ ወገን ችሎት ሳይቀርብ በሌለበት የተሰጠበትን ፍርድ ለመቃወም እና ክርክሩ እንደ አዲስ እንዲታይለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nበሌሉበት ውሳኔ የሰጠው ፍርድ ቤት ራሱ ይህንኑ ተቃውሞ የማየት ስልጣን አለው።\n\n### የጊዜ ገደብ\nተቃውሞው መቅረብ ያለበት ተቃዋሚው ስለ ፍርዱ ካወቀበት ቀን ጀምሮ ባሉት አስራ አምስት (15) ቀናት ውስጥ ነው (አንቀጽ 79)።\n\n### ቅድመ ሁኔታዎች\n**በቂ ምክንያት**\nችሎት ላይ መቅረብ ያልተቻለበት በቂ እና ከአቅም በላይ የሆነ ምክንያት መኖሩን ማሳየት።\n\n**ማስረጃ**\nመጥሪያ ያልደረሰ መሆኑን ወይም ለመቅረብ ያልተቻለበትን ምክንያት የሚያረጋግጥ ማስረጃ (ለምሳሌ የህመም ማስረጃ)።",
+  "partyTitles": {
+    "applicant": "ተቃዋሚ / በሌሉበት የተፈረደበት ወገን (Objector / Defaulting Party)",
+    "respondent": "ተቃራኒ ወገን (Opposing Party)"
+  },
+  "facts": [
+    {
+      "id": "civ_proc_fact_no_proper_service",
+      "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
+      "legalText": "ፍርዱ በሌሉበት የተሰጠው ተቃዋሚው በክርክሩ መጥሪያ ወይም ማስታወቂያ በአግባቡ ስላልደረሰው ነው። (The decree was passed ex parte because the Objector was not duly served with the summons or notice of the suit.)",
+      "citation": "C.P.C. Art. 78(1)(a)",
+      "autoEvidence": ["ObjectionGroundsMemo"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ያልደረሰ መጥሪያ" }
+    },
+    {
+      "id": "civ_proc_fact_sufficient_cause_for_default",
+      "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
+      "legalText": "ተቃዋሚው ችሎት ላይ እንዳይቀር ያገደው በቂ እና ማስቀረት የማይቻል ምክንያት ነበረ። (The Objector was prevented from appearing at the hearing by a sufficient and unavoidable cause.)",
+      "citation": "C.P.C. Art. 78(1)(b)",
+      "autoEvidence": ["ObjectionGroundsMemo"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "በቂ ምክንያት" }
+    },
+    {
+      "id": "civ_proc_fact_absence_of_jurisdiction",
+      "label": "የፍርዱ መሻር ምክንያቶች (Grounds for Setting Aside)",
+      "legalText": "ፍርዱ ፍርድ ቤቱ የዳኝነት ሥልጣን ስለሌለው የማይፀና ነው። (The judgment is a nullity because the court lacked subject matter or territorial jurisdiction to pass the decree.)",
+      "citation": "C.P.C. Art. 5(2)",
+      "autoEvidence": ["ObjectionGroundsMemo"],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የዳኝነት ስልጣን እጦት" }
+    },
+    {
+      "id": "civ_proc_fact_objection_timely_filed",
+      "label": "ሥነ ሥርዓት ጊዜ (Procedural Timing)",
+      "legalText": "ተቃውሞው በሕግ በተቀመጠው የጊዜ ገደብ ውስጥ (ፍርዱ ከታወቀ 15 ቀናት) ቀርቧል። (The objection is filed within the period prescribed by law (15 days from knowledge of the decree).)",
+      "citation": "C.P.C. Art. 79",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ወቅታዊ ተቃውሞ" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "civ_proc_relief_set_aside_judgment",
+      "text": "በሌሉበት የተሰጠውን ፍርድ እንዲሻርና ክሱ በፍሬ ነገር እንዲታይ ወደ ተንጠለጠለ መዝገብ እንዲመለስ። (To set aside the ex parte judgment/decree and restore the suit to the list of pending cases for trial on the merits.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

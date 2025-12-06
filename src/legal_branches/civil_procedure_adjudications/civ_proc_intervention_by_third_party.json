@@ -1,0 +1,51 @@
+
+{
+  "id": "civ_proc_intervention_by_third_party",
+  "documentTitle": "በተንጠለጠለ ክስ ውስጥ ጣልቃ የመግባት ፈቃድ ጥያቄ (Application for Leave to Intervene in a Pending Suit)",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 40 (Civil Procedure Code of 1965, Art. 40)",
+  "meta": {
+    "keywords": ["intervention", "third party", "joinder", "ጣልቃ ገብ", "ሶስተኛ ወገን"],
+    "jurisdictionType": "Court seized of the original case"
+  },
+  "templateDescription": "### መመሪያ\nይህ ማመልከቻ، በሁለት ወገኖች መካከል እየታየ ባለ ክርክር ውስጥ መብቱ ወይም ጥቅሙ ሊነካ የሚችል ሶስተኛ ወገን، በክርክሩ ውስጥ ገብቶ እንዲሳተፍ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 40(2) መሠረት، ጣልቃ ገብቶ ለመከራከር ጥያቄ ማቅረብ የሚቻለው ክሱ ከመዘጋቱ በፊት በማንኛውም ጊዜ ነው።\n\n### ቅድመ ሁኔታዎች\n**ሕጋዊ ጥቅም**\nጣልቃ ገቢው በክርክሩ ውጤት ላይ ቀጥተኛ ሕጋዊ ጥቅም እንዳለው ማሳየት አለበት።\n\n**ማስረጃ**\nጣልቃ ገቢው የሚያቀርበውን የክስ ወይም የመከላከያ መልስ (IntervenerStatement) ማያያዝ።",
+  "partyTitles": {
+    "applicant": "ጣልቃ ገቢ (Intervener)",
+    "respondent": "የመጀመሪያ ተከራካሪ ወገኖች (Original Parties)"
+  },
+  "facts": [
+    {
+      "id": "civ_proc_fact_direct_legal_interest",
+      "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
+      "legalText": "ጣልቃ ገቢው በክርክሩ ጉዳይ ላይ ቀጥተኛ ሕጋዊ ጥቅም ያለው ሲሆን መብቱም በፍርዱ ይነካል። (The Intervener has a direct legal interest in the subject matter of the suit, and their rights will be affected by the judgment.)",
+      "citation": "C.P.C. Art. 40(1)",
+      "autoEvidence": ["IntervenerStatement"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ቀጥተኛ ሕጋዊ ጥቅም" }
+    },
+    {
+      "id": "civ_proc_fact_common_question_of_law_or_fact",
+      "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
+      "legalText": "ክርክሩ ጣልቃ ገቢው ሊያነሳው ከሚፈልገው ክስ ጋር ተመሳሳይነት ያላቸው የሕግ ወይም የፍሬ ነገር ጥያቄዎችን ያስነሳል። (The suit raises common questions of law or fact that are identical or substantially similar to the claim the Intervener wishes to raise.)",
+      "citation": "C.P.C. Art. 40(1)",
+      "autoEvidence": ["IntervenerStatement"],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የጋራ ጥያቄ" }
+    },
+    {
+      "id": "civ_proc_fact_prevent_multiplicity_of_suits",
+      "label": "ሕጋዊ ጥቅም እና አስፈላጊነት (Legal Interest and Necessity)",
+      "legalText": "ጣልቃ ገብነትን መፍቀድ በዚሁ ጉዳይ ላይ የተነሱ በርካታ ክሶችን ያስቀራል። (Granting intervention will prevent the necessity of separate suits and multiplicity of litigation over the same subject matter.)",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የክርክር መደራረብን ማስቀረት" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "civ_proc_relief_grant_intervention",
+      "text": "አመልካቹ በክሱ ውስጥ እንዲገባ እና እንደ ከሳሽ/ተከሳሽ እንዲታከል እንዲፈቀድለት። (To grant the Applicant leave to intervene in the suit and to be joined as a Plaintiff/Defendant.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

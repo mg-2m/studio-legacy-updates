@@ -99,7 +99,15 @@ import * as crim_defence_justification_necessity from '@/legal_branches/criminal
 import * as crim_defence_mitigation_plea from '@/legal_branches/criminal_law_defences/crim_defence_mitigation_plea.json';
 import * as crim_objection_preliminary from '@/legal_branches/criminal_law_defences/crim_objection_preliminary.json';
 
-import * as civilProcedure from '@/legal_branches/civil_procedure_adjudications.json';
+// Import individual civil procedure templates
+import * as civ_proc_amendment_of_pleading from '@/legal_branches/civil_procedure_adjudications/civ_proc_amendment_of_pleading.json';
+import * as civ_proc_intervention_by_third_party from '@/legal_branches/civil_procedure_adjudications/civ_proc_intervention_by_third_party.json';
+import * as civ_proc_joinder_of_third_party from '@/legal_branches/civil_procedure_adjudications/civ_proc_joinder_of_third_party.json';
+import * as civ_proc_judgment_objection_default from '@/legal_branches/civil_procedure_adjudications/civ_proc_judgment_objection_default.json';
+import * as civ_proc_review_of_judgment from '@/legal_branches/civil_procedure_adjudications/civ_proc_review_of_judgment.json';
+import * as succ_app_appoint_liquidator from '@/legal_branches/civil_procedure_adjudications/succ_app_appoint_liquidator.json';
+import * as succ_app_seal_estate from '@/legal_branches/civil_procedure_adjudications/succ_app_seal_estate.json';
+
 
 const contractLawTemplates = {
     contract_debt_recovery,
@@ -203,6 +211,16 @@ const criminalLawDefencesTemplates = {
     crim_objection_preliminary
 };
 
+const civilProcedureAdjudicationsTemplates = {
+    civ_proc_amendment_of_pleading,
+    civ_proc_intervention_by_third_party,
+    civ_proc_joinder_of_third_party,
+    civ_proc_judgment_objection_default,
+    civ_proc_review_of_judgment,
+    succ_app_appoint_liquidator,
+    succ_app_seal_estate
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
@@ -217,7 +235,7 @@ const allTemplates = {
     ...administrativeLawTemplates,
     ...commercialLawTemplates,
     ...criminalLawDefencesTemplates,
-    ...civilProcedure.templates,
+    ...civilProcedureAdjudicationsTemplates,
 };
 
 const allEntities = {
@@ -685,5 +703,6 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
+
 
 

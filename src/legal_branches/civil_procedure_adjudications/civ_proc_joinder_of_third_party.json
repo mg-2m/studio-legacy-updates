@@ -1,0 +1,54 @@
+
+{
+  "id": "civ_proc_joinder_of_third_party",
+  "documentTitle": "ሶስተኛ ወገንን በክሱ የማካተት ጥያቄ (Application to Join a Third Party)",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 41 (Civil Procedure Code of 1965, Art. 41)",
+  "meta": {
+    "keywords": ["third party joinder", "indemnity", "contribution", "ማካተት", "ሶስተኛ ወገን"],
+    "jurisdictionType": "Court seized of the original case"
+  },
+  "templateDescription": "### መመሪያ\nይህ ማመልከቻ، ተከሳሽ በሆነ ሰው ላይ ክስ ሲቀርብበት، ለዚያ ክስ ተጠያቂ ሊሆን የሚችል ሌላ ሶስተኛ ወገን ካለ، ያንን ሶስተኛ ወገን በክርክሩ ውስጥ እንዲካተት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nተከሳሹ የመከላከያ መልሱን በሚያቀርብበት ጊዜ ወይም ከዚያ በፊት መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\n**የኃላፊነት ጥያቄ**\nተከሳሹ በሶስተኛው ወገን ላይ የካሳ ወይም የመተካት መብት እንዳለው ማሳየት።\n\n**ማስረጃ**\nለሶስተኛው ወገን ሊቀርብ የታሰበው የክስ ማስታወቂያ ረቂቅ (ThirdPartyNotice)።",
+  "partyTitles": {
+    "applicant": "ማካተት የሚፈልግ ተከሳሽ (Defendant Seeking Joinder)",
+    "respondent": "በክሱ እንዲካተት የተፈለገው ሶስተኛ ወገን (Third Party to be Joined)"
+  },
+  "facts": [
+    {
+      "id": "civ_proc_fact_right_to_indemnity",
+      "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
+      "legalText": "ተከሳሹ ከሳሽ ከሱ ሊያገኘው የሚችለውን ሙሉ ወይም ከፊል ካሳ በሶስተኛ ወገን እንዲመለስለት ሕጋዊ መብት አለው። (The Defendant claims a right to be indemnified by the third party for the whole or part of any damages that the Plaintiff may recover from the Defendant.)",
+      "citation": "C.P.C. Art. 41(1)(a)",
+      "autoEvidence": ["ThirdPartyNotice"],
+      "mutexGroup": "indemnity_contribution",
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የካሳ መብት" }
+    },
+    {
+      "id": "civ_proc_fact_right_to_contribution",
+      "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
+      "legalText": "ተከሳሹ ከሳሽ በሚጠይቀው ካሳ ላይ ከሶስተኛ ወገን የአስተዋጽኦ መብት አለው። (The Defendant claims a right to contribution from the third party in respect of the Plaintiff’s claim.)",
+      "citation": "C.P.C. Art. 41(1)(a)",
+      "autoEvidence": ["ThirdPartyNotice"],
+      "mutexGroup": "indemnity_contribution",
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "ከዚህም በላይ،", "summary_keyword": "የአስተዋጽኦ መብት" }
+    },
+    {
+      "id": "civ_proc_fact_same_issue_arising",
+      "label": "ለሶስተኛ ወገን ኃላፊነት መሠረት (Basis for Third-Party Liability)",
+      "legalText": "በሶስተኛው ወገን ላይ የሚፈለገው እፎይታ ከመጀመሪያው ክስ ጋር ተመሳሳይነት ባለው የሕግ ወይም የፍሬ ነገር ጥያቄ ላይ የተመሰረተ ነው። (The relief claimed against the third party is based upon substantially the same question of law or fact as the original claim against the Defendant.)",
+      "citation": "C.P.C. Art. 41(1)(b)",
+      "autoEvidence": ["ThirdPartyNotice"],
+      "mutexGroup": "indemnity_contribution",
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ተመሳሳይ ጥያቄ" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "civ_proc_relief_grant_third_party_notice",
+      "text": "በ [thirdPartyName] ላይ የሶስተኛ ወገን ማስታወቂያ እንዲሰጥ እና በክሱ እንዲካተት ፈቃድ እንዲሰጥ። (To grant leave to serve a third-party notice on [thirdPartyName] and join them as a third-party defendant.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

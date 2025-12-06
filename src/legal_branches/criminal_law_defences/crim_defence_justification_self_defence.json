@@ -1,0 +1,92 @@
+
+{
+  "id": "crim_defence_justification_self_defence",
+  "documentTitle": "Plea of Justification: Self-Defence (የሕጋዊነት መቃወሚያ፡- በራስ መከላከል)",
+  "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Arts. 79-80 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፸፱-፹).",
+  "meta": {
+    "keywords": [
+      "self-defence",
+      "justification",
+      "criminal defence",
+      "assault",
+      "ራስን መከላከል",
+      "የወንጀል መከላከያ"
+    ],
+    "jurisdictionType": "Court seized of the criminal case"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር، አንድ ተከሳሽ የፈጸመው ድርጊት በራሱ ወይም በሶስተኛ ወገን ላይ የተቃጣን ሕገ-ወጥ ጥቃት ለመመከት የተደረገ በመሆኑ ሕጋዊ ነው ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Core Legal Test\nጥቃቱ ሕገ-ወጥ፣ የቅርብ እና እርምጃው የተመጣጠነ መሆኑን ማሳየት።\n### Required Evidence\nየጥቃቱን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የፖሊስ ሪፖርት)።",
+  "partyTitles": {
+    "applicant": "Defendant (ተከሳሽ)",
+    "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+  },
+  "facts": [
+    {
+      "id": "crim_fact_imminent_unlawful_attack",
+      "label": "የጥቃቱ ባሕሪ",
+      "legalText": "The Defendant was facing an actual, imminent, and unlawful attack upon their life, limb, or property. (ተከሳሹ በሕይወቱ، በአካሉ ወይም በንብረቱ ላይ ሊደርስ ያለ ትክክለኛ፣ የቅርብ እና ሕገ-ወጥ ጥቃት ገጥሞት ነበር።)",
+      "citation": "Crim. Code Art. 79(1)",
+      "autoEvidence": [
+        "ProofOfImminentDanger"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ሕገ-ወጥ ጥቃት"
+      }
+    },
+    {
+      "id": "crim_fact_defence_of_third_party",
+      "label": "የጥቃቱ ባሕሪ",
+      "legalText": "The Defendant acted to defend a third party who was also facing an imminent, unlawful attack. (ተከሳሹ ጥቃት ሊደርስበት ያለን ሌላ ሰው ለመከላከል እርምጃ ወስዷል።)",
+      "citation": "Crim. Code Art. 79(2)",
+      "autoEvidence": [
+        "ProofOfImminentDanger",
+        "WitnessStatements"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ሶስተኛ ወገንን መከላከል"
+      }
+    },
+    {
+      "id": "crim_fact_no_other_means",
+      "label": "ምጥጥን እና አስፈላጊነት",
+      "legalText": "The act of defence was necessary because there was no other possible means of preventing the attack. (ጥቃቱን ለመከላከል ሌላ አማራጭ መንገድ ስላልነበረው የመከላከል ተግባሩ አስፈላጊ ነበር።)",
+      "citation": "Crim. Code Art. 80(1)",
+      "autoEvidence": [
+        "WitnessStatements"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የአማራጭ መንገድ አለመኖር"
+      }
+    },
+    {
+      "id": "crim_fact_proportionality",
+      "label": "ምጥጥን እና አስፈላጊነት",
+      "legalText": "The means used for defence were proportional to the gravity of the attack and the threatened harm. (ለመከላከል ጥቅም ላይ የዋለው ዘዴ ከጥቃቱ ክብደት እና ከሚሰጋው ጉዳት ጋር የተመጣጣኝ ነበር።)",
+      "citation": "Crim. Code Art. 80(2)",
+      "autoEvidence": [
+        "ProofOfImminentDanger",
+        "WitnessStatements"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የተመጣጠነ እርምጃ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "crim_relief_acquittal_justification",
+      "text": "To acquit the Defendant on the ground that the act was justified and therefore lawful. (ድርጊቱ ህጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

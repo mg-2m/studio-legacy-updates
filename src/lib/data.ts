@@ -93,7 +93,12 @@ import * as comm_preventive_restructuring from '@/legal_branches/commercial_law/
 import * as comm_dissolution_by_court from '@/legal_branches/commercial_law/comm_dissolution_by_court.json';
 import * as comm_appoint_auditors from '@/legal_branches/commercial_law/comm_appoint_auditors.json';
 
-import * as criminalLaw from '@/legal_branches/criminal_law_defences.json';
+import * as crim_defence_justification_self_defence from '@/legal_branches/criminal_law_defences/crim_defence_justification_self_defence.json';
+import * as crim_defence_excuse_insanity from '@/legal_branches/criminal_law_defences/crim_defence_excuse_insanity.json';
+import * as crim_defence_justification_necessity from '@/legal_branches/criminal_law_defences/crim_defence_justification_necessity.json';
+import * as crim_defence_mitigation_plea from '@/legal_branches/criminal_law_defences/crim_defence_mitigation_plea.json';
+import * as crim_objection_preliminary from '@/legal_branches/criminal_law_defences/crim_objection_preliminary.json';
+
 import * as civilProcedure from '@/legal_branches/civil_procedure_adjudications.json';
 
 const contractLawTemplates = {
@@ -190,6 +195,14 @@ const commercialLawTemplates = {
     comm_appoint_auditors
 };
 
+const criminalLawDefencesTemplates = {
+    crim_defence_justification_self_defence,
+    crim_defence_excuse_insanity,
+    crim_defence_justification_necessity,
+    crim_defence_mitigation_plea,
+    crim_objection_preliminary
+};
+
 const allTemplates = {
     ...contractLawTemplates,
     ...familyLawTemplates,
@@ -203,7 +216,7 @@ const allTemplates = {
     ...tortLawTemplates,
     ...administrativeLawTemplates,
     ...commercialLawTemplates,
-    ...criminalLaw.templates,
+    ...criminalLawDefencesTemplates,
     ...civilProcedure.templates,
 };
 
@@ -672,4 +685,5 @@ export const INITIAL_STATE: AppState = {
   selectedTemplate: '',
   selectedSubTemplate: null,
 };
+
 

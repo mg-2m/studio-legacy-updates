@@ -1,40 +1,27 @@
 /**
  * Core Philosophy:
  * This ruleset establishes a dual-access security model. It provides read-only access
- * to authenticated users for shared, public-interest data (courts, parties, cases)
+ * to authenticated users for shared, public-interest data (courts, parties, cases, and legal knowledge)
  * while enforcing a strict, user-ownership model for private user data.
  *
  * Data Structure:
- * The data is organized into three top-level collections:
+ * The data is organized into four top-level collections:
  * 1.  `/courts`: Contains court information and nests all related case data.
  * 2.  `/parties`: A global list of all parties involved in cases.
  * 3.  `/users`: Contains user-specific subcollections, where all data is private.
+ * 4.  `/legal_knowledge`: Stores the parsed articles of law for the AI knowledge base.
  *
  * Key Security Decisions:
- * -   Authenticated Reads: All shared data collections (`courts`, `parties`, and all
- *     nested case data) are readable by any authenticated user, including those signed
- *     in anonymously. This supports the application's need to display case information widely.
+ * -   Authenticated Reads: All shared data collections are readable by any authenticated user,
+ *     including those signed in anonymously. This supports the application's core functions.
  * -   Write Protection on Shared Data: Write access (`create`, `update`, `delete`) to the
- *     shared collections is currently disabled (`if false;`). This is a critical security
- *     measure because the corresponding data models (`Court`, `Case`, etc.) lack an
- *     `ownerId` or `creatorId` field, making it impossible to verify authorship for writes.
- *     This must be addressed in the data schema to enable writes.
+ *     shared collections is currently disabled (`if false;`) for end-users. This is a critical security
+ *     measure. Data will be populated via trusted server-side scripts (seeding).
  * -   Strict User Ownership: All data under `/users/{userId}` is strictly controlled.
  *     Only the authenticated user matching the `{userId}` in the path can read or write
  *     their own documents.
  * -   No User Listing: Listing documents in the top-level `/users` collection is disallowed
  *     to protect user privacy.
- *
- * Denormalization for Authorization:
- * This ruleset is designed to avoid costly `get()` calls. For user-specific data, it
- * relies on path-based ownership (`/users/{userId}/...`). For the shared case data,
- * a future iteration should denormalize an `ownerId` or `creatorId` onto documents
- * to enable secure, owner-based writes without needing to read parent documents.
- *
- * Structural Segregation:
- * The separation of public-read data (`/courts`, `/parties`) from strictly private
- * user data (`/users`) is a core design principle. This ensures that queries for
- * public information cannot accidentally expose private data.
  */
 rules_version = '2';
 service cloud.firestore {
@@ -43,36 +30,15 @@ service cloud.firestore {
     // -------------------------------------------------------------------------
     // Helper Functions
     // -------------------------------------------------------------------------
-
-    /**
-     * Checks if a user is authenticated. This includes password and anonymous users.
-     */
     function isSignedIn() {
       return request.auth != null;
     }
-
-    /**
-     * Checks if the currently authenticated user's UID matches the provided userId.
-     * This is the foundation of the user-ownership security model.
-     * @param userId The UID to check against the request's authentication token.
-     */
     function isOwner(userId) {
       return request.auth.uid == userId;
     }
-
-    /**
-     * Ensures an update or delete operation targets an existing document and that
-     * the requesting user is the owner. Prevents modifying non-existent data.
-     * @param userId The UID of the document owner.
-     */
     function isExistingOwner(userId) {
       return isOwner(userId) && resource != null;
     }
-
-    /**
-     * Checks for the existence of a document at a given path.
-     * Used to ensure subcollection data is not orphaned.
-     */
     function documentExists(path) {
       return exists(path);
     }
@@ -81,82 +47,37 @@ service cloud.firestore {
     // Collection Rules
     // -------------------------------------------------------------------------
 
-    /**
-     * @description Stores court entities. Readable by any authenticated user.
-     * @path /courts/{courtId}
-     * @allow (get) An authenticated user reads a specific court document.
-     * @deny (create) Any user, authenticated or not, tries to create a new court.
-     * @principle Public read for authenticated users, with writes disabled pending schema update.
-     */
     match /courts/{courtId} {
       allow get, list: if isSignedIn();
-      // CRITICAL: Cannot implement owner-only writes. The 'Court' entity is missing an 'ownerId' or 'creatorId' field.
-      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow create, update, delete: if false; // Server-side only
     }
 
-    /**
-     * @description Stores party entities (applicants, respondents). Readable by any authenticated user.
-     * @path /parties/{partyId}
-     * @allow (get) An authenticated user reads a specific party document.
-     * @deny (create) Any user, authenticated or not, tries to create a new party.
-     * @principle Public read for authenticated users, with writes disabled pending schema update.
-     */
     match /parties/{partyId} {
       allow get, list: if isSignedIn();
-      // CRITICAL: Cannot implement owner-only writes. The 'Party' entity is missing an 'ownerId' or 'creatorId' field.
-      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow create, update, delete: if false; // Server-side only
     }
 
-    /**
-     * @description Stores case data, nested under a specific court.
-     * @path /courts/{courtId}/cases/{caseId}
-     * @allow (get) An authenticated user reads a case if the parent court document exists.
-     * @deny (get) A user tries to read a case belonging to a non-existent court.
-     * @deny (create) Any user tries to create a new case.
-     * @principle Ensures relational integrity by checking parent existence; public read for authenticated users.
-     */
     match /courts/{courtId}/cases/{caseId} {
       allow get, list: if isSignedIn() && documentExists(/databases/$(database)/documents/courts/$(courtId));
-      // CRITICAL: Cannot implement owner-only writes. The 'Case' entity is missing an 'ownerId' or 'creatorId' field.
-      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow create, update, delete: if false; // Server-side only
     }
 
-    /**
-     * @description Stores facts related to a specific case.
-     * @path /courts/{courtId}/cases/{caseId}/facts/{factId}
-     * @allow (get) An authenticated user reads a fact if its parent case exists.
-     * @deny (get) A user tries to read a fact from a non-existent case.
-     * @deny (create) Any user tries to create a new fact.
-     * @principle Ensures relational integrity by checking parent existence; public read for authenticated users.
-     */
     match /courts/{courtId}/cases/{caseId}/facts/{factId} {
       allow get, list: if isSignedIn() && documentExists(/databases/$(database)/documents/courts/$(courtId)/cases/$(caseId));
-      // CRITICAL: Cannot implement owner-only writes. The 'Fact' entity is missing an 'ownerId' or 'creatorId' field.
-      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow create, update, delete: if false; // Server-side only
     }
 
-    /**
-     * @description Stores evidence associated with a specific case.
-     * @path /courts/{courtId}/cases/{caseId}/evidence/{evidenceId}
-     * @allow (get) An authenticated user reads evidence if its parent case exists.
-     * @deny (get) A user tries to read evidence from a non-existent case.
-     * @deny (create) Any user tries to create new evidence.
-     * @principle Ensures relational integrity by checking parent existence; public read for authenticated users.
-     */
     match /courts/{courtId}/cases/{caseId}/evidence/{evidenceId} {
       allow get, list: if isSignedIn() && documentExists(/databases/$(database)/documents/courts/$(courtId)/cases/$(caseId));
-      // CRITICAL: Cannot implement owner-only writes. The 'Evidence' entity is missing an 'ownerId' or 'creatorId' field.
-      allow create, update, delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow create, update, delete: if false; // Server-side only
+    }
+    
+    // NEW: Legal Knowledge Base Collection
+    match /legal_knowledge/{articleId} {
+      allow get, list: if isSignedIn();
+      allow create, update, delete: if false; // Populated by trusted server-side scripts only
     }
 
-    /**
-     * @description Stores private data owned by a specific user.
-     * @path /users/{userId}/data/{dataId}
-     * @allow (create) An authenticated user (UID 'user123') creates a document in their own data subcollection (`/users/user123/data/...`).
-     * @deny (create) An authenticated user (UID 'user123') tries to create a document in another user's data (`/users/user456/data/...`).
-     * @deny (list) Any user tries to list documents in the top-level `/users` collection.
-     * @principle Restricts all access to a user's own data tree using path-based ownership.
-     */
     match /users/{userId}/data/{dataId} {
       allow get, list: if isOwner(userId);
       allow create: if isOwner(userId);

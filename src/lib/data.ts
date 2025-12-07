@@ -7,6 +7,7 @@ import { differenceInDays, parseISO } from 'date-fns';
 
 // Import the raw JSON data from the new modular files
 import * as baseData from '@/legal_branches/_base.json';
+import * as kbSchema from '@/legal_branches/_kb_schema.json';
 
 // Import individual succession law templates
 import * as succession_heirship_declaration from '@/legal_branches/succession_law/succession_heirship_declaration.json';
@@ -240,7 +241,8 @@ const allTemplates = {
 };
 
 const allEntities = {
-    ...baseData.entities
+    ...baseData.entities,
+    ...kbSchema.entities
 };
 
 // Formula Execution
@@ -313,7 +315,7 @@ export const COURT_HIERARCHY = {
     "ሌላ"
   ],
   "የአዲስ አበባ ከተማ አስተዳደር የመጀመሪያ ደረጃ ፍርድ ቤት": AA_FIRST_INSTANCE_BENCHES,
-  "የአዲስ አበባ ከተማ አስተዳደር ይግባኝ ሰሚ ፍርድ ቤት": ["ይግባኝ ሰሚ ችሎት", "ሌላ"],
+  "የአዲስ አበባ ከተማ አስተዳደር ይግባኝ ሰሚ ፍርድ ቤት": ["ይግባኝ ሰሚ ችሎ𝑡", "ሌላ"],
   "የአዲስ አበባ ከተማ አስተዳደር ሰበር ሰሚ ችሎት": ["ሰበር ሰሚ ችሎት", "ሌላ"],
   "ሌላ": ["ሌላ"],
 };
@@ -702,5 +704,5 @@ export const INITIAL_STATE: AppState = {
   smartEvidence: {},
   partyTitles: { applicant: 'አመልካች', respondent: 'ተከሳሽ' },
   selectedTemplate: '',
-  selectedSubTemplate: null,
+  selectedSubTemplate: null
 };

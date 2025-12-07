@@ -15,73 +15,185 @@ Our goal is to build a **"truly living museum of exhaustively completed legal do
 
 ## Pillar I: Backend Architecture & Data Integrity
 
-This pillar governs the structure, content, and logic of all `.json` data files. The core principle is a granular, **File-per-Template Architecture**, where each legal template exists in its own dedicated `.json` file within a branch-specific folder (e.g., `src/legal_branches/contract_law/debt_recovery.json`).
-
 ### 1.1. The Fact-Facet Taxonomy
-- **1.1.1. Atomicity:** A single `fact` object must represent a single, atomic legal argument. Do not bundle multiple arguments.
-- **1.1.2. Mutually Exclusive Logic (`mutexGroup`):** Facts that are legally contradictory must be assigned the same `mutexGroup` string ID. The frontend will render these as single-choice radio buttons.
-- **1.1.3. The Rhetorical Layer (`rhetoric` object):** Every fact MUST contain a `rhetoric` object to enable persuasive narrative construction.
-    -   `"intro"`: An Amharic phrase to introduce a fact group.
-    -   `"transition"`: An Amharic phrase to connect subsequent facts.
-    -   `"summary_keyword"`: A short Amharic noun phrase describing the fact's essence for summarization.
+- **Atomicity:** A single `fact` object must represent a single, atomic legal argument.
+- **Mutually Exclusive Logic (`mutexGroup`):** Contradictory facts must share the same `mutexGroup`.
+- **Rhetorical Layer (`rhetoric` object):** Every fact MUST contain `intro`, `transition`, and `summary_keyword` in Amharic.
 
 ### 1.2. The "Cassation-Ready" Research Standard
-- **1.2.1. Statute of Limitations (`Period of Limitation`):** Every `templateDescription` MUST contain a section titled `### የጊዜ ገደብ (Period of Limitation)` citing the specific article that dictates the claim's expiration.
-- **1.2.2. Preconditions (`Prerequisites`):** Every `templateDescription` MUST contain a section titled `### ቅድመ ሁኔታዎች (Prerequisites)` detailing mandatory requirements before filing.
-- **1.2.3. Cassation Binding Precedent:** If a legal principle is based on a binding Cassation Bench decision, the `jurisdictionText` or `citation` MUST reference the file number (መዝገብ ቁጥር) and volume (ቅጽ).
+- **Period of Limitation:** Mandatory inclusion of `### የጊዜ ገደብ`.
+- **Prerequisites:** Mandatory inclusion of `### ቅድመ ሁኔታዎች`.
+- **Cassation Binding Precedent:** Reference file number and volume.
 
 ### 1.3. Dynamic "Subject of Claim" (`የክሱ ምክንያት`)
-- **1.3.1. The `purpose` Meta Field:** Every template's `meta` object must contain a `purpose` field in Amharic that describes the core reason for the claim (e.g., "ለተሰጠ የብድር ዕዳ").
-- **1.3.2. Structure:** The final rendered title will follow the structure: `የክሱ ምክንያት ፡- [Purpose] [Value] [Pleader].`
+- **Purpose Meta Field:** Amharic description of claim purpose.
+- **Structure:** Title format `የክሱ ምክንያት ፡- [Purpose] [Value] [Pleader].`
 
 ### 1.4. Smart Evidence & Data Topology
-- **1.4.1. Entity Standardization:** Evidence keys in `_base.json` must be generic enough for reuse but specific enough for clarity (e.g., `ProofOfMarriage` is better than `MarriageCertificate`).
-- **1.4.2. Credential Enforceability:** The `credentialPlaceholder` must guide the user to the exact data point required (e.g., "Registration No. & Date of Issue").
-- **1.4.3. Sentence-Based Templates:** The `_base.json` file should provide full `sentenceTemplate` strings for evidence items to enable the WYSIWYG editor.
+- **Entity Standardization:** Generic yet clear evidence keys.
+- **Credential Enforceability:** Placeholders guide exact data points.
+- **Sentence-Based Templates:** Full `sentenceTemplate` strings for WYSIWYG.
 
 ### 1.5. Search, Discovery, and Metadata
-- **1.5.1. The `meta` Object:** Every template file must include a `meta` object containing `keywords` (for fuzzy search) and `aliases`.
-- **1.5.2. ID Namespacing:** All IDs within a file MUST be prefixed with a branch and template shorthand to prevent collisions (e.g., `con_debt_rec_fact_...`).
+- **Meta Object:** Include `keywords` and `aliases`.
+- **ID Namespacing:** Prefix IDs with branch shorthand.
 
 ### 1.6. Standard Reliefs and Default Selections
-- **1.6.1. Default Cost Relief:** Every template that involves a dispute SHOULD include a standard, non-dynamic, selectable relief option for the payment of court costs and advocate fees (`"ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን"`).
-- **1.6.2. Default Selection (`isDefault`):** Any relief marked with `isDefault: true` in the JSON must be automatically selected by the UI upon template load.
+- **Default Cost Relief:** Include standard relief for costs.
+- **Default Selection:** Auto-select reliefs marked `isDefault: true`.
 
 ---
 
 ## Pillar II: Frontend UI/UX & The "Prophetic Editor" Mandate
 
-This pillar governs how the React components render the UI and handle user interaction, based on the rules defined in the backend JSON files.
-
 ### 2.1. The WYSIWYG "Prophetic Editor"
-- **2.1.1. Sentence-Based UI Construction:** The editor UI (especially for Facts, Reliefs, and Evidence) MUST be constructed using the pre-defined, grammatically correct Amharic sentence templates sourced from the backend. The UI is not a collection of labels and inputs; it is an interactive, fill-in-the-blanks document.
-- **2.1.2. Embedded Inputs:** Input fields (`Input`, `Select`, `DatePicker`) MUST be embedded directly within these sentence templates at placeholder locations (e.g., `[Date]`, `[Amount]`).
-- **2.1.3. Guiding Amharic Placeholders:** All embedded input fields must use watermarked Amharic placeholders that provide clear examples (e.g., "ለምሳሌ፦ 10,000", "ቀን ያስገቡ").
+- **Sentence-Based UI Construction:** Use grammatically correct Amharic templates.
+- **Embedded Inputs:** Inputs embedded in sentence templates.
+- **Guiding Amharic Placeholders:** Clear examples in placeholders.
 
 ### 2.2. The Gallery of Arguments & Exhaustive Scenarios
-- **2.2.1. Maxim of Exhaustive Scenarios:** The backend data for each template MUST strive to anticipate and provide selectable options for all common real-world facts, scenarios, and circumstantial variations relevant to that legal matter.
-- **2.2.2. Gallery Presentation:** The UI must present this comprehensive list of pre-constructed arguments, allowing users to select the narrative that best fits their specific circumstances.
+- **Exhaustive Scenarios:** Anticipate all common variations.
+- **Gallery Presentation:** UI presents comprehensive arguments.
 
 ### 2.3. Dynamic & Interactive Preview
-- **2.3.1. Real-time WYSIWYG:** As a user types into an embedded input in the editor, the corresponding text in the Preview Pane MUST update instantaneously.
-- **2.3.2. Placeholder Highlighting:** The inserted variable in the preview should be visually distinguished (e.g., **`bold blue`**) to show context.
-- **2.3.3. Calculator Integration:** The Preview Pane must dynamically replace calculator placeholders (e.g., `{{principal}}`) in reliefs with the live calculated result from the corresponding calculator widget.
+- **Real-time WYSIWYG:** Instant preview updates.
+- **Placeholder Highlighting:** Distinguish inserted variables.
+- **Calculator Integration:** Replace placeholders with live results.
 
 ### 2.4. Persona-Driven UI Behavior
-*(This implements the semi-autonomous "expert machine" concept)*
-- **2.4.1. Registrar Persona (Procedural Checks):** The UI can use a `proceduralChecks` object in the JSON to enforce preconditions. Before allowing a "Generate/Print" action, it can check if mandatory evidence is attached and display a warning if it is not.
-- **2.4.2. Judge Persona (Guidance):** The UI can use a `judicialGuidance` property in the JSON to provide contextual help via tooltips or alerts, explaining the legal significance of a particular fact or relief.
-- **2.4.3. Default Selection Feedback:** When default reliefs are auto-selected upon template load (per Rule 1.6.2), the UI MUST provide a brief visual cue (e.g., a highlight or flash) to inform the user that the system has assisted them.
-- **2.4.4. AI Augmentation (Premium Tier):** As a privileged feature, the UI may offer a button to "Enhance with AI." If triggered, this will send the structured facts to a Genkit flow (`composeLegalNarrative`) and replace the standard narrative with the AI-generated version.
-- **2.4.5. Statute of Limitation Warning:** If a `templateDescription` contains a "Period of Limitation" section, the UI MUST parse this and display a prominent warning alert (e.g., red or amber) if a user-selected date approaches or exceeds this limit.
-- **2.4.6. Live Calculation Indicator:** If a relief is dynamic and depends on a calculator, the UI MUST visually indicate this dependency (e.g., with a "live" icon or highlight) to connect it to the calculator widget.
+- **Registrar Persona:** Enforce preconditions.
+- **Judge Persona:** Provide contextual guidance.
+- **Default Selection Feedback:** Visual cue for auto-selections.
+- **AI Augmentation:** Premium “Enhance with AI” option.
+- **Limitation Warning:** Prominent alerts for approaching deadlines.
+- **Live Calculation Indicator:** Highlight calculator dependencies.
 
 ### 2.5. The "Amharic First" Content & Output Standard
-- **2.5.1. Legal Amharic:** All user-facing text (`documentTitle`, `legalText`, `label`, etc.) MUST use formal, legal-grade Amharic terminology found in the official Codes.
-- **2.5.2. Rhetorical Citation Blending:** Legal citations (`citation` field) MUST NOT be rendered as bracketed annexes in the UI. The `legalText` itself must be written to naturally incorporate the citation in a lawyerly flow (e.g., "...በፍትሐ ብሔር ሕግ 1772 መሰረት...").
-- **2.5.3. Amharic-Only Final Output:** The final rendered document must be 100% Amharic. No English words or symbols (e.g., "%") are permitted. Numerical values must be spelled out in Amharic script within parentheses.
-- **2.5.4. Modern Numerals:** All numbers in the backend data and rendered UI, especially for legal articles (`Art. 123`) and proclamations (`Proc. 1183/2020`), MUST use modern Arabic numerals.
+- **Legal Amharic:** Formal terminology only.
+- **Rhetorical Citation Blending:** Citations embedded naturally.
+- **Amharic-Only Final Output:** 100% Amharic, numbers spelled out.
+- **Modern Numerals:** Use Arabic numerals in backend/UI.
 
 ### 2.6. Search, Discovery, and Metadata
-- **2.6.1. Fuzzy Search:** The sidebar/header search MUST use the `meta.keywords` and `meta.aliases` from the backend to implement fuzzy search logic (e.g., searching for "Feta" finds "Divorce").
-- **2.6.2. Metadata Tooltips:** Hovering over a template choice in the UI should display a tooltip showing `meta.complexity` and `meta.jurisdictionType`.
+- **Fuzzy Search:** Implement fuzzy search via `meta`.
+- **Metadata Tooltips:** Show complexity and jurisdiction type.
+
+---
+
+## Pillar III: Firebase Grounding & Legal Data Ingestion
+
+### 3.1. Knowledge Base Enrichment
+- **Branch-Aligned Materials:** Classify into Basic, Important, Supplementary.
+- **Direct Downloads:** Store priority materials in `/kb/legal/branches/...`.
+- **Source Tracking:** Maintain `kb_sources.json` for lineage.
+
+### 3.2. Conversion Pipeline
+- **Supported Inputs:** PDFs, DOCX, scanned images, HTML, text.
+- **Python Tools:** Use PyMuPDF, pdfminer.six, textract, docx2txt, tesseract.
+- **Normalization Outputs:** Produce `raw.txt`, `normalized.txt`, `structured.json`.
+- **Schema Mapping:** Map to Firestore collections.
+
+### 3.3. Firestore & Realtime Database
+- **Collections:** `legal_documents`, `articles`, `precedents`, `procedures`, `glossary`, `templates`, `evidence_catalog`.
+- **Keys:** Canonical IDs (e.g., `proc_1183_2020`).
+- **Indexing:** Composite and full-text indexes.
+- **Realtime Signals:** Job status and notifications.
+
+### 3.4. Grounding Expert Machines
+- **Resolvers:** Bind templates to authoritative texts.
+- **Version Consistency:** UI shows authoritative badges.
+- **Cache Policy:** ETag/version checks with revalidation.
+
+---
+
+## Pillar IV: Directory Structure & Orchestration
+
+### 4.1. Repository Layout
+- `/src`, `/kb`, `/data_ingestion`, `/firebase`, `/genesis`, `/docs`.
+
+### 4.2. Job Orchestration
+- **Single-Round Update:** Integrate strategies, set priorities, prepare pipeline, report changes, prompt execution.
+
+### 4.3. Execution States
+- Plan → Prepare → Ingest → Parse → Ground → Verify → Publish.
+
+---
+
+## Pillar V: Quality Governance & Lineage
+
+### 5.1. Legal Research QA
+- **Two-Step Verification:** Independent confirmations.
+- **Lineage Tracking:** Source, extraction, tool version, reviewer.
+- **Change Control:** `revoked_by` and `amended_by`.
+
+### 5.2. Content Standards
+- **Amharic Lint:** Automated checks.
+- **Template Validator:** Validate completeness and bindings.
+- **Governance Gates:** Require authoritative source grounding.
+
+### 5.3. Observability
+- **Metrics:** Throughput, accuracy, coverage, relevance.
+- **Alerts:** Mismatches, failures, stale caches.
+
+---
+
+## Pillar VI: Security, Compliance & Localization
+
+### 6.1. Security
+- **Least Privilege:** Strict Firebase rules.
+- **Integrity Seals:** Hash/signature metadata.
+- **PII Isolation:** Separate storage for evidence uploads.
+
+### 6.2. Localization
+- **Amharic-First UX:** Glossary tooltips and phonetic hints.
+- **Accessibility:** High-contrast, keyboard navigation, screen-reader support.
+- **Numeral Policy:** Arabic numerals in data, Amharic spelled in output.
+
+---
+
+## Pillar VII: Extended Capabilities
+
+### 7.1. Advanced Analytics
+- **Argument Insights:** Aggregate statistics.
+- **Search Tuning:** Expand aliases and synonyms.
+
+### 7.2. AI-Assisted Flows
+- **Narrative Composer:** AI enhancement with authoritative citations.
+- **Summarizer:** Branch-specific summaries.
+- **Red Teaming:** Prevent speculative outputs.
+
+---
+
+## Appendix A: Branch-Level Priorities
+
+- **Basic/Mandatory:** Civil, Criminal, Commercial Codes; Proclamations; Procedural Codes; Cassation precedents.
+- **Important:** Regulations, directives, appellate decisions.
+- **Supplementary:** Commentaries, textbooks, academic papers.
+
+---
+
+## Appendix B: Single-Round Orchestration Command
+
+gemini prototyper ,Update your memory genesis_protocol.md by systematically integrating development strategies without replacing memory of the evolution on original project  context:
+
+Ground expert machines/legal branches using Firebase resources.
+
+Identify and prioritize legal materials per branch.
+
+Orchestrate downloads into Legal Knowledge Base directory.
+
+Install Python tools for conversion and normalization.
+
+Map structured outputs to Firestore collections.
+
+Bind templates to authoritative citations.
+
+Enforce governance gates and readiness checks.
+
+Defer non-essential uploads until basics are complete.
+
+After updating your memory of genesis_protocol.md:
+
+Report a concise change summary.
+
+Ask explicitly if I want to begin executing ingestion and parsing task

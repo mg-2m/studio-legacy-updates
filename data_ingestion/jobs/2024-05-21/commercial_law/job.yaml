@@ -1,0 +1,39 @@
+# Ingestion Job for Commercial Law
+version: 1.0
+job_id: ingest_commercial_law_20240521
+description: "Process and ingest source documents for the Commercial Law branch."
+
+source:
+  path: "/kb/legal/branches/commercial_law/"
+  documents:
+    - "commercial_code_proc_1243_2021.pdf"
+
+pipeline:
+  - step: 1
+    name: "Convert PDF to Text"
+    tool: "PyMuPDF"
+    tool_version: "1.23.8"
+    output: "normalized.txt"
+  - step: 2
+    name: "Structure and Map"
+    schema: "/src/legal_branches/_kb_schema.json#LegalKnowledge"
+    output: "structured.json"
+    target_collection: "articles"
+  - step: 3
+    name: "Lint and Verify"
+    script: "/data_ingestion/scripts/amharic_linter.py"
+    rules:
+      - "ensure_legal_terminology"
+  - step: 4
+    name: "Seed to Firestore"
+    target_collection: "articles"
+    source_file: "structured.json"
+
+governance:
+  lineage_fields:
+    source_doc_id: "proc_1243_2021"
+    extracted_at: "{{timestamp}}"
+    tool_version: "1.23.8"
+    reviewer: "AI_AGENT_GEMINI"
+  quality_gate:
+    require_lint_pass: true

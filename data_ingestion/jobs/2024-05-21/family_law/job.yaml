@@ -1,0 +1,37 @@
+# Ingestion Job for Family Law
+version: 1.0
+job_id: ingest_family_law_20240521
+description: "Process and ingest source documents for the Family Law branch."
+
+source:
+  path: "/kb/legal/branches/family_law/"
+  documents:
+    - "revised_family_code_proc_213_2000.pdf"
+
+pipeline:
+  - step: 1
+    name: "Convert PDF to Text"
+    tool: "PyMuPDF"
+    tool_version: "1.23.8"
+    output: "normalized.txt"
+  - step: 2
+    name: "Structure and Map"
+    schema: "/src/legal_branches/_kb_schema.json#LegalKnowledge"
+    output: "structured.json"
+    target_collection: "articles"
+  - step: 3
+    name: "Lint and Verify"
+    script: "/data_ingestion/scripts/amharic_linter.py"
+  - step: 4
+    name: "Seed to Firestore"
+    target_collection: "articles"
+    source_file: "structured.json"
+
+governance:
+  lineage_fields:
+    source_doc_id: "proc_213_2000"
+    extracted_at: "{{timestamp}}"
+    tool_version: "1.23.8"
+    reviewer: "AI_AGENT_GEMINI"
+  quality_gate:
+    require_lint_pass: true

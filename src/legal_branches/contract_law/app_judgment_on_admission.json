@@ -24,7 +24,7 @@
       "id": "app_fact_clear_admission",
       "label": "እምነት",
       "legalText": "በመከላከያ መግለጫቸው، ተጠሪው በፍትሐ ብሔር ሥነ ሥርዓት ሕግ 242 መሰረት የውሉን እና የእዳውን መኖር በግልጽ አምኗል።",
-      "citation": "",
+      "citation": "CPC Art. 242",
       "rhetoric": {
         "intro": "በመጀመሪያ ደረጃ፣",
         "transition": "በተጨማሪም،",
@@ -40,10 +40,11 @@
       "isDynamic": false
     },
     {
-      "id": "con_relief_costs",
+      "id": "relief_costs",
       "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
-      "isDefault": true,
-      "isDynamic": false
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
     }
   ]
 }

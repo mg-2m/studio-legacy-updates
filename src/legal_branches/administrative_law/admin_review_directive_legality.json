@@ -92,7 +92,15 @@
       "isDefault": false,
       "isDynamic": false,
       "isCustom": false
+    },
+    {
+      "id": "relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
     }
   ],
   "calculations": {}
 }
+

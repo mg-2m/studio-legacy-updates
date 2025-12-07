@@ -24,14 +24,14 @@
       "id": "con_fact_loan_agreement",
       "label": "የውል መመስረት",
       "legalText": "በ [Date] ከሳሽ እና ተከሳሽ በፍትሐ ብሔር ሕግ 2471 መሰረት የጽሑፍ የብድር ስምምነት ማድረጋቸው ይታወቃል።",
-      "citation": "",
+      "citation": "Civ. Code Art. 2471",
       "autoEvidence": [
         "WrittenContract",
         "AdmissionofDebt"
       ],
       "rhetoric": {
         "intro": "በመጀመሪያ ደረጃ፣",
-        "transition": "በተጨማሪም፣",
+        "transition": "በተጨማሪም،",
         "summary_keyword": "የብድር ስምምነት"
       }
     },
@@ -53,10 +53,10 @@
       "id": "con_fact_payment_due",
       "label": "ውል ማፍረስ",
       "legalText": "በፍትሐ ብሔር ሕግ 1857 መሰረት የተስማሙበት የመክፈያ ጊዜ በ [Date] አብቅቷል።",
-      "citation": "",
+      "citation": "Civ. Code Art. 1857",
       "rhetoric": {
-        "intro": "በመቀጠልም፣",
-        "transition": "በተጨማሪም፣",
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
         "summary_keyword": "የመክፈያ ጊዜ ማብቃት"
       }
     },
@@ -66,7 +66,7 @@
       "legalText": "ዕዳው ቢደርስም ተከሳሹ ክፍያ አልፈጸመም።",
       "citation": "",
       "rhetoric": {
-        "intro": "በመቀጠልም፣",
+        "intro": "በመቀጠልም،",
         "transition": "በተጨማሪም،",
         "summary_keyword": "ክፍያ አለመፈጸም"
       }
@@ -75,7 +75,7 @@
       "id": "con_fact_notice_given",
       "label": "ውል ማፍረስ",
       "legalText": "ከሳሽ በፍትሐ ብሔር ሕግ 1772 መሰረት በ [Date] መደበኛ የውል ማፍረሻ ማስታወቂያ ሰጥቷል።",
-      "citation": "",
+      "citation": "Civ. Code Art. 1772",
       "autoEvidence": [
         "NoticeofDefault"
       ],
@@ -146,5 +146,3 @@
     }
   }
 }
-
-  

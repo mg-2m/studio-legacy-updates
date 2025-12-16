@@ -1,0 +1,79 @@
+{
+  "module_id": "FL-03",
+  "module_title_am": "መደበኛ ያልሆነ ትብብር (Irregular Unions)",
+  "description_am": "ይህ ሞዱል ጋብቻ በሕጋዊ ሥርዓት ሳይመሠረት ቀርቶም የቤተሰብ ሕግ ድንጋጌዎች ተፈጻሚ የሚሆኑባቸውን ሁኔታዎች ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-03-F01",
+      "legal_concept_en": "Duration of Cohabitation (Minimum Period)",
+      "rhetoric": {
+        "intro_am": "መደበኛ ያልሆነ ትብብር እንዲኖር፣ ቀድሞ መሟላት ያለበት...",
+        "transition_am": "ይህ ጊዜ የተጠናከረ የቤተሰብ ህይወት መኖሩን ያሳያል...",
+        "summary_keyword_am": "የአብሮነት ጊዜ"
+      },
+      "query_type": "Duration/Date",
+      "question_am": "ባልና ሚስት የሚመስለው ግንኙነት ያለ ጋብቻ ምዝገባ ለምን ያህል ጊዜ አብረው ኖረዋል?",
+      "grounding_nodes": [
+        {
+          "ref_id": "Art. 950(1)",
+          "source": "FL-R-001"
+        }
+      ],
+      "mutex_group": "COHABITATION_DURATION"
+    },
+    {
+      "facet_id": "FL-03-F02",
+      "legal_concept_en": "Public Reputation as Spouses",
+      "rhetoric": {
+        "intro_am": "በተጨማሪም፣ ከሕዝብ እይታ አንፃር...",
+        "transition_am": "ማኅበረሰቡ እንደ ባልና ሚስት ማየቱ አስፈላጊ ነው...",
+        "summary_keyword_am": "የሕዝብ እውቅና"
+      },
+      "query_type": "Boolean/Witness",
+      "question_am": "አብረው የኖሩት ወገኖች በቤተሰብም ሆነ በማኅበረሰብ ዘንድ እንደ ባልና ሚስት ይታወቃሉ?",
+      "grounding_nodes": [
+        {
+          "ref_id": "Art. 950(1)",
+          "source": "FL-R-001"
+        }
+      ],
+      "mutex_group": "SOCIAL_REPUTATION"
+    },
+    {
+      "facet_id": "FL-03-F03",
+      "legal_concept_en": "Legal Consequences (Application of Property Rules)",
+      "rhetoric": {
+        "intro_am": "መደበኛ ያልሆነ ትብብር ሲቋረጥ፣ የሕጉ ውጤት...",
+        "transition_am": "በተለይም፣ የንብረት ክፍፍል የሚመለከተው...",
+        "summary_keyword_am": "የንብረት ሕግ ተፈጻሚነት"
+      },
+      "query_type": "Directive",
+      "question_am": "ግንኙነቱ ሲቋረጥ በጋራ በጊዜው የተገኘው ንብረት የቤተሰብ ሕግን መሠረት በማድረግ ይካፈላል ወይ?",
+      "grounding_nodes": [
+        {
+          "ref_id": "Art. 950(2)",
+          "source": "FL-R-001"
+        }
+      ],
+      "mutex_group": "PROPERTY_DIVISION_APPLICABILITY"
+    },
+    {
+      "facet_id": "FL-03-F04",
+      "legal_concept_en": "Rights of Children Born from the Union",
+      "rhetoric": {
+        "intro_am": "በመጨረሻም፣ የልጆች መብት ጉዳይ...",
+        "transition_am": "መደበኛ ጋብቻ ቢኖርም ባይኖርም...",
+        "summary_keyword_am": "የልጆች መብቶች"
+      },
+      "query_type": "Directive",
+      "question_am": "በዚህ ግንኙነት የተወለዱ ልጆች መብቶች ከመደበኛ ጋብቻ ከተወለዱ ልጆች መብት ጋር ተመሳሳይ ናቸው?",
+      "grounding_nodes": [
+        {
+          "ref_id": "Art. 951",
+          "source": "FL-R-001"
+        }
+      ],
+      "mutex_group": "CHILDREN_EQUALITY"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "module_id": "FL-04",
+  "module_title_am": "የባለትዳሮች መብቶች እና ግዴታዎች (Rights and Duties)",
+  "description_am": "ይህ ሞዱል ጋብቻ ከጸና በኋላ በባልና ሚስት መካከል የሚኖሩትን መሰረታዊ መብቶች፣ ግዴታዎች እና የውክልና ሥልጣኖችን ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-04-F01",
+      "legal_concept_en": "Duty of Cohabitation (Fidelity and Assistance)",
+      "rhetoric": {
+        "intro_am": "ጋብቻ ከተመሰረተ በኋላ፣ ዋናው ግዴታ...",
+        "transition_am": "ይህም ታማኝነትን እና የጋራ እገዛን ያካትታል...",
+        "summary_keyword_am": "አብሮ መኖርና መረዳዳት"
+      },
+      "query_type": "Boolean",
+      "question_am": "ባለትዳሮች በጋራ ለመኖር እና የጋራ መረዳዳት ግዴታን ለመወጣት ዝግጁ ናቸው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 47", "source": "FL-R-001"}
+      ],
+      "mutex_group": "MARITAL_DUTIES"
+    },
+    {
+      "facet_id": "FL-04-F02",
+      "legal_concept_en": "Duty of Mutual Support (Maintenance)",
+      "rhetoric": {
+        "intro_am": "ከመረዳዳት በተጨማሪ፣ የገንዘብ ድጋፍ ግዴታ...",
+        "transition_am": "ይህም የትዳር አጋር አስፈላጊውን የኑሮ ደረጃ እንዲጠብቅ ያስችለዋል...",
+        "summary_keyword_am": "የጋራ ድጋፍና ቀለብ"
+      },
+      "query_type": "Boolean",
+      "question_am": "እያንዳንዱ የትዳር አጋር የሌላውን የኑሮ ፍላጎት የማሟላት ግዴታ አለበት?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 48", "source": "FL-R-001"}
+      ],
+      "mutex_group": "MARITAL_DUTIES"
+    },
+    {
+      "facet_id": "FL-04-F03",
+      "legal_concept_en": "Right to Joint Representation (Common Affairs)",
+      "rhetoric": {
+        "intro_am": "በቤተሰብ አስተዳደር ረገድ፣ የውክልና ሥልጣን...",
+        "transition_am": "ለቤተሰብ ጥቅም ሲባል ብቻ...",
+        "summary_keyword_am": "የጋራ ውክልና ሥልጣን"
+      },
+      "query_type": "Directive/Boolean",
+      "question_am": "አንድ የትዳር ጓደኛ ለቤተሰብ የጋራ ጥቅም በሚደረጉ ጉዳዮች ላይ ሌላውን በሕግ የመወከል ሥልጣን አለው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 51", "source": "FL-R-001"}
+      ],
+      "mutex_group": "JOINT_REPRESENTATION"
+    },
+    {
+      "facet_id": "FL-04-F04",
+      "legal_concept_en": "Mandatory Consent for Key Actions",
+      "rhetoric": {
+        "intro_am": "ሆኖም ግን፣ ለከፍተኛ የንብረት ውሳኔዎች...",
+        "transition_am": "ይህም የሁለቱን አጋሮች መብት ይጠብቃል...",
+        "summary_keyword_am": "ግዴታ ያለበት ፈቃድ"
+      },
+      "query_type": "Directive/Boolean",
+      "question_am": "የቤተሰብ ንብረት የሚመለከቱ ውሳኔዎች (ለምሳሌ መሸጥ፣ መያዝ) የሁለቱን የትዳር ጓደኛ ፈቃድ ይጠይቃሉ?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 60", "source": "FL-R-001"}
+      ],
+      "mutex_group": "PROPERTY_CONSENT"
+    }
+  ]
+}

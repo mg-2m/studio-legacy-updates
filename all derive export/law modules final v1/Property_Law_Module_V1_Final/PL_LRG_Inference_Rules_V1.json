@@ -1,0 +1,93 @@
+I apologize for the error. It seems I made a mistake in the tool call. I will try to correct it now.
+
+It appears the `natural_language_write_file` tool was not able to handle comments starting with `//` in the JSON file directly. Since JSON does not officially support comments, such lines are typically parsed as errors.
+
+Given the previous actions where I successfully removed comments from other JSON files, I will re-attempt to remove comments from this specific file. I will ensure that any lines starting with `//` are completely removed.
+```json
+{
+  "branch_id": "PL",
+  "branch_title": "Property Law Inference Rules V1",
+  "rules": [
+    {
+      "rule_id": "PL-R01",
+      "rule_title_en": "Property Classification and Status",
+      "rule_title_am": "የንብረት ምደባ እና ሁኔታ",
+      "conclusion_en": "The property is legally classified as Movable, Immovable, and/or Public Domain, determining the applicable legal regime.",
+      "logic_am": "IF (PL-01-F01 OR PL-01-F02 OR PL-01-F03) AND (NOT PL-01-F04) THEN ንብረቱ ለግል ንብረት ሕግ ተገዢ ነው; IF PL-01-F04 THEN ንብረቱ የሕዝብ ንብረት ነው::",
+      "required_facets": ["PL-01-F01", "PL-01-F02", "PL-01-F04"]
+    },
+    {
+      "rule_id": "PL-R02",
+      "rule_title_en": "Existence of Ownership and Legal Limits",
+      "rule_title_am": "የባለቤትነት መብት እና ሕጋዊ ገደቦች",
+      "conclusion_en": "The claimant has full ownership rights, subject to valid statutory or neighborhood restrictions (Nuisance/Abuse of Right).",
+      "logic_am": "IF PL-02-F01 THEN የባለቤትነት መብት አለ; AND IF (PL-02-F02 OR PL-02-F03 OR PL-02-F04) THEN የባለቤትነት መብቱ በሕግ የተገደበ ነው::",
+      "required_facets": ["PL-02-F01", "PL-02-F03"]
+    },
+    {
+      "rule_id": "PL-R03",
+      "rule_title_en": "Management and Partition of Co-ownership",
+      "rule_title_am": "የጋራ ባለቤትነት አስተዳደር እና ክፍፍል",
+      "conclusion_en": "The property is under co-ownership, and management decisions are validated by the majority share, with any co-owner retaining the right to demand partition.",
+      "logic_am": "IF PL-03-F01 AND PL-03-F02 THEN አስተዳደሩ በትክክል ተፈጽሟል; AND IF PL-03-F04 THEN ባለቤቱ ክፍፍል የመጠየቅ መብት አለው::",
+      "required_facets": ["PL-03-F02", "PL-03-F04"]
+    },
+    {
+      "rule_id": "PL-R04",
+      "rule_title_en": "Valid Acquisition of Ownership (General)",
+      "rule_title_am": "የባለቤትነት መብትን ትክክለኛ ማግኘ",
+      "conclusion_en": "Ownership was validly acquired through contract (plus registration), good faith possession (movables), or succession/prescription.",
+      "logic_am": "IF (PL-04-F01 AND PL-10-F01) OR PL-04-F02 OR PL-04-F03 OR PL-04-F04 THEN ባለቤትነት በሕጋዊ መንገድ ተገኝቷል::",
+      "required_facets": ["PL-04-F01", "PL-04-F02", "PL-10-F01"]
+    },
+    {
+      "rule_id": "PL-R05",
+      "rule_title_en": "Ownership of Immovable Improvements (Accession)",
+      "rule_title_am": "በማይንቀሳቀስ ንብረት ላይ የተደረጉ ማሻሻያዎች ባለቤትነት",
+      "conclusion_en": "Based on the principle of accession, the owner of the land also owns the improvements. The improving party is entitled to compensation based on their good or bad faith.",
+      "logic_am": "IF PL-05-F01 THEN የመሬቱ ባለቤት የግንባታው ባለቤት ነው; AND IF PL-05-F02 AND PL-05-F04 THEN ካሳ የመጠየቅ መብት አለው::",
+      "required_facets": ["PL-05-F01", "PL-05-F04"]
+    },
+    {
+      "rule_id": "PL-R06",
+      "rule_title_en": "Possessory Protection (Disturbance/Recovery)",
+      "rule_title_am": "የይዞታ ጥበቃ (ረብሻ/መመለስ)",
+      "conclusion_en": "The claimant has legal possession and is entitled to a possessory remedy (recovery or cessation of disturbance) regardless of the ownership issue.",
+      "logic_am": "IF PL-06-F01 AND (PL-06-F03 OR PL-06-F04) THEN ይዞታው በሕግ ጥበቃ ይደረግለታል::",
+      "required_facets": ["PL-06-F01", "PL-06-F04"]
+    },
+    {
+      "rule_id": "PL-R07",
+      "rule_title_en": "Validity and Extinction of Limited Real Rights",
+      "rule_title_am": "የተወሰኑ የእውነተኛ መብቶች (Usufruct/Servitudes) ትክክለኛነት",
+      "conclusion_en": "A Usufruct or Servitude is legally constituted, defining the rights over another's property, and is subject to extinction upon non-use or statutory conditions.",
+      "logic_am": "IF (PL-07-F01 OR PL-07-F03) AND NOT PL-07-F04 THEN መብቱ ሕጋዊ ነው; IF PL-07-F04 THEN መብቱ በጊዜ ገደብ ምክንያት ይቋረጣል::",
+      "required_facets": ["PL-07-F01", "PL-07-F04"]
+    },
+    {
+      "rule_id": "PL-R08",
+      "rule_title_en": "Perfection and Enforceability of Pledge (Movables)",
+      "rule_title_am": "የሚንቀሳቀስ ንብረት መያዣ (Pledge) ፍጹምነት",
+      "conclusion_en": "The pledge is validly constituted, usually by the creditor taking possession, granting the creditor priority and the right to sell the movable property upon default.",
+      "logic_am": "IF PL-08-F01 AND (PL-08-F02 OR PL-08-F03) AND PL-08-F04 THEN መያዣው ፍጹም ሆኗል እና አበዳሪው የመሸጥ መብት አለው::",
+      "required_facets": ["PL-08-F01", "PL-08-F02"]
+    },
+    {
+      "rule_id": "PL-R09",
+      "rule_title_en": "Perfection and Enforceability of Mortgage (Immovables)",
+      "rule_title_am": "የማይንቀሳቀስ ንብረት ብድር መያዣ (Mortgage) ፍጹምነት",
+      "conclusion_en": "The mortgage is validly constituted by registration, securing the debt and granting the creditor priority over the proceeds of the immovable property upon default, while the debtor retains possession.",
+      "logic_am": "IF PL-09-F01 AND PL-09-F02 AND PL-09-F04 THEN ሞርጌጁ ሕጋዊና ፍጹም ነው::",
+      "required_facets": ["PL-09-F02", "PL-09-F04"]
+    },
+    {
+      "rule_id": "PL-R10",
+      "rule_title_en": "Effect of Registration on Immovable Rights",
+      "rule_title_am": "ምዝገባ በማይንቀሳቀስ ንብረት መብት ላይ ያለው ውጤት",
+      "conclusion_en": "Registration is mandatory for the creation and enforceability of real rights over immovable property, protecting the registered right against third parties.",
+      "logic_am": "IF PL-10-F01 AND NOT PL-10-F02 THEN መብቱ በሁሉም ላይ (erga omnes) የጸና ነው; IF PL-10-F02 THEN መብቱ አልተቋቋመም::",
+      "required_facets": ["PL-10-F01", "PL-10-F02"]
+    }
+  ]
+}
+```

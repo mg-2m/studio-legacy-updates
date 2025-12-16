@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-03",
+  "module_title_am": "የፍቃድ ጉድለቶች (Defects of Consent)",
+  "description_am": "ይህ ሞዱል የተዋዋይ ወገን ፈቃድ በስህተት፣ በማታለል ወይም በ ማስገደድ የተጎዳ መሆኑን ይፈትሻል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-03-F01",
+      "legal_concept_en": "Mistake (Error In Substantial Matter)",
+      "rhetoric": {
+        "intro_am": "ውሉ በስህተት ምክንያት ይሻር እንደሆነ ለመወሰን...",
+        "transition_am": "ስህተቱ ለውሉ አስፈላጊ በሆነ ጉዳይ ላይ መሆን አለበት...",
+        "summary_keyword_am": "አስፈላጊ የስህተት ጉዳይ"
+      },
+      "query_type": "Boolean/Subjective",
+      "question_am": "ስህተቱ የተከሰተው በውሉ ዋና ዓላማ (ለምሳሌ በንብረቱ ማንነት ወይም ጥራት) ላይ ሲሆን ይህም ያለ ስህተቱ ወገኑ ውሉን አይፈጽምም ነበር?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1699", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONSENT_FLAW"
+    },
+    {
+      "facet_id": "CL-03-F02",
+      "legal_concept_en": "Fraud (Deceit or Misrepresentation)",
+      "rhetoric": {
+        "intro_am": "ማታለል ሲከሰት ውሉ...",
+        "transition_am": "ተቃራኒ ወገን በተንኮል ሊያታልል ሞክሯል...",
+        "summary_keyword_am": "ተንኮልና ማታለል"
+      },
+      "query_type": "Boolean/Action",
+      "question_am": "አንድ ወገን ውሉን እንዲፈጽም በማሰብ ሌላኛው ወገን በተንኮል (deceit) ወይም ሆን ተብሎ የተሳሳተ መረጃ (misrepresentation) ሰጥቷል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1704", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONSENT_FLAW"
+    },
+    {
+      "facet_id": "CL-03-F03",
+      "legal_concept_en": "Duress (Coercion)",
+      "rhetoric": {
+        "intro_am": " ማስገደድ በሕግ ውል እንዲሻር የሚያደርግ...",
+        "transition_am": "ይህም ከባድ ፍርሃት መፍጠር አለበት...",
+        "summary_keyword_am": " ማስገደድ ወይም ማስፈራራት"
+      },
+      "query_type": "Boolean/Threat",
+      "question_am": "ውሉ የተፈጸመው በተዋዋይ ወገን ላይ ከባድ ፍርሃት ለመፍጠር በታሰበ ሕገወጥ ማስፈራራት ወይም አካላዊ ኃይል ምክንያት ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1705", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONSENT_FLAW"
+    },
+    {
+      "facet_id": "CL-03-F04",
+      "legal_concept_en": "Unconscionable Transaction (Undue Influence/Injury)",
+      "rhetoric": {
+        "intro_am": "የአንደኛው ወገን ችግር ሲጠቀምበት...",
+        "transition_am": "ያለአግባብ ጥቅም ማግኘት...",
+        "summary_keyword_am": "ያልተመጣጠነ ጥቅም"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "በውሉ ውስጥ ያለው ግዴታዎች እጅግ በጣም ያልተመጣጠነ ሲሆን አንደኛው ወገን የሌላኛውን ወገን ችግር፣ ልምድ ማጣት ወይም ጥገኝነት ተጠቅሟል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1710", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONSENT_FLAW"
+    }
+  ]
+}

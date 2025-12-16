@@ -1,0 +1,67 @@
+{
+  "module_id": "FL-02",
+  "module_title_am": "የጋብቻ ምስረታ እና ማረጋገጫ (Establishment and Proof)",
+  "description_am": "ይህ ሞዱል የጋብቻ ሕጋዊነት በሥርዓት እንዲረጋገጥ የሚጠይቁትን መሠረታዊ መስፈርቶች ይመለከታል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-02-F01",
+      "legal_concept_en": "Marriage Formalities Adhered To",
+      "rhetoric": {
+        "intro_am": "ጋብቻው በትክክል ተመስርቷል ለማለት...",
+        "transition_am": "ይህም የሚረጋገጠው በሕግ በተቀመጠው መሠረት...",
+        "summary_keyword_am": "የሕግ ሥርዓት መሟላት"
+      },
+      "query_type": "Boolean",
+      "question_am": "ጋብቻው በሕግ በተፈቀደለት አካል ፊት የጋብቻ ሥርዓት (ፎርማሊቲ) ተፈጽሞለታል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 18", "source": "FL-R-001"}
+      ],
+      "mutex_group": "FORMAL_ESTABLISHMENT"
+    },
+    {
+      "facet_id": "FL-02-F02",
+      "legal_concept_en": "Mandatory Registration Requirement",
+      "rhetoric": {
+        "intro_am": "በተጨማሪም፣ ጋብቻው ተመዝግቦ...",
+        "transition_am": "ይህ ምዝገባ ሕጋዊ ማረጋገጫ በመስጠት...",
+        "summary_keyword_am": "የጋብቻ ምዝገባ"
+      },
+      "query_type": "Boolean",
+      "question_am": "ጋብቻው በአግባቡ በሲቪል ምዝገባ ኤጀንሲ (Civil Status Registrar) ተመዝግቧል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 21", "source": "FL-R-001"}
+      ],
+      "mutex_group": "REGISTRATION_PROOF"
+    },
+    {
+      "facet_id": "FL-02-F03",
+      "legal_concept_en": "Proof by Certificate (Primary Method)",
+      "rhetoric": {
+        "intro_am": "በፍርድ ቤት ሂደቶች ውስጥ፣ የጋብቻ ማስረጃነት...",
+        "transition_am": "ስለዚህ፣ ሕጋዊ ማረጋገጫ የሚያስፈልገው...",
+        "summary_keyword_am": "የምስክር ወረቀት ማስረጃ"
+      },
+      "query_type": "Documentary",
+      "question_am": "ጋብቻው በሲቪል መዝጋቢ ኤጀንሲ በተሰጠ የጋብቻ የምስክር ወረቀት ሊረጋገጥ ይችላል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 22(1)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "PROOF_METHOD"
+    },
+    {
+      "facet_id": "FL-02-F04",
+      "legal_concept_en": "Proof by Other Means (Subsidiary Method)",
+      "rhetoric": {
+        "intro_am": "የምስክር ወረቀቱ በሌለበት ሁኔታ፣ ሕጉ...",
+        "transition_am": "ይህም ሌሎች ማስረጃዎች እንዲቀርቡ ያስችላል...",
+        "summary_keyword_am": "ሌሎች ማስረጃዎች"
+      },
+      "query_type": "Boolean",
+      "question_am": "የጋብቻ የምስክር ወረቀት ከጠፋ ወይም ለሌላ አሳማኝ ምክንያት ሊቀርብ ካልቻለ፣ ጋብቻው በሌሎች ማስረጃዎች (ለምሳሌ ምስክር) ሊረጋገጥ ይችላል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 22(2)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "PROOF_METHOD"
+    }
+  ]
+}

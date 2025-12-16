@@ -203,3 +203,31 @@ export interface AppState {
   selectedTemplate: string;
   selectedSubTemplate: string | null;
 }
+
+export type Action =
+  | { type: 'UPDATE_METADATA'; payload: { key: string; value: any } }
+  | { type: 'ADD_PARTY'; payload: { role: 'applicants' | 'respondents' } }
+  | { type: 'REMOVE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string } }
+  | { type: 'UPDATE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string; field: string; value: any } }
+  | { type: 'TOGGLE_FACT'; payload: { factId: string; mutexGroup?: string } }
+  | { type: 'UPDATE_FACT_VALUE'; payload: { factId: string; field: string; value: string } }
+  | { type: 'ADD_CUSTOM_FACT' }
+  | { type: 'UPDATE_FACT_TEXT'; payload: { id: string; text: string } }
+  | { type: 'REMOVE_CUSTOM_FACT'; payload: { id: string } }
+  | { type: 'TOGGLE_MAINTENANCE'; payload: { checked: boolean } }
+  | { type: 'UPDATE_MAINTENANCE'; payload: { key: string; value: any } }
+  | { type: 'SET_MAINTENANCE_CONTEXT'; payload: string }
+  | { type: 'UPDATE_CALCULATION'; payload: { calcKey: string; field: string; value: any } }
+  | { type: 'ADD_EVIDENCE'; payload: { type: 'Document' | 'Witness' | 'CourtOrder' } }
+  | { type: 'REMOVE_EVIDENCE'; payload: { id: string } }
+  | { type: 'UPDATE_EVIDENCE'; payload: { id: string; field: string; value: any } }
+  | { type: 'SET_AI_SUGGESTIONS'; payload: { evidenceIds: string[] } }
+  | { type: 'ADD_SMART_EVIDENCE'; payload: { registryId: string } }
+  | { type: 'DEACTIVATE_SMART_EVIDENCE'; payload: { registryId: string } }
+  | { type: 'UPDATE_SMART_EVIDENCE_CREDENTIAL'; payload: { registryId: string; credentialValue: string; field: string; } }
+  | { type: 'SET_SELECTED_SUB_TEMPLATE'; payload: { templateId: string; subTemplateId: string } }
+  | { type: 'TOGGLE_RELIEF'; payload: { reliefId: string } }
+  | { type: 'UPDATE_RELIEF_VALUE'; payload: { reliefId: string; field: string; value: string } }
+  | { type: 'ADD_CUSTOM_RELIEF' }
+  | { type: 'UPDATE_CUSTOM_RELIEF'; payload: { id: string; text: string } }
+  | { type: 'REMOVE_CUSTOM_RELIEF'; payload: { id: string } };

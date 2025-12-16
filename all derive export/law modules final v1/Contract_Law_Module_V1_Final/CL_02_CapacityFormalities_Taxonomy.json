@@ -1,0 +1,82 @@
+{
+  "module_id": "CL-02",
+  "module_title_am": "የውል ብቃትና ሥርዓት (Capacity & Formalities)",
+  "description_am": "ይህ ሞዱል ውል ተፈፃሚ እንዲሆን የተዋዋዮችን ሕጋዊ ብቃት እና የውሉን የቅርጽ መስፈርቶች ይፈትሻል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-02-F01",
+      "legal_concept_en": "Capacity to Contract (Attainment of Majority)",
+      "rhetoric": {
+        "intro_am": "የውል ብቃት ዋናው መስፈርት...",
+        "transition_am": "ሰውዬው የአካለ መጠን ደርሷል ወይ...",
+        "summary_keyword_am": "የአካለ መጠን መድረስ"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ውሉን የፈፀመው ወገን በሕግ የተደነገገው የአካለ መጠን (18 ዓመት) ላይ ደርሷል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1719", "source": "CL-R-001"}
+      ],
+      "mutex_group": "LEGAL_CAPACITY"
+    },
+    {
+      "facet_id": "CL-02-F02",
+      "legal_concept_en": "Contract by Incapacitated Person (General Rule)",
+      "rhetoric": {
+        "intro_am": "አቅመ ደካማ ከሆነ ውሉ...",
+        "transition_am": "ውሉ ሊሻር የሚችል ይሆናል...",
+        "summary_keyword_am": "አቅመ ደካማ ውል"
+      },
+      "query_type": "Boolean/Judicial",
+      "question_am": "ውሉ የተፈጸመው በሕግ በተከለከለ (interdicted) ወይም በአካለ መጠን ባልደረሰ ሰው ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1720", "source": "CL-R-001"}
+      ],
+      "mutex_group": "LEGAL_CAPACITY"
+    },
+    {
+      "facet_id": "CL-02-F03",
+      "legal_concept_en": "Required Formalities (Written Form)",
+      "rhetoric": {
+        "intro_am": "አንዳንድ ውሎች ቅጽ ይፈልጋሉ...",
+        "transition_am": "በሕግ የጽሑፍ ቅጽ ያስፈልገዋል...",
+        "summary_keyword_am": "የጽሑፍ መስፈርት"
+      },
+      "query_type": "Boolean/Documentary",
+      "question_am": "ውሉ በሕግ የጽሑፍ ቅጽ እንዲኖረው ከተጠየቀ፣ ይህ መስፈርት ተሟልቷል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1723", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONTRACT_FORM"
+    },
+    {
+      "facet_id": "CL-02-F04",
+      "legal_concept_en": "Required Formalities (Authentication/Notarization)",
+      "rhetoric": {
+        "intro_am": "ከጽሑፍ በተጨማሪ...",
+        "transition_am": "አንዳንድ ውሎች መታተም አለባቸው...",
+        "summary_keyword_am": "ማረጋገጫ መስፈርት"
+      },
+      "query_type": "Boolean/Documentary",
+      "question_am": "ውሉ ለትክክለኛነቱ በሕግ ባለሥልጣን (ኖተሪ/ምስክር) እንዲመሰከር (Authentication) የሚያስፈልገው ውል ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1724", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONTRACT_FORM"
+    },
+    {
+      "facet_id": "CL-02-F05",
+      "legal_concept_en": "Effect of Non-Compliance with Formality",
+      "rhetoric": {
+        "intro_am": "የቅርጽ መስፈርቶች ካልተሟሉ...",
+        "transition_am": "ውሉ በፍጹም ባዶ ይሆናል...",
+        "summary_keyword_am": "የሥርዓት ጉድለት ውጤት"
+      },
+      "query_type": "Directive",
+      "question_am": "የቅርጽ መስፈርቶች ሳይሟሉ የተደረገው ውል በሕግ በፍጹም ባዶ (Absolutely Null) እንደሆነ ይቆጠራል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1727", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONTRACT_SANCTION"
+    }
+  ]
+}

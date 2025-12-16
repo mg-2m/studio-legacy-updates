@@ -1,0 +1,83 @@
+{
+  "module_id": "FL-05",
+  "module_title_am": "የትዳር ንብረት አገዛዝ (Matrimonial Property Regime)",
+  "description_am": "ይህ ሞዱል ንብረት በጋራ፣ በግል ወይም በልዩ (Reserved) ንብረትነት የሚመደብበትን መስፈርት ይወስናል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-05-F01",
+      "legal_concept_en": "Existence of a Marriage Contract Altering Property Regime",
+      "rhetoric": {
+        "intro_am": "ከመደበኛው የሕግ ግምት ውጭ ለማስተዳደር...",
+        "transition_am": "ንብረታቸው በውል ይተዳደር እንደሆነ ማረጋገጥ ያስፈልጋል...",
+        "summary_keyword_am": "የጋብቻ ውል መኖር"
+      },
+      "query_type": "Boolean/Documentary",
+      "question_am": "ባለትዳሮቹ በጋብቻ ውል (Marriage Contract) የንብረት አገዛዝን የሚወስን ስምምነት አድርገዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 42", "source": "FL-R-001"}
+      ],
+      "mutex_group": "CONTRACTUAL_REGIME"
+    },
+    {
+      "facet_id": "FL-05-F02",
+      "legal_concept_en": "Acquisition During Marriage (Presumption of Community)",
+      "rhetoric": {
+        "intro_am": "ውል በሌለበት፣ በሕግ የሚታሰበው...",
+        "transition_am": "ንብረቱ በጋራ ጊዜ የተገኘ ስለመሆኑ...",
+        "summary_keyword_am": "በጋራ ዘመን የተገኘ"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ንብረቱ የተገኘው ከተጋቡበት ቀን በኋላ ነው? (በሕግ የጋራ ንብረት የመሆን ግምት አለው)",
+      "grounding_nodes": [
+        {"ref_id": "Art. 59", "source": "FL-R-001"},
+        {"ref_id": "Art. 63(1)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "COMMON_PROPERTY_TEST"
+    },
+    {
+      "facet_id": "FL-05-F03",
+      "legal_concept_en": "Source: Acquisition by Succession or Donation",
+      "rhetoric": {
+        "intro_am": "የግል ንብረት የመሆኑን ግምት ለመፍጠር...",
+        "transition_am": "ንብረቱ ከውርስ ወይም ከስጦታ የተገኘ ስለመሆኑ...",
+        "summary_keyword_am": "ውርስ ወይም ስጦታ"
+      },
+      "query_type": "Boolean/Source",
+      "question_am": "ንብረቱ የተገኘው በውርስ ወይም ለአንድ የትዳር አጋር ብቻ በተደረገ ስጦታ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 57(b)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "PERSONAL_PROPERTY_TEST"
+    },
+    {
+      "facet_id": "FL-05-F04",
+      "legal_concept_en": "Source: Acquired by Exchange of Personal Property",
+      "rhetoric": {
+        "intro_am": "የግል ንብረትነትን ለማስቀጠል...",
+        "transition_am": "ንብረቱ በሌላ የግል ንብረት ምትክ የተገኘ ስለመሆኑ...",
+        "summary_keyword_am": "የግል ንብረት ምትክ"
+      },
+      "query_type": "Boolean/Source",
+      "question_am": "ንብረቱ በግል ንብረት ሽያጭ ወይም ልውውጥ የተገኘ ገንዘብ/ንብረት ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 57(c)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "PERSONAL_PROPERTY_TEST"
+    },
+    {
+      "facet_id": "FL-05-F05",
+      "legal_concept_en": "Improvement of Personal Property",
+      "rhetoric": {
+        "intro_am": "በግል ንብረት ላይ የተደረጉ ማሻሻያዎች...",
+        "transition_am": "የጋራ ንብረት በግል ንብረት ላይ ኢንቨስት ተደርጓል?",
+        "summary_keyword_am": "የንብረት ማሻሻያ"
+      },
+      "query_type": "Amount/Boolean",
+      "question_am": "በጋራ ንብረት ገቢ ወይም በሌላው አጋር ጥረት የግል ንብረቱ ላይ ከፍተኛ መሻሻል (Improvement) ተደርጓል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 61(2)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "COMPENSATION_CLAIM"
+    }
+  ]
+}

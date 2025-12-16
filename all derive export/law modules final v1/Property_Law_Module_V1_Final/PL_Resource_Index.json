@@ -1,0 +1,99 @@
+{
+  "branch_id": "PL",
+  "branch_title": "Property Law (ንብረት ሕግ)",
+  "legal_source_id": "PL-R-001",
+  "legal_source_title": "የኢትዮጵያ ሲቪል ሕግ (Ethiopian Civil Code, 1960)",
+  "module_resources": [
+    {
+      "module_id": "PL-01",
+      "module_title": "General Principles & Categories",
+      "articles": [
+        "Art. 1126 (Definition of Property)",
+        "Art. 1127 (Movable and Immovable)",
+        "Art. 1130 (Immovable by Destination)",
+        "Art. 1139 (Public Domain)"
+      ]
+    },
+    {
+      "module_id": "PL-02",
+      "module_title": "Ownership: Definition & Limits",
+      "articles": [
+        "Art. 1204 (Definition of Ownership)",
+        "Art. 1225 (Limitations for Neighbors)",
+        "Art. 1234 (Statutory Restrictions)"
+      ]
+    },
+    {
+      "module_id": "PL-03",
+      "module_title": "Co-ownership (Undivided)",
+      "articles": [
+        "Art. 1257 (Creation of Co-ownership)",
+        "Art. 1261 (Rights of Co-owners)",
+        "Art. 1275 (Partition of Property)"
+      ]
+    },
+    {
+      "module_id": "PL-04",
+      "module_title": "Acquisition of Ownership",
+      "articles": [
+        "Art. 1152 (Mode of Acquisition)",
+        "Art. 1161 (Acquisition of Movable by Possession)",
+        "Art. 1184 (Acquisition of Immovable by Contract)"
+      ]
+    },
+    {
+      "module_id": "PL-05",
+      "module_title": "Land Rights and Immovables (Accession)",
+      "articles": [
+        "Art. 1489 (General Principle on Land)",
+        "Art. 1492 (Construction by Third Party)",
+        "Art. 1502 (Compensation for Improvements)"
+      ]
+    },
+    {
+      "module_id": "PL-06",
+      "module_title": "Possession: Definition & Protection",
+      "articles": [
+        "Art. 1459 (Definition of Possession)",
+        "Art. 1466 (Acquisition of Possession)",
+        "Art. 1473 (Action for Disturbance or Dispossession)"
+      ]
+    },
+    {
+      "module_id": "PL-07",
+      "module_title": "Usufruct & Servitudes",
+      "articles": [
+        "Art. 1309 (Definition of Usufruct)",
+        "Art. 1332 (Obligations of the Usufructuary)",
+        "Art. 1376 (Extinction of Servitudes)"
+      ]
+    },
+    {
+      "module_id": "PL-08",
+      "module_title": "Securities: Pledge (Movable)",
+      "articles": [
+        "Art. 1792 (Pledge Definition)",
+        "Art. 1796 (Pledge without Dispossession)",
+        "Art. 1803 (Sale of the Pledge)"
+      ]
+    },
+    {
+      "module_id": "PL-09",
+      "module_title": "Securities: Mortgage (Immovable)",
+      "articles": [
+        "Art. 3041 (Mortgage Definition)",
+        "Art. 3051 (Registration Requirement)",
+        "Art. 3062 (Effect of Mortgage)"
+      ]
+    },
+    {
+      "module_id": "PL-10",
+      "module_title": "Registration and Publicity",
+      "articles": [
+        "Art. 1576 (Publicity of Transfers)",
+        "Art. 1582 (Requirement of Registration)",
+        "Art. 1594 (Effects of Non-registration)"
+      ]
+    }
+  ]
+}

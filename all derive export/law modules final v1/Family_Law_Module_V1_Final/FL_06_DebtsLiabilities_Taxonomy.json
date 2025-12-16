@@ -1,0 +1,67 @@
+{
+  "module_id": "FL-06",
+  "module_title_am": "ዕዳዎችና የገንዘብ ግዴታዎች (Debts and Liabilities)",
+  "description_am": "ይህ ሞዱል ባለትዳሮች በጋራና በግል ንብረታቸው የሚሸፍኗቸውን ዕዳዎችና የገንዘብ ግዴታዎች ይዘረዝራል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-06-F01",
+      "legal_concept_en": "Debt Incurred for Household Needs",
+      "rhetoric": {
+        "intro_am": "የጋራ ዕዳ መሆኑን ለማረጋገጥ፣ መጀመሪያ...",
+        "transition_am": "ይህም የዕለት ተዕለት ፍላጎቶችን ለማሟላት ይውላል...",
+        "summary_keyword_am": "ለትዳር ፍላጎት የተወሰደ"
+      },
+      "query_type": "Boolean/Purpose",
+      "question_am": "ዕዳው የተፈጠረው ለቤተሰብ የዕለት ተዕለት ፍላጎቶች ወይም ለልጆች አስተዳደግ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 73", "source": "FL-R-001"}
+      ],
+      "mutex_group": "COMMON_DEBT_TEST"
+    },
+    {
+      "facet_id": "FL-06-F02",
+      "legal_concept_en": "Debt Incurred for Common Property Acquisition/Improvement",
+      "rhetoric": {
+        "intro_am": "በተጨማሪም፣ የጋራ ንብረትን ለመጨመር...",
+        "transition_am": "የዕዳው ዓላማ የጋራ ንብረትን ማፍራት ወይም መጠገን ከሆነ...",
+        "summary_keyword_am": "ለጋራ ንብረት የተወሰደ"
+      },
+      "query_type": "Boolean/Purpose",
+      "question_am": "ዕዳው የተወሰደው ለጋራ ንብረት ማግኛ፣ ጥገና ወይም አስተዳደር ዓላማ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 74", "source": "FL-R-001"}
+      ],
+      "mutex_group": "COMMON_DEBT_TEST"
+    },
+    {
+      "facet_id": "FL-06-F03",
+      "legal_concept_en": "Debt Incurred Exclusively for Personal Benefit",
+      "rhetoric": {
+        "intro_am": "ዕዳው የግል የሚሆነው...",
+        "transition_am": "ይህም የሌላኛውን አጋር ጥቅም የማይመለከት ከሆነ...",
+        "summary_keyword_am": "ለግል ጥቅም የተወሰደ"
+      },
+      "query_type": "Boolean/Purpose",
+      "question_am": "ዕዳው የተወሰደው ከአንዱ የትዳር አጋር የግል ንብረት ወይም ከግል ጥቅም ጋር በተያያዘ ብቻ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 72", "source": "FL-R-001"}
+      ],
+      "mutex_group": "PERSONAL_DEBT_TEST"
+    },
+    {
+      "facet_id": "FL-06-F04",
+      "legal_concept_en": "Liability for Mismanagement of Common Property",
+      "rhetoric": {
+        "intro_am": "ዕዳው የተፈጠረው በንብረት አስተዳደር ስህተት ከሆነ...",
+        "transition_am": "ከብልሹ አስተዳደር የተነሳ ጉዳት ደርሷል...",
+        "summary_keyword_am": "ብልሹ አስተዳደር"
+      },
+      "query_type": "Boolean/Judicial",
+      "question_am": "ዕዳው የተከሰተው በንብረት ብልሹ አስተዳደር ወይም በሕግ ከተሰጠው ሥልጣን ውጪ በተፈፀመ ድርጊት ምክንያት ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 91", "source": "FL-R-001"}
+      ],
+      "mutex_group": "COMPENSATION_LIABILITY"
+    }
+  ]
+}

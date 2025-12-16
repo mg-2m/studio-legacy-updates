@@ -1,0 +1,92 @@
+{
+
+  "resource_id": "CL-R-001",
+
+  "resource_title_en": "Ethiopian Civil Code (1960) - Contracts and Torts",
+
+  "resource_title_am": "የኢትዮጵያ ሲቪል ሕግ (1960) - ውሎችና ከውል ውጪ የሚነሱ ግዴታዎች",
+
+  "articles": [
+
+    { "ref_id": "Art. 1675", "topic_en": "Definition of Contract", "scope": "CL-01" },
+
+    { "ref_id": "Art. 1678", "topic_en": "Formation by Consent", "scope": "CL-01" },
+
+    { "ref_id": "Art. 1681", "topic_en": "Form of Acceptance", "scope": "CL-01" },
+
+    { "ref_id": "Art. 1686", "topic_en": "Time and Place of Formation", "scope": "CL-01" },
+
+    
+
+    { "ref_id": "Art. 1699", "topic_en": "Mistake as a Defect of Consent", "scope": "CL-03" },
+
+    { "ref_id": "Art. 1704", "topic_en": "Fraud (Deceit)", "scope": "CL-03" },
+
+    { "ref_id": "Art. 1705", "topic_en": "Duress (Coercion)", "scope": "CL-03" },
+
+    
+
+    { "ref_id": "Art. 1711", "topic_en": "Object Must Be Lawful and Possible", "scope": "CL-04" },
+
+    { "ref_id": "Art. 1712", "topic_en": "Impossibility of Object", "scope": "CL-04" },
+
+    { "ref_id": "Art. 1719", "topic_en": "Capacity to Contract (General Rule)", "scope": "CL-02" },
+
+    { "ref_id": "Art. 1720", "topic_en": "Contracts by Incapacitated Persons", "scope": "CL-02" },
+
+    { "ref_id": "Art. 1723", "topic_en": "Form of Contract (Formalities)", "scope": "CL-02" },
+
+    
+
+    { "ref_id": "Art. 1731", "topic_en": "Binding Force of Contracts", "scope": "CL-06" },
+
+    { "ref_id": "Art. 1749", "topic_en": "Interpretation of Contracts", "scope": "CL-06" },
+
+    
+
+    { "ref_id": "Art. 1756", "topic_en": "Place of Performance", "scope": "CL-07" },
+
+    { "ref_id": "Art. 1771", "topic_en": "Non-Performance (Default of Debtor)", "scope": "CL-08" },
+
+    { "ref_id": "Art. 1776", "topic_en": "Right to Specific Performance", "scope": "CL-09" },
+
+    { "ref_id": "Art. 1790", "topic_en": "Damages for Non-Performance", "scope": "CL-09" },
+
+    
+
+    { "ref_id": "Art. 1808", "topic_en": "Effect of Absolute Nullity (Voidness)", "scope": "CL-05" },
+
+    { "ref_id": "Art. 1809", "topic_en": "Effect of Relative Nullity (Voidability)", "scope": "CL-05" },
+
+    { "ref_id": "Art. 1819", "topic_en": "Extinction of Obligations (General)", "scope": "CL-11" },
+
+    
+
+    { "ref_id": "Art. 1820", "topic_en": "Extinction by Payment", "scope": "CL-11" },
+
+    { "ref_id": "Art. 1832", "topic_en": "Extinction by Novation", "scope": "CL-11" },
+
+    { "ref_id": "Art. 1845", "topic_en": "Extinction by Release", "scope": "CL-11" },
+
+
+
+    { "ref_id": "Art. 1806", "topic_en": "Termination by Mutual Consent", "scope": "CL-10" },
+
+    { "ref_id": "Art. 1814", "topic_en": "Termination for Non-Performance", "scope": "CL-10" },
+
+    { "ref_id": "Art. 1815", "topic_en": "Termination for Unforeseen Events (Force Majeure)", "scope": "CL-10" },
+
+    
+
+    { "ref_id": "Art. 2028", "topic_en": "General Principle of Torts (Fault)", "scope": "CL-12" },
+
+    { "ref_id": "Art. 2030", "topic_en": "Liability for Acts of Others", "scope": "CL-12" },
+
+    { "ref_id": "Art. 2044", "topic_en": "Liability for Things/Buildings", "scope": "CL-12" }
+
+  ]
+
+}
+
+
+

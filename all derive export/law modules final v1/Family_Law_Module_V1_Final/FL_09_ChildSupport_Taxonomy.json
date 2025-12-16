@@ -1,0 +1,82 @@
+{
+  "module_id": "FL-09",
+  "module_title_am": "የልጅ ድጋፍ/ቀለብ (Child Support/Maintenance)",
+  "description_am": "ይህ ሞዱል ወላጆች ለልጃቸው የኑሮ ፍላጎት አስተዋፅኦ የማድረግ ግዴታን እና የገንዘብ መጠኑን የሚወስኑ መመዘኛዎችን ያብራራል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-09-F01",
+      "legal_concept_en": "General Obligation of Maintenance",
+      "rhetoric": {
+        "intro_am": "የድጋፍ ግዴታ መሰረት...",
+        "transition_am": "ይህ ግዴታ በሕግ የተቀመጠ ነው...",
+        "summary_keyword_am": "የቀለብ ግዴታ"
+      },
+      "query_type": "Boolean",
+      "question_am": "ልጁ ገና አቅመ ደካማ (Minor) ከሆነ፣ ወላጆች ለልጁ ድጋፍ የማድረግ ግዴታ አለባቸው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 185", "source": "FL-R-001"}
+      ],
+      "mutex_group": "MAINTENANCE_OBLIGATION"
+    },
+    {
+      "facet_id": "FL-09-F02",
+      "legal_concept_en": "Proportional Contribution based on Means",
+      "rhetoric": {
+        "intro_am": "የድጋፍ መጠኑ ሲወሰን...",
+        "transition_am": "የወላጆችን የገንዘብ አቅም መሠረት ያደርጋል...",
+        "summary_keyword_am": "የገንዘብ አቅም ተመጣጣኝነት"
+      },
+      "query_type": "Amount/Directive",
+      "question_am": "የድጋፍ መጠኑ የሚወሰነው የወላጆችን የገንዘብ አቅምና የልጁን ፍላጎት ተመጣጣኝ በሆነ መንገድ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 187", "source": "FL-R-001"}
+      ],
+      "mutex_group": "CONTRIBUTION_STANDARD"
+    },
+    {
+      "facet_id": "FL-09-F03",
+      "legal_concept_en": "Duration of Support (Until Majority)",
+      "rhetoric": {
+        "intro_am": "የቀለብ ግዴታ የሚያበቃበት ጊዜ...",
+        "transition_am": "ልጁ አካለ መጠን ሲደርስ...",
+        "summary_keyword_am": "የአካለ መጠን ማብቂያ"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "የልጁ እድሜ 18 ዓመት ደርሷል ወይ? (የድጋፍ ግዴታው የሚያበቃበት ጊዜ)",
+      "grounding_nodes": [
+        {"ref_id": "Art. 188(1)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "DURATION_LIMIT"
+    },
+    {
+      "facet_id": "FL-09-F04",
+      "legal_concept_en": "Continuation of Support for Education",
+      "rhetoric": {
+        "intro_am": "ከ18 ዓመት በኋላም የሚቀጥል ድጋፍ...",
+        "transition_am": "ይህ የሚመለከተው ትምህርትን ብቻ ነው...",
+        "summary_keyword_am": "የትምህርት ድጋፍ"
+      },
+      "query_type": "Boolean/Educational Status",
+      "question_am": "ልጁ 18 ዓመት ከሞላው በኋላም ትምህርቱን (ለምሳሌ የዩኒቨርሲቲ ትምህርት) እየተከታተለ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 188(2)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "DURATION_LIMIT"
+    },
+    {
+      "facet_id": "FL-09-F05",
+      "legal_concept_en": "Modification of Support Order",
+      "rhetoric": {
+        "intro_am": "የድጋፍ ትዕዛዝ ሊቀየር የሚችለው...",
+        "transition_am": "የሁኔታ ለውጥ ሲከሰት...",
+        "summary_keyword_am": "የትዕዛዝ ለውጥ"
+      },
+      "query_type": "Boolean/Change of Circumstance",
+      "question_am": "የወላጆች ወይም የልጁ የኑሮ ሁኔታ በከፍተኛ ሁኔታ ተለውጧል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 191", "source": "FL-R-001"}
+      ],
+      "mutex_group": "MODIFICATION_CLAIM"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-11",
+  "module_title_am": "የግዴታዎች መጥፋት (Extinction of Obligations)",
+  "description_am": "ይህ ሞዱል የውል ግዴታዎች በክፍያ፣ በአዲስ መተካት (Novation)፣ በመዋጮ (Compensation) እና በሌሎች መንገዶች እንዴት እንደሚጠፉ ይገልጻል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-11-F01",
+      "legal_concept_en": "Extinction by Payment (Full Performance)",
+      "rhetoric": {
+        "intro_am": "የግዴታ መጥፋት ዋናው መንገድ...",
+        "transition_am": "ግዴታው ሙሉ በሙሉ ተፈጽሟል...",
+        "summary_keyword_am": "በክፍያ መጥፋት"
+      },
+      "query_type": "Boolean/Action",
+      "question_am": "ተበዳሪው ግዴታውን በውሉ በተጠቀሰው መንገድና መጠን ሙሉ በሙሉ ከፍሏል ወይም አፈጽሟል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1820", "source": "CL-R-001"}
+      ],
+      "mutex_group": "EXTINCTION_METHOD"
+    },
+    {
+      "facet_id": "CL-11-F02",
+      "legal_concept_en": "Extinction by Novation (New Obligation)",
+      "rhetoric": {
+        "intro_am": "አሮጌ ግዴታ በአዲስ ሲተካ...",
+        "transition_am": "በግልጽ ፍላጎት መተካት ያስፈልጋል...",
+        "summary_keyword_am": "በአዲስ መተካት (Novation)"
+      },
+      "query_type": "Boolean/Agreement",
+      "question_am": "ተዋዋይ ወገኖች ቀደም ሲል የነበረውን ግዴታ በአዲስ ግዴታ ለመተካት (Novation) በግልጽ ስምምነት ላይ ደርሰዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1832", "source": "CL-R-001"}
+      ],
+      "mutex_group": "EXTINCTION_METHOD"
+    },
+    {
+      "facet_id": "CL-11-F03",
+      "legal_concept_en": "Extinction by Compensation (Set-Off)",
+      "rhetoric": {
+        "intro_am": "ሁለት ወገኖች እርስ በርስ ሲበዳደሩ...",
+        "transition_am": "እዳዎች እኩል ሲሆኑ ይካካሳሉ...",
+        "summary_keyword_am": "በመዋጮ መጥፋት (Compensation)"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "ሁለቱም ተዋዋይ ወገኖች በገንዘብ ወይም በተመሳሳይ ነገር እርስ በርስ የሚከፈል እዳ ያለባቸው ሲሆን ይህም ለክፍያ ብቁ (due) ሆኗል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1845", "source": "CL-R-001"}
+      ],
+      "mutex_group": "EXTINCTION_METHOD"
+    },
+    {
+      "facet_id": "CL-11-F04",
+      "legal_concept_en": "Extinction by Release (Remission of Debt)",
+      "rhetoric": {
+        "intro_am": "አበዳሪው እዳውን ሲተው...",
+        "transition_am": "ዕዳውን ለመተው በግልጽ መስማማት...",
+        "summary_keyword_am": "በይቅርታ መጥፋት (Release)"
+      },
+      "query_type": "Boolean/Action",
+      "question_am": "አበዳሪው በውል ግዴታውን ለመተው (Release or Remission) በግልጽ ተስማምቷል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1851", "source": "CL-R-001"}
+      ],
+      "mutex_group": "EXTINCTION_METHOD"
+    }
+  ]
+}

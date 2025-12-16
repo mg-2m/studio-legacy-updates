@@ -1,0 +1,62 @@
+{
+
+  "branch_id": "FAMILY_LAW",
+
+  "index_date": "2025-12-12",
+
+  "resource_list": [
+
+    {
+
+      "resource_id": "FL-R-001",
+
+      "type": "Code/Proclamation (Primary Law)",
+
+      "title": "family-code-Amharic (1).pdf",
+
+      [cite_start]"function": "Core Statutory Law. Defines Capacity, Establishment, Rights, Duties, Property Regimes, and Grounds for Dissolution (covers FL-01 to FL-12 in the Scope Map). Contains Amharic text. [cite: 2]",
+
+      "relevance": "Critical",
+
+      "source_link": "https://drive.google.com/open?id=1Z4dzZtkPl5IpZ-Y7nKFgPfiZ4MJVjJoN"
+
+    },
+
+    {
+
+      "resource_id": "FL-R-002",
+
+      "type": "Constitutional Law (Foundational Mandate)",
+
+      "title": "Constitution-of-the-FDRE.pdf",
+
+      "function": "Sets foundational rights, including Marital, Personal, and Family Rights (Art. 34, 35). Mandates equal rights in marriage and protection of children. [cite_start]Essential for the 'Judge' role's ethical grounding and 'Vulnerable Party' needs (GEP 0.2). [cite: 3]",
+
+      "relevance": "Foundational",
+
+      "source_link": "https://drive.google.com/open?id=1odCWdzlyOa5GifmlvIDax_ycko7jcw4t"
+
+    },
+
+    {
+
+      "resource_id": "FL-R-003",
+
+      "type": "Precedent/Case Law (LRG Grounding Nodes)",
+
+      "title": "Microsoft Word - Federal Supreme Court Decisions Volume 1-3.pdf",
+
+      "function": "Contains Federal Supreme Court Decisions (Cassation) vital for the 'Cassation-Ready' Research Standard (Pillar I, 1.2). [cite_start]These decisions clarify the application and interpretation of the Family Code, acting as critical 'Grounding Nodes' for the LRG. [cite: 1]",
+
+      "relevance": "Critical for LRG Logic",
+
+      "source_link": "https://drive.google.com/open?id=1-XWcFIx6H1xtT8oxTrdvyoQoO7R1w9S0"
+
+    }
+
+  ]
+
+}
+
+
+

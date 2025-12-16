@@ -1,0 +1,103 @@
+{
+
+  "module_id": "FL-01",
+
+  "module_title_am": "የጋብቻ ብቃት (Capacity to Contract)",
+
+  "description_am": "ይህ ሞዱል አንድ ሰው በሕግ ፊት ጋብቻ ለመፈፀም የሚያስፈልጉትን መሰረታዊ የብቃት መመዘኛዎች ይዳስሳል።",
+
+  "fact_facets": [
+
+    {
+
+      "facet_id": "FL-01-F01",
+
+      "legal_concept_en": "Attained Marriageable Age",
+
+      "rhetoric": {
+
+        "intro_am": "በመጀመሪያ ደረጃ፣ የጋብቻ ብቃትን ለማረጋገጥ...",
+
+        "transition_am": "ይህም የሚረጋገጠው በ...",
+
+        "summary_keyword_am": "የአካለ መጠን መድረስ"
+
+      },
+
+      "query_type": "Boolean/Date",
+
+      "question_am": "ግለሰቡ በሕግ የተቀመጠውን ዐሥራ ስምንት ዓመት (18) ዕድሜ አሟልቷል?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 6", "source": "FL-R-001"}
+
+      ],
+
+      "mutex_group": "AGE_CAPACITY"
+
+    },
+
+    {
+
+      "facet_id": "FL-01-F02",
+
+      "legal_concept_en": "Free and Full Consent (Present)",
+
+      "rhetoric": {
+
+        "intro_am": "በተጨማሪም፣ ሕጉ የሚጠይቀው...",
+
+        "transition_am": "ስለሆነም፣ ይህንን ነፃ ፈቃድ የሚገድብ ሁኔታ አለመኖሩን...",
+
+        "summary_keyword_am": "ነጻና ሙሉ ፈቃድ"
+
+      },
+
+      "query_type": "Boolean",
+
+      "question_am": "ጋብቻው በፍላጎቱ ላይ ጫና ሳይደረግበት በነጻና ሙሉ ፈቃድ እየተመሰረተ ነው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 7", "source": "FL-R-001"}
+
+      ],
+
+      "mutex_group": "CONSENT_FREEDOM"
+
+    },
+
+    {
+
+      "facet_id": "FL-01-F03",
+
+      "legal_concept_en": "Mental Capacity to Consent (Sound Mind)",
+
+      "rhetoric": {
+
+        "intro_am": "ከፈቃዱ ጎን ለጎን፣ ለሕጋዊነት የሚያስፈልገው...",
+
+        "transition_am": "ይህም ጋብቻው ዘላቂ መሆኑን ለማረጋገጥ ሲባል...",
+
+        "summary_keyword_am": "የአእምሮ ጤንነት"
+
+      },
+
+      "query_type": "Boolean",
+
+      "question_am": "ግለሰቡ የጋብቻውን ሙሉ ትርጉም እና ውጤት ለመረዳት የሚያስችል የአእምሮ ጤንነት አለው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 8", "source": "FL-R-001"}
+
+      ],
+
+      "mutex_group": "MENTAL_CAPACITY"
+
+    }
+
+  ]
+
+}

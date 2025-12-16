@@ -1,0 +1,90 @@
+{
+  "engine_id": "CL-LRG-V1",
+  "engine_title": "Contract Law Logical Rule Graph - V1",
+  "rules": [
+    {
+      "rule_id": "CL-R01",
+      "module_id": "CL-01",
+      "conclusion_en": "Contract is Formed (Mutual Consent)",
+      "conclusion_am": "ውል ተመሰረተ (የጋራ ፈቃድ)",
+      "logic": "(CL-01-F01 AND (CL-01-F02 OR CL-01-F03)) AND CL-01-F04"
+    },
+    {
+      "rule_id": "CL-R02",
+      "module_id": "CL-02",
+      "conclusion_en": "Contract Fails Capacity/Formalities",
+      "conclusion_am": "ውሉ የብቃት/ሥርዓት መስፈርትን አላሟላም",
+      "logic": "(NOT CL-02-F01 AND CL-02-F02) OR (CL-02-F03 AND NOT CL-02-F04)"
+    },
+    {
+      "rule_id": "CL-R03",
+      "module_id": "CL-03",
+      "conclusion_en": "Contract is Voidable due to Vices of Consent",
+      "conclusion_am": "ውሉ በፍቃድ ጉድለት ምክንያት ሊሻር ይችላል",
+      "logic": "CL-03-F01 OR CL-03-F02 OR CL-03-F03 OR CL-03-F04"
+    },
+    {
+      "rule_id": "CL-R04",
+      "module_id": "CL-04",
+      "conclusion_en": "Contract is Absolutely Null (Object/Causa)",
+      "conclusion_am": "ውሉ በፍጹም ባዶ ነው (ዓላማ/ምክንያት)",
+      "logic": "(NOT CL-04-F01) OR (NOT CL-04-F02) OR (NOT CL-04-F03)"
+    },
+    {
+      "rule_id": "CL-R05",
+      "module_id": "CL-05",
+      "conclusion_en": "Contract is VOID (Absolute Nullity)",
+      "conclusion_am": "ውሉ ፍጹም ባዶ ነው",
+      "logic": "CL-R04 OR CL-02-F05"
+    },
+    {
+      "rule_id": "CL-R06",
+      "module_id": "CL-06",
+      "conclusion_en": "Contract is Binding (Pacta Sunt Servanda)",
+      "conclusion_am": "ውሉ አስገዳጅ ነው",
+      "logic": "CL-06-F01 AND (NOT CL-R05) AND (NOT CL-R03)"
+    },
+    {
+      "rule_id": "CL-R07",
+      "module_id": "CL-07",
+      "conclusion_en": "Obligation is Performed/Discharged",
+      "conclusion_am": "ግዴታው ተፈጽሟል",
+      "logic": "(CL-07-F01 AND CL-07-F02) OR (CL-11-F01)"
+    },
+    {
+      "rule_id": "CL-R08",
+      "module_id": "CL-08",
+      "conclusion_en": "Debtor is in Default (Breach Established)",
+      "conclusion_am": "ተበዳሪው ግዴታውን አፍርሷል",
+      "logic": "CL-08-F01 AND (CL-08-F02 OR CL-08-F03) AND (NOT CL-08-F04)"
+    },
+    {
+      "rule_id": "CL-R09",
+      "module_id": "CL-09",
+      "conclusion_en": "Creditor is Entitled to Remedies",
+      "conclusion_am": "አበዳሪው መፍትሔ የማግኘት መብት አለው",
+      "logic": "CL-R08 AND (CL-09-F01 OR CL-09-F02) AND (NOT CL-09-F04)"
+    },
+    {
+      "rule_id": "CL-R10",
+      "module_id": "CL-10",
+      "conclusion_en": "Contract is Terminated/Dissolved",
+      "conclusion_am": "ውል ፀንቷል ወይም ተቋርጧል",
+      "logic": "CL-10-F01 OR CL-10-F02 OR CL-10-F03"
+    },
+    {
+      "rule_id": "CL-R11",
+      "module_id": "CL-11",
+      "conclusion_en": "Obligation is Extinguished (Non-Default)",
+      "conclusion_am": "ግዴታው ጠፍቷል",
+      "logic": "CL-11-F01 OR CL-11-F02 OR CL-11-F03 OR CL-11-F04"
+    },
+    {
+      "rule_id": "CL-R12",
+      "module_id": "CL-12",
+      "conclusion_en": "Extracontractual Liability Established (Tort)",
+      "conclusion_am": "ከውል ውጪ የሚነሳ ተጠያቂነት ተረጋግጧል",
+      "logic": "CL-12-F01 OR CL-12-F02 OR CL-12-F03"
+    }
+  ]
+}

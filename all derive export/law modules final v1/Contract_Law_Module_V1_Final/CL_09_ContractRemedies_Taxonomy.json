@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-09",
+  "module_title_am": "ግዴታ ባለመፈጸም የሚሰጡ መፍትሔዎች (Remedies)",
+  "description_am": "ይህ ሞዱል ግዴታ ባለመፈጸም ምክንያት አበዳሪው ሊያገኛቸው የሚችላቸውን ዋና ዋና ሕጋዊ መፍትሔዎች (ማስፈጸም እና የጉዳት ካሳ) ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-09-F01",
+      "legal_concept_en": "Right to Specific Performance (Primary Remedy)",
+      "rhetoric": {
+        "intro_am": "የመጀመሪያውና ዋናው መፍትሔ...",
+        "transition_am": "ውሉ በዓይነት እንዲፈጸም የመጠየቅ መብት...",
+        "summary_keyword_am": "በዓይነት ማስፈጸም"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "ግዴታው በዓይነት እንዲፈጸም መፍቀዱ ለተበዳሪው ኢ-ፍትሃዊ ሸክም የማይፈጥር ከሆነ፣ አበዳሪው ይህን የመጠየቅ መብት አለው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1776", "source": "CL-R-001"}
+      ],
+      "mutex_group": "PRIMARY_REMEDY"
+    },
+    {
+      "facet_id": "CL-09-F02",
+      "legal_concept_en": "Conditions for Granting Damages (Subsidiary Remedy)",
+      "rhetoric": {
+        "intro_am": "በዓይነት ማስፈጸም ካልተቻለ...",
+        "transition_am": "አበዳሪው የጉዳት ካሳ ሊጠይቅ ይችላል...",
+        "summary_keyword_am": "የጉዳት ካሳ መብት"
+      },
+      "query_type": "Boolean/Causation",
+      "question_am": "አበዳሪው በውሉ አለመፈጸም ምክንያት የደረሰበትን ኪሳራ ማስረጃ (Causation and Loss) አቅርቧል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1790", "source": "CL-R-001"}
+      ],
+      "mutex_group": "SECONDARY_REMEDY"
+    },
+    {
+      "facet_id": "CL-09-F03",
+      "legal_concept_en": "Scope of Damages (Foreseeable Loss)",
+      "rhetoric": {
+        "intro_am": "የጉዳት ካሳው የሚሸፍነው...",
+        "transition_am": "መከፈል ያለበት ጉዳት አስቀድሞ ሊታሰብ የሚችል መሆን አለበት...",
+        "summary_keyword_am": "ሊታሰብ የሚችል ኪሳራ"
+      },
+      "query_type": "Directive",
+      "question_am": "የጉዳት ካሳ መጠን በዋነኛነት ውሉ በተፈጸመበት ጊዜ አስቀድሞ ሊታሰብ በሚችለው (Foreseeable) ኪሳራ የተገደበ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1799", "source": "CL-R-001"}
+      ],
+      "mutex_group": "DAMAGES_CALCULATION"
+    },
+    {
+      "facet_id": "CL-09-F04",
+      "legal_concept_en": "Mitigation of Damages (Creditor's Duty)",
+      "rhetoric": {
+        "intro_am": "አበዳሪውም ግዴታ አለበት...",
+        "transition_am": "ኪሳራውን ለመቀነስ ምክንያታዊ እርምጃዎችን መውሰድ አለበት...",
+        "summary_keyword_am": "ኪሳራን የመቀነስ ግዴታ"
+      },
+      "query_type": "Boolean/Action",
+      "question_am": "አበዳሪው በተበዳሪው አለመፈጸም ምክንያት ሊደርስበት የሚችለውን ኪሳራ ለመቀነስ ምክንያታዊ እርምጃዎችን አልወሰደም?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1801", "source": "CL-R-001"}
+      ],
+      "mutex_group": "DEFENSE_AGAINST_REMEDY"
+    }
+  ]
+}

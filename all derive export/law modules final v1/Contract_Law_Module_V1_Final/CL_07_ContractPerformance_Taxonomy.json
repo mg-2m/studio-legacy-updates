@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-07",
+  "module_title_am": "የውል አፈጻጸም (Performance)",
+  "description_am": "ይህ ሞዱል የውል ግዴታዎች የሚፈፀሙበትን ጊዜ፣ ቦታ፣ የሚፈጽም አካልና የክፍያ አወሳሰን ደንቦችን ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-07-F01",
+      "legal_concept_en": "Time of Performance (Immediate or Specified Term)",
+      "rhetoric": {
+        "intro_am": "ግዴታው መቼ መፈፀም አለበት...",
+        "transition_am": "ጊዜ ካልተወሰነ ወዲያውኑ መፈፀም አለበት...",
+        "summary_keyword_am": "የአፈጻጸም ጊዜ"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ግዴታው የሚፈፀምበት ቀን በውሉ ውስጥ በግልጽ ካልተወሰነ፣ አበዳሪው ወዲያውኑ እንዲፈጸም የመጠየቅ መብት አለው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1762", "source": "CL-R-001"}
+      ],
+      "mutex_group": "PERFORMANCE_TERMS"
+    },
+    {
+      "facet_id": "CL-07-F02",
+      "legal_concept_en": "Place of Performance (General Rule)",
+      "rhetoric": {
+        "intro_am": "አፈጻጸሙ የት መሆን አለበት...",
+        "transition_am": "ቦታው ካልተወሰነ፣ ተበዳሪው ባለበት ቦታ...",
+        "summary_keyword_am": "የአፈጻጸም ቦታ"
+      },
+      "query_type": "Boolean/Location",
+      "question_am": "በውሉ ውስጥ የአፈጻጸም ቦታ ካልተወሰነ፣ ግዴታው የሚፈጸመው ተበዳሪው ግዴታው በሚፈፀምበት ጊዜ ባለበት ቦታ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1756", "source": "CL-R-001"}
+      ],
+      "mutex_group": "PERFORMANCE_TERMS"
+    },
+    {
+      "facet_id": "CL-07-F03",
+      "legal_concept_en": "Performance by Third Party (Acceptability)",
+      "rhetoric": {
+        "intro_am": "ግዴታውን ሌላ ሰው ቢፈጽመው...",
+        "transition_am": "ይህ የሚፈቀደው በአበዳሪው ፍላጎት ላይ ካልተመሰረተ ነው...",
+        "summary_keyword_am": "በሦስተኛ ወገን መፈጸም"
+      },
+      "query_type": "Boolean/Directive",
+      "question_am": "የግዴታው አፈጻጸም በተበዳሪው ግለሰባዊ ብቃት (Personal Skill) ላይ የተመሰረተ ካልሆነ፣ በሌላ ሦስተኛ ወገን ቢፈፀም አበዳሪው ሊቀበለው ይገባል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1760", "source": "CL-R-001"}
+      ],
+      "mutex_group": "PARTY_IDENTITY"
+    },
+    {
+      "facet_id": "CL-07-F04",
+      "legal_concept_en": "Imputation of Payments (Allocation of Payment)",
+      "rhetoric": {
+        "intro_am": "አንድ ተበዳሪ ለተመሳሳይ አበዳሪ በርካታ እዳዎች ሲኖሩት...",
+        "transition_am": "ክፍያው ለትልቁ ወይም ለጥንታዊው እዳ ይውላል...",
+        "summary_keyword_am": "የክፍያ አወሳሰን (Imputation)"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "ተበዳሪው ለተመሳሳይ አበዳሪ በርካታ እዳዎች ያለበት ሲሆን፣ ክፍያው በተበዳሪው ካልተወሰነ፣ ገንዘቡ በሕግ አስቀድሞ ለደረሰው ወይም ለአበዳሪው በጣም ውድ ለሆነው እዳ ይመደባል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1770", "source": "CL-R-001"}
+      ],
+      "mutex_group": "FINANCIAL_ALLOCATION"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-04",
+  "module_title_am": "የውል ዓላማና ምክንያት (Object & Causa)",
+  "description_am": "ይህ ሞዱል የውሉ ዓላማ (ነገር) ሊፈፀም የሚችል፣ ሕጋዊ እና ከሥነ ምግባር ጋር የሚስማማ መሆኑን ይፈትሻል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-04-F01",
+      "legal_concept_en": "Object Must Be Possible (Physical or Legal)",
+      "rhetoric": {
+        "intro_am": "ውል እንዲፀና የመጀመሪያው መስፈርት...",
+        "transition_am": "የውሉ ነገር በፊዚካዊ ወይም በሕግ ሊሆን የሚችል መሆን አለበት...",
+        "summary_keyword_am": "ሊሆን የሚችል ዓላማ"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "የውሉ ዓላማ በተፈጥሮ (ለምሳሌ የጠፋ ነገር) ወይም በሕግ (ለምሳሌ ያልተፈቀደ ድርጊት) ፈጽሞ ሊፈጸም የማይችል ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1712", "source": "CL-R-001"}
+      ],
+      "mutex_group": "OBJECT_VALIDITY"
+    },
+    {
+      "facet_id": "CL-04-F02",
+      "legal_concept_en": "Object Must Be Lawful and Moral",
+      "rhetoric": {
+        "intro_am": "ሕጋዊነትና ሥነ ምግባር...",
+        "transition_am": "የሕዝብ ፖሊሲን ወይም መልካም ሥነ ምግባርን መጣስ የለበትም...",
+        "summary_keyword_am": "ሕጋዊና ሥነ ምግባራዊ ዓላማ"
+      },
+      "query_type": "Boolean/Regulatory",
+      "question_am": "የውሉ ዓላማ ሕግን፣ የሕዝብ ፖሊሲን (Public Policy) ወይም መልካም ሥነ ምግባርን (Morality) የሚጥስ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1711", "source": "CL-R-001"}
+      ],
+      "mutex_group": "OBJECT_VALIDITY"
+    },
+    {
+      "facet_id": "CL-04-F03",
+      "legal_concept_en": "Causa (Underlying Purpose) Must Be Lawful",
+      "rhetoric": {
+        "intro_am": "ከዓላማው በተጨማሪ የውሉ ምክንያት...",
+        "transition_am": "የተዋዋዮቹ የመጨረሻ ግብም ሕጋዊ መሆን አለበት...",
+        "summary_keyword_am": "ሕጋዊ ምክንያት (*Causa*)"
+      },
+      "query_type": "Boolean/Intent",
+      "question_am": "ውሉ የተፈጸመበት ዋና ምክንያት (Causa) በሕግ የተከለከለ ወይም ሥነ ምግባርን የሚጻረር ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1715", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CAUSA_VALIDITY"
+    },
+    {
+      "facet_id": "CL-04-F04",
+      "legal_concept_en": "Effect of Illegality/Impossibility",
+      "rhetoric": {
+        "intro_am": "እነዚህ መስፈርቶች ካልተሟሉ ውጤቱ...",
+        "transition_am": "ውሉ በፍጹም ባዶ ይሆናል...",
+        "summary_keyword_am": "ፍጹም ባዶነት"
+      },
+      "query_type": "Directive",
+      "question_am": "የዓላማው ወይም የመሰረቱ (Causa) ሕገወጥ መሆን ውሉን በፍጹም ባዶ (Absolutely Null) ያደርገዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1808", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONTRACT_SANCTION"
+    }
+  ]
+}

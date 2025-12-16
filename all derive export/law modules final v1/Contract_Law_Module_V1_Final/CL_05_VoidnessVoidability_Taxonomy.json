@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-05",
+  "module_title_am": "ፍጹምና አንጻራዊ ባዶነት (Voidness & Voidability)",
+  "description_am": "ይህ ሞዱል ውል በሕግ ፊት ሙሉ በሙሉ ባዶ (Absolute Nullity) የሚሆንበትን እና በአንደኛው ወገን ብቻ የሚሻር (Relative Nullity) የሚሆንበትን ልዩነትና ውጤት ይገልጻል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-05-F01",
+      "legal_concept_en": "Grounds for Absolute Nullity (Voidness)",
+      "rhetoric": {
+        "intro_am": "ፍጹም ባዶ የሚሆነው ውል...",
+        "transition_am": "ይህ የሚከሰተው የሕግ ወይም የሥነ ምግባር ጥሰት ሲኖር ነው...",
+        "summary_keyword_am": "ፍጹም ባዶነት ምክንያት"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "ውሉ በሕግ የተከለከለ ዓላማ (CL-04), የሕግ ቅጽ አለማሟላት (CL-02), ወይም ግልጽ የሆነ የሕዝብ ጥቅም መጣስ ምክንያት በፍጹም ባዶ ነው ተብሎ ሊታወጅ ይችላል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1808", "source": "CL-R-001"}
+      ],
+      "mutex_group": "NULLITY_TYPE"
+    },
+    {
+      "facet_id": "CL-05-F02",
+      "legal_concept_en": "Grounds for Relative Nullity (Voidability)",
+      "rhetoric": {
+        "intro_am": "አንጻራዊ ባዶ የሚሆነው ውል...",
+        "transition_am": "ይህ የሚከሰተው የፈቃድ ጉድለት ወይም አቅመ ደካማነት ሲኖር ነው...",
+        "summary_keyword_am": "አንጻራዊ ባዶነት ምክንያት"
+      },
+      "query_type": "Boolean/Subjective",
+      "question_am": "ውሉ በፈቃድ ጉድለት (Mistake, Fraud, Duress - CL-03) ወይም በብቃት ማነስ (Incapacity - CL-02) ምክንያት በአንደኛው ወገን ብቻ ሊሻር የሚችል ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1809", "source": "CL-R-001"}
+      ],
+      "mutex_group": "NULLITY_TYPE"
+    },
+    {
+      "facet_id": "CL-05-F03",
+      "legal_concept_en": "Who Can Invoke Nullity?",
+      "rhetoric": {
+        "intro_am": "ባዶነትን ማን ሊያነሳ ይችላል?",
+        "transition_am": "ፍጹም ባዶነት በማንኛውም ባለድርሻ ሊጠየቅ ይችላል...",
+        "summary_keyword_am": "የይግባኝ ባለቤት"
+      },
+      "query_type": "Directive",
+      "question_am": "የፍጹም ባዶነት ጥያቄ ውሉን በፈጸሙት ወገኖች ብቻ ሳይሆን በሕዝብ ጥቅም ምክንያት በፍርድ ቤት ወይም በሌላ በማንኛውም ባለድርሻ ሊነሳ ይችላል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1810", "source": "CL-R-001"}
+      ],
+      "mutex_group": "REMEDY_OWNERSHIP"
+    },
+    {
+      "facet_id": "CL-05-F04",
+      "legal_concept_en": "Ratification (Confirmation of Voidable Contract)",
+      "rhetoric": {
+        "intro_am": "አንጻራዊ ባዶነትን ማፅደቅ...",
+        "transition_am": "ጉድለቱ የጠፋበት ወገን ውሉን ሊያፀድቅ ይችላል...",
+        "summary_keyword_am": "ውል ማፅደቅ"
+      },
+      "query_type": "Boolean/Action",
+      "question_am": "ጉድለት ያለበት ወገን ጉድለቱ ከተወገደ በኋላ ውሉን የማረጋገጥ (Ratification) ድርጊት ፈጽሟል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1813", "source": "CL-R-001"}
+      ],
+      "mutex_group": "REMEDY_OWNERSHIP"
+    }
+  ]
+}

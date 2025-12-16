@@ -1,4 +1,3 @@
-
 'use server';
 
 /**
@@ -9,33 +8,47 @@
  * - SuggestEvidenceOutput - The return type for the suggestEvidence function.
  */
 
-import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import { ai } from '@/ai/genkit';
+import { z } from 'zod';
+
 import { Fact, EvidenceRegistry } from '@/lib/types';
 
 const SuggestEvidenceInputSchema = z.object({
-  selectedFacts: z.array(z.object({
-    id: z.string(),
-    label: z.string(),
-    legalText: z.string(),
-  })).describe('An array of fact objects the user has selected.'),
-  evidenceRegistry: z.record(z.object({
-    id: z.string(),
-    label: z.string(),
-    type: z.string(),
-    credentialLabel: z.string(),
-    credentialPlaceholder: z.string(),
-  })).describe('A dictionary of all possible evidence items available in the system.'),
-  autoLinkedEvidenceIds: z.array(z.string()).describe('A list of evidence IDs that are already automatically linked to the selected facts. DO NOT suggest these items.'),
+  selectedFacts: z.array(
+    z.object({
+      id: z.string(),
+      label: z.string(),
+      legalText: z.string(),
+    })
+  ).describe('An array of fact objects the user has selected.'),
+
+  evidenceRegistry: z.record(
+    z.string(), 
+    z.object({
+      id: z.string(),
+      label: z.string(),
+      type: z.string(),
+      credentialLabel: z.string(),
+      credentialPlaceholder: z.string(),
+    })
+  ).describe('A dictionary of all possible evidence items available in the system.'),
+
+  autoLinkedEvidenceIds: z.array(z.string()).describe(
+    'A list of evidence IDs that are already automatically linked to the selected facts. DO NOT suggest these items.'
+  ),
 });
 export type SuggestEvidenceInput = z.infer<typeof SuggestEvidenceInputSchema>;
 
 const SuggestEvidenceOutputSchema = z.object({
-  suggestedEvidence: z.array(z.string()).describe('A list of suggested evidence ids that are most relevant to the selected facts.'),
+  suggestedEvidence: z.array(z.string()).describe(
+    'A list of suggested evidence ids that are most relevant to the selected facts.'
+  ),
 });
 export type SuggestEvidenceOutput = z.infer<typeof SuggestEvidenceOutputSchema>;
 
-export async function suggestEvidence(input: SuggestEvidenceInput): Promise<SuggestEvidenceOutput> {
+export async function suggestEvidence(
+  input: SuggestEvidenceInput
+): Promise<SuggestEvidenceOutput> {
   // Return an empty list if no facts are selected to avoid unnecessary AI calls.
   if (input.selectedFacts.length === 0) {
     return { suggestedEvidence: [] };
@@ -45,8 +58,8 @@ export async function suggestEvidence(input: SuggestEvidenceInput): Promise<Sugg
 
 const prompt = ai.definePrompt({
   name: 'suggestEvidencePrompt',
-  input: {schema: SuggestEvidenceInputSchema},
-  output: {schema: SuggestEvidenceOutputSchema},
+  input: { schema: SuggestEvidenceInputSchema },
+  output: { schema: SuggestEvidenceOutputSchema },
   prompt: `You are an expert legal assistant AI for Ethiopian law. Your task is to suggest relevant evidence based on the facts of a case.
 
 Analyze the user's selected facts provided below.
@@ -80,8 +93,8 @@ const suggestEvidenceFlow = ai.defineFlow(
     inputSchema: SuggestEvidenceInputSchema,
     outputSchema: SuggestEvidenceOutputSchema,
   },
-  async input => {
-    const {output} = await prompt(input);
+  async (input: SuggestEvidenceInput): Promise<SuggestEvidenceOutput> => {
+    const { output } = await prompt(input);
     return output!;
   }
 );

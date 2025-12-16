@@ -1,0 +1,54 @@
+{
+  "stakeholders": [
+    {
+      "role_en": "Litigant / Platform User",
+      "role_am": "ተከራካሪ / ተጠቃሚ",
+      "needs": [
+        "Clarity on legal standing (capacity, proof)",
+        "Formatted legal documents (e.g., Statement of Claim, Motion)",
+        "Anticipatory legal advice based on facts (the 'Judge' role)",
+        "Procedural warnings and prerequisite checks (the 'Registrar' role)"
+      ],
+      "mandate_priority": "High"
+    },
+    {
+      "role_en": "Vulnerable Party (Child/Woman)",
+      "role_am": "ተጋላጭ ወገን (ህጻን/ሴት)",
+      "needs": [
+        "Protection of rights per law (Art. 35 Constitution, Family Code)",
+        "Guidance on support, custody, and property division",
+        "Clear explanation of required evidence and court proceedings"
+      ],
+      "mandate_priority": "Critical"
+    },
+    {
+      "role_en": "Legal Practitioner / Lawyer",
+      "role_am": "ጠበቃ / የሕግ ባለሙያ",
+      "needs": [
+        "Rapid cross-referencing of Grounding Nodes (Cassation Precedents)",
+        "Deep-dive into the LRG's `RetrievalConditions` and legal logic",
+        "Ready-made templates for complex motions/defenses"
+      ],
+      "mandate_priority": "Medium"
+    }
+  ],
+  "authorized_authorities": [
+    {
+      "authority_type_en": "Judicial Authority",
+      "authority_am": "የፍርድ አካላት",
+      "bodies": [
+        {"body_en": "Woreda/First Instance Courts", "function": "Original jurisdiction for most Family Law matters (divorce, support, property)."},
+        {"body_en": "High/Appellate Courts", "function": "Appeals and review of Woreda Court decisions."},
+        {"body_en": "Supreme Court (Cassation Division)", "function": "Issue legally binding precedents (Grounding Nodes) on points of law; ensures uniform interpretation."}
+      ]
+    },
+    {
+      "authority_type_en": "Administrative Authority",
+      "authority_am": "አስተዳደራዊ አካላት",
+      "bodies": [
+        {"body_en": "Civil Status Registration Agencies", "function": "Registration of marriage, birth, and divorce (essential for `Proof` FL-02)."},
+        {"body_en": "Regional/Woreda Administrative Bodies", "function": "Involved in support/enforcement and sometimes reconciliation procedures."}
+      ]
+    }
+  ]
+}

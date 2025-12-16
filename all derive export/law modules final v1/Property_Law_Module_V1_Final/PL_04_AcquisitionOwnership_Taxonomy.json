@@ -1,0 +1,67 @@
+{
+  "module_id": "PL-04",
+  "module_title_am": "ባለቤትነትን ማግኛ መንገዶች",
+  "description_am": "ይህ ሞዱል ባለቤትነት በሕግ የሚተላለፍባቸውን ዋና ዋና መንገዶች (በውል፣ በይዞታ፣ በውርስ) ይለያል።",
+  "fact_facets": [
+    {
+      "facet_id": "PL-04-F01",
+      "legal_concept_en": "Acquisition via Valid Contract (Immovables)",
+      "rhetoric": {
+        "intro_am": "የማይንቀሳቀስ ንብረት በውል ሲተላለፍ...",
+        "transition_am": "ትክክለኛ ውል መፈጸሙና በሕግ የተጠየቀው ቅጽ መሟላቱ...",
+        "summary_keyword_am": "በውል ማግኘ"
+      },
+      "query_type": "Boolean/Documentary",
+      "question_am": "የማይንቀሳቀሰው ንብረት ባለቤትነት የተገኘው በጽሑፍ በዋለ ትክክለኛ ውል (Contract) አማካኝነት ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1184", "source": "PL-R-001"}
+      ],
+      "mutex_group": "ACQUISITION_METHOD"
+    },
+    {
+      "facet_id": "PL-04-F02",
+      "legal_concept_en": "Good Faith Acquisition (Movable Property)",
+      "rhetoric": {
+        "intro_am": "የሚንቀሳቀስ ንብረት በመልካም እምነት ሲገኝ...",
+        "transition_am": "ከማይታወቅ ባለቤት በመልካም እምነት መያዝ...",
+        "summary_keyword_am": "በመልካም እምነት ይዞታ"
+      },
+      "query_type": "Boolean/Intent",
+      "question_am": "አንድ የሚንቀሳቀስ ንብረት የተገኘው ከተላለፈለት ሰው ትክክለኛ ባለቤትነት ሳይኖር፣ ንብረቱን የተቀበለው ሰው ትክክለኛውን ባለቤትነት የማያውቅ (Good Faith) እና ምክንያታዊ ጥንቃቄ ያደረገ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1161", "source": "PL-R-001"}
+      ],
+      "mutex_group": "ACQUISITION_METHOD"
+    },
+    {
+      "facet_id": "PL-04-F03",
+      "legal_concept_en": "Acquisition by Succession (Inheritance)",
+      "rhetoric": {
+        "intro_am": "ንብረቱ በውርስ ሲተላለፍ...",
+        "transition_am": "በውርስ ምክንያት ባለቤትነት ማግኘ...",
+        "summary_keyword_am": "በውርስ ማግኘ"
+      },
+      "query_type": "Boolean/Status",
+      "question_am": "የንብረቱ ባለቤትነት የተገኘው በሕግ ወይም በኑዛዜ ውርስ (Succession) ምክንያት ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1152", "source": "PL-R-001"}
+      ],
+      "mutex_group": "ACQUISITION_METHOD"
+    },
+    {
+      "facet_id": "PL-04-F04",
+      "legal_concept_en": "Acquisition by Prescription (Adverse Possession)",
+      "rhetoric": {
+        "intro_am": "ባለቤትነት በረጅም ጊዜ ይዞታ ሲገኝ...",
+        "transition_am": "ንብረቱን ለረጅም ጊዜ በግልጽና ባለቤትነት ስሜት መያዝ...",
+        "summary_keyword_am": "በይዞታ ጊዜ ገደብ ማግኘ"
+      },
+      "query_type": "Boolean/Duration",
+      "question_am": "ንብረቱ ለሕግ በተወሰነው ጊዜ (ለምሳሌ 10 ወይም 15 ዓመታት) ያለመቋረጥ፣ በግልጽ እና በባለቤትነት ስሜት (Adverse Possession) ተይዟል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1170", "source": "PL-R-001"}
+      ],
+      "mutex_group": "ACQUISITION_METHOD"
+    }
+  ]
+}

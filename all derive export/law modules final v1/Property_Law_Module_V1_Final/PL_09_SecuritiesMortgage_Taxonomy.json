@@ -1,0 +1,133 @@
+{
+
+  "module_id": "PL-09",
+
+  "module_title_am": "ብድር መያዣ: በማይንቀሳቀስ ንብረት ላይ (Mortgage)",
+
+  "description_am": "ይህ ሞዱል በማይንቀሳቀስ ንብረት (ለምሳሌ መሬት፣ ህንጻ) ላይ ለዕዳ ዋስትና የሚሰጥ ብድር መያዣ (Mortgage) ሕጋዊ ሁኔታዎችን ይለያል።",
+
+  "fact_facets": [
+
+    {
+
+      "facet_id": "PL-09-F01",
+
+      "legal_concept_en": "Mortgage Agreement and Formality",
+
+      "rhetoric": {
+
+        "intro_am": "የሞርጌጅ ስምምነት መመስረት...",
+
+        "transition_am": "በጽሑፍ ስምምነት እና ፎርማሊቲ መሟላት...",
+
+        "summary_keyword_am": "የጽሑፍ ውል"
+
+      },
+
+      "query_type": "Boolean/Documentary",
+
+      "question_am": "የብድር መያዣው (Mortgage) የተመሰረተው በሕግ በተደነገገው ፎርማሊቲ (በጽሑፍ ውል) መሠረት ነው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 3042", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "MORTGAGE_VALIDITY"
+
+    },
+
+    {
+
+      "facet_id": "PL-09-F02",
+
+      "legal_concept_en": "Registration Requirement (Publicity)",
+
+      "rhetoric": {
+
+        "intro_am": "የሞርጌጅ ምዝገባ...",
+
+        "transition_am": "መብቱ በይፋ ተመዝግቧል...",
+
+        "summary_keyword_am": "የምዝገባ መስፈርት"
+
+      },
+
+      "query_type": "Boolean/Status",
+
+      "question_am": "የብድር መያዣው መብት በሕዝብ መዝገብ (Public Register) ውስጥ ተመዝግቧል?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 3051", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "MORTGAGE_VALIDITY"
+
+    },
+
+    {
+
+      "facet_id": "PL-09-F03",
+
+      "legal_concept_en": "Debtor Retains Possession",
+
+      "rhetoric": {
+
+        "intro_am": "ንብረቱ በዕዳ ተበዳሪው እጅ መቆየቱ...",
+
+        "transition_am": "የተበዳሪው የመጠቀም መብት...",
+
+        "summary_keyword_am": "ይዞታን ማስቀረት"
+
+      },
+
+      "query_type": "Boolean/Action",
+
+      "question_am": "የብድር መያዣው ቢመሰረትም፣ ዕዳ ተበዳሪው (Mortgagor) የንብረቱን ይዞታ (Possession) የመጠቀምና የመቆጣጠር መብቱን አስቀጥሏል?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 3041", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "MORTGAGE_EFFECTS"
+
+    },
+
+    {
+
+      "facet_id": "PL-09-F04",
+
+      "legal_concept_en": "Creditor's Priority and Right to Sale",
+
+      "rhetoric": {
+
+        "intro_am": "አበዳሪው የመሸጥና የመቅደም መብት...",
+
+        "transition_am": "በዕዳ ጥሰት ጊዜ ንብረቱ ይሸጣል...",
+
+        "summary_keyword_am": "የመቅደም መብት"
+
+      },
+
+      "query_type": "Directive",
+
+      "question_am": "ዋናው ዕዳ ባለመከፈሉ፣ አበዳሪው በንብረቱ ሽያጭ ዋጋ ላይ ከሌሎች ተራ አበዳሪዎች የመቅደም (Priority) መብት አለው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 3062", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "MORTGAGE_REMEDY"
+
+    }
+
+  ]
+
+}

@@ -1,0 +1,84 @@
+{
+  "lrg_master_logic": "FAMILY_LAW_FULL_LIFECYCLE_PATHWAY",
+  "starting_node": "FL-01",
+  "rules_of_inference": [
+    { "rule_id": "RULE-FL-001", "origin_module": "FL-01", "condition_en": "IF Capacity Met (FL-01 is TRUE)", "action": "Proceed to Formal Establishment Check", "next_module": "FL-02" },
+    { "rule_id": "RULE-FL-003", "origin_module": "FL-02", "condition_en": "IF Formal Establishment Met (FL-02 is TRUE)", "action": "Union Established. Proceed to Rights/Duties.", "next_module": "FL-04" },
+    { "rule_id": "RULE-FL-004", "origin_module": "FL-02", "condition_en": "IF Formal Establishment Failed (FL-02 is FALSE)", "action": "REDIRECT: Check Irregular Union Status", "next_module": "FL-03" },
+    { "rule_id": "RULE-FL-005", "origin_module": "FL-03", "condition_en": "IF Irregular Union Recognized (FL-03 is TRUE)", "action": "Union Recognized. Proceed to Rights/Duties (Modified)", "next_module": "FL-04" },
+    { "rule_id": "RULE-FL-006", "origin_module": "FL-03", "condition_en": "IF Irregular Union Failed (FL-03 is FALSE)", "action": "Terminate Legal Inquiry", "next_module": "FAILURE: NO_LEGAL_UNION", "fatal": true },
+    {
+      "rule_id": "RULE-FL-007",
+      "origin_module": "FL-04",
+      "condition_en": "AFTER Rights & Duties are determined",
+      "condition_am": "መብቶችና ግዴታዎች ከተወሰኑ በኋላ",
+      "action": "Proceed to the Pecuniary Consequence analysis (Property)",
+      "next_module": "FL-05"
+    },
+    {
+      "rule_id": "RULE-FL-008",
+      "origin_module": "FL-05",
+      "condition_en": "AFTER Matrimonial Property is Classified",
+      "condition_am": "የትዳር ንብረት ከተመደበ በኋላ",
+      "action": "Proceed to the Debt Classification",
+      "next_module": "FL-06"
+    },
+    {
+      "rule_id": "RULE-FL-009",
+      "origin_module": "FL-06",
+      "condition_en": "AFTER Debts & Liabilities are Classified",
+      "condition_am": "ዕዳዎች ከተመደቡ በኋላ",
+      "action": "Proceed to the Parent-Child Pillar (Paternity)",
+      "next_module": "FL-07"
+    },
+    {
+      "rule_id": "RULE-FL-010",
+      "origin_module": "FL-07",
+      "condition_en": "IF Paternity is Established (FL-07 is TRUE)",
+      "condition_am": "አባትነት ከተረጋገጠ",
+      "action": "Proceed to Parental Authority Definition",
+      "next_module": "FL-08"
+    },
+    {
+      "rule_id": "RULE-FL-011",
+      "origin_module": "FL-08",
+      "condition_en": "AFTER Parental Authority is Defined",
+      "condition_am": "የወላጅ ስልጣን ከተወሰነ በኋላ",
+      "action": "Proceed to Child Support Obligation",
+      "next_module": "FL-09"
+    },
+    {
+      "rule_id": "RULE-FL-012",
+      "origin_module": "FL-09",
+      "condition_en": "AFTER Child Support is Determined",
+      "condition_am": "የቀለብ መጠን ከተወሰነ በኋላ",
+      "action": "Proceed to Adoption Module (Parallel Track Check)",
+      "next_module": "FL-10"
+    },
+    {
+      "rule_id": "RULE-FL-013",
+      "origin_module": "FL-10",
+      "condition_en": "AFTER Adoption Check is Complete",
+      "condition_am": "የጉዲፈቻ ፍላጎት ከተጠናቀቀ",
+      "action": "Proceed to Dissolution Pillar",
+      "next_module": "FL-11"
+    },
+    {
+      "rule_id": "RULE-FL-014",
+      "origin_module": "FL-11",
+      "condition_en": "IF Divorce Grounds are Met (FL-11 is TRUE)",
+      "condition_am": "የፍቺ ምክንያት ከተሟላ",
+      "action": "Proceed to Legal Effects of Divorce",
+      "next_module": "FL-12"
+    },
+    {
+      "rule_id": "RULE-FL-015",
+      "origin_module": "FL-12",
+      "condition_en": "AFTER Legal Effects are Determined",
+      "condition_am": "ሕጋዊ ውጤቶች ከተወሰኑ በኋላ",
+      "action": "TERMINATE: Full Legal Analysis Complete",
+      "next_module": "SUCCESS: FULL_ANALYSIS_COMPLETE",
+      "final": true
+    }
+  ]
+}

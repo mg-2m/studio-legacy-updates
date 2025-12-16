@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-12",
+  "module_title_am": "ከውል ውጪ የሚነሱ ግዴታዎች (Extracontractual Liability/Torts)",
+  "description_am": "ይህ ሞዱል በግለሰቦች ላይ በቸልተኝነት ወይም በሌላ ሕገወጥ ድርጊት ምክንያት ለደረሰ ጉዳት የሲቪል ተጠያቂነት መሠረቶችን ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-12-F01",
+      "legal_concept_en": "Fault and Causal Link to Damage (General Principle)",
+      "rhetoric": {
+        "intro_am": "የተጠያቂነት መሠረታዊ መርህ...",
+        "transition_am": "በድርጊቱና በጉዳቱ መካከል ቀጥተኛ ግንኙነት...",
+        "summary_keyword_am": "ጥፋትና መንስኤ"
+      },
+      "query_type": "Boolean/Causation",
+      "question_am": "የተጠያቂው አካል ሕገወጥ የሆነ ወይም ጥንቃቄ የጎደለው ድርጊት በበዳዩ ላይ ጉዳት ማድረሱ ተረጋግጧል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 2028", "source": "CL-R-001"}
+      ],
+      "mutex_group": "GENERAL_TORT_LIABILITY"
+    },
+    {
+      "facet_id": "CL-12-F02",
+      "legal_concept_en": "Liability for Acts of Others (Vicarious Liability)",
+      "rhetoric": {
+        "intro_am": "ለሌላ ሰው ድርጊት ተጠያቂነት...",
+        "transition_am": "በክትትል ወይም በመሪነት ውስጥ ያለ ሰው...",
+        "summary_keyword_am": "የሌላ ሰው ድርጊት"
+      },
+      "query_type": "Boolean/Relationship",
+      "question_am": "ጉዳት የደረሰው በተጠያቂው ቁጥጥር ስር ባለው (ለምሳሌ ቀጣሪና ሰራተኛ) አካል ድርጊት ሲሆን ይህም በስራው ምክንያት የተፈፀመ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 2030", "source": "CL-R-001"}
+      ],
+      "mutex_group": "SPECIAL_TORT_LIABILITY"
+    },
+    {
+      "facet_id": "CL-12-F03",
+      "legal_concept_en": "Liability for Things (Strict Liability)",
+      "rhetoric": {
+        "intro_am": "በነገሮች ምክንያት የሚመጣ ተጠያቂነት...",
+        "transition_am": "የነገሩ ጠባቂ ወይም ባለቤት ተጠያቂ ነው...",
+        "summary_keyword_am": "የነገር ተጠያቂነት"
+      },
+      "query_type": "Boolean/Ownership",
+      "question_am": "ጉዳት የደረሰው በተጠያቂው ቁጥጥር ስር ባለው ነገር (ለምሳሌ ህንጻ ወይም አደገኛ ንብረት) ውድቀት ወይም ጉድለት ምክንያት ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 2044", "source": "CL-R-001"}
+      ],
+      "mutex_group": "SPECIAL_TORT_LIABILITY"
+    },
+    {
+      "facet_id": "CL-12-F04",
+      "legal_concept_en": "Compensation (Damages) in Torts",
+      "rhetoric": {
+        "intro_am": "በጥፋት የሚሰጠው ካሳ መጠን...",
+        "transition_am": "ካሳው ሁሉንም የተረጋገጠ ኪሳራ ይሸፍናል...",
+        "summary_keyword_am": "የጉዳት ካሳ"
+      },
+      "query_type": "Directive",
+      "question_am": "የሚከፈለው ካሳ ለደረሰው ጉዳት ሁሉ (አካላዊ፣ ሞራላዊና ኢኮኖሚያዊ) ሙሉ በሙሉ ማካካሻ (Full Compensation) መስጠት አለበት?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 2090", "source": "CL-R-001"}
+      ],
+      "mutex_group": "TORT_REMEDY"
+    }
+  ]
+}

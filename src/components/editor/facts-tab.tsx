@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -10,13 +9,13 @@ import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { TEMPLATE_DATA } from '@/lib/data';
+import { TEMPLATE_DATA, REGIONS_AND_CITIES } from '@/lib/data';
 import type { AppState, Fact } from '@/lib/types';
 import { BrainCircuit, Info, Plus, X } from 'lucide-react';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/collapsible';
 import { RadioGroup, RadioGroupItem } from '../ui/radio-group';
 import { cn } from '@/lib/utils';
-
+import EthiopianDatePicker from '../ui/ethiopian-date-picker';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const parseSentenceWithInputs = (
   text: string,
@@ -29,12 +28,68 @@ const parseSentenceWithInputs = (
     const match = part.match(/\[(.*?)\]/);
     if (match) {
       const fieldKey = match[1];
+
+      if (fieldKey === 'Date') {
+        return (
+            <span key={`${fact.id}-${fieldKey}-${index}`} className="inline-block align-middle mx-1">
+                <EthiopianDatePicker
+                    value={String(fact.values?.[fieldKey] ?? '')}
+                    onChange={(dateString) => dispatch({
+                      type: 'UPDATE_FACT_VALUE',
+                      payload: { factId: fact.id, field: fieldKey, value: dateString }
+                    })}
+                />
+            </span>
+        );
+      }
+      
+      if (fieldKey === 'Amount') {
+        return (
+            <span key={`${fact.id}-${fieldKey}-${index}`} className="inline-flex items-center align-middle mx-1">
+                <Input
+                  type="number"
+                  className="inline-block w-32 h-7 px-2 py-1 text-sm bg-white dark:bg-gray-800 border-dashed border-primary/50 focus:border-solid"
+                  placeholder={'የብር መጠን'}
+                  value={String(fact.values?.[fieldKey] ?? '')}
+                  onChange={(e) => dispatch({
+                      type: 'UPDATE_FACT_VALUE',
+                      payload: { factId: fact.id, field: fieldKey, value: e.target.value }
+                  })}
+                />
+                <span className="ml-1 text-sm text-muted-foreground">ብር</span>
+            </span>
+        );
+      }
+
+      if (fieldKey === 'City') {
+        return (
+            <span key={`${fact.id}-${fieldKey}-${index}`} className="inline-block align-middle mx-1">
+                <Select
+                    value={String(fact.values?.[fieldKey] ?? '')}
+                    onValueChange={(value) => dispatch({
+                        type: 'UPDATE_FACT_VALUE',
+                        payload: { factId: fact.id, field: fieldKey, value: value }
+                    })}
+                >
+                    <SelectTrigger className="w-[180px] h-7 text-sm">
+                        <SelectValue placeholder="ከተማ ይምረጡ" />
+                    </SelectTrigger>
+                    <SelectContent>
+                        {REGIONS_AND_CITIES.map(city => (
+                            <SelectItem key={city} value={city}>{city}</SelectItem>
+                        ))}
+                    </SelectContent>
+                </Select>
+            </span>
+        );
+      }
+
       return (
         <Input
           key={`${fact.id}-${fieldKey}-${index}`}
           className="inline-block w-auto h-7 px-2 py-1 text-sm bg-white dark:bg-gray-800 border-dashed border-primary/50 focus:border-solid mx-1"
-          placeholder={fieldKey === 'Date' ? 'ቀን' : fieldKey === 'Amount' ? 'የብር መጠን' : fieldKey}
-          value={(fact.values && fact.values[fieldKey]) || ''}
+          placeholder={fieldKey}
+          value={String(fact.values?.[fieldKey] ?? '')}
           onChange={(e) => dispatch({
             type: 'UPDATE_FACT_VALUE',
             payload: { factId: fact.id, field: fieldKey, value: e.target.value }
@@ -59,7 +114,6 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
 
   const templateFacts = templateData?.facts || [];
 
-  // Group facts by their 'label' for standard groups, and by 'mutexGroup' for exclusive choices
   const groupedFacts = templateFacts.reduce((acc, fact) => {
     const key = fact.mutexGroup || `label_${fact.label}`;
     if (!acc[key]) {
@@ -72,13 +126,6 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
     acc[key].facts.push(fact);
     return acc;
   }, {} as Record<string, { title: string; isMutex: boolean; facts: Fact[] }>);
-
-
-  // Function to extract placeholders like [Date] or [Amount]
-  const getPlaceholders = (text: string): string[] => {
-    const regex = /\[(.*?)\]/g;
-    return (text.match(regex) || []);
-  };
 
   const handleToggle = (fact: Fact) => {
       dispatch({ type: 'TOGGLE_FACT', payload: { factId: fact.id, mutexGroup: fact.mutexGroup } });
@@ -134,8 +181,8 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                         id="calc-income"
                         type="number"
                         placeholder="ለምሳሌ፦ 10000"
-                        value={maintenance.income || ''}
-                        onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'income', value: e.target.valueAsNumber } })}
+                        value={String(maintenance.income ?? '')}
+                        onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'income', value: parseFloat(e.target.value) || 0 } })}
                         />
                     </div>
                     <div className="space-y-2">
@@ -144,8 +191,8 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                         id="calc-children"
                         type="number"
                         min="1"
-                        value={maintenance.children || ''}
-                        onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'children', value: e.target.valueAsNumber } })}
+                        value={String(maintenance.children ?? '')}
+                        onChange={(e) => dispatch({ type: 'UPDATE_MAINTENANCE', payload: { key: 'children', value: parseInt(e.target.value, 10) || 0 } })}
                         />
                     </div>
                     </div>
@@ -180,7 +227,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                     {group.isMutex ? (
                         <RadioGroup 
                             value={selectedFacts.find(sf => group.facts.some(f => f.id === sf.id))?.id || ""}
-                            onValueChange={(factId) => {
+                            onValueChange={(factId: string) => {
                                 const fact = group.facts.find(f => f.id === factId);
                                 if (fact) handleToggle(fact);
                             }}
@@ -207,7 +254,7 @@ export default function FactsTab({ state, dispatch }: FactsTabProps) {
                             const selectedFact = selectedFacts.find(sf => sf.id === fact.id);
                            
                             return (
-                                <div key={fact.id} className={cn("rounded-md border bg-background has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 dark:has-[:checked]:bg-blue-950/30 transition-colors p-4 flex items-start space-x-3")}>
+                                <div key={fact.id} className={cn("rounded-md border bg-background has-[[data-state=checked]]:bg-blue-50 has-[[data-state=checked]]:border-blue-200 dark:has-[[data-state=checked]]:bg-blue-950/30 transition-colors p-4 flex items-start space-x-3")}>
                                     <Checkbox 
                                         id={`fact-${fact.id}`}
                                         checked={isSelected}

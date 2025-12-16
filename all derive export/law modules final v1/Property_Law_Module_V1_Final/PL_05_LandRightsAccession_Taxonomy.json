@@ -1,0 +1,67 @@
+{
+  "module_id": "PL-05",
+  "module_title_am": "የመሬትና የማይንቀሳቀስ ንብረት መብቶች (ተቀጽላ)",
+  "description_am": "ይህ ሞዱል በመሬት ላይ የተገነቡ ወይም የተተከሉ ነገሮች (Accession) ባለቤትነትን እና የካሳ ክፍያን ይመለከታል።",
+  "fact_facets": [
+    {
+      "facet_id": "PL-05-F01",
+      "legal_concept_en": "Principle of Accession (Land Ownership)",
+      "rhetoric": {
+        "intro_am": "የመሬት ባለቤትነት ወሰን...",
+        "transition_am": "ከመሬት ጋር በጥብቅ የተያያዘ ሁሉ የመሬቱ ባለቤት ነው...",
+        "summary_keyword_am": "በተቀጽላ ባለቤትነት"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "የተጠየቀው ግንባታ ወይም ተከላ ከመሬት ጋር በጥብቅ የተያያዘ ሲሆን፣ ይህም የመሬቱ ባለቤትነት አካል ተደርጎ የሚቆጠር ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1489", "source": "PL-R-001"}
+      ],
+      "mutex_group": "OWNERSHIP_OF_IMPROVEMENT"
+    },
+    {
+      "facet_id": "PL-05-F02",
+      "legal_concept_en": "Construction by Third Party in Good Faith",
+      "rhetoric": {
+        "intro_am": "በመልካም እምነት የተደረገ ግንባታ...",
+        "transition_am": "ባለቤትነቱ የሱ እንደሆነ በማመን መገንባት...",
+        "summary_keyword_am": "በመልካም እምነት ገነባ"
+      },
+      "query_type": "Boolean/Intent",
+      "question_am": "ግንባታውን ወይም ተከላውን ያከናወነው ሶስተኛ ወገን የራሱ መሬት እንደሆነ በማመን (Good Faith) እና ያለ መሬት ባለቤቱ እውቀት ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1492", "source": "PL-R-001"}
+      ],
+      "mutex_group": "IMPROVER_STATUS"
+    },
+    {
+      "facet_id": "PL-05-F03",
+      "legal_concept_en": "Construction by Third Party in Bad Faith",
+      "rhetoric": {
+        "intro_am": "በመጥፎ እምነት የተደረገ ግንባታ...",
+        "transition_am": "መሬቱ የሌላ ሰው መሆኑን እያወቀ መገንባት...",
+        "summary_keyword_am": "በመጥፎ እምነት ገነባ"
+      },
+      "query_type": "Boolean/Intent",
+      "question_am": "ግንባታውን ወይም ተከላውን ያከናወነው ሶስተኛ ወገን መሬቱ የሌላ ሰው መሆኑን እያወቀ (Bad Faith) ግንባታውን አከናውኗል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1493", "source": "PL-R-001"}
+      ],
+      "mutex_group": "IMPROVER_STATUS"
+    },
+    {
+      "facet_id": "PL-05-F04",
+      "legal_concept_en": "Right to Compensation for Improvements",
+      "rhetoric": {
+        "intro_am": "ለተደረገው ማሻሻያ ካሳ...",
+        "transition_am": "ለሠራተኛው ወጪ ወይም ለንብረት ዋጋ ጭማሪ ካሳ የመጠየቅ መብት...",
+        "summary_keyword_am": "የካሳ መብት"
+      },
+      "query_type": "Directive/Value",
+      "question_am": "የመሬቱ ባለቤት የተደረገውን ግንባታ ለመጠበቅ ከመረጠ፣ ለሦስተኛ ወገን ለሥራው ወጪዎች (Costs) ወይም በግንባታው ምክንያት ለደረሰው የንብረት ዋጋ ጭማሪ (Increased Value) የካሳ ክፍያ የመክፈል ግዴታ አለበት?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1502", "source": "PL-R-001"}
+      ],
+      "mutex_group": "COMPENSATION_OBLIGATION"
+    }
+  ]
+}

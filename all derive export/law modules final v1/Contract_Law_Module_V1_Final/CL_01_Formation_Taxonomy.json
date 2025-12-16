@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-01",
+  "module_title_am": "የውል መመስረት (Offer & Acceptance)",
+  "description_am": "ይህ ሞዱል ውል በሕግ ፊት እንዲመሰረት የሚያስፈልጉትን የፈቃድ መለዋወጥ (አቅርቦትና ተቀባይነት) መመዘኛዎችን ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-01-F01",
+      "legal_concept_en": "Definite and Firm Offer (Intention to be Bound)",
+      "rhetoric": {
+        "intro_am": "ውል እንዲፈጠር መጀመሪያ...",
+        "transition_am": "አቅርቦቱ ግልጽና ቆራጥ መሆን አለበት...",
+        "summary_keyword_am": "ቆራጥ አቅርቦት"
+      },
+      "query_type": "Boolean/Intent",
+      "question_am": "አቅርቦቱን ያቀረበው ወገን በውሉ ለመገዛት ያለውን ቆራጥ ፍላጎት በግልጽ ገልጿል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1678", "source": "CL-R-001"}
+      ],
+      "mutex_group": "OFFER_VALIDITY"
+    },
+    {
+      "facet_id": "CL-01-F02",
+      "legal_concept_en": "Unequivocal Acceptance",
+      "rhetoric": {
+        "intro_am": "አቅርቦቱ ውል እንዲሆን...",
+        "transition_am": "ተቀባይነት በማያሻማ ሁኔታ መገለጽ አለበት...",
+        "summary_keyword_am": "የማያሻማ ተቀባይነት"
+      },
+      "query_type": "Boolean/Communication",
+      "question_am": "አቅርቦቱ የቀረበለት ወገን ምንም አይነት ቅድመ ሁኔታ ሳይጨምር የማያሻማ ተቀባይነት ሰጥቷል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1681", "source": "CL-R-001"}
+      ],
+      "mutex_group": "ACCEPTANCE_VALIDITY"
+    },
+    {
+      "facet_id": "CL-01-F03",
+      "legal_concept_en": "Silence as Acceptance (Exceptional Cases)",
+      "rhetoric": {
+        "intro_am": "ዝምታ እንደ ተቀባይነት ሊቆጠር የሚችለው...",
+        "transition_am": "ይህ በልዩ ሁኔታዎች ብቻ የሚፀና ነው...",
+        "summary_keyword_am": "ዝምታ እንደ ተቀባይነት"
+      },
+      "query_type": "Boolean/Prior Relationship",
+      "question_am": "ዝምታው የተሰጠው በቀድሞ የንግድ ግንኙነት ወይም በአቅርቦት ወገን ፍላጎት ምክንያት እንደ ተቀባይነት ተደርጎ ይወሰዳል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1682", "source": "CL-R-001"}
+      ],
+      "mutex_group": "ACCEPTANCE_VALIDITY"
+    },
+    {
+      "facet_id": "CL-01-F04",
+      "legal_concept_en": "Formation by Receipt of Acceptance",
+      "rhetoric": {
+        "intro_am": "ውሉ በሕግ የሚመሰረትበት ወቅት...",
+        "transition_am": "ተቀባይነት ለአቅራቢው ሲደርስ...",
+        "summary_keyword_am": "የውል መመስረቻ ጊዜ"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ተቀባይነት የሰጠው መልስ በአቅርቦት አቅራቢው አድራሻ ላይ መድረሱ (وصل) በሰዓቱ ተረጋግጧል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1686", "source": "CL-R-001"}
+      ],
+      "mutex_group": "FORMATION_MOMENT"
+    }
+  ]
+}

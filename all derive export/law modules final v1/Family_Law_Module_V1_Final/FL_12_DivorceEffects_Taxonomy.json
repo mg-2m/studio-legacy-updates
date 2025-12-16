@@ -1,0 +1,68 @@
+{
+  "module_id": "FL-12",
+  "module_title_am": "የፍቺ ሕጋዊ ውጤቶች (Legal Effects of Divorce)",
+  "description_am": "ይህ ሞዱል ፍቺ በሕግ ከተወሰነ በኋላ በሁለቱ ወገኖች የጋብቻ ሁኔታ፣ ስም እና የንብረት ክፍፍል ላይ የሚያስከትላቸውን መዘዞች ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-12-F01",
+      "legal_concept_en": "Change in Marital Status (Capacity to Remarry)",
+      "rhetoric": {
+        "intro_am": "ዋናውና ፈጣን ለውጥ...",
+        "transition_am": "ሁለቱም ወገኖች ነጻ ይሆናሉ...",
+        "summary_keyword_am": "እንደገና የማግባት መብት"
+      },
+      "query_type": "Directive",
+      "question_am": "ፍቺው በሕግ ሲጸና፣ ሁለቱም ወገኖች ወዲያውኑ እንደገና የማግባት ሙሉ ሕጋዊ መብት ያገኛሉ?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 115", "source": "FL-R-001"}
+      ],
+      "mutex_group": "STATUS_CHANGE"
+    },
+    {
+      "facet_id": "FL-12-F02",
+      "legal_concept_en": "Resumption of Maiden Name",
+      "rhetoric": {
+        "intro_am": "በስም ላይ የሚኖረው ለውጥ...",
+        "transition_am": "በአብዛኛው፣ ሚስት ወደ ቀድሞ ስሟ ትመለሳለች...",
+        "summary_keyword_am": "ወደ ቀድሞ ስም መመለስ"
+      },
+      "query_type": "Boolean/Directive",
+      "question_am": "ሚስት የቀድሞ ስሟን ወይም የመታወቂያ ስሟን ለመጠቀም የመመለስ መብት አላት?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 116", "source": "FL-R-001"}
+      ],
+      "mutex_group": "NAME_CHANGE"
+    },
+    {
+      "facet_id": "FL-12-F03",
+      "legal_concept_en": "Liquidation of Matrimonial Property (Partition)",
+      "rhetoric": {
+        "intro_am": "የፍቺው ወሳኝ የገንዘብ ውጤት...",
+        "transition_am": "የጋራ ንብረት በሕግ አግባብ ይካፈላል...",
+        "summary_keyword_am": "የንብረት ክፍፍል"
+      },
+      "query_type": "Directive/Judicial",
+      "question_am": "የጋራ ንብረቶችና ዕዳዎች በሕጉ መሠረት ወዲያውኑ መከፋፈልና መጣራት አለባቸው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 117", "source": "FL-R-001"},
+        {"ref_id": "Art. 85-93", "source": "FL-R-001"}
+      ],
+      "mutex_group": "FINANCIAL_FINALIZATION"
+    },
+    {
+      "facet_id": "FL-12-F04",
+      "legal_concept_en": "Determination of Custody and Maintenance (Child Orders)",
+      "rhetoric": {
+        "intro_am": "ከሁሉ በላይ የልጆች ጉዳይ...",
+        "transition_am": "የልጆች ጥቅም ቅድሚያ ይሰጠዋል...",
+        "summary_keyword_am": "የልጅ ጥበቃና ቀለብ"
+      },
+      "query_type": "Directive/Judicial",
+      "question_am": "ፍርድ ቤቱ የልጆች ጥበቃ (Custody)፣ የጉብኝት መብት (Visitation) እና የቀለብ ጉዳዮችን (Maintenance) በአዋጅ የማስወሰን ግዴታ አለበት?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 185-191", "source": "FL-R-001"}
+      ],
+      "mutex_group": "CHILD_RESOLUTION"
+    }
+  ]
+}

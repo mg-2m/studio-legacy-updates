@@ -1,0 +1,133 @@
+{
+
+  "module_id": "PL-08",
+
+  "module_title_am": "መያዣ: በንብረት ላይ የሚመሰረት ዋስትና (Pledge)",
+
+  "description_am": "ይህ ሞዱል በሚንቀሳቀስ ንብረት ላይ ለዕዳ ዋስትና የሚሰጥ መያዣ (Pledge) ሕጋዊ ሁኔታዎችን ይለያል።",
+
+  "fact_facets": [
+
+    {
+
+      "facet_id": "PL-08-F01",
+
+      "legal_concept_en": "Valid Underlying Obligation",
+
+      "rhetoric": {
+
+        "intro_am": "መያዣው የተመሰረተበት ዕዳ...",
+
+        "transition_am": "የመያዣው ምክንያት የሆነው ግዴታ በሕግ የጸና ነው...",
+
+        "summary_keyword_am": "የጸና ዕዳ"
+
+      },
+
+      "query_type": "Boolean/Validity",
+
+      "question_am": "መያዣው (Pledge) የተመሰረተው በሕግ የጸና እና የተወሰነ ዕዳ ወይም ግዴታን (Underlying Obligation) ለማስጠበቅ ነው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1792", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "PLEDGE_VALIDITY"
+
+    },
+
+    {
+
+      "facet_id": "PL-08-F02",
+
+      "legal_concept_en": "Pledge Agreement and Delivery of Possession",
+
+      "rhetoric": {
+
+        "intro_am": "የመያዣው ስምምነት እና አፈጻጸም...",
+
+        "transition_am": "ንብረቱ በአበዳሪው እጅ መተላለፉ...",
+
+        "summary_keyword_am": "ንብረት መያዝ (Dispossession)"
+
+      },
+
+      "query_type": "Boolean/Action",
+
+      "question_am": "መያዣው በውል የተመሰረተ ከመሆኑም በላይ፣ ተበዳሪው (Pledgor) የተያዘውን ንብረት ይዞታ ለአበዳሪው (Pledgee) አስረክቧል (Dispossession)?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1795", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "PLEDGE_PERFECTION"
+
+    },
+
+    {
+
+      "facet_id": "PL-08-F03",
+
+      "legal_concept_en": "Pledge without Dispossession (Special Case)",
+
+      "rhetoric": {
+
+        "intro_am": "ያለይዞታ መያዣ...",
+
+        "transition_am": "በሕግ የተፈቀደ የይዞታ አለመተላለፍ...",
+
+        "summary_keyword_am": "ያለመያዝ ዋስትና"
+
+      },
+
+      "query_type": "Boolean/Status",
+
+      "question_am": "መያዣው የተመሰረተው በሕግ (ለምሳሌ በአቪዬሽን፣ የባንክ ዋስትና) ይዞታው ከተበዳሪው እጅ መውጣት ሳያስፈልገው በሚፈቀድ ልዩ ሁኔታ ላይ ነው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1796", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "PLEDGE_PERFECTION"
+
+    },
+
+    {
+
+      "facet_id": "PL-08-F04",
+
+      "legal_concept_en": "Creditor's Right to Sell Pledge on Default",
+
+      "rhetoric": {
+
+        "intro_am": "ዕዳ ባለመከፈል ንብረቱን የመሸጥ መብት...",
+
+        "transition_am": "በዕዳ ጥሰት ጊዜ ንብረቱ ሊሸጥ ይችላል...",
+
+        "summary_keyword_am": "በመሸጥ መፈጸም"
+
+      },
+
+      "query_type": "Boolean/Action",
+
+      "question_am": "ዋናው ዕዳ አልተከፈለም (Default) እና አበዳሪው የተያዘውን ንብረት በሕግ በተደነገገው ሥርዓት (በፍርድ ቤት ትዕዛዝ ወይም በስምምነት) የመሸጥ መብት አለው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1803", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "PLEDGE_REMEDY"
+
+    }
+
+  ]
+
+}

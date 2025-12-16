@@ -1,0 +1,133 @@
+{
+
+  "module_id": "PL-03",
+
+  "module_title_am": "የጋራ ባለቤትነት (የተከፋፈለ)",
+
+  "description_am": "ይህ ሞዱል ንብረት በጋራ ሲያዝ አስተዳደር፣ አጠቃቀም እና የክፍፍል (Partition) ደንቦችን ይዘረዝራል።",
+
+  "fact_facets": [
+
+    {
+
+      "facet_id": "PL-03-F01",
+
+      "legal_concept_en": "Share of Co-owner (Undivided Right)",
+
+      "rhetoric": {
+
+        "intro_am": "የእያንዳንዱ የጋራ ባለቤት ድርሻ...",
+
+        "transition_am": "የእያንዳንዱ ባለቤት ድርሻ ግምት ውስጥ ይገባል...",
+
+        "summary_keyword_am": "ያልተከፋፈለ ድርሻ"
+
+      },
+
+      "query_type": "Directive",
+
+      "question_am": "የእያንዳንዱ የጋራ ባለቤት መብት ከጠቅላላው ንብረት ጋር በተያያዘ ባለው ድርሻ መጠን ብቻ የተወሰነ ነው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1257", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "OWNERSHIP_SHARE"
+
+    },
+
+    {
+
+      "facet_id": "PL-03-F02",
+
+      "legal_concept_en": "Management Decisions (Majority Rule)",
+
+      "rhetoric": {
+
+        "intro_am": "የጋራ አስተዳደር ውሳኔዎች...",
+
+        "transition_am": "ውሳኔዎች የሚወሰኑት በድምፅ ብዛት ነው...",
+
+        "summary_keyword_am": "የአብላጫ ድምፅ አስተዳደር"
+
+      },
+
+      "query_type": "Boolean/Directive",
+
+      "question_am": "የጋራ ንብረቱን ለመጠቀምና ለማስተዳደር የሚወሰኑ ውሳኔዎች የተወሰዱት በንብረቱ ድርሻ አብላጫ ድምፅ ነው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1261", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "MANAGEMENT_CONTROL"
+
+    },
+
+    {
+
+      "facet_id": "PL-03-F03",
+
+      "legal_concept_en": "Right to Sell Undivided Share",
+
+      "rhetoric": {
+
+        "intro_am": "ድርሻን የመሸጥ መብት...",
+
+        "transition_am": "እያንዳንዱ ባለቤት ያለሌላው ፈቃድ ድርሻውን መሸጥ ይችላል...",
+
+        "summary_keyword_am": "ድርሻን መሸጥ"
+
+      },
+
+      "query_type": "Boolean/Action",
+
+      "question_am": "አንዱ የጋራ ባለቤት ድርሻውን በነጻነት የመሸጥ ወይም የማስተላለፍ መብት አለው (በውል ወይም በሕግ ካልተከለከለ በስተቀር)?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1264", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "TRANSFER_RIGHTS"
+
+    },
+
+    {
+
+      "facet_id": "PL-03-F04",
+
+      "legal_concept_en": "Right to Demand Partition",
+
+      "rhetoric": {
+
+        "intro_am": "የክፍፍል ጥያቄ...",
+
+        "transition_am": "ማንኛውም ባለቤት የንብረቱ ክፍፍል እንዲደረግ የመጠየቅ መብት አለው...",
+
+        "summary_keyword_am": "ንብረት መከፋፈል"
+
+      },
+
+      "query_type": "Boolean/Action",
+
+      "question_am": "አንዱ የጋራ ባለቤት ንብረቱ እንዲከፋፈል (Partition) በፍርድ ቤት የመጠየቅ መብት አለው (በውል ወይም በሕግ ለጊዜው ካልተገደበ በስተቀር)?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1275", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "ENDING_COOWNERSHIP"
+
+    }
+
+  ]
+
+}

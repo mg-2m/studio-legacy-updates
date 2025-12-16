@@ -1,0 +1,82 @@
+{
+  "module_id": "FL-08",
+  "module_title_am": "የወላጆች ስልጣን (Parental Authority)",
+  "description_am": "ይህ ሞዱል ወላጆች በሕጻናት አካልና ንብረት ላይ ያላቸውን የጋራ ስልጣን እና የሕጻናትን ጥቅም የማስጠበቅ ግዴታ ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-08-F01",
+      "legal_concept_en": "Joint Exercise of Authority",
+      "rhetoric": {
+        "intro_am": "የጋራ ስልጣንን ለማረጋገጥ...",
+        "transition_am": "ውሳኔዎች በሁለቱም ወላጆች ስም ይሰጣሉ...",
+        "summary_keyword_am": "የጋራ ሥልጣን"
+      },
+      "query_type": "Boolean",
+      "question_am": "ልጁ ከአባቱና ከእናቱ ጋር የሚኖር ከሆነ፣ ስልጣኑ በሁለቱም ወላጆች በጋራ ይፈጸማል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 182", "source": "FL-R-001"}
+      ],
+      "mutex_group": "JOINT_AUTHORITY"
+    },
+    {
+      "facet_id": "FL-08-F02",
+      "legal_concept_en": "Duty to Protect and Raise the Child",
+      "rhetoric": {
+        "intro_am": "የስልጣን ዋና ዓላማ...",
+        "transition_am": "ይህም የሕጻኑን ደህንነት እና እድገት ያካትታል...",
+        "summary_keyword_am": "ልጅን የመጠበቅ ግዴታ"
+      },
+      "query_type": "Directive/Boolean",
+      "question_am": "ወላጆች ልጃቸውን የመንከባከብ፣ የማስተማር እና የጤና ፍላጎቱን የማሟላት የሕግ ግዴታ አለባቸው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 183", "source": "FL-R-001"}
+      ],
+      "mutex_group": "DUTY_OF_CARE"
+    },
+    {
+      "facet_id": "FL-08-F03",
+      "legal_concept_en": "Parental Administration of Child's Property",
+      "rhetoric": {
+        "intro_am": "ልጁ ንብረት ካለው፣ አስተዳደሩ...",
+        "transition_am": "ንብረቱ የሚተዳደረው ለልጁ ጥቅም ብቻ ነው...",
+        "summary_keyword_am": "የንብረት አስተዳደር"
+      },
+      "query_type": "Directive/Boolean",
+      "question_am": "ወላጆች የሕጻኑን ንብረት የማስተዳደር እና የሕጻኑን ጥቅም ብቻ የማስጠበቅ ሥልጣን አላቸው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 201", "source": "FL-R-001"}
+      ],
+      "mutex_group": "PROPERTY_ADMINISTRATION"
+    },
+    {
+      "facet_id": "FL-08-F04",
+      "legal_concept_en": "Termination of Parental Authority (Attaining Majority)",
+      "rhetoric": {
+        "intro_am": "የወላጅ ስልጣን የሚያበቃበት ጊዜ...",
+        "transition_am": "ልጁ የሕግ ብቃት ሲያገኝ...",
+        "summary_keyword_am": "የአካለ መጠን መድረስ"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ልጁ ዐሥራ ስምንት ዓመት (18) ሞልቶታል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 196(a)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "TERMINATION_OF_AUTHORITY"
+    },
+    {
+      "facet_id": "FL-08-F05",
+      "legal_concept_en": "Judicial Removal of Parental Authority (Gross Mismanagement)",
+      "rhetoric": {
+        "intro_am": "በተጨማሪም፣ ስልጣን በፍርድ ቤት ሊነሳ ይችላል...",
+        "transition_am": "ይህ የሚሆነው ከባድ ስህተት ሲፈጸም ነው...",
+        "summary_keyword_am": "የፍርድ ቤት መሻር"
+      },
+      "query_type": "Boolean/Judicial",
+      "question_am": "ወላጆቹ ለልጁ ደህንነት አደጋ የሚያመጣ ከባድ የኃላፊነት ጉድለት አሳይተዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 210", "source": "FL-R-001"}
+      ],
+      "mutex_group": "JUDICIAL_INTERVENTION"
+    }
+  ]
+}

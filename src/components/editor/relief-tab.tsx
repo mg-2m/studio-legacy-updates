@@ -1,7 +1,7 @@
 
-
 "use client";
 
+import React, { useState, useEffect, useRef } from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
@@ -22,7 +22,6 @@ interface ReliefTabProps {
   state: AppState;
   dispatch: React.Dispatch<any>;
 }
-
 
 const parseSentenceWithInputs = (
   text: string,
@@ -66,7 +65,6 @@ const parseSentenceWithInputs = (
   });
 };
 
-
 const ReliefCalculator: React.FC<{
     calcKey: string;
     config: CalculationConfig;
@@ -76,7 +74,6 @@ const ReliefCalculator: React.FC<{
 
     const calcState = state.calculations[calcKey];
     if (!calcState) return null;
-
 
     const handleInputChange = (field: string, value: any) => {
         dispatch({ type: 'UPDATE_CALCULATION', payload: { calcKey, field, value } });
@@ -144,11 +141,31 @@ const ReliefCalculator: React.FC<{
     );
 };
 
-
 export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
   const { maintenance, selectedReliefs, selectedSubTemplate } = state;
+  const [highlightedReliefs, setHighlightedReliefs] = useState<Set<string>>(new Set());
+  const prevSelectedReliefsRef = useRef<Relief[]>(selectedReliefs);
+
+  useEffect(() => {
+    const newlySelectedDefaults = selectedReliefs.filter((current: Relief) => 
+      current.isDefault && !prevSelectedReliefsRef.current.some(prev => prev.id === current.id)
+    );
+
+    if (newlySelectedDefaults.length > 0) {
+      const newIds: Set<string> = new Set(newlySelectedDefaults.map(r => r.id));
+      setHighlightedReliefs(newIds);
+      const timer = setTimeout(() => {
+        setHighlightedReliefs(new Set());
+      }, 1500); // Highlight duration
+      return () => clearTimeout(timer);
+    }
+
+    prevSelectedReliefsRef.current = selectedReliefs;
+  }, [selectedReliefs]);
+
+
   if (!selectedSubTemplate) return null;
-  const customReliefs = selectedReliefs.filter(r => r.isCustom);
+  const customReliefs = selectedReliefs.filter((r: Relief) => r.isCustom);
   const templateData = TEMPLATE_DATA[selectedSubTemplate];
   const standardReliefs = templateData?.reliefs || [];
   const calculationConfigs = templateData?.calculations;
@@ -172,10 +189,17 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
         {standardReliefs.map(item => {
           const isSelected = selectedReliefs.some(sr => sr.id === item.id);
           const selectedRelief = selectedReliefs.find(sr => sr.id === item.id);
+          const isHighlighted = highlightedReliefs.has(item.id);
           
-          if (templateData?.id === 'family_divorce_dispute' && item.id === 'relief_child_support') {
+          const containerClasses = cn(
+            "flex items-start space-x-3 rounded-md border bg-background p-4 transition-colors",
+            { "has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 dark:has-[:checked]:bg-blue-950/30": !isHighlighted },
+            { "flash-animation": isHighlighted }
+          );
+
+          if (selectedSubTemplate === 'family_divorce_dispute' && item.id === 'relief_child_support') {
              return (
-                <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 dark:has-[:checked]:bg-blue-950/30 transition-colors">
+                <div key={item.id} className={containerClasses}>
                   <Checkbox
                     id={`relief-${item.id}`}
                     checked={maintenance.active}
@@ -192,7 +216,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
           }
 
           return (
-            <div key={item.id} className="flex items-start space-x-3 rounded-md border bg-background p-4 has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200 dark:has-[:checked]:bg-blue-950/30 transition-colors">
+            <div key={item.id} className={containerClasses}>
               <Checkbox
                 id={`relief-${item.id}`}
                 checked={isSelected}
@@ -213,7 +237,7 @@ export default function ReliefTab({ state, dispatch }: ReliefTabProps) {
       <Separator />
 
       <div className="space-y-4">
-        {customReliefs.map(relief => (
+        {customReliefs.map((relief: Relief) => (
           <Card key={relief.id} className="bg-muted/30">
               <CardHeader className="flex-row items-center justify-between p-4">
                   <CardTitle className="text-base">ብጁ ዳኝነት</CardTitle>

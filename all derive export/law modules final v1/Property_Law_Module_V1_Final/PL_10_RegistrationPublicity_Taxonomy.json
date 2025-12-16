@@ -1,0 +1,103 @@
+{
+
+  "module_id": "PL-10",
+
+  "module_title_am": "ምዝገባና ይፋዊነት",
+
+  "description_am": "ይህ ሞዱል የማይንቀሳቀስ ንብረት መብቶች ሕጋዊ ዕውቅና ለማግኘት በሕዝብ መዝገብ መመዝገብ ያለባቸውን ሁኔታዎች ይለያል።",
+
+  "fact_facets": [
+
+    {
+
+      "facet_id": "PL-10-F01",
+
+      "legal_concept_en": "Mandatory Registration of Immovable Rights",
+
+      "rhetoric": {
+
+        "intro_am": "የማይንቀሳቀስ መብት ምዝገባ ግዴታ...",
+
+        "transition_am": "ባለቤትነትን፣ ሞርጌጅን ወይም ሌላ መብትን ማቋቋም...",
+
+        "summary_keyword_am": "ግዴታ ምዝገባ"
+
+      },
+
+      "query_type": "Boolean/Objective",
+
+      "question_am": "የማይንቀሳቀስ ንብረት ባለቤትነትን የሚያስተላልፍ ወይም የሪል መብትን (Real Right) የሚያቋቁም ድርጊት (ለምሳሌ ሽያጭ፣ ሞርጌጅ) ለሕዝብ ይፋዊነት (Publicity) በሕግ በተደነገገው መዝገብ መመዝገብ ግዴታ ነው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1576", "source": "PL-R-001"} 
+
+      ],
+
+      "mutex_group": "REGISTRATION_REQUIREMENT"
+
+    },
+
+    {
+
+      "facet_id": "PL-10-F02",
+
+      "legal_concept_en": "Legal Effect of Non-Registration (Invalidity)",
+
+      "rhetoric": {
+
+        "intro_am": "ያለመመዝገብ ሕጋዊ ውጤት...",
+
+        "transition_am": "በተዋዋይ ወገኖች መካከልም እንኳ መብቱ አይቋቋምም...",
+
+        "summary_keyword_am": "የውጤት ማጣት"
+
+      },
+
+      "query_type": "Boolean/Status",
+
+      "question_am": "የማይንቀሳቀስ ንብረት መብት በሕግ የተጠየቀው ቢሆንም ሳይመዘገብ ቀርቷል፣ በዚህ ምክንያት መብቱ በተዋዋይ ወገኖች መካከልም ሆነ በሶስተኛ ወገኖች ላይ ሕጋዊ ውጤት የማያመጣ ይሆናል?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1582", "source": "PL-R-001"} 
+
+      ],
+
+      "mutex_group": "REGISTRATION_CONSEQUENCE"
+
+    },
+
+    {
+
+      "facet_id": "PL-10-F03",
+
+      "legal_concept_en": "Third Party Protection by Registration",
+
+      "rhetoric": {
+
+        "intro_am": "በምዝገባ የሶስተኛ ወገን ጥበቃ...",
+
+        "transition_am": "ያልተመዘገበ መብት ለሶስተኛ ወገኖች አይሰራም...",
+
+        "summary_keyword_am": "የሶስተኛ ወገን ዕውቅና"
+
+      },
+
+      "query_type": "Boolean/Intent",
+
+      "question_am": "የመብት ጥያቄ የሚያነሳው ሶስተኛ ወገን የተመዘገበውን የሪል መብት ያውቅ ነበር ወይስ ከምዝገባ ውጭ በሆነ የግል ዕውቀት ላይ ተመስርቷል?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1594", "source": "PL-R-001"} 
+
+      ],
+
+      "mutex_group": "REGISTRATION_CONSEQUENCE"
+
+    }
+
+  ]
+
+}

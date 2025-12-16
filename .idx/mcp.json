@@ -10,5 +10,10 @@
         "auth,firestore"
       ]
     }
+  },
+  "enabledTools": {
+    "firebase": [
+      "firebase_read_resources"
+    ]
   }
 }

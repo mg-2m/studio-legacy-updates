@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-06",
+  "module_title_am": "የውል ውጤቶች (Binding Force & Interpretation)",
+  "description_am": "ይህ ሞዱል ውል ተፈጻሚ የመሆን ኃይል (Binding Force)፣ የአተረጓጎም ደንቦች እና በሶስተኛ ወገኖች ላይ ያለውን ተጽእኖ ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-06-F01",
+      "legal_concept_en": "Binding Force (*Pacta Sunt Servanda*)",
+      "rhetoric": {
+        "intro_am": "የውል መሰረታዊ ሕግ...",
+        "transition_am": "ሕጋዊ ውሎች በተዋዋይ ወገኖች ላይ አስገዳጅ ናቸው...",
+        "summary_keyword_am": "አስገዳጅ ኃይል"
+      },
+      "query_type": "Directive",
+      "question_am": "በሕግ የተፈቀደው ውል ለተዋዋይ ወገኖች እንደ ሕግ (Law) አስገዳጅ ኃይል አለው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1731", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONTRACT_ENFORCEABILITY"
+    },
+    {
+      "facet_id": "CL-06-F02",
+      "legal_concept_en": "Interpretation (Intention Over Literal Meaning)",
+      "rhetoric": {
+        "intro_am": "ውሉ ግልጽ ካልሆነ...",
+        "transition_am": "የተዋዋይ ወገኖችን ትክክለኛ ፍላጎት መፈለግ...",
+        "summary_keyword_am": "የትክክለኛ ፍላጎት ትርጓሜ"
+      },
+      "query_type": "Boolean/Subjective",
+      "question_am": "የውሉ ቃል ግልጽ ሳይሆን ሲቀር፣ ፍርድ ቤቱ የቃሉን ቃል በቃል ትርጉም ሳይሆን የተዋዋይ ወገኖችን ትክክለኛ የጋራ ፍላጎት ለመፈለግ ይሞክራል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1749", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONTRACT_INTERPRETATION"
+    },
+    {
+      "facet_id": "CL-06-F03",
+      "legal_concept_en": "Interpretation Against the Drafter (Ambiguity)",
+      "rhetoric": {
+        "intro_am": "በአሻሚ ሁኔታዎች...",
+        "transition_am": "አሻሚ ቃል የጻፈውን ወገን የሚጎዳ ሆኖ ይተረጎማል...",
+        "summary_keyword_am": "የጸሐፊው መጎዳት"
+      },
+      "query_type": "Directive",
+      "question_am": "በተዋዋይ ወገኖች የቀረበው ውል አሻሚ ሲሆን፣ አሻሚ የሆነውን ቃል በቅድሚያ ያቀረበውን ወገን የሚጎዳ ሆኖ ይተረጎማል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1754", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CONTRACT_INTERPRETATION"
+    },
+    {
+      "facet_id": "CL-06-F04",
+      "legal_concept_en": "Relativity of Contracts (No Effect on Third Parties)",
+      "rhetoric": {
+        "intro_am": "ውሉ በሦስተኛ ወገኖች ላይ...",
+        "transition_am": "ውል የተፈጸመው በተዋዋይ ወገኖች ላይ ብቻ ነው...",
+        "summary_keyword_am": "የውል አንጻራዊነት"
+      },
+      "query_type": "Directive",
+      "question_am": "ውሉ በተዋዋይ ወገኖች ላይ ብቻ እንጂ በመሠረቱ በሦስተኛ ወገኖች ላይ ግዴታ ወይም መብት የመፍጠር ውጤት አለው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1755", "source": "CL-R-001"}
+      ],
+      "mutex_group": "THIRD_PARTY_EFFECTS"
+    }
+  ]
+}

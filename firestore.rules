@@ -1,87 +1,27 @@
-/**
- * Core Philosophy:
- * This ruleset establishes a dual-access security model. It provides read-only access
- * to authenticated users for shared, public-interest data (courts, parties, cases, and legal knowledge)
- * while enforcing a strict, user-ownership model for private user data.
- *
- * Data Structure:
- * The data is organized into four top-level collections:
- * 1.  `/courts`: Contains court information and nests all related case data.
- * 2.  `/parties`: A global list of all parties involved in cases.
- * 3.  `/users`: Contains user-specific subcollections, where all data is private.
- * 4.  `/legal_knowledge`: Stores the parsed articles of law for the AI knowledge base.
- *
- * Key Security Decisions:
- * -   Authenticated Reads: All shared data collections are readable by any authenticated user,
- *     including those signed in anonymously. This supports the application's core functions.
- * -   Write Protection on Shared Data: Write access (`create`, `update`, `delete`) to the
- *     shared collections is currently disabled (`if false;`) for end-users. This is a critical security
- *     measure. Data will be populated via trusted server-side scripts (seeding).
- * -   Strict User Ownership: All data under `/users/{userId}` is strictly controlled.
- *     Only the authenticated user matching the `{userId}` in the path can read or write
- *     their own documents.
- * -   No User Listing: Listing documents in the top-level `/users` collection is disallowed
- *     to protect user privacy.
- */
+
 rules_version = '2';
+
 service cloud.firestore {
   match /databases/{database}/documents {
-
-    // -------------------------------------------------------------------------
-    // Helper Functions
-    // -------------------------------------------------------------------------
-    function isSignedIn() {
-      return request.auth != null;
-    }
-    function isOwner(userId) {
-      return request.auth.uid == userId;
-    }
-    function isExistingOwner(userId) {
-      return isOwner(userId) && resource != null;
-    }
-    function documentExists(path) {
-      return exists(path);
-    }
-
-    // -------------------------------------------------------------------------
-    // Collection Rules
-    // -------------------------------------------------------------------------
-
-    match /courts/{courtId} {
-      allow get, list: if isSignedIn();
-      allow create, update, delete: if false; // Server-side only
-    }
-
-    match /parties/{partyId} {
-      allow get, list: if isSignedIn();
-      allow create, update, delete: if false; // Server-side only
-    }
-
-    match /courts/{courtId}/cases/{caseId} {
-      allow get, list: if isSignedIn() && documentExists(/databases/$(database)/documents/courts/$(courtId));
-      allow create, update, delete: if false; // Server-side only
-    }
-
-    match /courts/{courtId}/cases/{caseId}/facts/{factId} {
-      allow get, list: if isSignedIn() && documentExists(/databases/$(database)/documents/courts/$(courtId)/cases/$(caseId));
-      allow create, update, delete: if false; // Server-side only
-    }
-
-    match /courts/{courtId}/cases/{caseId}/evidence/{evidenceId} {
-      allow get, list: if isSignedIn() && documentExists(/databases/$(database)/documents/courts/$(courtId)/cases/$(caseId));
-      allow create, update, delete: if false; // Server-side only
-    }
     
-    // NEW: Legal Knowledge Base Collection
-    match /legal_knowledge/{articleId} {
-      allow get, list: if isSignedIn();
-      allow create, update, delete: if false; // Populated by trusted server-side scripts only
+    // Disallow all reads and writes by default
+    match /{document=**} {
+      allow read, write: if false;
     }
 
-    match /users/{userId}/data/{dataId} {
-      allow get, list: if isOwner(userId);
-      allow create: if isOwner(userId);
-      allow update, delete: if isExistingOwner(userId);
+    // Allow authenticated users to READ data from the legal modules.
+    // This is a secure default for a public-facing legal guidance tool.
+    // Writes should be handled by trusted server-side processes or admin roles.
+    match /family_law/{document=**} {
+      allow read: if request.auth != null;
+    }
+
+    match /contract_law/{document=**} {
+      allow read: if request.auth != null;
+    }
+
+    match /property_law/{document=**} {
+      allow read: if request.auth != null;
     }
   }
 }

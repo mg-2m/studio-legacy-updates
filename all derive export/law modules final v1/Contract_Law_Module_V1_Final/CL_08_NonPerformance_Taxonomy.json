@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-08",
+  "module_title_am": "ውል አለመፈጸምና ውጤቶቹ (Non-Performance)",
+  "description_am": "ይህ ሞዱል ተበዳሪው ግዴታውን ሳይፈጽም ሲቀር የሚከሰቱትን ሁኔታዎች እና የአበዳሪውን መብቶች ይተነትናል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-08-F01",
+      "legal_concept_en": "Notice to Perform (Default of the Debtor)",
+      "rhetoric": {
+        "intro_am": "ተበዳሪው ግዴታውን ሳይፈጽም ሲቀር... ",
+        "transition_am": "አበዳሪው መጀመሪያ የማስጠንቀቂያ ማስታወቂያ መስጠት አለበት...",
+        "summary_keyword_am": "የማስጠንቀቂያ ማስታወቂያ"
+      },
+      "query_type": "Boolean/Communication",
+      "question_am": "ተበዳሪው ግዴታውን በተወሰነው ጊዜ ውስጥ ካልፈጸመ፣ አበዳሪው እንዲፈጽም የሚጠይቅ መደበኛ የማስጠንቀቂያ ማስታወቂያ ልኳል? ",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1772", "source": "CL-R-001"}
+      ],
+      "mutex_group": "DEBTOR_DEFAULT"
+    },
+    {
+      "facet_id": "CL-08-F02",
+      "legal_concept_en": "Cases Where Notice is Not Required",
+      "rhetoric": {
+        "intro_am": "ማስታወቂያ የማይጠየቅባቸው ልዩ ሁኔታዎች አሉ...",
+        "transition_am": "ለምሳሌ፣ ግዴታው ሊፈጸም የሚችለው በተወሰነ ጊዜ ብቻ ከነበረ...",
+        "summary_keyword_am": "ማስታወቂያ አልባ መዘግየት"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ተበዳሪው ግዴታውን ሊፈጽም የሚችለው በተወሰነ ጊዜ ውስጥ ብቻ የነበረ ሲሆን ያ ጊዜ አልፏል፣ ወይም ተበዳሪው ግዴታውን ለመፈጸም ፈቃደኛ አለመሆኑን ገልጿል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1773", "source": "CL-R-001"}
+      ],
+      "mutex_group": "DEBTOR_DEFAULT"
+    },
+    {
+      "facet_id": "CL-08-F03",
+      "legal_concept_en": "Creditor's Default (Failure to Cooperate)",
+      "rhetoric": {
+        "intro_am": "አንዳንድ ጊዜ አበዳሪው ራሱ... ",
+        "transition_am": "የአበዳሪው መዘግየት (Creditor's Default) ይባላል...",
+        "summary_keyword_am": "የአበዳሪ መዘግየት"
+      },
+      "query_type": "Boolean/Action",
+      "question_am": "አበዳሪው የተበዳሪውን ግዴታ ለመፈጸም የሚያስፈልገውን ትብብር (ለምሳሌ ንብረቱን ለመቀበል) አላደረገም?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1774", "source": "CL-R-001"}
+      ],
+      "mutex_group": "CREDITOR_DEFAULT"
+    },
+    {
+      "facet_id": "CL-08-F04",
+      "legal_concept_en": "Force Majeure (Unforeseeable and Insurmountable Event)",
+      "rhetoric": {
+        "intro_am": "ከተበዳሪው ቁጥጥር ውጪ የሆነ... ",
+        "transition_am": "ይህም አስገዳጅ ሁኔታ (Force Majeure) ይባላል...",
+        "summary_keyword_am": "አስገዳጅ ሁኔታ"
+      },
+      "query_type": "Boolean/Event",
+      "question_am": "የግዴታው አለመፈጸም የተከሰተው ተበዳሪው ሊገምተውና ሊቋቋመው በማይችለው ድንገተኛና ከአቅም በላይ በሆነ ክስተት (ለምሳሌ የተፈጥሮ አደጋ) ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1791", "source": "CL-R-001"}
+      ],
+      "mutex_group": "NON_PERFORMANCE_EXCUSE"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "module_id": "PL-07",
+  "module_title_am": "የፍራፍሬ መብትና የጥቅም መብት (Usufruct & Servitudes)",
+  "description_am": "ይህ ሞዱል በሌላ ሰው ንብረት ላይ የተመሰረቱ የመጠቀም እና የፍራፍሬ መብቶች (Usufruct) እና የጎረቤት ጥቅሞች (Servitudes) ይለያል።",
+  "fact_facets": [
+    {
+      "facet_id": "PL-07-F01",
+      "legal_concept_en": "Creation and Scope of Usufruct",
+      "rhetoric": {
+        "intro_am": "የፍራፍሬ መብት መመስረት...",
+        "transition_am": "መብቱ የተሰጠው ንብረቱን ለመጠቀም እና ፍሬውን ለማግኘት ነው...",
+        "summary_keyword_am": "የፍራፍሬ መብት"
+      },
+      "query_type": "Boolean/Action",
+      "question_am": "አንድ ሰው የሌላውን ሰው ንብረት የመጠቀም እና የተፈጥሮ ፍሬውን የመሰብሰብ መብት (Usufruct) በሕግ በተደነገገው መሠረት (ለምሳሌ በውል ወይም በኑዛዜ) አግኝቷል?",
+      "grounding_nodes": [
+        {
+          "ref_id": "Art. 1309",
+          "source": "PL-R-001"
+        }
+      ],
+      "mutex_group": "REAL_RIGHT_TYPE"
+    },
+    {
+      "facet_id": "PL-07-F02",
+      "legal_concept_en": "Usufructuary's Obligation to Maintain",
+      "rhetoric": {
+        "intro_am": "የመብት ተጠቃሚው ግዴታ...",
+        "transition_am": "ንብረቱን በአግባቡ የመጠበቅና የመንከባከብ ግዴታ...",
+        "summary_keyword_am": "የመጠበቅ ግዴታ"
+      },
+      "query_type": "Boolean/Directive",
+      "question_am": "የፍራፍሬ መብት ተጠቃሚው ንብረቱን በአግባቡ የመጠበቅ እና እንደ ባለቤቱ ተቆጥሮ የመንከባከብ ግዴታውን ተወጥቷል?",
+      "grounding_nodes": [
+        {
+          "ref_id": "Art. 1332",
+          "source": "PL-R-001"
+        }
+      ],
+      "mutex_group": "USUFRUCT_OBLIGATION"
+    },
+    {
+      "facet_id": "PL-07-F03",
+      "legal_concept_en": "Creation of Predial Servitude (Right of Passage)",
+      "rhetoric": {
+        "intro_am": "የጥቅም መብት መመስረት...",
+        "transition_am": "በሁለት ንብረቶች መካከል ለጥቅም የተመሰረተ መብት...",
+        "summary_keyword_am": "የጥቅም መብት (Servitude)"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "አንድ የማይንቀሳቀስ ንብረት (Dominant Tenement) ለሌላ የማይንቀሳቀስ ንብረት (Servient Tenement) ጥቅም እንዲውል የጥቅም መብት (Servitude) በሕግ ወይም በስምምነት ተመስርቷል?",
+      "grounding_nodes": [
+        {
+          "ref_id": "Art. 1340",
+          "source": "PL-R-001"
+        }
+      ],
+      "mutex_group": "REAL_RIGHT_TYPE"
+    },
+    {
+      "facet_id": "PL-07-F04",
+      "legal_concept_en": "Extinction of Servitude by Non-use",
+      "rhetoric": {
+        "intro_am": "በአለመጠቀም መጥፋት...",
+        "transition_am": "መብቱ ለረጅም ጊዜ ጥቅም ላይ አልዋለም...",
+        "summary_keyword_am": "ባለመጠቀም መጥፋት"
+      },
+      "query_type": "Boolean/Duration",
+      "question_am": "የጥቅም መብቱ (Servitude) ለሕግ በተወሰነው ጊዜ (ለምሳሌ 10 ዓመታት) ሳይቋረጥ ጥቅም ላይ አልዋለም (Non-use)?",
+      "grounding_nodes": [
+        {
+          "ref_id": "Art. 1376",
+          "source": "PL-R-001"
+        }
+      ],
+      "mutex_group": "REAL_RIGHT_EXTINCTION"
+    }
+  ]
+}

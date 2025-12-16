@@ -1,0 +1,67 @@
+{
+  "module_id": "CL-10",
+  "module_title_am": "የውል መቋረጥ (Termination/Dissolution)",
+  "description_am": "ይህ ሞዱል ውሉ የሚቋረጥበትን ሕጋዊ መሠረቶች፣ በተለይም በስምምነት፣ በሕግ ጥሰት ወይም በግዴታው የማይቻል መሆን ምክንያት ይዘረዝማል።",
+  "fact_facets": [
+    {
+      "facet_id": "CL-10-F01",
+      "legal_concept_en": "Termination by Mutual Consent (Cancellation)",
+      "rhetoric": {
+        "intro_am": "ውሉ የሚቋረጥበት ቀላሉ መንገድ...",
+        "transition_am": "በተዋዋይ ወገኖች ስምምነት...",
+        "summary_keyword_am": "በጋራ ስምምነት መሻር"
+      },
+      "query_type": "Boolean/Consent",
+      "question_am": "ተዋዋይ ወገኖች ውሉን በመቀየር ወይም በማቋረጥ (Cancellation) ላይ በጋራ ስምምነት ላይ ደርሰዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1806", "source": "CL-R-001"}
+      ],
+      "mutex_group": "TERMINATION_METHOD"
+    },
+    {
+      "facet_id": "CL-10-F02",
+      "legal_concept_en": "Judicial Termination for Fundamental Breach",
+      "rhetoric": {
+        "intro_am": "ፍርድ ቤት ውልን ሲያፈርስ...",
+        "transition_am": "ይህ የሚከሰተው ውሉን ለማፍረስ ምክንያት በሚሆን ከባድ ጥሰት ነው...",
+        "summary_keyword_am": "በፍርድ ቤት መፍረስ"
+      },
+      "query_type": "Boolean/Severity",
+      "question_am": "የተፈፀመው ግዴታ አለመፈጸም ውሉን እንዲቋረጥ (Dissolution) የሚጠይቅ ከባድ (Fundamental) ጥሰት ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1814", "source": "CL-R-001"}
+      ],
+      "mutex_group": "TERMINATION_METHOD"
+    },
+    {
+      "facet_id": "CL-10-F03",
+      "legal_concept_en": "Termination for Subsequent Impossibility (Force Majeure)",
+      "rhetoric": {
+        "intro_am": "ግዴታው በኋላ የማይቻል ከሆነ...",
+        "transition_am": "ውሉ በሕግ ኃይል ሊቋረጥ ይችላል...",
+        "summary_keyword_am": "ባልተጠበቀ ኃይል መቋረጥ"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "ግዴታው ከተፈጠረ በኋላ በተበዳሪው ጥፋት ሳይሆን በግዳጅ ኃይል (Force Majeure) ምክንያት አፈፃፀሙ ፈጽሞ የማይቻል ሆኗል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1815", "source": "CL-R-001"}
+      ],
+      "mutex_group": "TERMINATION_METHOD"
+    },
+    {
+      "facet_id": "CL-10-F04",
+      "legal_concept_en": "Effects of Termination (Restitution)",
+      "rhetoric": {
+        "intro_am": "ውሉ ሲፈርስ ውጤቱ...",
+        "transition_am": "የተዋዋይ ወገኖች ወደ ቀድሞ ሁኔታቸው መመለስ...",
+        "summary_keyword_am": "ወደ ቀድሞ ሁኔታ መመለስ"
+      },
+      "query_type": "Directive",
+      "question_am": "ውሉ ሲቋረጥ፣ ተዋዋይ ወገኖች ውሉ ባይፈፀም ኖሮ ባሉበት ሁኔታ እንዲቀመጡ (Restitution) ይጠበቅባቸዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1817", "source": "CL-R-001"}
+      ],
+      "mutex_group": "TERMINATION_EFFECTS"
+    }
+  ]
+}

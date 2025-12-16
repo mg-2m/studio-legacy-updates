@@ -1,0 +1,67 @@
+{
+  "module_id": "PL-01",
+  "module_title_am": "አጠቃላይ መርሆዎችና የንብረት ዓይነቶች",
+  "description_am": "ይህ ሞዱል ንብረቱ የሚንቀሳቀስ ወይም የማይንቀሳቀስ እንዲሁም የግል ወይም የሕዝብ ንብረት መሆኑን ይለያል።",
+  "fact_facets": [
+    {
+      "facet_id": "PL-01-F01",
+      "legal_concept_en": "Movable Property Classification",
+      "rhetoric": {
+        "intro_am": "ንብረቱ የሚንቀሳቀስ ንብረት ነው?",
+        "transition_am": "በተፈጥሮው ወይም በሕግ የሚንቀሳቀስ ነው...",
+        "summary_keyword_am": "የሚንቀሳቀስ ንብረት"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "ንብረቱ ከአንድ ቦታ ወደ ሌላ ቦታ በቀላሉ ሊዘዋወር የሚችል ወይም በሕግ እንደ የሚንቀሳቀስ ንብረት የተመደበ ነው (ለምሳሌ ዕቃዎች፣ ተሽከርካሪዎች፣ አክሲዮኖች)?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1127", "source": "PL-R-001"}
+      ],
+      "mutex_group": "PROPERTY_TYPE"
+    },
+    {
+      "facet_id": "PL-01-F02",
+      "legal_concept_en": "Immovable Property Classification",
+      "rhetoric": {
+        "intro_am": "ንብረቱ የማይንቀሳቀስ ንብረት ነው?",
+        "transition_am": "በመሬት ላይ የተገነባ ወይም ከመሬት ጋር በጥብቅ የተያያዘ ነው...",
+        "summary_keyword_am": "የማይንቀሳቀስ ንብረት"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "ንብረቱ መሬት፣ ወይም ከመሬት ጋር በጥብቅ የተያያዘ ህንጻ፣ ተከላ ወይም ሌላ ግንባታ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1127", "source": "PL-R-001"}
+      ],
+      "mutex_group": "PROPERTY_TYPE"
+    },
+    {
+      "facet_id": "PL-01-F03",
+      "legal_concept_en": "Immovable by Destination (Accessory)",
+      "rhetoric": {
+        "intro_am": "በዓላማው የማይንቀሳቀስ ንብረት...",
+        "transition_am": "የሚንቀሳቀስ ሆኖ ሳለ ለአንድ የማይንቀሳቀስ ንብረት አገልግሎት የተወሰነ ነው...",
+        "summary_keyword_am": "በዓላማ የማይንቀሳቀስ"
+      },
+      "query_type": "Boolean/Relationship",
+      "question_am": "ንብረቱ በተፈጥሮው የሚንቀሳቀስ ቢሆንም፣ በቋሚነት የአንድ የማይንቀሳቀስ ንብረት አገልግሎት (Destination) እንዲሆን በባለቤቱ የተወሰነ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1130", "source": "PL-R-001"}
+      ],
+      "mutex_group": "PROPERTY_TYPE_SPECIAL"
+    },
+    {
+      "facet_id": "PL-01-F04",
+      "legal_concept_en": "Public Domain Classification",
+      "rhetoric": {
+        "intro_am": "ንብረቱ የሕዝብ ንብረት ነው?",
+        "transition_am": "በሕዝብ ጥቅም የተያዘ...",
+        "summary_keyword_am": "የሕዝብ ንብረት"
+      },
+      "query_type": "Boolean/Status",
+      "question_am": "ንብረቱ ለመላው ሕዝብ አገልግሎት ወይም ጥቅም የተወሰነ ነው (ለምሳሌ ጎዳናዎች፣ ወንዞች፣ የባቡር መስመሮች)?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1139", "source": "PL-R-001"}
+      ],
+      "mutex_group": "PROPERTY_STATUS"
+    }
+  ]
+}

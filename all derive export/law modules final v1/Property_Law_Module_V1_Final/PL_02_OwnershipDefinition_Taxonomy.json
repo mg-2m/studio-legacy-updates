@@ -1,0 +1,67 @@
+{
+  "module_id": "PL-02",
+  "module_title_am": "ባለቤትነት: ትርጉምና ወሰን",
+  "description_am": "ይህ ሞዱል የባለቤትነት መብት ምን ያህል ሰፊ እንደሆነና በጎረቤት ግንኙነትና በሕግ አሠራር የሚመጡ ገደቦችን ይፈትሻል።",
+  "fact_facets": [
+    {
+      "facet_id": "PL-02-F01",
+      "legal_concept_en": "Definition of Full Ownership Rights",
+      "rhetoric": {
+        "intro_am": "የባለቤትነት መብት መሰረታዊ አካላት...",
+        "transition_am": "ንብረቱን መጠቀም፣ ፍሬ ማግኘት እና መወጣት መብት አለው...",
+        "summary_keyword_am": "ሙሉ ባለቤትነት"
+      },
+      "query_type": "Directive",
+      "question_am": "ባለቤቱ በሕግ ከተደነገገው ገደብ ውጪ ንብረቱን የመጠቀም (Usus)፣ ፍሬ የማግኘት (Fructus) እና የመወጣት (Abusus) ሙሉ መብት አለው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1204", "source": "PL-R-001"}
+      ],
+      "mutex_group": "OWNERSHIP_SCOPE"
+    },
+    {
+      "facet_id": "PL-02-F02",
+      "legal_concept_en": "Abuse of Right Prohibition",
+      "rhetoric": {
+        "intro_am": "የመብት አላግባብ መጠቀም እገዳ...",
+        "transition_am": "ባለቤቱ ጎረቤቶችን ለመጉዳት ብቻ መብቱን መጠቀም አይችልም...",
+        "summary_keyword_am": "የመብት ጥሰት"
+      },
+      "query_type": "Boolean/Intent",
+      "question_am": "ባለቤቱ ንብረቱን የሚጠቀመው ለጎረቤቶች ጉዳት የማድረስ ብቸኛ ዓላማ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1225", "source": "PL-R-001"}
+      ],
+      "mutex_group": "NEIGHBORHOOD_LIMITS"
+    },
+    {
+      "facet_id": "PL-02-F03",
+      "legal_concept_en": "Nuisance and Excessive Emission",
+      "rhetoric": {
+        "intro_am": "ከመጠን ያለፈ ምቾት ማጣት...",
+        "transition_am": "የጭስ፣ የድምፅ ወይም የሽታ መጠን ከልክ በላይ ነው...",
+        "summary_keyword_am": "ከመጠን ያለፈ ጉዳት"
+      },
+      "query_type": "Boolean/Objective",
+      "question_am": "ከአንዱ ንብረት የሚመነጨው ጭስ፣ ድምፅ፣ ሽታ ወይም ሌላ ልቀት ከጎረቤት ንብረት አጠቃቀም ላይ ከሚጠበቀው ልክ በላይ የሆነ ጣልቃገብነት (Excessive Emission) ፈጥሯል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1225", "source": "PL-R-001"}
+      ],
+      "mutex_group": "NEIGHBORHOOD_LIMITS"
+    },
+    {
+      "facet_id": "PL-02-F04",
+      "legal_concept_en": "Statutory Restrictions on Use",
+      "rhetoric": {
+        "intro_am": "በሕግ የተደነገጉ ገደቦች...",
+        "transition_am": "የዞኒንግ ወይም የግንባታ ፈቃድ ደንቦች ተጥሰዋል...",
+        "summary_keyword_am": "የሕግ ገደብ"
+      },
+      "query_type": "Boolean/Directive",
+      "question_am": "የባለቤቱ የንብረት አጠቃቀም በሕዝብ ጥቅም ወይም በአስተዳደር ደንቦች (ለምሳሌ የግንባታ ኮድ፣ ዞኒንግ) በግልጽ የተቀመጡ ገደቦችን አልፏል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 1234", "source": "PL-R-001"}
+      ],
+      "mutex_group": "PUBLIC_LIMITS"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "module_id": "FL-10",
+  "module_title_am": "ጉዲፈቻ (Adoption)",
+  "description_am": "ይህ ሞዱል ልጅን በሕግ አግባብ በጉዲፈቻ ለመውሰድ የሚያስፈልጉትን መስፈርቶች፣ የጉዲፈቻውን ፍቃዶች እና ሕጋዊ ውጤቶችን ያብራራል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-10-F01",
+      "legal_concept_en": "Adopter's Age and Capacity",
+      "rhetoric": {
+        "intro_am": "ጉዲፈቻ የሚፈቅደው በሕግ ብቃት ላላቸው...",
+        "transition_am": "የጉዲፈቻ ጠያቂው መሟላት ያለበት...",
+        "summary_keyword_am": "የአሳዳጊ ብቃት"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ጉዲፈቻ የሚጠይቀው ሰው ዕድሜው 25 ዓመት ሞልቶት ከሚያሳድገው ልጅ በ18 ዓመት ይበልጣል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 192", "source": "FL-R-001"}
+      ],
+      "mutex_group": "ADOPTER_CAPACITY"
+    },
+    {
+      "facet_id": "FL-10-F02",
+      "legal_concept_en": "Consent of Natural Parents",
+      "rhetoric": {
+        "intro_am": "ለጉዲፈቻ ትዕዛዝ ወሳኙ ነገር...",
+        "transition_am": "የልጁን ተፈጥሮአዊ ወላጆች ፍቃድ...",
+        "summary_keyword_am": "የወላጆች ፈቃድ"
+      },
+      "query_type": "Boolean/Consent",
+      "question_am": "የልጁ ወላጆች (ወይም አሳዳጊ) ጉዲፈቻውን በጽሑፍ በነጻ ፈቃደኝነት ፈቅደዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 195(1)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "CONSENT_REQUIREMENT"
+    },
+    {
+      "facet_id": "FL-10-F03",
+      "legal_concept_en": "Consent of the Child (Over 10 Years)",
+      "rhetoric": {
+        "intro_am": "ልጁ ለአካለ መጠን ሲጠጋ...",
+        "transition_am": "ሕጉ የሕጻኑን አስተያየት ያከብራል...",
+        "summary_keyword_am": "የሕጻኑ ፈቃድ"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ልጁ ከ10 ዓመት በላይ ከሆነ፣ ጉዲፈቻው በፍቃዱ የተፈጸመ ነው?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 195(2)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "CONSENT_REQUIREMENT"
+    },
+    {
+      "facet_id": "FL-10-F04",
+      "legal_concept_en": "Best Interests of the Child (Court Assessment)",
+      "rhetoric": {
+        "intro_am": "ከሁሉም በላይ፣ ፍርድ ቤቱ የሚያተኩረው...",
+        "transition_am": "ጉዲፈቻው ለልጁ ጥቅም ወሳኝ መሆኑን...",
+        "summary_keyword_am": "የልጁ ጥቅም"
+      },
+      "query_type": "Directive/Judicial",
+      "question_am": "የጉዲፈቻው ትዕዛዝ የሕጻኑን የተሻለ ጥቅም (Best Interest) እንደሚያስጠብቅ በፍርድ ቤቱ ታምኖበታል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 196", "source": "FL-R-001"}
+      ],
+      "mutex_group": "COURT_APPROVAL"
+    },
+    {
+      "facet_id": "FL-10-F05",
+      "legal_concept_en": "Legal Effect: Severance from Natural Family",
+      "rhetoric": {
+        "intro_am": "የጉዲፈቻው ሕጋዊ ውጤት...",
+        "transition_am": "ልጁ ከመጀመሪያ ቤተሰቡ ጋር ያለው ግንኙነት...",
+        "summary_keyword_am": "የግንኙነት መቋረጥ"
+      },
+      "query_type": "Directive",
+      "question_am": "ጉዲፈቻው ሲፈቀድ፣ ልጁ ከመጀመሪያ ወላጆቹና ከቤተሰቡ ጋር ያለው የሕግ ግንኙነት ይቋረጣል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 200", "source": "FL-R-001"}
+      ],
+      "mutex_group": "LEGAL_EFFECT"
+    }
+  ]
+}

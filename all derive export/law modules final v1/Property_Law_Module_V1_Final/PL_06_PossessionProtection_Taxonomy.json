@@ -1,0 +1,133 @@
+{
+
+  "module_id": "PL-06",
+
+  "module_title_am": "ይዞታ: ትርጉምና ጥበቃ",
+
+  "description_am": "ይህ ሞዱል ይዞታ ምን ማለት እንደሆነ እና ይዞታ ለተነጠቀ ወይም ለተረበሸ ሰው የሚሰጠውን ሕጋዊ ጥበቃ ይለያል።",
+
+  "fact_facets": [
+
+    {
+
+      "facet_id": "PL-06-F01",
+
+      "legal_concept_en": "Definition of Possession (Corpus and Animus)",
+
+      "rhetoric": {
+
+        "intro_am": "የይዞታ ሕጋዊ መሠረት...",
+
+        "transition_am": "ንብረቱን በእጁ መያዝ እና እንደ ባለቤትነት የመቆጠር ፍላጎት...",
+
+        "summary_keyword_am": "ይዞታ"
+
+      },
+
+      "query_type": "Boolean/Intent",
+
+      "question_am": "ግለሰቡ ንብረቱን በአካል የሚቆጣጠርበት (Corpus) እና እንደ ባለቤት ወይም መብት ያለው ሰው አድርጎ የመያዝ ዓላማ (Animus) አለው?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1459", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "POSSESSION_ELEMENTS"
+
+    },
+
+    {
+
+      "facet_id": "PL-06-F02",
+
+      "legal_concept_en": "Acquisition of Possession",
+
+      "rhetoric": {
+
+        "intro_am": "ይዞታን ማግኘት...",
+
+        "transition_am": "ይዞታው የተገኘው በሕጋዊ መንገድ ነው...",
+
+        "summary_keyword_am": "ይዞታ ማግኘት"
+
+      },
+
+      "query_type": "Boolean/Action",
+
+      "question_am": "ንብረቱ በአካል መረከብ ወይም ሌላ ተከታታይ የይዞታ ድርጊቶች ተፈጽመዋል?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1466", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "POSSESSION_ACQUISITION"
+
+    },
+
+    {
+
+      "facet_id": "PL-06-F03",
+
+      "legal_concept_en": "Action for Disturbance of Possession",
+
+      "rhetoric": {
+
+        "intro_am": "ይዞታ ሲረበሽ ጥበቃ...",
+
+        "transition_am": "የተረበሸው ይዞታ መብት ጥበቃ ይጠየቃል...",
+
+        "summary_keyword_am": "የይዞታ ረብሻ"
+
+      },
+
+      "query_type": "Boolean/Objective",
+
+      "question_am": "የይዞታው ባለቤት በንብረቱ ላይ በሶስተኛ ወገን ጣልቃ ገብነት (Disturbance) ምክንያት በተረጋጋ ሁኔታ የመጠቀም መብቱ ተነፍጓል?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1473(1)", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "POSSESSORY_REMEDY"
+
+    },
+
+    {
+
+      "facet_id": "PL-06-F04",
+
+      "legal_concept_en": "Action for Dispossession (Recovery)",
+
+      "rhetoric": {
+
+        "intro_am": "ይዞታ ሲነጠቅ ጥበቃ...",
+
+        "transition_am": "በኃይል ወይም በድብቅ ይዞታው ተነጥቋል...",
+
+        "summary_keyword_am": "ይዞታ መመለስ"
+
+      },
+
+      "query_type": "Boolean/Action",
+
+      "question_am": "ይዞታው በኃይል ወይም በድብቅ (Violently or Covertly) ተነጥቋል እናም ይዞታው እንዲመለስ (Recovery of Possession) በፍርድ ቤት ጥያቄ ቀርቧል?",
+
+      "grounding_nodes": [
+
+        {"ref_id": "Art. 1473(2)", "source": "PL-R-001"}
+
+      ],
+
+      "mutex_group": "POSSESSORY_REMEDY"
+
+    }
+
+  ]
+
+}

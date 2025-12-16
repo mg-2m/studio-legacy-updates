@@ -1,0 +1,67 @@
+{
+  "module_id": "FL-11",
+  "module_title_am": "የፍቺ ምክንያቶች (Grounds for Divorce)",
+  "description_am": "ይህ ሞዱል ጋብቻ በሕግ ፊት የሚፈርስባቸውን ዋና ዋና ምክንያቶች ይዘረዝራል፣ ይህም በስምምነት ወይም በክርክር ፍቺን ያጠቃልላል።",
+  "fact_facets": [
+    {
+      "facet_id": "FL-11-F01",
+      "legal_concept_en": "Divorce by Joint Petition (Mutual Consent)",
+      "rhetoric": {
+        "intro_am": "ቀላሉና ፈጣኑ መንገድ...",
+        "transition_am": "ሁለቱም አጋሮች በጋራ ውሳኔ ሲፈቱ...",
+        "summary_keyword_am": "የጋራ ስምምነት"
+      },
+      "query_type": "Boolean/Consent",
+      "question_am": "ባለትዳሮች በትዳር መፍረስ ላይ ሙሉ በሙሉ ተስማምተው በጋራ ክስ ለማቅረብ ተዘጋጅተዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 104", "source": "FL-R-001"}
+      ],
+      "mutex_group": "DIVORCE_PATHWAY"
+    },
+    {
+      "facet_id": "FL-11-F02",
+      "legal_concept_en": "Irretrievable Breakdown of Marriage (Separation Period)",
+      "rhetoric": {
+        "intro_am": "ስምምነት ከሌለ ግንኙነቱ መፍረሱን ለማረጋገጥ...",
+        "transition_am": "አንድ አጋር ብቻ ፍቺን ሲጠይቅ...",
+        "summary_keyword_am": "የማይመለስ መፍረስ"
+      },
+      "query_type": "Boolean/Date",
+      "question_am": "ባለትዳሮቹ በጉዳዩ ላይ አለመግባባት ካላቸው፣ ከስድስት ወር በላይ ተለያይተው ኖረዋል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 105(1)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "DIVORCE_PATHWAY"
+    },
+    {
+      "facet_id": "FL-11-F03",
+      "legal_concept_en": "Serious Injury to the Petitioner",
+      "rhetoric": {
+        "intro_am": "ከተለያየ ጊዜ ውጭ፣ አጣዳፊ ምክንያቶች...",
+        "transition_am": "ይህም የአካላዊ ወይም የሞራል ጉዳትን ይጨምራል...",
+        "summary_keyword_am": "ከባድ ጉዳት"
+      },
+      "query_type": "Boolean/Witness",
+      "question_am": "አንድ የትዳር አጋር በሌላኛው አጋር ድርጊት ምክንያት ከባድ የአካል ወይም የሞራል ጉዳት ደርሶበታል?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 105(2)", "source": "FL-R-001"}
+      ],
+      "mutex_group": "DIVORCE_PATHWAY"
+    },
+    {
+      "facet_id": "FL-11-F04",
+      "legal_concept_en": "Lack of Reconciliation Attempt by the Court",
+      "rhetoric": {
+        "intro_am": "ፍቺ ከመወሰኑ በፊት፣ ፍርድ ቤቱ...",
+        "transition_am": "ይህ የሕጉ አስገዳጅ እርምጃ ነው...",
+        "summary_keyword_am": "የዕርቅ ሙከራ"
+      },
+      "query_type": "Boolean/Judicial",
+      "question_am": "ፍርድ ቤቱ ባለትዳሮቹ እንዲታረቁ ለማድረግ ሙከራ አድርጎ አልተሳካም ወይ?",
+      "grounding_nodes": [
+        {"ref_id": "Art. 106", "source": "FL-R-001"}
+      ],
+      "mutex_group": "PROCEDURAL_REQUIREMENT"
+    }
+  ]
+}

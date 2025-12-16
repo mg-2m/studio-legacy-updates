@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import type { AppState, Party, Relief, Fact } from '@/lib/types';
@@ -15,19 +14,14 @@ const toAmharicWords = (num: number): string => {
             20: 'ሃያ', 30: 'ሰላሳ', 40: 'አርባ', 50: 'ሃምሳ', 60: 'ስልሳ', 
             70: 'ሰባ', 80: 'ሰማንያ', 90: 'ዘጠና', 100: 'መቶ', 1000: 'ሺህ'
         };
-        // This is an overly simplified conversion and will not work for complex numbers.
-        // It's a placeholder to avoid English output.
-        // A proper library or more complex function is needed for production.
         if (num in amharicNumerals) {
             return amharicNumerals[num as keyof typeof amharicNumerals];
         }
-        // Fallback for demonstration
-        return toWords(num).replace(/[\w\s-]+/g, ''); // Return empty string for non-trivial numbers to avoid English
+        return toWords(num).replace(/[\w\s-]+/g, ''); 
     } catch {
-        return ""; // Return empty string on error
+        return "";
     }
 };
-
 
 const formatFactPlaceholders = (text: string, values: { [key: string]: any }): string => {
   let formattedText = text;
@@ -35,7 +29,11 @@ const formatFactPlaceholders = (text: string, values: { [key: string]: any }): s
 
   formattedText = formattedText.replace(regex, (match, key) => {
     const value = values[key.trim()];
-    return `<strong><u>${value || '______'}</u></strong>`;
+    if (value) {
+      return `<span class="font-bold text-blue-600">${value}</span>`;
+    } else {
+      return `<span class="font-bold text-blue-600">______</span>`;
+    }
   });
   return formattedText;
 };
@@ -46,7 +44,7 @@ const composeNarrative = (facts: Fact[]): string => {
     return `<li class="text-gray-500 italic">Select facts from the editor to build the narrative...</li>`;
   }
 
-  const groupedFacts: { [key: string]: Fact[] } = facts.reduce((acc, fact) => {
+  const groupedFacts: { [key: string]: Fact[] } = facts.reduce((acc: { [key: string]: Fact[] }, fact: Fact) => {
     const key = fact.label || 'Ungrouped Facts';
     if (!acc[key]) {
       acc[key] = [];
@@ -60,8 +58,6 @@ const composeNarrative = (facts: Fact[]): string => {
     factGroup.forEach((fact, index) => {
       let sentence = formatFactPlaceholders(fact.legalText, fact.values);
       
-      // Removed bracketed citation rendering per user request
-      
       let connector = '';
       if (index === 0) {
         connector = fact.rhetoric?.intro || '';
@@ -74,7 +70,7 @@ const composeNarrative = (facts: Fact[]): string => {
     return paragraph.trim();
   });
 
-  return narrativeParts.map(p => `<li class="mb-2 text-justify">${p}</li>`).join('');
+  return narrativeParts.map((p: string) => `<li class="mb-2 text-justify">${p}</li>`).join('');
 };
 
 
@@ -89,13 +85,13 @@ export default function PageOne({ state }: { state: AppState }) {
   const { documentTitle, jurisdictionText } = currentTemplateData;
 
 
-  const summonsMap = {
+  const summonsMap: { [key: string]: string } = {
     self: 'መጥሪያውን በራሴ አደርሳለው፡፡',
     police: 'መጥሪያውን በፖሊስ እንዲደርስልኝ እጠይቃለሁ፡፡',
     post: 'መጥሪያውን በፖስታ እንዲላክልኝ እጠይቃለሁ፡፡',
   };
 
-  const repMap = {
+  const repMap: { [key: string]: string } = {
     self: 'ራሴ በመቅረብ ነው፡፡',
     lawyer: 'በጠበቃዬ አማካይነት ነው፡፡',
     both: 'በራሴ እና በጠበቃዬ ነው፡፡',
@@ -178,7 +174,7 @@ export default function PageOne({ state }: { state: AppState }) {
     : 'የቀረቡት ምክንያቶች';
   
   const renderSubjectOfClaim = () => {
-    const purpose = meta.claimPurpose || currentTemplateData.meta?.purpose;
+    const purpose = meta.claimPurpose || (currentTemplateData.meta && currentTemplateData.meta.purpose);
     const allCalcValues = Object.values(calculations).reduce((acc, curr) => ({ ...acc, ...curr }), {});
     
     let valueText = '(በብር ****** ግምት የቀረበ ክስ ነው)';
@@ -302,7 +298,7 @@ export default function PageOne({ state }: { state: AppState }) {
           </p>
           <ol className="list-decimal ml-5">
              {selectedReliefs
-                .filter(item => !(item.id === 'relief_child_support' && !maintenance.active))
+                .filter((item: Relief) => !(item.id === 'relief_child_support' && !maintenance.active))
                 .map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: formatReliefText(item) }} />)}
           </ol>
         </div>

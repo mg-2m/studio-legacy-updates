@@ -3,5 +3,5 @@
     "geminicodeassist.codeGenerationPaneViewEnabled": true,
     "geminicodeassist.agentDebugMode": true,
     "IDX.aI.showChatInEditorTab": false,
-    "IDX.agenticWorkspace": false
+    "IDX.agenticWorkspace": true
 }

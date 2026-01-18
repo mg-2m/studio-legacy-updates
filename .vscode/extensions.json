@@ -1,6 +1,6 @@
 {
     "recommendations": [
-        "google.geminicodeassist",
-        "timsexperiments.vscode-tailwindcss"
+        "timsexperiments.vscode-tailwindcss",
+        "google.gemini-cli-vscode-ide-companion"
     ]
 }

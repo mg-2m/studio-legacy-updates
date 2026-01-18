@@ -12,8 +12,10 @@ import { useFirebase } from '@/firebase';
 
 
 import { MainLayout } from '@/components/main-layout';
+import LandingPage from '@/components/landing-page';
 
 type Action =
+  | { type: 'RESET_TO_LANDING_PAGE' } 
   | { type: 'UPDATE_METADATA'; payload: { key: string; value: any } }
   | { type: 'ADD_PARTY'; payload: { role: 'applicants' | 'respondents' } }
   | { type: 'REMOVE_PARTY'; payload: { role: 'applicants' | 'respondents'; id: string } }
@@ -80,6 +82,9 @@ function executeFormula(formula: string, data: { [key: string]: any }): any {
 
 function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
+    case 'RESET_TO_LANDING_PAGE':
+      return INITIAL_STATE;
+
     case 'UPDATE_METADATA':
       return { ...state, metadata: { ...state.metadata, [action.payload.key]: action.payload.value } };
     
@@ -490,11 +495,17 @@ export default function Home() {
   const { user, isUserLoading } = useFirebase();
 
   useEffect(() => {
-    setIsClient(true);
-    if (!isUserLoading && user) {
-        console.log('Firebase connection successful, user ID:', user.uid);
-    }
-  }, [user, isUserLoading]);
+      setIsClient(true);
+      dispatch({ type: 'RESET_TO_LANDING_PAGE' });
+  }, []);
+
+
+  const handleGetStarted = useCallback(() => {
+    dispatch({
+        type: 'SET_SELECTED_SUB_TEMPLATE',
+        payload: { templateId: 'contract_law', subTemplateId: 'contract_debt_recovery' }
+    });
+  }, []);
 
   const { selectedFacts } = state;
 
@@ -577,6 +588,10 @@ export default function Home() {
 
   if (!isClient) {
     return null; // Or a loading spinner
+  }
+
+  if (!state.selectedSubTemplate) {
+    return <LandingPage onGetStarted={handleGetStarted} />;
   }
 
   return (

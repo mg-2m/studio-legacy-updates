@@ -1,27 +1,37 @@
-
-// This file would contain your client-side Firebase configuration.
-// IMPORTANT: For security reasons, environment variables should be used to store these keys.
-// They are hardcoded here only for the purpose of this MVP demonstration.
-
-import { initializeApp, getApps } from "firebase/app";
-import { getFunctions } from "firebase/functions";
+import { initializeApp, getApps, getApp } from 'firebase/app';
+import { getAuth, connectAuthEmulator } from 'firebase/auth';
+import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
+import { getStorage, connectStorageEmulator } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB...", // Replace with your actual config
-  authDomain: "your-project-id.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project-id.appspot.com",
-  messagingSenderId: "...",
-  appId: "...",
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
-let app;
-if (!getApps().length) {
-  app = initializeApp(firebaseConfig);
-} else {
-  app = getApps()[0];
+function initializeServices() {
+    const isConfigured = getApps().length > 0;
+    const app = isConfigured ? getApp() : initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const firestore = getFirestore(app);
+    const storage = getStorage(app);
+
+    if (process.env.NODE_ENV === 'development' && !globalThis.emulatorLoaded) {
+        try {
+            console.log('Connecting to Firebase emulators');
+            connectAuthEmulator(auth, 'http://localhost:9099');
+            connectFirestoreEmulator(firestore, 'localhost', 8080);
+            connectStorageEmulator(storage, 'localhost', 9199);
+            globalThis.emulatorLoaded = true;
+        } catch (error) {
+            console.error('Error connecting to Firebase emulators:', error);
+        }
+    }
+
+    return { app, auth, firestore, storage, isConfigured };
 }
 
-export const functions = getFunctions(app);
-export default app;
+export const { app, auth, firestore, storage, isConfigured } = initializeServices();

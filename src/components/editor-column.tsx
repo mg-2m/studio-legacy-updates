@@ -75,9 +75,9 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
     const Icon = selectedSubTemplate?.icon;
 
   return (
-    <section 
+    <div
       id="editor-col"
-      className="no-print relative flex flex-col bg-card border-r w-full h-full overflow-hidden"
+      className="no-print relative flex flex-col bg-card border-r h-full overflow-hidden"
     >
       <div className="flex h-14 shrink-0 items-center gap-2 p-2 border-b">
         {selectedTemplate && selectedSubTemplate && Icon && (
@@ -120,6 +120,6 @@ export default function EditorColumn({ state, dispatch }: EditorColumnProps) {
           </div>
         </ScrollArea>
       </Tabs>
-    </section>
+    </div>
   );
 }

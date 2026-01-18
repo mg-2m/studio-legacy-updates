@@ -1,8 +1,11 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
-import {Toaster} from '@/components/ui/toaster';
+import { Toaster } from '@/components/ui/toaster';
 import { Inter } from 'next/font/google';
 import { FirebaseClientProvider } from '@/firebase';
+
+import { SidebarProvider } from '@/components/ui/sidebar';
+import { EditorSidebarProvider } from '@/components/ui/editor-sidebar';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -27,7 +30,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <FirebaseClientProvider>
-            {children}
+          {children}
         </FirebaseClientProvider>
         <Toaster />
       </body>

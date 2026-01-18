@@ -1,114 +1,113 @@
 
-
-import type { AppState, Template, Relief, Fact, PartyTitles, EvidenceRegistry, TemplateData, Calculation } from "./types";
-import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning, FileMinus, FilePlus, UserMinus } from 'lucide-react';
+import type { AppState, Template, Relief, Fact, EvidenceRegistry, TemplateData } from "./types";
+import { FileText, Briefcase, Handshake, Shield, Landmark, FileSignature, BookUser, Home, Building2, ShieldAlert, Receipt, Banknote, HeartPulse, Scale, FileX2, Gavel, Users, Map, Brain, UserCheck, LandmarkIcon, Siren, ShieldCheck, FileWarning, BadgeCheck, MessageSquareWarning, FileMinus, UserMinus } from 'lucide-react';
 import { differenceInDays, parseISO } from 'date-fns';
 
 
 // Import the raw JSON data from the new modular files
-import * as baseData from '@/legal_branches/_base.json';
-import * as kbSchema from '@/legal_branches/_kb_schema.json';
+import baseData from '@/legal_branches/_base.json';
+import kbSchema from '@/legal_branches/_kb_schema.json';
 
 // Import individual succession law templates
-import * as succession_heirship_declaration from '@/legal_branches/succession_law/succession_heirship_declaration.json';
-import * as succession_probate_will from '@/legal_branches/succession_law/succession_probate_will.json';
-import * as succession_partition_estate from '@/legal_branches/succession_law/succession_partition_estate.json';
+import succession_heirship_declaration from '@/legal_branches/succession_law/succession_heirship_declaration.json';
+import succession_probate_will from '@/legal_branches/succession_law/succession_probate_will.json';
+import succession_partition_estate from '@/legal_branches/succession_law/succession_partition_estate.json';
 
 
 // Import individual public service law templates
-import * as pub_serv_disciplinary_appeal from '@/legal_branches/public_service_law/pub_serv_disciplinary_appeal.json';
-import * as pub_serv_termination_unlawful from '@/legal_branches/public_service_law/pub_serv_termination_unlawful.json';
-import * as pub_serv_benefits_grievance from '@/legal_branches/public_service_law/pub_serv_benefits_grievance.json';
+import pub_serv_disciplinary_appeal from '@/legal_branches/public_service_law/pub_serv_disciplinary_appeal.json';
+import pub_serv_termination_unlawful from '@/legal_branches/public_service_law/pub_serv_termination_unlawful.json';
+import pub_serv_benefits_grievance from '@/legal_branches/public_service_law/pub_serv_benefits_grievance.json';
 
 
 // Import individual contract law templates
-import * as contract_debt_recovery from '@/legal_branches/contract_law/contract_debt_recovery.json';
-import * as contract_specific_performance from '@/legal_branches/contract_law/contract_specific_performance.json';
-import * as contract_termination_claim from '@/legal_branches/contract_law/contract_termination_claim.json';
-import * as app_attachment_before_judgment from '@/legal_branches/contract_law/app_attachment_before_judgment.json';
-import * as app_judgment_on_admission from '@/legal_branches/contract_law/app_judgment_on_admission.json';
+import contract_debt_recovery from '@/legal_branches/contract_law/contract_debt_recovery.json';
+import contract_specific_performance from '@/legal_branches/contract_law/contract_specific_performance.json';
+import contract_termination_claim from '@/legal_branches/contract_law/contract_termination_claim.json';
+import app_attachment_before_judgment from '@/legal_branches/contract_law/app_attachment_before_judgment.json';
+import app_judgment_on_admission from '@/legal_branches/contract_law/app_judgment_on_admission.json';
 
 
 // Import individual property law templates
-import * as prop_petitory_vindication from '@/legal_branches/property_and_land_law/prop_petitory_vindication.json';
-import * as prop_possessory_restoration from '@/legal_branches/property_and_land_law/prop_possessory_restoration.json';
-import * as prop_boundary_encroachment from '@/legal_branches/property_and_land_law/prop_boundary_encroachment.json';
-import * as property_nuisance_cessation from '@/legal_branches/property_and_land_law/property_nuisance_cessation.json';
-import * as property_servitude_right_of_way from '@/legal_branches/property_and_land_law/property_servitude_right_of_way.json';
-import * as property_possessory_disturbance from '@/legal_branches/property_and_land_law/property_possessory_disturbance.json';
-import * as app_stay_construction from '@/legal_branches/property_and_land_law/app_stay_construction.json';
-import * as app_local_inspection from '@/legal_branches/property_and_land_law/app_local_inspection.json';
-import * as app_servitude_temporary_passage from '@/legal_branches/property_and_land_law/app_servitude_temporary_passage.json';
+import prop_petitory_vindication from '@/legal_branches/property_and_land_law/prop_petitory_vindication.json';
+import prop_possessory_restoration from '@/legal_branches/property_and_land_law/prop_possessory_restoration.json';
+import prop_boundary_encroachment from '@/legal_branches/property_and_land_law/prop_boundary_encroachment.json';
+import property_nuisance_cessation from '@/legal_branches/property_and_land_law/property_nuisance_cessation.json';
+import property_servitude_right_of_way from '@/legal_branches/property_and_land_law/property_servitude_right_of_way.json';
+import property_possessory_disturbance from '@/legal_branches/property_and_land_law/property_possessory_disturbance.json';
+import app_stay_construction from '@/legal_branches/property_and_land_law/app_stay_construction.json';
+import app_local_inspection from '@/legal_branches/property_and_land_law/app_local_inspection.json';
+import app_servitude_temporary_passage from '@/legal_branches/property_and_land_law/app_servitude_temporary_passage.json';
 
 // Import individual family law templates
-import * as family_divorce_dispute from '@/legal_branches/family_law/family_divorce_dispute.json';
-import * as family_divorce_agreement from '@/legal_branches/family_law/family_divorce_agreement.json';
-import * as family_paternity_claim from '@/legal_branches/family_law/family_paternity_claim.json';
-import * as family_post_judgment_partition from '@/legal_branches/family_law/family_post_judgment_partition.json';
-import * as app_temporary_maintenance from '@/legal_branches/family_law/app_temporary_maintenance.json';
-import * as app_property_preservation from '@/legal_branches/family_law/app_property_preservation.json';
-import * as app_protective_order from '@/legal_branches/family_law/app_protective_order.json';
+import family_divorce_dispute from '@/legal_branches/family_law/family_divorce_dispute.json';
+import family_divorce_agreement from '@/legal_branches/family_law/family_divorce_agreement.json';
+import family_paternity_claim from '@/legal_branches/family_law/family_paternity_claim.json';
+import family_post_judgment_partition from '@/legal_branches/family_law/family_post_judgment_partition.json';
+import app_temporary_maintenance from '@/legal_branches/family_law/app_temporary_maintenance.json';
+import app_property_preservation from '@/legal_branches/family_law/app_property_preservation.json';
+import app_protective_order from '@/legal_branches/family_law/app_protective_order.json';
 
 // Import individual labour law templates
-import * as labour_unlawful_termination from '@/legal_branches/labour_law/labour_unlawful_termination.json';
-import * as labour_unpaid_wages from '@/legal_branches/labour_law/labour_unpaid_wages.json';
-import * as labour_employment_injury from '@/legal_branches/labour_law/employment_injury.json';
+import labour_unlawful_termination from '@/legal_branches/labour_law/labour_unlawful_termination.json';
+import labour_unpaid_wages from '@/legal_branches/labour_law/labour_unpaid_wages.json';
+import labour_employment_injury from '@/legal_branches/labour_law/employment_injury.json';
 
 // Import individual IP law templates
-import * as ip_trademark_infringement from '@/legal_branches/ip_law/ip_trademark_infringement.json';
-import * as ip_trademark_opposition from '@/legal_branches/ip_law/ip_trademark_opposition.json';
-import * as ip_patent_infringement from '@/legal_branches/ip_law/ip_patent_infringement.json';
-import * as ip_copyright_infringement from '@/legal_branches/ip_law/ip_copyright_infringement.json';
-import * as ip_moral_rights_violation from '@/legal_branches/ip_law/ip_moral_rights_violation.json';
-import * as app_ip_interlocutory_injunction from '@/legal_branches/ip_law/app_ip_interlocutory_injunction.json';
-import * as app_ip_anton_piller from '@/legal_branches/ip_law/app_ip_anton_piller.json';
+import ip_trademark_infringement from '@/legal_branches/ip_law/ip_trademark_infringement.json';
+import ip_trademark_opposition from '@/legal_branches/ip_law/ip_trademark_opposition.json';
+import ip_patent_infringement from '@/legal_branches/ip_law/ip_patent_infringement.json';
+import ip_copyright_infringement from '@/legal_branches/ip_law/ip_copyright_infringement.json';
+import ip_moral_rights_violation from '@/legal_branches/ip_law/ip_moral_rights_violation.json';
+import app_ip_interlocutory_injunction from '@/legal_branches/ip_law/app_ip_interlocutory_injunction.json';
+import app_ip_anton_piller from '@/legal_branches/ip_law/app_ip_anton_piller.json';
 
 // Import individual status law templates
-import * as status_judicial_interdiction from '@/legal_branches/status_law/status_judicial_interdiction.json';
-import * as status_name_change from '@/legal_branches/status_law/status_name_change.json';
-import * as status_birth_date_correction from '@/legal_branches/status_law/status_birth_date_correction.json';
-import * as status_double_record_correction from '@/legal_branches/status_law/status_double_record_correction.json';
-import * as status_ethiopian_descent_id from '@/legal_branches/status_law/status_ethiopian_descent_id.json';
-import * as status_declaration_of_absence from '@/legal_branches/status_law/status_declaration_of_absence.json';
-import * as app_status_provisional_curator from '@/legal_branches/status_law/app_status_provisional_curator.json';
-import * as app_status_lift_interdiction from '@/legal_branches/status_law/app_status_lift_interdiction.json';
+import status_judicial_interdiction from '@/legal_branches/status_law/status_judicial_interdiction.json';
+import status_name_change from '@/legal_branches/status_law/status_name_change.json';
+import status_birth_date_correction from '@/legal_branches/status_law/status_birth_date_correction.json';
+import status_double_record_correction from '@/legal_branches/status_law/status_double_record_correction.json';
+import status_ethiopian_descent_id from '@/legal_branches/status_law/status_ethiopian_descent_id.json';
+import status_declaration_of_absence from '@/legal_branches/status_law/status_declaration_of_absence.json';
+import app_status_provisional_curator from '@/legal_branches/status_law/app_status_provisional_curator.json';
+import app_status_lift_interdiction from '@/legal_branches/status_law/app_status_lift_interdiction.json';
 
 // Import individual tax & customs law templates
-import * as tax_objection_admin_review from '@/legal_branches/tax_customs_law/tax_objection_admin_review.json';
-import * as tax_appeal_ftac from '@/legal_branches/tax_customs_law/tax_appeal_ftac.json';
-import * as customs_claim_for_refund from '@/legal_branches/tax_customs_law/customs_claim_for_refund.json';
-import * as app_tax_stay_of_execution from '@/legal_branches/tax_customs_law/app_tax_stay_of_execution.json';
-import * as app_tax_adr_request from '@/legal_branches/tax_customs_law/app_tax_adr_request.json';
+import tax_objection_admin_review from '@/legal_branches/tax_customs_law/tax_objection_admin_review.json';
+import tax_appeal_ftac from '@/legal_branches/tax_customs_law/tax_appeal_ftac.json';
+import customs_claim_for_refund from '@/legal_branches/tax_customs_law/customs_claim_for_refund.json';
+import app_tax_stay_of_execution from '@/legal_branches/tax_customs_law/app_tax_stay_of_execution.json';
+import app_tax_adr_request from '@/legal_branches/tax_customs_law/app_tax_adr_request.json';
 
 // Import individual tort law templates
-import * as tort_general_negligence_claim from '@/legal_branches/tort_law/tort_general_negligence_claim.json';
-import * as tort_strict_liability_buildings from '@/legal_branches/tort_law/tort_strict_liability_buildings.json';
+import tort_general_negligence_claim from '@/legal_branches/tort_law/tort_general_negligence_claim.json';
+import tort_strict_liability_buildings from '@/legal_branches/tort_law/tort_strict_liability_buildings.json';
 
 // Import individual administrative law templates
-import * as admin_appeal_judicial_review from '@/legal_branches/administrative_law/admin_appeal_judicial_review.json';
-import * as admin_review_directive_legality from '@/legal_branches/administrative_law/admin_review_directive_legality.json';
+import admin_appeal_judicial_review from '@/legal_branches/administrative_law/admin_appeal_judicial_review.json';
+import admin_review_directive_legality from '@/legal_branches/administrative_law/admin_review_directive_legality.json';
 
 // Import individual commercial law templates
-import * as comm_restitution_nonpayment from '@/legal_branches/commercial_law/comm_restitution_nonpayment.json';
-import * as comm_preventive_restructuring from '@/legal_branches/commercial_law/comm_preventive_restructuring.json';
-import * as comm_dissolution_by_court from '@/legal_branches/commercial_law/comm_dissolution_by_court.json';
-import * as comm_appoint_auditors from '@/legal_branches/commercial_law/comm_appoint_auditors.json';
+import comm_restitution_nonpayment from '@/legal_branches/commercial_law/comm_restitution_nonpayment.json';
+import comm_preventive_restructuring from '@/legal_branches/commercial_law/comm_preventive_restructuring.json';
+import comm_dissolution_by_court from '@/legal_branches/commercial_law/comm_dissolution_by_court.json';
+import comm_appoint_auditors from '@/legal_branches/commercial_law/comm_appoint_auditors.json';
 
 // Import individual criminal law defences templates
-import * as crim_defence_justification_self_defence from '@/legal_branches/criminal_law_defences/crim_defence_justification_self_defence.json';
-import * as crim_defence_excuse_insanity from '@/legal_branches/criminal_law_defences/crim_defence_excuse_insanity.json';
-import * as crim_defence_justification_necessity from '@/legal_branches/criminal_law_defences/crim_defence_justification_necessity.json';
-import * as crim_defence_mitigation_plea from '@/legal_branches/criminal_law_defences/crim_defence_mitigation_plea.json';
-import * as crim_objection_preliminary from '@/legal_branches/criminal_law_defences/crim_objection_preliminary.json';
+import crim_defence_justification_self_defence from '@/legal_branches/criminal_law_defences/crim_defence_justification_self_defence.json';
+import crim_defence_excuse_insanity from '@/legal_branches/criminal_law_defences/crim_defence_excuse_insanity.json';
+import crim_defence_justification_necessity from '@/legal_branches/criminal_law_defences/crim_defence_justification_necessity.json';
+import crim_defence_mitigation_plea from '@/legal_branches/criminal_law_defences/crim_defence_mitigation_plea.json';
+import crim_objection_preliminary from '@/legal_branches/criminal_law_defences/crim_objection_preliminary.json';
 
 // Import individual civil procedure templates
-import * as civ_proc_amendment_of_pleading from '@/legal_branches/civil_procedure_adjudications/civ_proc_amendment_of_pleading.json';
-import * as civ_proc_intervention_by_third_party from '@/legal_branches/civil_procedure_adjudications/civ_proc_intervention_by_third_party.json';
-import * as civ_proc_joinder_of_third_party from '@/legal_branches/civil_procedure_adjudications/civ_proc_joinder_of_third_party.json';
-import * as civ_proc_judgment_objection_default from '@/legal_branches/civil_procedure_adjudications/civ_proc_judgment_objection_default.json';
-import * as civ_proc_review_of_judgment from '@/legal_branches/civil_procedure_adjudications/civ_proc_review_of_judgment.json';
-import * as succ_app_appoint_liquidator from '@/legal_branches/civil_procedure_adjudications/succ_app_appoint_liquidator.json';
-import * as succ_app_seal_estate from '@/legal_branches/civil_procedure_adjudications/succ_app_seal_estate.json';
+import civ_proc_amendment_of_pleading from '@/legal_branches/civil_procedure_adjudications/civ_proc_amendment_of_pleading.json';
+import civ_proc_intervention_by_third_party from '@/legal_branches/civil_procedure_adjudications/civ_proc_intervention_by_third_party.json';
+import civ_proc_joinder_of_third_party from '@/legal_branches/civil_procedure_adjudications/civ_proc_joinder_of_third_party.json';
+import civ_proc_judgment_objection_default from '@/legal_branches/civil_procedure_adjudications/civ_proc_judgment_objection_default.json';
+import civ_proc_review_of_judgment from '@/legal_branches/civil_procedure_adjudications/civ_proc_review_of_judgment.json';
+import succ_app_appoint_liquidator from '@/legal_branches/civil_procedure_adjudications/succ_app_appoint_liquidator.json';
+import succ_app_seal_estate from '@/legal_branches/civil_procedure_adjudications/succ_app_seal_estate.json';
 
 
 const contractLawTemplates = {
@@ -246,7 +245,7 @@ const allEntities = {
 };
 
 // Formula Execution
-function executeFormula(formula: string, data: { [key: string]: any }): any {
+export function executeFormula(formula: string, data: { [key: string]: any }): any {
     const context = {
         ...data,
         differenceInDays: (date1: Date, date2: string | Date) => {

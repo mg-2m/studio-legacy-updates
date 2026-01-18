@@ -1,0 +1,108 @@
+mutation SeedDatabase @transaction @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  user_insertMany(data: [
+    {
+      id: "672a3a3e-90fd-40c5-bb0d-830a287d9345",
+      displayName: "Test User 1",
+      createdAt: "2024-04-26T12:00:00Z",
+      email: "test1@example.com",
+      photoUrl: "http://example.com/photo1.jpg"
+    },
+    {
+      id: "9b1deb4d-3bdd-4bdb-9bdd-2b0d7b3dcb6d",
+      displayName: "Test User 2",
+      createdAt: "2024-04-27T12:00:00Z",
+      email: "test2@example.com",
+      photoUrl: "http://example.com/photo2.jpg"
+    }
+  ])
+  movie_insertMany(data: [
+    {
+      id: "a1b2c3d4-e5f6-4789-90ab-cdef01234567",
+      title: "Inception",
+      year: 2010,
+      createdAt: "2024-04-26T12:00:00Z",
+      genres: ["sci-fi", "action"],
+      runtimeMinutes: 148,
+      summary: "A thief who steals corporate secrets..."
+    },
+    {
+      id: "bc4a5ef6-7890-4123-b456-7def89012345",
+      title: "The Matrix",
+      year: 1999,
+      createdAt: "2024-04-27T12:00:00Z",
+      genres: ["sci-fi", "action"],
+      runtimeMinutes: 136,
+      summary: "A computer hacker learns from mysterious rebels..."
+    }
+  ])
+  movieList_insertMany(data: [
+    {
+      id: "de5f6ab7-8901-4c23-d5e6-f78901234567",
+      name: "My Sci-Fi List",
+      createdAt: "2024-04-26T12:00:00Z",
+      updatedAt: "2024-04-26T13:00:00Z",
+      description: "A list of my favorite sci-fi movies.",
+      isPublic: true,
+      userId: "672a3a3e-90fd-40c5-bb0d-830a287d9345"
+    },
+    {
+      id: "ef67a8bc-9012-4def-9abc-def012345678",
+      name: "Action Movies",
+      createdAt: "2024-04-27T12:00:00Z",
+      updatedAt: "2024-04-27T14:00:00Z",
+      description: "A list of great action movies.",
+      isPublic: true,
+      userId: "9b1deb4d-3bdd-4bdb-9bdd-2b0d7b3dcb6d"
+    }
+  ])
+  movieListEntry_insertMany(data: [
+    {
+      movieListId: "de5f6ab7-8901-4c23-d5e6-f78901234567",
+      movieId: "a1b2c3d4-e5f6-4789-90ab-cdef01234567",
+      position: 1
+    },
+    {
+      movieListId: "ef67a8bc-9012-4def-9abc-def012345678",
+      movieId: "bc4a5ef6-7890-4123-b456-7def89012345",
+      position: 1
+    }
+  ])
+  watch_insertMany(data: [
+    {
+      id: "123e4567-e89b-12d3-a456-426614174000",
+      userId: "672a3a3e-90fd-40c5-bb0d-830a287d9345",
+      movieId: "a1b2c3d4-e5f6-4789-90ab-cdef01234567",
+      createdAt: "2024-04-28T12:00:00Z",
+      watchDate: "2024-04-28",
+      location: "Home"
+    },
+    {
+      id: "5491f625-c3ff-47ac-8321-1a844961b372",
+      userId: "9b1deb4d-3bdd-4bdb-9bdd-2b0d7b3dcb6d",
+      movieId: "bc4a5ef6-7890-4123-b456-7def89012345",
+      createdAt: "2024-04-29T12:00:00Z",
+      watchDate: "2024-04-29",
+      location: "Cinema"
+    }
+  ])
+  review_insertMany(data: [
+    {
+      id: "4304399e-a131-4e5e-9d6a-882f1a99b727",
+      watchId: "123e4567-e89b-12d3-a456-426614174000",
+      createdAt: "2024-04-28T13:00:00Z",
+      updatedAt: "2024-04-28T13:30:00Z",
+      isPublic: true,
+      rating: 5,
+      text: "Great movie!"
+    },
+    {
+      id: "53c40451-c020-4ea8-a3f0-321522252d9f",
+      watchId: "5491f625-c3ff-47ac-8321-1a844961b372",
+      createdAt: "2024-04-29T13:00:00Z",
+      updatedAt: "2024-04-29T13:30:00Z",
+      isPublic: true,
+      rating: 4,
+      text: "Good movie!"
+    }
+  ])
+}

@@ -29,12 +29,17 @@ const nextConfig = {
       },
     ],
   },
-};
-
-module.exports = {
   experimental: {
     allowedDevOrigins: [
       "https://*.cloudworkstations.dev"
     ]
-  }
-}
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...config.externals, "require-in-the-middle"];
+    }
+    return config;
+  },
+};
+
+module.exports = nextConfig;

@@ -1,0 +1,20 @@
+{
+    "hosting": {
+      "public": "web-dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    "emulators": {
+      "hosting": {
+        "port": 9003,
+        "host": "127.0.0.1"
+      }
+    },
+    "firestore": {
+      "rules": "firestore.rules"
+    }
+  }
+  

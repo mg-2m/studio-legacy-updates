@@ -7,6 +7,8 @@ import type { AppState } from '@/lib/types';
 import { EditorSidebarTrigger } from '../ui/editor-sidebar';
 import { SidebarTrigger } from '../ui/sidebar';
 import { ScrollArea } from '../ui/scroll-area';
+import { PreviewSidebar, PreviewSidebarTrigger } from '../ui/preview-sidebar';
+import DocumentOutline from './document-outline';
 
 interface PreviewColumnProps {
   state: AppState;
@@ -21,16 +23,26 @@ export default function PreviewColumn({ state }: PreviewColumnProps) {
         <EditorSidebarTrigger />
         <div className="ml-auto">
           {/* Other preview header controls can go here */}
+          <PreviewSidebarTrigger />
         </div>
       </div>
-      
-      {/* SCROLLABLE CONTENT: This ScrollArea will take up the remaining vertical space. */}
-      <ScrollArea className="flex-1">
-          <div className="p-5 flex flex-col items-center">
-            <PageOne state={state} />
-            <PageTwo state={state} />
-          </div>
-      </ScrollArea>
+
+        <div className="flex flex-1 overflow-hidden">
+            {/* This div is the main content area that will take up the remaining space */}
+            <div className="flex-1 overflow-auto">
+                <ScrollArea className="h-full">
+                    <div className="p-5 flex flex-col items-center">
+                    <PageOne state={state} />
+                    <PageTwo state={state} />
+                    </div>
+                </ScrollArea>
+            </div>
+            <PreviewSidebar>
+                <DocumentOutline />
+            </PreviewSidebar>
+        </div>
+
+
     </section>
   );
 }

@@ -18,6 +18,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarRail,
 } from '@/components/ui/sidebar';
 
 interface AppSidebarProps {
@@ -32,7 +33,8 @@ export default function AppSidebar({ selectedTemplate, selectedSubTemplate, disp
   };
 
   return (
-    <Sidebar>
+    <Sidebar collapsible="icon" variant="sidebar">
+      <SidebarRail />
       <SidebarHeader>
         <div className="flex items-center gap-2">
           <Scale className="size-5 text-accent" />

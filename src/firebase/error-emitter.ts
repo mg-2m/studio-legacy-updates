@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { FirestorePermissionError } from '@/firebase/errors';
 
 /**
@@ -9,8 +9,9 @@ export interface AppEvents {
   'permission-error': FirestorePermissionError;
 }
 
-// A generic type for a callback function.
-type Callback<T> = (data: T) => void;
+// A generic type for a callback function. Prefix the parameter with an underscore
+// to indicate it's a typed parameter that may not be referenced directly.
+type Callback<T> = (_data: T) => void;
 
 /**
  * A strongly-typed pub/sub event emitter.

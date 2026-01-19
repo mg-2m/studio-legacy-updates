@@ -29,11 +29,6 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    allowedDevOrigins: [
-      "https://*.cloudworkstations.dev"
-    ]
-  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.externals = [...config.externals, "require-in-the-middle"];

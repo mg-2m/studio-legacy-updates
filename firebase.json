@@ -11,10 +11,13 @@
       "hosting": {
         "port": 9003,
         "host": "127.0.0.1"
+      },
+      "firestore": {
+        "port": 9004,
+        "host": "127.0.0.1"
       }
     },
     "firestore": {
       "rules": "firestore.rules"
     }
   }
-  

@@ -23,7 +23,7 @@ function initializeServices() {
         try {
             console.log('Connecting to Firebase emulators');
             connectAuthEmulator(auth, 'http://localhost:9099');
-            connectFirestoreEmulator(firestore, 'localhost', 8080);
+            connectFirestoreEmulator(firestore, 'localhost', 9004);
             connectStorageEmulator(storage, 'localhost', 9199);
             globalThis.emulatorLoaded = true;
         } catch (error) {

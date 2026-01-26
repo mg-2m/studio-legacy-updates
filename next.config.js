@@ -30,6 +30,12 @@ const nextConfig = {
     ],
   },
   webpack: (config, { isServer }) => {
+    const path = require('path');
+    // Ensure '@' resolves to the src directory for imports like '@/firebase'
+    config.resolve = config.resolve || {};
+    config.resolve.alias = config.resolve.alias || {};
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+
     if (isServer) {
       config.externals = [...config.externals, "require-in-the-middle"];
     }

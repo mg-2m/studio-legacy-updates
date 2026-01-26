@@ -496,6 +496,7 @@ function appReducer(state: AppState, action: Action): AppState {
 export default function Home() {
   const [state, dispatch] = useReducer(appReducer, INITIAL_STATE);
   const [isClient, setIsClient] = React.useState(false);
+  const [showLanding, setShowLanding] = React.useState(true);
   const { toast } = useToast();
   const { user, isUserLoading } = useFirebase();
 
@@ -504,17 +505,17 @@ export default function Home() {
     if (!isUserLoading && user) {
       console.log('Firebase connection successful, user ID:', user.uid);
     }
+    // Ensure a template is selected on first client mount so editor/preview render
+    if (!state.selectedSubTemplate) {
+      const firstTemplate = TEMPLATES[0];
+      const firstSub = firstTemplate?.subTemplates?.[0]?.id;
+      if (firstTemplate && firstSub) {
+        dispatch({ type: 'SET_SELECTED_SUB_TEMPLATE', payload: { templateId: firstTemplate.id, subTemplateId: firstSub } });
+      }
+    }
   }, [user, isUserLoading]);
 
   const { selectedFacts } = state;
-
-  const handleGetStarted = () => {
-    const firstTemplate = TEMPLATES[0];
-    const firstSub = firstTemplate?.subTemplates?.[0]?.id;
-    if (firstTemplate && firstSub) {
-      dispatch({ type: 'SET_SELECTED_SUB_TEMPLATE', payload: { templateId: firstTemplate.id, subTemplateId: firstSub } });
-    }
-  }
 
   const handleSuggestEvidence = useCallback(async () => {
     // Get auto-linked evidence to pass to the AI, so it doesn't suggest them again.
@@ -597,8 +598,8 @@ export default function Home() {
     return null; // Or a loading spinner
   }
 
-  if (!state.selectedSubTemplate) {
-    return <LandingPage onGetStarted={handleGetStarted} />;
+  if (showLanding) {
+    return <LandingPage onGetStarted={() => setShowLanding(false)} />;
   }
 
   return (

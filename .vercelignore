@@ -1,0 +1,34 @@
+# Addis Crown V2: Vercel Ignore List
+# This prevents irrelevant local files from bloating the cloud deployment
+
+# 🚫 The Massive Knowledge Base (Stored in Supabase, not Vercel)
+**/legal_knowledge_base/**
+"**/all derive export/**"
+**/docx_texts/**
+**/data_ingestion/**
+
+# 🚫 Development & Environment
+.env
+.env.local
+vercel-login.txt
+vercel-list.txt
+sup-projects.txt
+verify_database.ts
+setup_telegram_portal.ts
+INGESTION_ENGINE_V2.ts
+GEP_V2_Transition_Plan.md
+AMBITION_OF_THE_CENTURY_BLUEPRINT.md
+MVP_Fullstack_Engineering_Mandate.md
+ADDIS_CROWN_REMEDIATION_PLAN.md
+
+# 🚫 Local Tooling
+.idx/
+.firebase/
+firebase/
+node_modules/
+
+# 🚫 Logs and Temps
+*-debug.log
+*.tsbuildinfo
+out/
+.next/

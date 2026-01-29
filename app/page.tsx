@@ -8,7 +8,7 @@ import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
 import { differenceInDays, parseISO } from 'date-fns';
-import { useFirebase } from '@/firebase';
+import { useFirebase } from '../src/firebase';
 
 
 import { MainLayout } from '@/components/main-layout';

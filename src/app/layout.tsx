@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Inter } from 'next/font/google';
-import { FirebaseClientProvider } from '@/firebase';
+import { FirebaseClientProvider } from '../firebase';
 
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { EditorSidebarProvider } from '@/components/ui/editor-sidebar';

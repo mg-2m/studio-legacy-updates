@@ -17,7 +17,7 @@ async function provideMaintenanceContext(input: any): Promise<{ context: string 
 }
 import { useToast } from '@/hooks/use-toast';
 import { differenceInDays, parseISO } from 'date-fns';
-import { useFirebase } from '@/firebase';
+import { useFirebase } from '../firebase';
 
 
 import { MainLayout } from '@/components/main-layout';

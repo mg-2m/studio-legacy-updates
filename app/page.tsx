@@ -1,4 +1,4 @@
-
+   
 "use client";
 
 import React, { useReducer, useEffect, useCallback } from 'react';
@@ -8,7 +8,7 @@ import { suggestEvidence } from '@/ai/flows/evidence-suggestion';
 import { provideMaintenanceContext } from '@/ai/flows/maintenance-calculator-assistance';
 import { useToast } from '@/hooks/use-toast';
 import { differenceInDays, parseISO } from 'date-fns';
-import { useFirebase } from '../src/firebase';
+import { useFirebase } from '@/firebase';
 
 
 import { MainLayout } from '@/components/main-layout';

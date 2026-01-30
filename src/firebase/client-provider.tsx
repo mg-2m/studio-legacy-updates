@@ -1,17 +1,35 @@
-import React, { useMemo, type ReactNode } from 'react';
+"use client";
+
+import React, { useMemo, useEffect, useState, type ReactNode } from 'react';
 import { FirebaseProvider } from '@/firebase/provider';
-import { app, auth, firestore } from '@/lib/firebase'; // Corrected import
+import { initializeIfNeeded, app, auth, firestore } from '@/lib/firebase'; // Corrected import
 
 interface FirebaseClientProviderProps {
   children: ReactNode;
 }
 
 export function FirebaseClientProvider({ children }: FirebaseClientProviderProps) {
-  // The firebase services are already initialized in @/lib/firebase.ts
-  // We just need to provide them to the rest of the application.
+  const [initialized, setInitialized] = useState(false);
+
+  useEffect(() => {
+    let mounted = true;
+    initializeIfNeeded()
+      .then(() => {
+        if (mounted) setInitialized(true);
+      })
+      .catch(() => {
+        if (mounted) setInitialized(true); // allow app to continue even if init failed
+      });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const firebaseServices = useMemo(() => {
     return { firebaseApp: app, auth, firestore };
-  }, []);
+  }, [initialized]);
+
+  if (!initialized) return null;
 
   return (
     <FirebaseProvider

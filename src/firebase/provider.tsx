@@ -130,14 +130,13 @@ export const useFirebase = (): FirebaseServicesAndUser => {
     throw new Error('useFirebase must be used within a FirebaseProvider.');
   }
 
-  if (!context.areServicesAvailable || !context.firebaseApp || !context.firestore || !context.auth) {
-    throw new Error('Firebase core services not available. Check FirebaseProvider props.');
-  }
-
+  // If core services are not yet available (e.g. during prerender), do not throw.
+  // Return the context with nullable service fields and the `areServicesAvailable`
+  // flag so callers can handle the absence gracefully.
   return {
-    firebaseApp: context.firebaseApp,
-    firestore: context.firestore,
-    auth: context.auth,
+    firebaseApp: context.firebaseApp as any,
+    firestore: context.firestore as any,
+    auth: context.auth as any,
     user: context.user,
     isUserLoading: context.isUserLoading,
     userError: context.userError,

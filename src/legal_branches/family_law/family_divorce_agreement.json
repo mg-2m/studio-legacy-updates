@@ -1,0 +1,62 @@
+
+{
+  "id": "family_divorce_agreement",
+  "documentTitle": "በጋራ ስምምነት የፍቺ ማመልከቻ",
+  "jurisdictionText": "የተሻሻለው የቤተሰብ ሕግ አንቀጽ 77",
+  "meta": {
+    "keywords": ["divorce by agreement", "mutual consent", "feta besememenet", "የፍቺ ስምምነት"],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "በጋራ ስምምነት ፍቺ ለማጽደቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት ባልና ሚስት በጋራ በመስማማት ፍቺ ለመፈጸም ሲፈልጉ እና በንብረት ክፍፍል፣ በልጆች አስተዳደግ እና በቀለብ ጉዳዮች ላይ ስምምነት ላይ ሲደርሱ ያንን ስምምነት ለፍርድ ቤት አቅርበው ለማጽደቅ እና ጋብቻውን ለማፍረስ ይጠቅማል።\n\n### የዳኝነት ሥልጣን\nጉዳዩ የሚታየው ባልና ሚስቱ መጨረሻ ላይ አብረው በኖሩበት ቦታ ወይም የአንደኛው ወገን መኖሪያ በሆነበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n- የተሟላ ስምምነት፡ በሁሉም ጉዳዮች (ንብረት፣ ቀለብ፣ የልጆች አስተዳደግ) ላይ የተደረሰበት የጽሑፍ ስምምነት መኖር አለበት።\n\n### ማስረጃ\n- የጋብቻ ምስክር ወረቀት።\n- በሁለቱም ወገኖች የተፈረመ የፍቺ ስምምነት ሰነድ።",
+  "partyTitles": {
+    "applicant": "የመጀመሪያ አቤቱታ አቅራቢ",
+    "respondent": "ሁለተኛ አቤቱታ አቅራቢ"
+  },
+  "facts": [
+    {
+      "id": "fam_fact_mutual_agreement",
+      "label": "የስምምነት ዝርዝሮች",
+      "legalText": "ሁለቱም ወገኖች በፈቃደኝነት ጋብቻቸውን ለማፍረስ ተስማምተዋል።",
+      "citation": "RFC Art. 77",
+      "autoEvidence": [
+        "CertificateofMarriage"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የጋራ ስምምነት"
+      }
+    },
+    {
+      "id": "fam_fact_agreement_doc",
+      "label": "የስምምነት ውሎች",
+      "legalText": "ተዋዋይ ወገኖች የንብረት ክፍፍልን እና የልጆችን የማሳደግ መብትን በተመለከተ አጠቃላይ ስምምነት አዘጋጅተዋል።",
+      "citation": "RFC Art. 82",
+      "autoEvidence": [
+        "ListofCommonProperty"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "አጠቃላይ ስምምነት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "fam_relief_approve_agreement",
+      "text": "የፍቺውን ስምምነት በማጽደቅ ጋብቻውን የሚፈርስ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "con_relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

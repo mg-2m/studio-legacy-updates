@@ -1,0 +1,61 @@
+
+{
+  "id": "app_protective_order",
+  "documentTitle": "አስቸኳይ የመከላከያ ትዕዛዝ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 እና የወንጀል ሕግ ማጣቀሻዎች",
+  "meta": {
+    "keywords": ["protective order", "domestic violence", "restraining order", "የጥበቃ ትዕዛዝ", "የቤት ውስጥ ጥቃት"],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "አስቸኳይ ጥበቃ ለማግኘት"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት በሌላኛው የትዳር አጋር አካላዊ ወይም ሥነ-ልቦናዊ ጥቃት የሚደርስበት ወገን፣ ጥቃቱ እንዲቆም እና አጥፊው እንዲርቅ ፍርድ ቤት አስቸኳይ ትዕዛዝ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nጉዳዩ አስቸኳይ በመሆኑ በአቅራቢያ በሚገኝ ማንኛውም የመጀመሪያ ደረጃ ፍርድ ቤት ሊቀርብ ይችላል።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም፣ ነገር ግን ጥቃቱ እንደተፈጸመ ወዲያውኑ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\n- የፖሊስ ሪፖርት (PoliceReportDomesticViolence) ወይም የህክምና ማስረጃ ካለ ክሱን በእጅጉ ያጠናክረዋል።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "app_fact_imminent_danger",
+      "label": "ደህንነት እና ጉዳት",
+      "legalText": "አመልካቹ ከተጠሪው ወዲያውኑ አካላዊ አደጋ ይደርስበታል።",
+      "citation": "",
+      "autoEvidence": [
+        "PoliceReportDomesticViolence"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የአካል ጥቃት ስጋት"
+      }
+    },
+    {
+      "id": "app_fact_balance_convenience",
+      "label": "ደህንነት እና ጉዳት",
+      "legalText": "ትዕዛዙ ካልተሰጠ በአመልካቹ ላይ የሚደርሰው ጉዳት በተጠሪው ላይ ከሚደርሰው ማንኛውም ችግር ይበልጣል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የጉዳት ሚዛን"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_relief_vacate_home",
+      "text": "ተጠሪው የጋብቻ ቤቱን ለጊዜው እንዲለቅ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "app_relief_restrain_contact",
+      "text": "ተጠሪው ከአመልካቹ [distance] ሜትር ርቀት ውስጥ እንዳይመጣ የሚከለክል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

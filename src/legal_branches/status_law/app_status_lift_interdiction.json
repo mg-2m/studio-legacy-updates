@@ -1,0 +1,48 @@
+
+{
+  "id": "app_status_lift_interdiction",
+  "documentTitle": "የፍርድ እግድ እንዲነሳ አቤቱታ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 358",
+  "meta": {
+    "keywords": [
+      "lift interdiction",
+      "termination",
+      "regain capacity",
+      "የእግድ ማንሳት",
+      "ችሎታን መልሶ ማግኘት"
+    ],
+    "jurisdictionType": "Court that ordered the interdiction",
+    "purpose": "የፍርድ እግድ እንዲነሳ"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ቀደም ሲል በፍርድ ቤት ትዕዛዝ ქმედუუნაროდ የተባለ ሰው، የችግሩ መንስኤ ሲወገድ (ለምሳሌ ከህመም ሲያገግም)፣ እግዱ እንዲነሳለት እና ሙሉ ሕጋዊ ችሎታው እንዲመለስለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nእግዱን ያዘዘው ፍርድ ቤት ራሱ እግዱን የማንሳት ስልጣን አለው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ፡ የእግዱ መንስኤ መወገዱን የሚያረጋግጥ የህክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate)።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "app_status_fact_cause_ceased",
+      "label": "የምክንያት መቋረጥ",
+      "legalText": "እግዱን ያስከተለው የሕክምና/አካላዊ ሁኔታ ተወግዷል، እና የታገደው ሰው ችሎታውን መልሶ አግኝቷል።",
+      "citation": "Civ. Code Art. 358",
+      "autoEvidence": [
+        "MedicalBoardCertificate"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የእግድ ምክንያት መወገድ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_status_relief_terminate_interdiction",
+      "text": "የፍርድ እግዱን በማቋረጥ ለግለሰቡ ሙሉ ሕጋዊ ችሎታን የሚመልስ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

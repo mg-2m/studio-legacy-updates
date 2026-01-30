@@ -1,0 +1,95 @@
+
+{
+  "id": "tax_objection_admin_review",
+  "documentTitle": "የግብር ግምት መቃወሚያ ማስታወቂያ",
+  "jurisdictionText": "የፌደራል የግብር አስተዳደር አዋጅ ቁጥር ፱፻፹፫/፪ሺ፰፣ አንቀጽ ፶፬",
+  "meta": {
+    "keywords": [
+      "tax objection",
+      "assessment",
+      "Ministry of Revenue",
+      "MoR",
+      "የግብር መቃወሚያ",
+      "ግምት"
+    ],
+    "jurisdictionType": "Administrative (Ministry of Revenue)",
+    "purpose": "የግብር ግምት መቃወሚያ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት ከገቢዎች ሚኒስቴር የተላከልዎ የግብር ግምት ላይ ስህተት አለ ብለው ሲያምኑ፣ ለገቢዎች ሚኒስቴር ራሱ መቃወሚያዎን በይፋ ለማቅረብ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ መቃወሚያ የሚቀርበው ለፍርድ ቤት ሳይሆን፣ ግምቱን ላወጣው የገቢዎች ሚኒስቴር ቅርንጫፍ ጽ/ቤት ነው።\n\n### የጊዜ ገደብ\nየግብር ግምት ማስታወቂያው ከደረሰዎት ቀን ጀምሮ ባሉት ሃያ አንድ (21) ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 54(1))።\n\n### ቅድመ ሁኔታዎች\n- ማስረጃ (Required Evidence): መቃወሚያዎን የሚደግፉ ማናቸውም የሂሳብ መዝገቦች (AccountingRecords)፣ ደረሰኞች፣ ወይም የውጭ ኦዲት ሪፖርቶች (ExternalAuditReport)።",
+  "partyTitles": {
+    "applicant": "አመልካች (ግብር ከፋይ)",
+    "respondent": "መልስ ሰጪ (የገቢዎች ሚኒስቴር ቅርንጫፍ)"
+  },
+  "facts": [
+    {
+      "id": "tax_fact_assessment_received",
+      "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ)",
+      "legalText": "የግብር ግምት ማስታወቂያው በ [assessmentDate] ደርሶኛል።",
+      "citation": "FTAP Art. 54",
+      "autoEvidence": [
+        "TaxAssessmentNotice"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የግምት ደረሰኝ"
+      }
+    },
+    {
+      "id": "tax_fact_objection_timely",
+      "label": "የሥነ-ሥርዓት ተገዢነት (የጊዜ ገደብ)",
+      "legalText": "ይህ መቃወሚያ ማስታወቂያው ከደረሰኝ በ21 ቀናት ውስጥ ቀርቧል።",
+      "citation": "FTAP Art. 54(1)",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ወቅታዊ መቃወሚያ"
+      }
+    },
+    {
+      "id": "tax_fact_erroneous_income_calc",
+      "label": "የስህተት ምክንያቶች",
+      "legalText": "ገቢዎች ሚኒስቴር [specificDeductionOrExemption]ን ከግምት ባለማስገባቱ በስሌት ላይ ስህተት ሰርቷል።",
+      "autoEvidence": [
+        "AccountingRecords",
+        "ExternalAuditReport"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የስሌት ስህተት"
+      }
+    },
+    {
+      "id": "tax_fact_estimated_basis_wrong",
+      "label": "የስህተት ምክንያቶች",
+      "legalText": "ግምቱ በግምት ላይ የተመሰረተ ሲሆን፣ ትክክለኛው ጠቅላላ ገቢ በተያያዙት መዝገቦች ተረጋግጧል።",
+      "autoEvidence": [
+        "AccountingRecords"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተሳሳተ ግምት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "tax_relief_revoke_assessment",
+      "text": "የገቢዎች ሚኒስቴር የአሁኑን ግምት እንዲሽር ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "tax_relief_recalculate_tax",
+      "text": "ሚኒስቴሩ የግብር ግዴታውን ወደ [correctAmount] ብር እንደገና እንዲያሰላ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

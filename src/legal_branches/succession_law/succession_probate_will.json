@@ -1,0 +1,81 @@
+
+{
+  "id": "succession_probate_will",
+  "documentTitle": "የኑዛዜ ማጽደቅ ማመልከቻ (Application for Probate of Will)",
+  "jurisdictionText": "Art. 881 (Public), 885 (Holographic) of the Civil Code.",
+  "meta": {
+    "keywords": [
+      "will",
+      "probate",
+      "testament",
+      "ኑዛዜ",
+      "ማጽደቅ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance",
+    "purpose": "የኑዛዜ ማጽደቅ"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አብነት ሟቹ ሕጋዊ ኑዛዜ ትቶ ሲሄድ، ኑዛዜው የሟቹ የመጨረሻ ፍላጎት መሆኑን በፍርድ ቤት ለማረጋገጥ እና ለማጽደቅ ያገለግላል። ይህም በኑዛዜው የተጠቀሱት ፈጻሚዎች ወይም ተጠቃሚዎች ንብረቱን በኑዛዜው መሠረት እንዲያስተዳድሩ ያስችላቸዋል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው ሟቹ የመጨረሻ የመኖሪያ አድራሻ በነበረበት አካባቢ በሚገኘው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nኑዛዜን ለማስከበር ምንም የጊዜ ገደብ የለም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n**የግድ የሚያስፈልግ ማስረጃ**\nዋናው የኑዛዜ ሰነድ (WillTestament) እና የሟቹ የሞት ማረጋገጫ ወረቀት (DeathCertificate)።\n\n**ተጨማሪ ማስረጃ**\nኑዛዜው በሕዝብ ፊት የተደረገ ከሆነ፣ የምስክሮች መግለጫ።",
+  "partyTitles": {
+    "applicant": "አመልካች (ፈጻሚ/ተጠቃሚ) (Petitioner (Executor/Beneficiary))",
+    "respondent": "የለም (N/A)"
+  },
+  "facts": [
+    {
+      "id": "succession_fact_will_existence",
+      "label": "የኑዛዜ ሕጋዊነት (Validity of Will)",
+      "legalText": "ሟቹ በ [willDate] የተጻፈ ሕጋዊ ኑዛዜ ትቷል። (The Deceased left a valid will dated [willDate].)",
+      "citation": "Civ. Code Art. 912",
+      "autoEvidence": [
+        "WillTestament"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ሕጋዊ ኑዛዜ"
+      }
+    },
+    {
+      "id": "succession_fact_formality_public",
+      "label": "የኑዛዜ ሕጋዊነት (Validity of Will)",
+      "legalText": "ኑዛዜው በአራት ምስክሮች እና በሬጅስትራሩ ፊት ተነቧል። (The will was read in the presence of four witnesses and the Registrar.)",
+      "citation": "Civ. Code Art. 881",
+      "autoEvidence": [],
+      "mutexGroup": "will_type",
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የህዝብ ኑዛዜ"
+      }
+    },
+    {
+      "id": "succession_fact_formality_holographic",
+      "label": "የኑዛዜ ሕጋዊነት (Validity of Will)",
+      "legalText": "ኑዛዜው ሙሉ በሙሉ በሟቹ እጅ የተጻፈ، ቀን የተሰጠው እና የተፈረመ ነው። (The will is entirely written, dated, and signed by the hand of the deceased.)",
+      "citation": "Civ. Code Art. 885",
+      "autoEvidence": [],
+      "mutexGroup": "will_type",
+      "rhetoric": {
+        "intro": "በአማራጭ፣",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "በእጅ የተጻፈ ኑዛዜ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "succession_relief_validate_will",
+      "text": "ኑዛዜው ሕጋዊ እና የሟቹ እውነተኛ የመጨረሻ ፍላጎት መሆኑን የሚገልጽ ፍርድ እንዲሰጥ። (Judgment declaring the Will to be valid and the true last wish of the Deceased.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "succession_relief_appoint_executor",
+      "text": "አመልካቹን የኑዛዜው ፈጻሚ መሆኑን የሚያረጋግጥ ትዕዛዝ እንዲሰጥ። (Order confirming the Petitioner as the Executor of the will.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

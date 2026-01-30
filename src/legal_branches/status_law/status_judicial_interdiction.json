@@ -1,0 +1,81 @@
+
+{
+  "id": "status_judicial_interdiction",
+  "documentTitle": "የፍርድ እግድ እና የአስተዳዳሪ ሹመት አቤቱታ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 339",
+  "meta": {
+    "keywords": [
+      "interdiction",
+      "incapacity",
+      "curator",
+      "guardian",
+      "የፍርድ እግድ",
+      "አስተዳዳሪ"
+    ],
+    "jurisdictionType": "Court of the person's domicile",
+    "purpose": "የፍርድ እግድ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ አንድ ሰው በቋሚ የአእምሮ ሕመም ወይም በሌላ ምክንያት ጉዳዩን በራሱ መምራት በማይችልበት ጊዜ، በፍርድ ቤት ትዕዛዝ ከሕግ አንጻር ქმედუუნაროდ እንዲታወጅ እና ጉዳዩን የሚመራለት አስተዳዳሪ (Curator) እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ጉዳይ የሚታየው እግድ እንዲጣልበት የተጠየቀው ሰው በሚኖርበት አካባቢ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nየተወሰነ የይርጋ ጊዜ የለውም። ሰውየው ქმედუუნაროდ እስከሆነ ድረስ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nየሕክምና ማስረጃ፡ ግለሰቡ ጉዳዩን መምራት እንደማይችል የሚያረጋግጥ ከታወቀ የሕክምና ተቋም የተሰጠ የሕክምና ቦርድ ምስክር ወረቀት (MedicalBoardCertificate) ማቅረብ ክሱን በእጅጉ ያጠናክራል።\nጥቅም ያለው ወገን፡ አመልካቹ የቅርብ ዘመድ፣ የትዳር አጋር ወይም ሌላ ሕጋዊ ጥቅም ያለው ወገን መሆን አለበት።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ (ዘመድ/ጥቅም ያለው ወገን)",
+    "respondent": "እግድ እንዲጣልበት የተጠየቀው ሰው"
+  },
+  "facts": [
+    {
+      "id": "status_fact_incapacity_medical",
+      "label": "የችሎታ ማጣት",
+      "legalText": "ተጠሪው ጉዳዩን በራሱ መምራት እንዳይችል የሚያደርግ ቋሚ የአእምሮ ሕመም/አካል ጉዳት አለበት።",
+      "citation": "Civ. Code Art. 339",
+      "autoEvidence": [
+        "MedicalBoardCertificate"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የችሎታ ማጣት"
+      }
+    },
+    {
+      "id": "status_fact_risk_of_loss",
+      "label": "የችሎታ ማጣት",
+      "legalText": "የተጠሪው የችሎታ ማጣት ንብረቱን/መብቶቹን ለፈጣን ኪሳራ ወይም ብክነት ያጋልጣል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የንብረት መጥፋት ስጋት"
+      }
+    },
+    {
+      "id": "status_fact_relationship_claim",
+      "label": "አስፈላጊነት",
+      "legalText": "አቤቱታ አቅራቢው የተጠሪው የቅርብ ዘመድ ሲሆን ጉዳዮቹን ለመጠበቅ ሕጋዊ ጥቅም አለው።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ሕጋዊ ጥቅም"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "status_relief_declare_incapacity",
+      "text": "ተጠሪው በፍርድ ቤት የታገደ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "status_relief_appoint_curator",
+      "text": "አቤቱታ አቅራቢውን (ወይም ሌላ ተስማሚ ሰው) ለተጠሪው አስተዳዳሪ አድርጎ እንዲሾም ትዕዛዝ እንዲሰጥ።",
+      "citation": "Civ. Code Art. 343",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

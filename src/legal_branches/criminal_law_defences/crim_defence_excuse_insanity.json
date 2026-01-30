@@ -1,0 +1,91 @@
+
+{
+  "id": "crim_defence_excuse_insanity",
+  "documentTitle": "Plea of Excuse: Insanity / Non-Culpability (የማስተንፈሻ መቃወሚያ፡- የአእምሮ ሕመም/ተጠያቂነት አለመኖር)",
+  "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 50 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፶).",
+  "meta": {
+    "keywords": [
+      "insanity defense",
+      "non-culpability",
+      "mental illness",
+      "criminal law",
+      "የአእምሮ ሕመም",
+      "ተጠያቂነት የለም"
+    ],
+    "jurisdictionType": "Court seized of the criminal case"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር، ተከሳሹ ወንጀሉን በፈጸመበት ወቅት በነበረበት ከባድ የአእምሮ ሕመም ወይም የአእምሮ ዝግመት ምክንያት የድርጊቱን የወንጀልነት ባህሪ ለመረዳት ወይም ድርጊቱን ለመቆጣጠር ባለመቻሉ ተጠያቂ አይደለም ብሎ ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Core Legal Test\nበድርጊቱ ጊዜ የነበረ ከባድ የአእምሮ ሕመም እና የድርጊቱን ባህሪ ለመረዳት አለመቻል።\n### Required Evidence\nከተረጋገጠ የሕክምና ተቋም የተሰጠ የአእምሮ ሁኔታ ምርመራ ሪፖርት (MedicalCertificateMentalState) ወሳኝ ነው።",
+  "partyTitles": {
+    "applicant": "Defendant (ተከሳሽ)",
+    "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+  },
+  "facts": [
+    {
+      "id": "crim_fact_insane_incapable_understanding",
+      "label": "በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ",
+      "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of understanding the criminal nature of the act. (በድርጊቱ ጊዜ ተከሳሹ የድርጊቱን የወንጀልነት ባህሪ ለመረዳት በማይችል ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
+      "citation": "Crim. Code Art. 50(1)",
+      "autoEvidence": [
+        "MedicalCertificateMentalState"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የአእምሮ ሕመም"
+      }
+    },
+    {
+      "id": "crim_fact_insane_incapable_control",
+      "label": "በወንጀል ጊዜ የነበረው የአእምሮ ሁኔታ",
+      "legalText": "At the time of the act, the Defendant was suffering from severe mental disease or deficiency that rendered them incapable of controlling their conduct. (በድርጊቱ ጊዜ ተከሳሹ አካሄዱን መቆጣጠር በማይችልበት ደረጃ በከፍተኛ የአእምሮ ሕመም ይሠቃይ ነበር።)",
+      "citation": "Crim. Code Art. 50(1)",
+      "autoEvidence": [
+        "MedicalCertificateMentalState"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ራስን መቆጣጠር አለመቻል"
+      }
+    },
+    {
+      "id": "crim_fact_intoxication_non_culpable",
+      "label": "በስካር ሁኔታ",
+      "legalText": "The Defendant was in a state of involuntary or non-culpable intoxication (e.g., administered by force or error) that led to the lack of culpability. (ተከሳሹ በግዴታ ወይም በስህተት በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ሲሆን ይህም ተጠያቂ እንዳይሆን አድርጎታል።)",
+      "citation": "Crim. Code Art. 54",
+      "autoEvidence": [
+        "WitnessStatementsIntoxication",
+        "MedicalCertificateMentalState"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ያለፍላጎት ስካር"
+      }
+    },
+    {
+      "id": "crim_fact_intoxication_culpable_negligence",
+      "label": "በስካር ሁኔታ",
+      "legalText": "The Defendant was in a state of culpable intoxication, but the offense committed was only foreseeable as a light offense (for mitigation). (ተከሳሹ በግዴታ በተፈጠረ የስካር ሁኔታ ውስጥ የነበረ ቢሆንም የተፈፀመው ወንጀል በቀላል ደረጃ የሚገመት ነበር (ለቅጣት ማቅለያ)።)",
+      "citation": "Crim. Code Art. 54(3)",
+      "autoEvidence": [
+        "WitnessStatementsIntoxication"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ቸልተኛ ስካር"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "crim_relief_acquittal_excuse",
+      "text": "To acquit the Defendant on the grounds of non-culpability and order appropriate security or medical measures (Art. 50(3)). (ተከሳሹ በተጠያቂነት እጦት በነጻ እንዲሰናበት እና ተገቢ የጥበቃ ወይም የህክምና እርምጃ እንዲወሰድበት።)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

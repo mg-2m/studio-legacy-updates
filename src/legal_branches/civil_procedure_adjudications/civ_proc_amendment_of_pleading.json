@@ -1,0 +1,59 @@
+
+{
+  "id": "civ_proc_amendment_of_pleading",
+  "documentTitle": "የፍሬ ነገር ማሻሻያ ጥያቄ (Application for Amendment of Pleading)",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ 1957 ዓ.ም.، አንቀጽ 94 (Civil Procedure Code of 1965, Art. 94)",
+  "meta": {
+    "keywords": ["amendment", "pleading", "correction", "ፍሬ ነገር ማሻሻያ", "ክስ ማሻሻል"],
+    "jurisdictionType": "Court seized of the original case"
+  },
+  "templateDescription": "### መመሪያ\nይህ ማመልከቻ በክርክር ሂደት ላይ ያለን የክስ ወይም የመከላከያ መልስ ፍሬ ነገር ለማሻሻል، ስህተት ለማረም ወይም አዲስ ነገር ለማካተት ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 94(1) መሠረት، ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት በማንኛውም የክርክር ደረጃ ላይ ሊፈቀድ ይችላል። ዋናው ጥያቄ የሚገዛበት የይርጋ ጊዜ ገደብ በማሻሻያው ላይም ተፈጻሚ ይሆናል።\n\n### ቅድመ ሁኔታዎች\n**አስፈላጊነት**\nማሻሻያው በወገኖች መካከል ያለውን እውነተኛ የክርክር ነጥብ ለመወሰን አስፈላጊ መሆኑን ማሳየት።\n\n**ማስረጃ**\nሊሻሻል የሚገባው የክስ ወይም የመከላከያ መልስ ቅጂ (OriginalPleadingCopy) እና የታቀደው ማሻሻያ ረቂቅ (DraftAmendment)።",
+  "partyTitles": {
+    "applicant": "ማሻሻያ ጠያቂ (ወገን) (Applicant/Party Seeking Amendment)",
+    "respondent": "ተቃራኒ ወገን (Opposing Party)"
+  },
+  "facts": [
+    {
+      "id": "civ_proc_fact_amendment_necessary_for_justice",
+      "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
+      "legalText": "ማሻሻያው በወገኖች መካከል እውነተኛውን የክርክር ጥያቄ ለመወሰን እና የፍትሕ ዓላማን ለማሳካት አስፈላጊ ነው። (The amendment is necessary for the determination of the real question in controversy between the parties and is essential to meet the ends of justice.)",
+      "citation": "C.P.C. Art. 94(2)",
+      "autoEvidence": ["OriginalPleadingCopy", "DraftAmendment"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የፍትሕ አስፈላጊነት" }
+    },
+    {
+      "id": "civ_proc_fact_amendment_no_prejudice",
+      "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
+      "legalText": "ማሻሻያው አዲስ እና የማይጣጣም የክርክር ምክንያት አያስተዋውቅም፣ እንዲሁም ተቃራኒውን ወገን በወጪ ሊካስ የማይችል ጉዳት አያስከትልም። (The amendment does not introduce a new and inconsistent cause of action, nor does it unfairly prejudice the opposing party that cannot be compensated by costs.)",
+      "citation": "C.P.C. Art. 94(1)",
+      "autoEvidence": ["OriginalPleadingCopy"],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ጉዳት አለማስከተል" }
+    },
+    {
+      "id": "civ_proc_fact_amendment_due_to_clerical_error",
+      "label": "የማሻሻያ መሠረቶች (Grounds for Amendment)",
+      "legalText": "ማሻሻያው በመጀመሪያው የፍሬ ነገር አቀራረብ ውስጥ ያለ የአጻጻፍ، የሂሳብ ወይም የቅየሳ ስህተትን ለማረም አስፈላጊ ነው። (The amendment is necessary to correct a clerical, computational, or drafting error in the original pleading.)",
+      "citation": "C.P.C. Art. 94(1)",
+      "autoEvidence": ["DraftAmendment"],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ስህተት ማረም" }
+    },
+    {
+      "id": "civ_proc_fact_amendment_before_judgment",
+      "label": "ሥነ ሥርዓት ጊዜ (Procedural Timing)",
+      "legalText": "የማሻሻያ ጥያቄው ፍርድ ቤቱ የመጨረሻ ፍርድ ከመስጠቱ በፊት ቀርቧል። (The application for amendment is being made before the court has delivered its final judgment.)",
+      "citation": "C.P.C. Art. 94(1)",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "በመጨረሻም،", "summary_keyword": "ወቅታዊ ጥያቄ" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "civ_proc_relief_grant_amendment",
+      "text": "በተያያዘው ረቂቅ መሠረት ክሱ/መቃወሚያው እንዲሻሻል ፈቃድ እንዲሰጥ። (To grant leave to amend the statement of claim/defence as per the draft annexed hereto.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

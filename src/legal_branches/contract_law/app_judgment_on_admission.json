@@ -1,0 +1,52 @@
+
+{
+  "id": "app_judgment_on_admission",
+  "documentTitle": "በእምነት ላይ ለሚሰጥ ፍርድ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 242",
+  "meta": {
+    "keywords": [
+      "judgment on admission",
+      "summary judgment",
+      "pleading",
+      "በእምነት ላይ ፍርድ",
+      "አፋጣኝ ውሳኔ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance",
+    "purpose": "በእምነት ላይ ፍርድ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ ማመልከቻ ተከሳሹ በመከላከያ መልሱ ላይ የክሱን ዋና ዋና ነጥቦች (ለምሳሌ የእዳውን መኖር) በግልጽ ሲያምን، ክርክሩን ሳያራዝሙ በታመነው ነጥብ ላይ ብቻ ፍርድ ቤቱ አፋጣኝ ውሳኔ እንዲሰጥ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ማመልከቻ ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nተከሳሹ የመከላከያ መልሱን ካቀረበ በኋላ በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች\nየተከሳሹ የመከላከያ መልስ ምንም ዓይነት ማስተባበያ የሌለው ግልጽ የሆነ እምነት መያዝ አለበት።",
+  "partyTitles": {
+    "applicant": "ከሳሽ",
+    "respondent": "ተከሳሽ"
+  },
+  "facts": [
+    {
+      "id": "app_fact_clear_admission",
+      "label": "እምነት",
+      "legalText": "በመከላከያ መግለጫቸው، ተጠሪው በፍትሐ ብሔር ሥነ ሥርዓት ሕግ 242 መሰረት የውሉን እና የእዳውን መኖር በግልጽ አምኗል።",
+      "citation": "CPC Art. 242",
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ግልጽ እምነት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_relief_immediate_judgment",
+      "text": "በተጠየቀው የይገባኛል ጥያቄ ክፍል ላይ ለከሳሽ ወዲያውኑ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ]
+}
+
+  

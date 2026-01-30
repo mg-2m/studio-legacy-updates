@@ -1,0 +1,59 @@
+
+{
+  "id": "ip_trademark_opposition",
+  "documentTitle": "የንግድ ምልክት ምዝገባ መቃወሚያ",
+  "jurisdictionText": "የንግድ ምልክት አዋጅ ቁጥር 501/2006 አንቀጽ 13",
+  "meta": {
+    "keywords": ["trademark", "opposition", "EIPO", "application", "የንግድ ምልክት", "መቃወሚያ", "ምዝገባ"],
+    "jurisdictionType": "Administrative (EIPO)",
+    "purpose": "የንግድ ምልክት ምዝገባን ለመቃወም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ ሶስተኛ ወገን ያቀረበው የንግድ ምልክት ማመልከቻ ከእርስዎ ቀደምት መብቶች ጋር ሲጋጭ ለመቃወም ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ በፍርድ ቤት ሳይሆን **በኢትዮጵያ አእምሯዊ ንብረት ጽ/ቤት (EIPO)** አስተዳደራዊ ችሎት ፊት የሚቀርብ ሂደት ነው።\n\n### የጊዜ ገደብ\nየተቃውሞ ማመልከቻው የንግድ ምልክቱ በጋዜጣ ከታተመበት ቀን ጀምሮ ባሉት **90 ቀናት** ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\n- የእርስዎ ቀደምት የንግድ ምልክት ምዝገባ ሰርተፍኬት።\n- በምልክቶቹ መካከል ግራ መጋባት ሊኖር እንደሚችል የሚያሳይ ማስረጃ።",
+  "partyTitles": {
+    "applicant": "ተቃዋሚ",
+    "respondent": "አመልካች"
+  },
+  "facts": [
+    {
+      "id": "ip_fact_opponent_prior_registration",
+      "label": "የተቃዋሚው ቀደምት መብት",
+      "legalText": "ተቃዋሚው ከ [registrationDate] ጀምሮ ለተመሳሳይ/ተዛማጅ ዕቃዎች የንግድ ምልክት ቁጥር [trademarkNumber] ባለቤት ነው።",
+      "citation": "Proclamation 501/2006 Art. 7",
+      "autoEvidence": ["CertificateOfRegistrationEIPO"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የቀድሞ ምዝገባ" }
+    },
+    {
+      "id": "ip_fact_similarity_and_confusion",
+      "label": "የመቃወሚያ ምክንያቶች",
+      "legalText": "የአመልካቹ ምልክት ከተቃዋሚው ምልክት ጋር ተመሳሳይ ወይም አሳሳች በመሆኑ በሸማቾች ዘንድ ግራ መጋባት ሊፈጥር ይችላል።",
+      "citation": "Proclamation 501/2006 Art. 7(1)(a)",
+      "autoEvidence": ["MarketSurveyAffidavit"],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የምልክት ተመሳሳይነት" }
+    },
+    {
+      "id": "ip_fact_bad_faith_application",
+      "label": "የመቃወሚያ ምክንያቶች",
+      "legalText": "ማመልከቻው የቀረበው በተቃዋሚው መልካም ስም ላይ ያለአግባብ ለመጠቀም በማሰብ ነው።",
+      "citation": "Proclamation 501/2006 Art. 7(1)(f)",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "መጥፎ እምነት" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "ip_relief_reject_application",
+      "text": "የአመልካቹ የንግድ ምልክት ማመልከቻ ውድቅ እንዲደረግ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "ip_relief_award_costs",
+      "text": "ተቃዋሚው ያወጣውን ወጪ እንዲከፈለው እንዲወሰን።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

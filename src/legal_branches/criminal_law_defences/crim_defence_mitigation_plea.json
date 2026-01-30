@@ -1,0 +1,98 @@
+
+{
+  "id": "crim_defence_mitigation_plea",
+  "documentTitle": "Plea for Penalty Mitigation (የቅጣት ማቅለያ ክርክር)",
+  "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Arts. 88-90 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፹፰-፺).",
+  "meta": {
+    "keywords": [
+      "mitigation",
+      "sentencing",
+      "penalty",
+      "criminal defence",
+      "ቅጣት ማቅለያ",
+      "የወንጀል መከላከያ"
+    ],
+    "jurisdictionType": "Court seized of the criminal case"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር፣ ተከሳሹ ጥፋተኛ ሆኖ ከተገኘ በኋላ، ፍርድ ቤቱ ቅጣቱን ሲወስን የተለያዩ የቅጣት ማቅለያ ሁኔታዎችን ከግምት ውስጥ እንዲያስገባ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበትና የጥፋተኝነት ውሳኔ በተሰጠበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nይህ ክርክር የሚቀርበው የጥፋተኝነት ውሳኔ ከተሰጠ በኋላ በቅጣት ውሳኔ ችሎት (sentencing hearing) ወቅት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Required Evidence\nየማቅለያ ሁኔታዎችን የሚያረጋግጡ ማናቸውም ማስረጃዎች (ለምሳሌ፣ የተጎጂውን ይቅርታ የሚያሳይ ሰነድ፣ የካሳ ክፍያ ደረሰኝ፣ የተከሳሹን መልካም ስነምግባር የሚያሳይ ማስረጃ)።",
+  "partyTitles": {
+    "applicant": "Defendant (ተከሳሽ)",
+    "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+  },
+  "facts": [
+    {
+      "id": "crim_mitigation_honorable_motive",
+      "label": "አጠቃላይ የቅጣት ማቅለያ ሁኔታዎች",
+      "legalText": "The Defendant acted from honorable motives or in response to a grave and unjust provocation. (ተከሳሹ ድርጊቱን የፈጸመው ከክቡር ዓላማ በመነሳት ወይም ለከባድ እና ኢ-ፍትሃዊ ቁጣ ምላሽ ለመስጠት ነው።)",
+      "citation": "Crim. Code Art. 88(1)(a)",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ክቡር ዓላማ"
+      }
+    },
+    {
+      "id": "crim_mitigation_distress",
+      "label": "አጠቃላይ የቅጣት ማቅለያ ሁኔታዎች",
+      "legalText": "The Defendant was in a state of profound distress, destitution, or desperation at the time of the offense. (ተከሳሹ ወንጀሉን በፈጸመበት ጊዜ በከፍተኛ ጭንቀት፣ ችግር ወይም ተስፋ መቁረጥ ውስጥ ነበር።)",
+      "citation": "Crim. Code Art. 88(1)(b)",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ከፍተኛ ጭንቀት"
+      }
+    },
+    {
+      "id": "crim_mitigation_repentance",
+      "label": "ከወንጀሉ በኋላ ያለ ባህሪ",
+      "legalText": "The Defendant has shown sincere repentance, particularly by making reparation for the damage caused. (ተከሳሹ በተለይም የፈጠረውን ጉዳት በመጠገን ልባዊ ጸጸቱን አሳይቷል።)",
+      "citation": "Crim. Code Art. 88(1)(d)",
+      "autoEvidence": [
+        "PaymentReceipt"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ልባዊ ጸጸት"
+      }
+    },
+    {
+      "id": "crim_mitigation_youth",
+      "label": "የግል ሁኔታዎች",
+      "legalText": "The Defendant is a young person whose criminal responsibility is mitigated on account of their age. (ተከሳሹ በእድሜው ምክንያት የወንጀል ተጠያቂነቱ የተቀነሰ ወጣት ነው።)",
+      "citation": "Crim. Code Art. 52",
+      "autoEvidence": [
+        "BirthCertificate"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የወጣትነት ዕድሜ"
+      }
+    },
+    {
+      "id": "crim_mitigation_clean_record",
+      "label": "የግል ሁኔታዎች",
+      "legalText": "The Defendant has a clean prior criminal record and has displayed good conduct before and after the offense. (ተከሳሹ ከዚህ ቀደም የወንጀል ሪከርድ የሌለው ሲሆን ከወንጀሉ በፊት እና በኋላ መልካም ስነምግባር አሳይቷል።)",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "ንጹህ መዝገብ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "crim_relief_mitigate_penalty",
+      "text": "To request the Court to consider the aforementioned circumstances and deliver a mitigated penalty below the normal range prescribed by law. (ፍርድ ቤቱ የተጠቀሱትን ሁኔታዎች ግምት ውስጥ በማስገባት በሕግ ከተቀመጠው መደበኛ ክልል በታች የተቀነሰ ቅጣት እንዲወስን።)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

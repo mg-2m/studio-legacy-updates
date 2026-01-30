@@ -1,0 +1,93 @@
+
+{
+  "id": "contract_specific_performance",
+  "documentTitle": "ውል ይፈጸምልኝ ክስ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1776",
+  "meta": {
+    "keywords": [
+      "specific performance",
+      "enforcement",
+      "contract breach",
+      "ውል ይፈጸምልኝ",
+      "ውል ማስከበር"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance",
+    "purpose": "የውል ግዴታን ለማስፈጸም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ ተዋዋይ ወገን በውሉ መሠረት የገባውን ግዴታ ለመፈጸም ፈቃደኛ ሳይሆን ሲቀር، ፍርድ ቤቱ ግዴታውን እንዲፈጽም እንዲያስገድደው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nውሉን ለማስፈጸም ስልጣን ያለው ፍርድ ቤት ብዙውን ጊዜ ውሉ የተፈጸመበት ወይም ግዴታው መፈጸም የነበረበት ቦታ የሚገኝ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት، በውል ላይ የተመሰረተ ክስ ለማቅረብ ያለው የጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች\nውሉ እንዲፈጸም መጠየቅዎ ለእርስዎ ልዩ ጥቅም ያለው መሆኑን ማሳየት አለብዎት።\nየጽሑፍ ውል ማስረጃ ማቅረብ ያስፈልጋል።",
+  "partyTitles": {
+    "applicant": "ከሳሽ",
+    "respondent": "ተከሳሽ"
+  },
+  "facts": [
+    {
+      "id": "con_fact_valid_contract",
+      "label": "የውል ግዴታ",
+      "legalText": "በፍትሐ ብሔር ሕግ አንቀጽ 1678 መሰረት በ [SubjectMatter] ላይ በተዋዋይ ወገኖች መካከል ሕጋዊ ውል መኖሩ ይታወቃል።",
+      "citation": "",
+      "autoEvidence": [
+        "WrittenContract"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ሕጋዊ ውል"
+      }
+    },
+    {
+      "id": "con_fact_plaintiff_performance",
+      "label": "የውል ግዴታ",
+      "legalText": "ከሳሽ በውሉ መሠረት ግዴታዎቹን ሙሉ በሙሉ ፈጽሟል።",
+      "citation": "",
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የከሳሽ ግዴታ መወጣት"
+      }
+    },
+    {
+      "id": "con_fact_non_performance",
+      "label": "የውል ጥሰት",
+      "legalText": "ይሁን እንጂ ተከሳሹ በፍትሐ ብሔር ሕግ አንቀጽ 1771 መሰረት ያለ ሕጋዊ ምክንያት [SpecificObligation] አልፈጸመም።",
+      "citation": "",
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተከሳሽ ግዴታ አለመወጣት"
+      }
+    },
+    {
+      "id": "con_fact_special_interest",
+      "label": "የውል ጥሰት",
+      "legalText": "በፍትሐ ብሔር ሕግ አንቀጽ 1776 መሰረት ግዴታው እንዲፈጸም መጠየቅ ለከሳሽ ልዩ ጥቅም ያለው ሲሆን የተከሳሽን የግል ነፃነት አይጎዳውም።",
+      "citation": "",
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ልዩ ጥቅም"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "con_relief_enforce_performance",
+      "text": "ተከሳሹ [Action] በማድረግ ውሉን በተለይ እንዲፈጽም እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "con_relief_alt_damages",
+      "text": "በአማራጭ، አፈጻጸም የማይቻል ከሆነ የካሳ ክፍያ እንዲፈጽም እንዲታዘዝ።",
+      "isDefault": false,
+      "isDynamic": false
+    },
+    {
+      "id": "con_relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ]
+}
+
+  

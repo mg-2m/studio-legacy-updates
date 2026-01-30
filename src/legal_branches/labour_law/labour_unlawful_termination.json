@@ -1,0 +1,175 @@
+
+{
+  "id": "labour_unlawful_termination",
+  "documentTitle": "ሕገ-ወጥ የስራ ስንብት ክስ",
+  "partyTitles": {
+    "applicant": "አመልካች/ሰራተኛ",
+    "respondent": "ተጠሪ/ቀጣሪ"
+  },
+  "jurisdictionText": "የሠራተኛ አዋጅ ቁጥር 1156/2019",
+  "meta": {
+    "keywords": ["unlawful termination", "dismissal", "reinstatement", "severance", "labour", "ስንብት", "የስራ ክርክር"],
+    "jurisdictionType": "Labour Board / First Instance Court"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ ሰራተኛ በሕገ-ወጥ መንገድ ከሥራ ሲሰናበት ካሳ፣ ወደ ሥራ መመለስ ወይም ሌሎች መብቶችን ለመጠየቅ ይጠቅማል።\n\n### የዳኝነት ሥልጣን\nየሠራተኛ ጉዳዮች በመጀመሪያ ደረጃ የሚታዩት በሠራተኛ ጉዳይ ወሳኝ ቦርድ (Labour Adjudication Board) ነው።\n\n### የጊዜ ገደብ\nየሥራ ውሉ ከተቋረጠበት ቀን ጀምሮ ባሉት **ዘጠና (90) ቀናት** ውስጥ ለሚመለከተው አካል (የሠራተኛ ጉዳይ ወሳኝ ቦርድ) ማቅረብ ያስፈልጋል (አንቀጽ 138(2))።\n\n### ቅድመ ሁኔታዎች\n- የቅጥር ውል (EmploymentContract)\n- የስንብት ደብዳቤ (TerminationLetter)\n- የደመወዝ ወረቀት (PayrollSlip)",
+  "facts": [
+    {
+      "id": "labour_fact_indefinite_contract",
+      "label": "የውል ግንኙነት",
+      "legalText": "ላልተወሰነ ጊዜ የቅጥር ውል መኖር።",
+      "citation": "አንቀጽ 9, አዋጅ 1156/2019",
+      "autoEvidence": [
+        "EmploymentContract"
+      ],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የቅጥር ውል" }
+    },
+    {
+      "id": "labour_fact_definite_contract_ended",
+      "label": "የውል ግንኙነት",
+      "legalText": "የተወሰነ ጊዜ ወይም የሙከራ ውል ነበረ، እና ጊዜው አልቋል، ይህም ወደ ላልተወሰነ ጊዜ ውል መቀየሩን ያመለክታል።",
+      "citation": "አንቀጽ 10, 11, አዋጅ 1156/2019",
+      "autoEvidence": [
+        "EmploymentContract"
+      ],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የተለወጠ ውል" }
+    },
+    {
+      "id": "labour_fact_no_prior_notice",
+      "label": "የስንብት ድርጊት፡ የሥነ-ሥርዓት ጥሰቶች",
+      "legalText": "ስንብቱ የተፈጸመው ምክንያቱን እና የስንብት ቀንን የሚገልጽ የጽሑፍ ማስታወቂያ ሳይሰጥ ነው።",
+      "citation": "የአንቀጽ 35(1) ጥሰት, አዋጅ 1156/2019",
+      "autoEvidence": [
+        "TerminationLetter"
+      ],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "ያለማስታወቂያ ስንብት" }
+    },
+    {
+      "id": "labour_fact_insufficient_notice",
+      "label": "የስንብት ድርጊት፡ የሥነ-ሥርዓት ጥሰቶች",
+      "legalText": "የተሰጠው የማስታወቂያ ጊዜ በቂ ያልሆነ እና በአገልግሎት ዓመታት ላይ ከተመሠረተው ሕጋዊ ዝቅተኛው ያነሰ ነበር።",
+      "citation": "የአንቀጽ 35(2) ጥሰት, አዋጅ 1156/2019",
+      "autoEvidence": [
+        "TerminationLetter"
+      ],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም በላይ،", "summary_keyword": "በቂ ያልሆነ ማስታወቂያ" }
+    },
+    {
+      "id": "labour_fact_union_membership_termination",
+      "label": "የስንብት ድርጊት፡ ዋና ጥሰቶች (ሕገ-ወጥ ምክንያቶች)",
+      "legalText": "ስንብቱ የተከሰተው በሠራተኛው የሠራተኛ ማኅበር አባልነት ወይም በማኅበር እንቅስቃሴዎች በመሳተፉ ምክንያት ነው።",
+      "citation": "አንቀጽ 26(2)(a), አዋጅ 1156/2019",
+      "autoEvidence": [
+        "TerminationLetter"
+      ],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "በማህበር አባልነት ምክንያት ስንብት" }
+    },
+    {
+      "id": "labour_fact_maternity_termination",
+      "label": "የስንብት ድርጊት፡ ዋና ጥሰቶች (ሕገ-ወጥ ምክንያቶች)",
+      "legalText": "ስንብቱ የተከሰተው በሠራተኛው የእርግዝና ወይም የወሊድ ፈቃድ ሁኔታ ምክንያት ነው።",
+      "citation": "አንቀጽ 26(2)(d), አዋጅ 1156/2019",
+      "autoEvidence": [
+        "TerminationLetter"
+      ],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "በእርግዝና ምክንያት ስንብት" }
+    },
+    {
+      "id": "labour_fact_whistleblower_termination",
+      "label": "የስንብት ድርጊት፡ ዋና ጥሰቶች (ሕገ-ወጥ ምክንያቶች)",
+      "legalText": "ስንብቱ የተከሰተው ሠራተኛው ስለ ሕግ ጥሰት መረጃ በመስጠቱ ወይም በአሠሪው ላይ ቅሬታ በማቅረቡ ምክንያት ነው።",
+      "citation": "አንቀጽ 26(2)(b), አዋጅ 1156/2019",
+      "autoEvidence": [
+        "TerminationLetter"
+      ],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "በቅሬታ ምክንያት ስንብት" }
+    },
+    {
+      "id": "labour_fact_discriminatory_termination",
+      "label": "የስንብት ድርጊት፡ ዋና ጥሰቶች (ሕገ-ወጥ ምክንያቶች)",
+      "legalText": "ስንብቱ የተመሠረተው በዘር، በቀለም፣ በጾታ፣ በሃይማኖት፣ በፖለቲካ አስተያየት፣ በብሔራዊ አመጣጥ ወይም በማኅበራዊ አመጣጥ ላይ ባሉ አድሎአዊ ምክንያቶች ላይ ነው።",
+      "citation": "አንቀጽ 26(2)(c), አዋጅ 1156/2019",
+      "autoEvidence": [
+        "TerminationLetter"
+      ],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "በአድልዎ ምክንያት ስንብት" }
+    },
+    {
+      "id": "labour_fact_no_valid_reason",
+      "label": "የስንብት ድርጊት፡ \"ምክንያት የለም\" መከላከያ",
+      "legalText": "አሠሪው ከሠራተኛው ችሎታ ወይም ምግባር ወይም ከድርጅቱ ድርጅታዊ ፍላጎቶች ጋር የተያያዘ ትክክለኛ የስንብት ምክንያት አልሰጠም።",
+      "citation": "የአንቀጽ 27 ጥሰት, አዋጅ 1156/2019",
+      "autoEvidence": [
+        "TerminationLetter"
+      ],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ያለምክንያት ስንብት" }
+    },
+    {
+      "id": "labour_fact_constructive_dismissal",
+      "label": "የስንብት ድርጊት፡ ገንቢ ስንብት",
+      "legalText": "ሠራተኛው በአሠሪው ሕገ-ወጥ ወይም አስነዋሪ ድርጊቶች (ለምሳሌ ወሲባዊ ትንኮሳ، ጥቃት، ለደህንነት አስጊ) ምክንያት ሥራውን ለመልቀቅ ተገድዷል، ይህም በአሠሪው እንደ ስንብት ይቆጠራል።",
+      "citation": "አንቀጽ 32, አዋጅ 1156/2019",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "ገንቢ ስንብት" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "labour_relief_declare_termination_unlawful",
+      "text": "ስንብቱ ሕገ-ወጥ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ (Judgment declaring the termination unlawful pursuant to Art. 43.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "labour_relief_reinstatement",
+      "text": "ወደ ቀድሞ ቦታው እንዲመለስ ትዕዛዝ እንዲሰጥ (Order for reinstatement to previous position with full back pay (Art. 43(1)).)",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "labour_relief_compensation_in_lieu",
+      "text": "በመመለስ ምትክ ካሳ እንዲከፈል (Payment of compensation in lieu of reinstatement, equivalent to 180 times the average daily wage, and an additional 30 days for each year of service (Art. 43(2,3)).)",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "labour_relief_severance_pay",
+      "text": "በአንቀጽ 39 እና 40 መሠረት የስንብት ክፍያ {{severancePay}} ብር እንዲከፈል (Payment of Severance Pay in the amount of {{severancePay}} ETB as per the calculation in Art. 39 & 40 (Only if not reinstated).)",
+      "isDefault": false,
+      "isDynamic": true,
+      "isCustom": false
+    },
+    {
+      "id": "labour_relief_notice_compensation",
+      "text": "ትክክለኛ ማስታወቂያ ባለመስጠቱ ምክንያት ካሳ እንዲከፈል (Payment of Compensation for lack of proper notice (Art. 44).)",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "labour_relief_costs_and_fees_labour",
+      "text": "ወጪዎች እና ክፍያዎች በተከሳሹ እንዲሸፈኑ (Costs and fees to be covered by the respondent.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {
+    "severance_calculator": {
+      "title": "የስንብት ክፍያ ማስያ (Severance Pay Calculator)",
+      "description": "በአገልግሎት ዓመታት ላይ በመመርኮዝ የሚገመተውን የስንብት ክፍያ ያስሉ። (Calculate estimated severance pay based on years of service.)",
+      "inputs": [
+        { "id": "lastSalary", "label": "የመጨረሻ ወርሃዊ ደመወዝ (Last Monthly Salary)", "type": "number", "defaultValue": 10000 },
+        { "id": "yearsService", "label": "የአገልግሎት ዓመታት (Years of Service)", "type": "number", "defaultValue": 5 }
+      ],
+      "outputs": [
+        { "id": "severancePay", "label": "ጠቅላላ የስንብት ክፍያ (Total Severance Pay)" }
+      ],
+      "formula": "(lastSalary * 3) + ((lastSalary / 3) * (yearsService - 1))"
+    }
+  }
+}
+
+    

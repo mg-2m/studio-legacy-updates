@@ -1,0 +1,69 @@
+
+{
+  "id": "app_stay_construction",
+  "documentTitle": "ግንባታ እንዲቆም የሚጠይቅ አስቸኳይ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154",
+  "meta": {
+    "keywords": [
+      "injunction",
+      "stay of construction",
+      "urgent application",
+      "የግንባታ እግድ",
+      "አስቸኳይ"
+    ],
+    "jurisdictionType": "Court Handling the Main Case",
+    "purpose": "ግንባታ እንዲቆም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አስቸኳይ ማመልከቻ፣ ክርክር ባለበት መሬት ላይ ተቃራኒ ወገን ግንባታ እየሰራ ከሆነ፣ ዋናው ክስ እስኪያልቅ ድረስ ግንባታው እንዲቆም (እንዲታገድ) ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nማመልከቻው ዋናው ክስ እየታየ ባለበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፤ በማንኛውም የክርክር ወቅት ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች\n*   **የማይተካ ጉዳት (Irreparable Harm):** ግንባታው ከቀጠለ ሊጠገን የማይችል ጉዳት እንደሚደርስ ማሳየት።\n*   **ጠንካራ ክስ (Prima Facie Case):** በዋናው ክስ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_ongoing_construction",
+      "label": "የማይተካ ጉዳት",
+      "legalText": "ተጠሪው በአሁኑ ጊዜ በተከራካሪው መሬት ላይ ንቁ ግንባታ ላይ ተሰማርቷል።",
+      "citation": "",
+      "autoEvidence": ["PhotosVideoEvidence"],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም፣",
+        "summary_keyword": "በሂደት ላይ ያለ ግንባታ"
+      }
+    },
+    {
+      "id": "prop_fact_irreparable_harm",
+      "label": "የማይተካ ጉዳት",
+      "legalText": "ግንባታው ከተጠናቀቀ ማፍረሱ አስቸጋሪ ስለሚሆን የአመልካች መብቶች በቋሚነት ይጎዳሉ።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የማይተካ ጉዳት"
+      }
+    },
+    {
+      "id": "prop_fact_prima_facie",
+      "label": "የማይተካ ጉዳት",
+      "legalText": "አመልካቹ ጠንካራ የባለቤትነት መብት እንዳለው አሳይቷል።",
+      "citation": "",
+      "autoEvidence": ["TitleDeed"],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "ጠንካራ ክስ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_suspend_works",
+      "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በተከራካሪው ይዞታ ላይ ያሉ ሁሉም የግንባታ ስራዎች ወዲያውኑ እንዲቆሙ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

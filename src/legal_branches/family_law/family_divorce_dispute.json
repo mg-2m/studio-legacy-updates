@@ -1,0 +1,107 @@
+
+{
+  "id": "family_divorce_dispute",
+  "documentTitle": "የጋብቻ መፍረስ ክስ",
+  "jurisdictionText": "የፌዴራል ፍርድ ቤቶች አዋጅ ቁጥር 25/96 አንቀጽ 11(2) እና የተሻሻለው የቤተሰብ ሕግ አንቀጽ 76",
+  "meta": {
+    "keywords": ["divorce", "dissolution", "marriage", "custody", "maintenance", "ፍቺ", "ጋብቻ", "ቀለብ"],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "የጋብቻ መፍረስን ለማረጋገጥ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት በትዳር ውስጥ ያሉ ከባድ እና የማይታረቁ ችግሮች ሲያጋጥሙ ጋብቻው በፍርድ ቤት እንዲፈርስ፣ የልጆች አስተዳደግ እንዲወሰን እና የንብረት ክፍፍል እንዲካሄድ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nበተሻሻለው የቤተሰብ ሕግ አንቀጽ 113(1) መሠረት፣ የፍቺ ጉዳዮች የሚታዩት ባልና ሚስቱ መጨረሻ ላይ አብረው በኖሩበት ቦታ ወይም የተከሳሽ መኖሪያ በሆነበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nየፍቺ ክስ በማንኛውም ጊዜ በትዳር ውስጥ እያሉ ሊቀርብ ይችላል። የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n- የጋብቻ ህጋዊነት ማረጋገጫ፡ ክስ ከማቅረብዎ በፊት ጋብቻው በሕግ ፊት ፀንቶ የተመዘገበ መሆኑን ማረጋገጥ ያስፈልጋል።\n\n### ማስረጃ\n- የግድ የሚያስፈልግ ማስረጃ: የጋብቻ ምስክር ወረቀት (CertificateofMarriage)።\n- ተጨማሪ ማስረጃ: የልጆች የልደት የምስክር ወረቀት (BirthCertificate)، የጋራ ንብረት ዝርዝር።",
+  "partyTitles": {
+    "applicant": "ከሳሽ",
+    "respondent": "ተከሳሽ"
+  },
+  "facts": [
+    {
+      "id": "fam_fact_marriage_existence",
+      "label": "የጋብቻ ሕጋዊነት",
+      "legalText": "ከሳሽ እና ተከሳሽ በ [marriageDate] በሕጋዊ መንገድ ተጋብተዋል።",
+      "citation": "RFC Art. 1",
+      "autoEvidence": [
+        "CertificateofMarriage"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የጋብቻ መኖር"
+      }
+    },
+    {
+      "id": "fam_fact_irretrievable_breakdown",
+      "label": "የመፍረስ ምክንያቶች",
+      "legalText": "የጋብቻውን መቀጠል የማይቻል የሚያደርጉ የማይታረቁ ልዩነቶች አሉ።",
+      "citation": "RFC Art. 76",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የማይታረቅ ልዩነት"
+      }
+    },
+    {
+      "id": "fam_fact_period_of_separation",
+      "label": "የመፍረስ ምክንያቶች",
+      "legalText": "ተዋዋይ ወገኖች ከ [separationMonths] ወራት በላይ ለብቻቸው ኖረዋል።",
+      "citation": "RFC Art. 81",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የረጅም ጊዜ መለያየት"
+      }
+    },
+    {
+      "id": "fam_fact_children_existence",
+      "label": "ልጆች እና አስተዳደግ",
+      "legalText": "ጋብቻው [numberOfChildren] ልጆችን አፍርቷል።",
+      "citation": "RFC Art. 113",
+      "autoEvidence": [
+        "BirthCertificate"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ልጆች መኖር"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "fam_relief_dissolution",
+      "text": "በከሳሽ እና በተከሳሽ መካከል ያለውን ጋብቻ የሚፈርስ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "fam_relief_custody",
+      "text": "የአካለ መጠን ያልደረሱ ልጆችን ብቸኛ/የጋራ የማሳደግ መብት ለከሳሽ እንዲሰጥ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "fam_relief_child_support",
+      "text": "ተከሳሹ ወርሃዊ የልጅ ማሳደጊያ እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "fam_relief_property_partition",
+      "text": "የጋራ የጋብቻ ንብረትን ለማፍሰስ እና ለመከፋፈል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "con_relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

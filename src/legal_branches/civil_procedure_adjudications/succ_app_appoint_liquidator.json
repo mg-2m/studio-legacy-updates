@@ -1,0 +1,43 @@
+
+{
+  "id": "succ_app_appoint_liquidator",
+  "documentTitle": "የአጣሪ ሹመት ማመልከቻ (Application for Appointment of Liquidator)",
+  "jurisdictionText": "Art. 950 of the Civil Code.",
+  "meta": {
+    "keywords": ["liquidator", "estate", "appointment", "አጣሪ", "ሹመት"],
+    "jurisdictionType": "Federal/Regional First Instance"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የሟቹ ንብረት ውስብስብ ሲሆን ወይም ወራሾቹ ንብረቱን ለማስተዳደር መስማማት ሳይችሉ ሲቀሩ، ፍርድ ቤቱ ገለልተኛ የሆነ አጣሪ እንዲሾም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ማመልከቻ የሚቀርበው ውርሱን ለሚመለከተው ዋናው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n**አስፈላጊነት (Necessity)**\nየንብረቱ ውስብስብነት ወይም በወራሾች መካከል ያለው አለመግባባት መኖሩን ማሳየት ያስፈልጋል።\n\n**ማስረጃ (Required Evidence)**\nየንብረቱን ዝርዝር (InventoryofEstate) እና የእዳዎችን ሁኔታ የሚያሳይ ሰነድ።",
+  "partyTitles": {
+    "applicant": "አመልካች (Applicant)",
+    "respondent": "የለም (N/A)"
+  },
+  "facts": [
+    {
+      "id": "succ_fact_estate_complexity",
+      "label": "አስፈላጊነት (Necessity)",
+      "legalText": "ንብረቱ ሙያዊ አስተዳደር የሚጠይቁ ውስብስብ እዳዎች እና በርካታ ንብረቶችን ያካትታል። (The estate involves complex debts and multiple assets requiring professional management.)",
+      "citation": "",
+      "autoEvidence": ["InventoryofEstate"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የንብረት ውስብስብነት" }
+    },
+    {
+      "id": "succ_fact_no_nominee",
+      "label": "አስፈላጊነት (Necessity)",
+      "legalText": "ኑዛዜው ፈጻሚ አልሾመም፣ ወይም ወራሾቹ በአንድ ላይ መስማማት አልቻሉም። (The will did not nominate an executor, or the heirs cannot agree on one.)",
+      "citation": "Civ. Code Art. 950",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የሹመት አለመኖር" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "succ_relief_appoint_official",
+      "text": "ንብረቱን ለማስተዳደር ገለልተኛ አጣሪ እንዲሾም ትዕዛዝ እንዲሰጥ። (Order the appointment of a neutral Liquidator to administer the estate.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

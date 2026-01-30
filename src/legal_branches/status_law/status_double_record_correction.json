@@ -1,0 +1,62 @@
+
+{
+  "id": "status_double_record_correction",
+  "documentTitle": "የተደጋገመ መዝገብ እንዲሰረዝ አቤቱታ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ቁጥር ፬፻፲፰ (ክርክር የሌለበት ሥነ ሥርዓት)",
+  "meta": {
+    "keywords": [
+      "double record",
+      "duplicate certificate",
+      "civil record",
+      "VERA",
+      "የተደጋገመ መዝገብ"
+    ],
+    "jurisdictionType": "First Instance Court of the applicant's domicile",
+    "purpose": "የተደጋገመ መዝገብ ለማስተካከል"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ ለአንድ ሰው በስህተት ሁለት የተለያዩ ስሞች ወይም መረጃዎች ያሉት ሁለት የልደት የምስክር ወረቀት ሲኖር، አንዱ እንዲሰረዝና ትክክለኛው ብቻ እንዲቀር ለማድረግ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ፡ ሁለቱም የምስክር ወረቀቶች እና የትኛው ትክክል እንደሆነ የሚያስረዳ ማስረጃ።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ",
+    "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ"
+  },
+  "facts": [
+    {
+      "id": "status_fact_double_record_exists",
+      "label": "የተደጋገመው መዝገብ",
+      "legalText": "ለአመልካች ሁለት የተለያዩ የልደት የምስክር ወረቀቶች በስህተት ተሰጥተዋል፤ አንዱ በስም '[nameOne]' እና ሌላው በስም '[nameTwo]'።",
+      "citation": "",
+      "autoEvidence": [
+        "BirthCertificate"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተደጋገመ መዝገብ"
+      }
+    },
+    {
+      "id": "status_fact_correct_record_identified",
+      "label": "የተደጋገመው መዝገብ",
+      "legalText": "ትክክለኛው እና ጥቅም ላይ መዋል ያለበት መዝገብ በስም '[correctName]' የተመዘገበው ነው።",
+      "citation": "",
+      "autoEvidence": [
+        "IdentityCard"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ትክክለኛ መዝገብ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "status_relief_order_cancel_double_record",
+      "text": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (VERA) በስም '[incorrectName]' የተመዘገበውን የተሳሳተ መዝገብ እንዲሰርዝ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

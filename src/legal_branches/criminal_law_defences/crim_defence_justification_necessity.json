@@ -1,0 +1,97 @@
+
+{
+  "id": "crim_defence_justification_necessity",
+  "documentTitle": "Plea of Justification: Necessity (የሕጋዊነት መቃወሚያ፡- በግዴታ)",
+  "jurisdictionText": "Criminal Code Proclamation No. 414/2004, Art. 81 (የወንጀል ሕግ አዋጅ ቁጥር ፬፻፲፬/፲ᱺ፱፻፺፮፣ አንቀጽ ፹፩).",
+  "meta": {
+    "keywords": [
+      "necessity",
+      "justification",
+      "criminal defence",
+      "imminent danger",
+      "በግዴታ",
+      "የወንጀል መከላከያ"
+    ],
+    "jurisdictionType": "Court seized of the criminal case"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ የመከላከያ ክርክር، ተከሳሹ ወንጀሉን የፈጸመው ከራሱ ወይም ከሌላ ሰው ላይ ሊደርስ የነበረን የበለጠ ጉዳት ለመከላከል ሲል እንደሆነ እና ድርጊቱ አስፈላጊ እንደነበር ለመከራከር ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nይህ መከላከያ ክርክር የሚቀርበው የወንጀል ክስ በቀረበበት በማንኛውም የፍርድ ቤት ደረጃ ላይ ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nN/A. This is a defense raised during a criminal trial.\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Core Legal Test\nአደጋው በጣም አስጊ እና ሊቀር የማይችል መሆኑን እና የተጠበቀው ጥቅም ከተጣሰው ጥቅም የበለጠ መሆኑን ማሳየት።\n### Required Evidence\nየአደጋውን መኖር እና አስጊነት የሚያሳይ ማስረጃ (የምስክሮች ቃል፣ የቦታው ሁኔታ)።",
+  "partyTitles": {
+    "applicant": "Defendant (ተከሳሽ)",
+    "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+  },
+  "facts": [
+    {
+      "id": "crim_fact_imminent_threat_necessity",
+      "label": "አደጋው እና የጉዳት ምርጫ",
+      "legalText": "The Defendant was facing an imminent and unavoidable threat to life, limb, or other vital interest (of self or third party). (ተከሳሹ በሕይወቱ، በአካሉ ወይም በሌላ ወሳኝ ጥቅም ላይ ሊደርስ ያለ የቅርብ እና ሊቀር የማይችል አደጋ ገጥሞት ነበር።)",
+      "citation": "Crim. Code Art. 81(1)",
+      "autoEvidence": [
+        "ProofOfImminentDanger"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የቅርብ አደጋ"
+      }
+    },
+    {
+      "id": "crim_fact_interest_protected_greater",
+      "label": "አደጋው እና የጉዳት ምርጫ",
+      "legalText": "The interest protected by the act (the interest saved) was evidently of a greater or equal value than the interest infringed (the harm caused). (በድርጊቱ የተጠበቀው ጥቅም (የተረፈው) ከተጎዳው ጥቅም (ከተፈጠረው ጉዳት) የበለጠ ወይም እኩል ዋጋ ነበረው።)",
+      "citation": "Crim. Code Art. 81(1)",
+      "autoEvidence": [
+        "WitnessStatements"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የበለጠ ጥቅም"
+      }
+    },
+    {
+      "id": "crim_fact_order_of_superior",
+      "label": "ኦፊሴላዊ ትዕዛዝ / ፈቃድ",
+      "legalText": "The Defendant acted in execution of an official order issued by a superior public authority, and the order's illegality was not immediately manifest. (ተከሳሹ በበላይ የሕዝብ ባለሥልጣን የተሰጠውን ኦፊሴላዊ ትዕዛዝ ለመፈጸም እርምጃ ወስዷል، እናም የትዕዛዙ ሕገወጥነት ግልጽ አልነበረም።)",
+      "citation": "Crim. Code Art. 82",
+      "autoEvidence": [
+        "OfficialOrderDocument"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "ኦፊሴላዊ ትዕዛዝ"
+      }
+    },
+    {
+      "id": "crim_fact_victim_consent_valid",
+      "label": "ኦፊሴላዊ ትዕዛዝ / ፈቃድ",
+      "legalText": "The victim freely and clearly consented to the minor bodily injury or damage to property, where such consent is valid under the law. (ተጎጂው በሕግ ተቀባይነት ባለው መንገድ ለደረሰበት ቀላል የአካል ጉዳት ወይም የንብረት ጉዳት በነጻ ፈቃዱን ሰጥቷል።)",
+      "citation": "Crim. Code Art. 83",
+      "autoEvidence": [
+        "VictimConsentForm"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የተጎጂ ፈቃድ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "crim_relief_acquittal_necessity",
+      "text": "To acquit the Defendant on the ground that the act was justified by necessity and lawful. (ድርጊቱ በግዴታ ሕጋዊነት ያለው በመሆኑ በነጻ እንዲሰናበትለት።)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "crim_relief_mitigation_necessity",
+      "text": "Alternatively, to mitigate the penalty due to the presence of a threatening situation that rendered the offense less culpable (mitigating circumstance). (በአማራጭ፣ ወንጀሉን በተጠያቂነት እንዲቀንስ በሚያስችል አስጊ ሁኔታ በመኖሩ ምክንያት ቅጣቱ እንዲቀልለት።)",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

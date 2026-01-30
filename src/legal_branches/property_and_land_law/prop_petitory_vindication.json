@@ -1,0 +1,100 @@
+
+{
+  "id": "prop_petitory_vindication",
+  "documentTitle": "የንብረት ባለቤትነትን ለማረጋገጥ የክስ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1206",
+  "meta": {
+    "keywords": [
+      "petitory action",
+      "vindication",
+      "unlawful possession",
+      "ownership claim",
+      "የይዞታ ክስ",
+      "የባለቤትነት ማረጋገጫ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "የንብረት ባለቤትነትን ለማረጋገጥ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የንብረትዎ ህጋዊ ባለቤት መሆንዎን ነገር ግን ንብረቱ በሌላ ሰው እጅ ያለአግባብ ተይዞ ሲገኝ፣ የባለቤትነት መብትዎን በፍርድ ቤት ለማረጋገጥ እና ንብረቱ እንዲመለስልዎ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ክስ መታየት ያለበት ንብረቱ በሚገኝበት ቦታ ስልጣን ባለው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 1845 መሠረት፣ የማይንቀሳቀስ ንብረትን በተመለከተ የባለቤትነት ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ 10 ዓመት ነው።\n\n### ቅድመ ሁኔታዎች\n*   **ማስረጃ (Required Evidence):** የባለቤትነት ማረጋገጫ ካርታ (TitleDeed) እና ንብረቱን እንዴት እንዳገኙ የሚያሳይ ሰነድ (ለምሳሌ የሽያጭ ውል)።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ባለቤት)",
+    "respondent": "ተከሳሽ (ያለአግባብ የያዘ)"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_ownership_proof",
+      "label": "የባለቤትነት ማረጋገጫ",
+      "legalText": "ከሳሹ በ {{location}} የሚገኘው የማይንቀሳቀስ ንብረት ህጋዊ ባለቤት/ባለይዞታ ነው።",
+      "citation": "Civ. Code Art. 1204",
+      "autoEvidence": [
+        "TitleDeed"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም፣",
+        "summary_keyword": "የባለቤትነት ማረጋገጫ"
+      }
+    },
+    {
+      "id": "prop_fact_chain_of_custody",
+      "label": "የባለቤትነት ማረጋገጫ",
+      "legalText": "ከሳሹ ንብረቱን በ {{acquisition_method}} በ {{date}} አግኝቷል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም፣",
+        "transition": "ከዚህም ባሻገር፣",
+        "summary_keyword": "የንብረት ግኝት"
+      }
+    },
+    {
+      "id": "prop_fact_defendant_possession",
+      "label": "ያለአግባብ መያዝ",
+      "legalText": "ተከሳሹ በአሁኑ ጊዜ ንብረቱን ያለ ምንም ህጋዊ መብት ወይም ባለቤትነት ይይዛል።",
+      "citation": "Civ. Code Art. 1206",
+      "autoEvidence": [
+        "KebeleConfirmation"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም፣",
+        "transition": "ከዚህም በላይ፣",
+        "summary_keyword": "ያለአግባብ መያዝ"
+      }
+    },
+    {
+      "id": "prop_fact_refusal_vacate",
+      "label": "ያለአግባብ መያዝ",
+      "legalText": "ተደጋጋሚ ጥያቄ ቢቀርብም ተከሳሹ ንብረቱን ለቆ ለመውጣት ፈቃደኛ አልሆነም።",
+      "citation": "",
+      "autoEvidence": [
+        "NoticeofDefault"
+      ],
+      "rhetoric": {
+        "intro": "በመጨረሻም፣",
+        "transition": "በመሆኑም፣",
+        "summary_keyword": "ለመልቀቅ አለመፈለግ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_declare_ownership",
+      "text": "ከሳሹ የንብረቱ ብቸኛ ህጋዊ ባለቤት/ባለይዞታ መሆኑን የሚገልጽ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "prop_relief_eviction_order",
+      "text": "ተከሳሹ ንብረቱን ለቆ ለከሳሽ እንዲያስረክብ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "prop_relief_mesne_profits",
+      "text": "ተከሳሹ በህገ-ወጥ ይዞታው ወቅት ላገኘው ጥቅም (ፍራፍሬ/ኪራይ) ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

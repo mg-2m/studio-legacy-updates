@@ -1,0 +1,57 @@
+
+{
+  "id": "app_tax_adr_request",
+  "documentTitle": "የግብር ክርክርን በአማራጭ መፍትሔ እንዲታይ ማመልከቻ",
+  "jurisdictionText": "የግብር አስተዳደር አዋጆች ብዙውን ጊዜ ስምምነትን ወይም ADRን የሚፈቅዱ ድንጋጌዎችን ያካትታሉ።",
+  "meta": {
+    "keywords": [
+      "ADR",
+      "tax dispute",
+      "mediation",
+      "settlement",
+      "አማራጭ የክርክር መፍቻ",
+      "ግብር"
+    ],
+    "jurisdictionType": "Court/Tribunal handling the appeal",
+    "purpose": "የግብር ክርክርን በአማራጭ መፍትሔ እንዲታይ"
+  },
+  "templateDescription": "### መመሪያ\nይህ ማመልከቻ፣ በፍርድ ቤት ወይም በኮሚሽን እየታየ ያለን የግብር ክርክር፣ ጊዜ እና ወጪን ለመቆጠብ በስምምነት ወይም በሽምግልና እንዲፈታ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይግባኙን እየሰማ ላለው ፍርድ ቤት ወይም ኮሚሽን ይቀርባል።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n- የስምምነት ፍላጎት፡ ሁለቱም ወገኖች (ግብር ከፋዩ እና ገቢዎች ሚኒስቴር) ጉዳዩን በስምምነት ለመፍታት ፍላጎት እንዳላቸው ማሳየት።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "መልስ ሰጪ"
+  },
+  "facts": [
+    {
+      "id": "app_tax_fact_willingness_to_settle",
+      "label": "የADR ምክንያቶች",
+      "legalText": "ግብር ከፋዩም ሆነ ገቢዎች ሚኒስቴር ክርክሩን በጋራ ስምምነት ለመፍታት ፈቃደኛ መሆናቸውን አሳይተዋል።",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የስምምነት ፈቃደኝነት"
+      }
+    },
+    {
+      "id": "app_tax_fact_complex_facts",
+      "label": "የADR ምክንያቶች",
+      "legalText": "ክርክሩ በፍርድ ቤት ክርክር ሳይሆን በባለሙያ ድርድር በተሻለ ሁኔታ ሊፈቱ የሚችሉ ውስብስብ የፍሬ ነገር ጉዳዮችን ያካትታል።",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ውስብስብ ፍሬ ነገሮች"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_tax_relief_refer_to_adr",
+      "text": "የጋራ ኮሚቴ እንዲቋቋም ወይም አስገዳጅ የስምምነት ስምምነት ላይ ለመድረስ ወደ አስታራቂ እንዲመራ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

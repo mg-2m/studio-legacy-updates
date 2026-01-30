@@ -1,0 +1,72 @@
+
+{
+  "id": "prop_possessory_restoration",
+  "documentTitle": "የተነጠቀን ይዞታ ለማስመለስ የክስ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1149",
+  "meta": {
+    "keywords": [
+      "possessory action",
+      "usurpation",
+      "dispossession",
+      "የይዞታ ክስ",
+      "ማስመለስ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "የተነጠቀን ይዞታ ለማስመለስ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት ይዞታዎ በጉልበት ወይም በማታለል ሲነጠቅ፣ የባለቤትነት ጥያቄ ውስጥ ሳይገባ ይዞታው ብቻ በፍጥነት እንዲመለስልዎ ለመጠየቅ ያገለግላል። ዋናው ዓላማው ሰላምን ማስጠበቅ ነው።\n\n### የዳኝነት ሥልጣን\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nይዞታው ከተነጠቀበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች\n*   **ማስረጃ (Required Evidence):** ንብረቱን በሰላም ይዘውት እንደነበር የሚያረጋግጡ ማስረጃዎች (ለምሳሌ የግብር ደረሰኞች፣ የቀበሌ ማረጋገጫ)።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ይዞታው የተነጠቀ)",
+    "respondent": "ተከሳሽ (ነጣቂ)"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_actual_possession",
+      "label": "የይዞታ እውነታ",
+      "legalText": "ከሳሹ ንብረቱን በሰላም እና ቀጣይነት ባለው መልኩ ይዞት ነበር።",
+      "citation": "Civ. Code Art. 1140",
+      "autoEvidence": [
+        "TaxLandRentReceipts",
+        "KebeleConfirmation"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ሰላማዊ ይዞታ"
+      }
+    },
+    {
+      "id": "prop_fact_usurpation_act",
+      "label": "ሕገ-ወጥ ጣልቃ ገብነት (መንጠቅ)",
+      "legalText": "ተከሳሹ በ {{date}} በጉልበት/በማጭበርበር ይዞታውን ወስዷል።",
+      "citation": "Civ. Code Art. 1148",
+      "autoEvidence": ["PhotosVideoEvidence", "WitnessAffidavitsNuisance"],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ሕገ-ወጥ መንጠቅ"
+      }
+    },
+    {
+      "id": "prop_fact_timeliness",
+      "label": "ሕገ-ወጥ ጣልቃ ገብነት (መንጠቅ)",
+      "legalText": "ይህ ክስ ይዞታው ከተነጠቀ በሁለት ዓመት ጊዜ ውስጥ የቀረበ ነው።",
+      "citation": "Civ. Code Art. 1149(2)",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በመሆኑም،",
+        "summary_keyword": "ወቅታዊ ክስ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_restore_possession",
+      "text": "ይዞታው ወዲያውኑ ለከሳሽ እንዲመለስ ትዕዛዝ እንዲሰጥ (የባለቤትነት ጥያቄዎችን ሳይነካ)።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

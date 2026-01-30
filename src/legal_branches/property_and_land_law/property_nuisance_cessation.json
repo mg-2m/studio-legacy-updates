@@ -1,0 +1,82 @@
+
+{
+  "id": "property_nuisance_cessation",
+  "documentTitle": "ያልተለመደ ችግር እንዲቆም የክስ ማመልከቻ (Nuisance)",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1225",
+  "meta": {
+    "keywords": [
+      "nuisance",
+      "abnormal inconvenience",
+      "noise",
+      "smell",
+      "neighbor dispute",
+      "ችግር",
+      "ጩኸት",
+      "ሽታ"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "ያልተለመደ ችግር እንዲቆም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የእርስዎ ጎረቤት ወይም በአቅራቢያዎ የሚገኝ ሰው በሚያደርገው ተግባር (ለምሳሌ ከልክ ያለፈ ጩኸት፣ መጥፎ ሽታ፣ ንዝረት) ሰላምዎ ሲደፈርስ እና ችግሩ ከአካባቢው መደበኛ ሁኔታ ያለፈ ሲሆን፣ ያንን ተግባር እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nችግሩ በሚከሰትበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nከውል ውጭ ተጠያቂነትን የሚመለከት በመሆኑ، የ5 ዓመት የይርጋ ጊዜ ገደብ አለው (አንቀጽ 1851)።\n\n### ቅድመ ሁኔታዎች\n*   **ማስረጃ (Required Evidence):** የችግሩን ሁኔታ የሚያሳይ ማስረጃ (PhotosVideoEvidence)፣ የምስክሮች ቃል (WitnessAffidavitsNuisance) እና ችግሩ እንዲቆም በጽሑፍ ማስጠንቀቂያ መስጠትዎን የሚያሳይ ማስረጃ።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (የተጎዳ ወገን)",
+    "respondent": "ተከሳሽ (የችግሩ ምንጭ)"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_nature_inconvenience",
+      "label": "ችግሩ",
+      "legalText": "የተከሳሽ ድርጊቶች ከ {{source}} የሚመነጭ {{nuisance_type}} ያካትታሉ።",
+      "citation": "Civ. Code Art. 1225",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ያልተለመደ ችግር"
+      }
+    },
+    {
+      "id": "prop_fact_abnormal_degree",
+      "label": "ችግሩ",
+      "legalText": "በተከሳሹ የሚፈጠረው ችግር ያልተለመደ እና ከአካባቢው ከሚጠበቀው ደረጃ ይበልጣል።",
+      "citation": "",
+      "autoEvidence": [
+        "WitnessAffidavitsNuisance",
+        "PhotosVideoEvidence"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ከደረጃ ያለፈ ችግር"
+      }
+    },
+    {
+      "id": "prop_fact_notice_to_stop",
+      "label": "ማወቅ እና እምቢተኝነት",
+      "legalText": "ተከሳሹ ስለ ችግሩ በይፋ እንዲያውቅ ተደርጎ ነበር ነገር ግን የማስተካከያ እርምጃዎችን አልወሰደም።",
+      "citation": "",
+      "autoEvidence": ["NoticeofDefault"],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በተጨማሪም፣",
+        "summary_keyword": "የማስተካከያ እጦት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_order_cessation",
+      "text": "ተከሳሹ ያልተለመደውን ችግር ምንጭ ወዲያውኑ እንዲያቆም የሚገልጽ ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "prop_relief_damages_past",
+      "text": "ከማቆሙ በፊት በከሳሽ የደረሰውን ጉዳት ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "citation": "Civ. Code Art. 1226",
+      "isDefault": false,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

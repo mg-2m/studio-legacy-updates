@@ -1,0 +1,78 @@
+
+{
+  "id": "property_possessory_disturbance",
+  "documentTitle": "የይዞታ መረበሽ እንዲቆም የክስ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1148",
+  "meta": {
+    "keywords": [
+      "possessory disturbance",
+      "interference",
+      "peaceful possession",
+      "የይዞታ መረበሽ",
+      "ጣልቃ ገብነት"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "የይዞታ መረበሽ እንዲቆም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ ሰው ይዞታዎን ሳይነጥቅ ነገር ግን ሰላማዊ ይዞታዎን በሚረብሹ ድርጊቶች (ለምሳሌ አጥር ማፍረስ፣ መተላለፊያ መዝጋት) ሲያስቸግርዎት፣ እነዚያን የረብሻ ድርጊቶች እንዲያቆም ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nንብረቱ በሚገኝበት ቦታ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nረብሻው ከተጀመረበት ቀን ጀምሮ ባሉት ሁለት (2) ዓመታት ውስጥ መቅረብ አለበት (አንቀጽ 1149(2))።\n\n### ቅድመ ሁኔታዎች\n*   **ማስረጃ (Required Evidence):** ረብሻውን የሚያሳይ ማስረጃ (ፎቶ፣ ቪዲዮ) እና የምስክሮች ቃል።",
+  "partyTitles": {
+    "applicant": "ከሳሽ (ባለይዞታ)",
+    "respondent": "ተከሳሽ (ረባሽ)"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_actual_possession_disturbance",
+      "label": "የይዞታ እውነታ",
+      "legalText": "ከሳሹ ንብረቱን/መብቱን በሰላም እና ቀጣይነት ባለው መልኩ ይዞት ነበር።",
+      "citation": "Civ. Code Art. 1140",
+      "autoEvidence": ["TaxLandRentReceipts", "KebeleConfirmation"],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ሰላማዊ ይዞታ"
+      }
+    },
+    {
+      "id": "prop_fact_disturbance_act",
+      "label": "የረብሻ ድርጊት",
+      "legalText": "ተከሳሹ የከሳሽን ሰላማዊ ይዞታ የሚረብሹ የተወሰኑ ድርጊቶችን ፈጽሟል (ለምሳሌ አጥሮችን ማስወገድ፣ መዳረሻን መዝጋት)።",
+      "citation": "Civ. Code Art. 1148",
+      "autoEvidence": [
+        "WitnessAffidavitsNuisance",
+        "PhotosVideoEvidence"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የይዞታ መረበሽ"
+      }
+    },
+    {
+      "id": "prop_fact_timeliness_disturbance",
+      "label": "የረብሻ ድርጊት",
+      "legalText": "ይህ ክስ ረብሻው ከተጀመረ በሁለት ዓመት ጊዜ ውስጥ የቀረበ ነው።",
+      "citation": "Civ. Code Art. 1149(2)",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ወቅታዊ ክስ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_stop_disturbance",
+      "text": "ተከሳሹ ሁሉንም የረብሻ ድርጊቶች እንዲያቆም ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "prop_relief_restore_status",
+      "text": "ንብረቱ ከረብሻው በፊት ወደነበረበት ሁኔታ እንዲመለስ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

@@ -1,0 +1,60 @@
+
+{
+  "id": "status_birth_date_correction",
+  "documentTitle": "የልደት ቀን ማስተካከያ አቤቱታ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ ቁጥር ፬፻፲፰ (ክርክር የሌለበት ሥነ ሥርዓት)",
+  "meta": {
+    "keywords": [
+      "birth date correction",
+      "civil record",
+      "VERA",
+      "የልደት ቀን ማስተካከያ"
+    ],
+    "jurisdictionType": "First Instance Court of the applicant's domicile",
+    "purpose": "የልደት ቀን ለማስተካከል"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አቤቱታ በልደት የምስክር ወረቀት ወይም መታወቂያ ላይ የተመዘገበ የልደት ቀን በስህተት ሲጻፍ، ፍርድ ቤቱ እንዲያስተካክለው ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nጉዳዩ የሚታየው አመልካቹ በሚኖርበት አካባቢ ስልጣን ባለው የመጀመሪያ ደረጃ ፍርድ ቤት ነው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nማስረጃ፡ ስህተት ያለበት ሰነድ (BirthCertificate) እና ትክክለኛውን ቀን የሚያረጋግጥ ሌላ ደጋፊ ሰነድ (ለምሳሌ የትምህርት ቤት ሰርተፍኬት)።\nየአስተዳደር ጥያቄ፡ ፍርድ ቤት ከመሄድዎ በፊት ስህተቱን እንዲያስተካክል ለሚመለከተው አስተዳደራዊ አካል (ወሳኝ ኩነት) መጠየቅና እምቢታ ማግኘት ያስፈልጋል።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ",
+    "respondent": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ"
+  },
+  "facts": [
+    {
+      "id": "status_fact_birth_date_error",
+      "label": "ስህተቱ",
+      "legalText": "የአመልካቹ የልደት የምስክር ወረቀት የልደት ቀኑን '[incorrectDate]' በማለት በስህተት ይገልጻል፤ ትክክለኛው ግን '[correctDate]' ነው።",
+      "citation": "",
+      "autoEvidence": [
+        "BirthCertificate",
+        "IdentityCard"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተሳሳተ የልደት ቀን"
+      }
+    },
+    {
+      "id": "status_fact_birth_date_proof",
+      "label": "ስህተቱ",
+      "legalText": "ትክክለኛው ቀን በተያያዘው [secondaryDocument] ተረጋግጧል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ትክክለኛው ቀን ማረጋገጫ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "status_relief_order_birth_date_correction",
+      "text": "የወሳኝ ኩነት ምዝገባ ኤጀንሲ (VERA) መዝገቡን አስተካክሎ የአመልካቹን የልደት ቀን '[correctDate]' እንዲል የሚወስን ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

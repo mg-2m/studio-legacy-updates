@@ -1,0 +1,80 @@
+
+{
+  "id": "property_servitude_right_of_way",
+  "documentTitle": "የመተላለፊያ መብት (Servitude) እንዲቋቋም የክስ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሕግ አንቀጽ 1332",
+  "meta": {
+    "keywords": [
+      "servitude",
+      "right of way",
+      "enclaved property",
+      "passage",
+      "የመተላለፊያ መብት",
+      "የመንገድ መብት"
+    ],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "የመተላለፊያ መብት እንዲቋቋም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የእርስዎ ይዞታ ወደ ህዝብ መንገድ መውጫ የሌለው (የተዘጋ) ሲሆን፣ በጎረቤትዎ ይዞታ በኩል የመተላለፊያ መብት እንዲሰጥዎ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይዞታዎቹ በሚገኙበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nየመተላለፊያ መብት በማንኛውም ጊዜ ሊጠየቅ ይችላል፤ የተወሰነ የይርጋ ጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n*   **አስፈላጊነት (Necessity):** የእርስዎ ይዞታ በእርግጥ ሌላ አማራጭ መውጫ እንደሌለው በባለሙያ (ሰርቬየር) ማስረጃ ማረጋገጥ።\n*   **ማስረጃ (Required Evidence):** የይዞታዎን እና የጎረቤትዎን ይዞታ የሚያሳይ የሳይት ፕላን (SitePlan) እና የሰርቬየር ሪፖርት (SurveyorsReport)።",
+  "partyTitles": {
+    "applicant": "ዋና ይዞታ (አመልካች)",
+    "respondent": "አገልጋይ ይዞታ (ተጠሪ)"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_property_enclaved",
+      "label": "የተዘጋ ይዞታ ሁኔታ (አስፈላጊነት)",
+      "legalText": "የአመልካች ንብረት ወደ ህዝብ መንገድ በቂ መዳረሻ የለውም።",
+      "citation": "Civ. Code Art. 1332",
+      "autoEvidence": [
+        "SurveyorsReport",
+        "SitePlan"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተዘጋ ይዞታ"
+      }
+    },
+    {
+      "id": "prop_fact_no_other_means",
+      "label": "የተዘጋ ይዞታ ሁኔታ (አስፈላጊነት)",
+      "legalText": "ለመዳረሻ ምንም ሌሎች ተግባራዊ ወይም አነስተኛ ጉዳት የሚያስከትሉ መንገዶች የሉም።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "አማራጭ መንገድ አለመኖር"
+      }
+    },
+    {
+      "id": "prop_fact_least_onerous",
+      "label": "የተጠየቀው መንገድ",
+      "legalText": "በተጠሪው መሬት ላይ የተጠየቀው የመተላለፊያ መብት ለአገልጋይ ይዞታ (ተጠሪ) አነስተኛ ጉዳት የሚያስከትል መንገድ ነው።",
+      "citation": "Civ. Code Art. 1334",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "አነስተኛ ጉዳት ያለው መንገድ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_establish_servitude",
+      "text": "በተጠሪው ንብረት ላይ የመተላለፊያ መብት (Servitude of Right of Way) የሚቋቋም ፍርድ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    },
+    {
+      "id": "prop_relief_compensation_fee",
+      "text": "ዋናው ይዞታ በመተላለፊያው ለሚደርሰው ጉዳት ለአገልጋይ ይዞታ ፍትሃዊ ካሳ እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "citation": "Civ. Code Art. 1333",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

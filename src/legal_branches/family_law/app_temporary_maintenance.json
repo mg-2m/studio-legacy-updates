@@ -1,0 +1,66 @@
+
+{
+  "id": "app_temporary_maintenance",
+  "documentTitle": "ጊዜያዊ የቀለብ ትዕዛዝ ማመልከቻ",
+  "jurisdictionText": "የተሻሻለው የቤተሰብ ሕግ አንቀጽ 83(2) እና የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154",
+  "meta": {
+    "keywords": ["temporary maintenance", "alimony", "child support", "interim", "ጊዜያዊ ቀለብ"],
+    "jurisdictionType": "Federal/Regional First Instance Court",
+    "purpose": "ጊዜያዊ ቀለብ እንዲወሰን"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የፍቺ ክስ በፍርድ ቤት እየታየ ባለበት ወቅት، እራሳቸውን ወይም ልጆቻቸውን ለመደገፍ ገቢ የሌላቸው ወገኖች، ሌላኛው ወገን ለጊዜው ቀለብ እንዲከፍል ለማስገደድ የሚያቀርቡት አስቸኳይ ማመልከቻ ነው።\n\n### የዳኝነት ሥልጣን\nዋናው የፍቺ ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nዋናው ክስ በሚታይበት በማንኛውም ጊዜ ሊቀርብ ይችላል።\n\n### ቅድመ ሁኔታዎች\n- በሂደት ላይ ያለ ክስ፡ ዋናው የፍቺ ክስ መከፈቱን ማረጋገጥ።\n\n### ማስረጃ\n- የአመልካች ገቢ አለመኖር እና የተከሳሽ የመክፈል አቅም ማሳየት ያስፈልጋል (ProofofIncome)።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "app_fact_pendency_of_suit",
+      "label": "አስቸኳይነት እና ፍላጎት",
+      "legalText": "በተዋዋይ ወገኖች መካከል የፍቺ ዋና ክስ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው።",
+      "citation": "RFC Art. 83",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "በሂደት ላይ ያለ ክስ"
+      }
+    },
+    {
+      "id": "app_fact_immediate_need",
+      "label": "አስቸኳይነት እና ፍላጎት",
+      "legalText": "አመልካቹ በክርክሩ ወቅት እራሳቸውን/ልጆቻቸውን ለመደገፍ ነፃ ገቢ የላቸውም።",
+      "citation": "RFC Art. 106",
+      "autoEvidence": [
+        "ProofofIncome"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የገቢ እጦት"
+      }
+    },
+    {
+      "id": "app_fact_ability_to_pay",
+      "label": "አስቸኳይነት እና ፍላጎት",
+      "legalText": "ተጠሪው ጊዜያዊ ድጋፍ ለመስጠት በቂ ገቢ አለው።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የመክፈል ችሎታ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_relief_prov_maintenance",
+      "text": "ተጠሪው የመጨረሻ ፍርድ እስከሚሰጥ ድረስ በወር [amount] ብር እንዲከፍል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

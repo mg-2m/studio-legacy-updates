@@ -1,0 +1,68 @@
+
+{
+  "id": "app_tax_stay_of_execution",
+  "documentTitle": "የግብር ክፍያ አፈጻጸም እንዲቆም ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (እግድ) በግብር አፈጻጸም ላይ ሲተገበር",
+  "meta": {
+    "keywords": [
+      "stay of execution",
+      "tax",
+      "injunction",
+      "MoR",
+      "የአፈጻጸም እግድ",
+      "ግብር"
+    ],
+    "jurisdictionType": "Court/Tribunal handling the appeal",
+    "purpose": "የግብር ክፍያ አፈጻጸም እንዲቆም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አስቸኳይ ማመልከቻ፣ የግብር ይግባኝዎ እየታየ ባለበት ወቅት፣ የገቢዎች ሚኒስቴር አከራካሪ የሆነውን የግብር እዳ ለመሰብሰብ የአፈጻጸም እርምጃ (ለምሳሌ የባንክ ሂሳብ ማገድ) ሲጀምር፣ ያንን እርምጃ ለጊዜው ለማስቆም ያገለግላል።\n\n### የዳኝነት ሥልጣን\nዋናው የግብር ይግባኝ በሚታይበት አካል (የግብር ይግባኝ ኮሚሽን ወይም ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n- የማይተካ ጉዳት (Irreparable Harm): ክፍያውን አሁን መፈጸም ድርጅትዎን ለኪሳራ የሚዳርግ እና ሊጠገን የማይችል ጉዳት እንደሚያደርስ ማሳየት።\n- ጠንካራ ክስ (Prima Facie Case): በይግባኝዎ ላይ የማሸነፍ እድልዎ ከፍተኛ መሆኑን ማሳየት።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "መልስ ሰጪ"
+  },
+  "facts": [
+    {
+      "id": "app_tax_fact_execution_pending",
+      "label": "የእገዳ ምክንያቶች",
+      "legalText": "ገቢዎች ሚኒስቴር አከራካሪውን ግብር ለመሰብሰብ የአፈጻጸም ሂደቶችን (ለምሳሌ፣ የባንክ ሂሳቦችን ማገድ) ጀምሯል።",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "በሂደት ላይ ያለ አፈጻጸም"
+      }
+    },
+    {
+      "id": "app_tax_fact_irreparable_harm",
+      "label": "የእገዳ ምክንያቶች",
+      "legalText": "ሙሉውን ገንዘብ አሁን መክፈል ድርጅቱን ለኪሳራ የሚዳርግ ሲሆን በንግዱ ላይ ሊጠገን የማይችል ጉዳት ያስከትላል።",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የማይተካ ጉዳት"
+      }
+    },
+    {
+      "id": "app_tax_fact_prima_facie",
+      "label": "የእገዳ ምክንያቶች",
+      "legalText": "ግብር ከፋዩ በይግባኝ ላይ የማሸነፍ ከፍተኛ ዕድል አለው።",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የማሸነፍ ዕድል"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_tax_relief_suspend_payment",
+      "text": "የግብር ይግባኝ ኮሚሽኑ/ፍርድ ቤቱ የመጨረሻ ውሳኔ እስኪሰጥ ድረስ የገቢዎች ሚኒስቴር ያልተከፈለውን የግብር ግዴታ አፈጻጸም እንዲያቆም ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

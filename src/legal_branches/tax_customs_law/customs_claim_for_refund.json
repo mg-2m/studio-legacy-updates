@@ -1,0 +1,74 @@
+
+{
+  "id": "customs_claim_for_refund",
+  "documentTitle": "የጉምሩክ ቀረጥ ተመላሽ እንዲሆን ለጉምሩክ ኮሚሽን ማመልከቻ",
+  "jurisdictionText": "የጉምሩክ አዋጅ ቁጥር ፰፻፶፱/፪ሺ፮ ስለ ተመላሽ ገንዘብ የሚመለከቱ ድንጋጌዎች",
+  "meta": {
+    "keywords": [
+      "customs",
+      "refund",
+      "duty",
+      "overpayment",
+      "ጉምሩክ",
+      "ተመላሽ",
+      "ቀረጥ"
+    ],
+    "jurisdictionType": "Administrative (Customs Commission)",
+    "purpose": "የጉምሩክ ቀረጥ ተመላሽ እንዲሆን"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት ከልክ በላይ የተከፈለ የጉምሩክ ቀረጥ እንዲመለስልዎ ለጉምሩክ ኮሚሽን ለማመልከት ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ማመልከቻ መጀመሪያ የሚቀርበው ለጉምሩክ ኮሚሽን ራሱ ነው።\n\n### የጊዜ ገደብ\nበጉምሩክ አዋጅ 859/2014 አንቀጽ 155(1) መሰረት፣ የተመላሽ ገንዘብ ጥያቄ ቀረጡ ከተከፈለበት ቀን ጀምሮ በአንድ (1) ዓመት ውስጥ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\n- ማስረጃ (Required Evidence): ከልክ በላይ እንደከፈሉ የሚያሳይ ማስረጃ (ለምሳሌ፣ የተሳሳተ ግምት) እና የክፍያ ደረሰኞች።",
+  "partyTitles": {
+    "applicant": "አመልካች (አስመጪ/ላኪ)",
+    "respondent": "መልስ ሰጪ (ጉምሩክ ኮሚሽን)"
+  },
+  "facts": [
+    {
+      "id": "customs_fact_duty_paid",
+      "label": "ከመጠን በላይ ክፍያ",
+      "legalText": "አመልካቹ በዲክላሬሽን ቁጥር [declarationNumber] ለገቡ/ለወጡ ዕቃዎች [paidAmount] የጉምሩክ ቀረጥ ከፍሏል።",
+      "autoEvidence": [
+        "PaymentReceiptsTaxCustoms"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተከፈለ ቀረጥ"
+      }
+    },
+    {
+      "id": "customs_fact_grounds_for_refund",
+      "label": "ከመጠን በላይ ክፍያ",
+      "legalText": "ቀረጡ ተመላሽ ሊደረግ የሚገባው [reasonForRefund] ስለሆነ ነው።",
+      "autoEvidence": [
+        "ImportExportDeclarationSAD",
+        "PaymentReceiptsTaxCustoms"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የተመላሽ ምክንያት"
+      }
+    },
+    {
+      "id": "customs_fact_refusal_to_pay",
+      "label": "የኮሚሽኑ እምቢተኝነት",
+      "legalText": "ጉምሩክ ኮሚሽኑ የተመላሽ ገንዘብ ማመልከቻውን ለማስተናገድ ፈቃደኛ አልሆነም ወይም አልቻለም።",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የኮሚሽኑ እምቢተኝነት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "customs_relief_order_refund",
+      "text": "ጉምሩክ ኮሚሽኑ ከልክ በላይ የተከፈለውን [refundAmount] ብር እንዲመልስ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

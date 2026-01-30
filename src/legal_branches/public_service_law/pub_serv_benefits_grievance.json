@@ -1,0 +1,73 @@
+{
+  "id": "pub_serv_benefits_grievance",
+  "documentTitle": "በአገልግሎት መብቶች እና ጥቅሞች ላይ ይግባኝ",
+  "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017",
+  "meta": {
+    "keywords": ["civil service", "benefits", "promotion", "salary", "grievance", "የመንግስት ሰራተኛ", "ጥቅማጥቅም", "ቅሬታ"],
+    "jurisdictionType": "Administrative Tribunal",
+    "purpose": "በአገልግሎት መብቶች እና ጥቅሞች ላይ ይግባኝ ለማቅረብ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ የመንግስት ሰራተኛ ከደመወዝ፣ ከዕድገት፣ ወይም ከሌሎች ጥቅማጥቅሞች ጋር በተያያዘ የደረሰበትን በደል ለመቃወም ለአስተዳደር ፍርድ ቤት ይግባኝ ሲያቀርብ ይጠቅማል።\n\n### የዳኝነት ሥልጣን\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nበውስጥ ቅሬታ አቅራቢ ኮሚቴ ውሳኔ ቅር የተሰኘ ሰራተኛ፣ ውሳኔው ከደረሰው ቀን ጀምሮ በ90 ቀናት ውስጥ ይግባኝ ማቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች\nየውስጥ መፍትሔዎችን ማሟጠጥ፡ ይግባኝ ከማቅረቡ በፊት ለተቋሙ የቅሬታ ሰሚ ኮሚቴ ቅሬታ አቅርቦ የመጨረሻ ውሳኔ ማግኘት ግዴታ ነው (አንቀጽ 81(1)(e))።\n\n### ማስረጃ\nለቅሬታ ሰሚ ኮሚቴ የቀረበው ማመልከቻ እና የተሰጠው ውሳኔ።",
+  "partyTitles": {
+    "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ",
+    "respondent": "መስሪያ ቤት/መልስ ሰጪ"
+  },
+  "facts": [
+    {
+      "id": "pub_serv_fact_exhaustion_grievance_submitted",
+      "label": "የውስጥ መፍትሔዎችን ማሟጠጥ (ግዴታ)",
+      "legalText": "በ [date] ለተቋሙ የቅሬታ አያያዝ ኮሚቴ ቅሬታ ቀርቧል፣ ነገር ግን ውሳኔው አጥጋቢ አልነበረም ወይም በጊዜ አልተሰጠም።",
+      "citation": "Proc. 1064/2017 Art. 81(1)(e)",
+      "autoEvidence": ["GrievanceSubmission"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የውስጥ ቅሬታ ማቅረብ" }
+    },
+    {
+      "id": "pub_serv_fact_promotion_denied",
+      "label": "ቅሬታው",
+      "legalText": "ይግባኝ ባዩ ከተመረጠው እጩ ከፍ ያለ ነጥብ ቢያስመዘግብም، የብቃት መርህን በመጣስ በሕገ-ወጥ መንገድ ዕድገት ተከልክሏል።",
+      "citation": "Proc. 1064/2017 Art. 13",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የተከለከለ እድገት" }
+    },
+    {
+      "id": "pub_serv_fact_salary_increment_denied",
+      "label": "ቅሬታው",
+      "legalText": "ይግባኝ ባዩ ሁሉንም የአፈጻጸም መስፈርቶች ቢያሟላም በሕገ-ወጥ መንገድ ወቅታዊ የደመወዝ ጭማሪ ተከልክሏል።",
+      "citation": "Proc. 1064/2017 Art. 81(1)(c)",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በተጨማሪም،", "transition": "በተጨማሪም،", "summary_keyword": "የተከለከለ የደሞዝ ጭማሪ" }
+    },
+    {
+      "id": "pub_serv_fact_acting_allowance_denied",
+      "label": "ቅሬታው",
+      "legalText": "ይግባኝ ባዩ በከፍተኛ የሥራ መደብ በተጠባባቂነት አገልግሏል ነገር ግን ለዚያ ጊዜ በሕገ-ወጥ መንገድ የተጠባባቂ አበል ተከልክሏል።",
+      "citation": "Relevant Regulations",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "በተጨማሪም،", "summary_keyword": "የተከለከለ የተጠባባቂ አበል" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "pub_serv_relief_grant_promotion",
+      "text": "ተጠሪው ተቋም ለይግባኝ ባዩ የሚገባውን ዕድገት እንዲሰጥ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "pub_serv_relief_grant_salary_increment",
+      "text": "የተከለከለውን የደመወዝ ጭማሪ፣ ከኋላ ቀር ውጤት ጋር እንዲከፈል ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "pub_serv_relief_refund_deductions",
+      "text": "በሕገ-ወጥ መንገድ የተቀነሰ ማንኛውንም ደመወዝ እንዲመለስ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

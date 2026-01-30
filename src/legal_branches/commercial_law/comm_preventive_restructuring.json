@@ -1,0 +1,84 @@
+
+{
+  "id": "comm_preventive_restructuring",
+  "documentTitle": "የዕዳ ማዋቀር እና የማገገሚያ እቅድ ማመልከቻ",
+  "jurisdictionText": "የንግድ ሕግ ቁጥር 1171 እና ተከታዮቹ",
+  "meta": {
+    "keywords": [
+      "restructuring",
+      "insolvency",
+      "bankruptcy",
+      "debt",
+      "የዕዳ ማዋቀር",
+      "የከሰረ"
+    ],
+    "jurisdictionType": "Federal High Court (Commercial Bench)",
+    "purpose": "የዕዳ ማዋቀር እና የማገገሚያ እቅድ ለማጽደቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት የገንዘብ ችግር ያጋጠመው ነገር ግን የመዳን ተስፋ ያለው የንግድ ድርጅት، ከኪሳራ ለመዳን የዕዳ ማዋቀሪያ እቅድ በፍርድ ቤት እንዲጸድቅለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየከሰሩ ድርጅቶችን ጉዳይ ለማየት ስልጣን ባለው የፌዴራል ከፍተኛ ፍርድ ቤት የንግድ ችሎት ይቀርባል።\n\n### የጊዜ ገደብ\nየተወሰነ የጊዜ ገደብ የለውም፤ ድርጅቱ የገንዘብ ችግር እንዳጋጠመው ሲያውቅ ሊያቀርበው ይችላል።\n\n### ቅድመ ሁኔታዎች\nየድርጅቱ የቅርብ ጊዜ ኦዲት የተደረገ የሂሳብ መግለጫ (BalanceSheetAndAudit)።\nየአበዳሪዎች ዝርዝር (ListofCreditors)።\nየማገገሚያ እቅድ ረቂቅ።",
+  "partyTitles": {
+    "applicant": "አመልካች (ባለዕዳው ድርጅት)",
+    "respondent": "አበዳሪዎች (በማስታወቂያ)"
+  },
+  "facts": [
+    {
+      "id": "comm_fact_financial_difficulty",
+      "label": "የገንዘብ ችግር እና የመዳን ተስፋ",
+      "legalText": "አመልካቹ ድርጅት ዕዳውን በወቅቱ መክፈል የማይችልበት ጊዜያዊ የገንዘብ ችግር አጋጥሞታል።",
+      "citation": "Commercial Code Art. 1171",
+      "autoEvidence": [
+        "BalanceSheetAndAudit"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የገንዘብ ችግር"
+      }
+    },
+    {
+      "id": "comm_fact_business_is_viable",
+      "label": "የገንዘብ ችግር እና የመዳን ተስፋ",
+      "legalText": "የድርጅቱ የንግድ እንቅስቃሴ በመሠረቱ ጤናማ እና ሊቀጥል የሚችል ነው።",
+      "citation": "Commercial Code Art. 1171",
+      "autoEvidence": [
+        "BalanceSheetAndAudit",
+        "ShareholdersResolution"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የመዳን ተስፋ"
+      }
+    },
+    {
+      "id": "comm_fact_plan_details",
+      "label": "የእቅዱ ዝርዝሮች",
+      "legalText": "አመልካቹ ዕዳዎችን ለማስተዳደር، ንግዱን ለማሻሻል እና ቀጣይነትን ለማረጋገጥ የሚያስችል ዝርዝር የማገገሚያ እቅድ አዘጋጅቷል።",
+      "citation": "Commercial Code Art. 1173",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በመሆኑም،",
+        "summary_keyword": "የማገገሚያ እቅድ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "comm_relief_approve_plan",
+      "text": "የቀረበው የማገገሚያ እና የዕዳ ማዋቀሪያ እቅድ እንዲጸድቅ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "comm_relief_stay_proceedings",
+      "text": "እቅዱ በሚተገበርበት ጊዜ በአመልካቹ ላይ ያሉ የክስ እና የአፈጻጸም ሂደቶች በሙሉ እንዲታገዱ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}
+  

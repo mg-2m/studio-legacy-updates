@@ -1,0 +1,177 @@
+
+{
+  "id": "tort_general_negligence_claim",
+  "documentTitle": "ከውል ውጭ ለደረሰ ጉዳት የካሳ ክስ",
+  "jurisdictionText": "Arts. 2028-2061 of the Civil Code of 1960 (Liability arising out of fault).",
+  "meta": {
+    "keywords": [
+      "tort",
+      "negligence",
+      "damages",
+      "extra-contractual",
+      "accident",
+      "ከውል ውጭ",
+      "ቸልተኝነት",
+      "ካሳ"
+    ],
+    "jurisdictionType": "Dependent on Amount Claimed (First Instance or High Court)",
+    "purpose": "ከውል ውጭ ለደረሰ ጉዳት የካሳ ክስ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት በሌላ ሰው ቸልተኝነት ወይም ጥፋት ምክንያት በአካልዎ ወይም በንብረትዎ ላይ ለደረሰ ጉዳት የካሳ ክፍያ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nየሚጠየቀው የካሳ መጠን የፍርድ ቤቱን የገንዘብ ዳኝነት ሥልጣን ይወስናል። ጉዳዩ ንብረቱ በሚገኝበት ወይም አደጋው በደረሰበት ቦታ ስልጣን ባለው ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nበፍትሐ ብሔር ሕግ አንቀጽ 2143 (አዲሱ ረቂቅ) መሠረት፣ ከውል ውጭ ለሚደርስ ጉዳት የካሳ ክስ ለማቅረብ ያለው የይርጋ ጊዜ ገደብ **ሁለት (2) ዓመት** ነው። ይህ ጊዜ መቆጠር የሚጀምረው ተጎጂው ወገን በደረሰው ጉዳት እና ጉዳቱን ያደረሰውን ሰው ማንነት ካወቀበት ቀን ጀምሮ ነው።\n\n### ቅድመ ሁኔታዎች\n- **የግድ የሚያስፈልግ ማስረጃ፡** የጥፋቱን መኖር የሚያሳይ ማስረጃ (PoliceAccidentReport) እና የጉዳቱን መጠን የሚያሳይ ማስረጃ (MedicalExpenseReceipts, PropertyValuationReport)።\n- **ተጨማሪ ማስረጃ፡** የምስክሮች ቃል (WitnessStatements)፣ የጉዳቱን ሁኔታ የሚያሳዩ ፎቶዎች።",
+  "partyTitles": {
+    "applicant": "ከሳሽ",
+    "respondent": "ተከሳሽ"
+  },
+  "facts": [
+    {
+      "id": "tort_fact_fault_negligence_omission",
+      "label": "የጥፋት ድርጊት እና ቸልተኝነት",
+      "legalText": "ተከሳሹ አጠቃላይ የጥንቃቄ ግዴታን የሚጥስ የቸልተኝነት ድርጊት ፈጽሟል (አንቀጽ 2028)።",
+      "citation": "Civil Code Art. 2028",
+      "autoEvidence": [
+        "PoliceAccidentReport",
+        "WitnessStatements"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የቸልተኝነት ድርጊት"
+      }
+    },
+    {
+      "id": "tort_fact_traffic_violation",
+      "label": "የጥፋት ድርጊት እና ቸልተኝነት",
+      "legalText": "ጥፋቱ የተከሰተው የትራፊክ ሕጎችን ወይም ሌላ የሕግ/ደንብ የጥንቃቄ ግዴታን በመጣስ ነው።",
+      "citation": "Civil Code Art. 2029",
+      "autoEvidence": [
+        "PoliceAccidentReport"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የትራፊክ ህግ ጥሰት"
+      }
+    },
+    {
+      "id": "tort_fact_liability_for_another_person",
+      "label": "የጥፋት ድርጊት እና ቸልተኝነት",
+      "legalText": "ተከሳሹ በእሱ ቁጥጥር ስር ላለ ለአካለ መጠን ያልደረሰ፣ ተለማማጅ ወይም ሰራተኛ ድርጊት ተጠያቂ ነው (አንቀጽ 2085 እና ተከታዮቹ)።",
+      "citation": "Civil Code Art. 2085",
+      "autoEvidence": [
+        "WitnessStatements",
+        "PoliceAccidentReport"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የተወካይ ተጠያቂነት"
+      }
+    },
+    {
+      "id": "tort_fact_bodily_injury_damage",
+      "label": "የደረሰው ጉዳት",
+      "legalText": "ከሳሽ የአካል ጉዳት ደርሶበታል እና ለህክምና፣ ለሆስፒታል እና ለማገገሚያ ወጪዎች አድርጓል።",
+      "citation": "Civil Code Art. 2035",
+      "autoEvidence": [
+        "MedicalExpenseReceipts",
+        "DoctorAssessment"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የአካል ጉዳት"
+      }
+    },
+    {
+      "id": "tort_fact_property_damage_loss",
+      "label": "የደረሰው ጉዳት",
+      "legalText": "የከሳሽ ንብረት (ለምሳሌ፣ ተሽከርካሪ፣ ህንፃ) ተጎድቷል ወይም ወድሟል፣ ይህም ጥገና ወይም ምትክ ያስፈልገዋል።",
+      "citation": "Civil Code Art. 2035",
+      "autoEvidence": [
+        "PropertyValuationReport",
+        "PoliceAccidentReport"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የንብረት ጉዳት"
+      }
+    },
+    {
+      "id": "tort_fact_moral_damage_pain",
+      "label": "የደረሰው ጉዳት",
+      "legalText": "ከሳሽ ህመም እና ስቃይ፣ የስሜት ጭንቀት እና የኑሮ መደሰት ማጣትን ጨምሮ የሞራል ጉዳት ደርሶበታል።",
+      "citation": "Civil Code Art. 2036",
+      "autoEvidence": [
+        "DoctorAssessment",
+        "WitnessStatements"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የሞራል ጉዳት"
+      }
+    },
+    {
+      "id": "tort_fact_direct_causation",
+      "label": "ምክንያታዊነት እና አስቀድሞ መገመት",
+      "legalText": "በተከሳሹ ጥፋት እና በከሳሽ በደረሰው ጉዳት መካከል ቀጥተኛ እና እርግጠኛ የሆነ የምክንያት ግንኙነት አለ (አንቀጽ 2034)።",
+      "citation": "Civil Code Art. 2034",
+      "autoEvidence": [
+        "PoliceAccidentReport",
+        "DoctorAssessment"
+      ],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ቀጥተኛ ግንኙነት"
+      }
+    },
+    {
+      "id": "tort_fact_mitigation_of_damages",
+      "label": "ምክንያታዊነት እና አስቀድሞ መገመት",
+      "legalText": "ከሳሽ የደረሰውን ጉዳት መጠን ለመቀነስ እና ለማቃለል ምክንያታዊ እርምጃዎችን ወስዷል።",
+      "citation": "Civil Code Art. 2043",
+      "autoEvidence": [
+        "MedicalExpenseReceipts",
+        "PropertyValuationReport"
+      ],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በመጨረሻም،",
+        "summary_keyword": "ጉዳት መቀነስ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "tort_relief_medical_expenses",
+      "text": "ተከሳሹ ለህክምና፣ ለሆስፒታል እና ለማገገሚያ ለተደረጉ ወጪዎች [amount] ብር እንዲከፍል እንዲታዘዝ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "tort_relief_property_repair_cost",
+      "text": "ተከሳሹ የተበላሸውን ንብረት ለመጠገን/ለመተካት [amount] ብር እንዲከፍል እንዲታዘዝ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "tort_relief_lost_earnings",
+      "text": "ተከሳሹ በቋሚ የአካል ጉዳት ምክንያት ለጠፋ ገቢ እና ለወደፊት የገቢ ኪሳራ [amount] ብር ካሳ እንዲከፍል እንዲታዘዝ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "tort_relief_moral_damages",
+      "text": "ተከሳሹ ለሞራል ጉዳት (ህመም፣ ስቃይ እና ጭንቀት) [amount] ብር ካሳ እንዲከፍል እንዲታዘዝ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

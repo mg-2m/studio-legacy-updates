@@ -1,0 +1,58 @@
+
+{
+  "id": "app_status_provisional_curator",
+  "documentTitle": "ጊዜያዊ አስተዳዳሪ/ጠባቂ እንዲሾምለት ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (እግድ) እና የፍትሐ ብሔር ሕግ አንቀጽ 154/343",
+  "meta": {
+    "keywords": [
+      "provisional curator",
+      "temporary administrator",
+      "injunction",
+      "ጊዜያዊ አስተዳዳሪ",
+      "ጠባቂ"
+    ],
+    "jurisdictionType": "Court handling the main case",
+    "purpose": "ጊዜያዊ አስተዳዳሪ/ጠባቂ እንዲሾም"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ አስቸኳይ ማመልከቻ، ዋናው የእግድ ወይም የመጥፋት አቤቱታ በፍርድ ቤት እየታየ ባለበት ወቅት፣ የሚመለከተው ሰው ጉዳዩን መምራት ባለመቻሉ ንብረቱ ለአደጋ እንዳይጋለጥ ጊዜያዊ አስተዳዳሪ እንዲሾምለት ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nዋናው አቤቱታ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ (Period of Limitation)\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\nአስቸኳይነት፡ የንብረቱ ለአደጋ መጋለጥ አስቸኳይ መሆኑን ማሳየት።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "app_status_fact_immediate_necessity",
+      "label": "አስቸኳይነት",
+      "legalText": "ሰውየው ወዲያውኑ እርምጃ መውሰድ ባለመቻሉ ንብረቱ ያለአግባብ ጥቅም ላይ ሊውል ወይም ሊጠፋ ይችላል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "አስቸኳይ አስፈላጊነት"
+      }
+    },
+    {
+      "id": "app_status_fact_petition_pending",
+      "label": "አስቸኳይነት",
+      "legalText": "ዋናው የእግድ/የመጥፋት አቤቱታ ቀርቦ በአሁኑ ጊዜ በመጠባበቅ ላይ ነው።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "በሂደት ላይ ያለ አቤቱታ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_status_relief_appoint_provisional",
+      "text": "የተሰየመውን ሰው እንደ ጊዜያዊ አስተዳዳሪ/ጠባቂ ወዲያውኑ እንዲሾም ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

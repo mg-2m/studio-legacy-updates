@@ -1,0 +1,52 @@
+
+{
+  "id": "app_ip_interlocutory_injunction",
+  "documentTitle": "የጥሰት እገዳ እንዲጣልበት ጊዜያዊ ትዕዛዝ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (አጠቃላይ እግድ) እና ልዩ የአእምሮ ንብረት ሕጎች",
+  "meta": {
+    "keywords": ["injunction", "temporary", "restrain", "IP", "interlocutory", "ጊዜያዊ", "እገዳ"],
+    "jurisdictionType": "Federal High Court",
+    "purpose": "ጊዜያዊ የጥሰት እገዳ ለመጠየቅ"
+  },
+  "templateDescription": "### መመሪያ\nይህ ከዋናው ክስዎ ጋር የሚቀርብ አስቸኳይ ማመልከቻ ነው። ዋናው የፍርድ ቤት ጉዳይ በሚታይበት ጊዜ ቀጣይ ጥሰትን ወዲያውኑ ለማስቆም እና በገበያዎ ወይም በዝናዎ ላይ ተጨማሪ ጉዳት እንዳይደርስ ለመከላከል ይጠቅማል።\n\n### የዳኝነት ሥልጣን\nማመልከቻው ዋናው የIP ክስ በሚታይበት ፍርድ ቤት (ብዙውን ጊዜ ፌዴራል ከፍተኛ ፍርድ ቤት) ይቀርባል።\n\n### የጊዜ ገደብ\nአስቸኳይ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም፣ ነገር ግን ጉዳቱ እንደታወቀ ወዲያውኑ መቅረብ አለበት።\n\n### ቅድመ ሁኔታዎች\n- ጥሰቱ አሁንም በመካሄድ ላይ መሆኑን እና አስቸኳይ እርምጃ ካልተወሰደ ሊጠገን የማይችል ጉዳት እንደሚያስከትል ማሳየት።\n- ይህ ማመልከቻ ከዋናው የጥሰት ክስ ጋር በአንድነት መቅረብ አለበት።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "app_ip_fact_prima_facie_case_injunction",
+      "label": "አስቸኳይነት እና ጉዳት",
+      "legalText": "አመልካቹ ጠንካራ የቅድመ-ገጽታ የጥሰት ጉዳይ አቋቁሟል።",
+      "citation": "CPC Art. 154",
+      "autoEvidence": ["CertificateOfRegistrationEIPO", "ProductSampleSpecimen"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "ጠንካራ ክስ" }
+    },
+    {
+      "id": "app_ip_fact_irreparable_harm",
+      "label": "አስቸኳይነት እና ጉዳት",
+      "legalText": "የቀጠለው ጥሰት በአመልካቹ የገበያ ድርሻ እና ስም ላይ ሊጠገን የማይችል ጉዳት ያስከትላል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "ከዚህም በላይ،", "summary_keyword": "የማይተካ ጉዳት" }
+    },
+    {
+      "id": "app_ip_fact_balance_convenience",
+      "label": "አስቸኳይነት እና ጉዳት",
+      "legalText": "የምቾት ሚዛን እገዳውን ለመስጠት ይደግፋል (ማለትም ከማቆም ይልቅ ለማቆም አነስተኛ ጉዳት)።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጨረሻም،", "transition": "ከዚህም ባሻገር،", "summary_keyword": "የጉዳት ሚዛን" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "app_ip_relief_temporary_restraint",
+      "text": "የመጨረሻ ፍርድ እስከሚሰጥ ድረስ ተጠሪው የጣሱትን ዕቃዎች ማምረት፣ መሸጥ ወይም ማሰራጨት ለጊዜው እንዲያቆም ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

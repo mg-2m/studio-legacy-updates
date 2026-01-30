@@ -1,0 +1,43 @@
+
+{
+  "id": "succ_app_seal_estate",
+  "documentTitle": "የማሸጊያ ማመልከቻ (Application for Affixing of Seals)",
+  "jurisdictionText": "Art. 946 of the Civil Code & Civil Procedure Code.",
+  "meta": {
+    "keywords": ["seal", "estate", "preserve", "ማሸግ", "ንብረት"],
+    "jurisdictionType": "Federal/Regional First Instance"
+  },
+  "templateDescription": "### መመሪያ\nይህ አስቸኳይ ማመልከቻ، የውርስ ንብረት (በተለይ ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች) እንዳይሰወሩ ወይም እንዳይጠፉ ለመከላከል ፍርድ ቤቱ ንብረቱን እንዲያሽግ ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይህ ማመልከቻ የሚቀርበው ውርሱን ለሚመለከተው ዋናው ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nአስቸኳይ ማመልከቻ ስለሆነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n**አስቸኳይነት (Urgency)**\nንብረቱ ሊጠፋ ወይም ሊሰወር እንደሚችል የሚያሳይ ጠንካራ ስጋት መኖሩን ማሳየት ያስፈልጋል።\n\n**ማስረጃ (Required Evidence)**\nየአደጋውን አስቸኳይነት የሚያሳይ የምስክር ወረቀት ወይም ሌላ ማስረጃ።",
+  "partyTitles": {
+    "applicant": "አመልካች (Applicant)",
+    "respondent": "የለም (N/A)"
+  },
+  "facts": [
+    {
+      "id": "succ_fact_risk_misappropriation",
+      "label": "አስቸኳይነት (Urgency)",
+      "legalText": "ተንቀሳቃሽ ንብረቶች ወይም ሰነዶች ሊወገዱ ወይም ሊደበቁ የሚችሉበት አስቸኳይ አደጋ አለ። (There is an imminent risk that movables or documents may be removed or hidden.)",
+      "citation": "Civ. Code Art. 946",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ፣", "transition": "በተጨማሪም،", "summary_keyword": "የማሸሽ ስጋት" }
+    },
+    {
+      "id": "succ_fact_minor_heirs",
+      "label": "አስቸኳይነት (Urgency)",
+      "legalText": "ጥበቃ የሚያስፈልጋቸው አካለ መጠን ያልደረሱ ወራሾች አሉ። (There are minor heirs whose interests require protection.)",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመቀጠልም،", "transition": "በተጨማሪም،", "summary_keyword": "የሕፃናት ወራሾች መኖር" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "succ_relief_affix_seals",
+      "text": "የፍርድ ቤቱ ሬጅስትራር በሟቹ ንብረት/ካዝና ላይ ኦፊሴላዊ ማህተሞችን እንዲያደርግ ትዕዛዝ እንዲሰጥ። (Order the court registrar to affix official seals on the deceased's property/safe.)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

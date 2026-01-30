@@ -1,0 +1,74 @@
+{
+  "id": "pub_serv_termination_unlawful",
+  "documentTitle": "በአስተዳደራዊ ስንብት ላይ ይግባኝ",
+  "jurisdictionText": "የፌዴራል ሲቪል ሰርቫንቶች አዋጅ ቁጥር 1064/2017",
+  "meta": {
+    "keywords": ["civil service", "administrative termination", "inefficiency", "redundancy", "illness", "የመንግስት ሰራተኛ", "ስንብት"],
+    "jurisdictionType": "Administrative Tribunal",
+    "purpose": "በአስተዳደራዊ ስንብት ላይ ይግባኝ ለማቅረብ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ የመንግስት ሰራተኛ በአፈጻጸም፣ በህመም ወይም በመዋቅር ለውጥ ምክንያት ከሥራ ሲሰናበት ውሳኔው ህገ-ወጥ ነው ብሎ ሲያምን ይግባኝ ለማቅረብ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nይግባኙ የሚቀርበው ለሲቪል ሰርቪስ አስተዳደር ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nይግባኙ ውሳኔው ከደረሰበት ቀን ጀምሮ በ90 ቀናት ውስጥ መቅረብ አለበት (አንቀጽ 81(2))።\n\n### ቅድመ ሁኔታዎች\nየመጨረሻ ውሳኔ፡ ተቋሙ የመጨረሻ የስንብት ውሳኔ መስጠቱን ማረጋገጥ።\n\n### ማስረጃ\nየስንብት ደብዳቤ፣ የአፈጻጸም ግምገማ ውጤቶች፣ ወይም የህክምና ቦርድ መረጃ።",
+  "partyTitles": {
+    "applicant": "የመንግስት ሰራተኛ/ይግባኝ ባይ",
+    "respondent": "መስሪያ ቤት/መልስ ሰጪ"
+  },
+  "facts": [
+    {
+      "id": "pub_serv_fact_inefficiency_not_consecutive",
+      "label": "ምክንያቶች፡ ብቃት ማነስ (አፈጻጸም)",
+      "legalText": "ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁለት ተከታታይ \"የማያረካ\" ግምገማዎችን አላገኘም።",
+      "citation": "Proc. 1064/2017 Art. 84(1)",
+      "autoEvidence": ["PerformanceReview"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያልተሟላ ግምገማ" }
+    },
+    {
+      "id": "pub_serv_fact_inefficiency_no_training",
+      "label": "ምክንያቶች፡ ብቃት ማነስ (አፈጻጸም)",
+      "legalText": "ለአፈጻጸም ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ለማሻሻል አስፈላጊውን ሥልጠና እና ድጋፍ ስላልተሰጠው።",
+      "citation": "Proc. 1064/2017 Art. 84(1)",
+      "autoEvidence": ["PerformanceReview"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "የስልጠና እጦት" }
+    },
+    {
+      "id": "pub_serv_fact_illness_before_leave_exhausted",
+      "label": "ምክንያቶች፡ ሕመም / ሕክምና",
+      "legalText": "በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ሁሉንም ያለውን የሕመም ፈቃድ (8 ወር ሙሉ ደመወዝ፣ 4 ወር ግማሽ ደመወዝ) ከማብቃቱ በፊት የተከሰተ በመሆኑ ነው።",
+      "citation": "Proc. 1064/2017 Art. 83(1)",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያለጊዜው የህመም ስንብት" }
+    },
+    {
+      "id": "pub_serv_fact_illness_no_medical_board",
+      "label": "ምክንያቶች፡ ሕመም / ሕክምና",
+      "legalText": "በሕመም ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ቋሚ የአካል ጉዳትን ለማወጅ የሕክምና ቦርድ የምስክር ወረቀት ስላልቀረበ።",
+      "citation": "Proc. 1064/2017 Art. 83(2)",
+      "autoEvidence": ["MedicalBoardCertificate"],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያለህክምና ቦርድ ውሳኔ" }
+    },
+    {
+      "id": "pub_serv_fact_redundancy_no_offer",
+      "label": "ምክንያቶች፡ ከአቅም በላይ / ቅነሳ",
+      "legalText": "በሥራ መደብ መጥፋት (ቅነሳ) ምክንያት ስንብት ሕገ-ወጥ ነበር ምክንያቱም ይግባኝ ባዩ ከስንብት በፊት ተመሳሳይ ክፍት የሥራ ቦታ ስላልተሰጠው።",
+      "citation": "Proc. 1064/2017 Art. 85(2)",
+      "autoEvidence": [],
+      "rhetoric": { "intro": "በመጀመሪያ ደረጃ،", "transition": "በተጨማሪም،", "summary_keyword": "ያለአማራጭ ስራ ቅነሳ" }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "pub_serv_relief_quash_termination",
+      "text": "የስንብት አስተዳደራዊ ውሳኔን እንዲሻር።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "pub_serv_relief_reinstate_civil_servant",
+      "text": "ይግባኝ ባዩ ወደ ቀድሞ ቦታው ሙሉ የኋላ ክፍያ እንዲመለስ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

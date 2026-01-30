@@ -1,0 +1,58 @@
+
+{
+  "id": "app_servitude_temporary_passage",
+  "documentTitle": "ጊዜያዊ የመተላለፊያ ትዕዛዝ እንዲሰጥ አስገዳጅ ማመልከቻ",
+  "jurisdictionText": "የፍትሐ ብሔር ሥነ ሥርዓት ሕግ አንቀጽ 154 (Injunction) እና የፍትሐ ብሔር ሕግ አንቀጽ 1332 (Necessity).",
+  "meta": {
+    "keywords": [
+      "temporary injunction",
+      "mandatory order",
+      "passage",
+      "servitude",
+      "ጊዜያዊ እግድ",
+      "የመንገድ መብት"
+    ],
+    "jurisdictionType": "Court Handling the Main Case",
+    "purpose": "ጊዜያዊ የመተላለፊያ ትዕዛዝ እንዲሰጥ"
+  },
+  "templateDescription": "### መመሪያ\nይህ አስቸኳይ ማመልከቻ፣ ዋናው የመተላለፊያ መብት ክስ እየታየ ባለበት ወቅት፣ ተቃራኒ ወገን ብቸኛ መውጫዎን ሙሉ በሙሉ ሲዘጋው፣ ፍርድ ቤቱ ለጊዜው መተላለፊያ እንዲሰጥዎ ለማስገደድ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nዋናው የመተላለፊያ መብት ክስ በሚታይበት ፍርድ ቤት ይቀርባል።\n\n### የጊዜ ገደብ\nአስቸኳይ ማመልከቻ በመሆኑ የተወሰነ የጊዜ ገደብ የለውም።\n\n### ቅድመ ሁኔታዎች\n*   **አስቸኳይነት (Urgency):** መተላለፊያው መዘጋቱ ሊጠገን የማይችል ጉዳት እያስከተለ መሆኑን ማሳየት።",
+  "partyTitles": {
+    "applicant": "አመልካች",
+    "respondent": "ተጠሪ"
+  },
+  "facts": [
+    {
+      "id": "prop_fact_complete_blockade",
+      "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት",
+      "legalText": "ተጠሪው የአመልካችን ብቸኛ መውጫ ወደ ህዝብ መንገድ ሙሉ በሙሉ ዘግቷል።",
+      "citation": "",
+      "autoEvidence": ["PhotosVideoEvidence"],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "ሙሉ እገዳ"
+      }
+    },
+    {
+      "id": "prop_fact_imminent_damage",
+      "label": "አስቸኳይነት እና ከፍተኛ ፍላጎት",
+      "legalText": "እገዳው የአመልካችን የመኖር/የንግድ ሥራ ችሎታን አደጋ ላይ ይጥላል، ይህም ሊጠገን የማይችል የገንዘብ ጉዳት ያስከትላል።",
+      "citation": "",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ሊጠገን የማይችል ጉዳት"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "prop_relief_grant_temporary_access",
+      "text": "ዋናው የመተላለፊያ መብት ክስ ላይ የመጨረሻ ውሳኔ እስከሚሰጥ ድረስ ተጠሪው ለአመልካች ጊዜያዊ መተላለፊያ እንዲሰጥ ትዕዛዝ እንዲሰጥ።",
+      "isDefault": true,
+      "isDynamic": false
+    }
+  ],
+  "calculations": {}
+}

@@ -1,0 +1,153 @@
+
+{
+  "id": "admin_appeal_judicial_review",
+  "documentTitle": "የአስተዳደር ውሳኔ በፍርድ ቤት እንዲታይ አቤቱታ",
+  "jurisdictionText": "የፌደራል የአስተዳደር ሥነ-ሥርዓት አዋጅ ቁጥር 1183/2012፣ አንቀጽ 51",
+  "meta": {
+    "keywords": [
+      "judicial review",
+      "administrative appeal",
+      "annulment",
+      "agency decision",
+      "የአስተዳደር ይግባኝ",
+      "የውሳኔ ሽረት"
+    ],
+    "jurisdictionType": "Federal High Court",
+    "purpose": "የአስተዳደር ውሳኔን ለመቃወም"
+  },
+  "templateDescription": "### መመሪያ\nይህ አብነት አንድ የመንግስት ተቋም የሰጠው የመጨረሻ አስተዳደራዊ ውሳኔ መብትዎን ወይም ጥቅምዎን ሲጎዳ፣ ውሳኔው በፌዴራል ከፍተኛ ፍርድ ቤት እንዲመረመር እና እንዲሻር ለመጠየቅ ያገለግላል።\n\n### የዳኝነት ሥልጣን\nበአስተዳደር ሥነ-ሥርዓት አዋጅ 1183/2020 አንቀጽ 51 መሰረት، ይህን አይነት ጉዳይ የማየት ስልጣን ያለው የፌዴራል ከፍተኛ ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ\nየመጨረሻው የአስተዳደር ውሳኔ ከደረሰዎት ቀን ጀምሮ ባሉት ሠላሳ (30) ቀናት ውስጥ ይህ አቤቱታ መቅረብ አለበት (አንቀጽ 51(1))።\n\n### ቅድመ ሁኔታዎች\nየውስጥ መፍትሔዎችን ማሟጠጥ፡ ለፍርድ ቤት ከማቅረብዎ በፊት በተቋሙ ውስጥ ያሉትን ሁሉንም የቅሬታ ማቅረቢያ ደረጃዎች ማጠናቀቅ አለብዎት።\n\n### ማስረጃ\nይግባኝ የሚሉት ውሳኔ፣ ውሳኔው የደረሰዎትን ቀን የሚያረጋግጥ ማስረጃ፣ እና ለውስጥ ቅሬታ ሰሚ አካል ያቀረቡትን ማመልከቻና የተሰጠውን ውሳኔ ማያያዝ ያስፈልጋል።",
+  "partyTitles": {
+    "applicant": "አቤቱታ አቅራቢ/ይግባኝ ባይ",
+    "respondent": "መልስ ሰጪ ተቋም"
+  },
+  "facts": [
+    {
+      "id": "admin_fact_final_decision_issued",
+      "label": "የዳኝነት ቅድመ ሁኔታዎች",
+      "legalText": "መልስ ሰጪው ተቋም በአቤቱታ አቅራቢው መብት ወይም ጥቅም ላይ ተጽእኖ የሚያሳድር የመጨረሻ አስተዳደራዊ ውሳኔ በ [decisionDate] ሰጥቷል።",
+      "citation": "Proc. 1183/2020 Art. 48(1)",
+      "autoEvidence": [
+        "FinalAdminDecision"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የመጨረሻ ውሳኔ"
+      }
+    },
+    {
+      "id": "admin_fact_exhausted_remedies",
+      "label": "የዳኝነት ቅድመ ሁኔታዎች",
+      "legalText": "አቤቱታ አቅራቢው በተቋሙ ውስጥ ያሉትን ሁሉንም የውስጥ የቅሬታ መፍትሔ መንገዶች አሟጧል، ወይም ተቋሙ በሕግ በተቀመጠው ጊዜ ውስጥ በቅሬታው ላይ ውሳኔ አልሰጠም።",
+      "citation": "Proc. 1183/2020 Art. 48(2)",
+      "autoEvidence": [
+        "InternalRemedyExhaustion"
+      ],
+      "rhetoric": {
+        "intro": "በመቀጠልም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "የውስጥ መፍትሔዎችን ማሟጠጥ"
+      }
+    },
+    {
+      "id": "admin_fact_petition_is_timely",
+      "label": "የዳኝነት ቅድመ ሁኔታዎች",
+      "legalText": "ይህ አቤቱታ ውሳኔው ከደረሰበት ቀን አንስቶ በሠላሳ (30) ቀን የጊዜ ገደብ ውስጥ የቀረበ ነው።",
+      "citation": "Proc. 1183/2020 Art. 51(1)",
+      "autoEvidence": [
+        "DecisionNotificationProof"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "ወቅታዊ አቤቱታ"
+      }
+    },
+    {
+      "id": "admin_fact_procedural_violation_hearing",
+      "label": "የውሳኔው መሻር ምክንያቶች",
+      "legalText": "ውሳኔው የተሰጠው አቤቱታ አቅራቢው ተገቢውን የመሰማት እድል ሳይሰጠው (አንቀጽ 34) ወይም አግባብነት ያላቸውን ማስረጃዎች ከግምት ሳያስገባ ነው።",
+      "citation": "Proc. 1183/2020 Art. 34",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የሥነ-ሥርዓት ጥሰት"
+      }
+    },
+    {
+      "id": "admin_fact_substantive_error_of_law",
+      "label": "የውሳኔው መሻር ምክንያቶች",
+      "legalText": "ውሳኔው መሠረታዊ የሕግ ስህተት ላይ የተመሰረተ ነው፤ ማለትም የሚመለከተውን አዋጅ، ደንብ ወይም መመሪያ በተሳሳተ መንገድ ተርጉሟል ወይም ተግብሯል።",
+      "citation": "Proc. 1183/2020 Art. 52(1)(a)",
+      "autoEvidence": [
+        "FinalAdminDecision"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "የሕግ ስህተት"
+      }
+    },
+    {
+      "id": "admin_fact_failure_to_state_reason",
+      "label": "የውሳኔው መሻር ምክንያቶች",
+      "legalText": "ተቋሙ በቂ እና ምክንያታዊ የሆነ ውሳኔ ባለመስጠቱ የአቤቱታ አቅራቢውን ምክንያት ያለው ውሳኔ የማግኘት መብት ጥሷል (አንቀጽ 37)።",
+      "citation": "Proc. 1183/2020 Art. 37",
+      "autoEvidence": [
+        "FinalAdminDecision"
+      ],
+      "rhetoric": {
+        "intro": "በተጨማሪም،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ምክንያት አልባ ውሳኔ"
+      }
+    },
+    {
+      "id": "admin_fact_abuse_of_discretion",
+      "label": "የውሳኔው መሻር ምክንያቶች",
+      "legalText": "ተቋሙ ከህጋዊ ሥልጣኑ ውጭ በመንቀሳቀስ ወይም ተገቢ ላልሆነ ዓላማ በመጠቀም የውሳኔ ሰጪነት ሥልጣኑን አላግባብ ተጠቅሟል (አንቀጽ 39)።",
+      "citation": "Proc. 1183/2020 Art. 39",
+      "autoEvidence": [
+        "FinalAdminDecision"
+      ],
+      "rhetoric": {
+        "intro": "በመጨረሻም،",
+        "transition": "በመሆኑም،",
+        "summary_keyword": "የሥልጣን አላግባብ መጠቀም"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "admin_relief_quash_decision",
+      "text": "የመልስ ሰጪውን ተቋም ውሳኔ ሙሉ በሙሉ እንዲሻር።",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "admin_relief_remand_for_revision",
+      "text": "ፍርድ ቤቱ ባገኘው ክፍተት መሰረት ተቋሙ ውሳኔውን እንዲያስተካክል ወይም እንደገና እንዲያየው እንዲታዘዝ።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "admin_relief_damages_fault",
+      "text": "በአስተዳደራዊ ውሳኔው በፈጸመው ስህተት ምክንያት ለደረሰው ጉዳት መልስ ሰጪው ተቋም ካሳ እንዲከፍል እንዲታዘዝ (አንቀጽ 54)።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    },
+    {
+      "id": "relief_costs",
+      "text": "ተከሳሹ የዚህን ክስ ወጪ እና ኪሳራ እንዲከፍል እንዲወሰን።",
+      "isDefault": false,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}
+

@@ -1,0 +1,84 @@
+
+{
+  "id": "crim_objection_preliminary",
+  "documentTitle": "Preliminary Objection to Criminal Charge (በወንጀል ክስ ላይ የመጀመሪያ ደረጃ መቃወሚያ)",
+  "jurisdictionText": "Criminal Procedure Code, Arts. 130-131.",
+  "meta": {
+    "keywords": [
+      "preliminary objection",
+      "criminal procedure",
+      "limitation",
+      "jurisdiction",
+      "double jeopardy",
+      "የመጀመሪያ ደረጃ መቃወሚያ"
+    ],
+    "jurisdictionType": "Court seized of the criminal case"
+  },
+  "templateDescription": "### መመሪያ (Guide)\nይህ መቃወሚያ، ዐቃቤ ሕግ ያቀረበው የወንጀል ክስ በፍሬ ነገር ደረጃ ከመታየቱ በፊት በሕግ አግባብ ውድቅ መሆን አለበት ብሎ ለመከራከር ያገለግላል። ይህም በይርጋ፣ በዳኝነት ስልጣን እጦት ወይም በሌሎች የሥነ-ሥርዓት ጉድለቶች ላይ የተመሰረተ ሊሆን ይችላል።\n\n### የዳኝነት ሥልጣን (Jurisdiction)\nመቃወሚያው የሚቀርበው የወንጀል ክስ በቀረበበት ፍርድ ቤት ነው።\n\n### የጊዜ ገደብ (Period of Limitation)\nበወንጀለኛ መቅጫ ሥነ ሥርዓት ሕግ አንቀጽ 130(2) መሰረት، የመጀመሪያ ደረጃ መቃወሚያዎች ክሱ ከተነበበ በኋላ ወዲያውኑ መቅረብ አለባቸው።\n\n### ቅድመ ሁኔታዎች (Prerequisites)\n### Required Evidence\nየመቃወሚያውን ምክንያት የሚደግፍ ማንኛውም ማስረጃ (ለምሳሌ፣ ክሱ በይርጋ እንደታገደ ለማሳየት የቀን ማስረጃ፣ ወይም በሌላ ፍርድ ቤት ቀደም ሲል ውሳኔ እንደተሰጠበት ለማሳየት የፍርድ ቅጂ)።",
+  "partyTitles": {
+    "applicant": "Defendant (ተከሳሽ)",
+    "respondent": "Public Prosecutor (ዐቃቤ ሕግ)"
+  },
+  "facts": [
+    {
+      "id": "crim_objection_limitation",
+      "label": "የመቃወሚያ ምክንያቶች",
+      "legalText": "The right to prosecute the offense is barred by the period of limitation as prescribed by the Criminal Code. (ወንጀሉን ለመክሰስ ያለው መብት በወንጀል ሕጉ በተደነገገው የይርጋ ጊዜ ገደብ ታግዷል።)",
+      "citation": "Crim. Proc. Code Art. 131(1)(d)",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ፣",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የይርጋ ጊዜ ገደብ"
+      }
+    },
+    {
+      "id": "crim_objection_double_jeopardy",
+      "label": "የመቃወሚያ ምክንያቶች",
+      "legalText": "The Defendant has already been tried and acquitted or convicted for the same offense (res judicata / double jeopardy). (ተከሳሹ ቀደም ሲል በተመሳሳይ ወንጀል ተከሶ በነጻ ተሰናብቷል ወይም ጥፋተኛ ሆኖ ተፈርዶበታል።)",
+      "citation": "Crim. Proc. Code Art. 131(1)(f)",
+      "autoEvidence": [
+        "CopyofDivorceJudgment"
+      ],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "ከዚህም በላይ،",
+        "summary_keyword": "ድጋሚ ክስ"
+      }
+    },
+    {
+      "id": "crim_objection_no_jurisdiction",
+      "label": "የመቃወሚያ ምክንያቶች",
+      "legalText": "This Honorable Court lacks material or local jurisdiction to hear the charge. (ይህ የተከበረ ፍርድ ቤት ክሱን ለማየት የፍሬ ነገር ወይም የአካባቢ የዳኝነት ስልጣን የለውም።)",
+      "citation": "Crim. Proc. Code Art. 131(1)(b)",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "በተጨማሪም،",
+        "summary_keyword": "የዳኝነት ስልጣን እጦት"
+      }
+    },
+    {
+      "id": "crim_objection_charge_defective",
+      "label": "የመቃወሚያ ምክንያቶች",
+      "legalText": "The charge as framed is defective; it does not state an offense known to law or is vague and uncertain. (ክሱ እንደተቀረጸው ጉድለት ያለበት ነው፤ በሕግ የሚታወቅ ወንጀልን አይገልጽም ወይም ግልጽ ያልሆነ እና እርግጠኛ ያልሆነ ነው።)",
+      "citation": "Crim. Proc. Code Art. 131(1)(a)",
+      "autoEvidence": [],
+      "rhetoric": {
+        "intro": "በመጀመሪያ ደረጃ،",
+        "transition": "ከዚህም ባሻገር،",
+        "summary_keyword": "ጉድለት ያለበት ክስ"
+      }
+    }
+  ],
+  "reliefs": [
+    {
+      "id": "crim_relief_dismiss_charge",
+      "text": "To dismiss the charge against the Defendant and terminate the proceedings. (בתከሳሹ ላይ የቀረበውን ክስ ውድቅ በማድረግ ሂደቱን ለማቋረጥ።)",
+      "isDefault": true,
+      "isDynamic": false,
+      "isCustom": false
+    }
+  ],
+  "calculations": {}
+}

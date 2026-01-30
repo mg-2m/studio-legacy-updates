@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "LegalKnowledge": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Legal Knowledge Article",
+      "type": "object",
+      "description": "Represents a single article or section of a legal document (Proclamation, Code, Regulation).",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A unique, canonical identifier (e.g., 'proc_1183_2020_art_51_1')."
+        },
+        "source": {
+          "type": "string",
+          "description": "The name of the source document (e.g., 'Proclamation No. 1183/2020')."
+        },
+        "branch": {
+          "type": "string",
+          "description": "The primary legal branch this article belongs to (e.g., 'Administrative Law')."
+        },
+        "type": {
+          "type": "string",
+          "description": "The type of legal document (e.g., 'Proclamation', 'Civil Code', 'Regulation')."
+        },
+        "article": {
+          "type": "string",
+          "description": "The article number (e.g., '51')."
+        },
+        "sub_article": {
+          "type": "string",
+          "description": "The sub-article or paragraph number, if any (e.g., '1', 'a')."
+        },
+        "title": {
+          "type": "string",
+          "description": "The official title of the article, if it has one."
+        },
+        "body": {
+          "type": "string",
+          "description": "The full, cleaned text of the legal article."
+        },
+        "keywords": {
+          "type": "array",
+          "description": "An array of keywords for search indexing.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["id", "source", "branch", "type", "article", "body"]
+    }
+  }
+}
